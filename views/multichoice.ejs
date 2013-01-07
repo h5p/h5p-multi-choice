@@ -1,0 +1,18 @@
+<div class="multichoice">
+  <h2 class="title"><%= title %></h2>
+  <h3 class="question"><%= question %></h3>
+  <ul class="answers">
+    <% for (var i=0; i<answers.length; i++) { %>
+      <li class="answer">
+        <label>
+          <% if (singleAnswer) { %>
+          <input type="radio" name="answer_<%= i %>">
+          <% } else { %>
+          <input type="checkbox" name="answer_<%= i %>">
+          <% } %>
+          <span><%= answers[i].text %></span>
+        </label>
+      </li>
+    <% } %>
+  </ul>
+</div>

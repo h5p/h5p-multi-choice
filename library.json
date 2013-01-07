@@ -1,0 +1,16 @@
+{
+  "title": "Multichoice",
+  "contentType": "question",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "machineName": "h5pMultichoice",
+  "author": "Amendor AS",
+  "license": "cc-by-sa",
+  "preloadedJs": [
+    {"path": "js/h5pMultichoice.js"}
+  ],
+  "init": "h5pMultichoice.init",
+  "w": 340,
+  "h": 260
+}
