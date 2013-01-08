@@ -14,24 +14,24 @@ H5P.MultiChoice = function (options) {
     return new H5P.MultiChoice(options);
 
   var texttemplate = '' +
-  '<div class="multichoice">' +
-  '  <h2 class="title"><%= title %></h2>' +
-  '  <h3 class="question"><%= question %></h3>' +
-  '  <ul class="answers">' +
-  '    <% for (var i=0; i < answers.length; i++) { %>' +
-  '      <li class="answer">' +
-  '        <label>' +
-  '          <% if (singleAnswer) { %>' +
-  '          <input type="radio" name="answer" value="answer_<%= i %>">' +
-  '          <% } else { %>' +
-  '          <input type="checkbox" name="answer_<%= i %>" value="answer_<%= i %>">' +
-  '          <% } %>' +
-  '          <span><%= answers[i].text %></span>' +
-  '        </label>' +
-  '      </li>' +
-  '    <% } %>' +
-  '  </ul>' +
-  '</div>' +
+'<div class="multichoice">' +
+'  <div class="title"><%= title %></div>' +
+'  <div class="question"><%= question %></div>' +
+'  <ul class="answers">' +
+'    <% for (var i=0; i<answers.length; i++) { %>' +
+'      <li class="answer">' +
+'        <label>' +
+'          <% if (singleAnswer) { %>' +
+'          <input type="radio" name="answer" value="answer_<%= i %>">' +
+'          <% } else { %>' +
+'          <input type="checkbox" name="answer_<%= i %>">' +
+'          <% } %>' +
+'          <span><%= answers[i].text %></span>' +
+'        </label>' +
+'      </li>' +
+'    <% } %>' +
+'  </ul>' +
+'</div>' +
   '';
 
   var defaults = {
