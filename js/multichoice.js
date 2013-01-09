@@ -39,7 +39,7 @@ H5P.MultiChoice = function (options) {
     question: "No question text provided",
     answers: [{text: "Answer 1", correct: false },
               {text: "Answer 2", correct: true }],
-    singleAnswer: true,
+    singleAnswer: false,
     randomOrder: false
   };
   var template = new EJS({text: texttemplate});
