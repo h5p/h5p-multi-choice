@@ -30,44 +30,6 @@ H5P.MultiChoice = function (options) {
 
   var $ = H5P.jQuery;
 
-  var css = '' +
-'<style type="text/css">' +
-'.multichoice {' +
-'  width: 100%;' +
-'  height: 100%;' +
-'}' +
-'.multichoice .title {' +
-'  height: 40px;' +
-'  font-size: 125%;' +
-'  font-weight: bold;' +
-'}' +
-'.multichoice .question {' +
-'  margin: 1em 4px;' +
-'}' +
-'.multichoice label {' +
-'  cursor: pointer;' +
-'  display: block;' +
-'  padding: 4px;' +
-'}' +
-'.multichoice ul.answers {' +
-'  list-style: none;' +
-'  margin: 1em 4px;' +
-'  padding: 0;' +
-'}' +
-'.multichoice .answer {' +
-'  height: 40px;' +
-'  margin: 0.5em 10px 1em 0px;' +
-'  box-shadow: 2px 2px 4px #bababa;' +
-'}' +
-'.multichoice .answer.selected {' +
-'  background: #dadada;' +
-'}' +
-'.multichoice .answer input {' +
-'  display: none;' +
-'}' +
-'</style>' +
-  '';
-
   var texttemplate = '' +
 '<div class="multichoice">' +
 '  <div class="title"><%= title %></div>' +
@@ -108,7 +70,7 @@ H5P.MultiChoice = function (options) {
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend({}, defaults, options);
-  var myDom;
+  var $myDom;
 
   var answerGiven = false;
   params.userAnswers = new Array();
@@ -120,13 +82,19 @@ H5P.MultiChoice = function (options) {
   }
 
   // Function for attaching the multichoice to a DOM element.
-  var attach = function (targetId) {
+  var attach = function (target) {
+    if (typeof(target) == "string") {
+      target = $("#" + target);
+    } else {
+      target = $(target);
+    }
     // Render own DOM into target.
-    template.update(targetId, params);
-    myDom = $('#'+targetId);
+    $myDom = target;
+    $myDom.html(template.render(params));
+
 
     // Set event listeners.
-    $('input', myDom).click(function () {
+    $('input', $myDom).click(function () {
       answerGiven = true;
       var num = parseInt($(this).val().split('_')[1], 10);
       if (params.singleAnswer) {
@@ -146,7 +114,7 @@ H5P.MultiChoice = function (options) {
         } else {
           $(this).parents('.answer').removeClass("selected");
         }
-        $('input', myDom).each(function (idx, el) {
+        $('input', $myDom).each(function (idx, el) {
           var $el = $(el);
           if ($el.is(':checked') == params.answers[idx].correct) {
             score += 1; // TODO: Weight of answers?

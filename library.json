@@ -4,11 +4,13 @@
   "majorVersion": 1,
   "minorVersion": 0,
   "patchVersion": 0,
-  "machineName": "H5P.Multichoice",
+  "machineName": "H5P.MultiChoice",
   "author": "Amendor AS",
   "license": "cc-by-sa",
   "preloadedJs": [
     {"path": "js/multichoice.js"}
   ],
-  "init": "h5pMultichoice.init"
+  "preloadedCss": [
+    {"path": "css/multichoice.css"}
+  ]
 }
