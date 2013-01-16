@@ -30,6 +30,44 @@ H5P.MultiChoice = function (options) {
 
   var $ = H5P.jQuery;
 
+  var css = '' +
+'<style type="text/css">' +
+'.multichoice {' +
+'  width: 100%;' +
+'  height: 100%;' +
+'}' +
+'.multichoice .title {' +
+'  height: 40px;' +
+'  font-size: 125%;' +
+'  font-weight: bold;' +
+'}' +
+'.multichoice .question {' +
+'  margin: 1em 4px;' +
+'}' +
+'.multichoice label {' +
+'  cursor: pointer;' +
+'  display: block;' +
+'  padding: 4px;' +
+'}' +
+'.multichoice ul.answers {' +
+'  list-style: none;' +
+'  margin: 1em 4px;' +
+'  padding: 0;' +
+'}' +
+'.multichoice .answer {' +
+'  height: 40px;' +
+'  margin: 0.5em 10px 1em 0px;' +
+'  box-shadow: 2px 2px 4px #bababa;' +
+'}' +
+'.multichoice .answer.selected {' +
+'  background: #dadada;' +
+'}' +
+'.multichoice .answer input {' +
+'  display: none;' +
+'}' +
+'</style>' +
+  '';
+
   var texttemplate = '' +
 '<div class="multichoice">' +
 '  <div class="title"><%= title %></div>' +
