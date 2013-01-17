@@ -24,11 +24,12 @@
 
 window.H5P = window.H5P || {};
 
-H5P.MultiChoice = function (options) {
+H5P.MultiChoice = function (options, contentId) {
   if ( !(this instanceof H5P.MultiChoice) )
-    return new H5P.MultiChoice(options);
+    return new H5P.MultiChoice(options, contentId);
 
   var $ = H5P.jQuery;
+  var cp = H5P.getContentPath(contentId);
 
   var texttemplate = '' +
 '<div class="multichoice">' +
@@ -70,6 +71,9 @@ H5P.MultiChoice = function (options) {
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend({}, defaults, options);
+  if (params.illustration != '') {
+    params.illustration = cp + params.illustration;
+  }
   var $myDom;
 
   var answerGiven = false;
