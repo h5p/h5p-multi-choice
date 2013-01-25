@@ -13,17 +13,32 @@
 .multichoice label {
   cursor: pointer;
   display: block;
-  padding: 4px;
+  padding: 5px 15px;
+  height: 50px;
+  overflow: hidden;
+  line-height: 25px;
+  font-size: 20px;
+  color: black;
 }
 .multichoice ul.answers {
   list-style: none;
-  margin: 1em 4px;
+  margin: 0;
   padding: 0;
 }
 .multichoice .answer {
-  height: 40px;
-  margin: 0.5em 10px 1em 0px;
-  box-shadow: 2px 2px 4px #bababa;
+  /*height: 58px;*/
+  margin: 5px 0;
+  padding: 0;
+  border: 1px solid #bababa;
+  border-radius: 4px;
+  background: #cedce7; /* Old browsers */
+  background: -moz-linear-gradient(top,  #cedce7 0%, #596a72 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cedce7), color-stop(100%,#596a72)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #cedce7 0%,#596a72 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
 }
 .multichoice .answer.selected {
   background: #dadada;
@@ -31,3 +46,4 @@
 .multichoice .answer input {
   display: none;
 }
+
