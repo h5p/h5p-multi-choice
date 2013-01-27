@@ -1,0 +1,51 @@
+{
+  "title": {
+    "label": "Title",
+    "description": "Optional title for question box",
+    "type": "text",
+    "default": ""
+  },
+  "question": {
+    "label": "Question",
+    "description": "Question asked",
+    "type": "text"
+  },
+  "singleAnswer": {
+    "label": "Single answer",
+    "description": "Whether only a single answer shall be possible",
+    "type": "boolean",
+    "default": true
+  },
+  "singlePoint": {
+    "label": "Single point score",
+    "description": "Whether all answers in a multi-answer question must be correct to get a single score point. (Turn this off to get 1 point for each correctly set answer)",
+    "type": "boolean",
+    "default": true
+  },
+  "randomOrder": {
+    "label": "Random order",
+    "description": "Whether answers should be shown in random order",
+    "type": "boolean",
+    "default": true
+  },
+  "answers": {
+    "label": "Answers",
+    "description": "Answers available for the user",
+    "type": "combined",
+    "array": true,
+    "minEntries": 3,
+    "maxEntries": 6,
+    "fields": {
+      "text": {
+        "label": "Answer text",
+        "description": "Answer text",
+        "type": "text"
+      },
+      "correct": {
+        "label": "Correct answer",
+        "description": "Whether this is a correct answer",
+        "type": "boolean"
+      }
+    }
+  }
+}
