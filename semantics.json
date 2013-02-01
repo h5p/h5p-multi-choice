@@ -3,8 +3,7 @@
     "name": "title",
     "type": "text",
     "label": "Title",
-    "description": "Optional title for question box",
-    "default": ""
+    "description": "Optional title for question box"
   },
   {
     "name": "question",
@@ -16,7 +15,7 @@
     "name": "singleAnswer",
     "type": "boolean",
     "label": "Single answer",
-    "description": "Whether only a single answer shall be possible",
+    "description": "Whether only a single answer shall be possible.",
     "default": true
   },
   {
@@ -37,7 +36,7 @@
     "name": "answers",
     "type": "list",
     "label": "Categories",
-    "description": "Answers available for the user",
+    "description": "Answers available for the user.",
     "entity": "answer",
     "max": 5,
     "fields": [
@@ -45,13 +44,13 @@
         "name": "text",
         "type": "text",
         "label": "Answer text",
-        "description": "Answer text"
+        "description": "Answer text."
       },
       {
         "name": "correct",
         "type": "boolean",
         "label": "Correct answer",
-        "description": "Whether this is a correct answer"
+        "description": "Whether this is a correct answer."
       }
     ]
   }
