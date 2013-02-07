@@ -39,19 +39,24 @@
     "description": "Answers available for the user.",
     "entity": "answer",
     "max": 5,
-    "fields": [
-      {
-        "name": "text",
-        "type": "text",
-        "label": "Answer text",
-        "description": "Answer text."
-      },
-      {
-        "name": "correct",
-        "type": "boolean",
-        "label": "Correct answer",
-        "description": "Whether this is a correct answer."
-      }
-    ]
+    "field": {
+      "name": "answer",
+      "type": "group",
+      "label": "Answer",
+      "fields": [
+        {
+          "name": "text",
+          "type": "text",
+          "label": "Answer text",
+          "description": "Answer text."
+        },
+        {
+          "name": "correct",
+          "type": "boolean",
+          "label": "Correct answer",
+          "description": "Whether this is a correct answer."
+        }
+      ]
+    }
   }
 ]
