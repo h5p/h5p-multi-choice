@@ -40,13 +40,13 @@
 }
 .multichoice .answer.selected {
   background: #dddddd; /* Old browsers */
-  background: -moz-linear-gradient(top,  #ffffff 0%, #e3f5ab 47%, #c2ef6e 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#e3f5ab), color-stop(100%,#c2ef6e)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #ffffff 0%,#e3f5ab 47%,#c2ef6e 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #ffffff 0%,#e3f5ab 47%,#c2ef6e 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #ffffff 0%,#e3f5ab 47%,#c2ef6e 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #ffffff 0%,#e3f5ab 47%,#c2ef6e 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c2ef6e',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #D3DBF5 47%, #B2BEEF 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#D3DBF5), color-stop(100%,#B2BEEF)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%, #D3DBF5 47%, #B2BEEF 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%, #D3DBF5 47%, #B2BEEF 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,#D3DBF5 47%, #B2BEEF 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #FFFFFF 0%, #D3DBF5 47%, #B2BEEF 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#B2BEEF',GradientType=0 ); /* IE6-9 */
 }
 .multichoice .answer input {
   /* Display: none does not work in IE. (at least 8).
