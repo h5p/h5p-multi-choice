@@ -98,7 +98,7 @@ H5P.MultiChoice = function (options, contentId) {
 
 
     // Set event listeners.
-    $('input', $myDom).click(function () {
+    $('input', $myDom).change(function () {
       answerGiven = true;
       var num = parseInt($(this).val().split('_')[1], 10);
       if (params.singleAnswer) {

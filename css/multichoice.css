@@ -49,5 +49,9 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c2ef6e',GradientType=0 ); /* IE6-9 */
 }
 .multichoice .answer input {
-  display: none;
+  /* Display: none does not work in IE. (at least 8).
+     A none'd checkbox cannot be clicked even by its label. */
+  display: block;
+  position: absolute;
+  left: -9999px;
 }
