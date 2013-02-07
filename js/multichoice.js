@@ -122,6 +122,8 @@ H5P.MultiChoice = function (options, contentId) {
           var $el = $(el);
           if ($el.is(':checked') == params.answers[idx].correct) {
             score += 1; // TODO: Weight of answers?
+          }
+          if ($el.is(':checked')) {
             var num = parseInt($(el).val().split('_')[1], 10);
             params.userAnswers.push(num);
           }
