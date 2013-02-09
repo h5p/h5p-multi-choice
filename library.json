@@ -14,11 +14,4 @@
   "preloadedCss": [
     {"path": "css/multichoice.css"}
   ],
-  "editorDependencies": [
-    {
-      "machineName": "H5PEditor.Checkbox",
-      "majorVersion": "1",
-      "minorVersion": "0"
-    }
-  ]
 }
