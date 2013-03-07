@@ -5,6 +5,9 @@
   width: 100%;
   height: 100%;
 }
+.multichoice label {
+  cursor: pointer;
+}
 .multichoice .title {
   font-size: 22px;
   line-height: 32px;
@@ -12,46 +15,16 @@
 .multichoice .question {
   margin: 1em 4px;
 }
-.multichoice label {
-  cursor: pointer;
-  display: block;
-  padding: 8px 15px;
-  overflow: hidden;
-  color: black;
-}
+
 .multichoice ul.answers {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .multichoice .answer {
-  margin: 5px 0;
+  list-style: none;
+  margin: 0;
   padding: 0;
-  border: 1px solid #808080;
-  border-radius: 4px;
-  background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(top,  #ffffff 0%, #e0e0e0 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e0e0e0)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #ffffff 0%,#e0e0e0 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #ffffff 0%,#e0e0e0 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #ffffff 0%,#e0e0e0 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #ffffff 0%,#e0e0e0 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
-}
-.multichoice .answer.selected {
-  background: #dddddd; /* Old browsers */
-  background: -moz-linear-gradient(top,  #ffffff 0%, #D3DBF5 47%, #B2BEEF 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#D3DBF5), color-stop(100%,#B2BEEF)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #ffffff 0%, #D3DBF5 47%, #B2BEEF 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #ffffff 0%, #D3DBF5 47%, #B2BEEF 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #ffffff 0%,#D3DBF5 47%, #B2BEEF 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #FFFFFF 0%, #D3DBF5 47%, #B2BEEF 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#B2BEEF',GradientType=0 ); /* IE6-9 */
-}
-.multichoice .answer input {
-  /* Display: none does not work in IE. (at least 8).
-     A none'd checkbox cannot be clicked even by its label. */
-  display: block;
-  position: absolute;
-  left: -9999px;
+  background: none;
 }
