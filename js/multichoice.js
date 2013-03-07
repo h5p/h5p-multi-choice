@@ -141,7 +141,7 @@ H5P.MultiChoice = function (options, contentId) {
 
   // Masquerade the main object to hide inner properties and functions.
   var returnObject = {
-    machineName: 'H5P.MultiChoice',
+    name: 'H5P.MultiChoice',
     attach: attach, // Attach to DOM object
     getScore: function () {return score;},
     getAnswerGiven: function () {return answerGiven;},

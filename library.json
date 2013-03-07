@@ -5,7 +5,8 @@
   "minorVersion": 0,
   "patchVersion": 5,
   "runnable": 1,
-  "machineName": "H5P.MultiChoice",
+  "name": "h5p-multi-choice",
+  "class": "H5P.MultiChoice",
   "author": "Amendor AS",
   "license": "cc-by-sa",
   "preloadedJs": [
