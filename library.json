@@ -3,7 +3,7 @@
   "contentType": "question",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 5,
+  "patchVersion": 6,
   "runnable": 1,
   "name": "h5p-multi-choice",
   "class": "H5P.MultiChoice",
@@ -15,11 +15,7 @@
   "preloadedCss": [
     {"path": "css/multichoice.css"}
   ],
-  "editorDependencies": [
-    {
-      "machineName": "H5PEditor.Checkbox",
-      "majorVersion": "1",
-      "minorVersion": "0"
-    }
+  "preloadedDependencies": [
+    {"machineName": "EmbeddedJS", "majorVersion": 1, "minorVersion": 0}
   ]
 }

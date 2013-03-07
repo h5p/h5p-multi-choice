@@ -7,9 +7,10 @@
   },
   {
     "name": "question",
-    "type": "text",
+    "type": "html",
     "label": "Question",
-    "description": "Question asked"
+    "description": "Question asked",
+    "tags": ["b", "strong", "i", "em"]
   },
   {
     "name": "singleAnswer",
@@ -46,9 +47,10 @@
       "fields": [
         {
           "name": "text",
-          "type": "text",
+          "type": "html",
           "label": "Answer text",
-          "description": "Answer text."
+          "description": "Answer text.",
+          "tags": ["b", "strong", "i", "em"]
         },
         {
           "name": "correct",
