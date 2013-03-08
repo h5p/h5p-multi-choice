@@ -16,6 +16,10 @@
     {"path": "css/multichoice.css"}
   ],
   "preloadedDependencies": [
-    {"machineName": "EmbeddedJS", "majorVersion": 1, "minorVersion": 0}
+    {
+      "name": "embedded-js", 
+      "majorVersion": 1, 
+      "minorVersion": 0
+    }
   ]
 }
