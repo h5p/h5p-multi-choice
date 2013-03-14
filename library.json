@@ -3,7 +3,7 @@
   "contentType": "question",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 6,
+  "patchVersion": 7,
   "runnable": 1,
   "name": "h5p-multi-choice",
   "class": "H5P.MultiChoice",

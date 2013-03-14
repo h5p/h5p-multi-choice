@@ -10,7 +10,7 @@
     "type": "html",
     "label": "Question",
     "description": "Question asked",
-    "tags": ["b", "strong", "i", "em"]
+    "tags": ["strong", "em", "sub", "sup", "ul", "math"]
   },
   {
     "name": "singleAnswer",
@@ -50,7 +50,7 @@
           "type": "html",
           "label": "Answer text",
           "description": "Answer text.",
-          "tags": ["b", "strong", "i", "em"]
+          "tags": ["strong", "em", "sub", "sup", "ul", "math"]
         },
         {
           "name": "correct",
