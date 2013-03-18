@@ -5,8 +5,7 @@
   "minorVersion": 0,
   "patchVersion": 7,
   "runnable": 1,
-  "name": "h5p-multi-choice",
-  "class": "H5P.MultiChoice",
+  "machineName": "H5P.MultiChoice",
   "author": "Amendor AS",
   "license": "cc-by-sa",
   "preloadedJs": [
@@ -17,7 +16,7 @@
   ],
   "preloadedDependencies": [
     {
-      "name": "embedded-js", 
+      "machineName": "EmbeddedJS",
       "majorVersion": 1, 
       "minorVersion": 0
     }
