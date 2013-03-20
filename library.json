@@ -5,20 +5,23 @@
   "minorVersion": 0,
   "patchVersion": 7,
   "runnable": 1,
-  "name": "h5p-multi-choice",
-  "class": "H5P.MultiChoice",
+  "machineName": "H5P.MultiChoice",
   "author": "Amendor AS",
   "license": "cc-by-sa",
   "preloadedJs": [
-    {"path": "js/multichoice.js"}
+    {
+      "path": "js/multichoice.js"
+    }
   ],
   "preloadedCss": [
-    {"path": "css/multichoice.css"}
+    {
+      "path": "css/multichoice.css"
+    }
   ],
   "preloadedDependencies": [
     {
-      "name": "embedded-js", 
-      "majorVersion": 1, 
+      "machineName": "EmbeddedJS",
+      "majorVersion": 1,
       "minorVersion": 0
     }
   ]
