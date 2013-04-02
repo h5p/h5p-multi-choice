@@ -7,10 +7,18 @@
   },
   {
     "name": "question",
-    "type": "html",
+    "type": "text",
+    "widget": "html",
     "label": "Question",
     "description": "Question asked",
-    "tags": ["strong", "em", "sub", "sup", "ul", "math"]
+    "tags": [
+      "strong",
+      "em",
+      "sub",
+      "sup",
+      "ul",
+      "math"
+    ]
   },
   {
     "name": "singleAnswer",
@@ -47,10 +55,18 @@
       "fields": [
         {
           "name": "text",
-          "type": "html",
+          "type": "text",
+          "widget": "html",
           "label": "Answer text",
           "description": "Answer text.",
-          "tags": ["strong", "em", "sub", "sup", "ul", "math"]
+          "tags": [
+            "strong",
+            "em",
+            "sub",
+            "sup",
+            "ul",
+            "math"
+          ]
         },
         {
           "name": "correct",
