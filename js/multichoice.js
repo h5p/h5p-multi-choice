@@ -22,7 +22,7 @@
 //
 // Actually randomize order if randomOrder=true
 
-window.H5P = window.H5P || {};
+var H5P = H5P || {};
 
 H5P.MultiChoice = function (options, contentId) {
   if ( !(this instanceof H5P.MultiChoice) )
