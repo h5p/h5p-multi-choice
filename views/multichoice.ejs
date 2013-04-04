@@ -1,0 +1,23 @@
+<div class="multichoice">
+  <div class="title"><%= title %></div>
+  <% if (illustration) { %>
+    <div class="illustration"><img src="<%= illustration %>"></div>
+  <% } %>
+  <div class="question"><%= question %></div>
+  <form>
+    <ul class="answers">
+      <% for (var i=0; i<answers.length; i++) { %>
+        <li class="answer<% if (userAnswers.contains(i)) { %> selected<% } %>">
+          <label>
+            <% if (singleAnswer) { %>
+            <input type="radio" name="answer" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>
+            <% } else { %>
+            <input type="checkbox" name="answer_<%= i %>" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>
+            <% } %>
+            <span><%= answers[i].text %></span>
+          </label>
+        </li>
+      <% } %>
+    </ul>
+  </form>
+</div>

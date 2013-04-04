@@ -1,0 +1,30 @@
+.multichoice {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  width: 100%;
+  height: 100%;
+}
+.multichoice label {
+  cursor: pointer;
+}
+.multichoice .title {
+  font-size: 22px;
+  line-height: 32px;
+}
+.multichoice .question {
+  margin: 1em 4px;
+}
+
+.multichoice ul.answers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.multichoice .answer {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
