@@ -1,0 +1,80 @@
+[
+  {
+    "name": "title",
+    "type": "text",
+    "label": "Title",
+    "description": "Optional title for question box"
+  },
+  {
+    "name": "question",
+    "type": "text",
+    "widget": "html",
+    "label": "Question",
+    "description": "Question asked",
+    "tags": [
+      "strong",
+      "em",
+      "sub",
+      "sup",
+      "ul",
+      "math"
+    ]
+  },
+  {
+    "name": "singleAnswer",
+    "type": "boolean",
+    "label": "Single answer",
+    "description": "Whether only a single answer shall be possible.",
+    "default": true
+  },
+  {
+    "name": "singlePoint",
+    "type": "boolean",
+    "label": "Single point score",
+    "description": "Whether all answers in a multi-answer question must be correct to get a single score point. (Turn this off to get 1 point for each correctly set answer)",
+    "default": true
+  },
+  {
+    "name": "randomOrder",
+    "type": "boolean",
+    "label": "Random order",
+    "description": "Whether answers should be shown in random order",
+    "default": true
+  },
+  {
+    "name": "answers",
+    "type": "list",
+    "label": "Categories",
+    "description": "Answers available for the user.",
+    "entity": "answer",
+    "max": 5,
+    "field": {
+      "name": "answer",
+      "type": "group",
+      "label": "Answer",
+      "fields": [
+        {
+          "name": "text",
+          "type": "text",
+          "widget": "html",
+          "label": "Answer text",
+          "description": "Answer text.",
+          "tags": [
+            "strong",
+            "em",
+            "sub",
+            "sup",
+            "ul",
+            "math"
+          ]
+        },
+        {
+          "name": "correct",
+          "type": "boolean",
+          "label": "Correct answer",
+          "description": "Whether this is a correct answer."
+        }
+      ]
+    }
+  }
+]
