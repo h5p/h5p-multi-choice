@@ -31,33 +31,31 @@ H5P.MultiChoice = function (options, contentId) {
   var $ = H5P.jQuery;
   var cp = H5P.getContentPath(contentId);
 
-  var texttemplate = '' +
-'<div class="multichoice">' +
-'  <div class="title"><%= title %></div>' +
-'  <% if (illustration) { %>' +
-'    <div class="illustration"><img src="<%= illustration %>"></div>' +
-'  <% } %>' +
-'  <div class="question"><%= question %></div>' +
-'  <form>' +
-'    <ul class="answers">' +
-'      <% for (var i=0; i<answers.length; i++) { %>' +
-'        <li class="answer<% if (userAnswers.contains(i)) { %> selected<% } %>">' +
-'          <label>' +
-'            <% if (singleAnswer) { %>' +
-'            <input type="radio" name="answer" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>' +
-'            <% } else { %>' +
-'            <input type="checkbox" name="answer_<%= i %>" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>' +
-'            <% } %>' +
-'            <span><%= answers[i].text %></span>' +
-'          </label>' +
-'        </li>' +
-'      <% } %>' +
-'    </ul>' +
-'  </form>' +
-'</div>' +
-  '';
+  var texttemplate =
+          '<div class="h5p-multichoice">' +
+          '  <div class="h5p-title"><%= title %></div>' +
+          '  <% if (illustration) { %>' +
+          '    <div class="h5p-illustration"><img src="<%= illustration %>"></div>' +
+          '  <% } %>' +
+          '  <div class="h5p-question"><%= question %></div>' +
+          '  <form>' +
+          '    <ul class="h5p-answers">' +
+          '      <% for (var i=0; i<answers.length; i++) { %>' +
+          '        <li class="h5p-answer<% if (userAnswers.contains(i)) { %> h5p-selected<% } %>">' +
+          '          <label>' +
+          '            <% if (singleAnswer) { %>' +
+          '            <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>' +
+          '            <% } else { %>' +
+          '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>' +
+          '            <% } %>' +
+          '            <span class="h5p-span"><%= answers[i].text %></span>' +
+          '          </label>' +
+          '        </li>' +
+          '      <% } %>' +
+          '    </ul>' +
+          '  </form>' +
+          '</div>';
 
-  var that = this;
   var defaults = {
     title: "",
     illustration: "",
@@ -71,7 +69,7 @@ H5P.MultiChoice = function (options, contentId) {
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend({}, defaults, options);
-  if (params.illustration != '') {
+  if (params.illustration !== '') {
     params.illustration = cp + params.illustration;
   }
   var $myDom;
@@ -87,7 +85,7 @@ H5P.MultiChoice = function (options, contentId) {
 
   // Function for attaching the multichoice to a DOM element.
   var attach = function (target) {
-    if (typeof(target) == "string") {
+    if (typeof(target) === "string") {
       target = $("#" + target);
     } else {
       target = $(target);
@@ -108,19 +106,19 @@ H5P.MultiChoice = function (options, contentId) {
         } else {
           score = 0;
         }
-        $(this).parents('.answers').find('.answer.selected').removeClass("selected");
-        $(this).parents('.answer').addClass("selected");
+        $(this).parents('.h5p-answers').find('.h5p-answer.h5p-selected').removeClass("h5p-selected");
+        $(this).parents('.h5p-answer').addClass("h5p-selected");
       } else {
         score = 0;
         params.userAnswers = new Array();
         if ($(this).is(':checked')) {
-          $(this).parents('.answer').addClass("selected");
+          $(this).parents('.h5p-answer').addClass("h5p-selected");
         } else {
-          $(this).parents('.answer').removeClass("selected");
+          $(this).parents('.h5p-answer').removeClass("h5p-selected");
         }
         $('input', $myDom).each(function (idx, el) {
           var $el = $(el);
-          if ($el.is(':checked') == params.answers[idx].correct) {
+          if ($el.is(':checked') === params.answers[idx].correct) {
             score += 1; // TODO: Weight of answers?
           }
           if ($el.is(':checked')) {
@@ -129,7 +127,7 @@ H5P.MultiChoice = function (options, contentId) {
           }
         });
         if (params.singlePoint) {
-          score = (score == params.answers.length) ? 1 : 0;
+          score = (score === params.answers.length) ? 1 : 0;
         }
       }
       // Triggers must be done on the returnObject.
@@ -145,7 +143,7 @@ H5P.MultiChoice = function (options, contentId) {
     attach: attach, // Attach to DOM object
     getScore: function () {return score;},
     getAnswerGiven: function () {return answerGiven;},
-    totalScore: function () {
+    getMaxScore: function () {
       if (!params.singleAnswer && !params.singlePoint) {
         var s = 0;
         for (var i = params.answers.length - 1; i >= 0; i--) {
@@ -155,6 +153,16 @@ H5P.MultiChoice = function (options, contentId) {
         return s;
       }
       return params.weight;
+    },
+    showSolutions: function () {
+      $myDom.find('.h5p-answer').each(function (i, e) {
+        if (params.answers[i].correct) {
+          H5P.jQuery(e).addClass('h5p-correct');
+        }
+        else {
+          H5P.jQuery(e).addClass('h5p-wrong');
+        }
+      });
     },
     defaults: defaults // Provide defaults for inspection
   };
