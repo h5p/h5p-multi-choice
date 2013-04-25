@@ -27,14 +27,12 @@
   padding: 0;
   background: none;
 }
-.h5p-multichoice .h5p-input {
-  float: left;
-  margin: 0;
+.h5p-multichoice .h5p-answer > label {
+  line-height: 1.5em;
 }
-.h5p-multichoice .h5p-span {
-  display: block;
-  margin-left: 20px;
-  min-height: 20px;
+.h5p-multichoice .h5p-input {
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
 }
 .h5p-multichoice .h5p-correct {
   color: #66ab14;
