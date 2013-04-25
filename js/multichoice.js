@@ -64,7 +64,6 @@ H5P.MultiChoice = function (options, contentId) {
               {text: "Answer 2", correct: true }],
     singleAnswer: false,
     singlePoint: true,
-    randomOrder: false,
     weight: 1
   };
   var template = new EJS({text: texttemplate});
@@ -77,11 +76,6 @@ H5P.MultiChoice = function (options, contentId) {
   var answerGiven = false;
   params.userAnswers = new Array();
   var score = 0;
-
-  if (params.randomOrder) {
-    // TODO: Randomize answer order
-    console.log("TODO: Randomize order");
-  }
 
   // Function for attaching the multichoice to a DOM element.
   var attach = function (target) {
@@ -118,8 +112,8 @@ H5P.MultiChoice = function (options, contentId) {
         }
         $('input', $myDom).each(function (idx, el) {
           var $el = $(el);
-          if ($el.is(':checked') === params.answers[idx].correct) {
-            score += 1; // TODO: Weight of answers?
+          if (($el.is(':checked') && params.answers[idx].correct) || (!$el.is(':checked') && !params.answers[idx].correct)) {
+            score += 1;
           }
           if ($el.is(':checked')) {
             var num = parseInt($(el).val().split('_')[1], 10);
@@ -156,12 +150,14 @@ H5P.MultiChoice = function (options, contentId) {
     },
     showSolutions: function () {
       $myDom.find('.h5p-answer').each(function (i, e) {
+        var $e = H5P.jQuery(e);
         if (params.answers[i].correct) {
-          H5P.jQuery(e).addClass('h5p-correct');
+          $e.addClass('h5p-correct');
         }
         else {
-          H5P.jQuery(e).addClass('h5p-wrong');
+          $e.addClass('h5p-wrong');
         }
+        $e.find('input').attr('disabled', 'disabled')
       });
     },
     defaults: defaults // Provide defaults for inspection

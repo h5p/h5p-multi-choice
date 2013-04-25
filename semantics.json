@@ -35,30 +35,22 @@
     "default": true
   },
   {
-    "name": "randomOrder",
-    "type": "boolean",
-    "label": "Random order",
-    "description": "Whether answers should be shown in random order",
-    "default": true
-  },
-  {
     "name": "answers",
     "type": "list",
-    "label": "Categories",
-    "description": "Answers available for the user.",
-    "entity": "answer",
+    "label": "Alternatives",
+    "description": "Alternatives available for the user.",
+    "entity": "alternative",
     "max": 5,
     "field": {
       "name": "answer",
       "type": "group",
-      "label": "Answer",
+      "label": "Alternative",
       "fields": [
         {
           "name": "text",
           "type": "text",
           "widget": "html",
-          "label": "Answer text",
-          "description": "Answer text.",
+          "label": "Alternative text",
           "tags": [
             "strong",
             "em",
