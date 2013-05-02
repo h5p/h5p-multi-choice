@@ -2,15 +2,13 @@
   {
     "name": "title",
     "type": "text",
-    "label": "Title",
-    "description": "Optional title for question box"
+    "label": "Optional title"
   },
   {
     "name": "question",
     "type": "text",
     "widget": "html",
     "label": "Question",
-    "description": "Question asked",
     "tags": [
       "strong",
       "em",
@@ -24,33 +22,33 @@
     "name": "singleAnswer",
     "type": "boolean",
     "label": "Single answer",
-    "description": "Whether only a single answer shall be possible.",
+    "description": "Disable to allow selection of multiple options.",
     "default": true
   },
   {
     "name": "singlePoint",
     "type": "boolean",
     "label": "Single point score",
-    "description": "Whether all answers in a multi-answer question must be correct to get a single score point. (Turn this off to get 1 point for each correctly set answer)",
+    "description": "Disable to get 1 point for each correct answer. (single answer must also be disabled)",
     "default": true
   },
   {
     "name": "answers",
     "type": "list",
-    "label": "Alternatives",
-    "description": "Alternatives available for the user.",
-    "entity": "alternative",
+    "label": "Available options",
+    "description": "The alternatives the user may choose from.",
+    "entity": "option",
     "max": 5,
     "field": {
       "name": "answer",
       "type": "group",
-      "label": "Alternative",
+      "label": "Option",
       "fields": [
         {
           "name": "text",
           "type": "text",
           "widget": "html",
-          "label": "Alternative text",
+          "label": "Text",
           "tags": [
             "strong",
             "em",
@@ -63,8 +61,7 @@
         {
           "name": "correct",
           "type": "boolean",
-          "label": "Correct answer",
-          "description": "Whether this is a correct answer."
+          "label": "Correct"
         }
       ]
     }
