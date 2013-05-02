@@ -1,10 +1,5 @@
 [
   {
-    "name": "title",
-    "type": "text",
-    "label": "Optional title"
-  },
-  {
     "name": "question",
     "type": "text",
     "widget": "html",
@@ -15,7 +10,8 @@
       "sub",
       "sup",
       "ul",
-      "math"
+      "math",
+      "h2"
     ]
   },
   {
