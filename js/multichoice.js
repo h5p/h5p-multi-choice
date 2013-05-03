@@ -69,8 +69,13 @@ H5P.MultiChoice = function (options, contentId) {
   var answerGiven = false;
   params.userAnswers = new Array();
   var score = 0;
+  var solutionsVisible = false;
 
   var showSolutions = function () {
+    if (solutionsVisible) {
+      return;
+    }
+    solutionsVisible = true;
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = H5P.jQuery(e);
       if (params.answers[i].correct) {
