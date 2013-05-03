@@ -1,0 +1,37 @@
+[
+  {
+    "label": "Spørsmål"
+  },
+  {
+    "label": "Bare ett svar",
+    "description": "Slå av for å tillate brukeren å velge mer enn ett svar.",
+  },
+  {
+    "label": "0 eller 1 poeng",
+    "description": "Slå av for å gi 1 poeng for hvert riktige alternativ. (\"Bare ett svar\" må også slås av)"
+  },
+  {
+    "label": "Svaralternativer",
+    "description": "Svaralternativene brukeren kan velge mellom",
+    "entity": "svaralternativ",
+    "field": {
+      "label": "Svaralternativ",
+      "fields": [
+        {
+          "label": "Tekst",
+          "tags": [
+            "strong",
+            "em",
+            "sub",
+            "sup",
+            "ul",
+            "math"
+          ]
+        },
+        {
+          "label": "Riktig"
+        }
+      ]
+    }
+  }
+]
