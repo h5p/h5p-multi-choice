@@ -65,36 +65,32 @@
   {
     "name": "UI",
     "type": "group",
-    "label": "User interface translations",
+    "label": "User interface translations for multichoice",
     "common": true,
     "fields": [
       {
         "name": "showSolutionButton",
         "type": "text",
         "label": "Show solution button label",
-        "default": "Show solution",
-        "description": "Text displayed on the show solution button."
+        "default": "Show solution"
       },
       {
         "name": "correctText",
         "type": "text",
         "label": "Correct answer feedback",
-        "default": "Correct!",
-        "description": "Text displayed when the user answers correctly."
+        "default": "Correct!"
       },
       {
         "name": "almostText",
         "type": "text",
         "label": "Almost correct answer feedback",
-        "default": "Almost!",
-        "description": "Text displayed when the user almost answers correctly."
+        "default": "Almost!"
       },
       {
         "name": "wrongText",
         "type": "text",
         "label": "Not correct answer feedback",
-        "default": "Wrong!",
-        "description": "Text displayed when the user doesn't answer correctly."
+        "default": "Wrong!"
       }
     ]
   }

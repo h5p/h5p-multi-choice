@@ -5,7 +5,7 @@
     },
     {
       "label": "Bare ett svar",
-      "description": "Slå av for å tillate brukeren å velge mer enn ett svar.",
+      "description": "Slå av for å tillate brukeren å velge mer enn ett svar."
     },
     {
       "label": "0 eller 1 poeng",
@@ -19,13 +19,34 @@
         "label": "Svaralternativ",
         "fields": [
           {
-            "label": "Tekst",
+            "label": "Tekst"
           },
           {
             "label": "Riktig"
           }
         ]
       }
-    }
+    },
+    {
+    "label": "Oversettelser for ledetekster i flervalg",
+    "fields": [
+      {
+        "label": "Tekst for \"Vis svar\" knapp",
+        "default": "Vis svar"
+      },
+      {
+        "label": "Tilbakemelding ved riktig svar",
+        "default": "Riktig!"
+      },
+      {
+        "label": "Tilbakemelding ved nesten riktig svar",
+        "default": "Nesten!"
+      },
+      {
+        "label": "Tilbakemelding ved galt svar",
+        "default": "Feil!"
+      }
+    ]
+  }
   ]
 }
