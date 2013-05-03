@@ -61,5 +61,41 @@
         }
       ]
     }
+  },
+  {
+    "name": "UI",
+    "type": "group",
+    "label": "User interface translations",
+    "common": true,
+    "fields": [
+      {
+        "name": "showSolutionButton",
+        "type": "text",
+        "label": "Show solution button label",
+        "default": "Show solution",
+        "description": "Text displayed on the show solution button."
+      },
+      {
+        "name": "correctText",
+        "type": "text",
+        "label": "Correct answer feedback",
+        "default": "Correct!",
+        "description": "Text displayed when the user answers correctly."
+      },
+      {
+        "name": "almostText",
+        "type": "text",
+        "label": "Almost correct answer feedback",
+        "default": "Almost!",
+        "description": "Text displayed when the user almost answers correctly."
+      },
+      {
+        "name": "wrongText",
+        "type": "text",
+        "label": "Not correct answer feedback",
+        "default": "Wrong!",
+        "description": "Text displayed when the user doesn't answer correctly."
+      }
+    ]
   }
 ]

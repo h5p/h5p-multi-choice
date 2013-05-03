@@ -48,7 +48,7 @@ H5P.MultiChoice = function (options, contentId) {
           '    <% } %>' +
           '  </ul>' +
           '</form>' +
-          '<a href="#" class="h5p-show-solution"><%= showSolutionButton %></a>';
+          '<a href="#" class="h5p-show-solution"><%= UI.showSolutionButton %></a>';
 
   var defaults = {
     question: "No question text provided",
@@ -57,10 +57,12 @@ H5P.MultiChoice = function (options, contentId) {
     singleAnswer: false,
     singlePoint: true,
     weight: 1,
-    showSolutionButton: 'Show solution',
-    correctText: 'Correct!',
-    almostText: 'Almost!',
-    wrongText: 'Wrong!'
+    UI: {
+      showSolutionButton: 'Show solution',
+      correctText: 'Correct!',
+      almostText: 'Almost!',
+      wrongText: 'Wrong!'
+    }
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend({}, defaults, options);
@@ -88,13 +90,13 @@ H5P.MultiChoice = function (options, contentId) {
     });
     var max = maxScore();
     if (score === max) {
-      $('<div class="h5p-passed">' + params.correctText + '</div>').appendTo($myDom);
+      $('<div class="h5p-passed">' + params.UI.correctText + '</div>').appendTo($myDom);
     }
     else if (score === 0) {
-      $('<div class="h5p-failed">' + params.wrongText + '</div>').appendTo($myDom);
+      $('<div class="h5p-failed">' + params.UI.wrongText + '</div>').appendTo($myDom);
     }
     else {
-      $('<div class="h5p-almost">' + params.almostText + '</div>').appendTo($myDom);
+      $('<div class="h5p-almost">' + params.UI.almostText + '</div>').appendTo($myDom);
     }
   };
 
