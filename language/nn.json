@@ -4,16 +4,16 @@
       "label": "Spørsmål"
     },
     {
-      "label": "Bare ett svar",
-      "description": "Slå av for å tillate brukeren å velge mer enn ett svar."
+      "label": "Bare eitt svar",
+      "description": "Slå av for å la brukaren få velje meir enn eitt svar."
     },
     {
       "label": "0 eller 1 poeng",
-      "description": "Slå av for å gi 1 poeng for hvert riktige alternativ. (\"Bare ett svar\" må også slås av)"
+      "description": "Slå av for å gi 1 poeng for kvart riktige alternativ. (\"Bare eitt svar\" må også slås av)"
     },
     {
-      "label": "Svaralternativer",
-      "description": "Svaralternativene brukeren kan velge mellom",
+      "label": "Svaralternativ",
+      "description": "Svaralternativa brukaren kan velje mellom",
       "entity": "svaralternativ",
       "field": {
         "label": "Svaralternativ",
@@ -28,7 +28,7 @@
       }
     },
     {
-    "label": "Oversettelser for ledetekster i flervalg",
+    "label": "Oversetting for leietekstar i fleirval",
     "fields": [
       {
         "label": "Tekst for \"Vis svar\" knapp",
