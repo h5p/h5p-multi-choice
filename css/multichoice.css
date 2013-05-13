@@ -35,16 +35,22 @@
   box-shadow: 0 0 0.5em #c7c7c7;
   border-radius: 0.5em;
   background: rgba(220, 220, 220, 0.8);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccDCDCDC,endColorstr=#ccDCDCDC);
+  zoom: 1;
 }
 
 .h5p-multichoice label:hover {
   background: rgba(220, 220, 220, 1);
   box-shadow: 0 0 0.5em #afc1db;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffDCDCDC,endColorstr=#ffDCDCDC);
+  zoom: 1;
 }
 
 .h5p-multichoice .h5p-selected > label {
   background: rgba(188, 202, 222, 1);
   box-shadow: 0 0 0.5em #afc1db;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffBCCADE,endColorstr=#ffBCCADE);
+  zoom: 1;
 }
 
 .h5p-multichoice > form, #center .h5p-multichoice > form { /* #center is just a garland hack */
@@ -84,6 +90,8 @@
 }
 .h5p-multichoice .h5p-selected.h5p-correct > label {
   background: rgba(198, 222, 188, 1);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffC6DEBC,endColorstr=#ffC6DEBC);
+  zoom: 1;
 }
 .h5p-multichoice .h5p-wrong > label {
   color: #c33f62;
@@ -91,6 +99,8 @@
 }
 .h5p-multichoice .h5p-selected.h5p-wrong > label {
   background: rgba(222, 188, 193, 1);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffDEBCC1,endColorstr=#ffDEBCC1);
+  zoom: 1;
 }
 .h5p-multichoice > .h5p-passed, .h5p-multichoice > .h5p-failed, .h5p-multichoice > .h5p-almost {
   float: right;
