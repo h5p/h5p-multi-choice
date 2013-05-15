@@ -31,30 +31,26 @@
   cursor: pointer;
   display: block;
   padding: 0.25em 0.75em;
-  border: 1px solid #fff;
-  box-shadow: 0 0 0.5em #c7c7c7;
+  box-shadow: 0 0 0.5em #e3e3e3;
   border-radius: 0.5em;
-  background: rgba(220, 220, 220, 0.8);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccDCDCDC,endColorstr=#ccDCDCDC);
-  zoom: 1;
+  background: rgba(220, 220, 220, 0.9);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e6DCDCDC,endColorstr=#e6DCDCDC);
 }
 
 .h5p-multichoice label:hover {
-  background: rgba(220, 220, 220, 1);
-  box-shadow: 0 0 0.5em #afc1db;
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffDCDCDC,endColorstr=#ffDCDCDC);
-  zoom: 1;
+  background: #cfd3d9;
+  box-shadow: 0 0 0.5em #d0dced;
+  filter: none;
 }
 
 .h5p-multichoice .h5p-selected > label {
-  background: rgba(188, 202, 222, 1);
-  box-shadow: 0 0 0.5em #afc1db;
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffBCCADE,endColorstr=#ffBCCADE);
-  zoom: 1;
+  background: #BCCADE;
+  box-shadow: 0 0 0.5em #d0dced;
+  filter: none;
 }
 
 .h5p-multichoice > form, #center .h5p-multichoice > form { /* #center is just a garland hack */
-  padding: 0.5em;
+  padding: 0 0.5em;
   margin: 0;
 }
 
