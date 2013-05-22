@@ -104,6 +104,9 @@
   margin: 0 0.5em 1em;
   font-size: 1.25em;
   color: #599413;
+  background: rgba(255, 255, 255, 0.9);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6FFFFFF,endColorstr=#E6FFFFFF);
+
 }
 .h5p-multichoice > .h5p-failed {
   color: #c33f62;
