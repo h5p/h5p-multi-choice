@@ -29,6 +29,13 @@
     "default": true
   },
   {
+    "name": "randomAnswers",
+    "type": "boolean",
+    "label": "Randomize answers",
+    "description": "Enable to randomize the order of questions on display.",
+    "default": false
+  },
+  {
     "name": "answers",
     "type": "list",
     "label": "Available options",

@@ -9,18 +9,11 @@
 //   singlePoint: true,  // True if question give a single point score only
 //                       // if all are correct, false to give 1 point per
 //                       // correct answer. (Only for singleAnswer=false)
-//   randomOrder: false  // Whether to randomize the order of answers.
+//   randomAnswers: false  // Whether to randomize the order of answers.
 // }
 //
 // Events provided:
 // - h5pQuestionAnswered: Triggered when a question has been answered.
-
-// TODO list:
-//
-// Keep state of question between renderings. Show current state if user has
-// answered before!
-//
-// Actually randomize order if randomOrder=true
 
 var H5P = H5P || {};
 
@@ -56,6 +49,7 @@ H5P.MultiChoice = function (options, contentId) {
               {text: "Answer 2", correct: true }],
     singleAnswer: false,
     singlePoint: true,
+    randomAnswers: false,
     weight: 1,
     UI: {
       showSolutionButton: 'Show solution',
@@ -69,7 +63,6 @@ H5P.MultiChoice = function (options, contentId) {
   var $myDom;
 
   var answerGiven = false;
-  params.userAnswers = new Array();
   var score = 0;
   var solutionsVisible = false;
 
@@ -119,10 +112,10 @@ H5P.MultiChoice = function (options, contentId) {
     } else {
       target = $(target);
     }
+
     // Render own DOM into target.
     $myDom = target;
     $myDom.html(template.render(params)).addClass('h5p-multichoice');
-
 
     // Set event listeners.
     $('input', $myDom).change(function () {
@@ -171,6 +164,14 @@ H5P.MultiChoice = function (options, contentId) {
 
     return this;
   };
+
+  // Initialization code
+  // Randomize order, if requested
+  if (params.randomAnswers) {
+    params.answers.shuffle();
+  }
+  // Start with an empty set of user answers.
+  params.userAnswers = [];
 
   // Masquerade the main object to hide inner properties and functions.
   var returnObject = {

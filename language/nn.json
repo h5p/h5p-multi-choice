@@ -12,6 +12,10 @@
       "description": "Slå av for å gi 1 poeng for kvart riktige alternativ. (\"Bare eitt svar\" må også slås av)"
     },
     {
+      "label": "Tilfeldige svaralternativ",
+      "description": "Slå på for å vise de mulige svara i tilfeldig rekkefølge."
+    },
+    {
       "label": "Svaralternativ",
       "description": "Svaralternativa brukaren kan velje mellom",
       "entity": "svaralternativ",
