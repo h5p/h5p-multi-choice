@@ -114,3 +114,7 @@
 .h5p-multichoice > .h5p-almost {
   color: #d59c42;
 }
+.h5p-span {
+  display: inline-block;
+  vertical-align: middle;
+}
