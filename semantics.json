@@ -41,7 +41,6 @@
     "label": "Available options",
     "description": "The alternatives the user may choose from.",
     "entity": "option",
-    "max": 5,
     "field": {
       "name": "answer",
       "type": "group",
