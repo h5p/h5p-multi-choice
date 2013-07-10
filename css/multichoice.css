@@ -115,6 +115,13 @@
   color: #d59c42;
 }
 .h5p-span {
+  display: inline;
+}
+.h5p-span div,
+.h5p-span p {
+  display: inline;
+}
+.h5p-span img {
   display: inline-block;
   vertical-align: middle;
 }
