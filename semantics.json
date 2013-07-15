@@ -8,10 +8,7 @@
       "strong",
       "em",
       "sub",
-      "sup",
-      "ul",
-      "math",
-      "h2"
+      "sup"
     ]
   },
   {
@@ -55,9 +52,7 @@
             "strong",
             "em",
             "sub",
-            "sup",
-            "ul",
-            "math"
+            "sup"
           ]
         },
         {
