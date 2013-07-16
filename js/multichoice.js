@@ -30,12 +30,15 @@ H5P.MultiChoice = function (options, contentId) {
           '    <% for (var i=0; i<answers.length; i++) { %>' +
           '      <li class="h5p-answer<% if (userAnswers.contains(i)) { %> h5p-selected<% } %>">' +
           '        <label>' +
-          '          <% if (singleAnswer) { %>' +
-          '          <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>' +
-          '          <% } else { %>' +
-          '          <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>' +
-          '          <% } %>' +
-          '          <span class="h5p-span"><%= answers[i].text %></span>' +
+          '          <div class="h5p-input-container">' +
+          '            <% if (singleAnswer) { %>' +
+          '            <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>' +
+          '            <% } else { %>' +
+          '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>' +
+          '            <% } %>' +
+          '          </div><div class="h5p-alternative-container">' +
+          '            <span class="h5p-span"><%= answers[i].text %></span>' +
+          '          </div><div class="h5p-clearfix"></div>' +
           '        </label>' +
           '      </li>' +
           '    <% } %>' +

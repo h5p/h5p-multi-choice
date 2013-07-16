@@ -30,7 +30,7 @@
 .h5p-multichoice label {
   cursor: pointer;
   display: block;
-  padding: 0.25em 0.75em;
+  padding: 0.25em 0.75em 0.25em 0.1em;
   box-shadow: 0 0 0.5em #e3e3e3;
   border-radius: 0.5em;
   background: rgba(220, 220, 220, 0.9);
@@ -78,8 +78,8 @@
   line-height: 1.5em;
 }
 .h5p-multichoice .h5p-input {
-  margin: 0 0.5em 0 0;
-  vertical-align: middle;
+  margin: 0.5em auto;
+  display: block;
 }
 .h5p-multichoice .h5p-correct > label {
   color: #599413;
@@ -124,4 +124,19 @@
 .h5p-span img {
   display: inline-block;
   vertical-align: middle;
+}
+
+.h5p-clearfix {
+  clear: both;
+}
+
+.h5p-multichoice .h5p-input-container {
+  display: block;
+  float: left;
+  height: 100%;
+  width: 2em;
+}
+
+.h5p-multichoice .h5p-alternative-container {
+  margin-left: 2em;
 }
