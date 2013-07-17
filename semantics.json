@@ -4,6 +4,7 @@
     "type": "text",
     "widget": "html",
     "label": "Question",
+    "enterMode": "p",
     "tags": [
       "strong",
       "em",
