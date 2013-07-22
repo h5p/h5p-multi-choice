@@ -140,3 +140,11 @@
 .h5p-multichoice .h5p-alternative-container {
   margin-left: 2em;
 }
+
+.h5p-question p:last-child {
+  margin-bottom: 0;
+}
+
+.h5p-question p:first-child {
+  margin-top: 0;
+}
