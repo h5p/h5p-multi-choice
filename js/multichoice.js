@@ -171,7 +171,7 @@ H5P.MultiChoice = function (options, contentId) {
   // Initialization code
   // Randomize order, if requested
   if (params.randomAnswers) {
-    params.answers.shuffle();
+    params.answers = H5P.shuffleArray(params.answers);
   }
   // Start with an empty set of user answers.
   params.userAnswers = [];
