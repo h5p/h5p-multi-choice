@@ -28,13 +28,13 @@ H5P.MultiChoice = function (options, contentId) {
           '<form>' +
           '  <ul class="h5p-answers">' +
           '    <% for (var i=0; i<answers.length; i++) { %>' +
-          '      <li class="h5p-answer<% if (userAnswers.contains(i)) { %> h5p-selected<% } %>">' +
+          '      <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected<% } %>">' +
           '        <label>' +
           '          <div class="h5p-input-container">' +
           '            <% if (singleAnswer) { %>' +
-          '            <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>' +
+          '            <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %>>' +
           '            <% } else { %>' +
-          '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.contains(i)) { %> checked<% } %>>' +
+          '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %>>' +
           '            <% } %>' +
           '          </div><div class="h5p-alternative-container">' +
           '            <span class="h5p-span"><%= answers[i].text %></span>' +
