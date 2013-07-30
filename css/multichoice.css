@@ -35,6 +35,7 @@
   border-radius: 0.5em;
   background: rgba(220, 220, 220, 0.9);
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e6DCDCDC,endColorstr=#e6DCDCDC);
+  font-weight: normal;
 }
 
 .h5p-multichoice label:hover {
