@@ -68,7 +68,7 @@ H5P.MultiChoice = function (options, contentId) {
     }
   };
   var template = new EJS({text: texttemplate});
-  var params = $.extend({}, defaults, options);
+  var params = $.extend(true, {}, defaults, options);
 
   var getCheckboxOrRadioImgPath = function(radio, selected) {
     var toReturn = lp + '/img/';
