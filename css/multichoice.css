@@ -79,8 +79,9 @@
   line-height: 1.5em;
 }
 .h5p-multichoice .h5p-input {
-  margin: 0.5em auto;
   display: block;
+  left: -1000px;
+  position: absolute;
 }
 .h5p-multichoice .h5p-correct > label {
   color: #599413;
@@ -140,6 +141,14 @@
 
 .h5p-multichoice .h5p-alternative-container {
   margin-left: 2em;
+}
+
+.h5p-multichoice .h5p-radio-or-checkbox {
+ border: medium none;
+ display: block;
+ height: 1em;
+ margin: 0.2em auto;
+ width: 1em;
 }
 
 .h5p-question p:last-child {
