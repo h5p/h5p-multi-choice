@@ -74,7 +74,7 @@ H5P.MultiChoice = function (options, contentId) {
     var toReturn = lp + '/img/';
     toReturn += radio ? 'radio' : 'checkbox';
     return toReturn + (selected ? '-selected.png' : '-not-selected.png');
-  }
+  };
 
   for (var i = 0; i < params.answers.length; i++) {
     params.answers[i].checkboxOrRadioImgPath = getCheckboxOrRadioImgPath(params.singleAnswer, params.userAnswers.indexOf(i) > -1);
@@ -90,6 +90,7 @@ H5P.MultiChoice = function (options, contentId) {
     if (solutionsVisible) {
       return;
     }
+    returnObject.$solutionButton.remove();
     solutionsVisible = true;
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = H5P.jQuery(e);
@@ -124,6 +125,8 @@ H5P.MultiChoice = function (options, contentId) {
     }
     return params.weight;
   };
+
+  var $solutionButton;
 
   // Function for attaching the multichoice to a DOM element.
   var attach = function (target) {
@@ -182,9 +185,8 @@ H5P.MultiChoice = function (options, contentId) {
       $(returnObject).trigger('h5pQuestionAnswered');
     });
 
-    $myDom.children('.h5p-show-solution').click(function () {
+    returnObject.$solutionButton = $myDom.children('.h5p-show-solution').click(function () {
       showSolutions();
-      $(this).remove();
       return false;
     });
 
