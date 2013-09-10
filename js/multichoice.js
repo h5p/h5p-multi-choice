@@ -62,6 +62,7 @@ H5P.MultiChoice = function (options, contentId) {
     userAnswers: [],
     UI: {
       showSolutionButton: 'Show solution',
+      tryAgainButton: 'Try again',
       correctText: 'Correct!',
       almostText: 'Almost!',
       wrongText: 'Wrong!'
@@ -90,7 +91,14 @@ H5P.MultiChoice = function (options, contentId) {
     if (solutionsVisible) {
       return;
     }
-    returnObject.$solutionButton.remove();
+
+    if (returnObject.tryAgain) {
+      returnObject.$solutionButton.text(params.UI.tryAgainButton).addClass('h5p-try-again');
+    }
+    else {
+      returnObject.$solutionButton.remove();
+    }
+
     solutionsVisible = true;
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = H5P.jQuery(e);
@@ -114,6 +122,16 @@ H5P.MultiChoice = function (options, contentId) {
     }
   };
 
+  var hideSolutions = function () {
+    returnObject.$solutionButton.text(params.UI.showSolutionButton).removeClass('h5p-try-again');
+    solutionsVisible = false;
+
+    $myDom.find('.h5p-correct').removeClass('h5p-correct');
+    $myDom.find('.h5p-wrong').removeClass('h5p-wrong');
+    $myDom.find('.h5p-passed, .h5p-failed, .h5p-almost').remove();
+    $myDom.find('input').prop('disabled', false);
+  };
+
   var maxScore = function () {
     if (!params.singleAnswer && !params.singlePoint) {
       var s = 0;
@@ -125,8 +143,6 @@ H5P.MultiChoice = function (options, contentId) {
     }
     return params.weight;
   };
-
-  var $solutionButton;
 
   // Function for attaching the multichoice to a DOM element.
   var attach = function (target) {
@@ -186,7 +202,12 @@ H5P.MultiChoice = function (options, contentId) {
     });
 
     returnObject.$solutionButton = $myDom.children('.h5p-show-solution').click(function () {
-      showSolutions();
+      if (returnObject.$solutionButton.hasClass('h5p-try-again')) {
+        hideSolutions();
+      }
+      else {
+        showSolutions();
+      }
       return false;
     });
 
@@ -209,6 +230,7 @@ H5P.MultiChoice = function (options, contentId) {
     getAnswerGiven: function () {return answerGiven;},
     getMaxScore: maxScore,
     showSolutions: showSolutions,
+    tryAgain: true,
     defaults: defaults // Provide defaults for inspection
   };
   // Store options.

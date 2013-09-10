@@ -77,6 +77,12 @@
         "default": "Show solution"
       },
       {
+        "name": "tryAgainButton",
+        "type": "text",
+        "label": "Try again button label",
+        "default": "Try again"
+      },
+      {
         "name": "correctText",
         "type": "text",
         "label": "Correct answer feedback",
