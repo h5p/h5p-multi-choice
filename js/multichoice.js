@@ -66,7 +66,8 @@ H5P.MultiChoice = function (options, contentId) {
       correctText: 'Correct!',
       almostText: 'Almost!',
       wrongText: 'Wrong!'
-    }
+    },
+    tryAgain: true
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
@@ -230,7 +231,7 @@ H5P.MultiChoice = function (options, contentId) {
     getAnswerGiven: function () {return answerGiven;},
     getMaxScore: maxScore,
     showSolutions: showSolutions,
-    tryAgain: true,
+    tryAgain: params.tryAgain,
     defaults: defaults // Provide defaults for inspection
   };
   // Store options.

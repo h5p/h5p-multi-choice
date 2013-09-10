@@ -101,5 +101,12 @@
         "default": "Wrong!"
       }
     ]
+  },
+  {
+    "name": "tryAgain",
+    "type": "boolean",
+    "label": "Enable try again button",
+    "default": true,
+    "optional": true
   }
 ]
