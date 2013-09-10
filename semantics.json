@@ -31,7 +31,7 @@
     "type": "boolean",
     "label": "Randomize answers",
     "description": "Enable to randomize the order of questions on display.",
-    "default": false
+    "default": true
   },
   {
     "name": "answers",
