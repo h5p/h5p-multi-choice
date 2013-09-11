@@ -80,7 +80,8 @@
         "name": "tryAgainButton",
         "type": "text",
         "label": "Try again button label",
-        "default": "Try again"
+        "default": "Try again",
+        "optional": true
       },
       {
         "name": "correctText",
