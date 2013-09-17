@@ -39,6 +39,10 @@
         "default": "Vis svar"
       },
       {
+        "label": "Merkelapp for «Prøv igjen»-knappen.",
+        "default": "Prøv igjen",
+      },
+      {
         "label": "Tilbakemelding ved riktig svar",
         "default": "Riktig!"
       },
