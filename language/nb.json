@@ -32,29 +32,29 @@
       }
     },
     {
-    "label": "Oversettelser for ledetekster i flervalg",
-    "fields": [
-      {
-        "label": "Tekst for \"Vis svar\" knapp",
-        "default": "Vis svar"
-      },
-      {
-        "label": "Merkelapp for «Prøv igjen»-knappen.",
-        "default": "Prøv igjen",
-      },
-      {
-        "label": "Tilbakemelding ved riktig svar",
-        "default": "Riktig!"
-      },
-      {
-        "label": "Tilbakemelding ved nesten riktig svar",
-        "default": "Nesten!"
-      },
-      {
-        "label": "Tilbakemelding ved galt svar",
-        "default": "Feil!"
-      }
-    ]
-  }
+      "label": "Oversettelser for ledetekster i flervalg",
+      "fields": [
+        {
+          "label": "Tekst for \"Vis svar\" knapp",
+          "default": "Vis svar"
+        },
+        {
+          "label": "Merkelapp for «Prøv igjen»-knappen.",
+          "default": "Prøv igjen"
+        },
+        {
+          "label": "Tilbakemelding ved riktig svar",
+          "default": "Riktig!"
+        },
+        {
+          "label": "Tilbakemelding ved nesten riktig svar",
+          "default": "Nesten!"
+        },
+        {
+          "label": "Tilbakemelding ved galt svar",
+          "default": "Feil!"
+        }
+      ]
+    }
   ]
 }
