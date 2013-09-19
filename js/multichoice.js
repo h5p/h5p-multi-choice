@@ -18,7 +18,6 @@
 var H5P = H5P || {};
 
 H5P.MultiChoice = function (options, contentId) {
-  var that = this;
   if ( !(this instanceof H5P.MultiChoice) )
     return new H5P.MultiChoice(options, contentId);
 
@@ -49,6 +48,7 @@ H5P.MultiChoice = function (options, contentId) {
           '</form>' +
           '<a href="#" class="h5p-show-solution"><%= UI.showSolutionButton %></a>';
 
+  // Set default behavior
   var defaults = {
     question: "No question text provided",
     answers: [
@@ -67,7 +67,9 @@ H5P.MultiChoice = function (options, contentId) {
       almostText: 'Almost!',
       wrongText: 'Wrong!'
     },
-    tryAgain: true
+    tryAgain: true,
+    displaySolutionsButton: true,
+    postUserStatistics: (H5P.postUserStatistics === true)
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
@@ -83,6 +85,7 @@ H5P.MultiChoice = function (options, contentId) {
   }
 
   var $myDom;
+  var $solutionButton;
 
   var answerGiven = false;
   var score = 0;
@@ -93,11 +96,13 @@ H5P.MultiChoice = function (options, contentId) {
       return;
     }
 
-    if (returnObject.tryAgain) {
-      returnObject.$solutionButton.text(params.UI.tryAgainButton).addClass('h5p-try-again');
-    }
-    else {
-      returnObject.$solutionButton.remove();
+    if ($solutionButton !== undefined) {
+      if (params.tryAgain) {
+        $solutionButton.text(params.UI.tryAgainButton).addClass('h5p-try-again');
+      }
+      else {
+        $solutionButton.remove();
+      }
     }
 
     solutionsVisible = true;
@@ -143,6 +148,21 @@ H5P.MultiChoice = function (options, contentId) {
       return s;
     }
     return params.weight;
+  };
+
+  var addSolutionButton = function () {
+    $solutionButton = $myDom.children('.h5p-show-solution').show().click(function () {
+      if ($solutionButton.hasClass('h5p-try-again')) {
+        hideSolutions();
+      }
+      else {
+        showSolutions();
+        if (params.postUserStatistics === true) {
+          H5P.setFinished(contentId, score, maxScore());
+        }
+      }
+      return false;
+    });
   };
 
   // Function for attaching the multichoice to a DOM element.
@@ -202,15 +222,12 @@ H5P.MultiChoice = function (options, contentId) {
       $(returnObject).trigger('h5pQuestionAnswered');
     });
 
-    returnObject.$solutionButton = $myDom.children('.h5p-show-solution').click(function () {
-      if (returnObject.$solutionButton.hasClass('h5p-try-again')) {
-        hideSolutions();
-      }
-      else {
-        showSolutions();
-      }
-      return false;
-    });
+    if (params.displaySolutionsButton === true) {
+      addSolutionButton();
+    }
+    else {
+      $myDom.children('.h5p-show-solution').hide();
+    }
 
     return this;
   };
@@ -231,7 +248,7 @@ H5P.MultiChoice = function (options, contentId) {
     getAnswerGiven: function () {return answerGiven;},
     getMaxScore: maxScore,
     showSolutions: showSolutions,
-    tryAgain: params.tryAgain,
+    addSolutionButton: addSolutionButton,
     defaults: defaults // Provide defaults for inspection
   };
   // Store options.
