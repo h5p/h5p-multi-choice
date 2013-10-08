@@ -129,7 +129,7 @@ H5P.MultiChoice = function (options, contentId) {
   };
 
   var hideSolutions = function () {
-    returnObject.$solutionButton.text(params.UI.showSolutionButton).removeClass('h5p-try-again');
+    $solutionButton.text(params.UI.showSolutionButton).removeClass('h5p-try-again');
     solutionsVisible = false;
 
     $myDom.find('.h5p-correct').removeClass('h5p-correct');
