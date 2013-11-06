@@ -20,6 +20,11 @@
   ],
   "preloadedDependencies": [
     {
+      "machineName": "FontAwesome",
+      "majorVersion": 3,
+      "minorVersion": 1
+    },
+    {
       "machineName": "EmbeddedJS",
       "majorVersion": 1,
       "minorVersion": 0

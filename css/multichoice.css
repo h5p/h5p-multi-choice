@@ -42,12 +42,12 @@
 }
 
 .h5p-multichoice .h5p-show-solution-container a.h5p-show-solution:before {
-  font-family: FontAwesome;
+  font-family: H5PFontAwesome;
   content: "\f06e   ";
 }
 
 .h5p-multichoice .h5p-show-solution-container a.h5p-show-solution.h5p-try-again:before {
-  font-family: FontAwesome;
+  font-family: H5PFontAwesome;
   content: "\f01e   ";
 }
 
@@ -173,7 +173,7 @@
 .h5p-multichoice .h5p-wrong > label:before {
   text-decoration: none;
   content: "\f00d";
-  font-family: FontAwesome;
+  font-family: H5PFontAwesome;
   color: #c33f62;
   float: right;
 }
@@ -181,7 +181,7 @@
 .h5p-multichoice .h5p-correct > label:before {
   text-decoration: none;
   content: "\f00c";
-  font-family: FontAwesome;
+  font-family: H5PFontAwesome;
   color: #39692e;
   float: right;
 }
