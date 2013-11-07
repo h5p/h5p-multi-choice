@@ -1,6 +1,6 @@
 /* IcoMoon font licensed under the GNU General Public License: http://www.gnu.org/licenses/gpl.html */
 @font-face {
-  font-family: 'icomoon';
+  font-family: 'icomoon-multichoice';
   src:url('../fonts/icomoon.eot');
   src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
     url('../fonts/icomoon.woff') format('woff'),
@@ -281,7 +281,7 @@
   margin: auto;
   width: 1em;
   text-decoration: none;
-  font-family: IcoMoon;
+  font-family: icomoon-multichoice;
   color: #494949;
   pointer-events: none;
 }
