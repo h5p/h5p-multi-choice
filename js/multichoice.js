@@ -38,7 +38,7 @@ H5P.MultiChoice = function(options, contentId) {
           '            <% } else { %>' +
           '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
           '            <% } %>' +
-          '            <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioImgPath %></a>' +
+          '            <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioIcon %></a>' +
           '          </div><div class="h5p-alternative-container">' +
           '            <span class="h5p-span"><%= answers[i].text %></span>' +
           '          </div><div class="h5p-clearfix"></div>' +
@@ -74,20 +74,16 @@ H5P.MultiChoice = function(options, contentId) {
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
 
-  var getCheckboxOrRadioImgPath = function(radio, selected) {
-    var toReturn;
+  var getCheckboxOrRadioIcon = function (radio, selected) {
+    var icon;
     if (radio) {
-      toReturn = selected ? '&#xe603;' : '&#xe600;';
+      icon = selected ? '&#xe603;' : '&#xe600;';
     }
     else {
-      toReturn = selected ? '&#xe601;' : '&#xe602;';
+      icon = selected ? '&#xe601;' : '&#xe602;';
     }
-    return toReturn;
+    return icon;
   };
-
-  for (var i = 0; i < params.answers.length; i++) {
-    params.answers[i].checkboxOrRadioImgPath = getCheckboxOrRadioImgPath(params.singleAnswer, params.userAnswers.indexOf(i) > -1);
-  }
 
   var $myDom;
   var $solutionButton;
@@ -142,8 +138,6 @@ H5P.MultiChoice = function(options, contentId) {
     $feedbackElement.removeClass('h5p-passed h5p-failed h5p-almost').empty();
     $myDom.find('.h5p-correct').removeClass('h5p-correct');
     $myDom.find('.h5p-wrong').removeClass('h5p-wrong');
-    //$myDom.find('.h5p-answer').removeClass('h5p-selected');
-    //$myDom.find('.h5p-radio-or-checkbox').html(getCheckboxOrRadioImgPath(params.singleAnswer,false));
     $myDom.find('input').prop('disabled', false);
   };
 
@@ -200,6 +194,14 @@ H5P.MultiChoice = function(options, contentId) {
       target = $(target);
     }
 
+    // If we are reattached, forget if we have shown solutions before.
+    solutionsVisible = false;
+
+    // Recalculate icons on attach, in case we are re-attaching.
+    for (var i = 0; i < params.answers.length; i++) {
+      params.answers[i].checkboxOrRadioIcon = getCheckboxOrRadioIcon(params.singleAnswer, params.userAnswers.indexOf(i) > -1);
+    }
+
     // Render own DOM into target.
     $myDom = target;
     $myDom.html(template.render(params)).addClass('h5p-multichoice');
@@ -219,17 +221,17 @@ H5P.MultiChoice = function(options, contentId) {
           score = 0;
         }
         $this.parents('.h5p-answers').find('.h5p-answer.h5p-selected').removeClass("h5p-selected");
-        $this.parents('.h5p-answers').find('.h5p-radio-or-checkbox').html(getCheckboxOrRadioImgPath(true, false));
+        $this.parents('.h5p-answers').find('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(true, false));
 
         $this.parents('.h5p-answer').addClass("h5p-selected");
-        $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioImgPath(true, true));
+        $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(true, true));
       } else {  
         if ($this.is(':checked')) {
           $this.parents('.h5p-answer').addClass("h5p-selected");
-          $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioImgPath(false, true));
+          $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(false, true));
         } else {
           $this.parents('.h5p-answer').removeClass("h5p-selected");
-          $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioImgPath(false, false));
+          $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(false, false));
         }
         calcScore();
       }
