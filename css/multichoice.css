@@ -205,7 +205,7 @@
 }
 
 .h5p-multichoice .h5p-selected.h5p-wrong > label {
-  border: 0.1em solid #ce9b9b;  
+  border: 0.1em solid #ce9b9b;
   zoom: 1;
 
   background: #e6ced1;
@@ -224,8 +224,6 @@
   font-size: 1.25em;
   line-height: 2em;
   color: #599413;
-  background: rgba(255, 255, 255, 0.9);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6FFFFFF,endColorstr=#E6FFFFFF);
 }
 
 .feedback-text.h5p-failed {
