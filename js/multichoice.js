@@ -47,7 +47,7 @@ H5P.MultiChoice = function(options, contentId) {
           '    <% } %>' +
           '  </ul>' +
           '</form>' +
-          '<div class="h5p-show-solution-container"><div class="feedback-text"></div><a href="#" class="h5p-show-solution"><%= UI.showSolutionButton %></a></div>';
+          '<div class="h5p-show-solution-container"><div class="feedback-text"></div><a href="#" class="h5p-show-solution" style="display:none;"><%= UI.showSolutionButton %></a></div>';
 
   var defaults = {
     question: "No question text provided",
@@ -154,7 +154,7 @@ H5P.MultiChoice = function(options, contentId) {
   };
   
   var addSolutionButton = function () {
-    $solutionButton = $myDom.children('.h5p-show-solution').show().click(function () {
+    $solutionButton = $myDom.find('.h5p-show-solution').show().click(function () {
       if ($solutionButton.hasClass('h5p-try-again')) {
         hideSolutions();
       }
@@ -241,9 +241,6 @@ H5P.MultiChoice = function(options, contentId) {
 
     if (params.displaySolutionsButton === true) {
       addSolutionButton();
-    }
-    else {
-      $myDom.find('.h5p-show-solution').hide();
     }
     if (!params.singleAnswer) {
       calcScore();
