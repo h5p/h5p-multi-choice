@@ -120,7 +120,6 @@ H5P.MultiChoice = function(options, contentId) {
     });
     var max = maxScore();
     if (score === max) {
-      //$('<div class="h5p-passed">' + params.UI.correctText + '</div>').prependTo($myDom.find('.h5p-show-solution-container'));
       $feedbackElement.addClass('h5p-passed').html(params.UI.correctText);
     }
     else if (score === 0) {
@@ -141,16 +140,19 @@ H5P.MultiChoice = function(options, contentId) {
     $myDom.find('input').prop('disabled', false);
   };
 
-  var maxScore = function () {
-    if (!params.singleAnswer && !params.singlePoint) {
-      var s = 0;
-      for (var i = params.answers.length - 1; i >= 0; i--) {
-        var a = params.answers[i];
-        s += (a.weight !== undefined) ? a.weight : 1;
+  var calculateMaxScore = function () {
+    var maxScore = 0;
+    for (var i = 0; i < params.answers.length; i++) {
+      var choice = params.answers[i];
+      if (choice.correct) {
+        maxScore += (choice.weight !== undefined ? choice.weight : 1);
       }
-      return s;
     }
-    return params.weight;
+    return maxScore;
+  };
+
+  var maxScore = function () {
+    return (!params.singleAnswer && !params.singlePoint ? calculateMaxScore() : params.weight);
   };
   
   var addSolutionButton = function () {
@@ -173,16 +175,24 @@ H5P.MultiChoice = function(options, contentId) {
     params.userAnswers = new Array();
     $('input', $myDom).each(function (idx, el) {
       var $el = $(el);
-      if (($el.is(':checked') && params.answers[idx].correct) || (!$el.is(':checked') && !params.answers[idx].correct)) {
-        score += 1;
-      }
       if ($el.is(':checked')) {
+        var choice = params.answers[idx];
+        var weight = (choice.weight !== undefined ? choice.weight : 1);
+        if (choice.correct) {
+          score += weight;
+        }
+        else {
+          score -= weight;
+        }
         var num = parseInt($(el).val().split('_')[1], 10);
         params.userAnswers.push(num);
       }
     });
+    if (score < 0) {
+      score = 0;
+    }
     if (params.singlePoint) {
-      score = (score === params.answers.length) ? 1 : 0;
+      score = (score === calculateMaxScore() ? params.weight : 0);
     }
   };
 
