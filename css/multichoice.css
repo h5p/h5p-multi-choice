@@ -43,12 +43,13 @@
 
 .h5p-multichoice .h5p-show-solution-container a.h5p-show-solution:before {
   font-family: H5PFontAwesome;
-  content: "\f06e   ";
+  content: "\f06e";
+  padding-left: 0.5em;
 }
 
 .h5p-multichoice .h5p-show-solution-container a.h5p-show-solution.h5p-try-again:before {
   font-family: H5PFontAwesome;
-  content: "\f01e   ";
+  content: "\f01e";
 }
 
 .h5p-multichoice .h5p-show-solution-container .h5p-show-solution:hover {
