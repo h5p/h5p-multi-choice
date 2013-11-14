@@ -44,11 +44,10 @@
 .h5p-multichoice .h5p-show-solution-container a.h5p-show-solution:before {
   font-family: H5PFontAwesome;
   content: "\f06e";
-  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 .h5p-multichoice .h5p-show-solution-container a.h5p-show-solution.h5p-try-again:before {
-  font-family: H5PFontAwesome;
   content: "\f01e";
 }
 
