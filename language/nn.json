@@ -1,0 +1,60 @@
+{
+  "semantics": [
+    {
+      "label": "Spørsmål"
+    },
+    {
+      "label": "Bare eitt svar",
+      "description": "Slå av for å la brukaren få velje meir enn eitt svar."
+    },
+    {
+      "label": "0 eller 1 poeng",
+      "description": "Slå av for å gi 1 poeng for kvart riktige alternativ. (\"Bare eitt svar\" må også slås av)"
+    },
+    {
+      "label": "Tilfeldige svaralternativ",
+      "description": "Slå på for å vise de mulige svara i tilfeldig rekkefølge."
+    },
+    {
+      "label": "Svaralternativ",
+      "description": "Svaralternativa brukaren kan velje mellom",
+      "entity": "svaralternativ",
+      "field": {
+        "label": "Svaralternativ",
+        "fields": [
+          {
+            "label": "Tekst"
+          },
+          {
+            "label": "Riktig"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Oversetting for leietekstar i fleirval",
+      "fields": [
+        {
+          "label": "Tekst for \"Vis svar\" knapp",
+          "default": "Vis svar"
+        },
+        {
+          "label": "Merkelapp for «Prøv igjen»-knappen.",
+          "default": "Prøv igjen"
+        },
+        {
+          "label": "Tilbakemelding ved riktig svar",
+          "default": "Riktig!"
+        },
+        {
+          "label": "Tilbakemelding ved nesten riktig svar",
+          "default": "Nesten!"
+        },
+        {
+          "label": "Tilbakemelding ved galt svar",
+          "default": "Feil!"
+        }
+      ]
+    }
+  ]
+}

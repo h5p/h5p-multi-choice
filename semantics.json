@@ -1,0 +1,114 @@
+[
+  {
+    "name": "question",
+    "type": "text",
+    "widget": "html",
+    "label": "Question",
+    "enterMode": "p",
+    "tags": [
+      "strong",
+      "em",
+      "sub",
+      "sup"
+    ]
+  },
+  {
+    "name": "singleAnswer",
+    "type": "boolean",
+    "label": "Single answer",
+    "description": "Disable to allow selection of multiple options.",
+    "default": true
+  },
+  {
+    "name": "singlePoint",
+    "type": "boolean",
+    "label": "Single point score",
+    "description": "Disable to get 1 point for each correct answer. (single answer must also be disabled)",
+    "default": true
+  },
+  {
+    "name": "randomAnswers",
+    "type": "boolean",
+    "label": "Randomize answers",
+    "description": "Enable to randomize the order of questions on display.",
+    "default": true
+  },
+  {
+    "name": "answers",
+    "type": "list",
+    "label": "Available options",
+    "description": "The alternatives the user may choose from.",
+    "entity": "option",
+    "min": 1,
+    "field": {
+      "name": "answer",
+      "type": "group",
+      "label": "Option",
+      "fields": [
+        {
+          "name": "text",
+          "type": "text",
+          "widget": "html",
+          "label": "Text",
+          "tags": [
+            "strong",
+            "em",
+            "sub",
+            "sup"
+          ]
+        },
+        {
+          "name": "correct",
+          "type": "boolean",
+          "label": "Correct"
+        }
+      ]
+    }
+  },
+  {
+    "name": "UI",
+    "type": "group",
+    "label": "User interface translations for multichoice",
+    "common": true,
+    "fields": [
+      {
+        "name": "showSolutionButton",
+        "type": "text",
+        "label": "Show solution button label",
+        "default": "Show solution"
+      },
+      {
+        "name": "tryAgainButton",
+        "type": "text",
+        "label": "Try again button label",
+        "default": "Try again",
+        "optional": true
+      },
+      {
+        "name": "correctText",
+        "type": "text",
+        "label": "Correct answer feedback",
+        "default": "Correct!"
+      },
+      {
+        "name": "almostText",
+        "type": "text",
+        "label": "Almost correct answer feedback",
+        "default": "Almost!"
+      },
+      {
+        "name": "wrongText",
+        "type": "text",
+        "label": "Not correct answer feedback",
+        "default": "Wrong!"
+      }
+    ]
+  },
+  {
+    "name": "tryAgain",
+    "type": "boolean",
+    "label": "Enable try again button",
+    "default": true,
+    "optional": true
+  }
+]

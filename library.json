@@ -1,0 +1,33 @@
+{
+  "title": "Multichoice question",
+  "contentType": "question",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 34,
+  "runnable": 1,
+  "machineName": "H5P.MultiChoice",
+  "author": "Amendor AS",
+  "license": "cc-by-sa",
+  "preloadedJs": [
+    {
+      "path": "js/multichoice.js"
+    }
+  ],
+  "preloadedCss": [
+    {
+      "path": "css/multichoice.css"
+    }
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "FontAwesome",
+      "majorVersion": 3,
+      "minorVersion": 1
+    },
+    {
+      "machineName": "EmbeddedJS",
+      "majorVersion": 1,
+      "minorVersion": 0
+    }
+  ]
+}
