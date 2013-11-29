@@ -1,6 +1,6 @@
 ## H5P Multi Choice
 
-Test your users with a simple multi choice question.
+Test your users with simple multi choice questions.
 
 ## License
 
