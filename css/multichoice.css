@@ -24,6 +24,7 @@
 
 .h5p-multichoice .h5p-show-solution-container .h5p-show-solution {
   display: inline-block;
+  font-size: 1em;  
   padding: 0.2em 1em;
   border: 0.2em solid #fff;
   border-radius: 0.4em;
