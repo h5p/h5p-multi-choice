@@ -61,6 +61,32 @@
           "name": "correct",
           "type": "boolean",
           "label": "Correct"
+        },
+        {
+          "name": "chosenFeedback",
+          "type": "text",
+          "widget": "html",
+          "label": "Chosen feedback",
+          "optional": true,
+          "tags": [
+            "strong",
+            "em",
+            "sub",
+            "sup"
+          ]
+        },
+        {
+          "name": "notChosenFeedback",
+          "type": "text",
+          "widget": "html",
+          "label": "Not chosen feedback",
+          "optional": true,
+          "tags": [
+            "strong",
+            "em",
+            "sub",
+            "sup"
+          ]
         }
       ]
     }

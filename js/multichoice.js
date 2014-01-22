@@ -27,7 +27,6 @@ H5P.MultiChoice = function(options, contentId) {
 
   var texttemplate =
           '<div class="h5p-question"><%= question %></div>' +
-          '<form>' +
           '  <ul class="h5p-answers">' +
           '    <% for (var i=0; i<answers.length; i++) { %>' +
           '      <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected<% } %>">' +
@@ -46,7 +45,6 @@ H5P.MultiChoice = function(options, contentId) {
           '      </li>' +
           '    <% } %>' +
           '  </ul>' +
-          '</form>' +
           '<div class="h5p-show-solution-container"><div class="feedback-text"></div><a href="#" class="h5p-show-solution" style="display:none;"><%= UI.showSolutionButton %></a></div>';
 
   var defaults = {
@@ -88,10 +86,32 @@ H5P.MultiChoice = function(options, contentId) {
   var $myDom;
   var $solutionButton;
   var $feedbackElement;
+  var $feedbackDialog;
 
   var answerGiven = false;
   var score = 0;
   var solutionsVisible = false;
+
+  var addFeedback = function ($element, feedback) {
+    $('<div/>', {
+      role: 'button',
+      tabIndex: 1,
+      class: 'h5p-feedback-button',
+      title: 'View feedback',
+      click: function () {
+        var $dialog = $element.find('.h5p-feedback-dialog');
+        if ($dialog.length !== 0) {
+          $dialog.remove();
+        }
+        else {
+          if ($feedbackDialog !== undefined) {
+            $feedbackDialog.remove();
+          }
+          $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
+        }
+      }
+    }).appendTo($element);
+  }
 
   var showSolutions = function () {
     if (solutionsVisible) {
@@ -109,14 +129,23 @@ H5P.MultiChoice = function(options, contentId) {
 
     solutionsVisible = true;
     $myDom.find('.h5p-answer').each(function (i, e) {
-      var $e = H5P.jQuery(e);
-      if (params.answers[i].correct) {
+      var $e = $(e);
+      var a = params.answers[i];
+      if (a.correct) {
         $e.addClass('h5p-correct');
       }
       else {
         $e.addClass('h5p-wrong');
       }
       $e.find('input').attr('disabled', 'disabled');
+      
+      var c = $e.hasClass('h5p-selected');
+      if (a.chosenFeedback !== undefined && c) {
+        addFeedback($e, a.chosenFeedback);
+      }
+      else if (a.notChosenFeedback !== undefined && !c) {
+        addFeedback($e, a.notChosenFeedback);
+      }
     });
     var max = maxScore();
     if (score === max) {
