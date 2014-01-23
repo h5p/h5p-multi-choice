@@ -87,6 +87,11 @@ H5P.MultiChoice = function(options, contentId) {
   var $solutionButton;
   var $feedbackElement;
   var $feedbackDialog;
+  var removeFeedbackDialog = function () {
+    // Remove the open feedback dialog.
+    H5P.$body.unbind('click', removeFeedbackDialog);
+    $feedbackDialog.remove();
+  }
 
   var answerGiven = false;
   var score = 0;
@@ -98,17 +103,15 @@ H5P.MultiChoice = function(options, contentId) {
       tabIndex: 1,
       class: 'h5p-feedback-button',
       title: 'View feedback',
-      click: function () {
-        var $dialog = $element.find('.h5p-feedback-dialog');
-        if ($dialog.length !== 0) {
-          $dialog.remove();
+      click: function (e) {
+        if ($feedbackDialog !== undefined && $feedbackDialog.parent()[0] === $element[0]) {
+          // Skip if we're trying to open the same dialog twice
+          return;
         }
-        else {
-          if ($feedbackDialog !== undefined) {
-            $feedbackDialog.remove();
-          }
-          $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
-        }
+        
+        $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
+        H5P.$body.click(removeFeedbackDialog);
+        e.stopPropagation();
       }
     }).appendTo($element);
   }
@@ -140,10 +143,10 @@ H5P.MultiChoice = function(options, contentId) {
       $e.find('input').attr('disabled', 'disabled');
       
       var c = $e.hasClass('h5p-selected');
-      if (a.chosenFeedback !== undefined && c) {
+      if (c === true && a.chosenFeedback !== undefined && a.chosenFeedback !== '') {
         addFeedback($e, a.chosenFeedback);
       }
-      else if (a.notChosenFeedback !== undefined && !c) {
+      else if (c === false && a.notChosenFeedback !== undefined && a.notChosenFeedback !== '') {
         addFeedback($e, a.notChosenFeedback);
       }
     });
@@ -167,6 +170,7 @@ H5P.MultiChoice = function(options, contentId) {
     $myDom.find('.h5p-correct').removeClass('h5p-correct');
     $myDom.find('.h5p-wrong').removeClass('h5p-wrong');
     $myDom.find('input').prop('disabled', false);
+    $myDom.find('.h5p-feedback-button, .h5p-feedback-dialog').remove();
   };
 
   var calculateMaxScore = function () {
