@@ -104,9 +104,14 @@ H5P.MultiChoice = function(options, contentId) {
       class: 'h5p-feedback-button',
       title: 'View feedback',
       click: function (e) {
-        if ($feedbackDialog !== undefined && $feedbackDialog.parent()[0] === $element[0]) {
-          // Skip if we're trying to open the same dialog twice
-          return;
+        if ($feedbackDialog !== undefined) {
+          if ($feedbackDialog.parent()[0] === $element[0]) {
+            // Skip if we're trying to open the same dialog twice
+            return;
+          }
+          
+          // Remove last dialog.
+          $feedbackDialog.remove();
         }
         
         $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
