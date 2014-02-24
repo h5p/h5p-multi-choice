@@ -3,11 +3,15 @@
   "contentType": "question",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 37,
+  "patchVersion": 38,
   "runnable": 1,
   "machineName": "H5P.MultiChoice",
   "author": "Amendor AS",
   "license": "cc-by-sa",
+  "coreApi": {
+    "majorVersion": 1,
+    "minorVersion": 1
+  },
   "preloadedJs": [
     {
       "path": "js/multichoice.js"
@@ -19,11 +23,6 @@
     }
   ],
   "preloadedDependencies": [
-    {
-      "machineName": "FontAwesome",
-      "majorVersion": 3,
-      "minorVersion": 1
-    },
     {
       "machineName": "EmbeddedJS",
       "majorVersion": 1,
