@@ -8,8 +8,8 @@
       "description": "Slå av for å la brukaren få velje meir enn eitt svar."
     },
     {
-      "label": "0 eller 1 poeng",
-      "description": "Slå av for å gi 1 poeng for kvart riktige alternativ. (\"Bare eitt svar\" må også slås av)"
+      "label": "Gje eitt poeng for heile oppgåva",
+      "description": "Slå av for å gje eitt poeng for kvart riktige svar som er valt. Merk at \"Bare eitt svar\" må også slås av."
     },
     {
       "label": "Tilfeldige svaralternativ",

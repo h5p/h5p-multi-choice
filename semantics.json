@@ -22,8 +22,8 @@
   {
     "name": "singlePoint",
     "type": "boolean",
-    "label": "Single point score",
-    "description": "Disable to get 1 point for each correct answer. (single answer must also be disabled)",
+    "label": "Give one point for the whole task",
+    "description": "Disable to give one point for each correct answer that is chosen. Note that \"Single answer\" must also be disabled.",
     "default": true
   },
   {
