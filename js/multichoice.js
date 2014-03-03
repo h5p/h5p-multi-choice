@@ -50,8 +50,7 @@ H5P.MultiChoice = function(options, contentId) {
   var defaults = {
     question: "No question text provided",
     answers: [
-      {text: "Answer 1", correct: false},
-      {text: "Answer 2", correct: true}
+      {text: "Answer 1", correct: true},
     ],
     singleAnswer: false,
     singlePoint: true,
