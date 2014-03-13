@@ -50,8 +50,7 @@ H5P.MultiChoice = function(options, contentId) {
   var defaults = {
     question: "No question text provided",
     answers: [
-      {text: "Answer 1", correct: false},
-      {text: "Answer 2", correct: true}
+      {text: "Answer 1", correct: true},
     ],
     singleAnswer: false,
     singlePoint: true,
@@ -89,7 +88,7 @@ H5P.MultiChoice = function(options, contentId) {
   var $feedbackDialog;
   var removeFeedbackDialog = function () {
     // Remove the open feedback dialog.
-    H5P.$body.unbind('click', removeFeedbackDialog);
+    $myDom.unbind('click', removeFeedbackDialog);
     $feedbackDialog.remove();
   }
 
@@ -115,7 +114,7 @@ H5P.MultiChoice = function(options, contentId) {
         }
         
         $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
-        H5P.$body.click(removeFeedbackDialog);
+        $myDom.click(removeFeedbackDialog);
         e.stopPropagation();
       }
     }).appendTo($element);

@@ -338,6 +338,10 @@
   height: 1.5em;
   background: #fff;
   -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .h5p-multichoice .h5p-feedback-dialog:before {
   box-shadow: 0 0 1em #2c2c2c;
