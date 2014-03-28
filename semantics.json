@@ -1,80 +1,141 @@
 [
   {
-    "name": "title",
-    "type": "text",
-    "label": "Title",
-    "description": "Optional title for question box"
-  },
-  {
     "name": "question",
     "type": "text",
     "widget": "html",
     "label": "Question",
-    "description": "Question asked",
+    "enterMode": "p",
     "tags": [
       "strong",
       "em",
       "sub",
-      "sup",
-      "ul",
-      "math"
+      "sup"
     ]
   },
   {
     "name": "singleAnswer",
     "type": "boolean",
     "label": "Single answer",
-    "description": "Whether only a single answer shall be possible.",
+    "description": "Disable to allow selection of multiple options.",
     "default": true
   },
   {
     "name": "singlePoint",
     "type": "boolean",
-    "label": "Single point score",
-    "description": "Whether all answers in a multi-answer question must be correct to get a single score point. (Turn this off to get 1 point for each correctly set answer)",
+    "label": "Give one point for the whole task",
+    "description": "Disable to give one point for each correct answer that is chosen. Note that \"Single answer\" must also be disabled.",
     "default": true
   },
   {
-    "name": "randomOrder",
+    "name": "randomAnswers",
     "type": "boolean",
-    "label": "Random order",
-    "description": "Whether answers should be shown in random order",
+    "label": "Randomize answers",
+    "description": "Enable to randomize the order of questions on display.",
     "default": true
   },
   {
     "name": "answers",
     "type": "list",
-    "label": "Categories",
-    "description": "Answers available for the user.",
-    "entity": "answer",
-    "max": 5,
+    "label": "Available options",
+    "description": "The alternatives the user may choose from.",
+    "entity": "option",
+    "min": 1,
+    "defaultNum": 2,
     "field": {
       "name": "answer",
       "type": "group",
-      "label": "Answer",
+      "label": "Option",
       "fields": [
         {
           "name": "text",
           "type": "text",
           "widget": "html",
-          "label": "Answer text",
-          "description": "Answer text.",
+          "label": "Text",
           "tags": [
             "strong",
             "em",
             "sub",
-            "sup",
-            "ul",
-            "math"
+            "sup"
           ]
         },
         {
           "name": "correct",
           "type": "boolean",
-          "label": "Correct answer",
-          "description": "Whether this is a correct answer."
+          "label": "Correct"
+        },
+        {
+          "name": "chosenFeedback",
+          "type": "text",
+          "widget": "html",
+          "label": "Chosen feedback",
+          "optional": true,
+          "tags": [
+            "strong",
+            "em",
+            "sub",
+            "sup"
+          ]
+        },
+        {
+          "name": "notChosenFeedback",
+          "type": "text",
+          "widget": "html",
+          "label": "Not chosen feedback",
+          "optional": true,
+          "tags": [
+            "strong",
+            "em",
+            "sub",
+            "sup"
+          ]
         }
       ]
     }
+  },
+  {
+    "name": "UI",
+    "type": "group",
+    "label": "User interface translations for multichoice",
+    "common": true,
+    "fields": [
+      {
+        "name": "showSolutionButton",
+        "type": "text",
+        "label": "Show solution button label",
+        "default": "Show solution"
+      },
+      {
+        "name": "tryAgainButton",
+        "type": "text",
+        "label": "Try again button label",
+        "default": "Try again",
+        "optional": true
+      },
+      {
+        "name": "correctText",
+        "type": "text",
+        "label": "Correct answer feedback",
+        "default": "Correct!"
+      },
+      {
+        "name": "almostText",
+        "type": "text",
+        "label": "Almost correct answer feedback",
+        "default": "Almost!"
+      },
+      {
+        "name": "wrongText",
+        "type": "text",
+        "label": "Not correct answer feedback",
+        "default": "Wrong!"
+      }
+    ]
+  },
+  {
+    "name": "tryAgain",
+    "type": "boolean",
+    "label": "Enable try again button",
+    "default": true,
+    "optional": true
   }
 ]
