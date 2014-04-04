@@ -137,5 +137,12 @@
     "label": "Enable try again button",
     "default": true,
     "optional": true
+  },
+  {
+    "label": "Require user input before the solution can be viewed",
+    "name": "showSolutionsRequiresInput",
+    "type": "boolean",
+    "default": true,
+    "optional": true
   }
 ]

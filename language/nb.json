@@ -55,6 +55,12 @@
           "default": "Feil!"
         }
       ]
+    },
+    {
+      "label": "Slå på «Prøv igjen»-knappen."
+    },
+    {
+      "label": "Krev inndata fra brukeren før fasit gis."
     }
   ]
 }

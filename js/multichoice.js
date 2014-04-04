@@ -66,7 +66,8 @@ H5P.MultiChoice = function(options, contentId) {
     },
     displaySolutionsButton: true,
     postUserStatistics: (H5P.postUserStatistics === true),
-    tryAgain: true
+    tryAgain: true,
+    showSolutionsRequiresInput: true
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
@@ -178,6 +179,9 @@ H5P.MultiChoice = function(options, contentId) {
   };
 
   var calculateMaxScore = function () {
+    if (blankIsCorrect) { 
+      return params.weight; 
+    }
     var maxScore = 0;
     for (var i = 0; i < params.answers.length; i++) {
       var choice = params.answers[i];
@@ -196,16 +200,28 @@ H5P.MultiChoice = function(options, contentId) {
     $solutionButton = $myDom.find('.h5p-show-solution').show().click(function () {
       if ($solutionButton.hasClass('h5p-try-again')) {
         hideSolutions();
+        //$('.h5p-answer.h5p-selected', $myDom).removeClass('h5p-selected').find('input').attr('checked', false).end().find('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(params.singleAnswer, false));
       }
       else {
-        showSolutions();
-        if (params.postUserStatistics === true) {
-          H5P.setFinished(contentId, score, maxScore());
+        calcScore();
+        if (params.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect) {
+          showSolutions();
+          if (params.postUserStatistics === true) {
+            H5P.setFinished(contentId, score, maxScore());
+          }
         }
       }
       return false;
     });
   };
+  
+  var blankIsCorrect = true;
+  for (var i = 0; i < params.answers.length; i++) {
+    if (params.answers[i].correct) {
+      blankIsCorrect = false;
+      break;
+    }
+  }
 
   var calcScore = function () {
     score = 0;
@@ -227,6 +243,9 @@ H5P.MultiChoice = function(options, contentId) {
     });
     if (score < 0) {
       score = 0;
+    }
+    if (!params.userAnswers.length && blankIsCorrect) {
+      score = params.weight;
     }
     if (params.singlePoint) {
       score = (score === calculateMaxScore() ? params.weight : 0);
