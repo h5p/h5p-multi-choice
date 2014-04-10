@@ -93,7 +93,6 @@ H5P.MultiChoice = function(options, contentId) {
     $feedbackDialog.remove();
   }
 
-  var answerGiven = false;
   var score = 0;
   var solutionsVisible = false;
 
@@ -204,7 +203,7 @@ H5P.MultiChoice = function(options, contentId) {
       }
       else {
         calcScore();
-        if (params.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect) {
+        if (answered()) {
           showSolutions();
           if (params.postUserStatistics === true) {
             H5P.setFinished(contentId, score, maxScore());
@@ -277,7 +276,6 @@ H5P.MultiChoice = function(options, contentId) {
     // Set event listeners.
     $('input', $myDom).change(function () {
       var $this = $(this);
-      answerGiven = true;
       var num = parseInt($(this).val().split('_')[1], 10);
       if (params.singleAnswer) {
         params.userAnswers[0] = num;
@@ -323,16 +321,19 @@ H5P.MultiChoice = function(options, contentId) {
   // Start with an empty set of user answers.
   params.userAnswers = [];
 
+  function answered() {
+    return params.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
+  };
+
   // Masquerade the main object to hide inner properties and functions.
   var returnObject = {
+    $: $(this),
     machineName: 'H5P.MultiChoice',
     attach: attach, // Attach to DOM object
     getScore: function() {
       return score;
     },
-    getAnswerGiven: function() {
-      return answerGiven;
-    },
+    getAnswerGiven: answered,
     getMaxScore: maxScore,
     showSolutions: showSolutions,
     addSolutionButton: addSolutionButton,
