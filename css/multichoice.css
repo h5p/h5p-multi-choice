@@ -303,7 +303,7 @@
   outline: none;
 }
 .h5p-multichoice .h5p-feedback-button:before {
-  font-family: H5PFontAwesome;
+  font-family: H5PFontAwesome4;
   content: "\f075";
   color: #fbfbfb;
   text-shadow: 0 0 0.25em #2c2c2c;
