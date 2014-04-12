@@ -88,6 +88,21 @@
             "sub",
             "sup"
           ]
+        },
+        {
+          "name": "tip",
+          "type": "group",
+          "label": "Tip",
+          "optional": true,
+          "fields": [
+            {
+              "name": "tip",
+              "label": "Tip",
+              "type": "text",
+              "optional": true,
+              "description": "An icon is placed on the alternative. When icon is clicked, this tip is displayed"
+            }
+          ]
         }
       ]
     }

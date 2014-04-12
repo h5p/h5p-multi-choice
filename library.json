@@ -3,7 +3,7 @@
   "contentType": "question",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 42,
+  "patchVersion": 43,
   "runnable": 1,
   "machineName": "H5P.MultiChoice",
   "author": "Amendor AS",
@@ -26,6 +26,11 @@
     },
     {
       "machineName": "EmbeddedJS",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
+      "machineName": "H5P.JoubelUI",
       "majorVersion": 1,
       "minorVersion": 0
     }

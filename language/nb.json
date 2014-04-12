@@ -53,6 +53,15 @@
         {
           "label": "Tilbakemelding ved galt svar",
           "default": "Feil!"
+        },
+        {
+          "label": "Tips",
+          "fields": [
+            {
+              "label": "Tips",
+              "description": "Et tipsikon blir plassert på alternativet. Når man trykker på ikonet, vises tipset"
+            }
+          ]
         }
       ]
     },

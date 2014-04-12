@@ -38,7 +38,7 @@ H5P.MultiChoice = function(options, contentId) {
           '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
           '            <% } %>' +
           '            <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioIcon %></a>' +
-          '          </div><div class="h5p-alternative-container">' +
+          '          </div><div class="h5p-alternative-container" data-tip="<%= answers[i].tip %>">' +
           '            <span class="h5p-span"><%= answers[i].text %></span>' +
           '          </div><div class="h5p-clearfix"></div>' +
           '        </label>' +
@@ -118,7 +118,7 @@ H5P.MultiChoice = function(options, contentId) {
         e.stopPropagation();
       }
     }).appendTo($element);
-  }
+  };
 
   var showSolutions = function () {
     if (solutionsVisible) {
@@ -270,6 +270,15 @@ H5P.MultiChoice = function(options, contentId) {
     // Render own DOM into target.
     $myDom = target;
     $myDom.html(template.render(params)).addClass('h5p-multichoice');
+    
+    // Create tips:
+    $('.h5p-alternative-container', $myDom).each(function (){
+      var $container = $(this);
+      var tip = $container.data('tip');
+      if(tip !== undefined && tip.trim().length > 0) {
+        $container.append(H5P.JoubelUI.createTip($container.data('tip'))).addClass('has-tip');
+      }
+    });
     
     $feedbackElement = $myDom.find('.h5p-show-solution-container .feedback-text');
 
