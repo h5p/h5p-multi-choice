@@ -276,7 +276,7 @@ H5P.MultiChoice = function(options, contentId) {
       var $container = $(this);
       var tip = $container.data('tip');
       if(tip !== undefined && tip.trim().length > 0) {
-        $container.append(H5P.JoubelUI.createTip($container.data('tip'))).addClass('has-tip');
+        $container.append(H5P.JoubelUI.createTip(tip)).addClass('has-tip');
       }
     });
     
