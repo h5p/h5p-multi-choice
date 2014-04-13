@@ -97,10 +97,9 @@
           "fields": [
             {
               "name": "tip",
-              "label": "Tip",
+              "label": "Tip text",
               "type": "text",
-              "optional": true,
-              "description": "An icon is placed on the alternative. When icon is clicked, this tip is displayed"
+              "optional": true
             }
           ]
         }

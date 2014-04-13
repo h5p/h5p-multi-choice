@@ -58,8 +58,7 @@
           "label": "Tips",
           "fields": [
             {
-              "label": "Tips",
-              "description": "Et tipsikon blir plassert på alternativet. Når man trykker på ikonet, vises tipset"
+              "label": "Tipstekst"
             }
           ]
         }
