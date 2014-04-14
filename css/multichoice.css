@@ -174,20 +174,21 @@
   background: #d1e2ce;
 }
 
-.h5p-multichoice .h5p-wrong > label:before {
+.h5p-multichoice .h5p-answer > label:before {
   text-decoration: none;
-  content: "\f00d";
   font-family: H5PFontAwesome4;
+  position: absolute;
+  right: 3.8em;
+}
+
+.h5p-multichoice .h5p-wrong > label:before {
+  content: "\f00d";
   color: #c33f62;
-  float: right;
 }
 
 .h5p-multichoice .h5p-correct > label:before {
-  text-decoration: none;
   content: "\f00c";
-  font-family: H5PFontAwesome4;
   color: #39692e;
-  float: right;
 }
 
 .h5p-multichoice .h5p-selected.h5p-correct .h5p-radio-or-checkbox {
@@ -363,4 +364,9 @@
 .h5p-multichoice .h5p-feedback-text::-webkit-scrollbar-thumb {
   border-radius: 0.2em;
   background: #aaa;
+}
+.h5p-multichoice .joubel-tip-container{
+  position: absolute;
+  right: 0;
+  top: 0;
 }
