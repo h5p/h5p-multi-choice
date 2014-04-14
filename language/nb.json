@@ -5,15 +5,15 @@
     },
     {
       "label": "Bare ett svar",
-      "description": "Slå av for å tillate brukeren å velge mer enn ett svar."
+      "description": "Lar brukeren kun avgi ett svar"
     },
     {
       "label": "Gi ett poeng for hele oppgaven",
-      "description": "Slå av for å gi ett poeng for hvert riktige svar som er valgt. Merk at \"Bare ett svar\" må også slås av."
+      "description": "Gir ett poeng totalt for flere rette alternativ. Kun valgbar hvis \"Bare ett svar\" er avslått."
     },
     {
       "label": "Tilfeldige svaralternativ",
-      "description": "Slå på for å vise de mulige svarene i tilfeldig rekkefølge."
+      "description": "Slå på for å vise alternativene i tilfeldig rekkefølge."
     },
     {
       "label": "Svaralternativer",
@@ -44,7 +44,7 @@
         },
         {
           "label": "Tilbakemelding ved riktig svar",
-          "default": "Riktig!"
+          "default": "Rett!"
         },
         {
           "label": "Tilbakemelding ved nesten riktig svar",
@@ -52,7 +52,7 @@
         },
         {
           "label": "Tilbakemelding ved galt svar",
-          "default": "Feil!"
+          "default": "Feil"
         },
         {
           "label": "Tips",
