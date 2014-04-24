@@ -27,6 +27,20 @@
           },
           {
             "label": "Riktig"
+          },
+          {
+            "label": "Tilbakemelding for valgt alternativ"
+          },
+          {
+            "label": "Tilbakemelding for ikke valgt alternativ"
+          },
+          {
+            "label": "Tips",
+            "fields": [
+              {
+                "label": "Tipstekst"
+              }
+            ]
           }
         ]
       }
@@ -53,16 +67,7 @@
         {
           "label": "Tilbakemelding ved galt svar",
           "default": "Feil"
-        },
-        {
-          "label": "Tips",
-          "fields": [
-            {
-              "label": "Tipstekst"
-            }
-          ]
         }
-        
       ]
     },
     {
