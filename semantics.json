@@ -9,7 +9,9 @@
       "strong",
       "em",
       "sub",
-      "sup"
+      "sup",
+      "h2",
+      "h3"
     ]
   },
   {
