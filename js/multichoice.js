@@ -18,17 +18,14 @@
 var H5P = H5P || {};
 
 H5P.MultiChoice = function(options, contentId) {
-  var that = this;
   if (!(this instanceof H5P.MultiChoice))
     return new H5P.MultiChoice(options, contentId);
 
   var $ = H5P.jQuery;
-  var lp = H5P.getLibraryPath('H5P.MultiChoice-1.0');
-
   var texttemplate =
           '<div class="h5p-question"><%= question %></div>' +
           '  <ul class="h5p-answers">' +
-          '    <% for (var i=0; i<answers.length; i++) { %>' +
+          '    <% for (var i=0; i < answers.length; i++) { %>' +
           '      <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected<% } %>">' +
           '        <label>' +
           '          <div class="h5p-input-container">' +
@@ -48,6 +45,7 @@ H5P.MultiChoice = function(options, contentId) {
           '<div class="h5p-show-solution-container"><div class="feedback-text"></div><a href="#" class="h5p-show-solution" style="display:none;"><%= UI.showSolutionButton %></a></div>';
 
   var defaults = {
+    image: null,
     question: "No question text provided",
     answers: [
       {text: "Answer 1", correct: true},
@@ -91,7 +89,7 @@ H5P.MultiChoice = function(options, contentId) {
     // Remove the open feedback dialog.
     $myDom.unbind('click', removeFeedbackDialog);
     $feedbackDialog.remove();
-  }
+  };
 
   var score = 0;
   var solutionsVisible = false;
@@ -270,6 +268,15 @@ H5P.MultiChoice = function(options, contentId) {
     // Render own DOM into target.
     $myDom = target;
     $myDom.html(template.render(params)).addClass('h5p-multichoice');
+    
+    // Add image
+    if (params.image) {
+      $myDom.find('.h5p-question').prepend($('<img/>', {
+        src: H5P.getPath(params.image.path, contentId),
+        alt: '',
+        class: 'h5p-question-image'
+      }));
+    }
     
     // Create tips:
     $('.h5p-alternative-container', $myDom).each(function (){

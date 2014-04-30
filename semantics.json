@@ -1,5 +1,12 @@
 [
   {
+    "name": "image",
+    "type": "image",
+    "label": "Question image",
+    "optional": true,
+    "description": "An optional image to display above the question."
+  },
+  {
     "name": "question",
     "type": "text",
     "widget": "html",
