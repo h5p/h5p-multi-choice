@@ -1,6 +1,10 @@
 {
   "semantics": [
     {
+      "label": "Spørsmålsbilete",
+      "description": "Eit valfritt bilete som skal visast over spørsmålet."
+    },
+    {
       "label": "Spørsmål"
     },
     {

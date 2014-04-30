@@ -18,6 +18,12 @@
   text-align: center;
 }
 
+.h5p-multichoice .h5p-question-image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .h5p-multichoice .h5p-show-solution-container {
   position: relative;
 }

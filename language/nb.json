@@ -1,6 +1,10 @@
 {
   "semantics": [
     {
+      "label": "Spørsmålsbilde",
+      "description": "Et valgfritt bilde som skal vises over spørsmålet."
+    },
+    {
       "label": "Spørsmål"
     },
     {
