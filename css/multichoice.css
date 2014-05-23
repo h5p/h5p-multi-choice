@@ -50,7 +50,7 @@
 }
 
 .h5p-multichoice .h5p-show-solution-container a.h5p-show-solution:before {
-  font-family: H5PFontAwesome;
+  font-family: 'H5PFontAwesome4';
   content: "\f06e";
   padding-right: 0.5em;
 }
@@ -182,7 +182,7 @@
 
 .h5p-multichoice .h5p-answer > label:before {
   text-decoration: none;
-  font-family: H5PFontAwesome;
+  font-family: 'H5PFontAwesome4';
   position: absolute;
   right: 3.8em;
 }
@@ -310,7 +310,7 @@
   outline: none;
 }
 .h5p-multichoice .h5p-feedback-button:before {
-  font-family: H5PFontAwesome;
+  font-family: 'H5PFontAwesome4';
   content: "\f075";
   color: #fbfbfb;
   text-shadow: 0 0 0.25em #2c2c2c;

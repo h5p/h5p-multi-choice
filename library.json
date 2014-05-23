@@ -3,7 +3,7 @@
   "contentType": "question",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 47,
+  "patchVersion": 48,
   "runnable": 1,
   "machineName": "H5P.MultiChoice",
   "author": "Amendor AS",
@@ -21,7 +21,7 @@
   "preloadedDependencies": [
     {
       "machineName": "FontAwesome",
-      "majorVersion": 3,
+      "majorVersion": 4,
       "minorVersion": 1
     },
     {
