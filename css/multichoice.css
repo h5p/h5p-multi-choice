@@ -184,7 +184,7 @@
   text-decoration: none;
   font-family: 'H5PFontAwesome4';
   position: absolute;
-  right: 3.8em;
+  right: 0.75em;
 }
 
 .h5p-multichoice .h5p-wrong > label:before {
@@ -272,7 +272,19 @@
 
 .h5p-multichoice .h5p-alternative-container {
   margin-left: 2em;
-  margin-right: 2.75em;
+}
+.h5p-multichoice .h5p-alternative-container.h5p-has-tip,
+.h5p-multichoice .h5p-correct .h5p-alternative-container,
+.h5p-multichoice .h5p-wrong .h5p-alternative-container {
+  margin-right: 1.5em;
+}
+.h5p-multichoice .h5p-correct .h5p-alternative-container.h5p-has-tip,
+.h5p-multichoice .h5p-wrong .h5p-alternative-container.h5p-has-tip,
+.h5p-multichoice .h5p-has-feedback .h5p-alternative-container {
+  margin-right: 3em;
+}
+.h5p-multichoice .h5p-has-feedback .h5p-alternative-container.h5p-has-tip {
+  margin-right: 5em;
 }
 
 .h5p-multichoice .h5p-radio-or-checkbox {
@@ -371,8 +383,15 @@
   border-radius: 0.2em;
   background: #aaa;
 }
-.h5p-multichoice .joubel-tip-container{
+.h5p-multichoice .joubel-tip-container {
   position: absolute;
-  right: 0;
+  right: 0; 
   top: 0;
+}
+.h5p-multichoice .h5p-correct .joubel-tip-container,
+.h5p-multichoice .h5p-wrong .joubel-tip-container {
+  right: 1.75em;
+}
+.h5p-multichoice .h5p-has-feedback .joubel-tip-container {
+  right: 3.5em;
 }
