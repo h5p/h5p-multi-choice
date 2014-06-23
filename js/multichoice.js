@@ -115,7 +115,7 @@ H5P.MultiChoice = function(options, contentId) {
         $myDom.click(removeFeedbackDialog);
         e.stopPropagation();
       }
-    }).appendTo($element);
+    }).appendTo($element.addClass('h5p-has-feedback'));
   };
 
   var showSolutions = function () {
@@ -173,6 +173,7 @@ H5P.MultiChoice = function(options, contentId) {
     $myDom.find('.h5p-wrong').removeClass('h5p-wrong');
     $myDom.find('input').prop('disabled', false);
     $myDom.find('.h5p-feedback-button, .h5p-feedback-dialog').remove();
+    $myDom.find('.h5p-has-feedback').removeClass('h5p-has-feedback');
   };
 
   var calculateMaxScore = function () {
@@ -283,7 +284,7 @@ H5P.MultiChoice = function(options, contentId) {
       var $container = $(this);
       var tip = $container.data('tip');
       if(tip !== undefined && tip.trim().length > 0) {
-        $container.append(H5P.JoubelUI.createTip(tip)).addClass('has-tip');
+        $container.append(H5P.JoubelUI.createTip(tip)).addClass('h5p-has-tip');
       }
     });
     
