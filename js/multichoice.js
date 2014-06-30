@@ -194,11 +194,15 @@ H5P.MultiChoice = function(options, contentId) {
     return (!params.singleAnswer && !params.singlePoint ? calculateMaxScore() : params.weight);
   };
   
+  var added = false;
   var addSolutionButton = function () {
+    if (added) {
+      return;
+    }
+    added = true;
     $solutionButton = $myDom.find('.h5p-show-solution').show().click(function () {
       if ($solutionButton.hasClass('h5p-try-again')) {
         hideSolutions();
-        //$('.h5p-answer.h5p-selected', $myDom).removeClass('h5p-selected').find('input').attr('checked', false).end().find('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(params.singleAnswer, false));
       }
       else {
         calcScore();
