@@ -20,7 +20,7 @@ var H5P = H5P || {};
 H5P.MultiChoice = function(options, contentId) {
   if (!(this instanceof H5P.MultiChoice))
     return new H5P.MultiChoice(options, contentId);
-
+  var self = this;
   var $ = H5P.jQuery;
   var texttemplate =
           '<div class="h5p-question"><%= question %></div>' +
@@ -63,7 +63,6 @@ H5P.MultiChoice = function(options, contentId) {
       wrongText: 'Wrong!'
     },
     displaySolutionsButton: true,
-    postUserStatistics: (H5P.postUserStatistics === true),
     tryAgain: true,
     showSolutionsRequiresInput: true
   };
@@ -207,9 +206,7 @@ H5P.MultiChoice = function(options, contentId) {
         calcScore();
         if (answered()) {
           showSolutions();
-          if (params.postUserStatistics === true) {
-            H5P.setFinished(contentId, score, maxScore());
-          }
+          self.triggerH5PxAPIEvent('completed', H5P.getxAPIScoredResult(score, maxScore()));
         }
       }
       return false;
@@ -319,8 +316,7 @@ H5P.MultiChoice = function(options, contentId) {
         }
         calcScore();
       }
-      // Triggers must be done on the returnObject.
-      $(returnObject).trigger('h5pQuestionAnswered');
+      self.triggerH5PxAPIEvent('attempted');
     });
 
     if (params.displaySolutionsButton === true) {
@@ -347,7 +343,6 @@ H5P.MultiChoice = function(options, contentId) {
 
   // Masquerade the main object to hide inner properties and functions.
   var returnObject = {
-    $: $(this),
     machineName: 'H5P.MultiChoice',
     attach: attach, // Attach to DOM object
     getScore: function() {
