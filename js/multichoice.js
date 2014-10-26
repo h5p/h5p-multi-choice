@@ -206,7 +206,7 @@ H5P.MultiChoice = function(options, contentId) {
         calcScore();
         if (answered()) {
           showSolutions();
-          self.triggerH5PxAPIEvent('completed', H5P.getxAPIScoredResult(score, maxScore()));
+          self.triggerXAPI('completed', {result: H5P.getxAPIScoredResult(score, maxScore())});
         }
       }
       return false;
@@ -316,7 +316,7 @@ H5P.MultiChoice = function(options, contentId) {
         }
         calcScore();
       }
-      self.triggerH5PxAPIEvent('attempted');
+      self.triggerXAPI('attempted');
     });
 
     if (params.displaySolutionsButton === true) {
