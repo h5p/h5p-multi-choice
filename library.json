@@ -3,11 +3,15 @@
   "contentType": "question",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 50,
+  "patchVersion": 53,
   "runnable": 1,
   "machineName": "H5P.MultiChoice",
   "author": "Amendor AS",
   "license": "cc-by-sa",
+  "coreApi": {
+    "majorVersion": 1,
+    "minorVersion": 1
+  },
   "preloadedJs": [
     {
       "path": "js/multichoice.js"

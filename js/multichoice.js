@@ -123,15 +123,6 @@ H5P.MultiChoice = function(options, contentId) {
       return;
     }
 
-    if ($solutionButton !== undefined) {
-      if (params.tryAgain) {
-        $solutionButton.text(params.UI.tryAgainButton).addClass('h5p-try-again');
-      }
-      else {
-        $solutionButton.remove();
-      }
-    }
-
     solutionsVisible = true;
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = $(e);
@@ -161,6 +152,14 @@ H5P.MultiChoice = function(options, contentId) {
     }
     else {
       $feedbackElement.addClass('h5p-almost').html(params.UI.almostText);
+    }
+    if ($solutionButton !== undefined) {
+      if (params.tryAgain && score < max) {
+        $solutionButton.text(params.UI.tryAgainButton).addClass('h5p-try-again');
+      }
+      else {
+        $solutionButton.remove();
+      }
     }
   };
 
