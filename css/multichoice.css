@@ -11,9 +11,6 @@
 }
 
 .h5p-multichoice {
-  font-family: Arial, sans-serif;
-  line-height: 1.5em;
-  background: transparent;
   overflow: hidden;
   text-align: center;
 }
@@ -30,7 +27,7 @@
 
 .h5p-multichoice .h5p-show-solution-container .h5p-show-solution {
   display: inline-block;
-  font-size: 1em;  
+  font-size: 1em;
   padding: 0.2em 1em;
   border: 0.2em solid #fff;
   border-radius: 0.4em;
@@ -111,7 +108,7 @@
   background: #e3eaee;
 }
 
-.h5p-multichoice > form, 
+.h5p-multichoice > form,
 #center .h5p-multichoice > form { /* #center is just a garland hack */
   padding: 0 0.5em;
   margin: 0;
@@ -336,7 +333,7 @@
   top: 100%;
   margin-top: 0.25em;
   width: 96%;
-  left: 2%;
+  left: 3%;
   z-index: 1;
 }
 .h5p-multichoice .h5p-feedback-inner {
@@ -347,7 +344,7 @@
   text-align: left;
   position: relative;
 }
-.h5p-multichoice .h5p-feedback-inner:before, 
+.h5p-multichoice .h5p-feedback-inner:before,
 .h5p-multichoice .h5p-feedback-dialog:before {
   content: "";
   position: absolute;
@@ -385,7 +382,7 @@
 }
 .h5p-multichoice .joubel-tip-container {
   position: absolute;
-  right: 0; 
+  right: 0;
   top: 0;
 }
 .h5p-multichoice .h5p-correct .joubel-tip-container,
