@@ -35,7 +35,7 @@ H5P.MultiChoice = function(options, contentId) {
           '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
           '            <% } %>' +
           '            <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioIcon %></a>' +
-          '          </div><div class="h5p-alternative-container" data-tip="<%= answers[i].tip %>">' +
+          '          </div><div class="h5p-alternative-container">' +
           '            <span class="h5p-span"><%= answers[i].text %></span>' +
           '          </div><div class="h5p-clearfix"></div>' +
           '        </label>' +
@@ -106,11 +106,11 @@ H5P.MultiChoice = function(options, contentId) {
             // Skip if we're trying to open the same dialog twice
             return;
           }
-          
+
           // Remove last dialog.
           $feedbackDialog.remove();
         }
-        
+
         $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
         $myDom.click(removeFeedbackDialog);
         e.stopPropagation();
@@ -134,7 +134,7 @@ H5P.MultiChoice = function(options, contentId) {
         $e.addClass('h5p-wrong');
       }
       $e.find('input').attr('disabled', 'disabled');
-      
+
       var c = $e.hasClass('h5p-selected');
       if (c === true && a.chosenFeedback !== undefined && a.chosenFeedback !== '') {
         addFeedback($e, a.chosenFeedback);
@@ -176,8 +176,8 @@ H5P.MultiChoice = function(options, contentId) {
   };
 
   var calculateMaxScore = function () {
-    if (blankIsCorrect) { 
-      return params.weight; 
+    if (blankIsCorrect) {
+      return params.weight;
     }
     var maxScore = 0;
     for (var i = 0; i < params.answers.length; i++) {
@@ -192,7 +192,7 @@ H5P.MultiChoice = function(options, contentId) {
   var maxScore = function () {
     return (!params.singleAnswer && !params.singlePoint ? calculateMaxScore() : params.weight);
   };
-  
+
   var added = false;
   var addSolutionButton = function () {
     if (added) {
@@ -215,7 +215,7 @@ H5P.MultiChoice = function(options, contentId) {
       return false;
     });
   };
-  
+
   var blankIsCorrect = true;
   for (var i = 0; i < params.answers.length; i++) {
     if (params.answers[i].correct) {
@@ -226,7 +226,7 @@ H5P.MultiChoice = function(options, contentId) {
 
   var calcScore = function () {
     score = 0;
-    params.userAnswers = new Array();
+    params.userAnswers = [];
     $('input', $myDom).each(function (idx, el) {
       var $el = $(el);
       if ($el.is(':checked')) {
@@ -272,7 +272,7 @@ H5P.MultiChoice = function(options, contentId) {
     // Render own DOM into target.
     $myDom = target;
     $myDom.html(template.render(params)).addClass('h5p-multichoice');
-    
+
     // Add image
     if (params.image) {
       $myDom.find('.h5p-question').prepend($('<img/>', {
@@ -281,16 +281,25 @@ H5P.MultiChoice = function(options, contentId) {
         class: 'h5p-question-image'
       }));
     }
-    
+
     // Create tips:
-    $('.h5p-alternative-container', $myDom).each(function (){
-      var $container = $(this);
-      var tip = $container.data('tip');
-      if(tip !== undefined && tip.trim().length > 0) {
-        $container.append(H5P.JoubelUI.createTip(tip)).addClass('h5p-has-tip');
+    $('.h5p-answer', $myDom).each(function (i) {
+      var tip = params.answers[i].tip;
+      if (tip === undefined) {
+        return; // No tip
       }
+
+      tip = tip.trim();
+      if (!tip.length) {
+        return; // Empty tip
+      }
+
+      // Add tip
+      $('.h5p-alternative-container', this)
+        .append(H5P.JoubelUI.createTip(tip))
+        .addClass('h5p-has-tip');
     });
-    
+
     $feedbackElement = $myDom.find('.h5p-show-solution-container .feedback-text');
 
     // Set event listeners.
@@ -309,7 +318,7 @@ H5P.MultiChoice = function(options, contentId) {
 
         $this.parents('.h5p-answer').addClass("h5p-selected");
         $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(true, true));
-      } else {  
+      } else {
         if ($this.is(':checked')) {
           $this.parents('.h5p-answer').addClass("h5p-selected");
           $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(false, true));
@@ -343,7 +352,7 @@ H5P.MultiChoice = function(options, contentId) {
 
   function answered() {
     return params.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
-  };
+  }
 
   // Masquerade the main object to hide inner properties and functions.
   var returnObject = {
