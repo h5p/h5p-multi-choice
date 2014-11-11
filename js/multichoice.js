@@ -122,16 +122,18 @@ H5P.MultiChoice = function(options, contentId) {
     if (solutionsVisible) {
       return;
     }
-
     solutionsVisible = true;
+
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = $(e);
       var a = params.answers[i];
       if (a.correct) {
         $e.addClass('h5p-correct');
+        $e.addClass('h5p-should');
       }
       else {
         $e.addClass('h5p-wrong');
+        $e.addClass('h5p-should-not');
       }
       $e.find('input').attr('disabled', 'disabled');
 
@@ -170,6 +172,8 @@ H5P.MultiChoice = function(options, contentId) {
     $feedbackElement.removeClass('h5p-passed h5p-failed h5p-almost').empty();
     $myDom.find('.h5p-correct').removeClass('h5p-correct');
     $myDom.find('.h5p-wrong').removeClass('h5p-wrong');
+    $myDom.find('.h5p-should').removeClass('h5p-should');
+    $myDom.find('.h5p-should-not').removeClass('h5p-should-not');
     $myDom.find('input').prop('disabled', false);
     $myDom.find('.h5p-feedback-button, .h5p-feedback-dialog').remove();
     $myDom.find('.h5p-has-feedback').removeClass('h5p-has-feedback');
@@ -271,7 +275,7 @@ H5P.MultiChoice = function(options, contentId) {
 
     // Render own DOM into target.
     $myDom = target;
-    $myDom.html(template.render(params)).addClass('h5p-multichoice');
+    $myDom.html(template.render(params)).addClass('h5p-multichoice').addClass(params.singleAnswer ? 'h5p-radio' : 'h5p-check');
 
     // Add image
     if (params.image) {

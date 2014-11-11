@@ -181,7 +181,7 @@
   text-decoration: none;
   font-family: 'H5PFontAwesome4';
   position: absolute;
-  right: 0.75em;
+  right: 2.25em;
 }
 
 .h5p-multichoice .h5p-wrong > label:before {
@@ -192,6 +192,25 @@
 .h5p-multichoice .h5p-correct > label:before {
   content: "\f00c";
   color: #39692e;
+}
+
+.h5p-multichoice .h5p-answer:after {
+  font-family: icomoon-multichoice;
+  position: absolute;
+  right: 0.75em;
+  top: 0.31em;
+}
+.h5p-multichoice.h5p-radio .h5p-answer.h5p-should:after {
+  content: "\e603";
+}
+.h5p-multichoice.h5p-radio .h5p-answer.h5p-should-not:after {
+  content: "\e600";
+}
+.h5p-multichoice.h5p-check .h5p-answer.h5p-should:after {
+  content: "\e601";
+}
+.h5p-multichoice.h5p-check .h5p-answer.h5p-should-not:after {
+  content: "\e602";
 }
 
 .h5p-multichoice .h5p-selected.h5p-correct .h5p-radio-or-checkbox {
@@ -269,19 +288,22 @@
 
 .h5p-multichoice .h5p-alternative-container {
   margin-left: 2em;
+  margin-right: 10em;
 }
-.h5p-multichoice .h5p-alternative-container.h5p-has-tip,
-.h5p-multichoice .h5p-correct .h5p-alternative-container,
-.h5p-multichoice .h5p-wrong .h5p-alternative-container {
+.h5p-multichoice .h5p-alternative-container.h5p-has-tip {
   margin-right: 1.5em;
 }
-.h5p-multichoice .h5p-correct .h5p-alternative-container.h5p-has-tip,
-.h5p-multichoice .h5p-wrong .h5p-alternative-container.h5p-has-tip,
-.h5p-multichoice .h5p-has-feedback .h5p-alternative-container {
+.h5p-multichoice .h5p-should .h5p-alternative-container,
+.h5p-multichoice .h5p-should-not .h5p-alternative-container {
   margin-right: 3em;
 }
-.h5p-multichoice .h5p-has-feedback .h5p-alternative-container.h5p-has-tip {
+.h5p-multichoice .h5p-has-feedback .h5p-alternative-container,
+.h5p-multichoice .h5p-should .h5p-alternative-container.h5p-has-tip,
+.h5p-multichoice .h5p-should-not .h5p-alternative-container.h5p-has-tip {
   margin-right: 5em;
+}
+.h5p-multichoice .h5p-has-feedback .h5p-alternative-container.h5p-has-tip {
+  margin-right: 6.5em;
 }
 
 .h5p-multichoice .h5p-radio-or-checkbox {
@@ -311,7 +333,7 @@
 .h5p-multichoice .h5p-feedback-button {
   position: absolute;
   cursor: pointer;
-  right: 2.25em;
+  right: 3.5em;
   top: 0.5em;
   line-height: 1em;
 }
@@ -348,7 +370,7 @@
 .h5p-multichoice .h5p-feedback-dialog:before {
   content: "";
   position: absolute;
-  right: 1.25em;
+  right: 2.5em;
   top: -0.75em;
   width: 1.5em;
   height: 1.5em;
@@ -387,8 +409,8 @@
 }
 .h5p-multichoice .h5p-correct .joubel-tip-container,
 .h5p-multichoice .h5p-wrong .joubel-tip-container {
-  right: 1.75em;
+  right: 3.125em;
 }
 .h5p-multichoice .h5p-has-feedback .joubel-tip-container {
-  right: 3.5em;
+  right: 4.75em;
 }
