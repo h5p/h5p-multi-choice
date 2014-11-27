@@ -184,7 +184,7 @@
   right: 2.25em;
 }
 
-.h5p-multichoice .h5p-wrong > label:before {
+.h5p-multichoice .h5p-selected.h5p-wrong > label:before {
   content: "\f00d";
   color: #c33f62;
 }
@@ -222,7 +222,7 @@
   color: #c33f62;
 }
 
-.h5p-multichoice .h5p-selected.h5p-wrong .h5p-span{
+.h5p-multichoice .h5p-selected.h5p-wrong .h5p-span {
   color: #c33f62;
   text-decoration: line-through;
 }
