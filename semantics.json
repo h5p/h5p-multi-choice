@@ -122,6 +122,12 @@
     "common": true,
     "fields": [
       {
+        "name": "checkAnswerButton",
+        "type": "text",
+        "label": "Check answer button label",
+        "default": "Check"
+      },
+      {
         "name": "showSolutionButton",
         "type": "text",
         "label": "Show solution button label",
@@ -155,9 +161,16 @@
     ]
   },
   {
-    "name": "tryAgain",
+    "name": "enableRetryButton",
     "type": "boolean",
-    "label": "Enable Retry button",
+    "label": "Enable \"Retry\" button",
+    "default": true,
+    "optional": true
+  },
+  {
+    "name": "enableSolutionsButton",
+    "type": "boolean",
+    "label": "Enable \"Show Solution\" button",
     "default": true,
     "optional": true
   },

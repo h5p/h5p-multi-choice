@@ -23,26 +23,26 @@ H5P.MultiChoice = function(options, contentId) {
 
   var $ = H5P.jQuery;
   var texttemplate =
-          '<div class="h5p-question"><%= question %></div>' +
-          '  <ul class="h5p-answers">' +
-          '    <% for (var i=0; i < answers.length; i++) { %>' +
-          '      <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected<% } %>">' +
-          '        <label>' +
-          '          <div class="h5p-input-container">' +
-          '            <% if (singleAnswer) { %>' +
-          '            <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
-          '            <% } else { %>' +
-          '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
-          '            <% } %>' +
-          '            <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioIcon %></a>' +
-          '          </div><div class="h5p-alternative-container">' +
-          '            <span class="h5p-span"><%= answers[i].text %></span>' +
-          '          </div><div class="h5p-clearfix"></div>' +
-          '        </label>' +
-          '      </li>' +
-          '    <% } %>' +
-          '  </ul>' +
-          '<div class="h5p-show-solution-container"><div class="feedback-text"></div><a href="#" class="h5p-show-solution" style="display:none;"><%= UI.showSolutionButton %></a></div>';
+      '<div class="h5p-question"><%= question %></div>' +
+      '  <ul class="h5p-answers">' +
+      '    <% for (var i=0; i < answers.length; i++) { %>' +
+      '      <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected<% } %>">' +
+      '        <label>' +
+      '          <div class="h5p-input-container">' +
+      '            <% if (singleAnswer) { %>' +
+      '            <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
+      '            <% } else { %>' +
+      '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
+      '            <% } %>' +
+      '            <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioIcon %></a>' +
+      '          </div><div class="h5p-alternative-container">' +
+      '            <span class="h5p-span"><%= answers[i].text %></span>' +
+      '          </div><div class="h5p-clearfix"></div>' +
+      '        </label>' +
+      '      </li>' +
+      '    <% } %>' +
+      '  </ul>' +
+      '<div class="h5p-show-solution-container"><div class="feedback-text"></div><a href="#" class="h5p-show-solution" style="display:none;"><%= UI.showSolutionButton %></a></div>';
 
   var defaults = {
     image: null,
@@ -62,9 +62,9 @@ H5P.MultiChoice = function(options, contentId) {
       almostText: 'Almost!',
       wrongText: 'Wrong!'
     },
-    displaySolutionsButton: true,
+    enableSolutionsButton: true,
     postUserStatistics: (H5P.postUserStatistics === true),
-    tryAgain: true,
+    enableRetryButton: true,
     showSolutionsRequiresInput: true
   };
   var template = new EJS({text: texttemplate});
@@ -81,7 +81,11 @@ H5P.MultiChoice = function(options, contentId) {
     return icon;
   };
 
+  // Initialize buttons and elements.
+  var self = this;
   var $myDom;
+  var $checkButton;
+  var $retryButton;
   var $solutionButton;
   var $feedbackElement;
   var $feedbackDialog;
@@ -148,6 +152,7 @@ H5P.MultiChoice = function(options, contentId) {
     var max = maxScore();
     if (score === max) {
       $feedbackElement.addClass('h5p-passed').html(params.UI.correctText);
+      finishedTask();
     }
     else if (score === 0) {
       $feedbackElement.addClass('h5p-failed').html(params.UI.wrongText);
@@ -155,15 +160,11 @@ H5P.MultiChoice = function(options, contentId) {
     else {
       $feedbackElement.addClass('h5p-almost').html(params.UI.almostText);
     }
-    if ($solutionButton !== undefined) {
-      if (params.tryAgain && score < max) {
-        $solutionButton.text(params.UI.tryAgainButton).addClass('h5p-try-again');
-      }
-      else {
-        $solutionButton.remove();
-      }
-    }
-  };
+    //Hides all buttons.
+    $solutionButton.hide();
+    $retryButton.hide();
+    $checkButton.hide();
+    };
 
   var hideSolutions = function () {
     $solutionButton.text(params.UI.showSolutionButton).removeClass('h5p-try-again');
@@ -177,6 +178,16 @@ H5P.MultiChoice = function(options, contentId) {
     $myDom.find('input').prop('disabled', false);
     $myDom.find('.h5p-feedback-button, .h5p-feedback-dialog').remove();
     $myDom.find('.h5p-has-feedback').removeClass('h5p-has-feedback');
+  };
+
+  /**
+   * Resets the whole task.
+   * Used in contracts with integrated content.
+   * @private
+   */
+  var resetTask = function () {
+    hideSolutions();
+    removeSelections();
   };
 
   var calculateMaxScore = function () {
@@ -203,21 +214,136 @@ H5P.MultiChoice = function(options, contentId) {
       return;
     }
     added = true;
-    $solutionButton = $myDom.find('.h5p-show-solution').show().click(function () {
-      if ($solutionButton.hasClass('h5p-try-again')) {
-        hideSolutions();
-      }
-      else {
-        calcScore();
-        if (answered()) {
-          showSolutions();
-          if (params.postUserStatistics === true) {
-            H5P.setFinished(contentId, score, maxScore());
-          }
+    $solutionButton = $myDom.find('.h5p-show-solution').click(function () {
+      calcScore();
+      if (answered()) {
+        showSolutions();
+        if (params.postUserStatistics === true) {
+          H5P.setFinished(contentId, score, maxScore());
         }
       }
       return false;
     });
+  };
+
+  /**
+   * Adds the ui buttons.
+   * @private
+   */
+  var addButtons = function () {
+    addSolutionButton();
+    $solutionButton.hide();
+    addCheckButton();
+    addRetryButton();
+  };
+
+  /**
+   * Adds a "check solution" button.
+   * @private
+   */
+  var addCheckButton = function () {
+    $checkButton = $('<div/>', {
+      text: params.UI.checkAnswerButton,
+      'class': 'h5p-multichoice-check-button'
+    }).hide()
+      .click(function () {
+        disableInput();
+        $checkButton.hide();
+        if (params.enableSolutionsButton) {
+          $solutionButton.show();
+        }
+        if (params.enableRetryButton) {
+          $retryButton.show();
+        }
+        self.showCheckSolution();
+      })
+      .appendTo($myDom.find('.h5p-show-solution-container'));
+  };
+
+  /**
+   * Adds a "retry" button.
+   * @private
+   */
+  var addRetryButton = function () {
+    $retryButton = $('<div/>', {
+      text: params.UI.tryAgainButton,
+      'class': 'h5p-try-again'
+    }).hide()
+      .click(function () {
+        $solutionButton.hide();
+        $retryButton.hide();
+        $checkButton.show();
+        hideSolutions();
+        removeSelections();
+        enableInput();
+      })
+      .appendTo($myDom.find('.h5p-show-solution-container'));
+  };
+
+
+
+  /**
+   * Shows feedback on the selected fields.
+   * @public
+   */
+  this.showCheckSolution = function () {
+    $myDom.find('.h5p-answer').each(function (i, e) {
+      var $e = $(e);
+      var a = params.answers[i];
+      if ($e.hasClass('h5p-selected')) {
+        if (a.correct) {
+          $e.addClass('h5p-correct');
+          $e.addClass('h5p-should');
+        }
+        else {
+          $e.addClass('h5p-wrong');
+          $e.addClass('h5p-should-not');
+        }
+      }
+
+      var c = $e.hasClass('h5p-selected');
+      if (c === true && a.chosenFeedback !== undefined && a.chosenFeedback !== '') {
+        addFeedback($e, a.chosenFeedback);
+      }
+      else if (c === false && a.notChosenFeedback !== undefined && a.notChosenFeedback !== '') {
+        addFeedback($e, a.notChosenFeedback);
+      }
+    });
+    var max = maxScore();
+    if (score === max) {
+      $feedbackElement.addClass('h5p-passed').html(params.UI.correctText);
+      finishedTask();
+    }
+    else if (score === 0) {
+      $feedbackElement.addClass('h5p-failed').html(params.UI.wrongText);
+    }
+    else {
+      $feedbackElement.addClass('h5p-almost').html(params.UI.almostText);
+    }
+  };
+
+  /**
+   * Method to use when the task is correctly answered, removes all buttons and disables input.
+   */
+  var finishedTask = function () {
+    $checkButton.hide();
+    $retryButton.hide();
+    $solutionButton.hide();
+    $myDom.find('input').attr('disabled', 'disabled');
+  };
+
+  /**
+   * Disables choosing new input.
+   */
+  var disableInput = function () {
+    $myDom.find('input').attr('disabled', 'disabled');
+  };
+
+  /**
+   * Enables new input.
+   */
+  var enableInput = function () {
+    $myDom.find('input').attr('disabled', false);
   };
 
   var blankIsCorrect = true;
@@ -255,6 +381,26 @@ H5P.MultiChoice = function(options, contentId) {
     if (params.singlePoint) {
       score = (score === calculateMaxScore() ? params.weight : 0);
     }
+  };
+
+  /**
+   * Removes selections from task.
+   */
+  var removeSelections = function () {
+    $myDom.find(':checked').each( function () {
+      this.checked = false;
+      $(this).parents('.h5p-answer').removeClass("h5p-selected");
+
+      //Sets type of icon depending on answer type.
+      if (params.singleAnswer) {
+        $(this).siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(true, false));
+      }
+      else {
+        $(this).siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(false, false));
+      }
+    });
+    $checkButton.hide();
+    calcScore();
   };
 
   // Function for attaching the multichoice to a DOM element.
@@ -332,13 +478,34 @@ H5P.MultiChoice = function(options, contentId) {
         }
         calcScore();
       }
+
+      var answerChecked = false;
+      $myDom.find('.h5p-answer').each( function () {
+        if($(this).hasClass('h5p-selected')) {
+          answerChecked = true;
+        }
+      });
+
+      if (answerChecked) {
+        hideSolutions();
+        $checkButton.show();
+        $retryButton.hide();
+        $solutionButton.hide();
+      }
+      else {
+        $checkButton.hide();
+      }
+
       // Triggers must be done on the returnObject.
       $(returnObject).trigger('h5pQuestionAnswered');
     });
 
-    if (params.displaySolutionsButton === true) {
-      addSolutionButton();
-    }
+
+
+
+    // Adds check and retry button
+    addButtons();
+
     if (!params.singleAnswer) {
       calcScore();
     }
@@ -370,7 +537,10 @@ H5P.MultiChoice = function(options, contentId) {
     getMaxScore: maxScore,
     showSolutions: showSolutions,
     addSolutionButton: addSolutionButton,
-    tryAgain: params.tryAgain,
+    enableRetryButton: params.enableRetryButton,
+    enableSolutionsButton: params.enableSolutionsButton,
+    params: params,
+    resetTask: resetTask,
     defaults: defaults // Provide defaults for inspection
   };
   // Store options.

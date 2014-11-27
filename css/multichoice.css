@@ -46,6 +46,63 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6498fe', endColorstr='#0468ce',GradientType=0 ); /* IE6-9 */
 }
 
+/* Check solution button */
+.h5p-multichoice .h5p-show-solution-container .h5p-multichoice-check-button {
+  display: inline-block;
+  font-size: 1em;
+  padding: 0.2em 1em;
+  border: 0.2em solid #fff;
+  border-radius: 0.4em;
+  margin: 0 0.5em 1em;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 0 0.5em #999;
+  text-decoration: none;
+
+  background: rgb(100,152,254); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(100,152,254,1) 0%, rgba(4,104,206,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(100,152,254,1)), color-stop(100%,rgba(4,104,206,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6498fe', endColorstr='#0468ce',GradientType=0 ); /* IE6-9 */
+}
+
+.h5p-multichoice .h5p-show-solution-container .h5p-multichoice-check-button:before {
+  content: "\f058";
+  font-family: 'H5PFontAwesome4';
+  padding-right: 0.5em;
+}
+
+/* Retry button */
+.h5p-try-again {
+  display: inline-block;
+  font-size: 1em;
+  padding: 0.2em 1em;
+  border: 0.2em solid #fff;
+  border-radius: 0.4em;
+  margin: 0 0.5em 1em;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 0 0.5em #999;
+  text-decoration: none;
+
+  background: rgb(100,152,254); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(100,152,254,1) 0%, rgba(4,104,206,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(100,152,254,1)), color-stop(100%,rgba(4,104,206,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6498fe', endColorstr='#0468ce',GradientType=0 ); /* IE6-9 */
+}
+
+.h5p-try-again:before {
+  font-family: 'H5PFontAwesome4';
+  padding-right: 0.5em;
+  content: "\f01e";
+}
+
+/* Show Solution button */
 .h5p-multichoice .h5p-show-solution-container a.h5p-show-solution:before {
   font-family: 'H5PFontAwesome4';
   content: "\f06e";
