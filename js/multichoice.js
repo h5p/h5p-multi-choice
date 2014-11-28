@@ -122,7 +122,7 @@ H5P.MultiChoice = function(options, contentId) {
     }).appendTo($element.addClass('h5p-has-feedback'));
   };
 
-  var showSolutions = function () {
+  var showAllSolutions = function () {
     if (solutionsVisible) {
       return;
     }
@@ -160,10 +160,24 @@ H5P.MultiChoice = function(options, contentId) {
     else {
       $feedbackElement.addClass('h5p-almost').html(params.UI.almostText);
     }
-    //Hides all buttons.
+    //Hide buttons and retry depending on settings.
     $solutionButton.hide();
-    $retryButton.hide();
     $checkButton.hide();
+    if (params.enableRetryButton) {
+      $retryButton.show();
+    }
+
+  };
+
+  /**
+   * Used in contracts.
+   * Shows the solution for the task and hides all buttons.
+   */
+  var showSolutions = function () {
+    showAllSolutions();
+
+    //Hides all buttons.
+    $retryButton.hide();
     };
 
   var hideSolutions = function () {
@@ -217,7 +231,7 @@ H5P.MultiChoice = function(options, contentId) {
     $solutionButton = $myDom.find('.h5p-show-solution').click(function () {
       calcScore();
       if (answered()) {
-        showSolutions();
+        showAllSolutions();
         if (params.postUserStatistics === true) {
           H5P.setFinished(contentId, score, maxScore());
         }
