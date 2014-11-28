@@ -143,6 +143,10 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ededed', endColorstr='#e6dfdfdf',GradientType=0 ); /* IE6-9 */
 }
 
+.h5p-multichoice label.h5p-mc-disabled {
+  cursor: default;
+}
+
 .h5p-multichoice label:hover {
   filter: none;
   border: 0.1em solid #ddcae0;
