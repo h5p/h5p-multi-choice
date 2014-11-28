@@ -154,11 +154,15 @@
   text-decoration: none;
   font-family: 'H5PFontAwesome4';
   position: absolute;
-  right: 2.25em;
+  background: #fff;
+  line-height: 1em;
+  top: 0.4375em;
+  right: 2.125em;
 }
 .h5p-multichoice .h5p-selected.h5p-wrong > label:before {
   content: "\f00d";
   color: #c33f62;
+  padding: 0 0.125em;
 }
 .h5p-multichoice .h5p-selected.h5p-correct > label:before {
   content: "\f00c";
@@ -221,22 +225,7 @@
 }
 
 .h5p-multichoice .h5p-alternative-container {
-  margin-left: 2em;
-}
-.h5p-multichoice .h5p-alternative-container.h5p-has-tip {
-  margin-right: 1.5em;
-}
-.h5p-multichoice .h5p-should .h5p-alternative-container,
-.h5p-multichoice .h5p-should-not .h5p-alternative-container {
-  margin-right: 3em;
-}
-.h5p-multichoice .h5p-has-feedback .h5p-alternative-container,
-.h5p-multichoice .h5p-should .h5p-alternative-container.h5p-has-tip,
-.h5p-multichoice .h5p-should-not .h5p-alternative-container.h5p-has-tip {
-  margin-right: 5em;
-}
-.h5p-multichoice .h5p-has-feedback .h5p-alternative-container.h5p-has-tip {
-  margin-right: 6.5em;
+  margin: 0 1.5em 0 2em;
 }
 
 .h5p-multichoice .h5p-radio-or-checkbox {
@@ -269,6 +258,7 @@
   right: 3.5em;
   top: 0.5em;
   line-height: 1em;
+  background: #fff;
 }
 .h5p-multichoice .h5p-feedback-button:focus {
   outline: none;
@@ -343,7 +333,9 @@
 .h5p-multichoice .h5p-correct .joubel-tip-container,
 .h5p-multichoice .h5p-wrong .joubel-tip-container {
   right: 3.125em;
+  background: #fff;
+  top: 0.0675em;
 }
 .h5p-multichoice .h5p-has-feedback .joubel-tip-container {
-  right: 4.75em;
+  display: none;
 }
