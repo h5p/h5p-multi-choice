@@ -64,7 +64,7 @@ H5P.MultiChoice = function(options, contentId) {
     },
     enableSolutionsButton: true,
     postUserStatistics: (H5P.postUserStatistics === true),
-    enableRetryButton: true,
+    enableRetry: true,
     showSolutionsRequiresInput: true
   };
   var template = new EJS({text: texttemplate});
@@ -160,10 +160,14 @@ H5P.MultiChoice = function(options, contentId) {
     else {
       $feedbackElement.addClass('h5p-almost').html(params.UI.almostText);
     }
+
+    // Add css class disabled to labels.
+    $myDom.find('label').addClass('h5p-mc-disabled');
+
     //Hide buttons and retry depending on settings.
     $solutionButton.hide();
     $checkButton.hide();
-    if (params.enableRetryButton) {
+    if (params.enableRetry) {
       $retryButton.show();
     }
 
@@ -266,7 +270,7 @@ H5P.MultiChoice = function(options, contentId) {
         if (params.enableSolutionsButton) {
           $solutionButton.show();
         }
-        if (params.enableRetryButton) {
+        if (params.enableRetry) {
           $retryButton.show();
         }
         self.showCheckSolution();
@@ -334,6 +338,8 @@ H5P.MultiChoice = function(options, contentId) {
     else {
       $feedbackElement.addClass('h5p-almost').html(params.UI.almostText);
     }
+    //Add disabled css class to label
+    $myDom.find('label').addClass('h5p-mc-disabled');
   };
 
   /**
@@ -358,6 +364,8 @@ H5P.MultiChoice = function(options, contentId) {
    */
   var enableInput = function () {
     $myDom.find('input').attr('disabled', false);
+    // Remove css class disabled from labels.
+    $myDom.find('label').removeClass('h5p-mc-disabled');
   };
 
   var blankIsCorrect = true;
@@ -551,7 +559,7 @@ H5P.MultiChoice = function(options, contentId) {
     getMaxScore: maxScore,
     showSolutions: showSolutions,
     addSolutionButton: addSolutionButton,
-    enableRetryButton: params.enableRetryButton,
+    enableRetry: params.enableRetry,
     enableSolutionsButton: params.enableSolutionsButton,
     params: params,
     resetTask: resetTask,
