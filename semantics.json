@@ -138,19 +138,22 @@
         "name": "correctText",
         "type": "text",
         "label": "Correct answer feedback",
-        "default": "Correct!"
+        "default": "Correct!",
+        "deprecated": true
       },
       {
         "name": "almostText",
         "type": "text",
         "label": "Almost correct answer feedback",
-        "default": "Almost!"
+        "default": "Almost!",
+        "deprecated": true
       },
       {
         "name": "wrongText",
         "type": "text",
         "label": "Not correct answer feedback",
-        "default": "Wrong"
+        "default": "Wrong",
+        "deprecated": true
       }
     ]
   },
