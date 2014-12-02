@@ -29,7 +29,7 @@ H5P.MultiChoice = function(options, contentId) {
       '      <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected<% } %>">' +
       '        <label>' +
       '          <div class="h5p-input-container">' +
-      '            <% if (singleAnswer) { %>' +
+      '            <% if (behaviour.singleAnswer) { %>' +
       '            <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
       '            <% } else { %>' +
       '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
@@ -50,9 +50,6 @@ H5P.MultiChoice = function(options, contentId) {
     answers: [
       {text: "Answer 1", correct: true},
     ],
-    singleAnswer: false,
-    singlePoint: true,
-    randomAnswers: false,
     weight: 1,
     userAnswers: [],
     UI: {
@@ -62,10 +59,15 @@ H5P.MultiChoice = function(options, contentId) {
       almostText: 'Almost!',
       wrongText: 'Wrong!'
     },
-    enableSolutionsButton: true,
+    behaviour: {
+      enableRetry: true,
+      enableSolutionsButton: true,
+      singleAnswer: false,
+      singlePoint: true,
+      randomAnswers: false,
+      showSolutionsRequiresInput: true
+    },
     postUserStatistics: (H5P.postUserStatistics === true),
-    enableRetry: true,
-    showSolutionsRequiresInput: true
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
@@ -167,7 +169,7 @@ H5P.MultiChoice = function(options, contentId) {
     //Hide buttons and retry depending on settings.
     $solutionButton.hide();
     $checkButton.hide();
-    if (params.enableRetry) {
+    if (params.behaviour.enableRetry) {
       $retryButton.show();
     }
 
@@ -223,7 +225,7 @@ H5P.MultiChoice = function(options, contentId) {
   };
 
   var maxScore = function () {
-    return (!params.singleAnswer && !params.singlePoint ? calculateMaxScore() : params.weight);
+    return (!params.behaviour.singleAnswer && !params.behaviour.singlePoint ? calculateMaxScore() : params.weight);
   };
 
   var added = false;
@@ -267,10 +269,10 @@ H5P.MultiChoice = function(options, contentId) {
       .click(function () {
         disableInput();
         $checkButton.hide();
-        if (params.enableSolutionsButton) {
+        if (params.behaviour.enableSolutionsButton) {
           $solutionButton.show();
         }
-        if (params.enableRetry) {
+        if (params.behaviour.enableRetry) {
           $retryButton.show();
         }
         self.showCheckSolution();
@@ -400,7 +402,7 @@ H5P.MultiChoice = function(options, contentId) {
     if (!params.userAnswers.length && blankIsCorrect) {
       score = params.weight;
     }
-    if (params.singlePoint) {
+    if (params.behaviour.singlePoint) {
       score = (score === calculateMaxScore() ? params.weight : 0);
     }
   };
@@ -414,7 +416,7 @@ H5P.MultiChoice = function(options, contentId) {
       $(this).parents('.h5p-answer').removeClass("h5p-selected");
 
       //Sets type of icon depending on answer type.
-      if (params.singleAnswer) {
+      if (params.behaviour.singleAnswer) {
         $(this).siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(true, false));
       }
       else {
@@ -438,12 +440,12 @@ H5P.MultiChoice = function(options, contentId) {
 
     // Recalculate icons on attach, in case we are re-attaching.
     for (var i = 0; i < params.answers.length; i++) {
-      params.answers[i].checkboxOrRadioIcon = getCheckboxOrRadioIcon(params.singleAnswer, params.userAnswers.indexOf(i) > -1);
+      params.answers[i].checkboxOrRadioIcon = getCheckboxOrRadioIcon(params.behaviour.singleAnswer, params.userAnswers.indexOf(i) > -1);
     }
 
     // Render own DOM into target.
     $myDom = target;
-    $myDom.html(template.render(params)).addClass('h5p-multichoice').addClass(params.singleAnswer ? 'h5p-radio' : 'h5p-check');
+    $myDom.html(template.render(params)).addClass('h5p-multichoice').addClass(params.behaviour.singleAnswer ? 'h5p-radio' : 'h5p-check');
 
     // Add image
     if (params.image) {
@@ -478,7 +480,7 @@ H5P.MultiChoice = function(options, contentId) {
     $('input', $myDom).change(function () {
       var $this = $(this);
       var num = parseInt($(this).val().split('_')[1], 10);
-      if (params.singleAnswer) {
+      if (params.behaviour.singleAnswer) {
         params.userAnswers[0] = num;
         if (params.answers[num].correct) {
           score = 1;
@@ -528,7 +530,7 @@ H5P.MultiChoice = function(options, contentId) {
     // Adds check and retry button
     addButtons();
 
-    if (!params.singleAnswer) {
+    if (!params.behaviour.singleAnswer) {
       calcScore();
     }
 
@@ -537,14 +539,14 @@ H5P.MultiChoice = function(options, contentId) {
 
   // Initialization code
   // Randomize order, if requested
-  if (params.randomAnswers) {
+  if (params.behaviour.randomAnswers) {
     params.answers = H5P.shuffleArray(params.answers);
   }
   // Start with an empty set of user answers.
   params.userAnswers = [];
 
   function answered() {
-    return params.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
+    return params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
   }
 
   // Masquerade the main object to hide inner properties and functions.
@@ -559,8 +561,8 @@ H5P.MultiChoice = function(options, contentId) {
     getMaxScore: maxScore,
     showSolutions: showSolutions,
     addSolutionButton: addSolutionButton,
-    enableRetry: params.enableRetry,
-    enableSolutionsButton: params.enableSolutionsButton,
+    enableRetry: params.behaviour.enableRetry,
+    enableSolutionsButton: params.behaviour.enableSolutionsButton,
     params: params,
     resetTask: resetTask,
     defaults: defaults // Provide defaults for inspection
