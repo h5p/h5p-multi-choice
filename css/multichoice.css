@@ -31,7 +31,7 @@
   padding: 0.2em 1em;
   border: 0.2em solid #fff;
   border-radius: 0.4em;
-  margin: 0 0.5em 1em;
+  margin: 1em 0.5em;
   cursor: pointer;
   color: #fff;
   box-shadow: 0 0 0.5em #999;
@@ -173,7 +173,8 @@
   font-family: icomoon-multichoice;
   position: absolute;
   right: 0.75em;
-  top: 0.31em;
+  line-height: 1em;
+  top: 0.4375em;
 }
 .h5p-multichoice.h5p-radio .h5p-answer.h5p-should:after {
   content: "\e603";
@@ -255,11 +256,16 @@
 .h5p-multichoice .h5p-feedback-button {
   position: absolute;
   cursor: pointer;
-  right: 3.5em;
-  top: 0.5em;
+  right: 2.125em;
+  top: 0.4375em;
   line-height: 1em;
   background: #fff;
 }
+.h5p-multichoice .h5p-selected.h5p-wrong .h5p-feedback-button,
+.h5p-multichoice .h5p-selected.h5p-wrong .h5p-feedback-button {
+  right: 3.5em;
+}
+
 .h5p-multichoice .h5p-feedback-button:focus {
   outline: none;
 }
@@ -332,9 +338,13 @@
 }
 .h5p-multichoice .h5p-correct .joubel-tip-container,
 .h5p-multichoice .h5p-wrong .joubel-tip-container {
-  right: 3.125em;
+  right: 2.125em;
   background: #fff;
   top: 0.0675em;
+}
+.h5p-multichoice .h5p-selected.h5p-correct .joubel-tip-container,
+.h5p-multichoice .h5p-selected.h5p-wrong .joubel-tip-container {
+  right: 3.125em;
 }
 .h5p-multichoice .h5p-has-feedback .joubel-tip-container {
   display: none;

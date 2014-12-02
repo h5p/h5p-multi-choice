@@ -42,7 +42,7 @@ H5P.MultiChoice = function(options, contentId) {
           '      </li>' +
           '    <% } %>' +
           '  </ul>' +
-          '<div class="h5p-show-solution-container"><div class="feedback-text"></div><a href="#" class="h5p-show-solution" style="display:none;"><%= UI.showSolutionButton %></a></div>';
+          '<div class="h5p-show-solution-container"><a href="#" class="h5p-show-solution" style="display:none;"><%= UI.showSolutionButton %></a></div>';
 
   var defaults = {
     image: null,
@@ -57,10 +57,7 @@ H5P.MultiChoice = function(options, contentId) {
     userAnswers: [],
     UI: {
       showSolutionButton: 'Show solution',
-      tryAgainButton: 'Try again',
-      correctText: 'Correct!',
-      almostText: 'Almost!',
-      wrongText: 'Wrong!'
+      tryAgainButton: 'Try again'
     },
     displaySolutionsButton: true,
     postUserStatistics: (H5P.postUserStatistics === true),
@@ -83,7 +80,6 @@ H5P.MultiChoice = function(options, contentId) {
 
   var $myDom;
   var $solutionButton;
-  var $feedbackElement;
   var $feedbackDialog;
   var removeFeedbackDialog = function () {
     // Remove the open feedback dialog.
@@ -146,15 +142,6 @@ H5P.MultiChoice = function(options, contentId) {
       }
     });
     var max = maxScore();
-    if (score === max) {
-      $feedbackElement.addClass('h5p-passed').html(params.UI.correctText);
-    }
-    else if (score === 0) {
-      $feedbackElement.addClass('h5p-failed').html(params.UI.wrongText);
-    }
-    else {
-      $feedbackElement.addClass('h5p-almost').html(params.UI.almostText);
-    }
     if ($solutionButton !== undefined) {
       if (params.tryAgain && score < max) {
         $solutionButton.text(params.UI.tryAgainButton).addClass('h5p-try-again');
@@ -169,7 +156,6 @@ H5P.MultiChoice = function(options, contentId) {
     $solutionButton.text(params.UI.showSolutionButton).removeClass('h5p-try-again');
     solutionsVisible = false;
 
-    $feedbackElement.removeClass('h5p-passed h5p-failed h5p-almost').empty();
     $myDom.find('.h5p-correct').removeClass('h5p-correct');
     $myDom.find('.h5p-wrong').removeClass('h5p-wrong');
     $myDom.find('.h5p-should').removeClass('h5p-should');
@@ -303,8 +289,6 @@ H5P.MultiChoice = function(options, contentId) {
         .append(H5P.JoubelUI.createTip(tip))
         .addClass('h5p-has-tip');
     });
-
-    $feedbackElement = $myDom.find('.h5p-show-solution-container .feedback-text');
 
     // Set event listeners.
     $('input', $myDom).change(function () {
