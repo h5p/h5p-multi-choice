@@ -48,7 +48,7 @@ H5P.MultiChoice = function(options, contentId) {
     image: null,
     question: "No question text provided",
     answers: [
-      {text: "Answer 1", correct: true},
+      {text: "Answer 1", correct: true}
     ],
     weight: 1,
     userAnswers: [],
@@ -67,7 +67,7 @@ H5P.MultiChoice = function(options, contentId) {
       randomAnswers: false,
       showSolutionsRequiresInput: true
     },
-    postUserStatistics: (H5P.postUserStatistics === true),
+    postUserStatistics: (H5P.postUserStatistics === true)
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
