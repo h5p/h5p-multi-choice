@@ -53,6 +53,7 @@ H5P.MultiChoice = function(options, contentId) {
     weight: 1,
     userAnswers: [],
     UI: {
+      checkAnswerButton: 'Check',
       showSolutionButton: 'Show solution',
       tryAgainButton: 'Try again',
       correctText: 'Correct!',

@@ -11,14 +11,14 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
             enableSolutionsButton: parameters.enableSolutionsButton,
             singleAnswer: parameters.singleAnswer,
             singlePoint: parameters.singlePoint,
-            randomAnswer: parameters.randomAnswer,
+            randomAnswers: parameters.randomAnswers,
             showSolutionsRequiresInput: parameters.showSolutionsRequiresInput
           };
           delete parameters.tryAgain;
           delete parameters.enableSolutionsButton;
           delete parameters.singleAnswer;
           delete parameters.singlePoint;
-          delete parameters.randomAnswer;
+          delete parameters.randomAnswers;
           delete parameters.showSolutionsRequiresInput;
 
           finished(null, parameters);
