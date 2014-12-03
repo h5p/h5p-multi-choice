@@ -261,7 +261,7 @@
   line-height: 1em;
   background: #fff;
 }
-.h5p-multichoice .h5p-selected.h5p-wrong .h5p-feedback-button,
+.h5p-multichoice .h5p-selected.h5p-correct .h5p-feedback-button,
 .h5p-multichoice .h5p-selected.h5p-wrong .h5p-feedback-button {
   right: 3.5em;
 }
