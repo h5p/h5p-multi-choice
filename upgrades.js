@@ -14,6 +14,7 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
             randomAnswers: parameters.randomAnswers,
             showSolutionsRequiresInput: parameters.showSolutionsRequiresInput
           };
+          parameters.UI.checkAnswerButton = 'Check';
           delete parameters.tryAgain;
           delete parameters.enableSolutionsButton;
           delete parameters.singleAnswer;
