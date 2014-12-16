@@ -315,17 +315,7 @@ H5P.MultiChoice = function(options, contentId) {
         addFeedback($e, a.notChosenFeedback);
       }
     });
-    var max = maxScore();
-    if (score === max) {
-      $feedbackElement.addClass('h5p-passed').html(params.UI.correctText);
-      finishedTask();
-    }
-    else if (score === 0) {
-      $feedbackElement.addClass('h5p-failed').html(params.UI.wrongText);
-    }
-    else {
-      $feedbackElement.addClass('h5p-almost').html(params.UI.almostText);
-    }
+
     //Add disabled css class to label
     $myDom.find('label').addClass('h5p-mc-disabled');
   };
