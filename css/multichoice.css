@@ -53,7 +53,7 @@
   padding: 0.2em 1em;
   border: 0.2em solid #fff;
   border-radius: 0.4em;
-  margin: 0 0.5em 1em;
+  margin: 1em 0.5em;
   cursor: pointer;
   color: #fff;
   box-shadow: 0 0 0.5em #999;
@@ -75,13 +75,13 @@
 }
 
 /* Retry button */
-.h5p-try-again {
+.h5p-multichoice .h5p-show-solution-container .h5p-try-again {
   display: inline-block;
   font-size: 1em;
   padding: 0.2em 1em;
   border: 0.2em solid #fff;
   border-radius: 0.4em;
-  margin: 0 0.5em 1em;
+  margin: 1em 0.5em;
   cursor: pointer;
   color: #fff;
   box-shadow: 0 0 0.5em #999;

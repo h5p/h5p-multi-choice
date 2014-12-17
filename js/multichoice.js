@@ -194,6 +194,9 @@ H5P.MultiChoice = function(options, contentId) {
   var resetTask = function () {
     hideSolutions();
     removeSelections();
+    $checkButton.show();
+    $retryButton.hide();
+    $solutionButton.hide();
   };
 
   var calculateMaxScore = function () {
@@ -251,7 +254,7 @@ H5P.MultiChoice = function(options, contentId) {
     $checkButton = $('<div/>', {
       text: params.UI.checkAnswerButton,
       'class': 'h5p-multichoice-check-button'
-    }).hide()
+    })
       .click(function () {
         disableInput();
         $checkButton.hide();
@@ -399,7 +402,6 @@ H5P.MultiChoice = function(options, contentId) {
         $(this).siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(false, false));
       }
     });
-    $checkButton.hide();
     calcScore();
   };
 
@@ -489,9 +491,6 @@ H5P.MultiChoice = function(options, contentId) {
         $checkButton.show();
         $retryButton.hide();
         $solutionButton.hide();
-      }
-      else {
-        $checkButton.hide();
       }
 
       // Triggers must be done on the returnObject.
