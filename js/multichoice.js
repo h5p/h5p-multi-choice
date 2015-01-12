@@ -302,11 +302,9 @@ H5P.MultiChoice = function(options, contentId) {
       if ($e.hasClass('h5p-selected')) {
         if (a.correct) {
           $e.addClass('h5p-correct');
-          $e.addClass('h5p-should');
         }
         else {
           $e.addClass('h5p-wrong');
-          $e.addClass('h5p-should-not');
         }
       }
 
