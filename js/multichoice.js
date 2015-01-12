@@ -319,6 +319,10 @@ H5P.MultiChoice = function(options, contentId) {
       }
     });
 
+    //Disable task if maxscore is achieved
+    if (score === maxScore()) {
+      finishedTask();
+    }
     //Add disabled css class to label
     $myDom.find('label').addClass('h5p-mc-disabled');
   };
