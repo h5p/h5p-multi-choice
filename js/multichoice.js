@@ -312,9 +312,6 @@ H5P.MultiChoice = function(options, contentId) {
       if (c === true && a.chosenFeedback !== undefined && a.chosenFeedback !== '') {
         addFeedback($e, a.chosenFeedback);
       }
-      else if (c === false && a.notChosenFeedback !== undefined && a.notChosenFeedback !== '') {
-        addFeedback($e, a.notChosenFeedback);
-      }
     });
 
     //Disable task if maxscore is achieved
