@@ -21,10 +21,12 @@
             "label": "Riktig"
           },
           {
-            "label": "Tilbakemelding for valgt alternativ"
+            "label": "Tilbakemelding for valgt alternativ",
+            "description": "Vises når brukerne sjekker svaret hans."
           },
           {
-            "label": "Tilbakemelding for ikke valgt alternativ"
+            "label": "Tilbakemelding for ikke valgt alternativ",
+            "description": "Vises når løsningen vises."
           },
           {
             "label": "Tips",

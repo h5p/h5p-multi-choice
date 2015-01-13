@@ -56,6 +56,7 @@
           "type": "text",
           "widget": "html",
           "label": "Chosen feedback",
+          "description": "Will be displayed when the users checks his answer.",
           "optional": true,
           "tags": [
             "strong",
@@ -69,6 +70,7 @@
           "type": "text",
           "widget": "html",
           "label": "Not chosen feedback",
+          "description": "Will be displayed when the solution is displayed.",
           "optional": true,
           "tags": [
             "strong",
