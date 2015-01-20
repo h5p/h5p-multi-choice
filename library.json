@@ -10,7 +10,7 @@
   "license": "cc-by-sa",
   "coreApi": {
     "majorVersion": 1,
-    "minorVersion": 1
+    "minorVersion": 4
   },
   "preloadedJs": [
     {

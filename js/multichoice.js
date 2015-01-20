@@ -265,6 +265,10 @@ H5P.MultiChoice = function(options, contentId) {
           $retryButton.show();
         }
         self.showCheckSolution();
+
+        var max = maxScore();
+        var passRate = (score <= 0 || max <= 0 ? 0 : (score / max));
+        returnObject.trigger('checkAnswer', passRate);
       })
       .appendTo($myDom.find('.h5p-show-solution-container'));
   };
@@ -539,6 +543,14 @@ H5P.MultiChoice = function(options, contentId) {
     resetTask: resetTask,
     defaults: defaults // Provide defaults for inspection
   };
+
+  // Extends the event dispatcher
+  returnObject.prototype = Object.create(H5P.EventDispatcher.prototype);
+  //Interaction.prototype.constructor = Interaction;
+
+  // Initialize event inheritance
+  H5P.EventDispatcher.call(returnObject);
+
   // Store options.
   return returnObject;
 };
