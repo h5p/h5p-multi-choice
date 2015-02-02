@@ -215,10 +215,13 @@
   text-decoration: none;
   font-family: 'H5PFontAwesome4';
   position: absolute;
-  background: #fff;
   line-height: 1em;
   top: 0.4375em;
   right: 0.75em;
+  text-shadow: -1px -1px 0 #fff,
+               1px -1px 0 #fff,
+               -1px 1px 0 #fff,
+               1px 1px 0 #fff;
 }
 .h5p-multichoice .h5p-should.h5p-answer > label:before,
 .h5p-multichoice .h5p-should-not.h5p-answer > label:before {
