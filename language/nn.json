@@ -8,18 +8,6 @@
       "label": "Spørsmål"
     },
     {
-      "label": "Bare eitt svar",
-      "description": "Slå på for å tillate val av berre eitt alternativ."
-    },
-    {
-      "label": "Gje eitt poeng for heile oppgåva",
-      "description": "Gir eitt poeng totalt for fleire rette alternativ. Kun valbar om \"Bare eitt svar\" er slått av."
-    },
-    {
-      "label": "Tilfeldige svaralternativ",
-      "description": "Slå på for å vise de mulige svara i tilfeldig rekkefølge."
-    },
-    {
       "label": "Svaralternativ",
       "description": "Svaralternativa brukaren kan velje mellom",
       "entity": "svaralternativ",
@@ -33,10 +21,12 @@
             "label": "Riktig"
           },
           {
-            "label": "Tilbakemelding for valgt alternativ"
+            "label": "Tilbakemelding for valgt alternativ",
+            "description": "Visast når brukarane sjekkar hans svar."
           },
           {
-            "label": "Tilbakemelding for ikke valgt alternativ"
+            "label": "Tilbakemelding for ikke valgt alternativ",
+            "description": "Visast når løysinga visast."
           },
           {
             "label": "Tips",
@@ -52,6 +42,10 @@
     {
       "label": "Oversetting for leietekstar i fleirval",
       "fields": [
+        {
+          "label": "Tekst for \"Sjekk svar\" knapp",
+          "default": "Sjekk"
+        },
         {
           "label": "Tekst for \"Vis svar\" knapp",
           "default": "Vis svar"
@@ -75,10 +69,31 @@
       ]
     },
     {
-      "label": "Slå på «Prøv igjen»-knappen."
-    },
-    {
-      "label": "Krev inndata fra brukeren før fasit gis."
+      "label": "Innstillinger for oppgave-oppførsel",
+      "description": "Disse instillingene lar deg bestemme hvordan oppgavetypen skal oppføre seg.",
+      "fields": [
+        {
+          "label": "Aktiver \"Prøv igjen\""
+        },
+        {
+          "label": "Aktiver \"Vis svar\" knapp"
+        },
+        {
+          "label": "Bare eitt svar",
+          "description": "Slå på for å tillate val av berre eitt alternativ."
+        },
+        {
+          "label": "Gje eitt poeng for heile oppgåva",
+          "description": "Gir eitt poeng totalt for fleire rette alternativ. Kun valbar om \"Bare eitt svar\" er slått av."
+        },
+        {
+          "label": "Tilfeldige svaralternativ",
+          "description": "Slå på for å vise de mulige svara i tilfeldig rekkefølge."
+        },
+        {
+          "label": "Krev inndata fra brukeren før fasit gis."
+        }
+      ]
     }
   ]
 }
