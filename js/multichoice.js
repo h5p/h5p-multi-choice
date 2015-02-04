@@ -117,6 +117,7 @@ H5P.MultiChoice = function(options, contentId) {
 
         $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
         $myDom.click(removeFeedbackDialog);
+        self.trigger('resize');
         e.stopPropagation();
       }
     }).appendTo($element.addClass('h5p-has-feedback'));
@@ -160,7 +161,7 @@ H5P.MultiChoice = function(options, contentId) {
     if (params.behaviour.enableRetry) {
       $retryButton.show();
     }
-
+    self.trigger('resize');
   };
 
   /**
@@ -185,6 +186,7 @@ H5P.MultiChoice = function(options, contentId) {
     $myDom.find('input').prop('disabled', false);
     $myDom.find('.h5p-feedback-button, .h5p-feedback-dialog').remove();
     $myDom.find('.h5p-has-feedback').removeClass('h5p-has-feedback');
+    self.trigger('resize');
   };
 
   /**
@@ -319,6 +321,7 @@ H5P.MultiChoice = function(options, contentId) {
     }
     //Add disabled css class to label
     $myDom.find('label').addClass('h5p-mc-disabled');
+    self.trigger('resize');
   };
 
   /**
@@ -329,6 +332,7 @@ H5P.MultiChoice = function(options, contentId) {
     $retryButton.hide();
     $solutionButton.hide();
     $myDom.find('input').attr('disabled', 'disabled');
+    self.trigger('resize');
   };
 
   /**
