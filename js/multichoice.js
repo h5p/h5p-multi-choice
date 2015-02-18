@@ -83,7 +83,6 @@ H5P.MultiChoice = function(options, contentId) {
   };
 
   // Initialize buttons and elements.
-  var self = this;
   var $myDom;
   var $checkButton;
   var $retryButton;
@@ -98,29 +97,35 @@ H5P.MultiChoice = function(options, contentId) {
   var score = 0;
   var solutionsVisible = false;
 
+  var addPopdown = function ($element, html) {
+    if ($element.children('.h5p-popdown').length) {
+      return; // This element already has a pop down.
+    }
+
+    var $popdown = $('<div/>', {
+      'class': 'h5p-popdown h5p-not-visible',
+      html: html,
+      appendTo: $element
+    });
+    //var height = $popdown.height();
+    //$popdown.addClass('h5p-not-visible');
+
+    // Animate in
+    setTimeout(function () {
+      $popdown.removeClass('h5p-not-visible');
+    }, 0);
+  };
+
+  var removePopdown = function ($element) {
+    // Animate out
+    $element.addClass('h5p-not-visible');
+    setTimeout(function () {
+      $element.remove();
+    }, 150);
+  };
+
   var addFeedback = function ($element, feedback) {
-    $('<div/>', {
-      role: 'button',
-      tabIndex: 1,
-      class: 'h5p-feedback-button',
-      title: 'View feedback',
-      click: function (e) {
-        if ($feedbackDialog !== undefined) {
-          if ($feedbackDialog.parent()[0] === $element[0]) {
-            // Skip if we're trying to open the same dialog twice
-            return;
-          }
-
-          // Remove last dialog.
-          $feedbackDialog.remove();
-        }
-
-        $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
-        $myDom.click(removeFeedbackDialog);
-        self.trigger('resize');
-        e.stopPropagation();
-      }
-    }).appendTo($element.addClass('h5p-has-feedback'));
+    addPopdown($element.addClass('h5p-has-feedback'), feedback);
   };
 
   this.showAllSolutions = function () {
@@ -186,6 +191,7 @@ H5P.MultiChoice = function(options, contentId) {
     $myDom.find('input').prop('disabled', false);
     $myDom.find('.h5p-feedback-button, .h5p-feedback-dialog').remove();
     $myDom.find('.h5p-has-feedback').removeClass('h5p-has-feedback');
+    $myDom.find('.h5p-popdown').remove();
     self.trigger('resize');
   };
 
@@ -407,6 +413,36 @@ H5P.MultiChoice = function(options, contentId) {
     calcScore();
   };
 
+  var createTip = function (tip, $answer) {
+    var showTip = function () {
+      $curTip = $answer.find('.h5p-popdown');
+      if ($curTip.length) {
+        // "Close" tip
+        removePopdown($curTip);
+        self.trigger('resize');
+        return;
+      }
+
+      addPopdown($answer, tip);
+      self.trigger('resize');
+    };
+
+    return $('<div/>', {
+      'class': 'joubel-tip-container',
+      tabIndex: 0,
+      title: 'Show tip',
+      click: function () {
+        showTip();
+      },
+      keypress: function (event) {
+        if (event.keyCode === 32) {
+          showTip();
+        }
+      },
+      html: '<div class="joubel-tip-icon"></div>'
+    });
+  };
+
   // Function for attaching the multichoice to a DOM element.
   this.attach = function (target) {
     if (typeof(target) === "string") {
@@ -450,7 +486,7 @@ H5P.MultiChoice = function(options, contentId) {
 
       // Add tip
       $('.h5p-alternative-container', this)
-        .append(H5P.JoubelUI.createTip(tip))
+        .append(createTip(tip, $(this)))
         .addClass('h5p-has-tip');
     });
 
@@ -521,11 +557,11 @@ H5P.MultiChoice = function(options, contentId) {
 
   this.getAnswerGiven = function() {
     return params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
-  }
-  
+  };
+
   this.getScore = function() {
     return score;
-  }
+  };
 };
 
 H5P.MultiChoice.prototype = Object.create(H5P.EventDispatcher.prototype);
