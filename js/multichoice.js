@@ -433,6 +433,7 @@ H5P.MultiChoice = function(options, contentId) {
       title: 'Show tip',
       click: function () {
         showTip();
+        return false;
       },
       keypress: function (event) {
         if (event.keyCode === 32) {
