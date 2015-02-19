@@ -20,7 +20,9 @@ var H5P = H5P || {};
 H5P.MultiChoice = function(options, contentId) {
   if (!(this instanceof H5P.MultiChoice))
     return new H5P.MultiChoice(options, contentId);
-
+  var self = this;
+  this.contentId = contentId;
+  H5P.EventDispatcher.call(this);
   var $ = H5P.jQuery;
   var texttemplate =
       '<div class="h5p-question"><%= question %></div>' +
@@ -65,7 +67,6 @@ H5P.MultiChoice = function(options, contentId) {
       randomAnswers: false,
       showSolutionsRequiresInput: true
     },
-    postUserStatistics: (H5P.postUserStatistics === true)
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
@@ -116,12 +117,13 @@ H5P.MultiChoice = function(options, contentId) {
 
         $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
         $myDom.click(removeFeedbackDialog);
+        self.trigger('resize');
         e.stopPropagation();
       }
     }).appendTo($element.addClass('h5p-has-feedback'));
   };
 
-  var showAllSolutions = function () {
+  this.showAllSolutions = function () {
     if (solutionsVisible) {
       return;
     }
@@ -148,7 +150,7 @@ H5P.MultiChoice = function(options, contentId) {
         addFeedback($e, a.notChosenFeedback);
       }
     });
-    var max = maxScore();
+    var max = self.getMaxScore();
 
     // Add css class disabled to labels.
     $myDom.find('label').addClass('h5p-mc-disabled');
@@ -159,21 +161,21 @@ H5P.MultiChoice = function(options, contentId) {
     if (params.behaviour.enableRetry) {
       $retryButton.show();
     }
-
+    self.trigger('resize');
   };
 
   /**
    * Used in contracts.
    * Shows the solution for the task and hides all buttons.
    */
-  var showSolutions = function () {
-    showAllSolutions();
+  this.showSolutions = function () {
+    self.showAllSolutions();
 
     //Hides all buttons.
     $retryButton.hide();
     };
 
-  var hideSolutions = function () {
+  this.hideSolutions = function () {
     $solutionButton.text(params.UI.showSolutionButton).removeClass('h5p-try-again');
     solutionsVisible = false;
 
@@ -184,6 +186,7 @@ H5P.MultiChoice = function(options, contentId) {
     $myDom.find('input').prop('disabled', false);
     $myDom.find('.h5p-feedback-button, .h5p-feedback-dialog').remove();
     $myDom.find('.h5p-has-feedback').removeClass('h5p-has-feedback');
+    self.trigger('resize');
   };
 
   /**
@@ -191,8 +194,8 @@ H5P.MultiChoice = function(options, contentId) {
    * Used in contracts with integrated content.
    * @private
    */
-  var resetTask = function () {
-    hideSolutions();
+  this.resetTask = function () {
+    self.hideSolutions();
     removeSelections();
     $checkButton.show();
     $retryButton.hide();
@@ -213,7 +216,7 @@ H5P.MultiChoice = function(options, contentId) {
     return maxScore;
   };
 
-  var maxScore = function () {
+  this.getMaxScore = function () {
     return (!params.behaviour.singleAnswer && !params.behaviour.singlePoint ? calculateMaxScore() : params.weight);
   };
 
@@ -225,11 +228,8 @@ H5P.MultiChoice = function(options, contentId) {
     added = true;
     $solutionButton = $myDom.find('.h5p-show-solution').click(function () {
       calcScore();
-      if (answered()) {
-        showAllSolutions();
-        if (params.postUserStatistics === true) {
-          H5P.setFinished(contentId, score, maxScore());
-        }
+      if (self.getAnswerGiven()) {
+        self.showAllSolutions();
       }
       return false;
     });
@@ -265,6 +265,7 @@ H5P.MultiChoice = function(options, contentId) {
           $retryButton.show();
         }
         self.showCheckSolution();
+        self.triggerXAPICompleted(score, self.getMaxScore());
       })
       .appendTo($myDom.find('.h5p-show-solution-container'));
   };
@@ -282,7 +283,7 @@ H5P.MultiChoice = function(options, contentId) {
         $solutionButton.hide();
         $retryButton.hide();
         $checkButton.show();
-        hideSolutions();
+        self.hideSolutions();
         removeSelections();
         enableInput();
       })
@@ -315,11 +316,12 @@ H5P.MultiChoice = function(options, contentId) {
     });
 
     //Disable task if maxscore is achieved
-    if (score === maxScore()) {
+    if (score === self.getMaxScore()) {
       finishedTask();
     }
     //Add disabled css class to label
     $myDom.find('label').addClass('h5p-mc-disabled');
+    self.trigger('resize');
   };
 
   /**
@@ -330,6 +332,7 @@ H5P.MultiChoice = function(options, contentId) {
     $retryButton.hide();
     $solutionButton.hide();
     $myDom.find('input').attr('disabled', 'disabled');
+    self.trigger('resize');
   };
 
   /**
@@ -405,7 +408,7 @@ H5P.MultiChoice = function(options, contentId) {
   };
 
   // Function for attaching the multichoice to a DOM element.
-  var attach = function (target) {
+  this.attach = function (target) {
     if (typeof(target) === "string") {
       target = $("#" + target);
     } else {
@@ -478,6 +481,8 @@ H5P.MultiChoice = function(options, contentId) {
         calcScore();
       }
 
+      self.triggerXAPI('attempted');
+
       var answerChecked = false;
       $myDom.find('.h5p-answer').each( function () {
         if($(this).hasClass('h5p-selected')) {
@@ -486,14 +491,11 @@ H5P.MultiChoice = function(options, contentId) {
       });
 
       if (answerChecked) {
-        hideSolutions();
+        self.hideSolutions();
         $checkButton.show();
         $retryButton.hide();
         $solutionButton.hide();
       }
-
-      // Triggers must be done on the returnObject.
-      $(returnObject).trigger('h5pQuestionAnswered');
     });
 
 
@@ -517,28 +519,14 @@ H5P.MultiChoice = function(options, contentId) {
   // Start with an empty set of user answers.
   params.userAnswers = [];
 
-  function answered() {
+  this.getAnswerGiven = function() {
     return params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
   }
-
-  // Masquerade the main object to hide inner properties and functions.
-  var returnObject = {
-    $: $(this),
-    machineName: 'H5P.MultiChoice',
-    attach: attach, // Attach to DOM object
-    getScore: function() {
-      return score;
-    },
-    getAnswerGiven: answered,
-    getMaxScore: maxScore,
-    showSolutions: showSolutions,
-    addSolutionButton: addSolutionButton,
-    enableRetry: params.behaviour.enableRetry,
-    enableSolutionsButton: params.behaviour.enableSolutionsButton,
-    params: params,
-    resetTask: resetTask,
-    defaults: defaults // Provide defaults for inspection
-  };
-  // Store options.
-  return returnObject;
+  
+  this.getScore = function() {
+    return score;
+  }
 };
+
+H5P.MultiChoice.prototype = Object.create(H5P.EventDispatcher.prototype);
+H5P.MultiChoice.prototype.constructor = H5P.MultiChoice;

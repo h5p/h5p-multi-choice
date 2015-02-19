@@ -2,15 +2,15 @@
   "title": "Multichoice question",
   "contentType": "question",
   "majorVersion": 1,
-  "minorVersion": 1,
-  "patchVersion": 2,
+  "minorVersion": 2,
+  "patchVersion": 0,
   "runnable": 1,
   "machineName": "H5P.MultiChoice",
   "author": "Amendor AS",
   "license": "cc-by-sa",
   "coreApi": {
     "majorVersion": 1,
-    "minorVersion": 1
+    "minorVersion": 4
   },
   "preloadedJs": [
     {
@@ -36,7 +36,7 @@
     {
       "machineName": "H5P.JoubelUI",
       "majorVersion": 1,
-      "minorVersion": 0
+      "minorVersion": 1
     }
   ]
 }
