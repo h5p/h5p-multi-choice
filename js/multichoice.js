@@ -429,11 +429,15 @@ H5P.MultiChoice = function(options, contentId) {
 
     // Add image
     if (params.image) {
-      $myDom.find('.h5p-question').prepend($('<img/>', {
-        src: H5P.getPath(params.image.path, contentId),
-        alt: '',
-        class: 'h5p-question-image'
-      }));
+      $myDom.find('.h5p-question').prepend(
+        $('<img/>', {
+          src: H5P.getPath(params.image.path, contentId),
+          alt: '',
+          class: 'h5p-question-image'
+        }).load(function() {
+          self.trigger('resize');
+        })
+      );
     }
 
     // Create tips:
