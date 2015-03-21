@@ -144,10 +144,10 @@ H5P.MultiChoice = function(options, contentId) {
 
       var c = $e.hasClass('h5p-selected');
       if (c === true && a.chosenFeedback !== undefined && a.chosenFeedback !== '') {
-        addFeedback($e, a.chosenFeedback);
+        addFeedback($e, a.chosenFeedback).click();
       }
       else if (c === false && a.notChosenFeedback !== undefined && a.notChosenFeedback !== '') {
-        addFeedback($e, a.notChosenFeedback);
+        addFeedback($e, a.notChosenFeedback).click();
       }
     });
     var max = self.getMaxScore();
@@ -526,7 +526,7 @@ H5P.MultiChoice = function(options, contentId) {
   this.getAnswerGiven = function() {
     return params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
   }
-  
+
   this.getScore = function() {
     return score;
   }
