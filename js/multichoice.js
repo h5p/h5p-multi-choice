@@ -17,12 +17,12 @@
 
 var H5P = H5P || {};
 
-H5P.MultiChoice = function(options, contentId) {
+H5P.MultiChoice = function(options, contentId, extras) {
   if (!(this instanceof H5P.MultiChoice))
     return new H5P.MultiChoice(options, contentId);
   var self = this;
   this.contentId = contentId;
-  H5P.EventDispatcher.call(this);
+  H5P.EventDispatcher.call(this, arguments);
   var $ = H5P.jQuery;
   var texttemplate =
       '<div class="h5p-question"><%= question %></div>' +
@@ -530,6 +530,10 @@ H5P.MultiChoice = function(options, contentId) {
   this.getScore = function() {
     return score;
   }
+  
+  this.getH5PTitle = function() {
+    return H5P.createH5PTitle(params.question);
+  };
 };
 
 H5P.MultiChoice.prototype = Object.create(H5P.EventDispatcher.prototype);
