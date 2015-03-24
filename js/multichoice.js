@@ -564,10 +564,6 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * @public
    */
   this.getCurrentState = function () {
-    if (!params.userAnswers.length) {
-      return;
-    }
-
     var state = {};
     if (!idMap) {
       state.answers = params.userAnswers;
