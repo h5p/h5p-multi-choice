@@ -17,9 +17,9 @@
 
 var H5P = H5P || {};
 
-H5P.MultiChoice = function(options, contentId, content) {
+H5P.MultiChoice = function(options, contentId, contentData) {
   if (!(this instanceof H5P.MultiChoice))
-    return new H5P.MultiChoice(options, contentId, content);
+    return new H5P.MultiChoice(options, contentId, contentData);
   var self = this;
   this.contentId = contentId;
   H5P.EventDispatcher.call(this);
@@ -533,18 +533,18 @@ H5P.MultiChoice = function(options, contentId, content) {
   params.userAnswers = [];
 
   // Restore previous state
-  if (content && content.previousState !== undefined) {
+  if (contentData && contentData.previousState !== undefined) {
 
     // Restore answers
-    if (content.previousState.answers) {
+    if (contentData.previousState.answers) {
       if (!idMap) {
-        params.userAnswers = content.previousState.answers;
+        params.userAnswers = contentData.previousState.answers;
       }
       else {
         // The answers have been shuffled, and we must use the id mapping.
-        for (i = 0; i < content.previousState.answers.length; i++) {
+        for (i = 0; i < contentData.previousState.answers.length; i++) {
           for (var k = 0; k < idMap.length; k++) {
-            if (idMap[k] === content.previousState.answers[i]) {
+            if (idMap[k] === contentData.previousState.answers[i]) {
               params.userAnswers.push(k);
             }
           }
