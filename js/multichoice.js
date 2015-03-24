@@ -17,9 +17,9 @@
 
 var H5P = H5P || {};
 
-H5P.MultiChoice = function(options, contentId, extras) {
+H5P.MultiChoice = function(options, contentId, contentData) {
   if (!(this instanceof H5P.MultiChoice))
-    return new H5P.MultiChoice(options, contentId);
+    return new H5P.MultiChoice(options, contentId, contentData);
   var self = this;
   this.contentId = contentId;
   H5P.EventDispatcher.call(this, arguments);
@@ -83,7 +83,6 @@ H5P.MultiChoice = function(options, contentId, extras) {
   };
 
   // Initialize buttons and elements.
-  var self = this;
   var $myDom;
   var $checkButton;
   var $retryButton;
@@ -517,16 +516,79 @@ H5P.MultiChoice = function(options, contentId, extras) {
 
   // Initialization code
   // Randomize order, if requested
+  var idMap;
   if (params.behaviour.randomAnswers) {
+    var origOrder = $.extend([], params.answers);
     params.answers = H5P.shuffleArray(params.answers);
+
+    // Create a map from the new id to the old one
+    idMap = [];
+    for (i = 0; i < params.answers.length; i++) {
+      for (var j = 0; j < origOrder.length; j++) {
+        if (params.answers[i].text === origOrder[j].text) {
+          idMap[i] = j;
+          break;
+        }
+      }
+    }
   }
+
   // Start with an empty set of user answers.
   params.userAnswers = [];
 
+  // Restore previous state
+  if (contentData && contentData.previousState !== undefined) {
+
+    // Restore answers
+    if (contentData.previousState.answers) {
+      if (!idMap) {
+        params.userAnswers = contentData.previousState.answers;
+      }
+      else {
+        // The answers have been shuffled, and we must use the id mapping.
+        for (i = 0; i < contentData.previousState.answers.length; i++) {
+          for (var k = 0; k < idMap.length; k++) {
+            if (idMap[k] === contentData.previousState.answers[i]) {
+              params.userAnswers.push(k);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Pack the current state of the interactivity into a object that can be
+   * serialized.
+   *
+   * @public
+   */
+  this.getCurrentState = function () {
+    if (!params.userAnswers.length) {
+      return;
+    }
+
+    var state = {};
+    if (!idMap) {
+      state.answers = params.userAnswers;
+    }
+    else {
+      // The answers have been shuffled and must be mapped back to their
+      // original ID.
+      state.answers = [];
+      for (var i = 0; i < params.userAnswers.length; i++) {
+        state.answers.push(idMap[params.userAnswers]);
+      }
+    }
+
+    return state;
+  };
+
+
   this.getAnswerGiven = function() {
     return params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
-  }
-  
+  };
+
   this.getScore = function() {
     return score;
   }
