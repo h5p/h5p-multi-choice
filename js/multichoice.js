@@ -518,24 +518,24 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   // Randomize order, if requested
   var idMap;
   if (params.behaviour.randomAnswers) {
+    // Store original order in answers
+    for (i = 0; i < params.answers.length; i++) {
+      params.answers[i].originalOrder = i;
+    }
+    
     var origOrder = $.extend([], params.answers);
     params.answers = H5P.shuffleArray(params.answers);
 
     // Create a map from the new id to the old one
     idMap = [];
     for (i = 0; i < params.answers.length; i++) {
-      for (var j = 0; j < origOrder.length; j++) {
-        if (params.answers[i].text === origOrder[j].text) {
-          idMap[i] = j;
-          break;
-        }
-      }
+      idMap[i] = params.answers[i].originalOrder;
     }
   }
 
   // Start with an empty set of user answers.
   params.userAnswers = [];
-
+  
   // Restore previous state
   if (contentData && contentData.previousState !== undefined) {
 
@@ -573,10 +573,9 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       // original ID.
       state.answers = [];
       for (var i = 0; i < params.userAnswers.length; i++) {
-        state.answers.push(idMap[params.userAnswers]);
+        state.answers.push(idMap[params.userAnswers[i]]);
       }
     }
-
     return state;
   };
 
