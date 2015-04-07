@@ -588,8 +588,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     return score;
   }
   
-  this.getH5PTitle = function() {
-    return H5P.createH5PTitle(params.question);
+  this.getTitle = function() {
+    return H5P.createTitle(params.question);
   };
 };
 
