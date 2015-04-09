@@ -99,7 +99,7 @@ H5P.MultiChoice = function(options, contentId) {
   var solutionsVisible = false;
 
   var addFeedback = function ($element, feedback) {
-    $('<div/>', {
+    var bubble = $('<div/>', {
       role: 'button',
       tabIndex: 1,
       class: 'h5p-feedback-button',
@@ -120,7 +120,14 @@ H5P.MultiChoice = function(options, contentId) {
         self.trigger('resize');
         e.stopPropagation();
       }
-    }).appendTo($element.addClass('h5p-has-feedback'));
+    });
+
+    bubble.appendTo($element.addClass('h5p-has-feedback'));
+
+    setTimeout(function() {
+      bubble.click();
+    }, 100);
+
   };
 
   this.showAllSolutions = function () {
@@ -144,10 +151,10 @@ H5P.MultiChoice = function(options, contentId) {
 
       var c = $e.hasClass('h5p-selected');
       if (c === true && a.chosenFeedback !== undefined && a.chosenFeedback !== '') {
-        addFeedback($e, a.chosenFeedback).click();
+        addFeedback($e, a.chosenFeedback);
       }
       else if (c === false && a.notChosenFeedback !== undefined && a.notChosenFeedback !== '') {
-        addFeedback($e, a.notChosenFeedback).click();
+        addFeedback($e, a.notChosenFeedback);
       }
     });
     var max = self.getMaxScore();
