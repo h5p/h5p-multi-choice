@@ -27,12 +27,6 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
 
           finished(null, parameters);
         }
-      },
-      3: {
-        contentUpgrade: function (parameters, finished) {
-          parameters.question = 'IT WORKED!';
-          finished(null, parameters);
-        }
       }
     }
   };
