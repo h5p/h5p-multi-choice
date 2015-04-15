@@ -28,7 +28,7 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
           finished(null, parameters);
         }
       },
-      5: {
+      3: {
         contentUpgrade: function (parameters, finished) {
           parameters.answers.forEach(function (answer) {
             // Add new place for variable and delete old.
