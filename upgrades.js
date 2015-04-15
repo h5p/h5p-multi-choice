@@ -27,6 +27,19 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
 
           finished(null, parameters);
         }
+      },
+      5: {
+        contentUpgrade: function (parameters, finished) {
+          parameters.answers.forEach(function (answer) {
+            // Add new place for variable and delete old.
+            answer.tip.chosenFeedback = answer.chosenFeedback !== undefined ? answer.chosenFeedback : '';
+            answer.tip.notChosenFeedback = answer.notChosenFeedback !== undefined ? answer.notChosenFeedback : '';
+            delete answer.chosenFeedback;
+            delete answer.notChosenFeedback;
+          });
+
+          finished(null, parameters);
+        }
       }
     }
   };

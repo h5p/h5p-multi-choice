@@ -142,11 +142,11 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       $e.find('input').attr('disabled', 'disabled');
 
       var c = $e.hasClass('h5p-selected');
-      if (c === true && a.chosenFeedback !== undefined && a.chosenFeedback !== '') {
-        addFeedback($e, a.chosenFeedback);
+      if (c === true && a.tip.chosenFeedback !== undefined && a.tip.chosenFeedback !== '') {
+        addFeedback($e, a.tip.chosenFeedback);
       }
-      else if (c === false && a.notChosenFeedback !== undefined && a.notChosenFeedback !== '') {
-        addFeedback($e, a.notChosenFeedback);
+      else if (c === false && a.tip.notChosenFeedback !== undefined && a.tip.notChosenFeedback !== '') {
+        addFeedback($e, a.tip.notChosenFeedback);
       }
     });
     var max = self.getMaxScore();
@@ -309,8 +309,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
 
       var c = $e.hasClass('h5p-selected');
-      if (c === true && a.chosenFeedback !== undefined && a.chosenFeedback !== '') {
-        addFeedback($e, a.chosenFeedback);
+      if (c === true && a.tip.chosenFeedback !== undefined && a.tip.chosenFeedback !== '') {
+        addFeedback($e, a.tip.chosenFeedback);
       }
     });
 
@@ -441,7 +441,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
     // Create tips:
     $('.h5p-answer', $myDom).each(function (i) {
-      var tip = params.answers[i].tip;
+      var tip = params.answers[i].tip.tip;
       if (tip === undefined) {
         return; // No tip
       }
@@ -522,7 +522,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     for (i = 0; i < params.answers.length; i++) {
       params.answers[i].originalOrder = i;
     }
-    
+
     var origOrder = $.extend([], params.answers);
     params.answers = H5P.shuffleArray(params.answers);
 
@@ -535,7 +535,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
   // Start with an empty set of user answers.
   params.userAnswers = [];
-  
+
   // Restore previous state
   if (contentData && contentData.previousState !== undefined) {
 
@@ -587,7 +587,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   this.getScore = function() {
     return score;
   }
-  
+
   this.getTitle = function() {
     return H5P.createTitle(params.question);
   };
