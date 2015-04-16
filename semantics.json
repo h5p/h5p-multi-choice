@@ -52,7 +52,7 @@
           "label": "Correct"
         },
         {
-          "name": "tip",
+          "name": "tipsAndFeedback",
           "type": "group",
           "label": "Tips and feedback",
           "optional": true,

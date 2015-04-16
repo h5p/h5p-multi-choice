@@ -50,7 +50,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     image: null,
     question: "No question text provided",
     answers: [
-      {text: "Answer 1", correct: true}
+      {tipsAndFeedback: {}, text: "Answer 1", correct: true}
     ],
     weight: 1,
     userAnswers: [],
@@ -66,7 +66,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       singlePoint: true,
       randomAnswers: false,
       showSolutionsRequiresInput: true
-    },
+    }
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
@@ -142,11 +142,11 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       $e.find('input').attr('disabled', 'disabled');
 
       var c = $e.hasClass('h5p-selected');
-      if (c === true && a.tip.chosenFeedback !== undefined && a.tip.chosenFeedback !== '') {
-        addFeedback($e, a.tip.chosenFeedback);
+      if (c === true && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
+        addFeedback($e, a.tipsAndFeedback.chosenFeedback);
       }
-      else if (c === false && a.tip.notChosenFeedback !== undefined && a.tip.notChosenFeedback !== '') {
-        addFeedback($e, a.tip.notChosenFeedback);
+      else if (c === false && a.tipsAndFeedback.notChosenFeedback !== undefined && a.tipsAndFeedback.notChosenFeedback !== '') {
+        addFeedback($e, a.tipsAndFeedback.notChosenFeedback);
       }
     });
     var max = self.getMaxScore();
@@ -309,8 +309,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
 
       var c = $e.hasClass('h5p-selected');
-      if (c === true && a.tip.chosenFeedback !== undefined && a.tip.chosenFeedback !== '') {
-        addFeedback($e, a.tip.chosenFeedback);
+      if (c === true && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
+        addFeedback($e, a.tipsAndFeedback.chosenFeedback);
       }
     });
 
@@ -441,7 +441,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
     // Create tips:
     $('.h5p-answer', $myDom).each(function (i) {
-      var tip = params.answers[i].tip.tip;
+      var tip = params.answers[i].tipsAndFeedback.tip;
       if (tip === undefined) {
         return; // No tip
       }
