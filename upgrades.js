@@ -35,9 +35,8 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
             if (answer.tipsAndFeedback === undefined) {
               answer.tipsAndFeedback = {};
             }
-            if (answer.tip !== undefined) {
-              answer.tipsAndFeedback.tip = answer.tip.tip !== undefined ? answer.tip.tip : '';
-            }
+
+            answer.tipsAndFeedback.tip = answer.tip !== undefined ? answer.tip : '';
             answer.tipsAndFeedback.chosenFeedback = answer.chosenFeedback !== undefined ? answer.chosenFeedback : '';
             answer.tipsAndFeedback.notChosenFeedback = answer.notChosenFeedback !== undefined ? answer.notChosenFeedback : '';
             delete answer.tip;
