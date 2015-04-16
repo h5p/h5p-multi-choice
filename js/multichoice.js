@@ -50,7 +50,15 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     image: null,
     question: "No question text provided",
     answers: [
-      {tipsAndFeedback: {}, text: "Answer 1", correct: true}
+      {
+        tipsAndFeedback: {
+          tip: '',
+          chosenFeedback: '',
+          notChosenFeedback: ''
+        },
+        text: "Answer 1",
+        correct: true
+      }
     ],
     weight: 1,
     userAnswers: [],
