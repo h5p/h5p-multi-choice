@@ -76,6 +76,12 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       showSolutionsRequiresInput: true
     }
   };
+
+  // Make sure tips and feedback exists
+  options.answers.forEach(function (answer) {
+    answer.tipsAndFeedback = answer.tipsAndFeedback || {};
+  });
+
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
 
