@@ -27,6 +27,25 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
 
           finished(null, parameters);
         }
+      },
+      3: {
+        contentUpgrade: function (parameters, finished) {
+          parameters.answers.forEach(function (answer) {
+            // Add new place for variable and delete old.
+            if (answer.tipsAndFeedback === undefined) {
+              answer.tipsAndFeedback = {};
+            }
+
+            answer.tipsAndFeedback.tip = answer.tip !== undefined ? answer.tip : '';
+            answer.tipsAndFeedback.chosenFeedback = answer.chosenFeedback !== undefined ? answer.chosenFeedback : '';
+            answer.tipsAndFeedback.notChosenFeedback = answer.notChosenFeedback !== undefined ? answer.notChosenFeedback : '';
+            delete answer.tip;
+            delete answer.chosenFeedback;
+            delete answer.notChosenFeedback;
+          });
+
+          finished(null, parameters);
+        }
       }
     }
   };

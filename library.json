@@ -2,7 +2,7 @@
   "title": "Multichoice question",
   "contentType": "question",
   "majorVersion": 1,
-  "minorVersion": 2,
+  "minorVersion": 3,
   "patchVersion": 0,
   "runnable": 1,
   "machineName": "H5P.MultiChoice",
@@ -10,7 +10,7 @@
   "license": "cc-by-sa",
   "coreApi": {
     "majorVersion": 1,
-    "minorVersion": 4
+    "minorVersion": 5
   },
   "preloadedJs": [
     {

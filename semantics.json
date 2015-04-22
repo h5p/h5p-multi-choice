@@ -52,37 +52,9 @@
           "label": "Correct"
         },
         {
-          "name": "chosenFeedback",
-          "type": "text",
-          "widget": "html",
-          "label": "Chosen feedback",
-          "description": "Will be displayed when the users checks his answer.",
-          "optional": true,
-          "tags": [
-            "strong",
-            "em",
-            "sub",
-            "sup"
-          ]
-        },
-        {
-          "name": "notChosenFeedback",
-          "type": "text",
-          "widget": "html",
-          "label": "Not chosen feedback",
-          "description": "Will be displayed when the solution is displayed.",
-          "optional": true,
-          "tags": [
-            "strong",
-            "em",
-            "sub",
-            "sup"
-          ]
-        },
-        {
-          "name": "tip",
+          "name": "tipsAndFeedback",
           "type": "group",
-          "label": "Tip",
+          "label": "Tips and feedback",
           "optional": true,
           "fields": [
             {
@@ -90,6 +62,34 @@
               "label": "Tip text",
               "type": "text",
               "optional": true
+            },
+            {
+              "name": "chosenFeedback",
+              "type": "text",
+              "widget": "html",
+              "label": "Chosen feedback",
+              "description": "Will be displayed when the users checks his answer.",
+              "optional": true,
+              "tags": [
+                "strong",
+                "em",
+                "sub",
+                "sup"
+              ]
+            },
+            {
+              "name": "notChosenFeedback",
+              "type": "text",
+              "widget": "html",
+              "label": "Not chosen feedback",
+              "description": "Will be displayed when the solution is displayed.",
+              "optional": true,
+              "tags": [
+                "strong",
+                "em",
+                "sub",
+                "sup"
+              ]
             }
           ]
         }
