@@ -21,18 +21,18 @@
             "label": "Corretto"
           },
           {
-            "label": "Feedback scelto",
-            "description": "Viene visualizzato quando l'utente verifica la sua risposta."
-          },
-          {
-            "label": "Feedback non scelto",
-            "description": "Viene visualizzato quando la soluzione viene mostrata."
-          },
-          {
             "label": "Suggerimento",
             "fields": [
               {
                 "label": "Testo del suggerimento"
+              },
+              {
+                "label": "Feedback scelto",
+                "description": "Viene visualizzato quando l'utente verifica la sua risposta."
+              },
+              {
+                "label": "Feedback non scelto",
+                "description": "Viene visualizzato quando la soluzione viene mostrata."
               }
             ]
           }
