@@ -115,34 +115,14 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   var solutionsVisible = false;
 
   var addFeedback = function ($element, feedback) {
-    var bubble = $('<div/>', {
-      role: 'button',
-      tabIndex: 1,
-      class: 'h5p-feedback-button',
-      title: 'View feedback',
-      click: function (e) {
-        if ($feedbackDialog !== undefined) {
-          if ($feedbackDialog.parent()[0] === $element[0]) {
-            // Skip if we're trying to open the same dialog twice
-            return;
-          }
 
-          // Remove last dialog.
-          $feedbackDialog.remove();
-        }
+    var feedBackHtml = '<div class="h5p-feedback-container h5p-feedback-text">' + feedback + '</div>';
+    var answersElem = $element.parent();
 
-        $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
-        $myDom.click(removeFeedbackDialog);
-        self.trigger('resize');
-        e.stopPropagation();
-      }
-    });
-
-    bubble.appendTo($element.addClass('h5p-has-feedback'));
-
-    setTimeout(function() {
-      bubble.click();
-    }, 100);
+    //make sure feedback is only added once
+    if (!answersElem.find($('.h5p-feedback-container')).length ) {
+      $(feedBackHtml).appendTo(answersElem);
+    }
 
   };
 
@@ -165,13 +145,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
       $e.find('input').attr('disabled', 'disabled');
 
-      var c = $e.hasClass('h5p-selected');
-      if (c === true && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
-        addFeedback($e, a.tipsAndFeedback.chosenFeedback);
-      }
-      else if (c === false && a.tipsAndFeedback.notChosenFeedback !== undefined && a.tipsAndFeedback.notChosenFeedback !== '') {
-        addFeedback($e, a.tipsAndFeedback.notChosenFeedback);
-      }
+
     });
     var max = self.getMaxScore();
 
@@ -332,9 +306,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         }
       }
 
-      var c = $e.hasClass('h5p-selected');
-      if (c === true && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
-        addFeedback($e, a.tipsAndFeedback.chosenFeedback);
+      if (a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
+        addFeedback($e.parent(), a.tipsAndFeedback.chosenFeedback);
       }
     });
 
