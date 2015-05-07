@@ -114,16 +114,24 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   var score = 0;
   var solutionsVisible = false;
 
+  /**
+   * Add feedback to element
+   * @param {jQuery} $element Element that feedback will be added to
+   * @param {string} feedback Feedback string
+   */
   var addFeedback = function ($element, feedback) {
 
-    var feedBackHtml = '<div class="h5p-feedback-container h5p-feedback-text">' + feedback + '</div>';
-    var answersElem = $element.parent();
+    var $feedbackDialog = $('' +
+    '<div class="h5p-feedback-dialog">' +
+      '<div class="h5p-feedback-inner">' +
+        '<div class="h5p-feedback-text">' + feedback + '</div>' +
+      '</div>' +
+    '</div>');
 
     //make sure feedback is only added once
-    if (!answersElem.find($('.h5p-feedback-container')).length ) {
-      $(feedBackHtml).appendTo(answersElem);
+    if (!$element.find($('.h5p-feedback-dialog')).length ) {
+      $feedbackDialog.appendTo($element.addClass('h5p-has-feedback'));
     }
-
   };
 
   this.showAllSolutions = function () {
@@ -144,8 +152,6 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         $e.addClass('h5p-should-not');
       }
       $e.find('input').attr('disabled', 'disabled');
-
-
     });
     var max = self.getMaxScore();
 
@@ -306,8 +312,11 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         }
       }
 
-      if (a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
-        addFeedback($e.parent(), a.tipsAndFeedback.chosenFeedback);
+      var chosen = $e.hasClass('h5p-selected');
+      if (chosen && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
+        addFeedback($e, a.tipsAndFeedback.chosenFeedback);
+      } else if (!chosen && a.tipsAndFeedback.notChosenFeedback !== undefined && a.tipsAndFeedback.notChosenFeedback !== '') {
+        addFeedback($e, a.tipsAndFeedback.notChosenFeedback);
       }
     });
 
