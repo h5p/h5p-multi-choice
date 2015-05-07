@@ -13,6 +13,7 @@
 .h5p-multichoice {
   overflow: hidden;
   text-align: center;
+  height: auto !important;
 }
 
 .h5p-multichoice .h5p-question-image {
@@ -383,6 +384,11 @@
 .h5p-multichoice .h5p-feedback-dialog:before {
   box-shadow: 0 0 1em #2c2c2c;
 }
+
+.h5p-multichoice .h5p-feedback-container {
+  text-align: left;
+}
+
 .h5p-multichoice .h5p-feedback-text {
   position: relative;
   z-index: 3;
