@@ -105,10 +105,18 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   var $retryButton;
   var $solutionButton;
   var $feedbackDialog;
+
+  /**
+   * Remove all feedback dialogs
+   */
   var removeFeedbackDialog = function () {
-    // Remove the open feedback dialog.
-    $myDom.unbind('click', removeFeedbackDialog);
-    $feedbackDialog.remove();
+    // Remove the open feedback dialogs.
+    $myDom.unbind('click', removeFeedbackDialog );
+    $myDom.find('.h5p-feedback-button, .h5p-feedback-dialog').remove();
+    $myDom.find('.h5p-has-feedback').removeClass('h5p-has-feedback');
+    if ($feedbackDialog) {
+      $feedbackDialog.remove();
+    }
   };
 
   var score = 0;
@@ -120,8 +128,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * @param {string} feedback Feedback string
    */
   var addFeedback = function ($element, feedback) {
-
-    var $feedbackDialog = $('' +
+    $feedbackDialog = $('' +
     '<div class="h5p-feedback-dialog">' +
       '<div class="h5p-feedback-inner">' +
         '<div class="h5p-feedback-text">' + feedback + '</div>' +
@@ -259,6 +266,12 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       'class': 'h5p-multichoice-check-button'
     })
       .click(function () {
+        // Unbind removal of feedback dialogs on click
+        $myDom.unbind('click', removeFeedbackDialog );
+
+        // Remove all tip dialogs
+        removeFeedbackDialog();
+
         disableInput();
         $checkButton.hide();
         if (params.behaviour.enableSolutionsButton) {
@@ -447,6 +460,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
     // Create tips:
     $('.h5p-answer', $myDom).each(function (i) {
+      var $tipContainer = $(this);
       var tip = params.answers[i].tipsAndFeedback.tip;
       if (tip === undefined) {
         return; // No tip
@@ -458,8 +472,30 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
 
       // Add tip
+      var $multichoiceTip = $('<div>', {
+        'class': 'multichoice-tip'
+      }).click(function () {
+        var openFeedback = !$tipContainer.children('.h5p-feedback-dialog').is($feedbackDialog);
+        removeFeedbackDialog();
+
+        // Do not open feedback if it was open
+        if (openFeedback) {
+          // Add tip dialog
+          addFeedback($tipContainer, tip);
+        }
+
+        // Remove tip dialog on dom click
+        setTimeout(function () {
+          $myDom.click(removeFeedbackDialog);
+        }, 100);
+
+
+        // Do not propagate
+        return false;
+      });
+
       $('.h5p-alternative-container', this)
-        .append(H5P.JoubelUI.createTip(tip))
+        .append($multichoiceTip)
         .addClass('h5p-has-tip');
     });
 

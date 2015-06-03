@@ -218,10 +218,6 @@
   line-height: 1em;
   top: 0.4375em;
   right: 0.75em;
-  text-shadow: -1px -1px 0 #fff,
-               1px -1px 0 #fff,
-               -1px 1px 0 #fff,
-               1px 1px 0 #fff;
 }
 .h5p-multichoice .h5p-should.h5p-answer > label:before,
 .h5p-multichoice .h5p-should-not.h5p-answer > label:before {
@@ -229,7 +225,7 @@
 }
 .h5p-multichoice .h5p-selected.h5p-wrong > label:before {
   content: "\f00d";
-  color: #c33f62;
+  color: #ad3756;
   padding: 0 0.125em;
 }
 .h5p-multichoice .h5p-selected.h5p-correct > label:before {
@@ -349,6 +345,7 @@
   color: #e1e1e1;
 }
 
+/* Feedback dialog*/
 .h5p-multichoice .h5p-feedback-dialog {
   position: relative;
   width: calc(100% - 0.5em);
@@ -405,6 +402,7 @@
 .h5p-multichoice .h5p-answer:last-child .h5p-feedback-text {
   max-height: 4em;
 }
+
 .h5p-multichoice .h5p-feedback-text::-webkit-scrollbar {
   width: 0.4em;
 }
@@ -412,22 +410,46 @@
   border-radius: 0.2em;
   background: #aaa;
 }
-.h5p-multichoice .joubel-tip-container {
+
+/* Tip icon*/
+.h5p-multichoice .multichoice-tip {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 0px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.25em;
+  line-height: 1.5;
+  width: 2.15em;
+  height: 100%;
+  color: #777;
+  cursor: pointer;
+  font-weight: normal;
 }
-.h5p-multichoice .h5p-correct .joubel-tip-container,
-.h5p-multichoice .h5p-wrong .joubel-tip-container {
+
+.h5p-multichoice .multichoice-tip:hover {
+  color: #333;
+}
+
+.h5p-multichoice .multichoice-tip:before {
+  font-family: "H5PFontAwesome4";
+  content: "\f0e5";
+}
+
+.h5p-multichoice .h5p-correct .multichoice-tip,
+.h5p-multichoice .h5p-wrong .multichoice-tip {
   right: 2.125em;
   top: 0.0675em;
 }
-.h5p-multichoice .h5p-selected.h5p-should-not.h5p-correct .joubel-tip-container,
-.h5p-multichoice .h5p-selected.h5p-should.h5p-correct .joubel-tip-container,
-.h5p-multichoice .h5p-selected.h5p-should.h5p-wrong .joubel-tip-container,
-.h5p-multichoice .h5p-selected.h5p-should-not.h5p-wrong .joubel-tip-container {
+
+.h5p-multichoice .h5p-selected.h5p-should-not.h5p-correct .multichoice-tip,
+.h5p-multichoice .h5p-selected.h5p-should.h5p-correct .multichoice-tip,
+.h5p-multichoice .h5p-selected.h5p-should.h5p-wrong .multichoice-tip,
+.h5p-multichoice .h5p-selected.h5p-should-not.h5p-wrong .multichoice-tip {
   right: 3.125em;
 }
-.h5p-multichoice .h5p-has-feedback .joubel-tip-container {
+
+/* Remove tip icon on check */
+.h5p-multichoice .h5p-mc-disabled .multichoice-tip {
   display: none;
 }
