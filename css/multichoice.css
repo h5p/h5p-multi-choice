@@ -371,16 +371,22 @@
 .h5p-multichoice .h5p-feedback-dialog:before {
   content: "";
   position: absolute;
-  right: 0.5em;
+  left: 0.5em;
   top: -0.15em;
-  width: 1em;
-  height: 1em;
+  width: 0.75em;
+  height: 0.75em;
   background: #fbfbfb;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.h5p-multichoice .h5p-feedback-dialog.h5p-has-tip .h5p-feedback-inner:before,
+.h5p-multichoice .h5p-feedback-dialog.h5p-has-tip:before {
+  left: auto;
+  right: 0.65em;
 }
 
 .h5p-multichoice .h5p-answer .h5p-feedback-dialog:before {

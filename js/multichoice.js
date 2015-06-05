@@ -482,6 +482,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         if (openFeedback) {
           // Add tip dialog
           addFeedback($tipContainer, tip);
+          $feedbackDialog.addClass('h5p-has-tip');
         }
 
         // Remove tip dialog on dom click
@@ -495,8 +496,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       });
 
       $('.h5p-alternative-container', this)
-        .append($multichoiceTip)
-        .addClass('h5p-has-tip');
+        .append($multichoiceTip);
     });
 
     // Set event listeners.
