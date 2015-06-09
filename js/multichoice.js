@@ -114,29 +114,24 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   var score = 0;
   var solutionsVisible = false;
 
+  /**
+   * Add feedback to element
+   * @param {jQuery} $element Element that feedback will be added to
+   * @param {string} feedback Feedback string
+   */
   var addFeedback = function ($element, feedback) {
-    $('<div/>', {
-      role: 'button',
-      tabIndex: 1,
-      class: 'h5p-feedback-button',
-      title: 'View feedback',
-      click: function (e) {
-        if ($feedbackDialog !== undefined) {
-          if ($feedbackDialog.parent()[0] === $element[0]) {
-            // Skip if we're trying to open the same dialog twice
-            return;
-          }
 
-          // Remove last dialog.
-          $feedbackDialog.remove();
-        }
+    var $feedbackDialog = $('' +
+    '<div class="h5p-feedback-dialog">' +
+      '<div class="h5p-feedback-inner">' +
+        '<div class="h5p-feedback-text">' + feedback + '</div>' +
+      '</div>' +
+    '</div>');
 
-        $feedbackDialog = $('<div class="h5p-feedback-dialog"><div class="h5p-feedback-inner"><div class="h5p-feedback-text">' + feedback + '</div></div></div>').appendTo($element);
-        $myDom.click(removeFeedbackDialog);
-        self.trigger('resize');
-        e.stopPropagation();
-      }
-    }).appendTo($element.addClass('h5p-has-feedback'));
+    //make sure feedback is only added once
+    if (!$element.find($('.h5p-feedback-dialog')).length ) {
+      $feedbackDialog.appendTo($element.addClass('h5p-has-feedback'));
+    }
   };
 
   this.showAllSolutions = function () {
@@ -157,14 +152,6 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         $e.addClass('h5p-should-not');
       }
       $e.find('input').attr('disabled', 'disabled');
-
-      var c = $e.hasClass('h5p-selected');
-      if (c === true && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
-        addFeedback($e, a.tipsAndFeedback.chosenFeedback);
-      }
-      else if (c === false && a.tipsAndFeedback.notChosenFeedback !== undefined && a.tipsAndFeedback.notChosenFeedback !== '') {
-        addFeedback($e, a.tipsAndFeedback.notChosenFeedback);
-      }
     });
     var max = self.getMaxScore();
 
@@ -281,7 +268,10 @@ H5P.MultiChoice = function(options, contentId, contentData) {
           $retryButton.show();
         }
         self.showCheckSolution();
-        self.triggerXAPICompleted(score, self.getMaxScore());
+        var xAPIEvent = self.createXAPIEventTemplate('completed');
+        addQuestionToXAPI(xAPIEvent);
+        addResponseToXAPI(xAPIEvent);
+        self.trigger(xAPIEvent);
       })
       .appendTo($myDom.find('.h5p-show-solution-container'));
   };
@@ -325,9 +315,11 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         }
       }
 
-      var c = $e.hasClass('h5p-selected');
-      if (c === true && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
+      var chosen = $e.hasClass('h5p-selected');
+      if (chosen && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
         addFeedback($e, a.tipsAndFeedback.chosenFeedback);
+      } else if (!chosen && a.tipsAndFeedback.notChosenFeedback !== undefined && a.tipsAndFeedback.notChosenFeedback !== '') {
+        addFeedback($e, a.tipsAndFeedback.notChosenFeedback);
       }
     });
 
@@ -421,6 +413,65 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
     });
     calcScore();
+  };
+  
+  /**
+   * Add the question itselt to the definition part of an xAPIEvent
+   */
+  var addQuestionToXAPI = function(xAPIEvent) {
+    var definition = xAPIEvent.getVerifiedStatementValue(['object', 'definition']);
+    definition.description = {
+      'en-US': params.question
+    };
+    definition.type = 'http://adlnet.gov/expapi/activities/cmi.interaction';
+    definition.interactionType = 'choice';
+    definition.correctResponsesPattern = [];
+    definition.choices = [];
+    for (var i = 0; i < params.answers.length; i++) {
+      definition.choices[i] = {
+        'id': params.answers[i].originalOrder + '',
+        'description': {
+          'en-US': params.answers[i].text
+        }
+      };
+      if (params.answers[i].correct) {
+        if (!params.singleAnswer) {
+          if (definition.correctResponsesPattern.length) {
+            definition.correctResponsesPattern[0] += '[,]';
+            // This looks insane, but it's how you separate multiple answers
+            // that must all be chosen to achieve perfect score...
+          }
+          else {
+            definition.correctResponsesPattern.push('');
+          }
+          definition.correctResponsesPattern[0] += params.answers[i].originalOrder;
+        }
+        else {
+          definition.correctResponsesPattern.push('' + params.answers[i].originalOrder);
+        }
+      }
+    }
+  };
+  
+  /**
+   * Add the response part to an xAPI event
+   * 
+   * @param {H5P.XAPIEvent} xAPIEvent
+   *  The xAPI event we will add a response to
+   */
+  var addResponseToXAPI = function(xAPIEvent) {
+    xAPIEvent.setScoredResult(score, self.getMaxScore());
+    if (params.userAnswers === undefined) {
+      calcScore();
+    }
+    var response = '';
+    for (var i = 0; i < params.userAnswers.length; i++) {
+      if (response !== '') {
+        response += '[,]';
+      }
+      response += idMap[params.userAnswers[i]];
+    }
+    xAPIEvent.data.statement.result.response = response;    
   };
 
   // Function for attaching the multichoice to a DOM element.
