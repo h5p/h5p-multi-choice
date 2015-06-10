@@ -127,6 +127,7 @@
 }
 
 .h5p-multichoice label {
+  position: relative;
   text-align: left;
   cursor: pointer;
   display: block;
@@ -216,7 +217,10 @@
   font-family: 'H5PFontAwesome4';
   position: absolute;
   line-height: 1em;
-  top: 0.4375em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   right: 0.75em;
 }
 .h5p-multichoice .h5p-should.h5p-answer > label:before,
@@ -390,11 +394,11 @@
 }
 
 .h5p-multichoice .h5p-answer .h5p-feedback-dialog:before {
-  box-shadow: -1px 0px 0px 1px #dcdcdc;
+  box-shadow: 0 0 0 1px #dcdcdc;
 }
 
 .h5p-multichoice .h5p-answer.h5p-selected .h5p-feedback-dialog:before {
-  box-shadow: -1px 0px 0px 1px #cad8e0;
+  box-shadow: 0 0 0 1px #cad8e0;
 }
 
 .h5p-multichoice .h5p-feedback-text {
