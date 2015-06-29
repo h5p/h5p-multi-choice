@@ -199,6 +199,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    */
   this.resetTask = function () {
     self.hideSolutions();
+    params.userAnswers = [];
     removeSelections();
     $checkButton.show();
     $retryButton.hide();
@@ -400,7 +401,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Removes selections from task.
    */
   var removeSelections = function () {
-    $myDom.find(':checked').each( function () {
+    $myDom.find('input.h5p-input').each( function () {
       this.checked = false;
       $(this).parents('.h5p-answer').removeClass("h5p-selected");
 
@@ -414,7 +415,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     });
     calcScore();
   };
-  
+
   /**
    * Add the question itselt to the definition part of an xAPIEvent
    */
@@ -452,10 +453,10 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
     }
   };
-  
+
   /**
    * Add the response part to an xAPI event
-   * 
+   *
    * @param {H5P.XAPIEvent} xAPIEvent
    *  The xAPI event we will add a response to
    */
@@ -471,7 +472,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
       response += idMap === undefined ? params.userAnswers[i] : idMap[params.userAnswers[i]];
     }
-    xAPIEvent.data.statement.result.response = response;    
+    xAPIEvent.data.statement.result.response = response;
   };
 
   // Function for attaching the multichoice to a DOM element.
