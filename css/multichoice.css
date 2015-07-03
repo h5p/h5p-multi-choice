@@ -10,122 +10,6 @@
   font-style: normal;
 }
 
-.h5p-multichoice {
-  overflow: hidden;
-  text-align: center;
-}
-
-.h5p-multichoice .h5p-question-image {
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.h5p-multichoice .h5p-show-solution-container {
-  position: relative;
-}
-
-.h5p-multichoice .h5p-show-solution-container .h5p-show-solution {
-  display: inline-block;
-  font-size: 1em;
-  padding: 0.2em 1em;
-  border: 0.2em solid #fff;
-  border-radius: 0.4em;
-  margin: 1em 0.5em;
-  cursor: pointer;
-  color: #fff;
-  box-shadow: 0 0 0.5em #999;
-  text-decoration: none;
-
-  background: rgb(100,152,254); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(100,152,254,1) 0%, rgba(4,104,206,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(100,152,254,1)), color-stop(100%,rgba(4,104,206,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6498fe', endColorstr='#0468ce',GradientType=0 ); /* IE6-9 */
-}
-
-/* Check solution button */
-.h5p-multichoice .h5p-show-solution-container .h5p-multichoice-check-button {
-  display: inline-block;
-  font-size: 1em;
-  padding: 0.2em 1em;
-  border: 0.2em solid #fff;
-  border-radius: 0.4em;
-  margin: 1em 0.5em;
-  cursor: pointer;
-  color: #fff;
-  box-shadow: 0 0 0.5em #999;
-  text-decoration: none;
-
-  background: rgb(100,152,254); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(100,152,254,1) 0%, rgba(4,104,206,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(100,152,254,1)), color-stop(100%,rgba(4,104,206,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6498fe', endColorstr='#0468ce',GradientType=0 ); /* IE6-9 */
-}
-
-.h5p-multichoice .h5p-show-solution-container .h5p-multichoice-check-button:before {
-  content: "\f058";
-  font-family: 'H5PFontAwesome4';
-  padding-right: 0.5em;
-}
-
-/* Retry button */
-.h5p-multichoice .h5p-show-solution-container .h5p-try-again {
-  display: inline-block;
-  font-size: 1em;
-  padding: 0.2em 1em;
-  border: 0.2em solid #fff;
-  border-radius: 0.4em;
-  margin: 1em 0.5em;
-  cursor: pointer;
-  color: #fff;
-  box-shadow: 0 0 0.5em #999;
-  text-decoration: none;
-
-  background: rgb(100,152,254); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(100,152,254,1) 0%, rgba(4,104,206,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(100,152,254,1)), color-stop(100%,rgba(4,104,206,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(100,152,254,1) 0%,rgba(4,104,206,1) 100%); /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6498fe', endColorstr='#0468ce',GradientType=0 ); /* IE6-9 */
-}
-
-.h5p-try-again:before {
-  font-family: 'H5PFontAwesome4';
-  padding-right: 0.5em;
-  content: "\f01e";
-}
-
-/* Show Solution button */
-.h5p-multichoice .h5p-show-solution-container a.h5p-show-solution:before {
-  font-family: 'H5PFontAwesome4';
-  content: "\f06e";
-  padding-right: 0.5em;
-}
-
-.h5p-multichoice .h5p-show-solution-container a.h5p-show-solution.h5p-try-again:before {
-  content: "\f01e";
-}
-
-.h5p-multichoice .h5p-show-solution-container .h5p-show-solution:hover {
-  text-decoration: none;
-  box-shadow: 0 0 0.5em #999;
-
-  background: rgb(4,104,206); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(4,104,206,1) 0%, rgba(100,152,254,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,104,206,1)), color-stop(100%,rgba(100,152,254,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(4,104,206,1) 0%,rgba(100,152,254,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(4,104,206,1) 0%,rgba(100,152,254,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(4,104,206,1) 0%,rgba(100,152,254,1) 100%); /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0468ce', endColorstr='#6498fe',GradientType=0 ); /* IE6-9 */
-}
-
 .h5p-multichoice label {
   position: relative;
   text-align: left;
@@ -143,11 +27,9 @@
   background: -ms-linear-gradient(top,  rgba(237,237,237,0.9) 0%,rgba(237,237,237,0.9) 1%,rgba(223,223,223,0.9) 100%); /* IE10+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ededed', endColorstr='#e6dfdfdf',GradientType=0 ); /* IE6-9 */
 }
-
 .h5p-multichoice label.h5p-mc-disabled {
   cursor: default;
 }
-
 .h5p-multichoice label:hover {
   filter: none;
   border: 0.1em solid #ddcae0;
@@ -167,17 +49,8 @@
   color: #235e7c;
   background: #e3eaee;
 }
-
-.h5p-multichoice > form,
-#center .h5p-multichoice > form { /* #center is just a garland hack */
-  padding: 0 0.5em;
-  margin: 0;
-}
-
-.h5p-multichoice > .h5p-question {
-  text-align: left;
+.h5p-multichoice-question-text {
   margin: 0 0.5em 0.7em;
-  border-bottom: 0.1em solid #ddd;
 }
 .h5p-multichoice h2 {
   font-size: 1.5em;
@@ -244,16 +117,16 @@
   line-height: 1em;
   top: 0.585em;
 }
-.h5p-multichoice.h5p-radio .h5p-answer.h5p-should:after {
+.h5p-multichoice .h5p-radio .h5p-answer.h5p-should:after {
   content: "\e603";
 }
-.h5p-multichoice.h5p-radio .h5p-answer.h5p-should-not:after {
+.h5p-multichoice .h5p-radio .h5p-answer.h5p-should-not:after {
   content: "\e600";
 }
-.h5p-multichoice.h5p-check .h5p-answer.h5p-should:after {
+.h5p-multichoice .h5p-check .h5p-answer.h5p-should:after {
   content: "\e601";
 }
-.h5p-multichoice.h5p-check .h5p-answer.h5p-should-not:after {
+.h5p-multichoice .h5p-check .h5p-answer.h5p-should-not:after {
   content: "\e602";
 }
 
