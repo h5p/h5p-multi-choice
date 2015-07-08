@@ -576,9 +576,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     // Adds check and retry button
     addButtons();
 
-    if (!params.behaviour.singleAnswer) {
-      calcScore();
-    }
+    // Calculate score after attaching to make sure stored states gets correct score
+    calcScore();
 
     return this;
   };
