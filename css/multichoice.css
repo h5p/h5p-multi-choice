@@ -10,7 +10,8 @@
   font-style: normal;
 }
 
-.h5p-multichoice label {
+.h5p-multichoice label,
+.h5p-multichoice label.h5p-mc-disabled:hover {
   position: relative;
   text-align: left;
   cursor: pointer;
@@ -27,7 +28,8 @@
   background: -ms-linear-gradient(top,  rgba(237,237,237,0.9) 0%,rgba(237,237,237,0.9) 1%,rgba(223,223,223,0.9) 100%); /* IE10+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ededed', endColorstr='#e6dfdfdf',GradientType=0 ); /* IE6-9 */
 }
-.h5p-multichoice label.h5p-mc-disabled {
+.h5p-multichoice label.h5p-mc-disabled,
+.h5p-multichoice label.h5p-mc-disabled:hover {
   cursor: default;
 }
 .h5p-multichoice label:hover {
@@ -43,7 +45,8 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eee4ef', endColorstr='#e7dde8',GradientType=0 ); /* IE6-9 */
 }
 
-.h5p-multichoice .h5p-selected > label {
+.h5p-multichoice .h5p-selected > label,
+.h5p-multichoice .h5p-selected > label.h5p-mc-disabled:hover {
   filter: none;
   border: 0.1em solid #cad8e0;
   color: #235e7c;
