@@ -363,7 +363,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
       disableInput();
       self.hideButton('check-answer');
-      if (params.behaviour.enableSolutionsButton) {
+      if (params.behaviour.enableSolutionsButton && self.getAnswerGiven()) {
         self.showButton('show-solution');
       }
       if (params.behaviour.enableRetry) {
