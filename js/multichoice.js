@@ -303,6 +303,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     $myDom.find('input').prop('disabled', false);
     $myDom.find('.h5p-feedback-button, .h5p-feedback-dialog').remove();
     $myDom.find('.h5p-has-feedback').removeClass('h5p-has-feedback');
+    this.setFeedback(); // Reset feedback
+
     self.trigger('resize');
   };
 
@@ -411,8 +413,20 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
     });
 
+    // Determine feedback
+    var max = self.getMaxScore();
+    var feedback, ratio = (score / max);
+    if (isFinite(ratio) && ratio > 0) {
+      feedback = (ratio >= 1 ? params.UI.correctText : params.UI.almostText);    }
+    else {
+      feedback = params.UI.wrongText;
+    }
+
+    // Show feedback
+    this.setFeedback(feedback, score, max);
+
     //Disable task if maxscore is achieved
-    if (score === self.getMaxScore()) {
+    if (score === max) {
       finishedTask();
     }
     //Add disabled css class to label
