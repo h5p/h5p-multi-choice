@@ -282,7 +282,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
           $retryButton.show();
         }
         self.showCheckSolution();
-        var xAPIEvent = self.createXAPIEventTemplate('completed');
+        var xAPIEvent = self.createXAPIEventTemplate('answered');
         addQuestionToXAPI(xAPIEvent);
         addResponseToXAPI(xAPIEvent);
         self.trigger(xAPIEvent);
