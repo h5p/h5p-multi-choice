@@ -589,7 +589,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         calcScore();
       }
 
-      self.triggerXAPI('attempted');
+      self.triggerXAPI('interacted');
 
       var answerChecked = false;
       $myDom.find('.h5p-answer').each( function () {
