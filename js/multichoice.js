@@ -474,7 +474,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    *  The xAPI event we will add a response to
    */
   var addResponseToXAPI = function(xAPIEvent) {
-    xAPIEvent.setScoredResult(score, self.getMaxScore());
+    xAPIEvent.setScoredResult(score, self.getMaxScore(), self);
     if (params.userAnswers === undefined) {
       calcScore();
     }
@@ -490,6 +490,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
   // Function for attaching the multichoice to a DOM element.
   this.attach = function (target) {
+    this.setActivityStarted();
     if (typeof(target) === "string") {
       target = $("#" + target);
     } else {
