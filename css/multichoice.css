@@ -105,12 +105,12 @@
 }
 .h5p-multichoice .h5p-selected.h5p-wrong > label:before {
   content: "\f00d";
-  color: #ad3756;
+  color: #b71c1c;
   padding: 0 0.125em;
 }
 .h5p-multichoice .h5p-selected.h5p-correct > label:before {
   content: "\f00c";
-  color: #39692e;
+  color: #255c41;
 }
 
 .h5p-multichoice .h5p-answer:after {
@@ -145,13 +145,13 @@
 }
 
 .feedback-text.h5p-failed {
-  color: #c33f62;
+  color: #b71c1c;
 }
 .feedback-text.h5p-almost {
   color: #666;
 }
 .feedback-text.h5p-passed {
-  color: #39692e;
+  color: #255c41;
 }
 
 .h5p-span div,
