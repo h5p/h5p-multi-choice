@@ -25,25 +25,24 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   H5P.Question.call(self, 'multichoice');
   var $ = H5P.jQuery;
   var texttemplate =
-      '<div class="h5p-multichoice-question-text"><%= question %></div>' +
-      '  <ul class="h5p-answers">' +
-      '    <% for (var i=0; i < answers.length; i++) { %>' +
-      '      <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected<% } %>">' +
-      '        <label>' +
-      '          <div class="h5p-input-container">' +
-      '            <% if (behaviour.singleAnswer) { %>' +
-      '            <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
-      '            <% } else { %>' +
-      '            <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
-      '            <% } %>' +
-      '            <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioIcon %></a>' +
-      '          </div><div class="h5p-alternative-container">' +
-      '            <span class="h5p-span"><%= answers[i].text %></span>' +
-      '          </div><div class="h5p-clearfix"></div>' +
-      '        </label>' +
-      '      </li>' +
-      '    <% } %>' +
-      '  </ul>';
+      '<ul class="h5p-answers">' +
+      '  <% for (var i=0; i < answers.length; i++) { %>' +
+      '    <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected<% } %>">' +
+      '      <label>' +
+      '        <div class="h5p-input-container">' +
+      '          <% if (behaviour.singleAnswer) { %>' +
+      '          <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
+      '          <% } else { %>' +
+      '          <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
+      '          <% } %>' +
+      '          <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioIcon %></a>' +
+      '        </div><div class="h5p-alternative-container">' +
+      '          <span class="h5p-span"><%= answers[i].text %></span>' +
+      '        </div><div class="h5p-clearfix"></div>' +
+      '      </label>' +
+      '    </li>' +
+      '  <% } %>' +
+      '</ul>';
 
   var defaults = {
     image: null,
@@ -150,6 +149,9 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     for (var i = 0; i < params.answers.length; i++) {
       params.answers[i].checkboxOrRadioIcon = getCheckboxOrRadioIcon(params.behaviour.singleAnswer, params.userAnswers.indexOf(i) > -1);
     }
+
+    // Register Introduction
+    self.setIntroduction(params.question);
 
     // Register task content area
     $myDom = $(template.render(params));
