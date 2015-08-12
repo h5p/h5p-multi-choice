@@ -18,12 +18,12 @@
   display: block;
   padding: 0.25em 0.75em 0.25em 0.1em;
   border-radius: 0.3em;
-  border: 0.1em solid rgba(237,237,237,0.9);
+  border: 0.1em solid #ddd;
   font-weight: normal;
-  background: rgba(237,237,237,0.9);
-  -webkit-box-shadow:  0 0.1em 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow:  0 0.1em 0 rgba(0, 0, 0, 0.2);
-  box-shadow:  0 0.1em 0 rgba(0, 0, 0, 0.2);
+  background: #ddd;
+  -webkit-box-shadow:  0 0.1em 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow:  0 0.1em 0 rgba(0, 0, 0, 0.3);
+  box-shadow:  0 0.1em 0 rgba(0, 0, 0, 0.3);
 
 }
 .h5p-multichoice label.h5p-mc-disabled,
@@ -32,16 +32,16 @@
 }
 .h5p-multichoice label:hover {
   filter: none;
-  border: 0.1em solid rgba(238,228,239,1);
-  background: rgba(238,228,239,1); /* Old browsers */
+  border: 0.1em solid #e4d2e4;
+  background: #e4d2e4;
 }
 
 .h5p-multichoice .h5p-selected > label,
 .h5p-multichoice .h5p-selected > label.h5p-mc-disabled:hover {
   filter: none;
-  border: 0.1em solid #e3eaee;
-  color: #235e7c;
-  background: #e3eaee;
+  border: 0.1em solid #bcced5;
+  color: #1c4b62;
+  background: #bcced5;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
