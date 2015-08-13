@@ -32,16 +32,16 @@
 }
 .h5p-multichoice label:hover {
   filter: none;
-  border: 0.1em solid #e4d2e4;
-  background: #e4d2e4;
+  border: 0.1em solid #edd6e9;
+  background: #edd6e9;
 }
 
 .h5p-multichoice .h5p-selected > label,
 .h5p-multichoice .h5p-selected > label.h5p-mc-disabled:hover {
   filter: none;
-  border: 0.1em solid #bcced5;
-  color: #1c4b62;
-  background: #bcced5;
+  border: 0.1em solid #cee0f4;
+  color: #1a4473;
+  background: #cee0f4;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -231,9 +231,9 @@
 }
 
 .h5p-multichoice .h5p-answer.h5p-selected .h5p-feedback-inner {
-  border-bottom: 1px solid #cad8e0;
-  border-left: 1px solid #cad8e0;
-  border-right: 1px solid #cad8e0;
+  border-bottom: 1px solid #cee0f4;
+  border-left: 1px solid #cee0f4;
+  border-right: 1px solid #cee0f4;
 }
 
 .h5p-multichoice .h5p-feedback-inner:before {
@@ -254,11 +254,11 @@
 
 
 .h5p-multichoice .h5p-answer.h5p-selected label:hover .h5p-feedback-inner:before {
-  box-shadow: inset 1px 1px 0px 0px #ddcae0;
+  box-shadow: inset 1px 1px 0px 0px #edd6e9;
 }
 
 .h5p-multichoice .h5p-answer.h5p-selected .h5p-feedback-inner:before {
-  box-shadow: inset 1px 1px 0px 0px #cad8e0;
+  box-shadow: inset 1px 1px 0px 0px #cee0f4;
 }
 
 .h5p-multichoice .h5p-feedback-dialog.h5p-has-tip .h5p-feedback-inner:before {
