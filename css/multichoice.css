@@ -222,9 +222,9 @@
 }
 .h5p-multichoice .h5p-answer .h5p-feedback-inner {
   background: #fbfbfb;
-  border-bottom: 1px solid #dcdcdc;
-  border-left: 1px solid #dcdcdc;
-  border-right: 1px solid #dcdcdc;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   padding: 0.5em 1.25em;
   text-align: left;
   position: relative;
