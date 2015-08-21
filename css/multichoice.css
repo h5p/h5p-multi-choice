@@ -56,6 +56,7 @@
   list-style: none;
   padding: 0;
   overflow: visible;
+  margin: 1em 0;
 }
 
 .h5p-multichoice .h5p-answer {
