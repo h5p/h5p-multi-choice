@@ -564,7 +564,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    *  The xAPI event we will add a response to
    */
   var addResponseToXAPI = function(xAPIEvent) {
-    xAPIEvent.setScoredResult(score, self.getMaxScore());
+    xAPIEvent.setScoredResult(score, self.getMaxScore(), self);
     if (params.userAnswers === undefined) {
       calcScore();
     }
@@ -573,7 +573,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       if (response !== '') {
         response += '[,]';
       }
-      response += idMap[params.userAnswers[i]];
+      response += idMap === undefined ? params.userAnswers[i] : idMap[params.userAnswers[i]];
     }
     xAPIEvent.data.statement.result.response = response;
   };
@@ -581,12 +581,11 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   // Initialization code
   // Randomize order, if requested
   var idMap;
+  // Store original order in answers
+  for (i = 0; i < params.answers.length; i++) {
+    params.answers[i].originalOrder = i;
+  }
   if (params.behaviour.randomAnswers) {
-    // Store original order in answers
-    for (i = 0; i < params.answers.length; i++) {
-      params.answers[i].originalOrder = i;
-    }
-
     var origOrder = $.extend([], params.answers);
     params.answers = H5P.shuffleArray(params.answers);
 

@@ -3,14 +3,14 @@
   "contentType": "question",
   "majorVersion": 1,
   "minorVersion": 3,
-  "patchVersion": 2,
+  "patchVersion": 4,
   "runnable": 1,
   "machineName": "H5P.MultiChoice",
   "author": "Amendor AS",
   "license": "cc-by-sa",
   "coreApi": {
     "majorVersion": 1,
-    "minorVersion": 5
+    "minorVersion": 6
   },
   "preloadedJs": [
     {

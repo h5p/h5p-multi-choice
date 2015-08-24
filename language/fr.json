@@ -1,0 +1,99 @@
+{
+  "semantics": [
+    {
+      "label": "Image de la question",
+      "description": "Une image optionnelle peut être ajoutée."
+    },
+    {
+      "label": "Question"
+    },
+    {
+      "label": "Options disponibles",
+      "description": "L'utilisateur peut choisir ces options alternatives.",
+      "entity": "option",
+      "field": {
+        "label": "Option",
+        "fields": [
+          {
+            "label": "Texte"
+          },
+          {
+            "label": "Correct"
+          },
+          {
+            "label": "Aide",
+            "fields": [
+              {
+                "label": "Texte d'aide"
+              },
+              {
+                "label": "Feedback choisi",
+                "description": "Affiché quand l'utilisateur vérifie ses réponses."
+              },
+              {
+                "label": "Aucun feedback",
+                "description": "Affiché quand aucune réponse n'est proposée et que la solution est affichée."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Traduction de l'interface utilisateur pour les questions à choix multiples",
+      "fields": [
+        {
+          "label": "Texte du bouton vérifier",
+          "default": "Vérifier"
+        },
+        {
+          "label": "Texte du bouton montrer la solution",
+          "default": "Solution"
+        },
+        {
+          "label": "Texte du bouton Réessayer",
+          "default": "Réessayer"
+        },
+        {
+          "label": "Feedback pour une réponse correcte",
+          "default": "Correct!"
+        },
+        {
+          "label": "Feedback pour une réponse presque correcte",
+          "default": "Presque!"
+        },
+        {
+          "label": "Feedback pour une mauvaise réponse",
+          "default": "Faux!"
+        }
+      ]
+    },
+    {
+      "label": "Options générales.",
+      "description": "Ces options vous permettent de contrôler le déroulement de vos activités.",
+      "fields": [
+        {
+          "label": "Activer le bouton \"Réessayer\" "
+        },
+        {
+          "label": "Activer le bouton \"Solution\" "
+        },
+        {
+          "label": "Question à choix unique",
+          "description": "Une seule réponse est possible."
+        },
+        {
+          "label": "Donner un point pour chaque activité",
+          "description": "Un point par réponse correcte dans les QCM. Ce ne sera pas une option dans les \"Questions à choix unique\"."
+        },
+        {
+          "label": "Questions aléatoires",
+          "description": "Les questions seront affichées dans l'ordre aléatoire."
+        },
+        {
+          "label": "Une réponse est obligatoire pour montrer la solution"
+        }
+      ]
+    }
+  ]
+}
