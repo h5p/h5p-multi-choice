@@ -23,11 +23,11 @@
           {
             "label": "Aide",
             "fields": [
-          {
-            "label": "Texte de l'aide"
-          },
-          {
-            "label": "Feedback",
+              {
+                "label": "Texte de l'aide"
+              },
+              {
+                "label": "Feedback",
                 "description": "Texte de feedback choisi."
               },
               {
