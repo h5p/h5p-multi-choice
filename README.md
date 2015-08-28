@@ -2,7 +2,7 @@ H5P Multi Choice
 ==========
 
 Test your users with multiple choice tasks.
-Can be used in question sets.
+Can be used in Question Sets, Course Presentations and Interactive Videos.
 
 ## License
 
