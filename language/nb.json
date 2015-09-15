@@ -78,10 +78,7 @@
         {
           "label": "Aktiver \"Vis svar\" knapp"
         },
-        {
-          "label": "Bare ett svar",
-          "description": "Lar brukeren kun avgi ett svar"
-        },
+        {},
         {
           "label": "Gi ett poeng for hele oppgaven",
           "description": "Gir ett poeng totalt for flere rette alternativ. Kun valgbar hvis \"Bare ett svar\" er avslått."

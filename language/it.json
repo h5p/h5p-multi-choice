@@ -72,10 +72,7 @@
         {
           "label": "Abilita pulsante \"Mostra soluzione\""
         },
-        {
-          "label": "Risposta singola",
-          "description": "Abilitare per consentire solo risposte singole."
-        },
+        {},
         {
           "label": "Assegna un punto per il completamento del compito",
           "description": "Abilitare per assegnare un totale di un punto per risposte multiple corrette. Non � opzionabile in modalit� \"Risposta singola\"."

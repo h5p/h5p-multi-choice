@@ -72,10 +72,7 @@
         {
           "label": "Activer le bouton \"Solution\""
         },
-        {
-          "label": "Question à choix unique",
-          "description": "Une seule réponse est possible."
-        },
+        {},
         {
           "label": "Donner un point pour chaque activité",
           "description": "Un point par réponse correcte dans les QCM. Ce ne sera pas une option dans les \"Questions à choix unique\"."

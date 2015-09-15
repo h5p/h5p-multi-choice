@@ -78,10 +78,7 @@
         {
           "label": "Aktiver \"Vis svar\" knapp"
         },
-        {
-          "label": "Bare eitt svar",
-          "description": "Slå på for å tillate val av berre eitt alternativ."
-        },
+        {},
         {
           "label": "Gje eitt poeng for heile oppgåva",
           "description": "Gir eitt poeng totalt for fleire rette alternativ. Kun valbar om \"Bare eitt svar\" er slått av."
