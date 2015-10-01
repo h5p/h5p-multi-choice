@@ -316,6 +316,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * @private
    */
   this.resetTask = function () {
+    self.answered = false;
     self.hideSolutions();
     params.userAnswers = [];
     removeSelections();
@@ -357,6 +358,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
     // Check solution button
     self.addButton('check-answer', params.UI.checkAnswerButton, function () {
+      self.answered = true;
       // Unbind removal of feedback dialogs on click
       $myDom.unbind('click', removeFeedbackDialog );
 
@@ -644,7 +646,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
 
   this.getAnswerGiven = function() {
-    return params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
+    return this.answered || params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
   };
 
   this.getScore = function() {
