@@ -60,18 +60,24 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
       4: function (parameters, finished) {
         // Determine number of correct choices
         var numCorrect = 0;
-        for (var i = 0; i < parameters.answers.length; i++) {
-          if (parameters.answers[i].correct) {
-            numCorrect++;
+        if (parameters.answers) {
+          for (var i = 0; i < parameters.answers.length; i++) {
+            if (parameters.answers[i].correct) {
+              numCorrect++;
+            }
           }
         }
 
+        if (!parameters.behaviour) {
+          parameters.behaviour = {};
+        }
         if (parameters.behaviour.singleAnswer) {
           parameters.behaviour.type = (numCorrect === 1 ? 'auto' : 'single');
         }
         else {
           parameters.behaviour.type = (numCorrect > 1 ? 'auto' : 'multi');
         }
+        delete parameters.behaviour.singleAnswer;
 
         finished(null, parameters);
       }
