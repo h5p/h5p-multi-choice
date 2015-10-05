@@ -99,7 +99,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     params.behaviour.singleAnswer = (numCorrect === 1);
   }
   else {
-    params.behaviour.singleAnswer = (parameters.behaviour.type === 'single');
+    params.behaviour.singleAnswer = (params.behaviour.type === 'single');
   }
 
   var getCheckboxOrRadioIcon = function (radio, selected) {
