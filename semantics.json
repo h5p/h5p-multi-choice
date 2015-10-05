@@ -168,11 +168,25 @@
         "optional": true
       },
       {
-        "name": "singleAnswer",
-        "type": "boolean",
-        "label": "Single answer",
-        "description": "Enable to allow only single option answer.",
-        "default": true
+        "name": "type",
+        "type": "select",
+        "label": "Question Type",
+        "description": "Select the look and behaviour of the question.",
+        "default": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "label": "Automatic"
+          },
+          {
+            "value": "multi",
+            "label": "Multiple Choice (Checkboxes)"
+          },
+          {
+            "value": "single",
+            "label": "Single Choice (Radio Buttons)"
+          }
+        ]
       },
       {
         "name": "singlePoint",

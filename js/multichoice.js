@@ -68,7 +68,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     behaviour: {
       enableRetry: true,
       enableSolutionsButton: true,
-      singleAnswer: false,
+      type: 'auto',
       singlePoint: true,
       randomAnswers: false,
       showSolutionsRequiresInput: true
@@ -85,6 +85,22 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
+
+  if (params.behaviour.type === 'auto') {
+    // Determine number of correct choices
+    var numCorrect = 0;
+    for (var i = 0; i < params.answers.length; i++) {
+      if (params.answers[i].correct) {
+        numCorrect++;
+      }
+    }
+
+    // Use single choice if only one choice is correct
+    params.behaviour.singleAnswer = (numCorrect === 1);
+  }
+  else {
+    params.behaviour.singleAnswer = (params.behaviour.type === 'single');
+  }
 
   var getCheckboxOrRadioIcon = function (radio, selected) {
     var icon;

@@ -73,8 +73,19 @@
           "label": "Activer le bouton \"Solution\""
         },
         {
-          "label": "Question à choix unique",
-          "description": "Une seule réponse est possible."
+          "label": "Question Type",
+          "description": "Select the look and behaviour of the question.",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "Multiple Choice (Checkboxes)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
         },
         {
           "label": "Donner un point pour chaque activité",

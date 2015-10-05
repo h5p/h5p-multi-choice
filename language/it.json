@@ -73,8 +73,19 @@
           "label": "Abilita pulsante \"Mostra soluzione\""
         },
         {
-          "label": "Risposta singola",
-          "description": "Abilitare per consentire solo risposte singole."
+          "label": "Question Type",
+          "description": "Select the look and behaviour of the question.",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "Multiple Choice (Checkboxes)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
         },
         {
           "label": "Assegna un punto per il completamento del compito",
