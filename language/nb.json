@@ -78,7 +78,21 @@
         {
           "label": "Aktiver \"Vis svar\" knapp"
         },
-        {},
+        {
+          "label": "Spørsmålstype",
+          "description": "Velg utseende og oppførsel for spørsmålet.",
+          "options": [
+            {
+              "label": "Automatisk"
+            },
+            {
+              "label": "Flervalg (avkrysningsbokser)"
+            },
+            {
+              "label": "Envalg (radioknapper)"
+            }
+          ]
+        },
         {
           "label": "Gi ett poeng for hele oppgaven",
           "description": "Gir ett poeng totalt for flere rette alternativ. Kun valgbar hvis \"Bare ett svar\" er avslått."

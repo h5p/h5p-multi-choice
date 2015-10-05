@@ -72,7 +72,21 @@
         {
           "label": "Activer le bouton \"Solution\""
         },
-        {},
+        {
+          "label": "Question Type",
+          "description": "Select the look and behaviour of the question.",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "Multiple Choice (Checkboxes)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
+        },
         {
           "label": "Donner un point pour chaque activité",
           "description": "Un point par réponse correcte dans les QCM. Ce ne sera pas une option dans les \"Questions à choix unique\"."

@@ -72,7 +72,21 @@
         {
           "label": "تمكين \"مشاهدة الحل \" الزر"
         },
-        {},
+        {
+          "label": "Question Type",
+          "description": "Select the look and behaviour of the question.",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "Multiple Choice (Checkboxes)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
+        },
         {
           "label": "إعطاء نقطة واحدة للقيام بهذه المهمة بأكملها",
           "description": "تمكين لإعطاء مجموع نقطة واحدة للإجابات الصحيحة متعددة. هذا لن يكون خيارا في وضع \"إجابة واحدة \"."
