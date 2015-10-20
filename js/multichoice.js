@@ -543,7 +543,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   var addQuestionToXAPI = function(xAPIEvent) {
     var definition = xAPIEvent.getVerifiedStatementValue(['object', 'definition']);
     definition.description = {
-      'en-US': params.question
+      'en': $(params.question).text()
     };
     definition.type = 'http://adlnet.gov/expapi/activities/cmi.interaction';
     definition.interactionType = 'choice';
@@ -553,7 +553,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       definition.choices[i] = {
         'id': params.answers[i].originalOrder + '',
         'description': {
-          'en-US': params.answers[i].text
+          'en': $(params.answers[i].text).text()
         }
       };
       if (params.answers[i].correct) {
@@ -591,7 +591,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       if (response !== '') {
         response += '[,]';
       }
-      response += idMap === undefined ? params.userAnswers[i] : idMap[params.userAnswers[i]];
+      response += idMap === undefined ? $(params.userAnswers[i]).text() : idMap[params.userAnswers[i]];
     }
     xAPIEvent.data.statement.result.response = response;
   };
