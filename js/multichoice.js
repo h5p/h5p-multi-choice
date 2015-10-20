@@ -582,7 +582,9 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    *  The xAPI event we will add a response to
    */
   var addResponseToXAPI = function(xAPIEvent) {
-    xAPIEvent.setScoredResult(score, self.getMaxScore(), self);
+    maxScore = self.getMaxScore();
+    var success = score == maxScore ? true : false;
+    xAPIEvent.setScoredResult(score, maxScore, self, true, success);
     if (params.userAnswers === undefined) {
       calcScore();
     }
