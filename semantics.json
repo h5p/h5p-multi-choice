@@ -208,6 +208,13 @@
         "type": "boolean",
         "default": true,
         "optional": true
+      },
+      {
+        "label": "Disable image zooming for question image",
+        "name": "disableImageZooming",
+        "type": "boolean",
+        "default": false,
+        "optional": true
       }
     ]
   }

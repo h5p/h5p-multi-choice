@@ -71,7 +71,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       type: 'auto',
       singlePoint: true,
       randomAnswers: false,
-      showSolutionsRequiresInput: true
+      showSolutionsRequiresInput: true,
+      disableImageZooming: false
     }
   };
 
@@ -158,7 +159,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   self.registerDomElements = function () {
     if (params.image) {
       // Register task image
-      self.setImage(params.image.path);
+      self.setImage(params.image.path, {disableImageZooming: params.behaviour.disableImageZooming});
     }
 
     // Determine if we're using checkboxes or radio buttons
