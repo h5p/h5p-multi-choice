@@ -97,6 +97,9 @@
         },
         {
           "label": "Richiedere l'immissione dei dati all'utente prima che la soluzione sia visualizzata"
+        },
+        {
+          "label": "Disable image zooming for question image."
         }
       ]
     }

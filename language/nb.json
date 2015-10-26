@@ -103,6 +103,9 @@
         },
         {
           "label": "Krev inndata fra brukeren før fasit gis."
+        },
+        {
+          "label": "Slå av bilete zooming."
         }
       ]
     }

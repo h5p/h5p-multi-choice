@@ -97,6 +97,9 @@
         },
         {
           "label": "تطلب إدخال المستخدم اجابته قبل أن يتم عرضه الحل"
+        },
+        {
+          "label": "Disable image zooming for question image."
         }
       ]
     }
