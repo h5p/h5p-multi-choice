@@ -9,7 +9,7 @@
     },
     {
       "label": "Opzioni disponibili",
-      "description": "Le alternative tra cui l'utente pu� scegliere.",
+      "description": "Le alternative tra cui l'utente può scegliere.",
       "entity": "opzione",
       "field": {
         "label": "Opzione",
@@ -89,7 +89,7 @@
         },
         {
           "label": "Assegna un punto per il completamento del compito",
-          "description": "Abilitare per assegnare un totale di un punto per risposte multiple corrette. Non � opzionabile in modalit� \"Risposta singola\"."
+          "description": "Abilitare per assegnare un totale di un punto per risposte multiple corrette. Non è opzionabile in modalità \"Risposta singola\"."
         },
         {
           "label": "Risposte in ordine casuale",
