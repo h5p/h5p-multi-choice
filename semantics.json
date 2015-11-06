@@ -1,10 +1,21 @@
 [
   {
-    "name": "image",
-    "type": "image",
-    "label": "Question image",
-    "optional": true,
-    "description": "An optional image to display above the question."
+    "name": "media",
+    "type": "group",
+    "label": "Media",
+    "fields": [
+      {
+        "name": "type",
+        "type": "library",
+        "label": "Type",
+        "options": [
+          "H5P.Image 1.0",
+          "H5P.Video 1.1"
+        ],
+        "optional": true,
+        "description": "Optional media to display above the question."
+      }
+    ]
   },
   {
     "name": "question",

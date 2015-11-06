@@ -80,6 +80,30 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
         delete parameters.behaviour.singleAnswer;
 
         finished(null, parameters);
+      },
+
+      /**
+       * Asynchronous content upgrade hook.
+       * Upgrades content parameters to support Multiple Choice 1.5.
+       *
+       * Replaces the task image with a media object.
+       * Makes it possible to add a video above the task.
+       *
+       * @params {object} parameters
+       * @params {function} finished
+       */
+      5: function (parameters, finished) {
+        if (parameters.image) {
+          parameters.media = {
+            library: 'H5P.Image 1.0',
+            params: {
+              file: parameters.image
+            }
+          };
+          delete parameters.image;
+        }
+
+        finished(null, parameters);
       }
 
     }

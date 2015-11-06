@@ -157,9 +157,16 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Register the different parts of the task with the H5P.Question structure.
    */
   self.registerDomElements = function () {
-    if (params.image) {
-      // Register task image
-      self.setImage(params.image.path, {disableImageZooming: params.behaviour.disableImageZooming});
+    if (params.media) {
+      var type = params.media.library.split(' ')[0];
+      if (type === 'H5P.Image') {
+        // Register task image
+        self.setImage(params.media.params.file.path, {disableImageZooming: params.behaviour.disableImageZooming, alt: params.media.alt});
+      }
+      else if (type === 'H5P.Video') {
+        // Register task video
+        self.setVideo(params.media);
+      }
     }
 
     // Determine if we're using checkboxes or radio buttons
