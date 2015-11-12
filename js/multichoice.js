@@ -157,7 +157,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Register the different parts of the task with the H5P.Question structure.
    */
   self.registerDomElements = function () {
-    if (params.media) {
+    if (params.media && params.media.library) {
       var type = params.media.library.split(' ')[0];
       if (type === 'H5P.Image') {
         // Register task image
