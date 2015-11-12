@@ -210,6 +210,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
           $feedbackDialog.addClass('h5p-has-tip');
         }
 
+        self.trigger('resize');
+
         // Remove tip dialog on dom click
         setTimeout(function () {
           $myDom.click(removeFeedbackDialog);
