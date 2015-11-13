@@ -273,6 +273,12 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
     if (!params.behaviour.singleAnswer) {
       calcScore();
+    } else {
+      if (params.userAnswers.length && params.answers[params.userAnswers[0]].correct) {
+        score = 1;
+      } else {
+        score = 0;
+      }
     }
   };
 
