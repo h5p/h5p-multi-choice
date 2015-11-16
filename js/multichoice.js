@@ -160,8 +160,10 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     if (params.media && params.media.library) {
       var type = params.media.library.split(' ')[0];
       if (type === 'H5P.Image') {
-        // Register task image
-        self.setImage(params.media.params.file.path, {disableImageZooming: params.behaviour.disableImageZooming, alt: params.media.alt});
+        if (params.media.params.file) {
+          // Register task image
+          self.setImage(params.media.params.file.path, {disableImageZooming: params.behaviour.disableImageZooming, alt: params.media.alt});
+        }
       }
       else if (type === 'H5P.Video') {
         // Register task video
