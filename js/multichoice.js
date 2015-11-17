@@ -166,8 +166,10 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         }
       }
       else if (type === 'H5P.Video') {
-        // Register task video
-        self.setVideo(params.media);
+        if (params.media.params.sources) {
+          // Register task video
+          self.setVideo(params.media);
+        }
       }
     }
 
