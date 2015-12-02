@@ -1,10 +1,21 @@
 [
   {
-    "name": "image",
-    "type": "image",
-    "label": "Question image",
-    "optional": true,
-    "description": "An optional image to display above the question."
+    "name": "media",
+    "type": "group",
+    "label": "Media",
+    "fields": [
+      {
+        "name": "type",
+        "type": "library",
+        "label": "Type",
+        "options": [
+          "H5P.Image 1.0",
+          "H5P.Video 1.1"
+        ],
+        "optional": true,
+        "description": "Optional media to display above the question."
+      }
+    ]
   },
   {
     "name": "question",
@@ -61,6 +72,8 @@
               "name": "tip",
               "label": "Tip text",
               "type": "text",
+              "widget": "html",
+              "tags": ["p", "br", "strong", "em"],
               "optional": true
             },
             {
@@ -166,11 +179,25 @@
         "optional": true
       },
       {
-        "name": "singleAnswer",
-        "type": "boolean",
-        "label": "Single answer",
-        "description": "Enable to allow only single option answer.",
-        "default": true
+        "name": "type",
+        "type": "select",
+        "label": "Question Type",
+        "description": "Select the look and behaviour of the question.",
+        "default": "auto",
+        "options": [
+          {
+            "value": "auto",
+            "label": "Automatic"
+          },
+          {
+            "value": "multi",
+            "label": "Multiple Choice (Checkboxes)"
+          },
+          {
+            "value": "single",
+            "label": "Single Choice (Radio Buttons)"
+          }
+        ]
       },
       {
         "name": "singlePoint",
@@ -191,6 +218,13 @@
         "name": "showSolutionsRequiresInput",
         "type": "boolean",
         "default": true,
+        "optional": true
+      },
+      {
+        "label": "Disable image zooming for question image",
+        "name": "disableImageZooming",
+        "type": "boolean",
+        "default": false,
         "optional": true
       }
     ]

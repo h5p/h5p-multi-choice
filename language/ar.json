@@ -73,8 +73,19 @@
           "label": "تمكين \"مشاهدة الحل \" الزر"
         },
         {
-          "label": "إجابة واحدة",
-          "description": "تمكين السماح لاجابة واحدة"
+          "label": "Question Type",
+          "description": "Select the look and behaviour of the question.",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "Multiple Choice (Checkboxes)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
         },
         {
           "label": "إعطاء نقطة واحدة للقيام بهذه المهمة بأكملها",
@@ -86,6 +97,9 @@
         },
         {
           "label": "تطلب إدخال المستخدم اجابته قبل أن يتم عرضه الحل"
+        },
+        {
+          "label": "Disable image zooming for question image."
         }
       ]
     }

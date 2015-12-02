@@ -68,10 +68,11 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     behaviour: {
       enableRetry: true,
       enableSolutionsButton: true,
-      singleAnswer: false,
+      type: 'auto',
       singlePoint: true,
       randomAnswers: false,
-      showSolutionsRequiresInput: true
+      showSolutionsRequiresInput: true,
+      disableImageZooming: false
     }
   };
 
@@ -85,6 +86,22 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
+
+  if (params.behaviour.type === 'auto') {
+    // Determine number of correct choices
+    var numCorrect = 0;
+    for (var i = 0; i < params.answers.length; i++) {
+      if (params.answers[i].correct) {
+        numCorrect++;
+      }
+    }
+
+    // Use single choice if only one choice is correct
+    params.behaviour.singleAnswer = (numCorrect === 1);
+  }
+  else {
+    params.behaviour.singleAnswer = (params.behaviour.type === 'single');
+  }
 
   var getCheckboxOrRadioIcon = function (radio, selected) {
     var icon;
@@ -140,9 +157,20 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Register the different parts of the task with the H5P.Question structure.
    */
   self.registerDomElements = function () {
-    if (params.image) {
-      // Register task image
-      self.setImage(params.image.path);
+    if (params.media && params.media.library) {
+      var type = params.media.library.split(' ')[0];
+      if (type === 'H5P.Image') {
+        if (params.media.params.file) {
+          // Register task image
+          self.setImage(params.media.params.file.path, {disableImageZooming: params.behaviour.disableImageZooming, alt: params.media.alt});
+        }
+      }
+      else if (type === 'H5P.Video') {
+        if (params.media.params.sources) {
+          // Register task video
+          self.setVideo(params.media);
+        }
+      }
     }
 
     // Determine if we're using checkboxes or radio buttons
@@ -186,6 +214,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
           $feedbackDialog.addClass('h5p-has-tip');
         }
 
+        self.trigger('resize');
+
         // Remove tip dialog on dom click
         setTimeout(function () {
           $myDom.click(removeFeedbackDialog);
@@ -225,7 +255,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         calcScore();
       }
 
-      self.triggerXAPI('attempted');
+      self.triggerXAPI('interacted');
 
       var answerChecked = false;
       $myDom.find('.h5p-answer').each( function () {
@@ -247,6 +277,12 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
     if (!params.behaviour.singleAnswer) {
       calcScore();
+    } else {
+      if (params.userAnswers.length && params.answers[params.userAnswers[0]].correct) {
+        score = 1;
+      } else {
+        score = 0;
+      }
     }
   };
 
@@ -374,7 +410,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         self.showButton('try-again');
       }
       self.showCheckSolution();
-      var xAPIEvent = self.createXAPIEventTemplate('completed');
+      var xAPIEvent = self.createXAPIEventTemplate('answered');
       addQuestionToXAPI(xAPIEvent);
       addResponseToXAPI(xAPIEvent);
       self.trigger(xAPIEvent);
@@ -527,7 +563,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   var addQuestionToXAPI = function(xAPIEvent) {
     var definition = xAPIEvent.getVerifiedStatementValue(['object', 'definition']);
     definition.description = {
-      'en-US': params.question
+      'en-US': $(params.question).text()
     };
     definition.type = 'http://adlnet.gov/expapi/activities/cmi.interaction';
     definition.interactionType = 'choice';
@@ -537,7 +573,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       definition.choices[i] = {
         'id': params.answers[i].originalOrder + '',
         'description': {
-          'en-US': params.answers[i].text
+          'en-US': $(params.answers[i].text).text()
         }
       };
       if (params.answers[i].correct) {
@@ -566,7 +602,9 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    *  The xAPI event we will add a response to
    */
   var addResponseToXAPI = function(xAPIEvent) {
-    xAPIEvent.setScoredResult(score, self.getMaxScore(), self);
+    maxScore = self.getMaxScore();
+    var success = score == maxScore ? true : false;
+    xAPIEvent.setScoredResult(score, maxScore, self, true, success);
     if (params.userAnswers === undefined) {
       calcScore();
     }
@@ -575,7 +613,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       if (response !== '') {
         response += '[,]';
       }
-      response += idMap === undefined ? params.userAnswers[i] : idMap[params.userAnswers[i]];
+      response += idMap === undefined ? $(params.userAnswers[i]).text() : idMap[params.userAnswers[i]];
     }
     xAPIEvent.data.statement.result.response = response;
   };
