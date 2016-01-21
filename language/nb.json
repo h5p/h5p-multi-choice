@@ -79,8 +79,19 @@
           "label": "Aktiver \"Vis svar\" knapp"
         },
         {
-          "label": "Bare ett svar",
-          "description": "Lar brukeren kun avgi ett svar"
+          "label": "Spørsmålstype",
+          "description": "Velg utseende og oppførsel for spørsmålet.",
+          "options": [
+            {
+              "label": "Automatisk"
+            },
+            {
+              "label": "Flervalg (avkrysningsbokser)"
+            },
+            {
+              "label": "Envalg (radioknapper)"
+            }
+          ]
         },
         {
           "label": "Gi ett poeng for hele oppgaven",
@@ -92,6 +103,9 @@
         },
         {
           "label": "Krev inndata fra brukeren før fasit gis."
+        },
+        {
+          "label": "Slå av bilete zooming."
         }
       ]
     }
