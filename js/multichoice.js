@@ -37,7 +37,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       '          <% } %>' +
       '          <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioIcon %></a>' +
       '        </div><div class="h5p-alternative-container">' +
-      '          <span class="h5p-span"><%= answers[i].text %></span>' +
+      '          <span class="h5p-alternative-inner"><%= answers[i].text %></span>' +
       '        </div><div class="h5p-clearfix"></div>' +
       '      </label>' +
       '    </li>' +
