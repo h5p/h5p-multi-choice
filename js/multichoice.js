@@ -37,7 +37,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       '          <% } %>' +
       '          <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioIcon %></a>' +
       '        </div><div class="h5p-alternative-container">' +
-      '          <span class="h5p-span"><%= answers[i].text %></span>' +
+      '          <span class="h5p-alternative-inner"><%= answers[i].text %></span>' +
       '        </div><div class="h5p-clearfix"></div>' +
       '      </label>' +
       '    </li>' +
@@ -563,7 +563,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   var addQuestionToXAPI = function(xAPIEvent) {
     var definition = xAPIEvent.getVerifiedStatementValue(['object', 'definition']);
     definition.description = {
-      'en-US': $(params.question).text()
+      // Remove tags, must wrap in div tag because jQuery 1.9 will crash if the string isn't wrapped in a tag.
+      'en-US': $('<div>' + params.question + '</div>').text()
     };
     definition.type = 'http://adlnet.gov/expapi/activities/cmi.interaction';
     definition.interactionType = 'choice';
@@ -573,7 +574,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       definition.choices[i] = {
         'id': params.answers[i].originalOrder + '',
         'description': {
-          'en-US': $(params.answers[i].text).text()
+          // Remove tags, must wrap in div tag because jQuery 1.9 will crash if the string isn't wrapped in a tag.
+          'en-US': $('<div>' + params.answers[i].text + '</div>').text()
         }
       };
       if (params.answers[i].correct) {
