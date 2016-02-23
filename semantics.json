@@ -138,7 +138,7 @@
         "name": "tipsLabel",
         "type": "text",
         "label": "Tip label",
-        "default": "Tip",
+        "default": "Show tip",
         "optional": true
       },
       {

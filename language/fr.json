@@ -52,6 +52,10 @@
           "label": "Texte du bouton Réessayer"
         },
         {
+          "label": "Tip label",
+          "default": "Show tip"
+        },
+        {
           "label": "Feedback pour une réponse correcte"
         },
         {

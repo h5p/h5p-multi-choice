@@ -52,6 +52,10 @@
           "label": "Etichetta pulsante Riprova"
         },
         {
+          "label": "Tip label",
+          "default": "Show tip"
+        },
+        {
           "label": "Feedback risposta corretta"
         },
         {

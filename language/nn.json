@@ -55,6 +55,10 @@
           "default": "Prøv igjen"
         },
         {
+          "label": "Tips tekst",
+          "default": "Vis tips"
+        },
+        {
           "label": "Tilbakemelding ved riktig svar",
           "default": "Rett!"
         },
