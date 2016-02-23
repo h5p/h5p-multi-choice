@@ -75,9 +75,7 @@
   line-height: 1.5em;
 }
 .h5p-multichoice .h5p-input {
-  display: block;
-  left: -1000px;
-  position: absolute;
+  display: none;
 }
 
 .h5p-multichoice .h5p-answer > label:before {
@@ -155,7 +153,14 @@
 .h5p-multichoice .h5p-input-container {
   display: block;
   float: left;
-  width: 2em;
+  width: 1em;
+  margin: 0 0.5em;
+  line-height: 1em;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .h5p-multichoice .h5p-alternative-container {

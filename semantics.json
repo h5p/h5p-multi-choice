@@ -135,6 +135,13 @@
         "optional": true
       },
       {
+        "name": "tipsLabel",
+        "type": "text",
+        "label": "Tip label",
+        "default": "Tip",
+        "optional": true
+      },
+      {
         "name": "correctText",
         "type": "text",
         "label": "Correct answer feedback",

@@ -17,6 +17,17 @@
 
 var H5P = H5P || {};
 
+/**
+ * Module for creating a multiple choice question
+ *
+ * @param {Object} options
+ * @param {Object} options.UI
+ * @param {string} options.UI.tipsLabel
+ * @param {number} contentId
+ * @param {Object} contentData
+ * @returns {H5P.MultiChoice}
+ * @constructor
+ */
 H5P.MultiChoice = function(options, contentId, contentData) {
   if (!(this instanceof H5P.MultiChoice))
     return new H5P.MultiChoice(options, contentId, contentData);
@@ -25,20 +36,22 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   H5P.Question.call(self, 'multichoice');
   var $ = H5P.jQuery;
   var texttemplate =
-      '<ul class="h5p-answers">' +
+      '<ul class="h5p-answers" role="listbox">' +
       '  <% for (var i=0; i < answers.length; i++) { %>' +
-      '    <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected<% } %>">' +
+      '    <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected"<% } %>" role="option">' +
       '      <label>' +
-      '        <div class="h5p-input-container">' +
+      '        <div class="h5p-input-container" aria-label="<% answers[i].text %>" aria-live="polite" <% if (userAnswers.indexOf(i) > -1) { %>aria-selected="true"<% } else { %>aria-selected="false"<% } %> role="button" tabindex="0">' +
       '          <% if (behaviour.singleAnswer) { %>' +
-      '          <input type="radio" name="answer" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
+      '          <input type="radio" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
       '          <% } else { %>' +
       '          <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
       '          <% } %>' +
-      '          <a width="100%" height="100%" class="h5p-radio-or-checkbox" href="#"><%= answers[i].checkboxOrRadioIcon %></a>' +
-      '        </div><div class="h5p-alternative-container">' +
+      '          <div class="h5p-radio-or-checkbox"><%= answers[i].checkboxOrRadioIcon %></div>' +
+      '        </div>' +
+      '        <div class="h5p-alternative-container">' +
       '          <span class="h5p-alternative-inner"><%= answers[i].text %></span>' +
-      '        </div><div class="h5p-clearfix"></div>' +
+      '        </div>' +
+      '        <div class="h5p-clearfix"></div>' +
       '      </label>' +
       '    </li>' +
       '  <% } %>' +
@@ -143,7 +156,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     $feedbackDialog = $('' +
     '<div class="h5p-feedback-dialog">' +
       '<div class="h5p-feedback-inner">' +
-        '<div class="h5p-feedback-text">' + feedback + '</div>' +
+        '<div class="h5p-feedback-text" aria-live="polite">' + feedback + '</div>' +
       '</div>' +
     '</div>');
 
@@ -190,6 +203,16 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     // Create tips:
     $('.h5p-answer', $myDom).each(function (i) {
       var $tipContainer = $(this);
+
+      // Register click on input container
+      $('.h5p-input-container', $tipContainer).keyup(function (e) {
+        if (e.which == 32) {
+          $('input', $tipContainer).change();
+        }
+
+        return false;
+      });
+
       var tip = params.answers[i].tipsAndFeedback.tip;
       if (tip === undefined) {
         return; // No tip
@@ -202,6 +225,10 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
       // Add tip
       var $multichoiceTip = $('<div>', {
+        'role': 'button',
+        'tabindex': 0,
+        'title': params.UI.tipsLabel,
+        'aria-label': params.UI.tipsLabel,
         'class': 'multichoice-tip'
       }).click(function () {
         var openFeedback = !$tipContainer.children('.h5p-feedback-dialog').is($feedbackDialog);
@@ -223,10 +250,18 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
         // Do not propagate
         return false;
+      }).keypress(function (e) {
+        if (e.which === 32) {
+          $(this).click();
+        }
+
+        return false;
       });
 
       $('.h5p-alternative-container', this).append($multichoiceTip);
     });
+
+
 
     // Set event listeners.
     $('input', $myDom).change(function () {
@@ -239,17 +274,21 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         } else {
           score = 0;
         }
-        $this.parents('.h5p-answers').find('.h5p-answer.h5p-selected').removeClass("h5p-selected");
+        $this.parents('.h5p-answers').find('.h5p-answer.h5p-selected').removeClass("h5p-selected")
+          .find('.h5p-input-container').attr('aria-selected', false);
         $this.parents('.h5p-answers').find('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(true, false));
 
-        $this.parents('.h5p-answer').addClass("h5p-selected");
+        $this.parents('.h5p-answer').addClass("h5p-selected")
+        .find('.h5p-input-container').attr('aria-selected', true);
         $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(true, true));
       } else {
         if ($this.is(':checked')) {
-          $this.parents('.h5p-answer').addClass("h5p-selected");
+          $this.parents('.h5p-answer').addClass("h5p-selected")
+          .find('.h5p-input-container').attr('aria-selected', true);
           $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(false, true));
         } else {
-          $this.parents('.h5p-answer').removeClass("h5p-selected");
+          $this.parents('.h5p-answer').removeClass("h5p-selected")
+          .find('.h5p-input-container').attr('aria-selected', false);
           $this.siblings('.h5p-radio-or-checkbox').html(getCheckboxOrRadioIcon(false, false));
         }
         calcScore();
@@ -438,10 +477,12 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       var a = params.answers[i];
       if ($e.hasClass('h5p-selected')) {
         if (a.correct) {
-          $e.addClass('h5p-correct');
+          $e.addClass('h5p-correct')
+            .attr('aria-label', 'correct');
         }
         else {
-          $e.addClass('h5p-wrong');
+          $e.addClass('h5p-wrong')
+            .attr('aria-label', 'wrong');
         }
       }
 
