@@ -40,14 +40,14 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       '  <% for (var i=0; i < answers.length; i++) { %>' +
       '    <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected"<% } %>" role="option">' +
       '      <label>' +
-      '        <div class="h5p-input-container" aria-label="<% answers[i].text %>" aria-live="polite" <% if (userAnswers.indexOf(i) > -1) { %>aria-selected="true"<% } else { %>aria-selected="false"<% } %> role="button" tabindex="0">' +
+      '        <button class="h5p-input-container" aria-label="<%= answers[i].text %>" aria-live="polite" <% if (userAnswers.indexOf(i) > -1) { %>aria-selected="true"<% } else { %>aria-selected="false"<% } %> >' +
       '          <% if (behaviour.singleAnswer) { %>' +
       '          <input type="radio" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
       '          <% } else { %>' +
       '          <input type="checkbox" name="answer_<%= i %>" class="h5p-input" value="answer_<%= i %>"<% if (userAnswers.indexOf(i) > -1) { %> checked<% } %> />' +
       '          <% } %>' +
       '          <div class="h5p-radio-or-checkbox"><%= answers[i].checkboxOrRadioIcon %></div>' +
-      '        </div>' +
+      '        </button>' +
       '        <div class="h5p-alternative-container">' +
       '          <span class="h5p-alternative-inner"><%= answers[i].text %></span>' +
       '        </div>' +
@@ -205,7 +205,10 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       var $tipContainer = $(this);
 
       // Register click on input container
-      $('.h5p-input-container', $tipContainer).keyup(function (e) {
+      $('.h5p-input-container', $tipContainer)
+        .click(function () {
+          $('input', $tipContainer).change();
+        }).keyup(function (e) {
         if (e.which == 32) {
           $('input', $tipContainer).change();
         }
@@ -238,7 +241,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         if (openFeedback) {
           // Add tip dialog
           addFeedback($tipContainer, tip);
-          $feedbackDialog.addClass('h5p-has-tip');
+        $feedbackDialog.addClass('h5p-has-tip');
         }
 
         self.trigger('resize');
@@ -342,6 +345,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         $e.addClass('h5p-wrong');
         $e.addClass('h5p-should-not');
       }
+      $e.find('.h5p-input-container').attr('disabled', 'disabled');
       $e.find('input').attr('disabled', 'disabled');
     });
     var max = self.getMaxScore();
@@ -378,6 +382,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     $myDom.find('.h5p-should').removeClass('h5p-should');
     $myDom.find('.h5p-should-not').removeClass('h5p-should-not');
     $myDom.find('input').prop('disabled', false);
+    $myDom.find('.h5p-input-container').prop('disabled', false);
     $myDom.find('.h5p-feedback-button, .h5p-feedback-dialog').remove();
     $myDom.find('.h5p-has-feedback').removeClass('h5p-has-feedback');
     this.setFeedback(); // Reset feedback
@@ -523,6 +528,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     self.hideButton('try-again');
     self.hideButton('show-solution');
     $myDom.find('input').attr('disabled', 'disabled');
+    $myDom.find('.h5p-input-container').attr('disabled', 'disabled');
     self.trigger('resize');
   };
 
@@ -531,6 +537,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    */
   var disableInput = function () {
     $myDom.find('input').attr('disabled', 'disabled');
+    $myDom.find('.h5p-input-container').attr('disabled', 'disabled');
   };
 
   /**
@@ -538,6 +545,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    */
   var enableInput = function () {
     $myDom.find('input').attr('disabled', false);
+    $myDom.find('.h5p-input-container').attr('disabled', false);
     // Remove css class disabled from labels.
     $myDom.find('label').removeClass('h5p-mc-disabled');
   };
