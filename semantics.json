@@ -161,6 +161,22 @@
         "label": "Not correct answer feedback",
         "default": "Wrong",
         "deprecated": true
+      },
+      {
+        "name": "ariaLabelSingleChoice",
+        "type": "text",
+        "label": "Instructions for single choice",
+        "description": "This text is not displayed, but will be read by read speakers",
+        "default": "Choose one alternative",
+        "optional": true
+      },
+      {
+        "name": "ariaLabelMultiChoice",
+        "type": "text",
+        "label": "Instructions for single choice",
+        "description": "This text is not displayed, but will be read by read speakers",
+        "default": "Choose one or more alternatives",
+        "optional": true
       }
     ]
   },
