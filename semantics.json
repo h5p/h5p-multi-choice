@@ -10,7 +10,7 @@
         "label": "Type",
         "options": [
           "H5P.Image 1.0",
-          "H5P.Video 1.1"
+          "H5P.Video 1.2"
         ],
         "optional": true,
         "description": "Optional media to display above the question."
@@ -108,6 +108,20 @@
         }
       ]
     }
+  },
+  {
+    "name": "a11y",
+    "type": "group",
+    "label": "Accessibility texts for multichoice",
+    "common": true,
+    "fields": [
+      {
+        "name": "checkAnswersHelpText",
+        "type": "text",
+        "label": "Guide for readspeakers when pressing check answer",
+        "default": "Check answer, navigate to answers to show feedback."
+      }
+    ]
   },
   {
     "name": "UI",
