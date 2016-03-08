@@ -36,7 +36,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   H5P.Question.call(self, 'multichoice');
   var $ = H5P.jQuery;
   var texttemplate =
-      '<ul class="h5p-answers" role="listbox">' +
+      '<ul class="h5p-answers" role="listbox" aria-label="<%= ariaLabelUl %>">' +
       '  <% for (var i=0; i < answers.length; i++) { %>' +
       '    <li class="h5p-answer<% if (userAnswers.indexOf(i) > -1) { %> h5p-selected"<% } %>" role="option">' +
       '      <label>' +
@@ -76,7 +76,9 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     UI: {
       checkAnswerButton: 'Check',
       showSolutionButton: 'Show solution',
-      tryAgainButton: 'Try again'
+      tryAgainButton: 'Try again',
+      ariaLabelSingleChoice: '',
+      ariaLabelMultiChoice: ''
     },
     behaviour: {
       enableRetry: true,
@@ -115,6 +117,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   else {
     params.behaviour.singleAnswer = (params.behaviour.type === 'single');
   }
+
+  params.ariaLabelUl = params.behaviour.singleAnswer ? params.UI.ariaLabelSingleChoice : params.UI.ariaLabelMultiChoice;
 
   var getCheckboxOrRadioIcon = function (radio, selected) {
     var icon;

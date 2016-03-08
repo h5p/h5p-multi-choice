@@ -63,6 +63,16 @@
         },
         {
           "label": "Feedback risposta non corretta"
+        },
+        {
+          "label": "Instructions for single choice",
+          "description": "This text is not displayed, but will be read by read speakers",
+          "default": "Choose one alternative"
+        },
+        {
+          "label": "Instructions for single choice",
+          "description": "This text is not displayed, but will be read by read speakers",
+          "default": "Choose one or more alternatives"
         }
       ]
     },
