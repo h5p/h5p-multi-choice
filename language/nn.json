@@ -69,6 +69,16 @@
         {
           "label": "Tilbakemelding ved galt svar",
           "default": "Feil"
+        },
+        {
+          "label": "Instruksjoner for envalg",
+          "description": "Denne teksten vises ikke, men leses av read speaker",
+          "default": "Velg ett alternativ"
+        },
+        {
+          "label": "Instructions for flervalg",
+          "description": "Denne teksten vises ikke, men leses av read speaker",
+          "default": "Velg ett eller flere alternativer"
         }
       ]
     },
