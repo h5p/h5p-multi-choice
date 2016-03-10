@@ -10,7 +10,7 @@
         "label": "Type",
         "options": [
           "H5P.Image 1.0",
-          "H5P.Video 1.1"
+          "H5P.Video 1.2"
         ],
         "optional": true,
         "description": "Optional media to display above the question."
@@ -163,19 +163,59 @@
         "deprecated": true
       },
       {
-        "name": "ariaLabelSingleChoice",
+        "name": "scoreBarLabel",
         "type": "text",
-        "label": "Instructions for single choice",
-        "description": "This text is not displayed, but will be read by read speakers",
-        "default": "Choose one alternative",
+        "label": "Score Bar Label",
+        "default": "Score",
         "optional": true
       },
       {
-        "name": "ariaLabelMultiChoice",
+        "name": "tipAvailable",
         "type": "text",
-        "label": "Instructions for single choice",
-        "description": "This text is not displayed, but will be read by read speakers",
-        "default": "Choose one or more alternatives",
+        "label": "Tip Available",
+        "default": "Tip available",
+        "optional": true
+      },
+      {
+        "name": "feedbackAvailable",
+        "type": "text",
+        "label": "Feedback Available",
+        "default": "Feedback available",
+        "optional": true
+      },
+      {
+        "name": "readFeedback",
+        "type": "text",
+        "label": "Read Feedback",
+        "default": "Read feedback",
+        "optional": true
+      },
+      {
+        "name": "wrongAnswer",
+        "type": "text",
+        "label": "Wrong Answer",
+        "default": "Wrong answer",
+        "optional": true
+      },
+      {
+        "name": "correctAnswer",
+        "type": "text",
+        "label": "Correct Answer",
+        "default": "Correct answer",
+        "optional": true
+      },
+      {
+        "name": "shouldCheck",
+        "type": "text",
+        "label": "Option should have been checked",
+        "default": "Should have been checked",
+        "optional": true
+      },
+      {
+        "name": "shouldNotCheck",
+        "type": "text",
+        "label": "Option should not have been checked",
+        "default": "Should not have been checked",
         "optional": true
       }
     ]

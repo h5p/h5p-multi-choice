@@ -65,14 +65,36 @@
           "label": "Feedback risposta non corretta"
         },
         {
-          "label": "Instructions for single choice",
-          "description": "This text is not displayed, but will be read by read speakers",
-          "default": "Choose one alternative"
+          "label": "Score Bar Label",
+          "default": "Score"
         },
         {
-          "label": "Instructions for single choice",
-          "description": "This text is not displayed, but will be read by read speakers",
-          "default": "Choose one or more alternatives"
+          "label": "Tip Available",
+          "default": "Tip available"
+        },
+        {
+          "label": "Feedback Available",
+          "default": "Feedback available"
+        },
+        {
+          "label": "Read Feedback",
+          "default": "Read feedback"
+        },
+        {
+          "label": "Wrong Answer",
+          "default": "Wrong answer"
+        },
+        {
+          "label": "Correct Answer",
+          "default": "Correct answer"
+        },
+        {
+          "label": "Option should have been checked",
+          "default": "Should have been checked"
+        },
+        {
+          "label": "Option should not have been checked",
+          "default": "Should not have been checked"
         }
       ]
     },
