@@ -71,14 +71,36 @@
           "default": "Feil"
         },
         {
-          "label": "Instruksjoner for envalg",
-          "description": "Denne teksten vises ikke, men leses av read speaker",
-          "default": "Velg ett alternativ"
+          "label": "Resultatsindikator",
+          "default": "Resultat"
         },
         {
-          "label": "Instructions for flervalg",
-          "description": "Denne teksten vises ikke, men leses av read speaker",
-          "default": "Velg ett eller flere alternativer"
+          "label": "Tips tilgjengelig",
+          "default": "Tips tilgjengelig"
+        },
+        {
+          "label": "Tilbakemelding tilgjengelig",
+          "default": "Tilbakemelding tilgjengelig"
+        },
+        {
+          "label": "Les tilbakemelding",
+          "default": "Les tilbakemelding"
+        },
+        {
+          "label": "Galt svar",
+          "default": "Galt svar"
+        },
+        {
+          "label": "Riktig svar",
+          "default": "Riktig svar"
+        },
+        {
+          "label": "Skulle ha vært valgt",
+          "default": "Skulle ha vært valgt"
+        },
+        {
+          "label": "Skulle ikke ha vært valgt",
+          "default": "Skulle ikke ha vært valgt"
         }
       ]
     },
