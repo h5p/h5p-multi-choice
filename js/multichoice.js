@@ -618,7 +618,15 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Removes selections from task.
    */
   var removeSelections = function () {
-    $('.h5p-answer', $myDom).removeClass('h5p-selected').attr('aria-checked', 'false');
+    $('.h5p-answer', $myDom)
+        .removeClass('h5p-selected')
+        .attr('aria-checked', 'false')
+        .not(':first')
+          .attr('tabindex', '-1')
+          .end()
+        .first()
+          .focus();
+
     calcScore();
   };
 
@@ -735,7 +743,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       // Set role
       ans.role = 'checkbox';
       ans.tabindex = '0';
-      if (params.userAnswers.indexOf(i) !== -1) {
+      if (params.userAnswers.indexOf(j) !== -1) {
         ans.checked = 'true';
       }
     }
@@ -750,7 +758,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
           ans.tabindex = '0';
         }
       }
-      else if (params.userAnswers.indexOf(i) !== -1) {
+      else if (params.userAnswers.indexOf(j) !== -1) {
         // This is the correct choice
         ans.tabindex = '0';
         ans.checked = 'true';
