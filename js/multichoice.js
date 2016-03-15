@@ -650,14 +650,19 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Removes selections from task.
    */
   var removeSelections = function () {
-    $('.h5p-answer', $myDom)
+    var $answers = $('.h5p-answer', $myDom)
         .removeClass('h5p-selected')
-        .attr('aria-checked', 'false')
-        .not(':first')
-          .attr('tabindex', '-1')
-          .end()
-        .first()
-          .focus();
+        .attr('aria-checked', 'false');
+
+    if (!params.behaviour.singleAnswer) {
+      $answers.attr('tabindex', '0');
+    }
+    else {
+      $answers.first().attr('tabindex', '0');
+    }
+
+    // Set focus to first option
+    $answers.first().focus();
 
     calcScore();
   };
