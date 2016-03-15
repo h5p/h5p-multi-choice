@@ -133,14 +133,6 @@
   right: 2.125em;
 }
 
-.h5p-multichoice .h5p-hidden-feedback {
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  text-indent: 1px;
-  overflow: hidden;
-}
-
 .h5p-multichoice .h5p-solution-icon {
   font-family: icomoon-multichoice;
   position: absolute;
@@ -351,6 +343,6 @@
 }
 
 /* Remove tip icon on check */
-.h5p-multichoice [aria-disabled="true"] .multichoice-tip {
+.h5p-multichoice [aria-disabled="true"] .h5p-multichoice-tipwrap {
   display: none;
 }

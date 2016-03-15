@@ -42,7 +42,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       '  <% for (var i=0; i < answers.length; i++) { %>' +
       '    <li class="h5p-answer" role="<%= answers[i].role %>" tabindex="<%= answers[i].tabindex %>" aria-checked="<%= answers[i].checked %>" data-id="<%= i %>">' +
       '      <div class="h5p-alternative-container">' +
-      '        <span class="h5p-alternative-inner"><%= answers[i].text %></span>' +
+      '        <span class="h5p-alternative-inner"><%= answers[i].text %></span><span class="h5p-hidden-read">.</span>' +
       '      </div>' +
       '      <div class="h5p-clearfix"></div>' +
       '    </li>' +
@@ -68,9 +68,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     UI: {
       checkAnswerButton: 'Check',
       showSolutionButton: 'Show solution',
-      tryAgainButton: 'Try again',
-      ariaLabelSingleChoice: '',
-      ariaLabelMultiChoice: ''
+      tryAgainButton: 'Try again'
     },
     behaviour: {
       enableRetry: true,
@@ -113,8 +111,6 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     params.behaviour.singleAnswer = (params.behaviour.type === 'single');
   }
 
-  params.ariaLabelUl = params.behaviour.singleAnswer ? params.UI.ariaLabelSingleChoice : params.UI.ariaLabelMultiChoice;
-
   var getCheckboxOrRadioIcon = function (radio, selected) {
     var icon;
     if (radio) {
@@ -155,7 +151,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     $feedbackDialog = $('' +
     '<div class="h5p-feedback-dialog">' +
       '<div class="h5p-feedback-inner">' +
-        '<div class="h5p-feedback-text" aria-live="polite">' + feedback + '</div>' +
+        '<div class="h5p-feedback-text" aria-hidden="true">' + feedback + '</div>' +
       '</div>' +
     '</div>');
 
@@ -214,21 +210,35 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
 
       // Add tip
+      $wrap = $('<div/>', {
+        'class': 'h5p-multichoice-tipwrap',
+        'aria-label': 'Tip available.' // TODO: Translate
+      });
       var $multichoiceTip = $('<div>', {
         'role': 'button',
         'tabindex': 0,
         'title': params.UI.tipsLabel,
         'aria-label': params.UI.tipsLabel,
-        'class': 'multichoice-tip'
+        'aria-expanded': false,
+        'class': 'multichoice-tip',
+        appendTo: $wrap
       }).click(function () {
         var openFeedback = !$tipContainer.children('.h5p-feedback-dialog').is($feedbackDialog);
         removeFeedbackDialog();
 
         // Do not open feedback if it was open
         if (openFeedback) {
+          $multichoiceTip.attr('aria-expanded', true);
+
           // Add tip dialog
           addFeedback($tipContainer, tip);
-        $feedbackDialog.addClass('h5p-has-tip');
+          $feedbackDialog.addClass('h5p-has-tip');
+
+          // Tip for readspeaker
+          self.read(tip);
+        }
+        else {
+          $multichoiceTip.attr('aria-expanded', false);
         }
 
         self.trigger('resize');
@@ -240,15 +250,14 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
         // Do not propagate
         return false;
-      }).keypress(function (e) {
+      }).keydown(function (e) {
         if (e.which === 32) {
           $(this).click();
+          return false;
         }
-
-        return false;
       });
 
-      $('.h5p-alternative-container', this).append($multichoiceTip);
+      $('.h5p-alternative-container', this).append($wrap);
     });
 
     // Set event listeners.
@@ -495,9 +504,38 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       self.hideSolutions();
       removeSelections();
       enableInput();
+      $myDom.find('.h5p-feedback-available').remove();
     }, false);
   };
 
+  /**
+   * @private
+   */
+  var insertFeedback = function ($e, feedback) {
+    // Add visuals
+    addFeedback($e, feedback);
+
+    // Add button for readspeakers
+    $wrap = $('<div/>', {
+      'class': 'h5p-hidden-read h5p-feedback-available',
+      'aria-label': 'Feedback available.' // TODO: Translate
+    });
+    $('<div/>', {
+      'role': 'button',
+      'tabindex': 0,
+      'aria-label': 'Read feedback', // TODO: Translate
+      appendTo: $wrap,
+      on: {
+        keydown: function (e) {
+          if (e.which === 32) { // Space
+            self.read(feedback);
+            return false;
+          }
+        }
+      },
+    });
+    $wrap.appendTo($e);
+  };
 
   /**
    * Shows feedback on the selected fields.
@@ -512,22 +550,22 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         if (a.correct) {
           $e.addClass('h5p-correct').append($('<span/>', {
             'class': 'h5p-answer-icon',
-            html: '. Correct answer', // TODO: Translate
+            html: '. Correct answer.', // TODO: Translate
           }));
         }
         else {
           $e.addClass('h5p-wrong').append($('<span/>', {
             'class': 'h5p-answer-icon',
-            html: '. Wrong answer', // TODO: Translate
+            html: '. Wrong answer.', // TODO: Translate
           }));
         }
       }
 
       if (chosen && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
-        addFeedback($e, a.tipsAndFeedback.chosenFeedback);
+        insertFeedback($e, a.tipsAndFeedback.chosenFeedback);
       }
       else if (!chosen && a.tipsAndFeedback.notChosenFeedback !== undefined && a.tipsAndFeedback.notChosenFeedback !== '') {
-        addFeedback($e, a.tipsAndFeedback.notChosenFeedback);
+        insertFeedback($e, a.tipsAndFeedback.notChosenFeedback);
       }
     });
 
@@ -540,15 +578,6 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     else {
       feedback = params.UI.wrongText;
     }
-
-    // Show hidden feedback for readspeakers
-    var $hF = $('<div/>', {
-      'aria-live': 'assertive',
-      'class': 'h5p-hidden-feedback',
-      'html': feedback,
-      appendTo: $myDom
-    });
-    setTimeout(function () { $hF.remove(); }, 5000);
 
     // Show feedback
     this.setFeedback(feedback, score, max);
@@ -779,7 +808,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
   H5P.MultiChoice.counter = (H5P.MultiChoice.counter === undefined ? 0 : H5P.MultiChoice.counter + 1);
   params.role = (params.behaviour.singleAnswer ? 'radiogroup' : 'group');
-  params.label = 'mcq' + H5P.MultiChoice.counter;
+  params.label = 'h5p-mcq' + H5P.MultiChoice.counter;
 
   /**
    * Pack the current state of the interactivity into a object that can be
