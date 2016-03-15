@@ -75,7 +75,8 @@
   border: 0.1em solid #edd6e9;
   background: #edd6e9;
 }
-.h5p-multichoice .h5p-answer[aria-disabled="true"]:hover .h5p-alternative-container {
+.h5p-multichoice .h5p-answer[aria-disabled="true"]:hover .h5p-alternative-container,
+.h5p-multichoice .h5p-answer[aria-disabled="true"]:focus .h5p-alternative-container {
   border: 0.1em solid #ddd;
   background: #ddd;
 }
@@ -92,6 +93,10 @@
 .h5p-multichoice .h5p-answer[aria-checked="true"]:focus .h5p-alternative-container {
   border: 0.1em solid #e6eef8;
   background: #e6eef8;
+}
+.h5p-multichoice .h5p-answer[aria-checked="true"][aria-disabled="true"]:focus .h5p-alternative-container {
+  border: 0.1em solid #cee0f4;
+  background: #cee0f4;
 }
 
 .h5p-multichoice .h5p-answer:last-child {
