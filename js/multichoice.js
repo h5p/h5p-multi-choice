@@ -575,7 +575,10 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Disables choosing new input.
    */
   var disableInput = function () {
-    $('.h5p-answer', $myDom).attr('aria-disabled', 'true');
+    $('.h5p-answer', $myDom).attr({
+      'aria-disabled': 'true',
+      'tabindex': '-1'
+    });
   };
 
   /**
