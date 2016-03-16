@@ -68,7 +68,15 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     UI: {
       checkAnswerButton: 'Check',
       showSolutionButton: 'Show solution',
-      tryAgainButton: 'Try again'
+      tryAgainButton: 'Try again',
+      scoreBarLabel: 'Score',
+      tipAvailable: "Tip available",
+      feedbackAvailable: "Feedback available",
+      readFeedback: 'Read feedback',
+      wrongAnswer: 'Wrong answer',
+      correctAnswer: 'Correct answer',
+      shouldCheck: "Should have been checked",
+      shouldNotCheck: "Should not have been checked"
     },
     behaviour: {
       enableRetry: true,
@@ -212,7 +220,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       // Add tip
       $wrap = $('<div/>', {
         'class': 'h5p-multichoice-tipwrap',
-        'aria-label': 'Tip available.' // TODO: Translate
+        'aria-label': params.UI.tipAvailable + '.'
       });
       var $multichoiceTip = $('<div>', {
         'role': 'button',
@@ -376,13 +384,13 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       if (a.correct) {
         $e.addClass('h5p-should').append($('<span/>', {
           'class': 'h5p-solution-icon',
-          html: '. Should have been checked.', // TODO: Translate
+          html: params.UI.shouldCheck + '.'
         }));
       }
       else {
         $e.addClass('h5p-should-not').append($('<span/>', {
           'class': 'h5p-solution-icon',
-          html: '. Should not have been checked.', // TODO: Translate
+          html: params.UI.shouldNotCheck + '.'
         }));
       }
     });
@@ -518,12 +526,12 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     // Add button for readspeakers
     $wrap = $('<div/>', {
       'class': 'h5p-hidden-read h5p-feedback-available',
-      'aria-label': 'Feedback available.' // TODO: Translate
+      'aria-label': params.UI.feedbackAvailable + '.'
     });
     $('<div/>', {
       'role': 'button',
       'tabindex': 0,
-      'aria-label': 'Read feedback', // TODO: Translate
+      'aria-label': params.UI.readFeedback + '.',
       appendTo: $wrap,
       on: {
         keydown: function (e) {
@@ -550,13 +558,13 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         if (a.correct) {
           $e.addClass('h5p-correct').append($('<span/>', {
             'class': 'h5p-answer-icon',
-            html: '. Correct answer.', // TODO: Translate
+            html: params.UI.correctAnswer + '.'
           }));
         }
         else {
           $e.addClass('h5p-wrong').append($('<span/>', {
             'class': 'h5p-answer-icon',
-            html: '. Wrong answer.', // TODO: Translate
+            html: params.UI.wrongAnswer + '.'
           }));
         }
       }
@@ -580,7 +588,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     }
 
     // Show feedback
-    this.setFeedback(feedback, score, max);
+    this.setFeedback(feedback, score, max, params.UI.scoreBarLabel);
 
     // Disable task if maxscore is achieved
     if (score === max) {
