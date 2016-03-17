@@ -447,6 +447,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     self.showButton('check-answer');
     self.hideButton('try-again');
     self.hideButton('show-solution');
+    enableInput();
+    $myDom.find('.h5p-feedback-available').remove();
   };
 
   var calculateMaxScore = function () {
