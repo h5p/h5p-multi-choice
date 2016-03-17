@@ -110,20 +110,6 @@
     }
   },
   {
-    "name": "a11y",
-    "type": "group",
-    "label": "Accessibility texts for multichoice",
-    "common": true,
-    "fields": [
-      {
-        "name": "checkAnswersHelpText",
-        "type": "text",
-        "label": "Guide for readspeakers when pressing check answer",
-        "default": "Check answer, navigate to answers to show feedback."
-      }
-    ]
-  },
-  {
     "name": "UI",
     "type": "group",
     "label": "User interface translations for multichoice",
