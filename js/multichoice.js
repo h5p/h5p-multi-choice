@@ -18,11 +18,33 @@
 var H5P = H5P || {};
 
 /**
+ * @typedef {Object} Options
+ *   Options for multiple choice
+ *
+ * @property {Object} behaviour
+ * @property {boolean} behaviour.confirmCheckDialog
+ * @property {boolean} behaviour.confirmRetryDialog
+ *
+ * @property {Object} UI
+ * @property {string} UI.tipsLabel
+ *
+ * @property {Object} [confirmRetry]
+ * @property {string} [confirmRetry.header]
+ * @property {string} [confirmRetry.body]
+ * @property {string} [confirmRetry.cancelLabel]
+ * @property {string} [confirmRetry.confirmLabel]
+ *
+ * @property {Object} [confirmCheck]
+ * @property {string} [confirmCheck.header]
+ * @property {string} [confirmCheck.body]
+ * @property {string} [confirmCheck.cancelLabel]
+ * @property {string} [confirmCheck.confirmLabel]
+ */
+
+/**
  * Module for creating a multiple choice question
  *
- * @param {Object} options
- * @param {Object} options.UI
- * @param {string} options.UI.tipsLabel
+ * @param {Options} options
  * @param {number} contentId
  * @param {Object} contentData
  * @returns {H5P.MultiChoice}
@@ -504,6 +526,11 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       addQuestionToXAPI(xAPIEvent);
       addResponseToXAPI(xAPIEvent);
       self.trigger(xAPIEvent);
+    }, true, {}, {
+      confirmationDialog: {
+        enable: params.behaviour.confirmCheckDialog,
+        l10n: params.confirmCheck
+      }
     });
 
     // Try Again button
@@ -515,7 +542,12 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       removeSelections();
       enableInput();
       $myDom.find('.h5p-feedback-available').remove();
-    }, false);
+    }, false, {}, {
+      confirmationDialog: {
+        enable: params.behaviour.confirmRetryDialog,
+        l10n: params.confirmRetry
+      }
+    });
   };
 
   /**
