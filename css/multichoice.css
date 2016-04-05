@@ -10,48 +10,6 @@
   font-style: normal;
 }
 
-.h5p-multichoice label,
-.h5p-multichoice label.h5p-mc-disabled:hover {
-  position: relative;
-  text-align: left;
-  cursor: pointer;
-  display: block;
-  padding: 0.25em 0.75em 0.25em 0.1em;
-  border-radius: 0.3em;
-  border: 0.1em solid #ddd;
-  font-weight: normal;
-  background: #ddd;
-  -webkit-box-shadow:  0 0.1em 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow:  0 0.1em 0 rgba(0, 0, 0, 0.3);
-  box-shadow:  0 0.1em 0 rgba(0, 0, 0, 0.3);
-
-}
-.h5p-multichoice label.h5p-mc-disabled,
-.h5p-multichoice label.h5p-mc-disabled:hover {
-  cursor: default;
-}
-.h5p-multichoice label:hover {
-  filter: none;
-  border: 0.1em solid #edd6e9;
-  background: #edd6e9;
-}
-
-.h5p-multichoice .h5p-selected > label,
-.h5p-multichoice .h5p-selected > label.h5p-mc-disabled:hover {
-  filter: none;
-  border: 0.1em solid #cee0f4;
-  color: #1a4473;
-  background: #cee0f4;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-.h5p-multichoice h2 {
-  font-size: 1.5em;
-  font-weight: normal;
-}
-
 .h5p-multichoice .h5p-answers {
   list-style: none;
   padding: 0;
@@ -65,60 +23,136 @@
   padding: 0;
   background: none;
   position: relative;
+  outline: none;
+  cursor: pointer;
+}
+
+.h5p-multichoice .h5p-alternative-container {
+  position: relative;
+  text-align: left;
+  display: block;
+  padding: 0.25em 0.75em 0.25em 0.1em;
+  border-radius: 0.3em;
+  border: 0.1em solid #ddd;
+  font-weight: normal;
+  background: #ddd;
+  -webkit-box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.3);
+  line-height: 1.5em;
+}
+.h5p-multichoice .h5p-answer .h5p-alternative-container:before {
+  font-family: icomoon-multichoice;
+  border: medium none;
+  display: block;
+  height: 1em;
+  width: 1em;
+  position: absolute;
+  left: 0.5em;
+  top: 0.25em;
+  margin: auto;
+  text-decoration: none;
+  color: #494949;
+}
+.h5p-multichoice .h5p-answer[role="radio"] .h5p-alternative-container:before {
+  content: "\e600";
+}
+.h5p-multichoice .h5p-answer[role="radio"][aria-checked="true"] .h5p-alternative-container:before {
+  content: "\e603";
+}
+.h5p-multichoice .h5p-answer[role="checkbox"] .h5p-alternative-container:before {
+  content: "\e602";
+}
+.h5p-multichoice .h5p-answer[role="checkbox"][aria-checked="true"] .h5p-alternative-container:before {
+  content: "\e601";
+}
+
+.h5p-multichoice .h5p-answer[aria-disabled="true"] {
+  cursor: default;
+}
+.h5p-multichoice .h5p-answer:hover .h5p-alternative-container,
+.h5p-multichoice .h5p-answer:focus .h5p-alternative-container {
+  border: 0.1em solid #edd6e9;
+  background: #edd6e9;
+}
+.h5p-multichoice .h5p-answer[aria-disabled="true"]:hover .h5p-alternative-container,
+.h5p-multichoice .h5p-answer[aria-disabled="true"]:focus .h5p-alternative-container {
+  border: 0.1em solid #ddd;
+  background: #ddd;
+}
+
+.h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container,
+.h5p-multichoice .h5p-answer[aria-checked="true"]:hover .h5p-alternative-container {
+  border: 0.1em solid #cee0f4;
+  color: #1a4473;
+  background: #cee0f4;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.h5p-multichoice .h5p-answer[aria-checked="true"]:focus .h5p-alternative-container {
+  border: 0.1em solid #e6eef8;
+  background: #e6eef8;
+}
+.h5p-multichoice .h5p-answer[aria-checked="true"][aria-disabled="true"]:focus .h5p-alternative-container {
+  border: 0.1em solid #cee0f4;
+  background: #cee0f4;
 }
 
 .h5p-multichoice .h5p-answer:last-child {
   margin-bottom: 0;
 }
 
-.h5p-multichoice .h5p-answer > label {
-  line-height: 1.5em;
-}
-.h5p-multichoice .h5p-input {
-  display: block;
-  left: -1000px;
-  position: absolute;
+.h5p-multichoice h2 {
+  font-size: 1.5em;
+  font-weight: normal;
 }
 
-.h5p-multichoice .h5p-answer > label:before {
-  text-decoration: none;
+.h5p-multichoice .h5p-answer-icon {
   font-family: 'H5PFontAwesome4';
+  width: 1em;
+  height: 1em;
+  text-decoration: none;
   position: absolute;
   line-height: 1em;
   top: 0.5em;
   right: 0.75em;
+  overflow: hidden;
 }
-.h5p-multichoice .h5p-should.h5p-answer > label:before,
-.h5p-multichoice .h5p-should-not.h5p-answer > label:before {
-  right: 2.125em;
+.h5p-multichoice .h5p-correct .h5p-answer-icon:before {
+  content: "\f00c";
+  color: #255c41;
 }
-.h5p-multichoice .h5p-selected.h5p-wrong > label:before {
+.h5p-multichoice .h5p-wrong .h5p-answer-icon:before {
   content: "\f00d";
   color: #b71c1c;
   padding: 0 0.125em;
 }
-.h5p-multichoice .h5p-selected.h5p-correct > label:before {
-  content: "\f00c";
-  color: #255c41;
+.h5p-multichoice .h5p-should .h5p-answer-icon,
+.h5p-multichoice .h5p-should-not .h5p-answer-icon {
+  right: 2.125em;
 }
 
-.h5p-multichoice .h5p-answer:after {
+.h5p-multichoice .h5p-solution-icon {
   font-family: icomoon-multichoice;
   position: absolute;
   right: 0.75em;
   line-height: 1em;
   top: 0.585em;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
 }
-.h5p-multichoice .h5p-radio .h5p-answer.h5p-should:after {
+.h5p-multichoice .h5p-should[role="radio"] .h5p-solution-icon:before {
   content: "\e603";
 }
-.h5p-multichoice .h5p-radio .h5p-answer.h5p-should-not:after {
+.h5p-multichoice .h5p-should-not[role="radio"] .h5p-solution-icon:before {
   content: "\e600";
 }
-.h5p-multichoice .h5p-check .h5p-answer.h5p-should:after {
+.h5p-multichoice .h5p-should[role="checkbox"] .h5p-solution-icon:before {
   content: "\e601";
 }
-.h5p-multichoice .h5p-check .h5p-answer.h5p-should-not:after {
+.h5p-multichoice .h5p-should-not[role="checkbox"] .h5p-solution-icon:before {
   content: "\e602";
 }
 
@@ -143,6 +177,9 @@
   color: #255c41;
 }
 
+.h5p-alternative-inner {
+  margin: 0 1.5em 0 2em;
+}
 .h5p-alternative-inner div,
 .h5p-alternative-inner p {
   display: inline;
@@ -150,16 +187,6 @@
 
 .h5p-clearfix {
   clear: both;
-}
-
-.h5p-multichoice .h5p-input-container {
-  display: block;
-  float: left;
-  width: 2em;
-}
-
-.h5p-multichoice .h5p-alternative-container {
-  margin: 0 1.5em 0 2em;
 }
 
 .h5p-multichoice .h5p-radio-or-checkbox {
@@ -252,15 +279,6 @@
   box-shadow: inset 1px 1px 0px 0px #dcdcdc;
 }
 
-
-.h5p-multichoice .h5p-answer.h5p-selected label:hover .h5p-feedback-inner:before {
-  box-shadow: inset 1px 1px 0px 0px #edd6e9;
-}
-
-.h5p-multichoice .h5p-answer.h5p-selected .h5p-feedback-inner:before {
-  box-shadow: inset 1px 1px 0px 0px #cee0f4;
-}
-
 .h5p-multichoice .h5p-feedback-dialog.h5p-has-tip .h5p-feedback-inner:before {
   left: auto;
   right: 0.85em;
@@ -325,6 +343,6 @@
 }
 
 /* Remove tip icon on check */
-.h5p-multichoice .h5p-mc-disabled .multichoice-tip {
+.h5p-multichoice [aria-disabled="true"] .h5p-multichoice-tipwrap {
   display: none;
 }

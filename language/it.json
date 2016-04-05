@@ -52,6 +52,10 @@
           "label": "Etichetta pulsante Riprova"
         },
         {
+          "label": "Tip label",
+          "default": "Show tip"
+        },
+        {
           "label": "Feedback risposta corretta"
         },
         {
@@ -59,6 +63,38 @@
         },
         {
           "label": "Feedback risposta non corretta"
+        },
+        {
+          "label": "Score Bar Label",
+          "default": "Score"
+        },
+        {
+          "label": "Tip Available",
+          "default": "Tip available"
+        },
+        {
+          "label": "Feedback Available",
+          "default": "Feedback available"
+        },
+        {
+          "label": "Read Feedback",
+          "default": "Read feedback"
+        },
+        {
+          "label": "Wrong Answer",
+          "default": "Wrong answer"
+        },
+        {
+          "label": "Correct Answer",
+          "default": "Correct answer"
+        },
+        {
+          "label": "Option should have been checked",
+          "default": "Should have been checked"
+        },
+        {
+          "label": "Option should not have been checked",
+          "default": "Should not have been checked"
         }
       ]
     },
