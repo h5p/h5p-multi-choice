@@ -531,6 +531,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       confirmationDialog: {
         enable: params.behaviour.confirmCheckDialog,
         l10n: params.confirmCheck,
+        instance: params.overrideSettings.instance,
         $parentElement: params.overrideSettings.$confirmationDialogParent
       }
     });
@@ -548,6 +549,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       confirmationDialog: {
         enable: params.behaviour.confirmRetryDialog,
         l10n: params.confirmRetry,
+        instance: params.overrideSettings.instance,
         $parentElement: params.overrideSettings.$confirmationDialogParent
       }
     });
