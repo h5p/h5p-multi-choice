@@ -142,6 +142,54 @@
         },
         {
           "label": "Slå av bilete zooming."
+        },
+        {
+          "label": "Slå på bruker-bekreftelse før \"Vis svar\""
+        },
+        {
+          "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
+        }
+      ]
+    },
+    {
+      "label": "Vis svar bruker-bekreftelse",
+      "fields": [
+        {
+          "label": "Tittel",
+          "default": "Ferdig ?"
+        },
+        {
+          "label": "Tekst",
+          "default": "Er du sikker på at du er ferdig ?"
+        },
+        {
+          "label": "Avbryt etikett",
+          "default": "Avbryt"
+        },
+        {
+          "label": "Bekreft etikett",
+          "default": "Bekreft"
+        }
+      ]
+    },
+    {
+      "label": "Prøv igjen bruker-bekreftelse",
+      "fields": [
+        {
+          "label": "Tittel",
+          "default": "Prøv igjen ?"
+        },
+        {
+          "label": "Tekst",
+          "default": "Er du sikker på at du vil prøve igjen?"
+        },
+        {
+          "label": "Avbryt etikett",
+          "default": "Avbrytt"
+        },
+        {
+          "label": "Bekreft etikett",
+          "default": "Bekreft"
         }
       ]
     }
