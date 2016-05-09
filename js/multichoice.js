@@ -434,6 +434,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    */
   this.showSolutions = function () {
     self.showAllSolutions();
+    disableInput();
     self.hideButton('try-again');
   };
 
