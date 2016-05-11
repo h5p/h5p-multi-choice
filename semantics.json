@@ -125,7 +125,7 @@
         "name": "showSolutionButton",
         "type": "text",
         "label": "Show solution button label",
-        "default": "Show solution"
+        "default": "Solution"
       },
       {
         "name": "tryAgainButton",

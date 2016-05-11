@@ -47,8 +47,8 @@
           "default": "Sjekk"
         },
         {
-          "label": "Tekst for \"Vis svar\" knapp",
-          "default": "Vis svar"
+          "label": "Tekst for \"Fasit\" knapp",
+          "default": "Fasit"
         },
         {
           "label": "Merkelapp for «Prøv igjen»-knappen.",
@@ -112,7 +112,7 @@
           "label": "Aktiver \"Prøv igjen\""
         },
         {
-          "label": "Aktiver \"Vis svar\" knapp"
+          "label": "Aktiver \"Fasit\" knapp"
         },
         {
           "label": "Spørsmålstype",
@@ -144,7 +144,7 @@
           "label": "Slå av bilete zooming."
         },
         {
-          "label": "Slå på bruker-bekreftelse før \"Vis svar\""
+          "label": "Slå på bruker-bekreftelse før \"Fasit\""
         },
         {
           "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
@@ -152,7 +152,7 @@
       ]
     },
     {
-      "label": "Vis svar bruker-bekreftelse",
+      "label": "Fasit bruker-bekreftelse",
       "fields": [
         {
           "label": "Tittel",

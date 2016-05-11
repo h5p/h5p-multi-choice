@@ -89,7 +89,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     userAnswers: [],
     UI: {
       checkAnswerButton: 'Check',
-      showSolutionButton: 'Show solution',
+      showSolutionButton: 'Solution',
       tryAgainButton: 'Try again',
       scoreBarLabel: 'Score',
       tipAvailable: "Tip available",
