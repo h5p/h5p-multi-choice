@@ -887,7 +887,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
 
   this.getAnswerGiven = function() {
-    return this.answered || params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
+    return this.answered || params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length >= 0 || blankIsCorrect;
   };
 
   this.getScore = function() {
