@@ -101,6 +101,10 @@
         {
           "label": "Skulle ikke ha vært valgt",
           "default": "Skulle ikke ha vært valgt"
+        },
+        {
+          "label": "Tekst for \"krev inndata\" tilbakemelding",
+          "default": "Inndata kreves før fasit gis"
         }
       ]
     },

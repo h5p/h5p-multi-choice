@@ -217,6 +217,13 @@
         "label": "Option should not have been checked",
         "default": "Should not have been checked",
         "optional": true
+      },
+      {
+        "label": "Text for \"Requires input\" message",
+        "name": "noInput",
+        "type": "text",
+        "default": "Input is required before viewing the solution",
+        "optional": true
       }
     ]
   },
