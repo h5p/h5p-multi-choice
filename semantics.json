@@ -219,10 +219,10 @@
         "optional": true
       },
       {
-        "label": "Text for \"Requires input\" message",
+        "label": "Text for \"Requires answer\" message",
         "name": "noInput",
         "type": "text",
-        "default": "Input is required before viewing the solution",
+        "default": "Please answer before viewing the solution",
         "optional": true
       }
     ]
@@ -284,7 +284,7 @@
         "default": true
       },
       {
-        "label": "Require user input before the solution can be viewed",
+        "label": "Require answer before the solution can be viewed",
         "name": "showSolutionsRequiresInput",
         "type": "boolean",
         "default": true,

@@ -103,8 +103,8 @@
           "default": "Skulle ikke ha vært valgt"
         },
         {
-          "label": "Tekst for \"krev inndata\" tilbakemelding",
-          "default": "Inndata kreves før fasit gis"
+          "label": "Tekst for \"krev svar\"-tilbakemelding",
+          "default": "Svar før du kan se fasit"
         }
       ]
     },
@@ -142,7 +142,7 @@
           "description": "Slå på for å vise alternativene i tilfeldig rekkefølge."
         },
         {
-          "label": "Krev inndata fra brukeren før fasit gis."
+          "label": "Krev svar fra brukeren før fasit gis."
         },
         {
           "label": "Slå av bilete zooming."

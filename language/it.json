@@ -97,8 +97,8 @@
           "default": "Should not have been checked"
         },
         {
-          "label": "Text for \"Requires input\" message",
-          "default": "Input is required before viewing the solution"
+          "label": "Text for \"Requires answer\" message",
+          "default": "Please answer before viewing the solution"
         }
       ]
     },
