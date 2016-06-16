@@ -236,7 +236,12 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
 
       tip = tip.trim();
-      if (!tip.length) {
+      var tipContent = tip
+        .replace(/&nbsp;/g, '')
+        .replace(/<p>/g, '')
+        .replace(/<\/p>/g, '')
+        .trim();
+      if (!tipContent.length) {
         return; // Empty tip
       }
 
