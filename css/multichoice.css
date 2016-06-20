@@ -318,6 +318,9 @@
   cursor: pointer;
   font-weight: normal;
 }
+.h5p-multichoice .multichoice-tip:focus {
+  outline: auto;
+}
 
 .h5p-multichoice .multichoice-tip:hover {
   color: #333;
