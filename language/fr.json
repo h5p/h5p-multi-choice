@@ -95,6 +95,10 @@
         {
           "label": "Option should not have been checked",
           "default": "Should not have been checked"
+        },
+        {
+          "label": "Text for \"Requires answer\" message",
+          "default": "Please answer before viewing the solution"
         }
       ]
     },

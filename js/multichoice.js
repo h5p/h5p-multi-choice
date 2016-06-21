@@ -98,7 +98,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       wrongAnswer: 'Wrong answer',
       correctAnswer: 'Correct answer',
       shouldCheck: "Should have been checked",
-      shouldNotCheck: "Should not have been checked"
+      shouldNotCheck: "Should not have been checked",
+      noInput: 'Input is required before viewing the solution'
     },
     behaviour: {
       enableRetry: true,
@@ -438,7 +439,9 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Shows the solution for the task and hides all buttons.
    */
   this.showSolutions = function () {
+    self.showCheckSolution();
     self.showAllSolutions();
+    disableInput();
     self.hideButton('try-again');
   };
 
@@ -505,8 +508,11 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     // Show solution button
     self.addButton('show-solution', params.UI.showSolutionButton, function () {
       calcScore();
-      if (self.getAnswerGiven()) {
+      if (self.getAnswerGiven(true)) {
         self.showAllSolutions();
+      }
+      else {
+        self.updateFeedbackContent(params.UI.noInput);
       }
     }, false);
 
@@ -890,8 +896,15 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   };
 
 
-  this.getAnswerGiven = function() {
-    return this.answered || params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
+  /**
+   * Check if user has given an answer.
+   *
+   * @param {boolean} [ignoreCheck] Ignore returning true from pressing "check-answer" button.
+   * @return {boolean} True if answer is given
+   */
+  this.getAnswerGiven = function(ignoreCheck) {
+    var answered = ignoreCheck ? false : this.answered;
+    return answered || params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length > 0 || blankIsCorrect;
   };
 
   this.getScore = function() {

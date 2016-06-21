@@ -23,7 +23,6 @@
   padding: 0;
   background: none;
   position: relative;
-  outline: none;
   cursor: pointer;
 }
 
@@ -318,6 +317,9 @@
   color: #777;
   cursor: pointer;
   font-weight: normal;
+}
+.h5p-multichoice .multichoice-tip:focus {
+  outline: auto;
 }
 
 .h5p-multichoice .multichoice-tip:hover {

@@ -217,6 +217,13 @@
         "label": "Option should not have been checked",
         "default": "Should not have been checked",
         "optional": true
+      },
+      {
+        "label": "Text for \"Requires answer\" message",
+        "name": "noInput",
+        "type": "text",
+        "default": "Please answer before viewing the solution",
+        "optional": true
       }
     ]
   },
@@ -277,7 +284,7 @@
         "default": true
       },
       {
-        "label": "Require user input before the solution can be viewed",
+        "label": "Require answer before the solution can be viewed",
         "name": "showSolutionsRequiresInput",
         "type": "boolean",
         "default": true,
