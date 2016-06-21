@@ -18,11 +18,33 @@
 var H5P = H5P || {};
 
 /**
+ * @typedef {Object} Options
+ *   Options for multiple choice
+ *
+ * @property {Object} behaviour
+ * @property {boolean} behaviour.confirmCheckDialog
+ * @property {boolean} behaviour.confirmRetryDialog
+ *
+ * @property {Object} UI
+ * @property {string} UI.tipsLabel
+ *
+ * @property {Object} [confirmRetry]
+ * @property {string} [confirmRetry.header]
+ * @property {string} [confirmRetry.body]
+ * @property {string} [confirmRetry.cancelLabel]
+ * @property {string} [confirmRetry.confirmLabel]
+ *
+ * @property {Object} [confirmCheck]
+ * @property {string} [confirmCheck.header]
+ * @property {string} [confirmCheck.body]
+ * @property {string} [confirmCheck.cancelLabel]
+ * @property {string} [confirmCheck.confirmLabel]
+ */
+
+/**
  * Module for creating a multiple choice question
  *
- * @param {Object} options
- * @param {Object} options.UI
- * @param {string} options.UI.tipsLabel
+ * @param {Options} options
  * @param {number} contentId
  * @param {Object} contentData
  * @returns {H5P.MultiChoice}
@@ -76,7 +98,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       wrongAnswer: 'Wrong answer',
       correctAnswer: 'Correct answer',
       shouldCheck: "Should have been checked",
-      shouldNotCheck: "Should not have been checked"
+      shouldNotCheck: "Should not have been checked",
+      noInput: 'Input is required before viewing the solution'
     },
     behaviour: {
       enableRetry: true,
@@ -86,7 +109,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       randomAnswers: false,
       showSolutionsRequiresInput: true,
       disableImageZooming: false
-    }
+    },
+    overrideSettings: {}
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
@@ -410,7 +434,9 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Shows the solution for the task and hides all buttons.
    */
   this.showSolutions = function () {
+    self.showCheckSolution();
     self.showAllSolutions();
+    disableInput();
     self.hideButton('try-again');
   };
 
@@ -477,8 +503,11 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     // Show solution button
     self.addButton('show-solution', params.UI.showSolutionButton, function () {
       calcScore();
-      if (self.getAnswerGiven()) {
+      if (self.getAnswerGiven(true)) {
         self.showAllSolutions();
+      }
+      else {
+        self.updateFeedbackContent(params.UI.noInput);
       }
     }, false);
 
@@ -504,6 +533,13 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       addQuestionToXAPI(xAPIEvent);
       addResponseToXAPI(xAPIEvent);
       self.trigger(xAPIEvent);
+    }, true, {}, {
+      confirmationDialog: {
+        enable: params.behaviour.confirmCheckDialog,
+        l10n: params.confirmCheck,
+        instance: params.overrideSettings.instance,
+        $parentElement: params.overrideSettings.$confirmationDialogParent
+      }
     });
 
     // Try Again button
@@ -515,7 +551,14 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       removeSelections();
       enableInput();
       $myDom.find('.h5p-feedback-available').remove();
-    }, false);
+    }, false, {}, {
+      confirmationDialog: {
+        enable: params.behaviour.confirmRetryDialog,
+        l10n: params.confirmRetry,
+        instance: params.overrideSettings.instance,
+        $parentElement: params.overrideSettings.$confirmationDialogParent
+      }
+    });
   };
 
   /**
@@ -848,8 +891,15 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   };
 
 
-  this.getAnswerGiven = function() {
-    return this.answered || params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length || blankIsCorrect;
+  /**
+   * Check if user has given an answer.
+   *
+   * @param {boolean} [ignoreCheck] Ignore returning true from pressing "check-answer" button.
+   * @return {boolean} True if answer is given
+   */
+  this.getAnswerGiven = function(ignoreCheck) {
+    var answered = ignoreCheck ? false : this.answered;
+    return answered || params.behaviour.showSolutionsRequiresInput !== true || params.userAnswers.length > 0 || blankIsCorrect;
   };
 
   this.getScore = function() {

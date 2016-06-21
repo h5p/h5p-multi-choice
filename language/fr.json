@@ -95,6 +95,10 @@
         {
           "label": "Option should not have been checked",
           "default": "Should not have been checked"
+        },
+        {
+          "label": "Text for \"Requires answer\" message",
+          "default": "Please answer before viewing the solution"
         }
       ]
     },
@@ -136,6 +140,54 @@
         },
         {
           "label": "Disable image zooming for question image."
+        },
+        {
+          "label": "Show confirmation dialog on \"Check\""
+        },
+        {
+          "label": "Show confirmation dialog on \"Retry\""
+        }
+      ]
+    },
+    {
+      "label": "Check confirmation dialog",
+      "fields": [
+        {
+          "label": "Header text",
+          "default": "Finish ?"
+        },
+        {
+          "label": "Body text",
+          "default": "Are you sure you wish to finish ?"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Cancel"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "Finish"
+        }
+      ]
+    },
+    {
+      "label": "Retry confirmation dialog",
+      "fields": [
+        {
+          "label": "Header text",
+          "default": "Retry ?"
+        },
+        {
+          "label": "Body text",
+          "default": "Are you sure you wish to retry ?"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Cancel"
+        },
+        {
+          "label": "Confirm button label",
+          "default": "Confirm"
         }
       ]
     }

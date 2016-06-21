@@ -47,8 +47,8 @@
           "default": "Sjekk"
         },
         {
-          "label": "Tekst for \"Vis svar\" knapp",
-          "default": "Vis svar"
+          "label": "Tekst for \"Fasit\" knapp",
+          "default": "Fasit"
         },
         {
           "label": "Merkelapp for «Prøv igjen»-knappen.",
@@ -101,6 +101,10 @@
         {
           "label": "Skulle ikke ha vært valgt",
           "default": "Skulle ikke ha vært valgt"
+        },
+        {
+          "label": "Tekst for \"krev svar\"-tilbakemelding",
+          "default": "Svar før du kan se fasit"
         }
       ]
     },
@@ -112,7 +116,7 @@
           "label": "Aktiver \"Prøv igjen\""
         },
         {
-          "label": "Aktiver \"Vis svar\" knapp"
+          "label": "Aktiver \"Fasit\" knapp"
         },
         {
           "label": "Spørsmålstype",
@@ -138,10 +142,58 @@
           "description": "Slå på for å vise de mulige svara i tilfeldig rekkefølge."
         },
         {
-          "label": "Krev inndata fra brukeren før fasit gis."
+          "label": "Krev svar fra brukeren før fasit gis."
         },
         {
           "label": "Slå av bilete zooming."
+        },
+        {
+          "label": "Slå på bruker-bekreftelse før \"Fasit\""
+        },
+        {
+          "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
+        }
+      ]
+    },
+    {
+      "label": "Fasit bruker-bekreftelse",
+      "fields": [
+        {
+          "label": "Tittel",
+          "default": "Ferdig ?"
+        },
+        {
+          "label": "Tekst",
+          "default": "Er du sikker på at du er ferdig ?"
+        },
+        {
+          "label": "Avbryt etikett",
+          "default": "Avbryt"
+        },
+        {
+          "label": "Bekreft etikett",
+          "default": "Bekreft"
+        }
+      ]
+    },
+    {
+      "label": "Prøv igjen bruker-bekreftelse",
+      "fields": [
+        {
+          "label": "Tittel",
+          "default": "Prøv igjen ?"
+        },
+        {
+          "label": "Tekst",
+          "default": "Er du sikker på at du vil prøve igjen?"
+        },
+        {
+          "label": "Avbryt etikett",
+          "default": "Avbrytt"
+        },
+        {
+          "label": "Bekreft etikett",
+          "default": "Bekreft"
         }
       ]
     }

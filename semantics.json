@@ -217,6 +217,13 @@
         "label": "Option should not have been checked",
         "default": "Should not have been checked",
         "optional": true
+      },
+      {
+        "label": "Text for \"Requires answer\" message",
+        "name": "noInput",
+        "type": "text",
+        "default": "Please answer before viewing the solution",
+        "optional": true
       }
     ]
   },
@@ -277,7 +284,7 @@
         "default": true
       },
       {
-        "label": "Require user input before the solution can be viewed",
+        "label": "Require answer before the solution can be viewed",
         "name": "showSolutionsRequiresInput",
         "type": "boolean",
         "default": true,
@@ -289,6 +296,98 @@
         "type": "boolean",
         "default": false,
         "optional": true
+      },
+      {
+        "label": "Show confirmation dialog on \"Check\"",
+        "name": "confirmCheckDialog",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "label": "Show confirmation dialog on \"Retry\"",
+        "name": "confirmRetryDialog",
+        "type": "boolean",
+        "default": false
+      }
+    ]
+  },
+  {
+    "label": "Check confirmation dialog",
+    "name": "confirmCheck",
+    "type": "group",
+    "common": true,
+    "fields": [
+      {
+        "label": "Header text",
+        "name": "header",
+        "type": "text",
+        "default": "Finish ?"
+      },
+      {
+        "label": "Body text",
+        "name": "body",
+        "type": "text",
+        "default": "Are you sure you wish to finish ?",
+        "widget": "html",
+        "enterMode": "p",
+        "tags": [
+          "strong",
+          "em",
+          "del",
+          "u"
+        ]
+      },
+      {
+        "label": "Cancel button label",
+        "name": "cancelLabel",
+        "type": "text",
+        "default": "Cancel"
+      },
+      {
+        "label": "Confirm button label",
+        "name": "confirmLabel",
+        "type": "text",
+        "default": "Finish"
+      }
+    ]
+  },
+  {
+    "label": "Retry confirmation dialog",
+    "name": "confirmRetry",
+    "type": "group",
+    "common": true,
+    "fields": [
+      {
+        "label": "Header text",
+        "name": "header",
+        "type": "text",
+        "default": "Retry ?"
+      },
+      {
+        "label": "Body text",
+        "name": "body",
+        "type": "text",
+        "default": "Are you sure you wish to retry ?",
+        "widget": "html",
+        "enterMode": "p",
+        "tags": [
+          "strong",
+          "em",
+          "del",
+          "u"
+        ]
+      },
+      {
+        "label": "Cancel button label",
+        "name": "cancelLabel",
+        "type": "text",
+        "default": "Cancel"
+      },
+      {
+        "label": "Confirm button label",
+        "name": "confirmLabel",
+        "type": "text",
+        "default": "Confirm"
       }
     ]
   }
