@@ -556,6 +556,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       removeSelections();
       enableInput();
       $myDom.find('.h5p-feedback-available').remove();
+      self.answered = false;
     }, false, {}, {
       confirmationDialog: {
         enable: params.behaviour.confirmRetryDialog,
