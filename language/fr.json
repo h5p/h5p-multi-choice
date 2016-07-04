@@ -1,8 +1,8 @@
 {
   "semantics": [
     {
-      "label": "Image de la question",
-      "description": "Une image optionnelle peut être ajoutée."
+      "label": "Image ou vidéo",
+      "description": "Une image ou une vidéo peut être affichée en option au-dessus de la question."
     },
     {
       "label": "Question"
@@ -21,18 +21,18 @@
             "label": "Correct"
           },
           {
-            "label": "Aide",
+            "label": "Aides et commentaires",
             "fields": [
               {
                 "label": "Texte de l'aide"
               },
               {
-                "label": "Feedback",
-                "description": "Texte de feedback choisi."
+                "label": "Commentaire",
+                "description": "Ce commentaire sera affiché quand l'utilisateur vérifiera sa réponse."
               },
               {
-                "label": "Feedback pour la solution",
-                "description": "Affiché quand la solution est montrée."
+                "label": "Commentaire de la solution",
+                "description": "Ce commentaire sera affiché quand la solution sera affichée."
               }
             ]
           }
@@ -43,62 +43,68 @@
       "label": "Traduction de l'interface utilisateur pour les questions à choix multiples",
       "fields": [
         {
-          "label": "Texte du bouton vérifier"
+          "label": "Texte du bouton \"Vérifier\"",
+          "default": "Vérifier"
         },
         {
-          "label": "Texte du bouton montrer la solution"
+          "label": "Texte du bouton \"Voir la solution\"",
+          "default": "Voir la solution"
         },
         {
-          "label": "Texte du bouton Réessayer"
+          "label": "Texte du bouton \"Recommencer\"",
+          "default": "Recommencer"
         },
         {
-          "label": "Tip label",
-          "default": "Show tip"
+          "label": "Texte de l'indice",
+          "default": "Montrer l'indice"
         },
         {
-          "label": "Feedback pour une réponse correcte"
+          "label": "Commentaire pour une réponse correcte",
+          "default": "C'est exact."
         },
         {
-          "label": "Feedback pour une réponse presque correcte"
+          "label": "Commentaire pour une réponse presque correcte",
+           "default": "C'est presque cela !",
         },
         {
-          "label": "Feedback pour une mauvaise réponse"
+          "label": "Commentaire pour une mauvaise réponse",
+          "default": "Ce n'est pas cela.",
         },
         {
-          "label": "Score Bar Label",
+          "label": "Texte de la barre de score",
           "default": "Score"
         },
         {
-          "label": "Tip Available",
-          "default": "Tip available"
+          "label": "Indice disponible",
+          "default": "Indice disponible"
         },
         {
-          "label": "Feedback Available",
-          "default": "Feedback available"
+          "label": "Commentaire disponible",
+          "default": "Commentaire disponible"
         },
         {
-          "label": "Read Feedback",
-          "default": "Read feedback"
+          "label": "Lire le commentaire",
+          "default": "Lire le commentaire"
         },
         {
-          "label": "Wrong Answer",
-          "default": "Wrong answer"
+          "label": "Réponse incorrecte",
+          "default": "Réponse incorrecte"
         },
         {
-          "label": "Correct Answer",
-          "default": "Correct answer"
+          "label": "Bonne réponse",
+          "default": "Bonne réponse"
         },
         {
-          "label": "Option should have been checked",
-          "default": "Should have been checked"
+          "label": "L'option aurait dû être cochée",
+          "default": "Cette option aurait dû être cochée"
         },
         {
-          "label": "Option should not have been checked",
-          "default": "Should not have been checked"
+          "label": "L'option n'aurait pas dû être cochée",
+          "default": "Cette option aurait dû être cochée"
         },
         {
-          "label": "Text for \"Requires answer\" message",
-          "default": "Please answer before viewing the solution"
+          "label": "Texte du message \"Réponse obligatoire\",
+          "default": "Merci de répondre avant d'afficher la solution"
         }
       ]
     },
@@ -107,87 +113,87 @@
       "description": "Ces options vous permettent de contrôler le déroulement de vos activités.",
       "fields": [
         {
-          "label": "Activer le bouton \"Réessayer\""
+          "label": "Activer le bouton \"Recommencer\""
         },
         {
-          "label": "Activer le bouton \"Solution\""
+          "label": "Activer le bouton \"Voir la solution\""
         },
         {
-          "label": "Question Type",
-          "description": "Select the look and behaviour of the question.",
+          "label": "Type de question",
+          "description": "Choisissez le type de question et ses paramètres.",
           "options": [
             {
-              "label": "Automatic"
+              "label": "Sélection automatique"
             },
             {
-              "label": "Multiple Choice (Checkboxes)"
+              "label": "Question à choix multiples (cases à cocher)"
             },
             {
-              "label": "Single Choice (Radio Buttons)"
+              "label": "Question à choix unique (boutons radio)"
             }
           ]
         },
         {
-          "label": "Donner un point pour chaque activité",
-          "description": "Un point par réponse correcte dans les QCM. Ce ne sera pas une option dans les \"Questions à choix unique\"."
+          "label": "Donner un point par activité",
+          "description": "Attribuer un point (en tout) pour toutes les réponses justes d'un QCM. Ce ne sera pas une option pour les \"Questions à choix unique\"."
         },
         {
-          "label": "Questions aléatoires",
-          "description": "Les questions seront affichées dans l'ordre aléatoire."
+          "label": "Réponses aléatoires",
+          "description": "Les réponses possibles seront affichées dans l'ordre aléatoire."
         },
         {
-          "label": "Une réponse est obligatoire pour montrer la solution"
+          "label": "Une réponse est obligatoire pour voir la solution"
         },
         {
-          "label": "Disable image zooming for question image."
+          "label": "Désactiver la possibilité d'agrandir l'image de la question."
         },
         {
-          "label": "Show confirmation dialog on \"Check\""
+          "label": "Afficher la fenêtre de confirmation pour \"Vérifier\""
         },
         {
-          "label": "Show confirmation dialog on \"Retry\""
+          "label": "Afficher la fenêtre de confirmation pour \"Recommencer\""
         }
       ]
     },
     {
-      "label": "Check confirmation dialog",
+      "label": "Fenêtre de confirmation pour \"Vérifier\"",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Finish ?"
+          "label": "Texte du titre",
+          "default": "Terminer ?"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to finish ?"
+          "label": "Texte du contenu",
+          "default": "Êtes-vous sûr de vouloir terminer ?"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Texte du bouton d'annulation",
+          "default": "Annuler"
         },
         {
-          "label": "Confirm button label",
-          "default": "Finish"
+          "label": "Texte du bouton de confirmation",
+          "default": "Confirmer"
         }
       ]
     },
     {
-      "label": "Retry confirmation dialog",
+      "label": "Fenêtre de confirmation pour \"Recommencer\"",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Retry ?"
+          "label": "Texte du titre",
+          "default": "Recommencer ?"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to retry ?"
+          "label": "Texte du contenu",
+          "default": "Êtes-vous sûr de vouloir recommencer ?"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Texte du bouton d'annulation",
+          "default": "Annuler"
         },
         {
-          "label": "Confirm button label",
-          "default": "Confirm"
+          "label": "Texte du bouton de confirmation",
+          "default": "Confirmer"
         }
       ]
     }
