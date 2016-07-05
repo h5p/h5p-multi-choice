@@ -64,11 +64,11 @@
         },
         {
           "label": "Commentaire pour une réponse presque correcte",
-           "default": "C'est presque cela !",
+          "default": "C'est presque cela !"
         },
         {
           "label": "Commentaire pour une mauvaise réponse",
-          "default": "Ce n'est pas cela.",
+          "default": "Ce n'est pas cela."
         },
         {
           "label": "Texte de la barre de score",
@@ -103,7 +103,7 @@
           "default": "Cette option aurait dû être cochée"
         },
         {
-          "label": "Texte du message \"Réponse obligatoire\",
+          "label": "Texte du message \"Réponse obligatoire\"",
           "default": "Merci de répondre avant d'afficher la solution"
         }
       ]
