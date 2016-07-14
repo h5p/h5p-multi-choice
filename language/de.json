@@ -5,14 +5,12 @@
       "fields": [
         {
           "label": "Typ",
-          "options": [],
           "description": "Optionale Medien, die über der Frage angezeigt werden können."
         }
       ]
     },
     {
-      "label": "Frage",
-      "tags": []
+      "label": "Frage"
     },
     {
       "label": "Verfügbare Optionen",
@@ -20,9 +18,7 @@
       "field": {
         "label": "Option",
         "fields": [
-          {
-            "tags": []
-          },
+          {},
           {
             "label": "Korrekt"
           },
@@ -30,18 +26,15 @@
             "label": "Tipps und Feedback",
             "fields": [
               {
-                "label": "Tipptext",
-                "tags": []
+                "label": "Tipptext"
               },
               {
                 "label": "Ausgewähltes Feedback",
-                "description": "Wird angezeigt, wenn der Benutzer seine Antwort überprüft.",
-                "tags": []
+                "description": "Wird angezeigt, wenn der Benutzer seine Antwort überprüft."
               },
               {
                 "label": "Nicht ausgewähltes Feedback",
-                "description": "Wird angezeigt, wenn auch die Lösung angezeigt wird.",
-                "tags": []
+                "description": "Wird angezeigt, wenn auch die Lösung angezeigt wird."
               }
             ]
           }
@@ -126,7 +119,6 @@
         {
           "label": "Fragentyp",
           "description": "Wählen des Aussehens und des Verhaltens der Frage",
-          "default": "auto",
           "options": [
             {
               "label": "Automatisch"
@@ -170,8 +162,7 @@
         },
         {
           "label": "Bodytext",
-          "default": "Ganz sicher beenden?",
-          "tags": []
+          "default": "Ganz sicher beenden?"
         },
         {
           "label": "Label des Abbrechen Buttons",
@@ -192,8 +183,7 @@
         },
         {
           "label": "Bodytext",
-          "default": "Ganz sicher wiederholen?",
-          "tags": []
+          "default": "Ganz sicher wiederholen?"
         },
         {
           "label": "Label des Abbrechen Buttons",
