@@ -1,0 +1,199 @@
+{
+  "semantics": [
+    {
+      "label": "Medien",
+      "fields": [
+        {
+          "label": "Typ",
+          "description": "Optionale Medien, die über der Frage angezeigt werden können."
+        }
+      ]
+    },
+    {
+      "label": "Frage"
+    },
+    {
+      "label": "Verfügbare Optionen",
+      "description": "Die Alternativen, aus denen der Benutzer wählen kann.",
+      "field": {
+        "label": "Option",
+        "fields": [
+          {},
+          {
+            "label": "Korrekt"
+          },
+          {
+            "label": "Tipps und Feedback",
+            "fields": [
+              {
+                "label": "Tipptext"
+              },
+              {
+                "label": "Ausgewähltes Feedback",
+                "description": "Wird angezeigt, wenn der Benutzer seine Antwort überprüft."
+              },
+              {
+                "label": "Nicht ausgewähltes Feedback",
+                "description": "Wird angezeigt, wenn auch die Lösung angezeigt wird."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Benutzerinterface Übersetzungen für Mehrfachwahl",
+      "fields": [
+        {
+          "label": "Label für den Antwort überprüfen Button",
+          "default": "Überprüfen"
+        },
+        {
+          "label": "Label für den Lösung anzeigen Button",
+          "default": "Lösung anzeigen"
+        },
+        {
+          "label": "Label für den Wiederholen Button",
+          "default": "Wiederholen"
+        },
+        {
+          "label": "Tipplabel",
+          "default": "Tipp anzeigen"
+        },
+        {
+          "label": "Feedback zur korrekten Antwort",
+          "default": "Korrekt!"
+        },
+        {
+          "label": "Feedback zu einer fast korrekten Antwort",
+          "default": "Fast!"
+        },
+        {
+          "label": "Feedback zu einer inkorrekten Antwort",
+          "default": "Falsch"
+        },
+        {
+          "label": "Label für den Scorebalken",
+          "default": "Score"
+        },
+        {
+          "label": "Tipp verfügbar",
+          "default": "Tipp verfügbar"
+        },
+        {
+          "label": "Feedback verfügbar",
+          "default": "Feedback verfügbar"
+        },
+        {
+          "label": "Feedback lesen",
+          "default": "Feedback lesen"
+        },
+        {
+          "label": "Falsche Antwort",
+          "default": "Falsche Antwort"
+        },
+        {
+          "label": "Korrekte Antwort",
+          "default": "Korrekte Antwort"
+        },
+        {
+          "label": "Option hätte ausgewählt werden sollen",
+          "default": "Hätte ausgewählt werden sollen"
+        },
+        {
+          "label": "Option hätte nicht ausgewählt werden sollen",
+          "default": "Hätte nicht ausgewählt werden sollen"
+        }
+      ]
+    },
+    {
+      "label": "Verhaltenseinstellungen.",
+      "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält",
+      "fields": [
+        {
+          "label": "Aktivieren des \"Wiederholen\" Buttons"
+        },
+        {
+          "label": "Aktivieren des \"Lösung anzeigen\" Buttons"
+        },
+        {
+          "label": "Fragentyp",
+          "description": "Wählen des Aussehens und des Verhaltens der Frage",
+          "options": [
+            {
+              "label": "Automatisch"
+            },
+            {
+              "label": "Multiple Choice (Checkboxen)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
+        },
+        {
+          "label": "Einen Punkt für die ganze Aufgabe vergeben",
+          "description": "Aktivieren, um insgesamt einen Punkt für Multiple Choice Antworten zu vergeben. Dies ist keine Option im \"Single Antwort\" Modus."
+        },
+        {
+          "label": "Antworten zufällig anordnen",
+          "description": "Aktivieren, um die Anordnung der Fragen auf dem Display zufällig zu wählen."
+        },
+        {
+          "label": "Benutzereingabe erforderlich machen, bevor die Antwort eingesehen werden kann"
+        },
+        {
+          "label": "Bilderzoom für Bilder zu Fragen deaktivieren."
+        },
+        {
+          "label": "Bestätigungsdialog bei \"Überprüfen\" anzeigen"
+        },
+        {
+          "label": "Bestätigungsdialog bei \"Wiederholen\" anzeigen"
+        }
+      ]
+    },
+    {
+      "label": "Bestätigungsdialog auswählen",
+      "fields": [
+        {
+          "label": "Headertext",
+          "default": "Beenden?"
+        },
+        {
+          "label": "Bodytext",
+          "default": "Ganz sicher beenden?"
+        },
+        {
+          "label": "Label des Abbrechen Buttons",
+          "default": "Abbrechen"
+        },
+        {
+          "label": "Label des Bestätigungs Buttons",
+          "default": "Beenden"
+        }
+      ]
+    },
+    {
+      "label": "Bestätigungsdialog beim Wiederholen",
+      "fields": [
+        {
+          "label": "Headertext",
+          "default": "Wiederholen?"
+        },
+        {
+          "label": "Bodytext",
+          "default": "Ganz sicher wiederholen?"
+        },
+        {
+          "label": "Label des Abbrechen Buttons",
+          "default": "Abbrechen"
+        },
+        {
+          "label": "Label des Bestätigungsbuttons",
+          "default": "Bestätigen"
+        }
+      ]
+    }
+  ]
+}

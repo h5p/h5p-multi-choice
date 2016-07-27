@@ -4,6 +4,8 @@ H5P Multi Choice
 Test your users with multiple choice tasks.
 Can be used in Question Sets, Course Presentations and Interactive Videos.
 
+[See it in action on the H5P.org project page](https://h5p.org/multichoice)
+
 ## License
 
 (The MIT License)
