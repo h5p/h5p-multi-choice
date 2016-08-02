@@ -237,7 +237,12 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
 
       tip = tip.trim();
-      if (!tip.length) {
+      var tipContent = tip
+        .replace(/&nbsp;/g, '')
+        .replace(/<p>/g, '')
+        .replace(/<\/p>/g, '')
+        .trim();
+      if (!tipContent.length) {
         return; // Empty tip
       }
 
@@ -551,6 +556,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       removeSelections();
       enableInput();
       $myDom.find('.h5p-feedback-available').remove();
+      self.answered = false;
     }, false, {}, {
       confirmationDialog: {
         enable: params.behaviour.confirmRetryDialog,
