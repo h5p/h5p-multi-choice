@@ -29,12 +29,12 @@
                 "label": "Tipptext"
               },
               {
-                "label": "Ausgewähltes Feedback",
+                "label": "Feedback für Ausgewähltes",
                 "description": "Wird angezeigt, wenn der Benutzer seine Antwort überprüft."
               },
               {
-                "label": "Nicht ausgewähltes Feedback",
-                "description": "Wird angezeigt, wenn auch die Lösung angezeigt wird."
+                "label": "Feedback für nicht Ausgewähltes",
+                "description": "Wird angezeigt, wenn die Lösung angezeigt wird."
               }
             ]
           }
@@ -42,23 +42,23 @@
       }
     },
     {
-      "label": "Benutzerinterface Übersetzungen für Mehrfachwahl",
+      "label": "Benutzerschnittstelle \"Übersetzungen\" für Mehrfachwahl",
       "fields": [
         {
-          "label": "Label für den Antwort überprüfen Button",
+          "label": "Beschriftung für den \"Antwort überprüfen\"-Button",
           "default": "Überprüfen"
         },
         {
-          "label": "Label für den Lösung anzeigen Button",
-          "default": "Lösung anzeigen"
+          "label": "Beschriftung für den \"Lösung zeigen\"-Button",
+          "default": "Lösung zeigen"
         },
         {
-          "label": "Label für den Wiederholen Button",
+          "label": "Beschriftung für den Wiederholen-Button",
           "default": "Wiederholen"
         },
         {
-          "label": "Tipplabel",
-          "default": "Tipp anzeigen"
+          "label": "Tippbeschriftung",
+          "default": "Tipp zeigen"
         },
         {
           "label": "Feedback zur korrekten Antwort",
@@ -73,8 +73,8 @@
           "default": "Falsch"
         },
         {
-          "label": "Label für den Scorebalken",
-          "default": "Score"
+          "label": "Beschriftung für den Punktebalken",
+          "default": "Punkte"
         },
         {
           "label": "Tipp verfügbar",
@@ -103,6 +103,10 @@
         {
           "label": "Option hätte nicht ausgewählt werden sollen",
           "default": "Hätte nicht ausgewählt werden sollen"
+        },
+        {
+          "label": "Text for \"Requires answer\" message",
+          "default": "Bitte antworte, bevor du die Lösung sehen kannst",
         }
       ]
     },
@@ -111,14 +115,14 @@
       "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält",
       "fields": [
         {
-          "label": "Aktivieren des \"Wiederholen\" Buttons"
+          "label": "Aktivieren des \"Wiederholen\"-Buttons"
         },
         {
-          "label": "Aktivieren des \"Lösung anzeigen\" Buttons"
+          "label": "Aktivieren des \"Lösung zeigen\"-Buttons"
         },
         {
           "label": "Fragentyp",
-          "description": "Wählen des Aussehens und des Verhaltens der Frage",
+          "description": "Wähle das Aussehen und das Verhalten der Frage",
           "options": [
             {
               "label": "Automatisch"
@@ -133,11 +137,11 @@
         },
         {
           "label": "Einen Punkt für die ganze Aufgabe vergeben",
-          "description": "Aktivieren, um insgesamt einen Punkt für Multiple Choice Antworten zu vergeben. Dies ist keine Option im \"Single Antwort\" Modus."
+          "description": "Aktivieren, um insgesamt einen Punkt für Multiple-Choice-Antworten zu vergeben. Dies ist keine Option im \"Single Antwort\" Modus."
         },
         {
           "label": "Antworten zufällig anordnen",
-          "description": "Aktivieren, um die Anordnung der Fragen auf dem Display zufällig zu wählen."
+          "description": "Aktivieren, um die Anordnung der Fragen auf dem Bildschirm zufällig zu wählen."
         },
         {
           "label": "Benutzereingabe erforderlich machen, bevor die Antwort eingesehen werden kann"
@@ -165,11 +169,11 @@
           "default": "Ganz sicher beenden?"
         },
         {
-          "label": "Label des Abbrechen Buttons",
+          "label": "Beschriftung des Abbrechen-Buttons",
           "default": "Abbrechen"
         },
         {
-          "label": "Label des Bestätigungs Buttons",
+          "label": "Beschriftung des Bestätigungs-Buttons",
           "default": "Beenden"
         }
       ]
