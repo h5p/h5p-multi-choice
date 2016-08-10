@@ -18,7 +18,9 @@
       "field": {
         "label": "Option",
         "fields": [
-          {},
+          {
+            "label": "Text"
+          },
           {
             "label": "Korrekt"
           },
@@ -42,7 +44,7 @@
       }
     },
     {
-      "label": "Benutzerschnittstelle \"Übersetzungen\" für Mehrfachwahl",
+      "label": "Benutzerschnittstelle \"Übersetzungen\" für multi-choice",
       "fields": [
         {
           "label": "Beschriftung für den \"Antwort überprüfen\"-Button",
@@ -105,14 +107,14 @@
           "default": "Hätte nicht ausgewählt werden sollen"
         },
         {
-          "label": "Text for \"Requires answer\" message",
-          "default": "Bitte antworte, bevor du die Lösung sehen kannst",
+          "label": "Text für den \"Benötigt Antwort\"-Hinweis",
+          "default": "Bitte antworte erst, damit du die Lösung sehen kannst",
         }
       ]
     },
     {
       "label": "Verhaltenseinstellungen.",
-      "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält",
+      "description": "Diese Optionen steuern, wie sich die Aufgabe verhält",
       "fields": [
         {
           "label": "Aktivieren des \"Wiederholen\"-Buttons"
@@ -128,7 +130,7 @@
               "label": "Automatisch"
             },
             {
-              "label": "Multiple Choice (Checkboxen)"
+              "label": "Multiple Choice (Checkboxes)"
             },
             {
               "label": "Single Choice (Radio Buttons)"
@@ -141,13 +143,13 @@
         },
         {
           "label": "Antworten zufällig anordnen",
-          "description": "Aktivieren, um die Anordnung der Fragen auf dem Bildschirm zufällig zu wählen."
+          "description": "Aktivieren, um die Reihenfolge der Fragen auf dem Bildschirm zufällig zu wählen."
         },
         {
-          "label": "Benutzereingabe erforderlich machen, bevor die Antwort eingesehen werden kann"
+          "label": "Benutzereingabe erforderlich machen, bevor die Antwort angesehen werden kann"
         },
         {
-          "label": "Bilderzoom für Bilder zu Fragen deaktivieren."
+          "label": "Bilderzoom bei Fragen mit Bildern deaktivieren."
         },
         {
           "label": "Bestätigungsdialog bei \"Überprüfen\" anzeigen"
@@ -158,7 +160,7 @@
       ]
     },
     {
-      "label": "Bestätigungsdialog auswählen",
+      "label": "Bestätigungsdialog beim Überprüfen",
       "fields": [
         {
           "label": "Headertext",
@@ -190,11 +192,11 @@
           "default": "Ganz sicher wiederholen?"
         },
         {
-          "label": "Label des Abbrechen Buttons",
+          "label": "Beschriftung des Abbrechen-Buttons",
           "default": "Abbrechen"
         },
         {
-          "label": "Label des Bestätigungsbuttons",
+          "label": "Beschriftung des Bestätigungen-Buttons",
           "default": "Bestätigen"
         }
       ]
