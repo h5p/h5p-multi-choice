@@ -39,6 +39,8 @@
   -moz-box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.3);
   line-height: 1.5em;
+  padding-left: 2em;
+  text-indent: -2em;
 }
 .h5p-multichoice .h5p-answer .h5p-alternative-container:before {
   font-family: icomoon-multichoice;
@@ -52,6 +54,7 @@
   margin: auto;
   text-decoration: none;
   color: #494949;
+  padding-left: 2em;
 }
 .h5p-multichoice .h5p-answer[role="radio"] .h5p-alternative-container:before {
   content: "\e600";
