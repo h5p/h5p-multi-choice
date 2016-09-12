@@ -10,7 +10,7 @@
         "label": "Type",
         "options": [
           "H5P.Image 1.0",
-          "H5P.Video 1.2"
+          "H5P.Video 1.3"
         ],
         "optional": true,
         "description": "Optional media to display above the question."
@@ -73,7 +73,12 @@
               "label": "Tip text",
               "type": "text",
               "widget": "html",
-              "tags": ["p", "br", "strong", "em"],
+              "tags": [
+                "p",
+                "br",
+                "strong",
+                "em"
+              ],
               "optional": true
             },
             {
