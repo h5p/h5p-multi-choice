@@ -150,6 +150,10 @@
         },
         {
           "label": "Bestätigungsdialog bei \"Wiederholen\" anzeigen"
+        },
+        {
+          "label": "Instant feedback",
+          "description": "Enabling instant feedback will instantly evaluate your answers when selecting an option",
         }
       ]
     },

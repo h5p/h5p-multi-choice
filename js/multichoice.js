@@ -108,7 +108,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       singlePoint: true,
       randomAnswers: false,
       showSolutionsRequiresInput: true,
-      disableImageZooming: false
+      disableImageZooming: false,
+      instantFeedback: false
     },
     overrideSettings: {}
   };
@@ -330,12 +331,17 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
 
       self.triggerXAPI('interacted');
+      self.hideSolutions();
 
       if (params.userAnswers.length) {
-        self.hideSolutions();
         self.showButton('check-answer');
         self.hideButton('try-again');
         self.hideButton('show-solution');
+
+        // Auto-check
+        if (params.behaviour.instantFeedback) {
+          checkAnswer();
+        }
       }
     };
 
@@ -501,6 +507,39 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   };
 
   /**
+   * Check answer
+   */
+  var checkAnswer = function () {
+    self.answered = true;
+    // Unbind removal of feedback dialogs on click
+    $myDom.unbind('click', removeFeedbackDialog );
+
+    // Remove all tip dialogs
+    removeFeedbackDialog();
+
+
+
+    self.hideButton('check-answer');
+    if (params.behaviour.enableSolutionsButton && self.getAnswerGiven()) {
+      self.showButton('show-solution');
+    }
+    if (params.behaviour.enableRetry) {
+      self.showButton('try-again');
+    }
+
+    var fullScore = self.showCheckSolution();
+    if (!params.behaviour.instantFeedback || fullScore) {
+      disableInput();
+    }
+
+    var xAPIEvent = self.createXAPIEventTemplate('answered');
+    addQuestionToXAPI(xAPIEvent);
+    addResponseToXAPI(xAPIEvent);
+    self.trigger(xAPIEvent);
+    self.trigger('resize');
+  };
+
+  /**
    * Adds the ui buttons.
    * @private
    */
@@ -517,35 +556,19 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     }, false);
 
     // Check solution button
-    self.addButton('check-answer', params.UI.checkAnswerButton, function () {
-      self.answered = true;
-      // Unbind removal of feedback dialogs on click
-      $myDom.unbind('click', removeFeedbackDialog );
+    if (!params.behaviour.instantFeedback) {
+      self.addButton('check-answer', params.UI.checkAnswerButton, function () {
+        checkAnswer();
+      }, true, {}, {
+        confirmationDialog: {
+          enable: params.behaviour.confirmCheckDialog,
+          l10n: params.confirmCheck,
+          instance: params.overrideSettings.instance,
+          $parentElement: params.overrideSettings.$confirmationDialogParent
+        }
+      });
+    }
 
-      // Remove all tip dialogs
-      removeFeedbackDialog();
-
-      disableInput();
-      self.hideButton('check-answer');
-      if (params.behaviour.enableSolutionsButton && self.getAnswerGiven()) {
-        self.showButton('show-solution');
-      }
-      if (params.behaviour.enableRetry) {
-        self.showButton('try-again');
-      }
-      self.showCheckSolution();
-      var xAPIEvent = self.createXAPIEventTemplate('answered');
-      addQuestionToXAPI(xAPIEvent);
-      addResponseToXAPI(xAPIEvent);
-      self.trigger(xAPIEvent);
-    }, true, {}, {
-      confirmationDialog: {
-        enable: params.behaviour.confirmCheckDialog,
-        l10n: params.confirmCheck,
-        instance: params.overrideSettings.instance,
-        $parentElement: params.overrideSettings.$confirmationDialogParent
-      }
-    });
 
     // Try Again button
     self.addButton('try-again', params.UI.tryAgainButton, function () {
@@ -599,6 +622,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   /**
    * Shows feedback on the selected fields.
    * @public
+   *
+   * @returns {boolean} True if full score was achieved
    */
   this.showCheckSolution = function () {
     $myDom.find('.h5p-answer').each(function (i, e) {
@@ -642,11 +667,13 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     this.setFeedback(feedback, score, max, params.UI.scoreBarLabel);
 
     // Disable task if maxscore is achieved
-    if (score === max) {
+    var fullScore = score === max;
+    if (fullScore) {
       finishedTask();
     }
 
     self.trigger('resize');
+    return fullScore;
   };
 
   /**

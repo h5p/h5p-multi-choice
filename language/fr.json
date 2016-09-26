@@ -152,6 +152,10 @@
         },
         {
           "label": "Afficher la fenêtre de confirmation pour \"Recommencer\""
+        },
+        {
+          "label": "Instant feedback",
+          "description": "Enabling instant feedback will instantly evaluate your answers when selecting an option",
         }
       ]
     },

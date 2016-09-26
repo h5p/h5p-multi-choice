@@ -313,6 +313,13 @@
         "name": "confirmRetryDialog",
         "type": "boolean",
         "default": false
+      },
+      {
+        "label": "Instant feedback",
+        "name": "instantFeedback",
+        "description": "Enabling instant feedback will instantly evaluate your answers when selecting an option",
+        "type": "boolean",
+        "default": false
       }
     ]
   },
