@@ -445,6 +445,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Shows the solution for the task and hides all buttons.
    */
   this.showSolutions = function () {
+    removeFeedbackDialog();
     self.showCheckSolution();
     self.showAllSolutions();
     disableInput();
