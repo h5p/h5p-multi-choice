@@ -155,7 +155,7 @@
         },
         {
           "label": "Instant feedback",
-          "description": "Enabling instant feedback will instantly evaluate your answers when selecting an option",
+          "description": "Enabling instant feedback will instantly evaluate your answers when selecting an option"
         }
       ]
     },
