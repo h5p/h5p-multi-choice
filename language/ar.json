@@ -152,8 +152,7 @@
           "label": "Show confirmation dialog on \"Retry\""
         },
         {
-          "label": "Instant feedback",
-          "description": "Enabling instant feedback will instantly evaluate your answers when selecting an option"
+          "label": "Automatically check answers after choosing an alternative"
         }
       ]
     },

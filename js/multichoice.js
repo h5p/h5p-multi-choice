@@ -108,7 +108,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       randomAnswers: false,
       showSolutionsRequiresInput: true,
       disableImageZooming: false,
-      instantFeedback: false
+      autoCheck: false
     },
     overrideSettings: {}
   };
@@ -318,6 +318,12 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
       else {
         if ($ans.attr('aria-checked') === 'true') {
+
+          // Do not allow un-checking when retry disabled and auto check
+          if (params.behaviour.autoCheck && !params.behaviour.enableRetry) {
+            return;
+          }
+
           // Remove check
           $ans.removeClass('h5p-selected').attr('aria-checked', 'false');
         }
@@ -337,9 +343,20 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         self.hideButton('try-again');
         self.hideButton('show-solution');
 
-        // Auto-check
-        if (params.behaviour.instantFeedback) {
-          checkAnswer();
+        if (params.behaviour.autoCheck) {
+          if (params.behaviour.singleAnswer && !params.behaviour.enableRetry) {
+            // Only a single answer allowed
+            checkAnswer();
+          }
+          else {
+            // Show feedback for selected alternatives
+            self.showCheckSolution(true);
+
+            // Always finish task if it was completed successfully
+            if (score === self.getMaxScore()) {
+              checkAnswer();
+            }
+          }
         }
       }
     };
@@ -405,6 +422,20 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         score = 0;
       }
     }
+
+    // Has answered through auto-check in a previous session
+    if (hasCheckedAnswer && params.behaviour.autoCheck) {
+      // Show feedback for checked answers
+      self.showCheckSolution(true);
+
+      var singleAnsNoRetry = params.behaviour.singleAnswer && !params.behaviour.enableRetry;
+      var fullScore = score === self.getMaxScore();
+
+      // Check if only allowed to give a single answer or already full score
+      if (fullScore || singleAnsNoRetry) {
+        checkAnswer();
+      }
+    }
   };
 
   this.showAllSolutions = function () {
@@ -430,6 +461,9 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       }
     });
     var max = self.getMaxScore();
+
+    // Make sure input is disabled in solution mode
+    disableInput();
 
     //Hide buttons and retry depending on settings.
     self.hideButton('check-answer');
@@ -517,8 +551,6 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     // Remove all tip dialogs
     removeFeedbackDialog();
 
-
-
     self.hideButton('check-answer');
     if (params.behaviour.enableSolutionsButton && self.getAnswerGiven()) {
       self.showButton('show-solution');
@@ -527,10 +559,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       self.showButton('try-again');
     }
 
-    var fullScore = self.showCheckSolution();
-    if (!params.behaviour.instantFeedback || fullScore) {
-      disableInput();
-    }
+    self.showCheckSolution();
+    disableInput();
 
     var xAPIEvent = self.createXAPIEventTemplate('answered');
     addQuestionToXAPI(xAPIEvent);
@@ -556,19 +586,16 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     }, false);
 
     // Check solution button
-    if (!params.behaviour.instantFeedback) {
-      self.addButton('check-answer', params.UI.checkAnswerButton, function () {
-        checkAnswer();
-      }, true, {}, {
-        confirmationDialog: {
-          enable: params.behaviour.confirmCheckDialog,
-          l10n: params.confirmCheck,
-          instance: params.overrideSettings.instance,
-          $parentElement: params.overrideSettings.$confirmationDialogParent
-        }
-      });
-    }
-
+    self.addButton('check-answer', params.UI.checkAnswerButton, function () {
+      checkAnswer();
+    }, true, {}, {
+      confirmationDialog: {
+        enable: params.behaviour.confirmCheckDialog,
+        l10n: params.confirmCheck,
+        instance: params.overrideSettings.instance,
+        $parentElement: params.overrideSettings.$confirmationDialogParent
+      }
+    });
 
     // Try Again button
     self.addButton('try-again', params.UI.tryAgainButton, function () {
@@ -622,10 +649,9 @@ H5P.MultiChoice = function(options, contentId, contentData) {
   /**
    * Shows feedback on the selected fields.
    * @public
-   *
-   * @returns {boolean} True if full score was achieved
+   * @param {boolean} [skipFeedback] Skip showing feedback if true
    */
-  this.showCheckSolution = function () {
+  this.showCheckSolution = function (skipFeedback) {
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = $(e);
       var a = params.answers[i];
@@ -659,7 +685,9 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     var feedback = params.UI.feedback.replace('@score', score).replace('@total', max);
 
     // Show feedback
-    this.setFeedback(feedback, score, max, params.UI.scoreBarLabel);
+    if (!skipFeedback) {
+      this.setFeedback(feedback, score, max, params.UI.scoreBarLabel);
+    }
 
     // Disable task if maxscore is achieved
     var fullScore = score === max;
@@ -668,7 +696,6 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     }
 
     self.trigger('resize');
-    return fullScore;
   };
 
   /**
@@ -853,6 +880,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     }
   }
 
+  var hasCheckedAnswer = false;
+
   // Loop through choices
   for (var j = 0; j < params.answers.length; j++) {
     var ans = params.answers[j];
@@ -863,6 +892,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       ans.tabindex = '0';
       if (params.userAnswers.indexOf(j) !== -1) {
         ans.checked = 'true';
+        hasCheckedAnswer = true;
       }
     }
     else {
@@ -880,6 +910,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         // This is the correct choice
         ans.tabindex = '0';
         ans.checked = 'true';
+        hasCheckedAnswer = true;
       }
     }
 

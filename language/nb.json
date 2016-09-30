@@ -158,8 +158,7 @@
           "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
         },
         {
-          "label": "Automatisk sjekk svar",
-          "description": "Slå på for å automatisk evaluere valgte alternativer"
+          "label": "Umiddelbar tilbakemelding på avgitt svar"
         }
       ]
     },

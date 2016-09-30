@@ -325,9 +325,8 @@
         "default": false
       },
       {
-        "label": "Instant feedback",
-        "name": "instantFeedback",
-        "description": "Enabling instant feedback will instantly evaluate your answers when selecting an option",
+        "label": "Automatically check answers after choosing an alternative",
+        "name": "autoCheck",
         "type": "boolean",
         "default": false
       }
