@@ -196,17 +196,11 @@
         "optional": true
       },
       {
-        "name": "wrongAnswer",
+        "name": "feedback",
         "type": "text",
-        "label": "Wrong Answer",
-        "default": "Wrong answer",
-        "optional": true
-      },
-      {
-        "name": "correctAnswer",
-        "type": "text",
-        "label": "Correct Answer",
-        "default": "Correct answer",
+        "label": "Feedback text",
+        "default": "You got @score of @total points",
+        "description": "Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'",
         "optional": true
       },
       {
