@@ -346,6 +346,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     };
 
     $answers.click(function () {
+      self.answered = true;
       toggleCheck($(this));
     }).keydown(function (e) {
       if (e.keyCode === 32) { // Space bar
@@ -511,7 +512,6 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    * Check answer
    */
   var checkAnswer = function () {
-    self.answered = true;
     // Unbind removal of feedback dialogs on click
     $myDom.unbind('click', removeFeedbackDialog );
 
