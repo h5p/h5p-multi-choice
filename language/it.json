@@ -89,6 +89,10 @@
           "default": "Correct answer"
         },
         {
+          "label": "Feedback text",
+          "default": "Feedback text"
+        },
+        {
           "label": "Option should have been checked",
           "default": "Should have been checked"
         },

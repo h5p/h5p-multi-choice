@@ -95,6 +95,10 @@
           "default": "Bonne réponse"
         },
         {
+          "label": "Feedback text",
+          "default": "Feedback text"
+        },
+        {
           "label": "L'option aurait dû être cochée",
           "default": "Cette option aurait dû être cochée"
         },

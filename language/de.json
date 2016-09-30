@@ -97,6 +97,10 @@
           "default": "Korrekte Antwort"
         },
         {
+          "label": "Feedback text",
+          "default": "Feedback text"
+        },
+        {
           "label": "Option hätte ausgewählt werden sollen",
           "default": "Hätte ausgewählt werden sollen"
         },
