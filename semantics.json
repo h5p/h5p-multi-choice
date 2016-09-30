@@ -193,6 +193,22 @@
         "type": "text",
         "label": "Read Feedback",
         "default": "Read feedback",
+        "optional": true,
+        "deprecated": true
+      },
+      {
+        "name": "wrongAnswer",
+        "type": "text",
+        "label": "Wrong Answer",
+        "default": "Wrong answer",
+        "optional": true,
+        "deprecated": true
+      },
+      {
+        "name": "correctAnswer",
+        "type": "text",
+        "label": "Correct Answer",
+        "default": "Correct answer",
         "optional": true
       },
       {
