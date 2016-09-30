@@ -95,6 +95,10 @@
           "default": "Riktig svar"
         },
         {
+          "label": "Feedback text",
+          "default": "Feedback text"
+        },
+        {
           "label": "Skulle ha vært valgt",
           "default": "Skulle ha vært valgt"
         },

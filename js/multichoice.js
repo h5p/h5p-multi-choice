@@ -95,8 +95,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       tipAvailable: "Tip available",
       feedbackAvailable: "Feedback available",
       readFeedback: 'Read feedback',
-      wrongAnswer: 'Wrong answer',
-      correctAnswer: 'Correct answer',
+      feedback: 'You got @score of @total points',
       shouldCheck: "Should have been checked",
       shouldNotCheck: "Should not have been checked",
       noInput: 'Input is required before viewing the solution'
@@ -656,13 +655,8 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
     // Determine feedback
     var max = self.getMaxScore();
-    var feedback, ratio = (score / max);
-    if (isFinite(ratio) && ratio > 0) {
-      feedback = (ratio >= 1 ? params.UI.correctText : params.UI.almostText);
-    }
-    else {
-      feedback = params.UI.wrongText;
-    }
+    var ratio = (score / max);
+    var feedback = params.UI.feedback.replace('@score', score).replace('@total', max);
 
     // Show feedback
     this.setFeedback(feedback, score, max, params.UI.scoreBarLabel);
