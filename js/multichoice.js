@@ -344,7 +344,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         self.hideButton('show-solution');
 
         if (params.behaviour.autoCheck) {
-          if (params.behaviour.singleAnswer && !params.behaviour.enableRetry) {
+          if (params.behaviour.singleAnswer) {
             // Only a single answer allowed
             checkAnswer();
           }
@@ -425,15 +425,14 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
     // Has answered through auto-check in a previous session
     if (hasCheckedAnswer && params.behaviour.autoCheck) {
-      // Show feedback for checked answers
-      self.showCheckSolution(true);
 
-      var singleAnsNoRetry = params.behaviour.singleAnswer && !params.behaviour.enableRetry;
-      var fullScore = score === self.getMaxScore();
-
-      // Check if only allowed to give a single answer or already full score
-      if (fullScore || singleAnsNoRetry) {
+      // Check answers if answer has been given or max score reached
+      if (params.behaviour.singleAnswer || score === self.getMaxScore()) {
         checkAnswer();
+      }
+      else {
+        // Show feedback for checked checkboxes
+        self.showCheckSolution(true);
       }
     }
   };
@@ -586,16 +585,18 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     }, false);
 
     // Check solution button
-    self.addButton('check-answer', params.UI.checkAnswerButton, function () {
-      checkAnswer();
-    }, true, {}, {
-      confirmationDialog: {
-        enable: params.behaviour.confirmCheckDialog,
-        l10n: params.confirmCheck,
-        instance: params.overrideSettings.instance,
-        $parentElement: params.overrideSettings.$confirmationDialogParent
-      }
-    });
+    if (!params.behaviour.autoCheck || !params.behaviour.singleAnswer) {
+      self.addButton('check-answer', params.UI.checkAnswerButton, checkAnswer, true, {},
+        {
+          confirmationDialog: {
+            enable: params.behaviour.confirmCheckDialog,
+            l10n: params.confirmCheck,
+            instance: params.overrideSettings.instance,
+            $parentElement: params.overrideSettings.$confirmationDialogParent
+          }
+        }
+      );
+    }
 
     // Try Again button
     self.addButton('try-again', params.UI.tryAgainButton, function () {
@@ -671,17 +672,18 @@ H5P.MultiChoice = function(options, contentId, contentData) {
         }
       }
 
-      if (chosen && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
-        insertFeedback($e, a.tipsAndFeedback.chosenFeedback);
-      }
-      else if (!chosen && a.tipsAndFeedback.notChosenFeedback !== undefined && a.tipsAndFeedback.notChosenFeedback !== '') {
-        insertFeedback($e, a.tipsAndFeedback.notChosenFeedback);
+      if (!skipFeedback) {
+        if (chosen && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
+          insertFeedback($e, a.tipsAndFeedback.chosenFeedback);
+        }
+        else if (!chosen && a.tipsAndFeedback.notChosenFeedback !== undefined && a.tipsAndFeedback.notChosenFeedback !== '') {
+          insertFeedback($e, a.tipsAndFeedback.notChosenFeedback);
+        }
       }
     });
 
     // Determine feedback
     var max = self.getMaxScore();
-    var ratio = (score / max);
     var feedback = params.UI.feedback.replace('@score', score).replace('@total', max);
 
     // Show feedback
