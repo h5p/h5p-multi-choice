@@ -654,7 +654,6 @@ H5P.MultiChoice = function(options, contentId, contentData) {
 
     // Determine feedback
     var max = self.getMaxScore();
-    var ratio = (score / max);
     var feedback = params.UI.feedback.replace('@score', score).replace('@total', max);
 
     // Show feedback
