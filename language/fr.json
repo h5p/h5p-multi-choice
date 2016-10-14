@@ -158,7 +158,8 @@
           "label": "Afficher la fenêtre de confirmation pour \"Recommencer\""
         },
         {
-          "label": "Automatically check answers after choosing an alternative"
+          "label": "Automatically check answers",
+          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
         }
       ]
     },

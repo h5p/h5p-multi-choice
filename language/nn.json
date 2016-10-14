@@ -158,7 +158,8 @@
           "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
         },
         {
-          "label": "Umiddelbar tilbakemelding på avgitt svar"
+          "label": "Umiddelbar tilbakemelding på avgitt svar",
+          "description": "Vær oppmerksom på at hjelpemiddelteknologi kan svekkes ved å bruke dette alternativet."
         }
       ]
     },
