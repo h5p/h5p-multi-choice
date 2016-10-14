@@ -202,7 +202,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       if (type === 'H5P.Image') {
         if (params.media.params.file) {
           // Register task image
-          self.setImage(params.media.params.file.path, {disableImageZooming: params.behaviour.disableImageZooming, alt: params.media.alt});
+          self.setImage(params.media.params.file.path, {disableImageZooming: params.behaviour.disableImageZooming, alt: params.media.params.alt});
         }
       }
       else if (type === 'H5P.Video') {
