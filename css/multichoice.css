@@ -287,13 +287,9 @@
 .h5p-multichoice .h5p-feedback-text {
   position: relative;
   z-index: 3;
-  max-height: 6.5em;
   overflow: auto;
   overflow-x: hidden;
   overflow-y: auto;
-}
-.h5p-multichoice .h5p-answer:last-child .h5p-feedback-text {
-  max-height: 4em;
 }
 
 .h5p-multichoice .h5p-feedback-text::-webkit-scrollbar {
