@@ -97,6 +97,10 @@
           "default": "Korrekte Antwort"
         },
         {
+          "label": "Feedback text",
+          "default": "Feedback text"
+        },
+        {
           "label": "Option hätte ausgewählt werden sollen",
           "default": "Hätte ausgewählt werden sollen"
         },
@@ -150,6 +154,10 @@
         },
         {
           "label": "Bestätigungsdialog bei \"Wiederholen\" anzeigen"
+        },
+        {
+          "label": "Automatically check answers",
+          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
         }
       ]
     },

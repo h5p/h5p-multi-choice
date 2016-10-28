@@ -193,20 +193,30 @@
         "type": "text",
         "label": "Read Feedback",
         "default": "Read feedback",
-        "optional": true
+        "optional": true,
+        "deprecated": true
       },
       {
         "name": "wrongAnswer",
         "type": "text",
         "label": "Wrong Answer",
         "default": "Wrong answer",
-        "optional": true
+        "optional": true,
+        "deprecated": true
       },
       {
         "name": "correctAnswer",
         "type": "text",
         "label": "Correct Answer",
         "default": "Correct answer",
+        "optional": true
+      },
+      {
+        "name": "feedback",
+        "type": "text",
+        "label": "Feedback text",
+        "default": "You got @score of @total points",
+        "description": "Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'",
         "optional": true
       },
       {
@@ -313,6 +323,13 @@
         "name": "confirmRetryDialog",
         "type": "boolean",
         "default": false
+      },
+      {
+        "label": "Automatically check answers",
+        "name": "autoCheck",
+        "type": "boolean",
+        "default": false,
+        "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
       }
     ]
   },

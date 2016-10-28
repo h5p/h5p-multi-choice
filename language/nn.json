@@ -95,6 +95,10 @@
           "default": "Riktig svar"
         },
         {
+          "label": "Feedback text",
+          "default": "Feedback text"
+        },
+        {
           "label": "Skulle ha vært valgt",
           "default": "Skulle ha vært valgt"
         },
@@ -152,6 +156,10 @@
         },
         {
           "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
+        },
+        {
+          "label": "Umiddelbar tilbakemelding på avgitt svar",
+          "description": "Vær oppmerksom på at hjelpemiddelteknologi kan svekkes ved å bruke dette alternativet."
         }
       ]
     },
