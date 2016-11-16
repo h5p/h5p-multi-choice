@@ -96,7 +96,8 @@
         },
         {
           "label": "Tilbakemelding",
-          "default": "Tilbakemelding"
+          "default": "@score av @total poeng",
+          "description": "Tekstlig tilbakemelding, tilgjengelige variabler: @score og @total. Eksempel: 'Du fikk @score av @total felt rett.'"
         },
         {
           "label": "Skulle ha vært valgt",
