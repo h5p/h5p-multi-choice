@@ -77,7 +77,8 @@
                 "p",
                 "br",
                 "strong",
-                "em"
+                "em",
+                "a"
               ],
               "optional": true
             },
@@ -92,7 +93,8 @@
                 "strong",
                 "em",
                 "sub",
-                "sup"
+                "sup",
+                "a"
               ]
             },
             {
@@ -106,7 +108,8 @@
                 "strong",
                 "em",
                 "sub",
-                "sup"
+                "sup",
+                "a"
               ]
             }
           ]
