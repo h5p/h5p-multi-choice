@@ -22,6 +22,7 @@
     "type": "text",
     "widget": "html",
     "label": "Question",
+    "description": "test description",
     "enterMode": "p",
     "tags": [
       "strong",
@@ -37,6 +38,7 @@
     "type": "list",
     "label": "Available options",
     "description": "The alternatives the user may choose from.",
+    "importance": "high",
     "entity": "option",
     "min": 1,
     "defaultNum": 2,
@@ -48,6 +50,7 @@
         {
           "name": "text",
           "type": "text",
+          "description": "some description",
           "widget": "html",
           "label": "Text",
           "tags": [
