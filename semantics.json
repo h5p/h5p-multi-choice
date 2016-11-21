@@ -73,24 +73,25 @@
           "fields": [
             {
               "name": "tip",
-              "label": "Tip text",
               "type": "text",
               "widget": "html",
+              "label": "Tip text",
+              "description": "Hint for the user. This will appear before user checks his answer/answers.",
+              "optional": true,
               "tags": [
                 "p",
                 "br",
                 "strong",
                 "em",
                 "a"
-              ],
-              "optional": true
+              ]
             },
             {
               "name": "chosenFeedback",
               "type": "text",
               "widget": "html",
-              "label": "Chosen feedback",
-              "description": "Will be displayed when the users checks his answer.",
+              "label": "Message displayed if answer is selected",
+              "description": "Message will appear below the answer on \"check\" if this answer is selected.",
               "optional": true,
               "tags": [
                 "strong",
@@ -104,8 +105,8 @@
               "name": "notChosenFeedback",
               "type": "text",
               "widget": "html",
-              "label": "Not chosen feedback",
-              "description": "Will be displayed when the solution is displayed.",
+              "label": "Message displayed if answer is not selected",
+              "description": "Message will appear below the answer on \"check\" if this answer is not selected.",
               "optional": true,
               "tags": [
                 "strong",

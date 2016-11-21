@@ -24,15 +24,16 @@
             "label": "Tips",
             "fields": [
               {
-                "label": "Tipstekst"
+                "label": "Tipstekst",
+                "description": "Hint for brukeren. Dette vil vises før brukeren sjekker sine svar."
               },
               {
-                "label": "Tilbakemelding for valgt alternativ",
-                "description": "Vises når brukerne sjekker svaret hans."
+                "label": "Melding som vises hvis svaret er valgt",
+                "description": "Melding som vises under svaret på \"check\" hvis svaret er valgt."
               },
               {
-                "label": "Tilbakemelding for ikke valgt alternativ",
-                "description": "Vises når løsningen vises."
+                "label": "Melding som vises hvis svaret ikke er valgt",
+                "description": "Melding som vises under svaret på \"check\" hvis andre svar er valgt."
               }
             ]
           }
