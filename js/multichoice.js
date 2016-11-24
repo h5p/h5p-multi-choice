@@ -839,14 +839,14 @@ H5P.MultiChoice = function(options, contentId, contentData) {
    *  The xAPI event we will add a response to
    */
   var addResponseToXAPI = function(xAPIEvent) {
-    maxScore = self.getMaxScore();
+    var maxScore = self.getMaxScore();
     var success = score == maxScore ? true : false;
     xAPIEvent.setScoredResult(score, maxScore, self, true, success);
     if (params.userAnswers === undefined) {
       calcScore();
     }
 
-    // Add the response 
+    // Add the response
     var response = '';
     for (var i = 0; i < params.userAnswers.length; i++) {
       if (response !== '') {
@@ -855,15 +855,6 @@ H5P.MultiChoice = function(options, contentId, contentData) {
       response += idMap === undefined ? $(params.userAnswers[i]).text() : idMap[params.userAnswers[i]];
     }
     xAPIEvent.data.statement.result.response = response;
-
-    // Add the score
-    var resultScore = {
-      min: 0,
-      raw: score,
-      max: maxScore, 
-      scaled:Math.round(score/maxScore*100)
-    };
-    xAPIEvent.data.statement.result.score = resultScore;
   };
 
   // Initialization code
