@@ -77,27 +77,27 @@
         {
           "label": "Indice disponible",
           "default": "Indice disponible",
-          "description": "Accessibility text used for readspeakers (not displayed)"
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Commentaire disponible",
           "default": "Commentaire disponible",
-          "description": "Accessibility text used for readspeakers (not displayed)"
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Lire le commentaire",
           "default": "Lire le commentaire",
-          "description": "Accessibility text used for readspeakers (not displayed)"
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Réponse incorrecte",
           "default": "Réponse incorrecte",
-          "description": "Accessibility text used for readspeakers (not displayed)"
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Bonne réponse",
           "default": "Bonne réponse",
-          "description": "Accessibility text used for readspeakers (not displayed)"
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Feedback text",

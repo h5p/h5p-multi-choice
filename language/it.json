@@ -71,27 +71,27 @@
         {
           "label": "Tip Available",
           "default": "Tip available",
-          "description": "Accessibility text used for readspeakers (not displayed)"
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Feedback Available",
           "default": "Feedback available",
-          "description": "Accessibility text used for readspeakers (not displayed)"
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Read Feedback",
           "default": "Read feedback",
-          "description": "Accessibility text used for readspeakers (not displayed)"
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Wrong Answer",
           "default": "Wrong answer",
-          "description": "Accessibility text used for readspeakers (not displayed)"
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Correct Answer",
           "default": "Correct answer",
-          "description": "Accessibility text used for readspeakers (not displayed)"
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Feedback text",
