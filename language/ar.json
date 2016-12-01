@@ -74,23 +74,28 @@
         },
         {
           "label": "Feedback Available",
-          "default": "Feedback available"
+          "default": "Feedback available",
+          "description": "Accessibility text used for readspeakers (not displayed)"
         },
         {
           "label": "Read Feedback",
-          "default": "Read feedback"
+          "default": "Read feedback",
+          "description": "Accessibility text used for readspeakers (not displayed)"
         },
         {
           "label": "Wrong Answer",
-          "default": "Wrong answer"
+          "default": "Wrong answer",
+          "description": "Accessibility text used for readspeakers (not displayed)"
         },
         {
           "label": "Correct Answer",
-          "default": "Correct answer"
+          "default": "Correct answer",
+          "description": "Accessibility text used for readspeakers (not displayed)"
         },
         {
           "label": "Feedback text",
-          "default": "Feedback text"
+          "default": "Feedback text",
+          "description": "Accessibility text used for readspeakers (not displayed)"
         },
         {
           "label": "Option should have been checked",

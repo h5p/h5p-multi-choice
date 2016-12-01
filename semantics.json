@@ -179,6 +179,7 @@
         "type": "text",
         "label": "Tip Available",
         "default": "Tip available",
+        "description": "Accessibility text used for readspeakers (not displayed)",
         "optional": true
       },
       {
@@ -186,6 +187,7 @@
         "type": "text",
         "label": "Feedback Available",
         "default": "Feedback available",
+        "description": "Accessibility text used for readspeakers (not displayed)",
         "optional": true
       },
       {
@@ -193,6 +195,7 @@
         "type": "text",
         "label": "Read Feedback",
         "default": "Read feedback",
+        "description": "Accessibility text used for readspeakers (not displayed)",
         "optional": true,
         "deprecated": true
       },
@@ -201,6 +204,7 @@
         "type": "text",
         "label": "Wrong Answer",
         "default": "Wrong answer",
+        "description": "Accessibility text used for readspeakers (not displayed)",
         "optional": true,
         "deprecated": true
       },
@@ -209,6 +213,7 @@
         "type": "text",
         "label": "Correct Answer",
         "default": "Correct answer",
+        "description": "Accessibility text used for readspeakers (not displayed)",
         "optional": true
       },
       {

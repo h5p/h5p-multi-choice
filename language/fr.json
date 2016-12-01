@@ -76,23 +76,28 @@
         },
         {
           "label": "Indice disponible",
-          "default": "Indice disponible"
+          "default": "Indice disponible",
+          "description": "Accessibility text used for readspeakers (not displayed)"
         },
         {
           "label": "Commentaire disponible",
-          "default": "Commentaire disponible"
+          "default": "Commentaire disponible",
+          "description": "Accessibility text used for readspeakers (not displayed)"
         },
         {
           "label": "Lire le commentaire",
-          "default": "Lire le commentaire"
+          "default": "Lire le commentaire",
+          "description": "Accessibility text used for readspeakers (not displayed)"
         },
         {
           "label": "Réponse incorrecte",
-          "default": "Réponse incorrecte"
+          "default": "Réponse incorrecte",
+          "description": "Accessibility text used for readspeakers (not displayed)"
         },
         {
           "label": "Bonne réponse",
-          "default": "Bonne réponse"
+          "default": "Bonne réponse",
+          "description": "Accessibility text used for readspeakers (not displayed)"
         },
         {
           "label": "Feedback text",
