@@ -78,23 +78,28 @@
         },
         {
           "label": "Tipp verfügbar",
-          "default": "Tipp verfügbar"
+          "default": "Tipp verfügbar",
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Feedback verfügbar",
-          "default": "Feedback verfügbar"
+          "default": "Feedback verfügbar",
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Feedback lesen",
-          "default": "Feedback lesen"
+          "default": "Feedback lesen",
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Falsche Antwort",
-          "default": "Falsche Antwort"
+          "default": "Falsche Antwort",
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Korrekte Antwort",
-          "default": "Korrekte Antwort"
+          "default": "Korrekte Antwort",
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Feedback text",
