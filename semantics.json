@@ -50,7 +50,6 @@
         {
           "name": "text",
           "type": "text",
-          "description": "some description",
           "widget": "html",
           "label": "Text",
           "tags": [
