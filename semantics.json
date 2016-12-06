@@ -3,6 +3,7 @@
     "name": "media",
     "type": "group",
     "label": "Media",
+    "importance": "medium",
     "fields": [
       {
         "name": "type",
@@ -22,7 +23,6 @@
     "type": "text",
     "widget": "html",
     "label": "Question",
-    "description": "test description",
     "enterMode": "p",
     "tags": [
       "strong",
@@ -252,7 +252,7 @@
   {
     "name": "behaviour",
     "type": "group",
-    "label": "Behavioural settings.",
+    "label": "Behavioural settings",
     "description": "These options will let you control how the task behaves.",
     "optional": true,
     "fields": [
