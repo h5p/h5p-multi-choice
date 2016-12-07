@@ -76,24 +76,29 @@
           "default": "Resultat"
         },
         {
-          "label": "Tips tilgjengelig",
-          "default": "Tips tilgjengelig"
+          "label": "Tips tilgjengelig (ikke synlig)",
+          "default": "Tips tilgjengelig",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Tilbakemelding tilgjengelig",
-          "default": "Tilbakemelding tilgjengelig"
+          "label": "Tilbakemelding tilgjengelig (ikke synlig)",
+          "default": "Tilbakemelding tilgjengelig",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Les tilbakemelding",
-          "default": "Les tilbakemelding"
+          "label": "Les tilbakemelding (ikke synlig)",
+          "default": "Les tilbakemelding",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Galt svar",
-          "default": "Galt svar"
+          "label": "Galt svar (ikke synlig)",
+          "default": "Galt svar",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Riktig svar",
-          "default": "Riktig svar"
+          "label": "Riktig svar (ikke synlig)",
+          "default": "Riktig svar",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
           "label": "Tilbakemelding",

@@ -183,38 +183,43 @@
       {
         "name": "tipAvailable",
         "type": "text",
-        "label": "Tip Available",
+        "label": "Tip Available (not displayed)",
         "default": "Tip available",
+        "description": "Accessibility text used for readspeakers",
         "optional": true
       },
       {
         "name": "feedbackAvailable",
         "type": "text",
-        "label": "Feedback Available",
+        "label": "Feedback Available (not displayed)",
         "default": "Feedback available",
+        "description": "Accessibility text used for readspeakers",
         "optional": true
       },
       {
         "name": "readFeedback",
         "type": "text",
-        "label": "Read Feedback",
+        "label": "Read Feedback (not displayed)",
         "default": "Read feedback",
+        "description": "Accessibility text used for readspeakers",
         "optional": true,
         "deprecated": true
       },
       {
         "name": "wrongAnswer",
         "type": "text",
-        "label": "Wrong Answer",
+        "label": "Wrong Answer (not displayed)",
         "default": "Wrong answer",
+        "description": "Accessibility text used for readspeakers",
         "optional": true,
         "deprecated": true
       },
       {
         "name": "correctAnswer",
         "type": "text",
-        "label": "Correct Answer",
+        "label": "Correct Answer (not displayed)",
         "default": "Correct answer",
+        "description": "Accessibility text used for readspeakers",
         "optional": true
       },
       {
