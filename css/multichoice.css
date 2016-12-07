@@ -321,10 +321,10 @@
 }
 
 .h5p-multichoice .multichoice-tip .joubel-icon-tip-normal {
-  line-height: 1.4em;
-  font-size: 1em;
+  line-height: initial;
   float: right;
-  padding-top: 2px;
+  padding-top: 4px;
+  font-size: 1.2em;
 }
 
 .h5p-multichoice .multichoice-tip:hover {
