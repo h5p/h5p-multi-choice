@@ -52,6 +52,7 @@
           "type": "text",
           "widget": "html",
           "label": "Text",
+          "description": "Some description",
           "tags": [
             "strong",
             "em",
@@ -69,6 +70,7 @@
           "type": "group",
           "label": "Tips and feedback",
           "optional": true,
+          "importance": "low",
           "fields": [
             {
               "name": "tip",
@@ -259,6 +261,7 @@
     "label": "Behavioural settings",
     "description": "These options will let you control how the task behaves.",
     "optional": true,
+    "importance": "low",
     "fields": [
       {
         "name": "enableRetry",
