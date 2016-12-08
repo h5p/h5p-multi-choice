@@ -2,7 +2,12 @@
   "semantics": [
     {
       "label": "Image ou vidéo",
-      "description": "Une image ou une vidéo peut être affichée en option au-dessus de la question."
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Une image ou une vidéo peut être affichée en option au-dessus de la question."
+        }
+      ]
     },
     {
       "label": "Question"
@@ -15,7 +20,8 @@
         "label": "Option",
         "fields": [
           {
-            "label": "Texte"
+            "label": "Texte",
+            "description": "Quelque description"
           },
           {
             "label": "Correct"
@@ -24,7 +30,8 @@
             "label": "Aides et commentaires",
             "fields": [
               {
-                "label": "Texte de l'aide"
+                "label": "Texte de l'aide",
+                "description": "Indication pour l'utilisateur. Cela sera affiché avant que l'utilisateur ne valide ses réponses."
               },
               {
                 "label": "Commentaire",
@@ -96,7 +103,8 @@
         },
         {
           "label": "Feedback text",
-          "default": "Feedback text"
+          "default": "Vous avez obtenu @score points sur un total de @total",
+          "description": "Le texte de feedback, variables disponibles: @score et @total. Exemple: 'Vous avez obtenu @score points sur un total de @total'"
         },
         {
           "label": "L'option aurait dû être cochée",
@@ -117,14 +125,17 @@
       "description": "Ces options vous permettent de contrôler le déroulement de vos activités.",
       "fields": [
         {
-          "label": "Activer le bouton \"Recommencer\""
+          "label": "Activer le bouton \"Recommencer\"",
+          "default": true
         },
         {
-          "label": "Activer le bouton \"Voir la solution\""
+          "label": "Activer le bouton \"Voir la solution\"",
+          "default": true
         },
         {
           "label": "Type de question",
           "description": "Choisissez le type de question et ses paramètres.",
+          "default": "auto",
           "options": [
             {
               "label": "Sélection automatique"
@@ -139,26 +150,33 @@
         },
         {
           "label": "Donner un point par activité",
-          "description": "Attribuer un point (en tout) pour toutes les réponses justes d'un QCM. Ce ne sera pas une option pour les \"Questions à choix unique\"."
+          "description": "Attribuer un point (en tout) pour toutes les réponses justes d'un QCM. Ce ne sera pas une option pour les \"Questions à choix unique\".",
+          "default": false
         },
         {
           "label": "Réponses aléatoires",
-          "description": "Les réponses possibles seront affichées dans l'ordre aléatoire."
+          "description": "Les réponses possibles seront affichées dans l'ordre aléatoire.",
+          "default": true
         },
         {
-          "label": "Une réponse est obligatoire pour voir la solution"
+          "label": "Une réponse est obligatoire pour voir la solution",
+          "default": true
         },
         {
-          "label": "Désactiver la possibilité d'agrandir l'image de la question."
+          "label": "Désactiver la possibilité d'agrandir l'image de la question.",
+          "default": false
         },
         {
-          "label": "Afficher la fenêtre de confirmation pour \"Vérifier\""
+          "label": "Afficher la fenêtre de confirmation pour \"Vérifier\"",
+          "default": false
         },
         {
-          "label": "Afficher la fenêtre de confirmation pour \"Recommencer\""
+          "label": "Afficher la fenêtre de confirmation pour \"Recommencer\"",
+          "default": false
         },
         {
           "label": "Vérifier automatiquement la réponse cochée",
+          "default": false,
           "description": "Note: cette option peut impacter l'ergonomie."
         }
       ]
