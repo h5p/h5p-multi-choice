@@ -52,7 +52,6 @@
           "type": "text",
           "widget": "html",
           "label": "Text",
-          "description": "Some description",
           "tags": [
             "strong",
             "em",
