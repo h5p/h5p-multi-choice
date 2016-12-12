@@ -108,7 +108,7 @@
         },
         {
           "label": "Text für den \"Benötigt Antwort\"-Hinweis",
-          "default": "Bitte antworte erst, damit du die Lösung sehen kannst",
+          "default": "Bitte antworte erst, damit du die Lösung sehen kannst"
         }
       ]
     },
