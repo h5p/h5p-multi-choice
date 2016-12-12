@@ -70,23 +70,32 @@
         },
         {
           "label": "Tip Available",
-          "default": "Tip available"
+          "default": "Tip available",
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Feedback Available",
-          "default": "Feedback available"
+          "default": "Feedback available",
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Read Feedback",
-          "default": "Read feedback"
+          "default": "Read feedback",
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Wrong Answer",
-          "default": "Wrong answer"
+          "default": "Wrong answer",
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Correct Answer",
-          "default": "Correct answer"
+          "default": "Correct answer",
+          "description": "Accessibility text used for readspeakers"
+        },
+        {
+          "label": "Feedback text",
+          "default": "Feedback text"
         },
         {
           "label": "Option should have been checked",
@@ -146,6 +155,10 @@
         },
         {
           "label": "Show confirmation dialog on \"Retry\""
+        },
+        {
+          "label": "Automatically check answers",
+          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
         }
       ]
     },

@@ -24,15 +24,16 @@
             "label": "Tips",
             "fields": [
               {
-                "label": "Tipstekst"
+                "label": "Tipstekst",
+                "description": "Hint for brukaren. Dette vil visast før brukaren sjekkar sine svar."
               },
               {
-                "label": "Tilbakemelding for valgt alternativ",
-                "description": "Visast når brukarane sjekkar hans svar."
+                "label": "Melding som visast hvis svaret er valgt",
+                "description": "Melding som visast under svaret på \"check\" hvis svaret er valgt."
               },
               {
-                "label": "Tilbakemelding for ikke valgt alternativ",
-                "description": "Visast når løysinga visast."
+                "label": "Melding som visast hvis svaret ikkje er valgt",
+                "description": "Melding som visast under svaret på \"check\" hvis andre svar er valgt."
               }
             ]
           }
@@ -75,24 +76,34 @@
           "default": "Resultat"
         },
         {
-          "label": "Tips tilgjengelig",
-          "default": "Tips tilgjengelig"
+          "label": "Tips tilgjengelig (ikke synlig)",
+          "default": "Tips tilgjengelig",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Tilbakemelding tilgjengelig",
-          "default": "Tilbakemelding tilgjengelig"
+          "label": "Tilbakemelding tilgjengelig (ikke synlig)",
+          "default": "Tilbakemelding tilgjengelig",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Les tilbakemelding",
-          "default": "Les tilbakemelding"
+          "label": "Les tilbakemelding (ikke synlig)",
+          "default": "Les tilbakemelding",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Galt svar",
-          "default": "Galt svar"
+          "label": "Galt svar (ikke synlig)",
+          "default": "Galt svar",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Riktig svar",
-          "default": "Riktig svar"
+          "label": "Riktig svar (ikke synlig)",
+          "default": "Riktig svar",
+          "description": "Tekst for hjelpemiddel-teknologi"
+        },
+        {
+          "label": "Tilbakemelding",
+          "default": "@score av @total poeng",
+          "description": "Tekstlig tilbakemelding, tilgjengelige variabler: @score og @total. Eksempel: 'Du fikk @score av @total felt rett.'"
         },
         {
           "label": "Skulle ha vært valgt",
@@ -152,6 +163,10 @@
         },
         {
           "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
+        },
+        {
+          "label": "Umiddelbar tilbakemelding på avgitt svar",
+          "description": "Vær oppmerksom på at hjelpemiddelteknologi kan svekkes ved å bruke dette alternativet."
         }
       ]
     },
