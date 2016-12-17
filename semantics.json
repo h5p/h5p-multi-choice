@@ -41,7 +41,6 @@
     "importance": "high",
     "label": "Available options",
     "description": "The alternatives the user may choose from.",
-    "importance": "high",
     "entity": "option",
     "min": 1,
     "defaultNum": 2,
@@ -288,7 +287,6 @@
     "importance": "low",
     "description": "These options will let you control how the task behaves.",
     "optional": true,
-    "importance": "low",
     "fields": [
       {
         "name": "enableRetry",

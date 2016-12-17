@@ -106,7 +106,7 @@
           "label": "Rückmeldungstext",
           "default": "Du hast @score von @total Punkten",
           "description": "Rückmeldungstext, verfügbare Variablen: @score und @total. Beispiel: 'Du hast @score von @total Punkten.'"
-        },        
+        },
         {
           "label": "Option hätte ausgewählt werden sollen",
           "default": "Hätte ausgewählt werden müssen"
