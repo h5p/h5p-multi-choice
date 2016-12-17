@@ -46,19 +46,19 @@
       "label": "Benutzerinterface Übersetzungen für Mehrfachauswahl",
       "fields": [
         {
-          "label": "Label für den \"Überprüfen\"-Button",
+          "label": "Beschriftung für den \"Überprüfen\"-Button",
           "default": "Überprüfen"
         },
         {
-          "label": "Label für den \"Lösung anzeigen\"-Button",
+          "label": "Beschriftung für den \"Lösung anzeigen\"-Button",
           "default": "Lösung anzeigen"
         },
         {
-          "label": "Label für den \"Wiederholen\"-Button",
+          "label": "Beschriftung für den \"Wiederholen\"-Button",
           "default": "Wiederholen"
         },
         {
-          "label": "Tipplabel",
+          "label": "Tippbeschriftung",
           "default": "Tipp anzeigen"
         },
         {
@@ -74,7 +74,7 @@
           "default": "Falsch"
         },
         {
-          "label": "Label für den Punktebalken",
+          "label": "Beschriftung für den Punktebalken",
           "default": "Punkte"
         },
         {
@@ -114,7 +114,11 @@
         {
           "label": "Option hätte nicht ausgewählt werden sollen",
           "default": "Hätte nicht ausgewählt werden sollen"
-        }
+        },
+      {
+        "label": "Text für \"Benötigt Antwort\"-Hinweis",
+        "default": "Eine Antwort ist notwendig, bevor die Lösung angesehen werden kann.",
+      }
       ]
     },
     {
@@ -203,182 +207,19 @@
       "label": "Bestätigungsdialog beim Wiederholen",
       "fields": [
         {
-          "label": "Headertext",
+          "label": "Header-Text",
           "default": "Wiederholen?"
         },
         {
-          "label": "Bodytext",
+          "label": "Body-Text",
           "default": "Ganz sicher wiederholen?"
         },
         {
-          "label": "Label des \"Abbrechen\"-Buttons",
+          "label": "Beschriftung des \"Abbrechen\"-Buttons",
           "default": "Abbrechen"
         },
         {
-          "label": "Label des \"Bestätigen\"-Buttons",
-          "default": "Bestätigen"
-        }
-      ]
-    }
-  ]
-}
-        },
-        {
-          "label": "Beschriftung für den Wiederholen-Button",
-          "default": "Wiederholen"
-        },
-        {
-          "label": "Tippbeschriftung",
-          "default": "Tipp zeigen"
-        },
-        {
-          "label": "Feedback zur korrekten Antwort",
-          "default": "Korrekt!"
-        },
-        {
-          "label": "Feedback zu einer fast korrekten Antwort",
-          "default": "Fast!"
-        },
-        {
-          "label": "Feedback zu einer inkorrekten Antwort",
-          "default": "Falsch"
-        },
-        {
-          "label": "Beschriftung für den Punktebalken",
-          "default": "Punkte"
-        },
-        {
-          "label": "Tipp verfügbar",
-          "default": "Tipp verfügbar",
-          "description": "Accessibility text used for readspeakers"
-        },
-        {
-          "label": "Feedback verfügbar",
-          "default": "Feedback verfügbar",
-          "description": "Accessibility text used for readspeakers"
-        },
-        {
-          "label": "Feedback lesen",
-          "default": "Feedback lesen",
-          "description": "Accessibility text used for readspeakers"
-        },
-        {
-          "label": "Falsche Antwort",
-          "default": "Falsche Antwort",
-          "description": "Accessibility text used for readspeakers"
-        },
-        {
-          "label": "Korrekte Antwort",
-          "default": "Korrekte Antwort",
-          "description": "Accessibility text used for readspeakers"
-        },
-        {
-          "label": "Feedback text",
-          "default": "Feedback text"
-        },
-        {
-          "label": "Option hätte ausgewählt werden sollen",
-          "default": "Hätte ausgewählt werden sollen"
-        },
-        {
-          "label": "Option hätte nicht ausgewählt werden sollen",
-          "default": "Hätte nicht ausgewählt werden sollen"
-        },
-        {
-          "label": "Text für den \"Benötigt Antwort\"-Hinweis",
-          "default": "Bitte antworte erst, damit du die Lösung sehen kannst"
-        }
-      ]
-    },
-    {
-      "label": "Verhaltenseinstellungen.",
-      "description": "Diese Optionen steuern, wie sich die Aufgabe verhält",
-      "fields": [
-        {
-          "label": "Aktivieren des \"Wiederholen\"-Buttons"
-        },
-        {
-          "label": "Aktivieren des \"Lösung zeigen\"-Buttons"
-        },
-        {
-          "label": "Fragentyp",
-          "description": "Wähle das Aussehen und das Verhalten der Frage",
-          "options": [
-            {
-              "label": "Automatisch"
-            },
-            {
-              "label": "Multiple Choice (Checkboxes)"
-            },
-            {
-              "label": "Single Choice (Radio Buttons)"
-            }
-          ]
-        },
-        {
-          "label": "Einen Punkt für die ganze Aufgabe vergeben",
-          "description": "Aktivieren, um insgesamt einen Punkt für Multiple-Choice-Antworten zu vergeben. Dies ist keine Option im \"Single Antwort\" Modus."
-        },
-        {
-          "label": "Antworten zufällig anordnen",
-          "description": "Aktivieren, um die Reihenfolge der Fragen auf dem Bildschirm zufällig zu wählen."
-        },
-        {
-          "label": "Benutzereingabe erforderlich machen, bevor die Antwort angesehen werden kann"
-        },
-        {
-          "label": "Bilderzoom bei Fragen mit Bildern deaktivieren."
-        },
-        {
-          "label": "Bestätigungsdialog bei \"Überprüfen\" anzeigen"
-        },
-        {
-          "label": "Bestätigungsdialog bei \"Wiederholen\" anzeigen"
-        },
-        {
-          "label": "Automatically check answers",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
-        }
-      ]
-    },
-    {
-      "label": "Bestätigungsdialog beim Überprüfen",
-      "fields": [
-        {
-          "label": "Headertext",
-          "default": "Beenden?"
-        },
-        {
-          "label": "Bodytext",
-          "default": "Ganz sicher beenden?"
-        },
-        {
-          "label": "Beschriftung des Abbrechen-Buttons",
-          "default": "Abbrechen"
-        },
-        {
-          "label": "Beschriftung des Bestätigungs-Buttons",
-          "default": "Beenden"
-        }
-      ]
-    },
-    {
-      "label": "Bestätigungsdialog beim Wiederholen",
-      "fields": [
-        {
-          "label": "Headertext",
-          "default": "Wiederholen?"
-        },
-        {
-          "label": "Bodytext",
-          "default": "Ganz sicher wiederholen?"
-        },
-        {
-          "label": "Beschriftung des Abbrechen-Buttons",
-          "default": "Abbrechen"
-        },
-        {
-          "label": "Beschriftung des Bestätigungen-Buttons",
+          "label": "Beschriftung des \"Bestätigen\"-Buttons",
           "default": "Bestätigen"
         }
       ]
