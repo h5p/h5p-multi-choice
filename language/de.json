@@ -15,10 +15,13 @@
     {
       "label": "Verfügbare Optionen",
       "description": "Die Alternativen, aus denen der Benutzer wählen kann.",
+      "entity": "option",
       "field": {
         "label": "Option",
         "fields": [
-          {},
+          {
+            "label": "Text"
+          },
           {
             "label": "Korrekt"
           },
