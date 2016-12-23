@@ -186,7 +186,7 @@
       ]
     },
     {
-      "label": "Bestätigungsdialog auswählen",
+      "label": "Bestätigungsdialog beim Prüfen",
       "fields": [
         {
           "label": "Headertext",
@@ -197,11 +197,11 @@
           "default": "Ganz sicher beenden?"
         },
         {
-          "label": "Label des \"Abbrechen\"-Buttons",
+          "label": "Beschriftung des \"Abbrechen\"-Buttons",
           "default": "Abbrechen"
         },
         {
-          "label": "Label des \"Beenden\"-Buttons",
+          "label": "Beschriftung des \"Beenden\"-Buttons",
           "default": "Beenden"
         }
       ]
