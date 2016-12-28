@@ -129,12 +129,10 @@
       "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält",
       "fields": [
         {
-          "label": "Aktivieren des \"Wiederholen\"-Buttons",
-          "default": true
+          "label": "Aktivieren des \"Wiederholen\"-Buttons"
         },
         {
-          "label": "Aktivieren des \"Lösung anzeigen\"-Buttons",
-          "default": true
+          "label": "Aktivieren des \"Lösung anzeigen\"-Buttons"
         },
         {
           "label": "Fragentyp",
@@ -154,39 +152,32 @@
         },
         {
           "label": "Einen Punkt für die ganze Aufgabe vergeben",
-          "description": "Aktivieren, um insgesamt einen Punkt für Multiple-Choice-Antworten zu vergeben. Dies ist keine Option im \"Single Choice\"-Modus.",
-          "default": false
+          "description": "Aktivieren, um insgesamt einen Punkt für Multiple-Choice-Antworten zu vergeben. Dies ist keine Option im \"Single Choice\"-Modus."
         },
         {
           "label": "Antworten zufällig anordnen",
-          "description": "Aktivieren, um die Fragen auf dem Bildschirm zufällig anzuordnen.",
-          "default": true
+          "description": "Aktivieren, um die Fragen auf dem Bildschirm zufällig anzuordnen."
         },
         {
-          "label": "Benutzereingabe erforderlich machen, bevor die Antwort angesehen werden kann",
-          "default": true
+          "label": "Benutzereingabe erforderlich machen, bevor die Antwort angesehen werden kann"
         },
         {
-          "label": "Bilderzoom für Bilder zu Fragen deaktivieren.",
-          "default": false
+          "label": "Bilderzoom für Bilder zu Fragen deaktivieren."
         },
         {
-          "label": "Bestätigungsdialog bei \"Überprüfen\" anzeigen",
-          "default": false
+          "label": "Bestätigungsdialog bei \"Überprüfen\" anzeigen"
         },
         {
-          "label": "Bestätigungsdialog bei \"Wiederholen\" anzeigen",
-          "default": false
+          "label": "Bestätigungsdialog bei \"Wiederholen\" anzeigen"
         },
         {
           "label": "Antworten automatisch überprüfen",
-          "default": false,
           "description": "Wenn diese Option gewählt wird, leidet die Barrierefreiheit. Sei dir sicher, was du tust."
         }
       ]
     },
     {
-      "label": "Bestätigungsdialog auswählen",
+      "label": "Bestätigungsdialog beim Prüfen",
       "fields": [
         {
           "label": "Headertext",
@@ -197,11 +188,11 @@
           "default": "Ganz sicher beenden?"
         },
         {
-          "label": "Label des \"Abbrechen\"-Buttons",
+          "label": "Beschriftung des \"Abbrechen\"-Buttons",
           "default": "Abbrechen"
         },
         {
-          "label": "Label des \"Beenden\"-Buttons",
+          "label": "Beschriftung des \"Beenden\"-Buttons",
           "default": "Beenden"
         }
       ]
