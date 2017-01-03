@@ -869,7 +869,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       if (response !== '') {
         response += '[,]';
       }
-      response += idMap === undefined ? $(params.userAnswers[i]).text() : idMap[params.userAnswers[i]];
+      response += idMap === undefined ? params.userAnswers[i] : idMap[params.userAnswers[i]];
     }
     xAPIEvent.data.statement.result.response = response;
   };
