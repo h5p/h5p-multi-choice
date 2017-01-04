@@ -9,7 +9,6 @@
     },
     {
       "label": "Svaralternativer",
-      "description": "Svaralternativene brukeren kan velge mellom",
       "entity": "svaralternativ",
       "field": {
         "label": "Svaralternativ",

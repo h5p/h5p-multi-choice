@@ -40,7 +40,6 @@
     "type": "list",
     "importance": "high",
     "label": "Available options",
-    "description": "The alternatives the user may choose from.",
     "entity": "option",
     "min": 1,
     "defaultNum": 2,

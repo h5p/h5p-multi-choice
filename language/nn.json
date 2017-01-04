@@ -9,7 +9,6 @@
     },
     {
       "label": "Svaralternativ",
-      "description": "Svaralternativa brukaren kan velje mellom",
       "entity": "svaralternativ",
       "field": {
         "label": "Svaralternativ",

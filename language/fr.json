@@ -14,7 +14,6 @@
     },
     {
       "label": "Options disponibles",
-      "description": "L'utilisateur peut choisir ces options alternatives.",
       "entity": "option",
       "field": {
         "label": "Option",

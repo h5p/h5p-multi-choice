@@ -9,7 +9,6 @@
     },
     {
       "label": "Opzioni disponibili",
-      "description": "Le alternative tra cui l'utente può scegliere.",
       "entity": "opzione",
       "field": {
         "label": "Opzione",
