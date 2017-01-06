@@ -65,16 +65,13 @@
           "default": "Montrer l'indice"
         },
         {
-          "label": "Commentaire pour une réponse correcte",
-          "default": "C'est exact."
+          "label": "Commentaire pour une réponse correcte"
         },
         {
-          "label": "Commentaire pour une réponse presque correcte",
-          "default": "C'est presque cela !"
+          "label": "Commentaire pour une réponse presque correcte"
         },
         {
-          "label": "Commentaire pour une mauvaise réponse",
-          "default": "Ce n'est pas cela."
+          "label": "Commentaire pour une mauvaise réponse"
         },
         {
           "label": "Texte de la barre de score",
