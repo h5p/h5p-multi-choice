@@ -170,7 +170,7 @@
         "type": "text",
         "label": "Correct answer feedback",
         "importance": "low",
-        "default": "Correct!",
+        "optional": true,
         "deprecated": true
       },
       {
@@ -178,7 +178,7 @@
         "type": "text",
         "label": "Almost correct answer feedback",
         "importance": "low",
-        "default": "Almost!",
+        "optional": true,
         "deprecated": true
       },
       {
@@ -186,7 +186,7 @@
         "type": "text",
         "label": "Not correct answer feedback",
         "importance": "low",
-        "default": "Wrong",
+        "optional": true,
         "deprecated": true
       },
       {
