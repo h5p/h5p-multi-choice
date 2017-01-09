@@ -592,7 +592,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       self.addButton('check-answer', params.UI.checkAnswerButton,
         function () {
           self.answered = true;
-          checkAnswer()
+          checkAnswer();
         },
         true,
         {},
@@ -657,6 +657,35 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   /**
+   * Determine which feedback text to display
+   *
+   * @param {number} score
+   * @param {number} max
+   * @return {string}
+   */
+  var getFeedbackText = function (score, max) {
+    var feedback;
+
+    var ratio = (score / max);
+    if (isFinite(ratio) && ratio > 0) {
+      if (ratio >= 1 && params.UI.correctText) {
+        feedback = params.UI.correctText;
+      }
+      else if (params.UI.almostText) {
+        feedback = params.UI.almostText;
+      }
+    }
+    else if (params.UI.wrongText) {
+      feedback = params.UI.wrongText;
+    }
+    if (!feedback) {
+      feedback = params.UI.feedback;
+    }
+
+    return feedback.replace('@score', score).replace('@total', max);
+  };
+
+  /**
    * Shows feedback on the selected fields.
    * @public
    * @param {boolean} [skipFeedback] Skip showing feedback if true
@@ -693,15 +722,14 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     // Determine feedback
     var max = self.getMaxScore();
-    var feedback = params.UI.feedback.replace('@score', score).replace('@total', max);
 
     // Show feedback
     if (!skipFeedback) {
-      this.setFeedback(feedback, score, max, params.UI.scoreBarLabel);
+      this.setFeedback(getFeedbackText(score, max), score, max, params.UI.scoreBarLabel);
     }
 
     // Disable task if maxscore is achieved
-    var fullScore = score === max;
+    var fullScore = (score === max);
     if (fullScore) {
       finishedTask();
     }
@@ -798,7 +826,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     addResponseToXAPI(xAPIEvent);
     return {
       statement: xAPIEvent.data.statement
-    }
+    };
   };
 
   /**
