@@ -262,15 +262,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         'aria-expanded': false,
         'class': 'multichoice-tip',
         appendTo: $wrap
-      }).append($('<span/>', {
-        'class': 'joubel-icon-tip-normal'
-      }).append($('<span/>', {
-        'class': 'path1'
-      })).append($('<span/>', {
-        'class': 'path2'
-      })).append($('<span/>', {
-        'class': 'path3'
-      }))).click(function () {
+      }).click(function () {
         var openFeedback = !$tipContainer.children('.h5p-feedback-dialog').is($feedbackDialog);
         removeFeedbackDialog();
 
