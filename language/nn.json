@@ -9,7 +9,6 @@
     },
     {
       "label": "Svaralternativ",
-      "description": "Svaralternativa brukaren kan velje mellom",
       "entity": "svaralternativ",
       "field": {
         "label": "Svaralternativ",
@@ -24,15 +23,16 @@
             "label": "Tips",
             "fields": [
               {
-                "label": "Tipstekst"
+                "label": "Tipstekst",
+                "description": "Hint for brukaren. Dette vil visast før brukaren sjekkar sine svar."
               },
               {
-                "label": "Tilbakemelding for valgt alternativ",
-                "description": "Visast når brukarane sjekkar hans svar."
+                "label": "Melding som visast hvis svaret er valgt",
+                "description": "Melding som visast under svaret på \"check\" hvis svaret er valgt."
               },
               {
-                "label": "Tilbakemelding for ikke valgt alternativ",
-                "description": "Visast når løysinga visast."
+                "label": "Melding som visast hvis svaret ikkje er valgt",
+                "description": "Melding som visast under svaret på \"check\" hvis andre svar er valgt."
               }
             ]
           }
@@ -59,16 +59,13 @@
           "default": "Vis tips"
         },
         {
-          "label": "Tilbakemelding ved riktig svar",
-          "default": "Rett!"
+          "label": "Tilbakemelding ved riktig svar"
         },
         {
-          "label": "Tilbakemelding ved nesten riktig svar",
-          "default": "Nesten!"
+          "label": "Tilbakemelding ved nesten riktig svar"
         },
         {
-          "label": "Tilbakemelding ved galt svar",
-          "default": "Feil"
+          "label": "Tilbakemelding ved galt svar"
         },
         {
           "label": "Resultatsindikator",
