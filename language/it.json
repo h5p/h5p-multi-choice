@@ -1,8 +1,13 @@
 {
   "semantics": [
     {
-      "label": "Immagine domanda",
-      "description": "Immagine opzionale da visualizzare sopra la domanda."
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        }
+      ]
     },
     {
       "label": "Domanda"

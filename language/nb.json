@@ -1,8 +1,13 @@
 {
   "semantics": [
     {
-      "label": "Spørsmålsbilde",
-      "description": "Et valgfritt bilde som skal vises over spørsmålet."
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Et valgfritt multimediaelement som skal vises over spørsmålet."
+        }
+      ]
     },
     {
       "label": "Spørsmål"
