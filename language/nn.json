@@ -1,8 +1,13 @@
 {
   "semantics": [
     {
-      "label": "Spørsmålsbilete",
-      "description": "Eit valfritt bilete som skal visast over spørsmålet."
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Eit valfritt multimediaelement som skal visast over spørsmålet."
+        }
+      ]
     },
     {
       "label": "Spørsmål"
