@@ -554,7 +554,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     self.hideButton('check-answer');
     if (params.behaviour.enableSolutionsButton &&
-      (self.getAnswerGiven(true) || params.behaviour.showSolutionsRequiresInput)) {
+      (self.getAnswerGiven(true) || !params.behaviour.showSolutionsRequiresInput)) {
       self.showButton('show-solution');
     }
     if (params.behaviour.enableRetry) {
@@ -579,12 +579,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Show solution button
     self.addButton('show-solution', params.UI.showSolutionButton, function () {
       calcScore();
-      if (!self.getAnswerGiven() && params.behaviour.showSolutionsRequiresInput) {
-        self.updateFeedbackContent(params.UI.noInput);
-      }
-      else {
-        self.showAllSolutions();
-      }
+      self.showAllSolutions();
     }, false);
 
     // Check solution button
