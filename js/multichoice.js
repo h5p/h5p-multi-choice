@@ -553,8 +553,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     removeFeedbackDialog();
 
     self.hideButton('check-answer');
-    if (params.behaviour.enableSolutionsButton &&
-      (self.getAnswerGiven(true) || params.behaviour.showSolutionsRequiresInput)) {
+    if (params.behaviour.enableSolutionsButton) {
       self.showButton('show-solution');
     }
     if (params.behaviour.enableRetry) {
@@ -572,19 +571,32 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   /**
+   * Determine if any of the radios or checkboxes have been checked.
+   *
+   * @return {boolean}
+   */
+  var isAnswerSelected = function () {
+    return !!$('.h5p-answer[aria-checked="true"]', $myDom).length;
+  };
+
+  /**
    * Adds the ui buttons.
    * @private
    */
   var addButtons = function () {
     // Show solution button
     self.addButton('show-solution', params.UI.showSolutionButton, function () {
-      calcScore();
-      if (!self.getAnswerGiven() && params.behaviour.showSolutionsRequiresInput) {
+
+      if (params.behaviour.showSolutionsRequiresInput && !isAnswerSelected()) {
+        // Require answer before solution can be viewed
         self.updateFeedbackContent(params.UI.noInput);
+        self.read(params.UI.noInput);
       }
       else {
+        calcScore();
         self.showAllSolutions();
       }
+      
     }, false);
 
     // Check solution button

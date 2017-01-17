@@ -160,10 +160,10 @@
           "label": "Slå av bilete zooming."
         },
         {
-          "label": "Slå på bruker-bekreftelse før \"Fasit\""
+          "label": "Slå på bruker-bekreftelse før \"Sjekk svar\""
         },
         {
-          "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
+          "label": "Slå på bruker-bekreftelse før \"Prøv igjen\""
         },
         {
           "label": "Umiddelbar tilbakemelding på avgitt svar",
