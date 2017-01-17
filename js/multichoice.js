@@ -575,7 +575,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    *
    * @return {boolean}
    */
-  var isAnswered = function () {
+  var isAnswerSelected = function () {
     return !!$('.h5p-answer[aria-checked="true"]', $myDom).length;
   };
 
@@ -587,7 +587,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Show solution button
     self.addButton('show-solution', params.UI.showSolutionButton, function () {
 
-      if (params.behaviour.showSolutionsRequiresInput && !isAnswered()) {
+      if (params.behaviour.showSolutionsRequiresInput && !isAnswerSelected()) {
         // Require answer before solution can be viewed
         self.updateFeedbackContent(params.UI.noInput);
         self.read(params.UI.noInput);
