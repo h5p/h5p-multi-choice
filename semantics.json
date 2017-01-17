@@ -280,6 +280,16 @@
     ]
   },
   {
+    "name": "passPercentage",
+    "type": "number",
+    "label": "Pass percentage",
+    "description": "Percentage of Total score required for passing the quiz.",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "default": 100
+  },
+  {
     "name": "behaviour",
     "type": "group",
     "label": "Behavioural settings",
