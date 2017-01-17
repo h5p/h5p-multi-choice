@@ -591,11 +591,12 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         // Require answer before solution can be viewed
         self.updateFeedbackContent(params.UI.noInput);
         self.read(params.UI.noInput);
-        return;
       }
-
-      calcScore();
-      self.showAllSolutions();
+      else {
+        calcScore();
+        self.showAllSolutions();
+      }
+      
     }, false);
 
     // Check solution button
