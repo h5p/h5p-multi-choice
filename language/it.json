@@ -1,15 +1,19 @@
 {
   "semantics": [
     {
-      "label": "Immagine domanda",
-      "description": "Immagine opzionale da visualizzare sopra la domanda."
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        }
+      ]
     },
     {
       "label": "Domanda"
     },
     {
       "label": "Opzioni disponibili",
-      "description": "Le alternative tra cui l'utente può scegliere.",
       "entity": "opzione",
       "field": {
         "label": "Opzione",

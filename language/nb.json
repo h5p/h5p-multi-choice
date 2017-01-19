@@ -1,15 +1,19 @@
 {
   "semantics": [
     {
-      "label": "Spørsmålsbilde",
-      "description": "Et valgfritt bilde som skal vises over spørsmålet."
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Et valgfritt multimediaelement som skal vises over spørsmålet."
+        }
+      ]
     },
     {
       "label": "Spørsmål"
     },
     {
       "label": "Svaralternativer",
-      "description": "Svaralternativene brukeren kan velge mellom",
       "entity": "svaralternativ",
       "field": {
         "label": "Svaralternativ",
@@ -24,15 +28,16 @@
             "label": "Tips",
             "fields": [
               {
-                "label": "Tipstekst"
+                "label": "Tipstekst",
+                "description": "Hint for brukeren. Dette vil vises før brukeren sjekker sine svar."
               },
               {
-                "label": "Tilbakemelding for valgt alternativ",
-                "description": "Vises når brukerne sjekker svaret hans."
+                "label": "Melding som vises hvis svaret er valgt",
+                "description": "Melding som vises under svaret på \"check\" hvis svaret er valgt."
               },
               {
-                "label": "Tilbakemelding for ikke valgt alternativ",
-                "description": "Vises når løsningen vises."
+                "label": "Melding som vises hvis svaret ikke er valgt",
+                "description": "Melding som vises under svaret på \"check\" hvis andre svar er valgt."
               }
             ]
           }
@@ -59,16 +64,13 @@
           "default": "Vis tips"
         },
         {
-          "label": "Tilbakemelding ved riktig svar",
-          "default": "Rett!"
+          "label": "Tilbakemelding ved riktig svar"
         },
         {
-          "label": "Tilbakemelding ved nesten riktig svar",
-          "default": "Nesten!"
+          "label": "Tilbakemelding ved nesten riktig svar"
         },
         {
-          "label": "Tilbakemelding ved galt svar",
-          "default": "Feil"
+          "label": "Tilbakemelding ved galt svar"
         },
         {
           "label": "Resultatsindikator",
@@ -158,10 +160,10 @@
           "label": "Slå av bilete zooming."
         },
         {
-          "label": "Slå på bruker-bekreftelse før \"Fasit\""
+          "label": "Slå på bruker-bekreftelse før \"Sjekk svar\""
         },
         {
-          "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
+          "label": "Slå på bruker-bekreftelse før \"Prøv igjen\""
         },
         {
           "label": "Umiddelbar tilbakemelding på avgitt svar",

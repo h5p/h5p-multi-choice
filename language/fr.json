@@ -2,14 +2,18 @@
   "semantics": [
     {
       "label": "Image ou vidéo",
-      "description": "Une image ou une vidéo peut être affichée en option au-dessus de la question."
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Une image ou une vidéo peut être affichée en option au-dessus de la question."
+        }
+      ]
     },
     {
       "label": "Question"
     },
     {
       "label": "Options disponibles",
-      "description": "L'utilisateur peut choisir ces options alternatives.",
       "entity": "option",
       "field": {
         "label": "Option",
@@ -24,7 +28,8 @@
             "label": "Aides et commentaires",
             "fields": [
               {
-                "label": "Texte de l'aide"
+                "label": "Texte de l'aide",
+                "description": "Indication pour l'utilisateur. Cela sera affiché avant que l'utilisateur ne valide ses réponses."
               },
               {
                 "label": "Commentaire",
@@ -59,16 +64,13 @@
           "default": "Montrer l'indice"
         },
         {
-          "label": "Commentaire pour une réponse correcte",
-          "default": "C'est exact."
+          "label": "Commentaire pour une réponse correcte"
         },
         {
-          "label": "Commentaire pour une réponse presque correcte",
-          "default": "C'est presque cela !"
+          "label": "Commentaire pour une réponse presque correcte"
         },
         {
-          "label": "Commentaire pour une mauvaise réponse",
-          "default": "Ce n'est pas cela."
+          "label": "Commentaire pour une mauvaise réponse"
         },
         {
           "label": "Texte de la barre de score",
@@ -101,7 +103,8 @@
         },
         {
           "label": "Feedback text",
-          "default": "Feedback text"
+          "default": "Vous avez obtenu @score points sur un total de @total",
+          "description": "Le texte de feedback, variables disponibles: @score et @total. Exemple: 'Vous avez obtenu @score points sur un total de @total'"
         },
         {
           "label": "L'option aurait dû être cochée",
@@ -163,8 +166,8 @@
           "label": "Afficher la fenêtre de confirmation pour \"Recommencer\""
         },
         {
-          "label": "Automatically check answers",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label": "Vérifier automatiquement la réponse cochée",
+          "description": "Note: cette option peut impacter l'ergonomie."
         }
       ]
     },

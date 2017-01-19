@@ -1,15 +1,19 @@
 {
   "semantics": [
     {
-      "label": "صورة السؤال",
-      "description": "صورة اختيارية لعرضها فوق السؤال"
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Optional media to display above the question."
+        }
+      ]
     },
     {
       "label": "السؤال"
     },
     {
       "label": "الخيارات المتوفرة",
-      "description": "الخيارات المتوفرة للمستخدم",
       "entity": "الخيار",
       "field": {
         "label": "الخيار",
