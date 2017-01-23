@@ -100,7 +100,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       shouldNotCheck: "Should not have been checked",
       noInput: 'Input is required before viewing the solution'
     },
-    passPercentage: 100,
     behaviour: {
       enableRetry: true,
       enableSolutionsButton: true,
@@ -109,7 +108,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       randomAnswers: false,
       showSolutionsRequiresInput: true,
       disableImageZooming: false,
-      autoCheck: false
+      autoCheck: false,
+      passPercentage: 100
     },
     overrideSettings: {}
   };
@@ -770,7 +770,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       score = params.weight;
     }
     if (params.behaviour.singlePoint) {
-      score = (100 * score / calculateMaxScore()) >= params.passPercentage ? params.weight : 0;
+      score = (100 * score / calculateMaxScore()) >= params.behaviour.passPercentage ? params.weight : 0;
     }
   };
 
@@ -843,7 +843,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    */
   var addResponseToXAPI = function (xAPIEvent) {
     var maxScore = self.getMaxScore();
-    var success = (100 * score / maxScore) >= params.passPercentage;
+    var success = (100 * score / maxScore) >= params.behaviour.passPercentage;
 
     xAPIEvent.setScoredResult(score, maxScore, self, true, success);
     if (params.userAnswers === undefined) {

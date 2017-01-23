@@ -250,16 +250,6 @@
     ]
   },
   {
-    "name": "passPercentage",
-    "type": "number",
-    "label": "Pass percentage",
-    "description": "Percentage of Total score required for passing the quiz.",
-    "min": 0,
-    "max": 100,
-    "step": 1,
-    "default": 100
-  },
-  {
     "name": "behaviour",
     "type": "group",
     "label": "Behavioural settings.",
@@ -347,6 +337,16 @@
         "type": "boolean",
         "default": false,
         "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+      },
+      {
+        "label": "Pass percentage",
+        "name": "passPercentage",
+        "type": "number",
+        "description": "Percentage of Total score required for passing the quiz.",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 100
       }
     ]
   },
