@@ -263,15 +263,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         'aria-expanded': false,
         'class': 'multichoice-tip',
         appendTo: $wrap
-      }).append($('<span/>', {
-        'class': 'joubel-icon-tip-normal'
-      }).append($('<span/>', {
-        'class': 'path1'
-      })).append($('<span/>', {
-        'class': 'path2'
-      })).append($('<span/>', {
-        'class': 'path3'
-      }))).click(function () {
+      }).click(function () {
         var openFeedback = !$tipContainer.children('.h5p-feedback-dialog').is($feedbackDialog);
         removeFeedbackDialog();
 
@@ -562,8 +554,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     removeFeedbackDialog();
 
     self.hideButton('check-answer');
-    if (params.behaviour.enableSolutionsButton &&
-      (self.getAnswerGiven(true) || params.behaviour.showSolutionsRequiresInput)) {
+    if (params.behaviour.enableSolutionsButton) {
       self.showButton('show-solution');
     }
     if (params.behaviour.enableRetry) {
@@ -581,19 +572,32 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   /**
+   * Determine if any of the radios or checkboxes have been checked.
+   *
+   * @return {boolean}
+   */
+  var isAnswerSelected = function () {
+    return !!$('.h5p-answer[aria-checked="true"]', $myDom).length;
+  };
+
+  /**
    * Adds the ui buttons.
    * @private
    */
   var addButtons = function () {
     // Show solution button
     self.addButton('show-solution', params.UI.showSolutionButton, function () {
-      calcScore();
-      if (!self.getAnswerGiven() && params.behaviour.showSolutionsRequiresInput) {
+
+      if (params.behaviour.showSolutionsRequiresInput && !isAnswerSelected()) {
+        // Require answer before solution can be viewed
         self.updateFeedbackContent(params.UI.noInput);
+        self.read(params.UI.noInput);
       }
       else {
+        calcScore();
         self.showAllSolutions();
       }
+      
     }, false);
 
     // Check solution button
@@ -601,7 +605,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       self.addButton('check-answer', params.UI.checkAnswerButton,
         function () {
           self.answered = true;
-          checkAnswer()
+          checkAnswer();
         },
         true,
         {},
@@ -666,6 +670,35 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   /**
+   * Determine which feedback text to display
+   *
+   * @param {number} score
+   * @param {number} max
+   * @return {string}
+   */
+  var getFeedbackText = function (score, max) {
+    var feedback;
+
+    var ratio = (score / max);
+    if (isFinite(ratio) && ratio > 0) {
+      if (ratio >= 1 && params.UI.correctText) {
+        feedback = params.UI.correctText;
+      }
+      else if (params.UI.almostText) {
+        feedback = params.UI.almostText;
+      }
+    }
+    else if (params.UI.wrongText) {
+      feedback = params.UI.wrongText;
+    }
+    if (!feedback) {
+      feedback = params.UI.feedback;
+    }
+
+    return feedback.replace('@score', score).replace('@total', max);
+  };
+
+  /**
    * Shows feedback on the selected fields.
    * @public
    * @param {boolean} [skipFeedback] Skip showing feedback if true
@@ -702,15 +735,14 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     // Determine feedback
     var max = self.getMaxScore();
-    var feedback = params.UI.feedback.replace('@score', score).replace('@total', max);
 
     // Show feedback
     if (!skipFeedback) {
-      this.setFeedback(feedback, score, max, params.UI.scoreBarLabel);
+      this.setFeedback(getFeedbackText(score, max), score, max, params.UI.scoreBarLabel);
     }
 
     // Disable task if maxscore is achieved
-    var fullScore = score === max;
+    var fullScore = (score === max);
     if (fullScore) {
       finishedTask();
     }
@@ -796,7 +828,22 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   /**
-   * Add the question itselt to the definition part of an xAPIEvent
+   * Get xAPI data.
+   * Contract used by report rendering engine.
+   *
+   * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-6}
+   */
+  this.getXAPIData = function(){
+    var xAPIEvent = this.createXAPIEventTemplate('answered');
+    addQuestionToXAPI(xAPIEvent);
+    addResponseToXAPI(xAPIEvent);
+    return {
+      statement: xAPIEvent.data.statement
+    };
+  };
+
+  /**
+   * Add the question itself to the definition part of an xAPIEvent
    */
   var addQuestionToXAPI = function (xAPIEvent) {
     var definition = xAPIEvent.getVerifiedStatementValue(['object', 'definition']);
@@ -849,12 +896,14 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     if (params.userAnswers === undefined) {
       calcScore();
     }
+
+    // Add the response
     var response = '';
     for (var i = 0; i < params.userAnswers.length; i++) {
       if (response !== '') {
         response += '[,]';
       }
-      response += idMap === undefined ? $(params.userAnswers[i]).text() : idMap[params.userAnswers[i]];
+      response += idMap === undefined ? params.userAnswers[i] : idMap[params.userAnswers[i]];
     }
     xAPIEvent.data.statement.result.response = response;
   };

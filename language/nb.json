@@ -1,15 +1,19 @@
 {
   "semantics": [
     {
-      "label": "Spørsmålsbilde",
-      "description": "Et valgfritt bilde som skal vises over spørsmålet."
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Et valgfritt multimediaelement som skal vises over spørsmålet."
+        }
+      ]
     },
     {
       "label": "Spørsmål"
     },
     {
       "label": "Svaralternativer",
-      "description": "Svaralternativene brukeren kan velge mellom",
       "entity": "svaralternativ",
       "field": {
         "label": "Svaralternativ",
@@ -60,40 +64,42 @@
           "default": "Vis tips"
         },
         {
-          "label": "Tilbakemelding ved riktig svar",
-          "default": "Rett!"
+          "label": "Tilbakemelding ved riktig svar"
         },
         {
-          "label": "Tilbakemelding ved nesten riktig svar",
-          "default": "Nesten!"
+          "label": "Tilbakemelding ved nesten riktig svar"
         },
         {
-          "label": "Tilbakemelding ved galt svar",
-          "default": "Feil"
+          "label": "Tilbakemelding ved galt svar"
         },
         {
           "label": "Resultatsindikator",
           "default": "Resultat"
         },
         {
-          "label": "Tips tilgjengelig",
-          "default": "Tips tilgjengelig"
+          "label": "Tips tilgjengelig (ikke synlig)",
+          "default": "Tips tilgjengelig",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Tilbakemelding tilgjengelig",
-          "default": "Tilbakemelding tilgjengelig"
+          "label": "Tilbakemelding tilgjengelig (ikke synlig)",
+          "default": "Tilbakemelding tilgjengelig",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Les tilbakemelding",
-          "default": "Les tilbakemelding"
+          "label": "Les tilbakemelding (ikke synlig)",
+          "default": "Les tilbakemelding",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Galt svar",
-          "default": "Galt svar"
+          "label": "Galt svar (ikke synlig)",
+          "default": "Galt svar",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
-          "label": "Riktig svar",
-          "default": "Riktig svar"
+          "label": "Riktig svar (ikke synlig)",
+          "default": "Riktig svar",
+          "description": "Tekst for hjelpemiddel-teknologi"
         },
         {
           "label": "Tilbakemelding",
@@ -154,10 +160,10 @@
           "label": "Slå av bilete zooming."
         },
         {
-          "label": "Slå på bruker-bekreftelse før \"Fasit\""
+          "label": "Slå på bruker-bekreftelse før \"Sjekk svar\""
         },
         {
-          "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
+          "label": "Slå på bruker-bekreftelse før \"Prøv igjen\""
         },
         {
           "label": "Umiddelbar tilbakemelding på avgitt svar",
