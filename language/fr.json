@@ -168,6 +168,10 @@
         {
           "label": "Vérifier automatiquement la réponse cochée",
           "description": "Note: cette option peut impacter l'ergonomie."
+        },
+        {
+          "label": "Pass percentage",
+          "description": "Percentage of Total score required for passing the quiz."
         }
       ]
     },

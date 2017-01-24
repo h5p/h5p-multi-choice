@@ -108,7 +108,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       randomAnswers: false,
       showSolutionsRequiresInput: true,
       disableImageZooming: false,
-      autoCheck: false
+      autoCheck: false,
+      passPercentage: 100
     },
     overrideSettings: {}
   };
@@ -801,7 +802,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       score = params.weight;
     }
     if (params.behaviour.singlePoint) {
-      score = (score === calculateMaxScore() ? params.weight : 0);
+      score = (100 * score / calculateMaxScore()) >= params.behaviour.passPercentage ? params.weight : 0;
     }
   };
 
@@ -889,7 +890,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    */
   var addResponseToXAPI = function (xAPIEvent) {
     var maxScore = self.getMaxScore();
-    var success = score == maxScore ? true : false;
+    var success = (100 * score / maxScore) >= params.behaviour.passPercentage;
+
     xAPIEvent.setScoredResult(score, maxScore, self, true, success);
     if (params.userAnswers === undefined) {
       calcScore();
