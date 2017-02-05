@@ -170,8 +170,8 @@
           "description": "Wenn diese Option gewählt wird, leidet die Barrierefreiheit. Sei dir sicher, was du tust."
         },
         {
-          "label": "Pass percentage",
-          "description": "Percentage of Total score required for passing the quiz."
+          "label": "Prozentsatz zum Bestehen",
+          "description": "Prozentsatz der Gesamtpunktzahl, der nötig ist, um das Quiz zu bestehen"
         }
       ]
     },
