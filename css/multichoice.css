@@ -30,7 +30,7 @@
   position: relative;
   text-align: left;
   display: block;
-  padding: 0.25em 0.75em 0.25em 0.1em;
+  padding: 0.25em 0.75em 0.25em 2.1em;
   border-radius: 0.3em;
   border: 0.1em solid #ddd;
   font-weight: normal;
@@ -39,6 +39,7 @@
   -moz-box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.3);
   line-height: 1.5em;
+  text-indent: -2em;
 }
 .h5p-multichoice .h5p-answer .h5p-alternative-container:before {
   font-family: icomoon-multichoice;
@@ -47,7 +48,7 @@
   height: 1em;
   width: 1em;
   position: absolute;
-  left: 0.5em;
+  left: 2.5em;
   top: 0.25em;
   margin: auto;
   text-decoration: none;
@@ -286,13 +287,9 @@
 .h5p-multichoice .h5p-feedback-text {
   position: relative;
   z-index: 3;
-  max-height: 6.5em;
   overflow: auto;
   overflow-x: hidden;
   overflow-y: auto;
-}
-.h5p-multichoice .h5p-answer:last-child .h5p-feedback-text {
-  max-height: 4em;
 }
 
 .h5p-multichoice .h5p-feedback-text::-webkit-scrollbar {
