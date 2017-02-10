@@ -168,6 +168,10 @@
         {
           "label": "Antworten automatisch überprüfen",
           "description": "Wenn diese Option gewählt wird, leidet die Barrierefreiheit. Sei dir sicher, was du tust."
+        },
+        {
+          "label": "Prozentsatz zum Bestehen",
+          "description": "Prozentsatz der Gesamtpunktzahl, der nötig ist, um das Quiz zu bestehen"
         }
       ]
     },
