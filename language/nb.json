@@ -1,8 +1,13 @@
 {
   "semantics": [
     {
-      "label": "Spørsmålsbilde",
-      "description": "Et valgfritt bilde som skal vises over spørsmålet."
+      "label": "Multimedia",
+      "fields": [
+        {
+          "label": "Type",
+          "description": "Et valgfritt multimediaelement som skal vises over spørsmålet."
+        }
+      ]
     },
     {
       "label": "Spørsmål"
@@ -59,16 +64,13 @@
           "default": "Vis tips"
         },
         {
-          "label": "Tilbakemelding ved riktig svar",
-          "default": "Rett!"
+          "label": "Tilbakemelding ved riktig svar"
         },
         {
-          "label": "Tilbakemelding ved nesten riktig svar",
-          "default": "Nesten!"
+          "label": "Tilbakemelding ved nesten riktig svar"
         },
         {
-          "label": "Tilbakemelding ved galt svar",
-          "default": "Feil"
+          "label": "Tilbakemelding ved galt svar"
         },
         {
           "label": "Resultatsindikator",
@@ -158,14 +160,18 @@
           "label": "Slå av bilete zooming."
         },
         {
-          "label": "Slå på bruker-bekreftelse før \"Fasit\""
+          "label": "Slå på bruker-bekreftelse før \"Sjekk svar\""
         },
         {
-          "label": "Slå på bruker-bekreftelse fær \"Prøv igjen\""
+          "label": "Slå på bruker-bekreftelse før \"Prøv igjen\""
         },
         {
           "label": "Umiddelbar tilbakemelding på avgitt svar",
           "description": "Vær oppmerksom på at hjelpemiddelteknologi kan svekkes ved å bruke dette alternativet."
+        },
+        {
+          "label": "Pass percentage",
+          "description": "Percentage of Total score required for passing the quiz."
         }
       ]
     },

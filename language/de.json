@@ -64,16 +64,13 @@
           "default": "Tipp anzeigen"
         },
         {
-          "label": "Rückmeldung zur korrekten Antwort",
-          "default": "Korrekt!"
+          "label": "Rückmeldung zur korrekten Antwort"
         },
         {
-          "label": "Rückmeldung zu einer fast korrekten Antwort",
-          "default": "Fast!"
+          "label": "Rückmeldung zu einer fast korrekten Antwort"
         },
         {
-          "label": "Rückmeldung zu einer inkorrekten Antwort",
-          "default": "Falsch"
+          "label": "Rückmeldung zu einer inkorrekten Antwort"
         },
         {
           "label": "Beschriftung für den Punktebalken",
@@ -117,10 +114,10 @@
           "label": "Option hätte nicht ausgewählt werden sollen",
           "default": "Hätte nicht ausgewählt werden sollen"
         },
-      {
-        "label": "Text für \"Benötigt Antwort\"-Hinweis",
-        "default": "Eine Antwort ist notwendig, bevor die Lösung angesehen werden kann."
-      }
+        {
+          "label": "Text für \"Benötigt Antwort\"-Hinweis",
+          "default": "Eine Antwort ist notwendig, bevor die Lösung angesehen werden kann."
+        }
       ]
     },
     {
@@ -136,7 +133,6 @@
         {
           "label": "Fragentyp",
           "description": "Wählen des Aussehens und des Verhaltens der Frage",
-          "default": "auto",
           "options": [
             {
               "label": "Automatisch"
@@ -172,6 +168,10 @@
         {
           "label": "Antworten automatisch überprüfen",
           "description": "Wenn diese Option gewählt wird, leidet die Barrierefreiheit. Sei dir sicher, was du tust."
+        },
+        {
+          "label": "Prozentsatz zum Bestehen",
+          "description": "Prozentsatz der Gesamtpunktzahl, der nötig ist, um das Quiz zu bestehen"
         }
       ]
     },
