@@ -1,0 +1,221 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tyyppi",
+          "description": "Vapaavalintainen kuva tai video joka näkyy kysymyksen yläpuolella."
+        }
+      ]
+    },
+    {
+      "label": "Kysymys"
+    },
+    {
+      "label": "Vaihtoehdot",
+      "entity": "vaihtoehto",
+      "field": {
+        "label": "Vaihtoehto",
+        "fields": [
+          {
+            "label": "Teksti"
+          },
+          {
+            "label": "Oikein"
+          },
+          {
+            "label": "Vihjeet ja palaute",
+            "fields": [
+              {
+                "label": "Vihjeteksti",
+                "description": "Vihje käyttäjälle. Tämä näkyy ennen kuin käyttäjä tarkistaa vastauksensa."
+              },
+              {
+                "label": "Palaute valittuun vastaukseen",
+                "description": "Palaute ilmestyy vastauksen alle, kun vastaus tarkistetaan ja vastaus on valittuna."
+              },
+              {
+                "label": "Palaute valitsemattomaan vastaukseen",
+                "description": "Palaute ilmestyy vastauksen alle, kun vastaus tarkistetaan ja vastaus ei ole valittuna."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Monivalintatehtävän käyttöliittymän käännökset",
+      "fields": [
+        {
+          "label": "Nimike nappiin \"Tarkista\"",
+          "default": "Tarkista"
+        },
+        {
+          "label": "Nimike nappiin \"Katso vastaus\"",
+          "default": "Katso vastaus"
+        },
+        {
+          "label": "Nimike nappiin \"Yritä uudelleen\"",
+          "default": "Yritä uudelleen"
+        },
+        {
+          "label": "Teksti \"Näytä vihje\"",
+          "default": "Näytä vihje"
+        },
+        {
+          "label": "Palaute oikeasta vastauksesta"
+        },
+        {
+          "label": "Palaute melkein oikeasta vastauksesta"
+        },
+        {
+          "label": "Palaute väärästä vastauksesta"
+        },
+        {
+          "label": "Tulospalkin nimike",
+          "default": "Tulos"
+        },
+        {
+          "label": "Vihje saatavilla",
+          "default": "Vihje saatavilla",
+          "description": "Esteettömyysteksti ruudunlukijoille"
+        },
+        {
+          "label": "Palaute saatavilla",
+          "default": "Palaute saatavilla",
+          "description": "Esteettömyysteksti ruudunlukijoille"
+        },
+        {
+          "label": "Lue palaute",
+          "default": "Lue palaute",
+          "description": "Esteettömyysteksti ruudunlukijoille"
+        },
+        {
+          "label": "Väärä vastaus",
+          "default": "Väärä vastaus",
+          "description": "Esteettömyysteksti ruudunlukijoille"
+        },
+        {
+          "label": "Oikea vastaus",
+          "default": "Oikea vastaus",
+          "description": "Esteettömyysteksti ruudunlukijoille"
+        },
+        {
+          "label": "Palauteteksti",
+          "default": "Sait @score\/@total pistettä",
+          "description": "Palauteteksti, jossa käytettävissä muuttujat: @score ja @total. Esimerkki: 'Olet saanut @score pistettä. Maksimi: @total'"
+        },
+        {
+          "label": "Valinta olisi pitänyt olla valittuna",
+          "default": "Valinta olisi pitänyt olla valittuna"
+        },
+        {
+          "label": "Valinta ei olisi pitänyt olla valittuna",
+          "default": "Valinta ei olisi pitänyt olla valittuna"
+        },
+        {
+          "label": "Teksti viestiin \"Pakollinen vastaus\"",
+          "default": "Ole hyvä ja vastaa ennen kuin näet ratkaisun"
+        }
+      ]
+    },
+    {
+      "label": "Yleisasetukset",
+      "description": "Näillä valinnoilla voit hallita tehtävän käyttäytymistä.",
+      "fields": [
+        {
+          "label": "Salli nappi  \"Yritä uudelleen\""
+        },
+        {
+          "label": "Salli nappi \"Katso vastaus\""
+        },
+        {
+          "label": "Kysymystyyppi",
+          "description": "Valitse kysymystyyppi ja ominaisuudet.",
+          "options": [
+            {
+              "label": "Automaattinen valinta"
+            },
+            {
+              "label": "Monivalinta (valintaruudut)"
+            },
+            {
+              "label": "Yksi oikein (valintanapit)"
+            }
+          ]
+        },
+        {
+          "label": "Anna yksi piste koko tehtävästä",
+          "description": "Oikeista monivalintavastauksista kokonaisuudessaan yksi piste. Ei koske yksi oikein -tehtäviä."
+        },
+        {
+          "label": "Sekoita vastaukset",
+          "description": "Vastaukset sekoitetaan näkymään satunnaisessa järjestyksessä."
+        },
+        {
+          "label": "Vaadi vastaus ennen kuin ratkaisun saa nähdä"
+        },
+        {
+          "label": "Älä salli kuvan suurentamista kysymykseen liitetylle kuvalle"
+        },
+        {
+          "label": "Näytä varmistusdialogi kun klikataan \"Tarkista\""
+        },
+        {
+          "label": "Näytä varmistusdialogi kun klikataan \"Yritä uudelleen\""
+        },
+        {
+          "label": "Tarkista automaattisesti vastaukset",
+          "description": "Tämä saattaa heikentää esteettömyyttä, varmista mitä olet tekemässä."
+        },
+        {
+          "label": "Läpipääsyprosentti",
+          "description": "Kuinka monta prosenttia maksimipisteistä vaaditaan tehtävän läpäisyyn."
+        }
+      ]
+    },
+    {
+      "label": "Varmistusikkuna valinnalle \"Tarkista\"",
+      "fields": [
+        {
+          "label": "Otsikkoteksti",
+          "default": "Valmis ?"
+        },
+        {
+          "label": "Leipäteksti",
+          "default": "Oletko varma, että olet valmis ?"
+        },
+        {
+          "label": "Teksti napille Ei",
+          "default": "Ei"
+        },
+        {
+          "label": "Teksti napille Kyllä",
+          "default": "Kyllä"
+        }
+      ]
+    },
+    {
+      "label": "Varmistusdialogi valinnalle \"Yritä uudelleen\"",
+      "fields": [
+        {
+          "label": "Otsikkoteksti",
+          "default": "Yritä uudelleen ?"
+        },
+        {
+          "label": "Leipäteksti",
+          "default": "Oletko varma, että haluat aloittaa uuden yrityksen ?"
+        },
+        {
+          "label": "Teksti napille Ei",
+          "default": "Ei"
+        },
+        {
+          "label": "Teksti napille Kyllä",
+          "default": "Kyllä"
+        }
+      ]
+    }
+  ]
+}
