@@ -149,6 +149,10 @@
           "description": "تمكين العرض بطريقة عشوائية وترتيب الأسئلة على الشاشة"
         },
         {
+          "label": "Randomize on retry",
+          "description": "Enable to reorder the answers on retry."
+        },
+        {
           "label": "تطلب إدخال المستخدم اجابته قبل أن يتم عرضه الحل"
         },
         {

@@ -342,6 +342,14 @@
         "default": true
       },
       {
+        "name": "randomizeOnRetry",
+        "type": "boolean",
+        "label": "Randomize on retry",
+        "importance": "low",
+        "description": "Enable to reorder the answers on retry.",
+        "default": false
+      },
+      {
         "label": "Require answer before the solution can be viewed",
         "importance": "low",
         "name": "showSolutionsRequiresInput",

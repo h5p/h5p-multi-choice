@@ -149,6 +149,10 @@
           "description": "Abilita per rendere casuale l'ordine delle domande visualizzate."
         },
         {
+          "label": "Randomize on retry",
+          "description": "Enable to reorder the answers on retry."
+        },
+        {
           "label": "Richiedere l'immissione dei dati all'utente prima che la soluzione sia visualizzata"
         },
         {
