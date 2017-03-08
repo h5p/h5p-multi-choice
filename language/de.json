@@ -133,7 +133,6 @@
         {
           "label":"Fragentyp",
           "description":"Wählen des Aussehens und des Verhaltens der Frage",
-          "default":"auto",
           "options":[
             {
               "label":"Automatisch"
