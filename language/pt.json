@@ -33,11 +33,11 @@
               },
               {
                 "label":"Mensagem exibida se a resposta estiver selecionada",
-                "description":"Mensagem aparecerá abaixo da resposta ao \"verificar\" se esta resposta for selecionada."
+                "description":"Mensagem aparecerá abaixo da resposta ao \"verificar\" se esta resposta foi selecionada."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "label":"Mensagem exibida se a resposta não foi selecionada",
+                "description":"Mensagem aparecerá abaixo da resposta ao \"verificar\" se esta resposta não foi selecionada."
               }
             ]
           }
@@ -45,65 +45,65 @@
       }
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"Traduções de interface de usuário para múltipla escolha",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"Rótulo do botão de verificar resposta",
+          "default":"Verificar"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"Rótulo do botão de mostrar solução",
+          "default":"Mostrar solução"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Rótulo do botão de tentar novamente",
+          "default":"Tentar novamente"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"Rótulo da dica",
+          "default":"Mostrar dica"
         },
         {
-          "label":"Correct answer feedback"
+          "label":"Feedback da resposta correta"
         },
         {
-          "label":"Almost correct answer feedback"
+          "label":"Feedback da resposta quase certa"
         },
         {
-          "label":"Not correct answer feedback"
+          "label":"Feedback da resposta não correta"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"Rótulo da barra de pontuação",
+          "default":"Pontuação"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Dica disponível (não exibido)",
+          "default":"Dica disponível",
+          "description":"Texto de acessibilidade utilizado para leitura em voz alta"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Feedback disponível (não exibido)",
+          "default":"Feedback disponível",
+          "description":"Texto de acessibilidade utilizado para leitura em voz alta"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Ler Feedback (não exibido)",
+          "default":"Ler feedback",
+          "description":"Texto de acessibilidade utilizado para leitura em voz alta"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Resposta errada (não exibida)",
+          "default":"Resposta errada",
+          "description":"Texto de acessibilidade utilizado para leitura em voz alta"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Resposta correta (não exibida)",
+          "default":"Resposta correta",
+          "description":"Texto de acessibilidade utilizado para leitura em voz alta"
         },
         {
-          "label":"Feedback text",
-          "default":"You got @score of @total points",
+          "label":"Texto de feedback",
+          "default":"Você conseguiu @score de @total pontos",
           "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
         },
         {
