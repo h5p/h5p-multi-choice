@@ -1,39 +1,39 @@
 {
   "semantics":[
     {
-      "label":"Media",
+      "label":"Mídia",
       "fields":[
         {
-          "label":"Type",
-          "description":"Optional media to display above the question."
+          "label":"Tipo",
+          "description":"Mídia opcional para exibir acima da pergunta."
         }
       ]
     },
     {
-      "label":"Question"
+      "label":"Pergunta"
     },
     {
-      "label":"Available options",
-      "entity":"option",
+      "label":"Opções disponíveis",
+      "entity":"opção",
       "field":{
-        "label":"Option",
+        "label":"Opção",
         "fields":[
           {
-            "label":"Text"
+            "label":"Texto"
           },
           {
-            "label":"Correct"
+            "label":"Certo"
           },
           {
-            "label":"Tips and feedback",
+            "label":"Dicas e comentários",
             "fields":[
               {
                 "label":"Tip text",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "description":"Dica para o usuário. Isto irá aparecer antes de usuário verifica suas resposta/respostas."
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label":"Mensagem exibida se a resposta estiver selecionada",
+                "description":"Mensagem aparecerá abaixo da resposta ao \"verificar\" se esta resposta for selecionada."
               },
               {
                 "label":"Message displayed if answer is not selected",
