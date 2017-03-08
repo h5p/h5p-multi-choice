@@ -28,7 +28,7 @@
             "label":"Dicas e comentários",
             "fields":[
               {
-                "label":"Tip text",
+                "label":"Texto da dica",
                 "description":"Dica para o usuário. Isto irá aparecer antes de usuário verifica suas resposta/respostas."
               },
               {
@@ -104,116 +104,116 @@
         {
           "label":"Texto de feedback",
           "default":"Você conseguiu @score de @total pontos",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+          "description":"Texto de feedback, variáveis disponíveis: @score e @total. Exemplo: 'você conseguiu @score de @total pontos possíveis'"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"Opção deveria ter sido marcada",
+          "default":"Deveria ter sido marcada"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"Opção deveria ter sido marcada",
+          "default":"Não deveria ter sido marcada"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"Texto para a mensagem \"Requer resposta\"",
+          "default":"Por favor responda antes de ver a solução"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"Configurações comportamentais",
+      "description":"Estas opções permitem que você controle como a tarefa se comporta.",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"Habilitar o botão \"Tentar novamente\""
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"Habilitar o botão \"Mostrar solução\""
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
+          "label":"Tipo de pergunta",
+          "description":"Selecione a aparência e o comportamento da pergunta.",
           "options":[
             {
-              "label":"Automatic"
+              "label":"Automático"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"Múltipla escolha (caixas de seleção)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"Única escolha (botões de opção)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"Dê um ponto para a tarefa inteira",
+          "description":"Habilite para dar um total de um ponto para várias respostas corretas. Isto não será uma opção no modo de \"Resposta única\"."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"Randomize as respostas",
+          "description":"Habilitar randomizar a ordem das perguntas exibidas."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"Exigir resposta antes que a solução pode ser vista"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"Desativar zoom da imagem para pergunta com imagem"
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"Mostrar caixa de diálogo de confirmação ao clicar \"Verificar\""
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"Mostrar caixa de diálogo de confirmação ao clicar \"Tentar novamente\""
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"Verificar resposta automaticamente",
+          "description":"Habilitar esta opção prejudicará a acessibilidade, certifique-se de que você sabe o que está fazendo."
         },
         {
-          "label":"Pass percentage",
-          "description":"Percentage of Total score required for passing the quiz."
+          "label":"Percentagem de aprovação",
+          "description":"Percentagem do Total de pontuação necessária para passar no teste."
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"Caixa de diálogo ao clicar Verificar",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Finish ?"
+          "label":"Texto de cabeçalho",
+          "default":"Terminar?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to finish ?"
+          "label":"Corpo de texto",
+          "default":"Tem certeza que deseja terminar?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Rótulo do botão Cancelar",
+          "default":"Cancelar"
         },
         {
-          "label":"Confirm button label",
-          "default":"Finish"
+          "label":"Rótulo do botão Confirmar",
+          "default":"Terminar"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"Caixa de diálogo de confirmação do Tentar novamente",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"Texto de cabeçalho",
+          "default":"Tentar novamente?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"Corpo de texto",
+          "default":"Tem certeza que deseja tentar novamente?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Rótulo do botão Cancelar",
+          "default":"Cancelar"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"Rótulo do botão Confirmar",
+          "default":"Confirmar"
         }
       ]
     }
