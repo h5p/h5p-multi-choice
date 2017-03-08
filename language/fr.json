@@ -133,7 +133,6 @@
         {
           "label":"Type de question",
           "description":"Choisissez le type de question et ses paramètres.",
-          "default":"auto",
           "options":[
             {
               "label":"Sélection automatique"
