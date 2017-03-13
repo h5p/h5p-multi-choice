@@ -255,6 +255,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         'class': 'h5p-multichoice-tipwrap',
         'aria-label': params.UI.tipAvailable + '.'
       });
+
       var $multichoiceTip = $('<div>', {
         'role': 'button',
         'tabindex': 0,
@@ -263,15 +264,17 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         'aria-expanded': false,
         'class': 'multichoice-tip',
         appendTo: $wrap
-      }).append($('<span/>', {
-        'class': 'joubel-icon-tip-normal'
-      }).append($('<span/>', {
-        'class': 'path1'
-      })).append($('<span/>', {
-        'class': 'path2'
-      })).append($('<span/>', {
-        'class': 'path3'
-      }))).click(function () {
+      });
+
+      var tipIconHtml = '<span class="joubel-icon-tip-normal">' +
+                          '<span class="h5p-icon-layer-1"></span>' +
+                          '<span class="h5p-icon-layer-2"></span>' +
+                          '<span class="h5p-icon-layer-3"></span>' +
+                        '</span>';
+
+      $multichoiceTip.append(tipIconHtml);
+
+      $multichoiceTip.click(function () {
         var openFeedback = !$tipContainer.children('.h5p-feedback-dialog').is($feedbackDialog);
         removeFeedbackDialog();
 
