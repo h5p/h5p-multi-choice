@@ -255,6 +255,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         'class': 'h5p-multichoice-tipwrap',
         'aria-label': params.UI.tipAvailable + '.'
       });
+
       var $multichoiceTip = $('<div>', {
         'role': 'button',
         'tabindex': 0,
@@ -263,7 +264,17 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         'aria-expanded': false,
         'class': 'multichoice-tip',
         appendTo: $wrap
-      }).click(function () {
+      });
+
+      var tipIconHtml = '<span class="joubel-icon-tip-normal">' +
+                          '<span class="h5p-icon-shadow"></span>' +
+                          '<span class="h5p-icon-speech-bubble"></span>' +
+                          '<span class="h5p-icon-info"></span>' +
+                        '</span>';
+
+      $multichoiceTip.append(tipIconHtml);
+
+      $multichoiceTip.click(function () {
         var openFeedback = !$tipContainer.children('.h5p-feedback-dialog').is($feedbackDialog);
         removeFeedbackDialog();
 

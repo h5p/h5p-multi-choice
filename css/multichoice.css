@@ -316,16 +316,17 @@
   font-weight: normal;
 }
 .h5p-multichoice .multichoice-tip:focus {
-  outline: auto;
+  outline: 0;
+  box-shadow: 0px 0px 1px 3px rgba(140,185,240,1);
+}
+
+.h5p-multichoice .multichoice-tip .joubel-icon-tip-normal {
+  line-height: initial;
+  float: right;
 }
 
 .h5p-multichoice .multichoice-tip:hover {
   color: #333;
-}
-
-.h5p-multichoice .multichoice-tip:before {
-  font-family: "H5PFontAwesome4";
-  content: "\f0e5";
 }
 
 .h5p-multichoice .h5p-correct .multichoice-tip,
