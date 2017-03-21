@@ -77,13 +77,13 @@
           "default":"Score"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
+          "label":"Tip beschikbaar (niet weergegeven)",
+          "default":"Tip beschikbaar",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
+          "label":"Feedback beschikbaar (niet weergegeven)",
+          "default":"Feedback beschikbaar",
           "description":"Accessibility text used for readspeakers"
         },
         {
@@ -93,17 +93,17 @@
         },
         {
           "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
+          "default":"Fout antwoord",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
+          "label":"Juist antwoord (niet weergegeven)",
+          "default":"Juist antwoord",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Feedback text",
-          "default":"You got @score of @total points",
+          "label":"Feedback tekst",
+          "default":"Je hebt @score van @total punten",
           "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
         },
         {
