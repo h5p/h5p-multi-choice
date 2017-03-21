@@ -107,12 +107,12 @@
           "description":"Feedback tekst, beschikbare variabelen: @score en @total. Bijvoorbeeld: 'Je hebt @score van @total punten.'"
         },
         {
-          "label":"Optie zou moeten worden gecontroleerd",
-          "default":"Zou moeten worden gecontroleerd"
+          "label":"Optie zou moeten worden aangevinkt",
+          "default":"Zou moeten worden aangevinkt"
         },
         {
-          "label":"Optie zou niet moeten worden gecontroleerd",
-          "default":"Zou niet moeten worden gecontroleerd"
+          "label":"Optie zou niet moeten worden aangevinkt",
+          "default":"Zou niet moeten worden aangevinkt"
         },
         {
           "label":"Tekst voor \"Vereist antwoord\" bericht",
