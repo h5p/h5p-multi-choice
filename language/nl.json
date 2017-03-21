@@ -32,12 +32,12 @@
                 "description":"Hint voor de gebruiker. Deze zal verschijnen voordat de gebruiker zijn antwoord(en) controleert."
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label":"Weergegeven bericht als antwoord wordt gecontroleerd",
+                "description":"Bericht zal onder antwoord verschijnen bij controleren als dit antwoord is geselecteerd."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "label":"Weergegeven bericht als antwoord niet is geselecteerd",
+                "description":"Bericht zal onder het antwoord verschijnen bij controleren als dit antwoord niet is geselecteerd."
               }
             ]
           }
@@ -45,7 +45,7 @@
       }
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"Gebruikersinterface vertalingen voor Mulichoice",
       "fields":[
         {
           "label":"Tekst voor op Controleer antwoord knop",
@@ -53,24 +53,24 @@
         },
         {
           "label":"Tekst voor op Toon oplossing knop",
-          "default":"Show solution"
+          "default":"Toon oplossing"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Tekst voor op Opnieuw proberen knop",
+          "default":"Opnieuw proberen"
         },
         {
-          "label":"Tip label",
+          "label":"Tekst voor bij tip",
           "default":"Toon tip"
         },
         {
           "label":"Juist antwoord feedback"
         },
         {
-          "label":"Almost correct answer feedback"
+          "label":"Bijna goed antwoord feedback"
         },
         {
-          "label":"Not correct answer feedback"
+          "label":"Niet juist antwoord feedback"
         },
         {
           "label":"Score Bar Label",
@@ -107,8 +107,8 @@
           "description":"Feedback tekst, beschikbare variabelen: @score en @total. Bijvoorbeeld: 'Je hebt @score van @total punten.'"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"Optie zou moeten worden gecontroleerd",
+          "default":"Zou moeten worden gecontroleerd"
         },
         {
           "label":"Option should not have been checked",
@@ -208,12 +208,12 @@
           "default":"Are you sure you wish to retry ?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Tekst voor op Annuleer knop",
+          "default":"Annuleer"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"Tekst voor op Bevestig knop",
+          "default":"Bevestig"
         }
       ]
     }
