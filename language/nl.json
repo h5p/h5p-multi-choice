@@ -32,11 +32,11 @@
                 "description":"Hint voor de gebruiker. Deze zal verschijnen voordat de gebruiker zijn antwoord(en) controleert."
               },
               {
-                "label":"Weergegeven bericht als antwoord wordt gecontroleerd",
+                "label":"Weer te geven bericht als antwoord is geselecteerd",
                 "description":"Bericht zal onder antwoord verschijnen bij controleren als dit antwoord is geselecteerd."
               },
               {
-                "label":"Weergegeven bericht als antwoord niet is geselecteerd",
+                "label":"Weer te geven bericht als antwoord niet is geselecteerd",
                 "description":"Bericht zal onder het antwoord verschijnen bij controleren als dit antwoord niet is geselecteerd."
               }
             ]
@@ -45,22 +45,22 @@
       }
     },
     {
-      "label":"Gebruikersinterface vertalingen voor Mulichoice",
+      "label":"Gebruikersinterface vertalingen voor Multichoice",
       "fields":[
         {
-          "label":"Tekst voor op Controleer antwoord knop",
+          "label":"Tekst van de Controleer antwoord knop",
           "default":"Controleer"
         },
         {
-          "label":"Tekst voor op Toon oplossing knop",
+          "label":"Tekst van de Toon oplossing knop",
           "default":"Toon oplossing"
         },
         {
-          "label":"Tekst voor op Opnieuw proberen knop",
+          "label":"Tekst van de Opnieuw proberen knop",
           "default":"Opnieuw proberen"
         },
         {
-          "label":"Tekst voor bij tip",
+          "label":"Tekst van de tip knop",
           "default":"Toon tip"
         },
         {
@@ -73,7 +73,7 @@
           "label":"Niet juist antwoord feedback"
         },
         {
-          "label":"Score Bar Label",
+          "label":"Tekst van de scorebalk",
           "default":"Score"
         },
         {
@@ -92,8 +92,8 @@
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Fout antwoord (niet weergegeven)",
-          "default":"Fout antwoord",
+          "label":"Onjuist antwoord (niet weergegeven)",
+          "default":"Onjuist antwoord",
           "description":"Accessibility text used for readspeakers"
         },
         {
@@ -154,7 +154,7 @@
           "description":"Vragen in willekeurige volgorde inschakelen."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"Vereist antwoord voordat oplossing kan worden bekeken"
         },
         {
           "label":"Deactiveer zoomen bij afbeeldingsvraag"
