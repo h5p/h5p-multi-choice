@@ -79,27 +79,27 @@
         {
           "label":"Tip beschikbaar (niet weergegeven)",
           "default":"Tip beschikbaar",
-          "description":"Accessibility text used for readspeakers"
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
         },
         {
           "label":"Feedback beschikbaar (niet weergegeven)",
           "default":"Feedback beschikbaar",
-          "description":"Accessibility text used for readspeakers"
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Voorlezen feedback (niet weergegeven)",
+          "default":"Voorlezen feedback",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
         },
         {
           "label":"Onjuist antwoord (niet weergegeven)",
           "default":"Onjuist antwoord",
-          "description":"Accessibility text used for readspeakers"
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
         },
         {
           "label":"Juist antwoord (niet weergegeven)",
           "default":"Juist antwoord",
-          "description":"Accessibility text used for readspeakers"
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
         },
         {
           "label":"Feedback tekst",
@@ -138,16 +138,16 @@
               "label":"Automatisch"
             },
             {
-              "label":"Meerkeuze (aanvinkvakjes)"
+              "label":"Meer-meerkeuze (aanvinkvakjes)"
             },
             {
-              "label":"Enkele keuze (radioknopjes)"
+              "label":"Enkelvoudige keuze (radioknoppen)"
             }
           ]
         },
         {
           "label":"Geef een punt voor de gehele taak",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "description":"Inschakelen dat één punt gegeven kan worden voor meerdere juiste antwoorden. Dit is geen optie in \"Enkelvoudige keuze\" modus."
         },
         {
           "label":"Antwoorden in willekeurige volgorde",
