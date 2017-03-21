@@ -10,26 +10,26 @@
       ]
     },
     {
-      "label":"Question"
+      "label":"Vraag"
     },
     {
-      "label":"Available options",
-      "entity":"option",
+      "label":"Beschikbare opties",
+      "entity":"optie",
       "field":{
-        "label":"Option",
+        "label":"Optie",
         "fields":[
           {
             "label":"Text"
           },
           {
-            "label":"Correct"
+            "label":"Juist"
           },
           {
-            "label":"Tips and feedback",
+            "label":"Tips en feedback",
             "fields":[
               {
-                "label":"Tip text",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "label":"Tekst voor tip",
+                "description":"Hint voor de gebruiker. Deze zal verschijnen voordat de gebruiker zijn antwoord(en) controleert."
               },
               {
                 "label":"Message displayed if answer is selected",
@@ -61,10 +61,10 @@
         },
         {
           "label":"Tip label",
-          "default":"Show tip"
+          "default":"Toon tip"
         },
         {
-          "label":"Correct answer feedback"
+          "label":"Juist antwoord feedback"
         },
         {
           "label":"Almost correct answer feedback"
