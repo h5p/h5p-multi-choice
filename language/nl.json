@@ -5,7 +5,7 @@
       "fields":[
         {
           "label":"Type",
-          "description":"Optional media to display above the question."
+          "description":"Optionele media om weer te geven boven de vraag."
         }
       ]
     },
@@ -19,7 +19,7 @@
         "label":"Optie",
         "fields":[
           {
-            "label":"Text"
+            "label":"Tekst"
           },
           {
             "label":"Juist"
@@ -111,17 +111,17 @@
           "default":"Zou moeten worden gecontroleerd"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"Optie zou niet moeten worden gecontroleerd",
+          "default":"Zou niet moeten worden gecontroleerd"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"Tekst voor \"Vereist antwoord\" bericht",
+          "default":"Alsjeblieft beantwoorden voor het bekijken van de oplossing"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
+      "label":"Gedragsinstellingen",
       "description":"These options will let you control how the task behaves.",
       "fields":[
         {
