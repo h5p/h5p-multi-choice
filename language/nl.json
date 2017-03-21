@@ -48,11 +48,11 @@
       "label":"User interface translations for multichoice",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"Tekst voor op Controleer antwoord knop",
+          "default":"Controleer"
         },
         {
-          "label":"Show solution button label",
+          "label":"Tekst voor op Toon oplossing knop",
           "default":"Show solution"
         },
         {
@@ -92,7 +92,7 @@
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Wrong Answer (not displayed)",
+          "label":"Fout antwoord (niet weergegeven)",
           "default":"Fout antwoord",
           "description":"Accessibility text used for readspeakers"
         },
@@ -104,7 +104,7 @@
         {
           "label":"Feedback tekst",
           "default":"Je hebt @score van @total punten",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+          "description":"Feedback tekst, beschikbare variabelen: @score en @total. Bijvoorbeeld: 'Je hebt @score van @total punten.'"
         },
         {
           "label":"Option should have been checked",
