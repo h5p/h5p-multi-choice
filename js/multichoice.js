@@ -646,13 +646,10 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         oldIdMap = idMap;
         idMap = getShuffleMap();
         var answersDisplayed = $myDom.find('.h5p-answer');
-        // remember tips
+        // remember tips and move them and answers on display
         var tip = [];
         for (i = 0; i < answersDisplayed.length; i++) {
           tip[i] = $(answersDisplayed[i]).find('.h5p-multichoice-tipwrap');
-        }
-        // move tips and answers on display
-        for (i = 0; i < answersDisplayed.length; i++) {
           $(answersDisplayed[i]).find('.h5p-alternative-inner').html(params.answers[i].text);
           $(tip[i]).detach().appendTo($(answersDisplayed[idMap.indexOf(oldIdMap[i])]).find('.h5p-alternative-container'));
         }
