@@ -154,10 +154,6 @@
           "description": "Les réponses possibles seront affichées dans l'ordre aléatoire."
         },
         {
-          "label": "Randomize on retry",
-          "description": "Enable to reorder the answers on retry."
-        },
-        {
           "label": "Une réponse est obligatoire pour voir la solution"
         },
         {

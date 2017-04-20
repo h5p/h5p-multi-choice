@@ -154,10 +154,6 @@
           "description": "Aktivieren, um die Fragen auf dem Bildschirm zufällig anzuordnen."
         },
         {
-          "label": "Antworten beim Wiederholen zufällig anordnen",
-          "description": "Aktivieren, um die Fragen beim Wiederholen erneut zufällig anzuordnen."
-        },
-        {
           "label": "Benutzereingabe erforderlich machen, bevor die Antwort angesehen werden kann"
         },
         {

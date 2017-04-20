@@ -154,10 +154,6 @@
           "description": "Slå på for å vise alternativene i tilfeldig rekkefølge."
         },
         {
-          "label": "Randomize on retry",
-          "description": "Enable to reorder the answers on retry."
-        },
-        {
           "label": "Krev svar fra brukeren før fasit gis."
         },
         {

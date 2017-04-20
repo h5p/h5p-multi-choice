@@ -233,6 +233,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     // Create tips:
     var $answers = $('.h5p-answer', $myDom).each(function (i) {
+
       var tip = params.answers[i].tipsAndFeedback.tip;
       if (tip === undefined) {
         return; // No tip
@@ -273,9 +274,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       $multichoiceTip.append(tipIconHtml);
 
       $multichoiceTip.click(function () {
-        $tipContainer = $multichoiceTip.parents('.h5p-answer');
+        var $tipContainer = $multichoiceTip.parents('.h5p-answer');
         var openFeedback = !$tipContainer.children('.h5p-feedback-dialog').is($feedbackDialog);
-
         removeFeedbackDialog();
 
         // Do not open feedback if it was open
@@ -641,19 +641,23 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       enableInput();
       $myDom.find('.h5p-feedback-available').remove();
       self.answered = false;
-      if (params.behaviour.randomizeOnRetry) {
+      if (params.behaviour.randomAnswers) {
         // reshuffle answers
-        oldIdMap = idMap;
-        idMap = getShuffleMap();
-        var answersDisplayed = $myDom.find('.h5p-answer');
-        // remember tips and move them and answers on display
-        var tip = [];
-        for (i = 0; i < answersDisplayed.length; i++) {
-          tip[i] = $(answersDisplayed[i]).find('.h5p-multichoice-tipwrap');
-          $(answersDisplayed[i]).find('.h5p-alternative-inner').html(params.answers[i].text);
-          $(tip[i]).detach().appendTo($(answersDisplayed[idMap.indexOf(oldIdMap[i])]).find('.h5p-alternative-container'));
-        }
-      }
+       oldIdMap = idMap;
+       idMap = getShuffleMap();
+       var answersDisplayed = $myDom.find('.h5p-answer');
+       // remember tips
+       var tip = [];
+       for (i = 0; i < answersDisplayed.length; i++) {
+         tip[i] = $(answersDisplayed[i]).find('.h5p-multichoice-tipwrap');
+       }
+       // Those two loops cannot be merged or you'll screw up your tips
+       for (i = 0; i < answersDisplayed.length; i++) {
+         // move tips and answers on display
+         $(answersDisplayed[i]).find('.h5p-alternative-inner').html(params.answers[i].text);
+         $(tip[i]).detach().appendTo($(answersDisplayed[idMap.indexOf(oldIdMap[i])]).find('.h5p-alternative-container'));
+       }
+     }
     }, false, {}, {
       confirmationDialog: {
         enable: params.behaviour.confirmRetryDialog,
