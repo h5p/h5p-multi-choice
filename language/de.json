@@ -14,7 +14,7 @@
     },
     {
       "label":"Verfügbare Optionen",
-      "entity":"option",
+      "entity":"Option",
       "field":{
         "label":"Option",
         "fields":[
