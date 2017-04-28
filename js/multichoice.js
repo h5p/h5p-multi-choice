@@ -110,8 +110,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       disableImageZooming: false,
       autoCheck: false,
       passPercentage: 100
-    },
-    overrideSettings: {}
+    }
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
@@ -624,8 +623,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           confirmationDialog: {
             enable: params.behaviour.confirmCheckDialog,
             l10n: params.confirmCheck,
-            instance: params.overrideSettings.instance,
-            $parentElement: params.overrideSettings.$confirmationDialogParent
+            instance: self,
+            $parentElement: $myDom
           }
         }
       );
@@ -645,8 +644,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       confirmationDialog: {
         enable: params.behaviour.confirmRetryDialog,
         l10n: params.confirmRetry,
-        instance: params.overrideSettings.instance,
-        $parentElement: params.overrideSettings.$confirmationDialogParent
+        instance: self,
+        $parentElement: $myDom
       }
     });
   };
@@ -675,7 +674,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
             return false;
           }
         }
-      },
+      }
     });
     $wrap.appendTo($e);
   };
