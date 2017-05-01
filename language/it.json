@@ -4,8 +4,8 @@
       "label":"Media",
       "fields":[
         {
-          "label":"Type",
-          "description":"Optional media to display above the question."
+          "label":"Tipo",
+          "description":"Media opzionale da mostrare sopra la domanda."
         }
       ]
     },
@@ -29,7 +29,7 @@
             "fields":[
               {
                 "label":"Testo del suggerimento",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "description":"Suggerimento per l'utente. Apparirà prima l'utente verifichi la sua risposta / le sue risposte."
               },
               {
                 "label":"Feedback scelto",
@@ -49,7 +49,7 @@
       "fields":[
         {
           "label":"Etichetta pulsante Verifica risposta",
-          "default":"Check"
+          "default":"Verifica"
         },
         {
           "label":"Etichetta pulsante Mostra soluzione",
