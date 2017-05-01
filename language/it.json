@@ -53,15 +53,15 @@
         },
         {
           "label":"Etichetta pulsante Mostra soluzione",
-          "default":"Show solution"
+          "default":"Mostra la soluzione"
         },
         {
           "label":"Etichetta pulsante Riprova",
-          "default":"Retry"
+          "default":"Riprova"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"Etichetta del suggerimento",
+          "default":"Visualizza suggerimento"
         },
         {
           "label":"Feedback risposta corretta"
@@ -73,22 +73,22 @@
           "label":"Feedback risposta non corretta"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"Etichetta della barra del punteggio",
+          "default":"Punteggio"
         },
         {
           "label":"Tip Available",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "default":"Suggerimento disponibile",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
           "label":"Feedback Available",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "default":"Feedback disponibile",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
           "label":"Read Feedback",
-          "default":"Read feedback",
+          "default":"Leggi il feedback",
           "description":"Accessibility text used for readspeakers"
         },
         {
