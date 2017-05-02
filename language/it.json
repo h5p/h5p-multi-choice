@@ -89,12 +89,12 @@
         {
           "label":"Read Feedback",
           "default":"Leggi il feedback",
-          "description":"Accessibility text used for readspeakers"
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
           "label":"Wrong Answer",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "default":"Risposta sbagliata",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
           "label":"Correct Answer",
