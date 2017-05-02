@@ -98,25 +98,25 @@
         },
         {
           "label":"Correct Answer",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "default":"Risposta corretta",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Feedback text",
+          "label":"Testo di feedback",
           "default":"Feedback text",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+          "description":"Testo di feedback, variabili disponibili: @score e @total. Esempio: 'Il tuo punteggio è di @score su @total.'"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"L'opzione avrebbe dovuto essere verificata",
+          "default":"Avrebbe dovuto essere verificato"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"L'opzione non avrebbe dovuto essere verificata",
+          "default":"Non avrebbe dovuto essere verificato"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"Etichetta per il messaggio \"Richiede una risposta\"",
+          "default":"Per favore rispondi prima di visualizzare la soluzione"
         }
       ]
     },
@@ -131,17 +131,17 @@
           "label":"Abilita pulsante \"Mostra soluzione\""
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
+          "label":"Tipo di domanda",
+          "description":"Selezionare l'aspetto e il comportamento della domanda.",
           "options":[
             {
-              "label":"Automatic"
+              "label":"Automatico"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"Scelta multipla (caselle di controllo)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"Scelta singola (pulsanti di opzione)"
             }
           ]
         },
@@ -160,31 +160,31 @@
           "label":"Disable image zooming for question image."
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"Mostra la finestra di dialogo di conferma su \"Verifica\""
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"Mostra la finestra di dialogo di conferma su \"Riprova\""
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"Controllare automaticamente le risposte",
+          "description":"Abilitare questa opzione renderà difficoltosa l'accessibilità. Assicurati di sapere cosa stai facendo."
         },
         {
-          "label":"Pass percentage",
-          "description":"Percentage of Total score required for passing the quiz."
+          "label":"Percentuale di superamento della prova",
+          "description":"Percentuale del punteggio totale richiesto per passare il quiz."
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"Finestra di conferma per la verifica",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Finish ?"
+          "label":"Etichetta di intestazione",
+          "default":"Finito?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to finish ?"
+          "label":"Etichetta del corpo",
+          "default":"Sei sicuro di voler finire?"
         },
         {
           "label":"Cancel button label",
