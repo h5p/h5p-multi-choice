@@ -187,33 +187,33 @@
           "default":"Sei sicuro di voler finire?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Etichetta del pulsante Annulla",
+          "default":"Annulla"
         },
         {
-          "label":"Confirm button label",
-          "default":"Finish"
+          "label":"Etichetta del pulsante di conferma",
+          "default":"Finito"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"Finestra di conferma per \"Riprova\"",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"Etichetta di intestazione",
+          "default":"Riprovare?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"Etichetta del corpo",
+          "default":"Sei sicuro di voler riprovare?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Etichetta del pulsante Annulla",
+          "default":"Annulla"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"Etichetta del pulsante di conferma",
+          "default":"Conferma"
         }
       ]
     }
