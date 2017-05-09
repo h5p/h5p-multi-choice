@@ -233,7 +233,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     // Create tips:
     var $answers = $('.h5p-answer', $myDom).each(function (i) {
-      var $tipContainer = $(this);
 
       var tip = params.answers[i].tipsAndFeedback.tip;
       if (tip === undefined) {
@@ -275,6 +274,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       $multichoiceTip.append(tipIconHtml);
 
       $multichoiceTip.click(function () {
+        var $tipContainer = $multichoiceTip.parents('.h5p-answer');
         var openFeedback = !$tipContainer.children('.h5p-feedback-dialog').is($feedbackDialog);
         removeFeedbackDialog();
 
@@ -608,7 +608,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         calcScore();
         self.showAllSolutions();
       }
-      
+
     }, false);
 
     // Check solution button
@@ -641,6 +641,23 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       enableInput();
       $myDom.find('.h5p-feedback-available').remove();
       self.answered = false;
+      if (params.behaviour.randomAnswers) {
+        // reshuffle answers
+       oldIdMap = idMap;
+       idMap = getShuffleMap();
+       var answersDisplayed = $myDom.find('.h5p-answer');
+       // remember tips
+       var tip = [];
+       for (i = 0; i < answersDisplayed.length; i++) {
+         tip[i] = $(answersDisplayed[i]).find('.h5p-multichoice-tipwrap');
+       }
+       // Those two loops cannot be merged or you'll screw up your tips
+       for (i = 0; i < answersDisplayed.length; i++) {
+         // move tips and answers on display
+         $(answersDisplayed[i]).find('.h5p-alternative-inner').html(params.answers[i].text);
+         $(tip[i]).detach().appendTo($(answersDisplayed[idMap.indexOf(oldIdMap[i])]).find('.h5p-alternative-container'));
+       }
+     }
     }, false, {}, {
       confirmationDialog: {
         enable: params.behaviour.confirmRetryDialog,
@@ -919,6 +936,23 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     xAPIEvent.data.statement.result.response = response;
   };
 
+  /**
+   * Create a map pointing from original answers to shuffled answers
+   *
+   * @return {number[]} map pointing from original answers to shuffled answers
+   */
+  var getShuffleMap = function() {
+    var origOrder = $.extend([], params.answers);
+    params.answers = H5P.shuffleArray(params.answers);
+
+    // Create a map from the new id to the old one
+    var idMap = [];
+    for (i = 0; i < params.answers.length; i++) {
+      idMap[i] = params.answers[i].originalOrder;
+    }
+    return idMap;
+  }
+
   // Initialization code
   // Randomize order, if requested
   var idMap;
@@ -927,14 +961,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     params.answers[i].originalOrder = i;
   }
   if (params.behaviour.randomAnswers) {
-    var origOrder = $.extend([], params.answers);
-    params.answers = H5P.shuffleArray(params.answers);
-
-    // Create a map from the new id to the old one
-    idMap = [];
-    for (i = 0; i < params.answers.length; i++) {
-      idMap[i] = params.answers[i].originalOrder;
-    }
+    idMap = getShuffleMap();
   }
 
   // Start with an empty set of user answers.
