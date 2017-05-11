@@ -595,6 +595,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @private
    */
   var addButtons = function () {
+    // Parent element of confirmation dialog
+    var $container = $('.h5p-container') || $(document.body);
+
     // Show solution button
     self.addButton('show-solution', params.UI.showSolutionButton, function () {
 
@@ -624,7 +627,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
             enable: params.behaviour.confirmCheckDialog,
             l10n: params.confirmCheck,
             instance: self,
-            $parentElement: $myDom
+            $parentElement: $container
           }
         }
       );
@@ -645,7 +648,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         enable: params.behaviour.confirmRetryDialog,
         l10n: params.confirmRetry,
         instance: self,
-        $parentElement: $myDom
+        $parentElement: $container
       }
     });
   };
