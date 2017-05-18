@@ -179,20 +179,20 @@
       "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Finish ?"
+          "label":"ヘッダーテキスト",
+          "default":"完了?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to finish ?"
+          "label":"本文テキスト",
+          "default":"本当に終了しますか?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"キャンセルボタンのラベル",
+          "default":"キャンセル"
         },
         {
-          "label":"Confirm button label",
-          "default":"Finish"
+          "label":"確認ボタンのラベル",
+          "default":"完了"
         }
       ]
     },
