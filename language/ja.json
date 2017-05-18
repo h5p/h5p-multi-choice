@@ -104,38 +104,38 @@
         {
           "label":"フィードバックテキスト",
           "default":"@total 点中 @score 点獲得",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+          "description":"フィードバック テキスト、利用可能な変数: @score と @total 。 例: ' @total 点中 @score 点獲得。 '"
         },
         {
           "label":"オプションがチェックされている必要があります",
           "default":"チェックされている必要があります"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"オプションがチェックされている必要があります",
+          "default":"チェックされている必要があります"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"\"答えが必要\"メッセージのテキスト",
+          "default":"正解を表示する前に答えてください"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"動作設定",
+      "description":"これらのオプションでタスクがどのように動作するかを制御できます。",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"\"リトライ\"ボタンを有効化"
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"\"正解を表示\"ボタンを有効化"
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
+          "label":"問題タイプ",
+          "description":"外観と問題の動作を選択します。",
           "options":[
             {
-              "label":"Automatic"
+              "label":"自動"
             },
             {
               "label":"Multiple Choice (Checkboxes)"
