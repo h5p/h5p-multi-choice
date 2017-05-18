@@ -32,12 +32,12 @@
                 "description":"ユーザのためのヒント。これはユーザが答えをチェックする前に表示されます。"
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label":"答えを選択した場合に表示されるメッセージ",
+                "description":"この答えが選択された場合、「チェック」した答えの下にメッセージが表示されます。"
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "label":"答えが選択されなかった場合に表示されるメッセージ",
+                "description":"この答えが選択されなかった場合、「チェック」した答えの下にメッセージが表示されます。"
               }
             ]
           }
@@ -45,11 +45,11 @@
       }
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"multichoice のユーザー インターフェイスの翻訳",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"答えをチェックするボタンのラベル",
+          "default":"チェック"
         },
         {
           "label":"Show solution button label",
