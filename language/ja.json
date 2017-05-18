@@ -1,34 +1,34 @@
 {
   "semantics":[
     {
-      "label":"Media",
+      "label":"メディア",
       "fields":[
         {
-          "label":"Type",
-          "description":"Optional media to display above the question."
+          "label":"タイプ",
+          "description":"上記の質問を表示するオプションのメディア。"
         }
       ]
     },
     {
-      "label":"Question"
+      "label":"質問"
     },
     {
-      "label":"Available options",
-      "entity":"option",
+      "label":"使用可能なオプション",
+      "entity":"オプション",
       "field":{
-        "label":"Option",
+        "label":"オプション",
         "fields":[
           {
-            "label":"Text"
+            "label":"テキスト"
           },
           {
-            "label":"Correct"
+            "label":"正解"
           },
           {
-            "label":"Tips and feedback",
+            "label":"ヒントとフィードバック",
             "fields":[
               {
-                "label":"Tip text",
+                "label":"ヒントのテキスト",
                 "description":"Hint for the user. This will appear before user checks his answer/answers."
               },
               {
