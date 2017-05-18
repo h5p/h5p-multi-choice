@@ -176,7 +176,7 @@
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"確認ダイアログをチェック",
       "fields":[
         {
           "label":"ヘッダーテキスト",
@@ -197,23 +197,23 @@
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"リトライ確認ダイアログ",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"ヘッダーテキスト",
+          "default":"リトライ?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"本文テキスト",
+          "default":"本当にリトライしますか?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"キャンセルボタンのラベル",
+          "default":"キャンセル"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"確認ボタンのラベル",
+          "default":"確認"
         }
       ]
     }
