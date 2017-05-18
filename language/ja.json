@@ -171,7 +171,7 @@
         },
         {
           "label":"合格パーセンテージ",
-          "description":"Percentage of Total score required for passing the quiz."
+          "description":"クイズにパスするために必要となる合計点のパーセンテージです。"
         }
       ]
     },
