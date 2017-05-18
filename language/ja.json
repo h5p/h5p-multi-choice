@@ -52,34 +52,34 @@
           "default":"チェック"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"正解を表示するボタンのラベル",
+          "default":"正解を表示"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"リトライボタンのラベル",
+          "default":"リトライ"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"ヒントラベル",
+          "default":"ヒントを表示"
         },
         {
-          "label":"Correct answer feedback"
+          "label":"正しい答えのフィードバック"
         },
         {
-          "label":"Almost correct answer feedback"
+          "label":"ほぼ正解のフィードバック"
         },
         {
-          "label":"Not correct answer feedback"
+          "label":"不正解のフィードバック"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"スコアバーのラベル",
+          "default":"スコア"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"ヒント使用可能 (表示されません)",
+          "default":"ヒント使用可能",
+          "description":"Readspeakerに使用するアクセシビリティ テキスト"
         },
         {
           "label":"Feedback Available (not displayed)",
