@@ -154,23 +154,23 @@
           "description":"表示される質問の順序をランダム化します。"
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"正解が表示する前に答えが必要"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"問題画像のズーム機能を無効化"
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"\"チェック\"の確認ダイアログを表示"
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"\"リトライ\"の確認ダイアログを表示"
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"自動的に答えをチェック",
+          "description":"このオプションを有効にすると、アクセシビリティが損なわれます、自分が行っていることが分かっていることを確認してください。"
         },
         {
-          "label":"Pass percentage",
+          "label":"合格パーセンテージ",
           "description":"Percentage of Total score required for passing the quiz."
         }
       ]
