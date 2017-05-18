@@ -138,20 +138,20 @@
               "label":"自動"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"複数選択(チェックボックス)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"単一選択 (ラジオボタン)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"タスク全体に1点を与える",
+          "description":"複数の正解にトータルで1点与えることを有効化します。これは”単一解答\"モードのオプションではありません。"
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"答えをランダム化",
+          "description":"表示される質問の順序をランダム化します。"
         },
         {
           "label":"Require answer before the solution can be viewed"
