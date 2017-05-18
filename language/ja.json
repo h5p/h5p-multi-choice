@@ -29,7 +29,7 @@
             "fields":[
               {
                 "label":"ヒントのテキスト",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "description":"ユーザのためのヒント。これはユーザが答えをチェックする前に表示されます。"
               },
               {
                 "label":"Message displayed if answer is selected",
