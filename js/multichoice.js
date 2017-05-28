@@ -115,6 +115,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
+  this.params = params;
 
   // Keep track of number of correct choices
   var numCorrect = 0;
@@ -612,7 +613,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }, false);
 
     // Check solution button
-    if (!params.behaviour.autoCheck || !params.behaviour.singleAnswer) {
+    if (params.enableCheckButton && (!params.behaviour.autoCheck || !params.behaviour.singleAnswer)) {
       self.addButton('check-answer', params.UI.checkAnswerButton,
         function () {
           self.answered = true;
@@ -1080,3 +1081,16 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
 H5P.MultiChoice.prototype = Object.create(H5P.Question.prototype);
 H5P.MultiChoice.prototype.constructor = H5P.MultiChoice;
+
+H5P.MultiChoice.prototype.getAnswers = function() {
+  var answers = [];
+  for (var i=0; i < this.params.userAnswers.length; i++) {
+    answers.push(this.params.answers[ this.params.userAnswers[i] ]);
+  }
+
+  return {
+    elementId: this.params.elementId,
+    answers: answers
+  }
+};
+
