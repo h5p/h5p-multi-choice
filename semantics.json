@@ -480,5 +480,21 @@
         "default": "Confirm"
       }
     ]
+  },
+  {
+    "name": "elementId",
+    "label": "Element ID",
+    "type": "text",
+    "description": "Unique element ID that can be used to retrieve its value.",
+    "importance": "low",
+    "optional": true
+  },
+  {
+    "name": "enableCheckButton",
+    "type": "boolean",
+    "label": "Enable \"Check\" button",
+    "importance": "low",
+    "default": true,
+    "optional": true
   }
 ]
