@@ -1,10 +1,10 @@
 {
   "semantics":[
     {
-      "label":"Media",
+      "label":"Recurs",
       "fields":[
         {
-          "label":"Type",
+          "label":"Tipus",
           "description":"Optional media to display above the question."
         }
       ]
