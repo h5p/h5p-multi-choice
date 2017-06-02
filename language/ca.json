@@ -5,12 +5,12 @@
       "fields":[
         {
           "label":"Tipus",
-          "description":"Optional media to display above the question."
+          "description":"Recursos opcionals per mostrar al damunt de la pregunta."
         }
       ]
     },
     {
-      "label":"Question"
+      "label":"Pregunta"
     },
     {
       "label":"Available options",
