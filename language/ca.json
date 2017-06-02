@@ -13,19 +13,19 @@
       "label":"Pregunta"
     },
     {
-      "label":"Available options",
-      "entity":"option",
+      "label":"Opcions disponibles",
+      "entity":"opció",
       "field":{
-        "label":"Option",
+        "label":"Opció",
         "fields":[
           {
             "label":"Text"
           },
           {
-            "label":"Correct"
+            "label":"Correcte"
           },
           {
-            "label":"Tips and feedback",
+            "label":"Suggerències i informació de retorn",
             "fields":[
               {
                 "label":"Tip text",
