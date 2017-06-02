@@ -28,7 +28,7 @@
             "label":"Suggerències i informació de retorn",
             "fields":[
               {
-                "label":"Tip text",
+                "label":"Consell",
                 "description":"Hint for the user. This will appear before user checks his answer/answers."
               },
               {
