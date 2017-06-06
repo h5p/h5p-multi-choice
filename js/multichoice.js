@@ -595,8 +595,21 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @private
    */
   var addButtons = function () {
-    // Parent element of confirmation dialog
-    var $container = $('.h5p-container') || $(document.body);
+    var $content = $('[data-content-id="' + self.contentId + '"].h5p-content');
+    var $containerParents = $content.parents('.h5p-container');
+
+    // select find container to attach dialogs to
+    var $container;
+    if($containerParents.length !== 0) {
+      // use parent highest up if any
+      $container = $containerParents.last();
+    }
+    else if($content.length !== 0){
+      $container = $content;
+    }
+    else  {
+      $container = $(document.body);
+    }
 
     // Show solution button
     self.addButton('show-solution', params.UI.showSolutionButton, function () {
