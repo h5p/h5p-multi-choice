@@ -29,14 +29,14 @@
             "fields":[
               {
                 "label":"Consell",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "description":"Pista per a l'usuari. Això apareixerà abans que l'usuari confirmi la seva resposta/Respostes."
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label":"Aquest missatge es mostra si la resposta està seleccionada",
+                "description":"Missatge que apareixerà sota la resposta seleccionada al validar."
               },
               {
-                "label":"Message displayed if answer is not selected",
+                "label":"Missatge que es mostra si no s'ha seleccionat cap resposta",
                 "description":"Message will appear below the answer on \"check\" if this answer is not selected."
               }
             ]
@@ -135,7 +135,7 @@
           "description":"Select the look and behaviour of the question.",
           "options":[
             {
-              "label":"Automatic"
+              "label":"Automàtic"
             },
             {
               "label":"Multiple Choice (Checkboxes)"
@@ -170,7 +170,7 @@
           "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
         },
         {
-          "label":"Pass percentage",
+          "label":"Percentatge per passar",
           "description":"Percentage of Total score required for passing the quiz."
         }
       ]
