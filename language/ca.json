@@ -37,7 +37,7 @@
               },
               {
                 "label":"Missatge que es mostra si no s'ha seleccionat cap resposta",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "description":"Missatge que apareixerà sota la resposta si aquesta resposta no està seleccionada al validar."
               }
             ]
           }
@@ -49,36 +49,36 @@
       "fields":[
         {
           "label":"Check answer button label",
-          "default":"Check"
+          "default":"Verificar"
         },
         {
           "label":"Show solution button label",
-          "default":"Show solution"
+          "default":"Mostrar solució"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Etiqueta del botó \"Tornar-ho a provar\"",
+          "default":"Tornar-ho a provar"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"Etiqueta de consell",
+          "default":"Mostrar consell"
         },
         {
-          "label":"Correct answer feedback"
+          "label":"Retorn per resposta correcta"
         },
         {
-          "label":"Almost correct answer feedback"
+          "label":"Retorn per resposta quasi correcta"
         },
         {
-          "label":"Not correct answer feedback"
+          "label":"Retorn per resposta errònia"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"Etiqueta pel marcador",
+          "default":"Puntuació"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
+          "label":"Pista disponible (no s'està mostrant)",
+          "default":"Pista disponible",
           "description":"Accessibility text used for readspeakers"
         },
         {
