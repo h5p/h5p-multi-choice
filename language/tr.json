@@ -33,10 +33,10 @@
               },
               {
                 "label":"Cevap seçilirse görüntülenecek ileti",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "description":"Bu cevap seçilirse \"kontrol et\" üzerindeki cevabın altında ileti görünecek."
               },
               {
-                "label":"Message displayed if answer is not selected",
+                "label":"Cevap seçilmezse görüntülenecek ileti",
                 "description":"Message will appear below the answer on \"check\" if this answer is not selected."
               }
             ]
