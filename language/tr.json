@@ -115,43 +115,43 @@
           "default":"İşaretlenmemeliydi"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"\"cevap gerektirir\" iletisi için metin",
+          "default":"Çözümü görmeden önce lütfen cevaplayın"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"Davranış ayarları",
+      "description":"Bu seçenekler aktivitenin çalışma şeklini denetlemenize izin verir.",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"\"Yeniden dene\" butonunu aktifleştirin"
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"\"Çözümü göster\" butonunu aktifleştirin"
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
+          "label":"Soru Türü",
+          "description":"Sorunun görünüm ve davranışını değiştirin.",
           "options":[
             {
-              "label":"Automatic"
+              "label":"Otomatik"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"Birden Çok Seçenek (onay kutuları)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"Tek Seçim (Seçenek butonları)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"Bütün aktivite için bir puan verin",
+          "description":"Birden fazla doğru cevaba toplam bir puan vermeyi etkinleştirin. Bu \"Tek cevap\" modunda bir seçenek olmayacak."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"Cevapları karıştır",
+          "description":"Soruları sırasını ekranda rasgele gelmesi için etkinleştirin."
         },
         {
           "label":"Require answer before the solution can be viewed"
