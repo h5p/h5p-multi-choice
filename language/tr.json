@@ -79,40 +79,40 @@
         {
           "label":"Mevcut İpucu (görüntülenmeyen)",
           "default":"Mevcut ipucu",
-          "description":"Accessibility text used for readspeakers"
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Mevcut Geri Bildirim (görüntülenmeyen)",
+          "default":"Mevcut Geri Bildirim",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Okuma Geri Bildirimi (görüntülenmeyen)",
+          "default":"Okuma Geri Bildirimi",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Yanlış cevap (görüntülenmeyen)",
+          "default":"Yanlış cevap",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Doğru Cevap (görüntülenmeyen)",
+          "default":"Doğru cevap",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
         },
         {
-          "label":"Feedback text",
-          "default":"You got @score of @total points",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+          "label":"Geri Bildirim metni",
+          "default":"@Toplam puanlardan @puan aldınız",
+          "description":"Geri bildirim metni, mevcut değişkenler: @puan ve @toplam. Örneğin: '@Toplam puanlardan @puan aldınız'"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"Seçenek işaretlenmeliydi",
+          "default":"İşaretlenmeliydi"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"Seçenek işaretlenmemeliydi",
+          "default":"İşaretlenmemeliydi"
         },
         {
           "label":"Text for \"Requires answer\" message",
