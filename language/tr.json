@@ -154,7 +154,7 @@
           "description":"Soruları sırasını ekranda rasgele gelmesi için etkinleştirin."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"Çözüm görülmeden önce yanıt gerektirin"
         },
         {
           "label":"Disable image zooming for question image"
