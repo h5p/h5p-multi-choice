@@ -157,17 +157,17 @@
           "label":"Çözüm görülmeden önce yanıt gerektirin"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"Soru resmi için resim yakınlaştırmasını devre dışı bırakın"
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"\"Kontrol et\"deki onay kutucuğunu göster"
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"\"Yeniden dene\"deki onay kutucuğunu göster"
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"Yanıtları otomatik olarak denetle",
+          "description":"Bu seçeneğin etkinleştirilmesi erişilebilirliği etkileyecektir, ne yaptığınızı bildiğinizden emin olun."
         },
         {
           "label":"Pass percentage",
