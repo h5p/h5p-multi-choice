@@ -188,7 +188,7 @@
         },
         {
           "label":"İptal et butonu etiketi",
-          "default":"Cancel"
+          "default":"İptal et"
         },
         {
           "label":"Onay butonu etiketi",
