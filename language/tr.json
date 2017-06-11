@@ -170,50 +170,50 @@
           "description":"Bu seçeneğin etkinleştirilmesi erişilebilirliği etkileyecektir, ne yaptığınızı bildiğinizden emin olun."
         },
         {
-          "label":"Pass percentage",
-          "description":"Percentage of Total score required for passing the quiz."
+          "label":"Geçiş yüzdesi",
+          "description":"Quizi geçmek için gerekli toplam puan yüzdesi."
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"Onay kutucuğunu seçin",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Finish ?"
+          "label":"Üstbaşlık Metni",
+          "default":"Bitir?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to finish ?"
+          "label":"Gövde Metni",
+          "default":"Tamamlamak istediğinizden emin misiniz?"
         },
         {
-          "label":"Cancel button label",
+          "label":"İptal et butonu etiketi",
           "default":"Cancel"
         },
         {
-          "label":"Confirm button label",
-          "default":"Finish"
+          "label":"Onay butonu etiketi",
+          "default":"Bitir"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"Yeniden dene onay kutucuğu",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"Üstbaşlık Metni",
+          "default":"Yeniden dene?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"Gövde Metni",
+          "default":"Yeniden denemek istediğinizden emin misiniz?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"İptal et butonu etiketi",
+          "default":"İptal et"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"Onay butonu etiketi",
+          "default":"Onayla"
         }
       ]
     }
