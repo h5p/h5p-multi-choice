@@ -125,9 +125,6 @@
       "description":"وهذه الخيارات تمكنك من التحكم في كيفية سلوك هذا النشاط",
       "fields":[
         {
-          "label":"Enable \"Check\" button"
-        },
-        {
           "label":"Enable \"Retry\" button"
         },
         {
