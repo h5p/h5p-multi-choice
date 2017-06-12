@@ -120,9 +120,6 @@
       "description": "وهذه الخيارات تمكنك من التحكم في كيفية سلوك هذا النشاط",
       "fields": [
         {
-          "englishLabel": "Enable \"Check\" button"
-        },
-        {
           "label": "تمكين \"إعادة المحاولة \""
         },
         {

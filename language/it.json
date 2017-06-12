@@ -120,9 +120,6 @@
       "description": "Queste opzioni consentono di controllare l'andamento del compito.",
       "fields": [
         {
-          "englishLabel": "Enable \"Check\" button"
-        },
-        {
           "label": "Abilita pulsante \"Riprova\""
         },
         {

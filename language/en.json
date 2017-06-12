@@ -125,9 +125,6 @@
       "description": "These options will let you control how the task behaves.",
       "fields": [
         {
-          "label": "Enable \"Check\" button"
-        },
-        {
           "label": "Enable \"Retry\" button"
         },
         {

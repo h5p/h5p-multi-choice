@@ -125,9 +125,6 @@
       "description": "Disse instillingene lar deg bestemme hvordan oppgavetypen skal oppføre seg.",
       "fields": [
         {
-          "label": "Aktiver sjekk-knapp"
-        },
-        {
           "label": "Aktiver \"Prøv igjen\""
         },
         {
