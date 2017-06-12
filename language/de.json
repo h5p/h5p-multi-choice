@@ -125,9 +125,6 @@
       "description":"Diese Optionen kontrollieren, wie sich die Aufgabe verhält",
       "fields":[
         {
-          "label":"Enable \"Check\" button"
-        },
-        {
           "label":"Enable \"Retry\" button"
         },
         {
