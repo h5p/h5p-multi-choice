@@ -125,49 +125,52 @@
       "description":"Ces options vous permettent de contrôler le déroulement de vos activités.",
       "fields":[
         {
-          "label":"Activer le bouton \"Recommencer\""
+          "label":"Enable \"Check\" button"
         },
         {
-          "label":"Activer le bouton \"Voir la solution\""
+          "label":"Enable \"Retry\" button"
         },
         {
-          "label":"Type de question",
-          "description":"Choisissez le type de question et ses paramètres.",
+          "label":"Enable \"Show Solution\" button"
+        },
+        {
+          "label":"Question Type",
+          "description":"Select the look and behaviour of the question.",
           "options":[
             {
-              "label":"Sélection automatique"
+              "label":"Automatic"
             },
             {
-              "label":"Question à choix multiples (cases à cocher)"
+              "label":"Multiple Choice (Checkboxes)"
             },
             {
-              "label":"Question à choix unique (boutons radio)"
+              "label":"Single Choice (Radio Buttons)"
             }
           ]
         },
         {
-          "label":"Donner un point par activité",
-          "description":"Attribuer un point (en tout) pour toutes les réponses justes d'un QCM. Ce ne sera pas une option pour les \"Questions à choix unique\"."
+          "label":"Give one point for the whole task",
+          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
-          "label":"Réponses aléatoires",
-          "description":"Les réponses possibles seront affichées dans l'ordre aléatoire."
+          "label":"Randomize answers",
+          "description":"Enable to randomize the order of questions on display."
         },
         {
-          "label":"Une réponse est obligatoire pour voir la solution"
+          "label":"Require answer before the solution can be viewed"
         },
         {
-          "label":"Désactiver la possibilité d'agrandir l'image de la question."
+          "label":"Disable image zooming for question image"
         },
         {
-          "label":"Afficher la fenêtre de confirmation pour \"Vérifier\""
+          "label":"Show confirmation dialog on \"Check\""
         },
         {
-          "label":"Afficher la fenêtre de confirmation pour \"Recommencer\""
+          "label":"Show confirmation dialog on \"Retry\""
         },
         {
-          "label":"Vérifier automatiquement la réponse cochée",
-          "description":"Note: cette option peut impacter l'ergonomie."
+          "label":"Automatically check answers",
+          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
         },
         {
           "label":"Pass percentage",
