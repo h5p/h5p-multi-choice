@@ -125,49 +125,52 @@
       "description":"Disse instillingene lar deg bestemme hvordan oppgavetypen skal oppføre seg.",
       "fields":[
         {
-          "label":"Aktiver \"Prøv igjen\""
+          "label":"Enable \"Check\" button"
         },
         {
-          "label":"Aktiver \"Fasit\" knapp"
+          "label":"Enable \"Retry\" button"
         },
         {
-          "label":"Spørsmålstype",
-          "description":"Velg utseende og oppførsel for spørsmålet.",
+          "label":"Enable \"Show Solution\" button"
+        },
+        {
+          "label":"Question Type",
+          "description":"Select the look and behaviour of the question.",
           "options":[
             {
-              "label":"Automatisk"
+              "label":"Automatic"
             },
             {
-              "label":"Flervalg (avkrysningsbokser)"
+              "label":"Multiple Choice (Checkboxes)"
             },
             {
-              "label":"Envalg (radioknapper)"
+              "label":"Single Choice (Radio Buttons)"
             }
           ]
         },
         {
-          "label":"Gi ett poeng for hele oppgaven",
-          "description":"Gir ett poeng totalt for flere rette alternativ. Kun valgbar hvis \"Bare ett svar\" er avslått."
+          "label":"Give one point for the whole task",
+          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
-          "label":"Tilfeldige svaralternativ",
-          "description":"Slå på for å vise alternativene i tilfeldig rekkefølge."
+          "label":"Randomize answers",
+          "description":"Enable to randomize the order of questions on display."
         },
         {
-          "label":"Krev svar fra brukeren før fasit gis."
+          "label":"Require answer before the solution can be viewed"
         },
         {
-          "label":"Slå av bilete zooming."
+          "label":"Disable image zooming for question image"
         },
         {
-          "label":"Slå på bruker-bekreftelse før \"Sjekk svar\""
+          "label":"Show confirmation dialog on \"Check\""
         },
         {
-          "label":"Slå på bruker-bekreftelse før \"Prøv igjen\""
+          "label":"Show confirmation dialog on \"Retry\""
         },
         {
-          "label":"Umiddelbar tilbakemelding på avgitt svar",
-          "description":"Vær oppmerksom på at hjelpemiddelteknologi kan svekkes ved å bruke dette alternativet."
+          "label":"Automatically check answers",
+          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
         },
         {
           "label":"Pass percentage",
