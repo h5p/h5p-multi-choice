@@ -125,9 +125,6 @@
       "description":"Bu seçenekler aktivitenin çalışma şeklini denetlemenize izin verir.",
       "fields":[
         {
-          "label":"Enable \"Check\" button"
-        },
-        {
           "label":"Enable \"Retry\" button"
         },
         {
