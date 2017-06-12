@@ -125,53 +125,56 @@
       "description":"これらのオプションでタスクがどのように動作するかを制御できます。",
       "fields":[
         {
-          "label":"\"リトライ\"ボタンを有効化"
+          "label":"Enable \"Check\" button"
         },
         {
-          "label":"\"正解を表示\"ボタンを有効化"
+          "label":"Enable \"Retry\" button"
         },
         {
-          "label":"問題タイプ",
-          "description":"外観と問題の動作を選択します。",
+          "label":"Enable \"Show Solution\" button"
+        },
+        {
+          "label":"Question Type",
+          "description":"Select the look and behaviour of the question.",
           "options":[
             {
-              "label":"自動"
+              "label":"Automatic"
             },
             {
-              "label":"複数選択(チェックボックス)"
+              "label":"Multiple Choice (Checkboxes)"
             },
             {
-              "label":"単一選択 (ラジオボタン)"
+              "label":"Single Choice (Radio Buttons)"
             }
           ]
         },
         {
-          "label":"タスク全体に1点を与える",
-          "description":"複数の正解にトータルで1点与えることを有効化します。これは”単一解答\"モードのオプションではありません。"
+          "label":"Give one point for the whole task",
+          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
-          "label":"答えをランダム化",
-          "description":"表示される質問の順序をランダム化します。"
+          "label":"Randomize answers",
+          "description":"Enable to randomize the order of questions on display."
         },
         {
-          "label":"正解が表示する前に答えが必要"
+          "label":"Require answer before the solution can be viewed"
         },
         {
-          "label":"問題画像のズーム機能を無効化"
+          "label":"Disable image zooming for question image"
         },
         {
-          "label":"\"チェック\"の確認ダイアログを表示"
+          "label":"Show confirmation dialog on \"Check\""
         },
         {
-          "label":"\"リトライ\"の確認ダイアログを表示"
+          "label":"Show confirmation dialog on \"Retry\""
         },
         {
-          "label":"自動的に答えをチェック",
-          "description":"このオプションを有効にすると、アクセシビリティが損なわれます、自分が行っていることが分かっていることを確認してください。"
+          "label":"Automatically check answers",
+          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
         },
         {
-          "label":"合格パーセンテージ",
-          "description":"クイズにパスするために必要となる合計点のパーセンテージです。"
+          "label":"Pass percentage",
+          "description":"Percentage of Total score required for passing the quiz."
         }
       ]
     },
