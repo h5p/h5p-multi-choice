@@ -125,53 +125,56 @@
       "description":"Bu seçenekler aktivitenin çalışma şeklini denetlemenize izin verir.",
       "fields":[
         {
-          "label":"\"Yeniden dene\" butonunu aktifleştirin"
+          "label":"Enable \"Check\" button"
         },
         {
-          "label":"\"Çözümü göster\" butonunu aktifleştirin"
+          "label":"Enable \"Retry\" button"
         },
         {
-          "label":"Soru Türü",
-          "description":"Sorunun görünüm ve davranışını değiştirin.",
+          "label":"Enable \"Show Solution\" button"
+        },
+        {
+          "label":"Question Type",
+          "description":"Select the look and behaviour of the question.",
           "options":[
             {
-              "label":"Otomatik"
+              "label":"Automatic"
             },
             {
-              "label":"Birden Çok Seçenek (onay kutuları)"
+              "label":"Multiple Choice (Checkboxes)"
             },
             {
-              "label":"Tek Seçim (Seçenek butonları)"
+              "label":"Single Choice (Radio Buttons)"
             }
           ]
         },
         {
-          "label":"Bütün aktivite için bir puan verin",
-          "description":"Birden fazla doğru cevaba toplam bir puan vermeyi etkinleştirin. Bu \"Tek cevap\" modunda bir seçenek olmayacak."
+          "label":"Give one point for the whole task",
+          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
-          "label":"Cevapları karıştır",
-          "description":"Soruları sırasını ekranda rasgele gelmesi için etkinleştirin."
+          "label":"Randomize answers",
+          "description":"Enable to randomize the order of questions on display."
         },
         {
-          "label":"Çözüm görülmeden önce yanıt gerektirin"
+          "label":"Require answer before the solution can be viewed"
         },
         {
-          "label":"Soru resmi için resim yakınlaştırmasını devre dışı bırakın"
+          "label":"Disable image zooming for question image"
         },
         {
-          "label":"\"Kontrol et\"deki onay kutucuğunu göster"
+          "label":"Show confirmation dialog on \"Check\""
         },
         {
-          "label":"\"Yeniden dene\"deki onay kutucuğunu göster"
+          "label":"Show confirmation dialog on \"Retry\""
         },
         {
-          "label":"Yanıtları otomatik olarak denetle",
-          "description":"Bu seçeneğin etkinleştirilmesi erişilebilirliği etkileyecektir, ne yaptığınızı bildiğinizden emin olun."
+          "label":"Automatically check answers",
+          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
         },
         {
-          "label":"Geçiş yüzdesi",
-          "description":"Quizi geçmek için gerekli toplam puan yüzdesi."
+          "label":"Pass percentage",
+          "description":"Percentage of Total score required for passing the quiz."
         }
       ]
     },
