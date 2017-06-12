@@ -125,10 +125,13 @@
       "description":"وهذه الخيارات تمكنك من التحكم في كيفية سلوك هذا النشاط",
       "fields":[
         {
-          "label":"تمكين \"إعادة المحاولة \""
+          "label":"Enable \"Check\" button"
         },
         {
-          "label":"تمكين \"مشاهدة الحل \" الزر"
+          "label":"Enable \"Retry\" button"
+        },
+        {
+          "label":"Enable \"Show Solution\" button"
         },
         {
           "label":"Question Type",
@@ -146,18 +149,18 @@
           ]
         },
         {
-          "label":"إعطاء نقطة واحدة للقيام بهذه المهمة بأكملها",
-          "description":"تمكين لإعطاء مجموع نقطة واحدة للإجابات الصحيحة متعددة. هذا لن يكون خيارا في وضع \"إجابة واحدة \"."
+          "label":"Give one point for the whole task",
+          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
-          "label":"الإجابات بطريقة عشوائية",
-          "description":"تمكين العرض بطريقة عشوائية وترتيب الأسئلة على الشاشة"
+          "label":"Randomize answers",
+          "description":"Enable to randomize the order of questions on display."
         },
         {
-          "label":"تطلب إدخال المستخدم اجابته قبل أن يتم عرضه الحل"
+          "label":"Require answer before the solution can be viewed"
         },
         {
-          "label":"Disable image zooming for question image."
+          "label":"Disable image zooming for question image"
         },
         {
           "label":"Show confirmation dialog on \"Check\""
