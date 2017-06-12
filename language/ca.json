@@ -45,14 +45,14 @@
       }
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"Traduccions de la interfície pel resposta múltiple",
       "fields":[
         {
-          "label":"Check answer button label",
+          "label":"Etiqueta pel botó 'Verificar resposta'",
           "default":"Verificar"
         },
         {
-          "label":"Show solution button label",
+          "label":"Etiqueta pel botó \"Mostrar solució\"",
           "default":"Mostrar solució"
         },
         {
@@ -79,32 +79,32 @@
         {
           "label":"Pista disponible (no s'està mostrant)",
           "default":"Pista disponible",
-          "description":"Accessibility text used for readspeakers"
+          "description":"Text d'accessibilitat utilitzat pels lectors"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Pista disponible (no es mostra)",
+          "default":"Retorn disponible",
+          "description":"Text d'accessibilitat utilitzat pels lectors"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Llegir el retorn (no es mostra)",
+          "default":"Llegir retorn",
+          "description":"Text d'accessibilitat utilitzat pels lectors"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Resposta incorrecta (no es mostra)",
+          "default":"La resposta no és correcta",
+          "description":"Text d'accessibilitat utilitzat pels lectors"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Resposta Correcta (no es mostra)",
+          "default":"Resposta correcta",
+          "description":"Text d'accessibilitat utilitzat pels lectors"
         },
         {
-          "label":"Feedback text",
-          "default":"You got @score of @total points",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+          "label":"Text de retorn",
+          "default":"Has aconseguit @score de @total punts",
+          "description":"Text de retroacció, variables disponibles: @score i @total. Per exemple: 'Has aconseguit @score de @total punts'"
         },
         {
           "label":"Option should have been checked",
