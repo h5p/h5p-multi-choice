@@ -125,6 +125,9 @@
       "description":"These options will let you control how the task behaves.",
       "fields":[
         {
+          "label":"Enable \"Check\" button"
+        },
+        {
           "label":"Enable \"Retry\" button"
         },
         {
@@ -135,7 +138,7 @@
           "description":"Select the look and behaviour of the question.",
           "options":[
             {
-              "label":"Automàtic"
+              "label":"Automatic"
             },
             {
               "label":"Multiple Choice (Checkboxes)"
@@ -170,7 +173,7 @@
           "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
         },
         {
-          "label":"Percentatge per passar",
+          "label":"Pass percentage",
           "description":"Percentage of Total score required for passing the quiz."
         }
       ]
