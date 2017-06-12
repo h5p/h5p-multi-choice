@@ -125,6 +125,9 @@
       "description": "Ces options vous permettent de contrôler le déroulement de vos activités.",
       "fields": [
         {
+          "englishLabel": "Enable \"Check\" button"
+        },
+        {
           "label": "Activer le bouton \"Recommencer\""
         },
         {

@@ -125,6 +125,9 @@
       "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält",
       "fields": [
         {
+          "englishLabel": "Enable \"Check\" button"
+        },
+        {
           "label": "Aktivieren des \"Wiederholen\"-Buttons"
         },
         {
