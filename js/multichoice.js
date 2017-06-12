@@ -101,7 +101,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       noInput: 'Input is required before viewing the solution'
     },
     behaviour: {
-      enableCheck: true,
       enableRetry: true,
       enableSolutionsButton: true,
       type: 'auto',
@@ -613,7 +612,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }, false);
 
     // Check solution button
-    if (params.behaviour.enableCheck && (!params.behaviour.autoCheck || !params.behaviour.singleAnswer)) {
+    if (!params.behaviour.autoCheck || !params.behaviour.singleAnswer) {
       self.addButton('check-answer', params.UI.checkAnswerButton,
         function () {
           self.answered = true;

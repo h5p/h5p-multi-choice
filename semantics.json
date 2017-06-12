@@ -288,14 +288,6 @@
     "optional": true,
     "fields": [
       {
-        "name": "enableCheck",
-        "type": "boolean",
-        "label": "Enable \"Check\" button",
-        "importance": "low",
-        "default": true,
-        "optional": true
-      },
-      {
         "name": "enableRetry",
         "type": "boolean",
         "label": "Enable \"Retry\" button",
