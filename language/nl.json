@@ -125,9 +125,6 @@
       "description":"Met deze opties bepaal je hoe de taak zich gedraagt.",
       "fields":[
         {
-          "label":"Enable \"Check\" button"
-        },
-        {
           "label":"Enable \"Retry\" button"
         },
         {
