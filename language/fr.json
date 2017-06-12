@@ -125,9 +125,6 @@
       "description":"Ces options vous permettent de contrôler le déroulement de vos activités.",
       "fields":[
         {
-          "label":"Enable \"Check\" button"
-        },
-        {
           "label":"Enable \"Retry\" button"
         },
         {
