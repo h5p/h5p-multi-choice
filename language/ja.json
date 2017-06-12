@@ -125,9 +125,6 @@
       "description":"これらのオプションでタスクがどのように動作するかを制御できます。",
       "fields":[
         {
-          "label":"Enable \"Check\" button"
-        },
-        {
           "label":"Enable \"Retry\" button"
         },
         {
