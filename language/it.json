@@ -125,9 +125,6 @@
       "description":"Queste opzioni consentono di controllare l'andamento del compito.",
       "fields":[
         {
-          "label":"Enable \"Check\" button"
-        },
-        {
           "label":"Enable \"Retry\" button"
         },
         {
