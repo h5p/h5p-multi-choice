@@ -107,25 +107,25 @@
           "description":"Text de retroacció, variables disponibles: @score i @total. Per exemple: 'Has aconseguit @score de @total punts'"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"S'hauria d'haver marcat l'opció",
+          "default":"S'hauria d'haver marcat"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"No s'hauria hagut de marcar l'opció",
+          "default":"No s'hauria hagut de marcar"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"Text pel missatge \"Resposta obligatòria\"",
+          "default":"Si us plau contesta abans de veure la solució"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"Opcions de comportament",
+      "description":"Aquestes opcions et permetran controlar com es comporta la tasca.",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"Activa el botó \"Tornar-ho a provar\""
         },
         {
           "label":"Enable \"Show Solution\" button"
