@@ -125,53 +125,53 @@
       "description":"Met deze opties bepaal je hoe de taak zich gedraagt.",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"'Opnieuw' knop inschakelen"
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"'Toon oplossing' knop inschakelen"
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
+          "label":"Vraagtype",
+          "description":"Selecteer uiterlijk en gedrag van de vraag.",
           "options":[
             {
-              "label":"Automatic"
+              "label":"Automatisch"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"Meer-meerkeuze (aanvinkvakjes)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"Enkelvoudige keuze (radioknoppen)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"Geef een punt voor de gehele taak",
+          "description":"Inschakelen dat één punt gegeven kan worden voor meerdere juiste antwoorden. Dit is geen optie in \"Enkelvoudige keuze\" modus."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"Antwoorden in willekeurige volgorde",
+          "description":"Vragen in willekeurige volgorde inschakelen."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"Vereist antwoord voordat oplossing kan worden bekeken"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"Deactiveer zoomen bij afbeeldingsvraag"
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"Toon bevestigingsdialoog bij \"Controleer\""
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"Toon bevestigingsdialoog bij \"Opnieuw proberen\""
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"Automatisch antwoorden controleren",
+          "description":"Door deze optie in te schakelen, wordt de toegankelijkheid minder. Weet wat je doet!"
         },
         {
-          "label":"Pass percentage",
-          "description":"Percentage of Total score required for passing the quiz."
+          "label":"Slagingspercentage",
+          "description":"Percentage van de Totale score die vereist is om te slagen."
         }
       ]
     },
