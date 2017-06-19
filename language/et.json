@@ -83,26 +83,26 @@
         },
         {
           "label":"Võimaldab küsida tagasisidet (peidetud)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "default":"Tagasiside",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Loe tagasisidet (peidus)",
+          "default":"Loe tagasisidet",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Vale vastus (peidus)",
+          "default":"Vale vastus",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Õge vastus (peidetud)",
+          "default":"Õige vastus",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Feedback text",
+          "label":"Tagasiside tekst",
           "default":"You got @score of @total points",
           "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
         },
