@@ -1,10 +1,10 @@
 {
   "semantics":[
     {
-      "label":"Media",
+      "label":"Pilt või video",
       "fields":[
         {
-          "label":"Type",
+          "label":"Tüüp",
           "description":"Optional media to display above the question."
         }
       ]
