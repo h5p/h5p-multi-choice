@@ -5,39 +5,39 @@
       "fields":[
         {
           "label":"Tüüp",
-          "description":"Optional media to display above the question."
+          "description":"Pilt või video, mida kuvatakse küsimuse juures (mittekohustuslik element)."
         }
       ]
     },
     {
-      "label":"Question"
+      "label":"Küsimus"
     },
     {
-      "label":"Available options",
-      "entity":"option",
+      "label":"Vastusevariandid",
+      "entity":"vastusevariant",
       "field":{
-        "label":"Option",
+        "label":"Vastusevariant",
         "fields":[
           {
-            "label":"Text"
+            "label":"Tekst"
           },
           {
-            "label":"Correct"
+            "label":"Õige"
           },
           {
-            "label":"Tips and feedback",
+            "label":"Vihje ja tagasiside",
             "fields":[
               {
-                "label":"Tip text",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "label":"Vihje tekst",
+                "description":"Suunav vihje vastajale, ilmub enne vastuse sisestamist."
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label":"Tekst, mida kasutaja näeb pärast selle vastusevariandi sisestamist",
+                "description":"See tekst ilmub vastusevariandi alla kui kasutaja klõpsab \"Kontrolli\"."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "label":"Tekst, mida kasutaja näeb pärast selle vastusevariandi valimata jätmist",
+                "description":"See tekst ilmub vastusevariandi alla kui kasutaja klõpsab \"Kontrolli\"."
               }
             ]
           }
