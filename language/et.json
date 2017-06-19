@@ -103,15 +103,15 @@
         },
         {
           "label":"Tagasiside tekst",
-          "default":"You got @score of @total points",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+          "default":"Said @score punkti @total võimalikust",
+          "description":"Tagsiside tekst, sisaldab muutujaid: @score ja @total. Näide: 'Said @score punkti @total võimalikust.'"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"Vastusevariant oleks pidanud olema valitud",
+          "default":"Vastusevariant pidanuks jääma valimata"
         },
         {
-          "label":"Option should not have been checked",
+          "label":"See vastusevariant oleks pidanud jääma valimata",
           "default":"Should not have been checked"
         },
         {
