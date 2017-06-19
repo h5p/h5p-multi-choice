@@ -82,7 +82,7 @@
           "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Feedback Available (not displayed)",
+          "label":"Võimaldab küsida tagasisidet (peidetud)",
           "default":"Feedback available",
           "description":"Accessibility text used for readspeakers"
         },
