@@ -4,40 +4,40 @@
       "label":"Media",
       "fields":[
         {
-          "label":"Type",
-          "description":"Optional media to display above the question."
+          "label":"Tipo",
+          "description":"Media opzionale da mostrare sopra la domanda."
         }
       ]
     },
     {
-      "label":"Question"
+      "label":"Domanda"
     },
     {
-      "label":"Available options",
-      "entity":"option",
+      "label":"Opzioni disponibili",
+      "entity":"opzione",
       "field":{
-        "label":"Option",
+        "label":"Opzione",
         "fields":[
           {
-            "label":"Text"
+            "label":"Testo"
           },
           {
-            "label":"Correct"
+            "label":"Corretto"
           },
           {
-            "label":"Tips and feedback",
+            "label":"Suggerimento",
             "fields":[
               {
-                "label":"Tip text",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "label":"Testo del suggerimento",
+                "description":"Suggerimento per l'utente. Apparirà prima l'utente verifichi la sua risposta / le sue risposte."
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label":"Feedback scelto",
+                "description":"Viene visualizzato quando l'utente verifica la sua risposta."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "label":"Feedback non scelto",
+                "description":"Viene visualizzato quando la soluzione viene mostrata."
               }
             ]
           }
@@ -45,176 +45,176 @@
       }
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"Traduzioni dell'interfaccia utente per scelta multipla",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"Etichetta pulsante Verifica risposta",
+          "default":"Verifica"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"Etichetta pulsante Mostra soluzione",
+          "default":"Mostra la soluzione"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Etichetta pulsante Riprova",
+          "default":"Riprova"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"Etichetta del suggerimento",
+          "default":"Visualizza suggerimento"
         },
         {
-          "label":"Correct answer feedback"
+          "label":"Feedback risposta corretta"
         },
         {
-          "label":"Almost correct answer feedback"
+          "label":"Feedback risposta quasi corretta"
         },
         {
-          "label":"Not correct answer feedback"
+          "label":"Feedback risposta non corretta"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"Etichetta della barra del punteggio",
+          "default":"Punteggio"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Tip Available",
+          "default":"Suggerimento disponibile",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Feedback Available",
+          "default":"Feedback disponibile",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Read Feedback",
+          "default":"Leggi il feedback",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Wrong Answer",
+          "default":"Risposta sbagliata",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Correct Answer",
+          "default":"Risposta corretta",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Feedback text",
-          "default":"You got @score of @total points",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+          "label":"Testo Feedback",
+          "default":"Feedback text",
+          "description":"Testo del Feedback (Riscontro), variabili consentite: @score e @total. Esempio: 'Hai ottenuto il punteggio @score su @total punti possibili.'"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"L'opzione avrebbe dovuto essere verificata",
+          "default":"Avrebbe dovuto essere verificato"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"L'opzione non avrebbe dovuto essere verificata",
+          "default":"Non avrebbe dovuto essere verificato"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"Etichetta per il messaggio \"Richiede una risposta\"",
+          "default":"Per favore rispondi prima di visualizzare la soluzione"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"Impostazioni esecuzione",
+      "description":"Queste opzioni consentono di controllare l'andamento del compito.",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"Abilita pulsante \"Riprova\""
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"Abilita pulsante \"Mostra soluzione\""
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
+          "label":"Tipo di domanda",
+          "description":"Selezionare l'aspetto e il comportamento della domanda.",
           "default":"auto",
           "options":[
             {
-              "label":"Automatic"
+              "label":"Automatico"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"Scelta multipla (caselle di controllo)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"Scelta singola (pulsanti di opzione)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"Assegna un punto per il completamento del compito",
+          "description":"Abilitare per assegnare un totale di un punto per risposte multiple corrette. Non è opzionabile in modalità \"Risposta singola\"."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"Risposte in ordine casuale",
+          "description":"Abilita per rendere casuale l'ordine delle domande visualizzate."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"Richiedere l'immissione dei dati all'utente prima che la soluzione sia visualizzata"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"Disable image zooming for question image."
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"Mostra la finestra di dialogo di conferma su \"Verifica\""
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"Mostra la finestra di dialogo di conferma su \"Riprova\""
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"Controllare automaticamente le risposte",
+          "description":"Abilitare questa opzione renderà difficoltosa l'accessibilità. Assicurati di sapere cosa stai facendo."
         },
         {
-          "label":"Pass percentage",
+          "label":"Percentuale di superamento della prova",
           "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"Finestra di conferma per la verifica",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Finish ?"
+          "label":"Etichetta di intestazione",
+          "default":"Finito?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to finish ?"
+          "label":"Etichetta del corpo",
+          "default":"Sei sicuro di voler finire?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Etichetta del pulsante Annulla",
+          "default":"Annulla"
         },
         {
-          "label":"Confirm button label",
-          "default":"Finish"
+          "label":"Etichetta del pulsante di conferma",
+          "default":"Finito"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"Finestra di conferma per \"Riprova\"",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"Etichetta di intestazione",
+          "default":"Riprovare?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"Etichetta del corpo",
+          "default":"Sei sicuro di voler riprovare?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Etichetta del pulsante Annulla",
+          "default":"Annulla"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"Etichetta del pulsante di conferma",
+          "default":"Conferma"
         }
       ]
     }
