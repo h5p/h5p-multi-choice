@@ -5,39 +5,39 @@
       "fields":[
         {
           "label":"Type",
-          "description":"Optional media to display above the question."
+          "description":"Optionele media, die boven de vragen worden getoond"
         }
       ]
     },
     {
-      "label":"Question"
+      "label":"Vraag"
     },
     {
-      "label":"Available options",
-      "entity":"option",
+      "label":"Beschikbare opties",
+      "entity":"optie",
       "field":{
-        "label":"Option",
+        "label":"Optie",
         "fields":[
           {
-            "label":"Text"
+            "label":"Tekst"
           },
           {
-            "label":"Correct"
+            "label":"Juist"
           },
           {
-            "label":"Tips and feedback",
+            "label":"Tips en feedback",
             "fields":[
               {
-                "label":"Tip text",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "label":"Tekst voor tip",
+                "description":"Hint voor de gebruiker. Deze zal verschijnen voordat de gebruiker zijn antwoord(en) controleert."
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label":"Weer te geven bericht als antwoord is geselecteerd",
+                "description":"Bericht zal onder antwoord verschijnen bij controleren als dit antwoord is geselecteerd."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "label":"Weer te geven bericht als antwoord niet is geselecteerd",
+                "description":"Bericht zal onder het antwoord verschijnen bij controleren als dit antwoord niet is geselecteerd."
               }
             ]
           }
@@ -45,176 +45,176 @@
       }
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"Gebruikersinterface vertalingen voor Multichoice",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"Tekst van de Controleer antwoord knop",
+          "default":"Controleer"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"Tekst van de Toon oplossing knop",
+          "default":"Toon oplossing"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Tekst van de Opnieuw proberen knop",
+          "default":"Opnieuw proberen"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"Tekst van de tip knop",
+          "default":"Toon tip"
         },
         {
-          "label":"Correct answer feedback"
+          "label":"Juist antwoord feedback"
         },
         {
-          "label":"Almost correct answer feedback"
+          "label":"Bijna goed antwoord feedback"
         },
         {
-          "label":"Not correct answer feedback"
+          "label":"Niet juist antwoord feedback"
         },
         {
-          "label":"Score Bar Label",
+          "label":"Tekst van de scorebalk",
           "default":"Score"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Tip beschikbaar (niet weergegeven)",
+          "default":"Tip beschikbaar",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Feedback beschikbaar (niet weergegeven)",
+          "default":"Feedback beschikbaar",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Voorlezen feedback (niet weergegeven)",
+          "default":"Voorlezen feedback",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Onjuist antwoord (niet weergegeven)",
+          "default":"Onjuist antwoord",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Juist antwoord (niet weergegeven)",
+          "default":"Juist antwoord",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
         },
         {
-          "label":"Feedback text",
-          "default":"You got @score of @total points",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+          "label":"Feedback tekst",
+          "default":"Je hebt @score van @total punten",
+          "description":"Feedback tekst, beschikbare variabelen: @score en @total. Bijvoorbeeld: 'Je hebt @score van @total punten.'"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"Optie zou moeten worden aangevinkt",
+          "default":"Zou moeten worden aangevinkt"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"Optie zou niet moeten worden aangevinkt",
+          "default":"Zou niet moeten worden aangevinkt"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"Tekst voor \"Vereist antwoord\" bericht",
+          "default":"Alsjeblieft beantwoorden voor het bekijken van de oplossing"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"Gedragsinstellingen",
+      "description":"Deze opties bepalen hoe de taak op de input reageert.",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"\"Opnieuw proberen\"-knop inschakelen"
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"\"Toon oplossing\"-knop inschakelen"
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
+          "label":"Vraagtype",
+          "description":"Selecteer uiterlijk en gedrag van de vraag.",
           "default":"auto",
           "options":[
             {
-              "label":"Automatic"
+              "label":"Automatisch"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"Meer-meerkeuze (aanvinkvakjes)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"Enkelvoudige keuze (radioknoppen)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"Geef een punt voor de gehele taak",
+          "description":"Inschakelen dat één punt gegeven kan worden voor meerdere juiste antwoorden. Dit is geen optie in \"Enkelvoudige keuze\" modus."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"Antwoorden in willekeurige volgorde",
+          "description":"Vragen in willekeurige volgorde inschakelen."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"Vereist antwoord voordat oplossing kan worden bekeken"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"Deactiveer zoomen bij afbeeldingsvraag"
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"Toon bevestigingsdialoog bij \"Controleer\""
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"Toon bevestigingsdialoog bij \"Opnieuw proberen\""
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"Automatisch antwoorden controleren",
+          "description":"Door deze optie in te schakelen, wordt de toegankelijkheid minder. Weet wat je doet!"
         },
         {
-          "label":"Pass percentage",
+          "label":"Slagingspercentage",
           "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"Bevestigingsdialoog bij het afronden",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Finish ?"
+          "label":"Koptekst",
+          "default":"Beëindigen?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to finish ?"
+          "label":"Bodytekst",
+          "default":"Ben je er zeker van dat je wilt stoppen?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Tekst van de \"Annuleer\"-knop",
+          "default":"Annuleren"
         },
         {
-          "label":"Confirm button label",
-          "default":"Finish"
+          "label":"Tekst van de \"Bevestig\"-knop",
+          "default":"Beëindigen"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"Bevestigingsdialoog bij Opnieuw proberen",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"Koptekst",
+          "default":"Opnieuw proberen?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"Bodytekst",
+          "default":"Ben je er zeker van dat je opnieuw wilt proberen?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Tekst van de \"Annuleer\"-knop",
+          "default":"Annuleren"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"Tekst van de \"Bevestig\"-knop",
+          "default":"Bevestigen"
         }
       ]
     }
