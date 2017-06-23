@@ -57,7 +57,7 @@
         },
         {
           "label":"Retry button label",
-          "default":"Retry"
+          "default":"Reintentar"
         },
         {
           "label":"Tip label",
