@@ -133,6 +133,7 @@
         {
           "label": "Question Type",
           "description": "Select the look and behaviour of the question.",
+          "default": "auto",
           "options": [
             {
               "label": "Automatic"
@@ -171,7 +172,7 @@
         },
         {
           "label": "Pass percentage",
-          "description": "Percentage of Total score required for passing the quiz."
+          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         }
       ]
     },
