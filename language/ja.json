@@ -1,43 +1,43 @@
 {
   "semantics":[
     {
-      "label":"メディア",
+      "label":"Media",
       "fields":[
         {
-          "label":"タイプ",
-          "description":"上記の質問を表示するオプションのメディア。"
+          "label":"Type",
+          "description":"Optional media to display above the question."
         }
       ]
     },
     {
-      "label":"質問"
+      "label":"Question"
     },
     {
-      "label":"使用可能なオプション",
-      "entity":"オプション",
+      "label":"Available options",
+      "entity":"option",
       "field":{
-        "label":"オプション",
+        "label":"Option",
         "fields":[
           {
-            "label":"テキスト"
+            "label":"Text"
           },
           {
-            "label":"正解"
+            "label":"Correct"
           },
           {
-            "label":"ヒントとフィードバック",
+            "label":"Tips and feedback",
             "fields":[
               {
-                "label":"ヒントのテキスト",
-                "description":"ユーザのためのヒント。これはユーザが答えをチェックする前に表示されます。"
+                "label":"Tip text",
+                "description":"Hint for the user. This will appear before user checks his answer/answers."
               },
               {
-                "label":"答えを選択した場合に表示されるメッセージ",
-                "description":"この答えが選択された場合、「チェック」した答えの下にメッセージが表示されます。"
+                "label":"Message displayed if answer is selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is selected."
               },
               {
-                "label":"答えが選択されなかった場合に表示されるメッセージ",
-                "description":"この答えが選択されなかった場合、「チェック」した答えの下にメッセージが表示されます。"
+                "label":"Message displayed if answer is not selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
               }
             ]
           }
@@ -45,84 +45,84 @@
       }
     },
     {
-      "label":"multichoice のユーザー インターフェイスの翻訳",
+      "label":"User interface translations for multichoice",
       "fields":[
         {
-          "label":"答えをチェックするボタンのラベル",
-          "default":"チェック"
+          "label":"Check answer button label",
+          "default":"Check"
         },
         {
-          "label":"正解を表示するボタンのラベル",
-          "default":"正解を表示"
+          "label":"Show solution button label",
+          "default":"Show solution"
         },
         {
-          "label":"リトライボタンのラベル",
-          "default":"リトライ"
+          "label":"Retry button label",
+          "default":"Retry"
         },
         {
-          "label":"ヒントラベル",
-          "default":"ヒントを表示"
+          "label":"Tip label",
+          "default":"Show tip"
         },
         {
-          "label":"正しい答えのフィードバック"
+          "label":"Correct answer feedback"
         },
         {
-          "label":"ほぼ正解のフィードバック"
+          "label":"Almost correct answer feedback"
         },
         {
-          "label":"不正解のフィードバック"
+          "label":"Not correct answer feedback"
         },
         {
-          "label":"スコアバーのラベル",
-          "default":"スコア"
+          "label":"Score Bar Label",
+          "default":"Score"
         },
         {
-          "label":"ヒント利用可能 (表示されません)",
-          "default":"ヒント利用可能",
-          "description":"Readspeakerに使用するアクセシビリティ テキスト"
+          "label":"Tip Available (not displayed)",
+          "default":"Tip available",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"フィードバック利用可能 (表示されません)",
-          "default":"フィードバック利用可能",
-          "description":"Readspeakerに使用するアクセシビリティ テキスト"
+          "label":"Feedback Available (not displayed)",
+          "default":"Feedback available",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"読みフィードバック(表示されません)",
-          "default":"読みフィードバック",
-          "description":"Readspeakerに使用するアクセシビリティ テキスト"
+          "label":"Read Feedback (not displayed)",
+          "default":"Read feedback",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"まちがえた答え(表示されません)",
-          "default":"まちがえた答え:",
-          "description":"Readspeakerに使用するアクセシビリティ テキスト"
+          "label":"Wrong Answer (not displayed)",
+          "default":"Wrong answer",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"正解 (表示されません)",
-          "default":"正解!",
-          "description":"Readspeakerに使用するアクセシビリティ テキスト"
+          "label":"Correct Answer (not displayed)",
+          "default":"Correct answer",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"フィードバックテキスト",
-          "default":"@total 点中 @score 点獲得",
-          "description":"フィードバック テキスト、利用可能な変数: @score と @total 。 例: ' @total 点中 @score 点獲得。 '"
+          "label":"Feedback text",
+          "default":"You got @score of @total points",
+          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
         },
         {
-          "label":"オプションがチェックされている必要があります",
-          "default":"チェックされている必要があります"
+          "label":"Option should have been checked",
+          "default":"Should have been checked"
         },
         {
-          "label":"オプションがチェックされている必要があります",
-          "default":"チェックされている必要があります"
+          "label":"Option should not have been checked",
+          "default":"Should not have been checked"
         },
         {
-          "label":"\"答えが必要\"メッセージのテキスト",
-          "default":"正解を表示する前に答えてください"
+          "label":"Text for \"Requires answer\" message",
+          "default":"Please answer before viewing the solution"
         }
       ]
     },
     {
-      "label":"動作設定",
-      "description":"これらのオプションでタスクがどのように動作するかを制御できます。",
+      "label":"Behavioural settings",
+      "description":"These options will let you control how the task behaves.",
       "fields":[
         {
           "label":"Enable \"Retry\" button"
@@ -133,6 +133,7 @@
         {
           "label":"Question Type",
           "description":"Select the look and behaviour of the question.",
+          "default":"auto",
           "options":[
             {
               "label":"Automatic"
@@ -171,49 +172,49 @@
         },
         {
           "label":"Pass percentage",
-          "description":"Percentage of Total score required for passing the quiz."
+          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         }
       ]
     },
     {
-      "label":"チェック確認ダイアログ",
+      "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"ヘッダーテキスト",
-          "default":"完了?"
+          "label":"Header text",
+          "default":"Finish ?"
         },
         {
-          "label":"本文テキスト",
-          "default":"本当に終了しますか?"
+          "label":"Body text",
+          "default":"Are you sure you wish to finish ?"
         },
         {
-          "label":"キャンセルボタンのラベル",
-          "default":"キャンセル"
+          "label":"Cancel button label",
+          "default":"Cancel"
         },
         {
-          "label":"確認ボタンのラベル",
-          "default":"完了"
+          "label":"Confirm button label",
+          "default":"Finish"
         }
       ]
     },
     {
-      "label":"リトライ確認ダイアログ",
+      "label":"Retry confirmation dialog",
       "fields":[
         {
-          "label":"ヘッダーテキスト",
-          "default":"リトライ?"
+          "label":"Header text",
+          "default":"Retry ?"
         },
         {
-          "label":"本文テキスト",
-          "default":"本当にリトライしますか?"
+          "label":"Body text",
+          "default":"Are you sure you wish to retry ?"
         },
         {
-          "label":"キャンセルボタンのラベル",
-          "default":"キャンセル"
+          "label":"Cancel button label",
+          "default":"Cancel"
         },
         {
-          "label":"確認ボタンのラベル",
-          "default":"確認"
+          "label":"Confirm button label",
+          "default":"Confirm"
         }
       ]
     }
