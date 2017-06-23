@@ -57,7 +57,7 @@
         },
         {
           "label":"Retry button label",
-          "default":"Retry"
+          "default":"Försök på nytt"
         },
         {
           "label":"Tip label",
@@ -189,7 +189,7 @@
         },
         {
           "label":"Cancel button label",
-          "default":"Cancel"
+          "default":"Avbryt"
         },
         {
           "label":"Confirm button label",
@@ -210,7 +210,7 @@
         },
         {
           "label":"Cancel button label",
-          "default":"Cancel"
+          "default":"Avbryt"
         },
         {
           "label":"Confirm button label",
