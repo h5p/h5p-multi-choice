@@ -1,43 +1,43 @@
 {
   "semantics":[
     {
-      "label":"Multimedia",
+      "label":"Media",
       "fields":[
         {
           "label":"Type",
-          "description":"Eit valfritt multimediaelement som skal visast over spørsmålet."
+          "description":"Optional media to display above the question."
         }
       ]
     },
     {
-      "label":"Spørsmål"
+      "label":"Question"
     },
     {
-      "label":"Svaralternativ",
-      "entity":"svaralternativ",
+      "label":"Available options",
+      "entity":"option",
       "field":{
-        "label":"Svaralternativ",
+        "label":"Option",
         "fields":[
           {
-            "label":"Tekst"
+            "label":"Text"
           },
           {
-            "label":"Riktig"
+            "label":"Correct"
           },
           {
-            "label":"Tips",
+            "label":"Tips and feedback",
             "fields":[
               {
-                "label":"Tipstekst",
-                "description":"Hint for brukaren. Dette vil visast før brukaren sjekkar sine svar."
+                "label":"Tip text",
+                "description":"Hint for the user. This will appear before user checks his answer/answers."
               },
               {
-                "label":"Melding som visast hvis svaret er valgt",
-                "description":"Melding som visast under svaret på \"check\" hvis svaret er valgt."
+                "label":"Message displayed if answer is selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is selected."
               },
               {
-                "label":"Melding som visast hvis svaret ikkje er valgt",
-                "description":"Melding som visast under svaret på \"check\" hvis andre svar er valgt."
+                "label":"Message displayed if answer is not selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
               }
             ]
           }
@@ -45,84 +45,84 @@
       }
     },
     {
-      "label":"Oversetting for leietekstar i fleirval",
+      "label":"User interface translations for multichoice",
       "fields":[
         {
-          "label":"Tekst for \"Sjekk svar\" knapp",
-          "default":"Sjekk"
+          "label":"Check answer button label",
+          "default":"Check"
         },
         {
-          "label":"Tekst for \"Fasit\" knapp",
-          "default":"Fasit"
+          "label":"Show solution button label",
+          "default":"Show solution"
         },
         {
-          "label":"Merkelapp for «Prøv igjen»-knappen.",
-          "default":"Prøv igjen"
+          "label":"Retry button label",
+          "default":"Retry"
         },
         {
-          "label":"Tips tekst",
-          "default":"Vis tips"
+          "label":"Tip label",
+          "default":"Show tip"
         },
         {
-          "label":"Tilbakemelding ved riktig svar"
+          "label":"Correct answer feedback"
         },
         {
-          "label":"Tilbakemelding ved nesten riktig svar"
+          "label":"Almost correct answer feedback"
         },
         {
-          "label":"Tilbakemelding ved galt svar"
+          "label":"Not correct answer feedback"
         },
         {
-          "label":"Resultatsindikator",
-          "default":"Resultat"
+          "label":"Score Bar Label",
+          "default":"Score"
         },
         {
-          "label":"Tips tilgjengelig (ikke synlig)",
-          "default":"Tips tilgjengelig",
-          "description":"Tekst for hjelpemiddel-teknologi"
+          "label":"Tip Available (not displayed)",
+          "default":"Tip available",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Tilbakemelding tilgjengelig (ikke synlig)",
-          "default":"Tilbakemelding tilgjengelig",
-          "description":"Tekst for hjelpemiddel-teknologi"
+          "label":"Feedback Available (not displayed)",
+          "default":"Feedback available",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Les tilbakemelding (ikke synlig)",
-          "default":"Les tilbakemelding",
-          "description":"Tekst for hjelpemiddel-teknologi"
+          "label":"Read Feedback (not displayed)",
+          "default":"Read feedback",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Galt svar (ikke synlig)",
-          "default":"Galt svar",
-          "description":"Tekst for hjelpemiddel-teknologi"
+          "label":"Wrong Answer (not displayed)",
+          "default":"Wrong answer",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Riktig svar (ikke synlig)",
-          "default":"Riktig svar",
-          "description":"Tekst for hjelpemiddel-teknologi"
+          "label":"Correct Answer (not displayed)",
+          "default":"Correct answer",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Tilbakemelding",
-          "default":"@score av @total poeng",
-          "description":"Tekstlig tilbakemelding, tilgjengelige variabler: @score og @total. Eksempel: 'Du fikk @score av @total felt rett.'"
+          "label":"Feedback text",
+          "default":"You got @score of @total points",
+          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
         },
         {
-          "label":"Skulle ha vært valgt",
-          "default":"Skulle ha vært valgt"
+          "label":"Option should have been checked",
+          "default":"Should have been checked"
         },
         {
-          "label":"Skulle ikke ha vært valgt",
-          "default":"Skulle ikke ha vært valgt"
+          "label":"Option should not have been checked",
+          "default":"Should not have been checked"
         },
         {
-          "label":"Tekst for \"krev svar\"-tilbakemelding",
-          "default":"Svar før du kan se fasit"
+          "label":"Text for \"Requires answer\" message",
+          "default":"Please answer before viewing the solution"
         }
       ]
     },
     {
-      "label":"Innstillinger for oppgave-oppførsel",
-      "description":"Disse instillingene lar deg bestemme hvordan oppgavetypen skal oppføre seg.",
+      "label":"Behavioural settings",
+      "description":"These options will let you control how the task behaves.",
       "fields":[
         {
           "label":"Enable \"Retry\" button"
@@ -133,6 +133,7 @@
         {
           "label":"Question Type",
           "description":"Select the look and behaviour of the question.",
+          "default":"auto",
           "options":[
             {
               "label":"Automatic"
@@ -171,49 +172,49 @@
         },
         {
           "label":"Pass percentage",
-          "description":"Percentage of Total score required for passing the quiz."
+          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         }
       ]
     },
     {
-      "label":"Fasit bruker-bekreftelse",
+      "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"Tittel",
-          "default":"Ferdig ?"
+          "label":"Header text",
+          "default":"Finish ?"
         },
         {
-          "label":"Tekst",
-          "default":"Er du sikker på at du er ferdig ?"
+          "label":"Body text",
+          "default":"Are you sure you wish to finish ?"
         },
         {
-          "label":"Avbryt etikett",
-          "default":"Avbryt"
+          "label":"Cancel button label",
+          "default":"Cancel"
         },
         {
-          "label":"Bekreft etikett",
-          "default":"Bekreft"
+          "label":"Confirm button label",
+          "default":"Finish"
         }
       ]
     },
     {
-      "label":"Prøv igjen bruker-bekreftelse",
+      "label":"Retry confirmation dialog",
       "fields":[
         {
-          "label":"Tittel",
-          "default":"Prøv igjen ?"
+          "label":"Header text",
+          "default":"Retry ?"
         },
         {
-          "label":"Tekst",
-          "default":"Er du sikker på at du vil prøve igjen?"
+          "label":"Body text",
+          "default":"Are you sure you wish to retry ?"
         },
         {
-          "label":"Avbryt etikett",
-          "default":"Avbrytt"
+          "label":"Cancel button label",
+          "default":"Cancel"
         },
         {
-          "label":"Bekreft etikett",
-          "default":"Bekreft"
+          "label":"Confirm button label",
+          "default":"Confirm"
         }
       ]
     }
