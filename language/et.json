@@ -1,43 +1,43 @@
 {
   "semantics":[
     {
-      "label":"Media",
+      "label":"Pilt või video",
       "fields":[
         {
-          "label":"Type",
-          "description":"Optional media to display above the question."
+          "label":"Tüüp",
+          "description":"Pilt või video, mida kuvatakse küsimuse juures (mittekohustuslik element)."
         }
       ]
     },
     {
-      "label":"Question"
+      "label":"Küsimus"
     },
     {
-      "label":"Available options",
-      "entity":"option",
+      "label":"Vastusevariandid",
+      "entity":"vastusevariant",
       "field":{
-        "label":"Option",
+        "label":"Vastusevariant",
         "fields":[
           {
-            "label":"Text"
+            "label":"Tekst"
           },
           {
-            "label":"Correct"
+            "label":"Õige"
           },
           {
-            "label":"Tips and feedback",
+            "label":"Vihje ja tagasiside",
             "fields":[
               {
-                "label":"Tip text",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "label":"Vihje tekst",
+                "description":"Suunav vihje vastajale, ilmub enne vastuse sisestamist."
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label":"Tekst, mida kasutaja näeb pärast selle vastusevariandi sisestamist",
+                "description":"See tekst ilmub vastusevariandi alla kui kasutaja klõpsab \"Kontrolli\"."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "label":"Tekst, mida kasutaja näeb pärast selle vastusevariandi valimata jätmist",
+                "description":"See tekst ilmub vastusevariandi alla kui kasutaja klõpsab \"Kontrolli\"."
               }
             ]
           }
@@ -45,73 +45,73 @@
       }
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"Kasutajaliidese tõlked mitmikvalikuga küsimuse puhul",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"Kontrolli nupu silt",
+          "default":"Kontrolli"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"Näita õiget vastust nupu silt",
+          "default":"Õige vastus"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Proovi uuesti nupu silt",
+          "default":"Proovi uuesti"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"Vihje silt",
+          "default":"Vihje"
         },
         {
-          "label":"Correct answer feedback"
+          "label":"Tagasiside õige vastuse puhul"
         },
         {
-          "label":"Almost correct answer feedback"
+          "label":"Tagasiside osaliselt õige vastuse puhul"
         },
         {
-          "label":"Not correct answer feedback"
+          "label":"Tagasiside vale vastuse puhul"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"Punktisumma nupu silt",
+          "default":"Punktisumma"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Küsi vihjet (peidetud)",
+          "default":"Küsi vihjet",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Võimaldab küsida tagasisidet (peidetud)",
+          "default":"Tagasiside",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Loe tagasisidet (peidus)",
+          "default":"Loe tagasisidet",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Vale vastus (peidus)",
+          "default":"Vale vastus",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Õge vastus (peidetud)",
+          "default":"Õige vastus",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Feedback text",
-          "default":"You got @score of @total points",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+          "label":"Tagasiside tekst",
+          "default":"Said @score punkti @total võimalikust",
+          "description":"Tagsiside tekst, sisaldab muutujaid: @score ja @total. Näide: 'Said @score punkti @total võimalikust.'"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"Vastusevariant oleks pidanud olema valitud",
+          "default":"Vastusevariant pidanuks jääma valimata"
         },
         {
-          "label":"Option should not have been checked",
+          "label":"See vastusevariant oleks pidanud jääma valimata",
           "default":"Should not have been checked"
         },
         {
