@@ -1,20 +1,20 @@
 {
   "semantics":[
     {
-      "label":"Medien",
+      "label":"Media",
       "fields":[
         {
-          "label":"Typ",
-          "description":"Optionale Medien, die über der Frage angezeigt werden können."
+          "label":"Type",
+          "description":"Optional media to display above the question."
         }
       ]
     },
     {
-      "label":"Frage"
+      "label":"Question"
     },
     {
-      "label":"Verfügbare Optionen",
-      "entity":"Option",
+      "label":"Available options",
+      "entity":"option",
       "field":{
         "label":"Option",
         "fields":[
@@ -22,22 +22,22 @@
             "label":"Text"
           },
           {
-            "label":"Korrekt"
+            "label":"Correct"
           },
           {
-            "label":"Tipps und Rückmeldung",
+            "label":"Tips and feedback",
             "fields":[
               {
-                "label":"Tipptext",
-                "description":"Hinweis für den Anwender. Wird angezeigt, bevor der Anwender seine Antwort/en prüft."
+                "label":"Tip text",
+                "description":"Hint for the user. This will appear before user checks his answer/answers."
               },
               {
-                "label":"Nachricht, wenn Antwort gewählt wurde",
-                "description":"Nachricht wird unter der Antwort nach Klick auf \"Überprüfen\" angezeigt, wenn die Antwort gewählt wurde."
+                "label":"Message displayed if answer is selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is selected."
               },
               {
-                "label":"Nachricht, wenn Antwort nicht gewählt wurde",
-                "description":"Nachricht wird unter der Antwort nach Klick auf \"Überprüfen\" angezeigt, wenn die Antwort nicht gewählt wurde."
+                "label":"Message displayed if answer is not selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
               }
             ]
           }
@@ -45,84 +45,84 @@
       }
     },
     {
-      "label":"Benutzerinterface Übersetzungen für Mehrfachauswahl",
+      "label":"User interface translations for multichoice",
       "fields":[
         {
-          "label":"Beschriftung für den \"Überprüfen\"-Button",
-          "default":"Überprüfen"
+          "label":"Check answer button label",
+          "default":"Check"
         },
         {
-          "label":"Beschriftung für den \"Lösung anzeigen\"-Button",
-          "default":"Lösung anzeigen"
+          "label":"Show solution button label",
+          "default":"Show solution"
         },
         {
-          "label":"Beschriftung für den \"Wiederholen\"-Button",
-          "default":"Wiederholen"
+          "label":"Retry button label",
+          "default":"Retry"
         },
         {
-          "label":"Tippbeschriftung",
-          "default":"Tipp anzeigen"
+          "label":"Tip label",
+          "default":"Show tip"
         },
         {
-          "label":"Rückmeldung zur korrekten Antwort"
+          "label":"Correct answer feedback"
         },
         {
-          "label":"Rückmeldung zu einer fast korrekten Antwort"
+          "label":"Almost correct answer feedback"
         },
         {
-          "label":"Rückmeldung zu einer inkorrekten Antwort"
+          "label":"Not correct answer feedback"
         },
         {
-          "label":"Beschriftung für den Punktebalken",
-          "default":"Punkte"
+          "label":"Score Bar Label",
+          "default":"Score"
         },
         {
-          "label":"Tipp verfügbar (nicht angezeigt)",
-          "default":"Tipp verfügbar",
-          "description":"Text für \"Readspeaker\""
+          "label":"Tip Available (not displayed)",
+          "default":"Tip available",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Rückmeldung verfügbar (nicht angezeigt)",
-          "default":"Rückmeldung verfügbar",
-          "description":"Text für \"Readspeaker\""
+          "label":"Feedback Available (not displayed)",
+          "default":"Feedback available",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Rückmeldung lesen (nicht angezeigt)",
-          "default":"Rückmeldung lesen",
-          "description":"Text für \"Readspeaker\""
+          "label":"Read Feedback (not displayed)",
+          "default":"Read feedback",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Falsche Antwort (nicht angezeigt)",
-          "default":"Falsche Antwort",
-          "description":"Text für \"Readspeaker\""
+          "label":"Wrong Answer (not displayed)",
+          "default":"Wrong answer",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Korrekte Antwort (nicht angezeigt)",
-          "default":"Korrekte Antwort",
-          "description":"Text für \"Readspeaker\""
+          "label":"Correct Answer (not displayed)",
+          "default":"Correct answer",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Rückmeldungstext",
-          "default":"Du hast @score von @total Punkten",
-          "description":"Rückmeldungstext, verfügbare Variablen: @score und @total. Beispiel: 'Du hast @score von @total Punkten.'"
+          "label":"Feedback text",
+          "default":"You got @score of @total points",
+          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
         },
         {
-          "label":"Option hätte ausgewählt werden sollen",
-          "default":"Hätte ausgewählt werden müssen"
+          "label":"Option should have been checked",
+          "default":"Should have been checked"
         },
         {
-          "label":"Option hätte nicht ausgewählt werden sollen",
-          "default":"Hätte nicht ausgewählt werden sollen"
+          "label":"Option should not have been checked",
+          "default":"Should not have been checked"
         },
         {
-          "label":"Text für \"Benötigt Antwort\"-Hinweis",
-          "default":"Eine Antwort ist notwendig, bevor die Lösung angesehen werden kann."
+          "label":"Text for \"Requires answer\" message",
+          "default":"Please answer before viewing the solution"
         }
       ]
     },
     {
-      "label":"Verhaltenseinstellungen.",
-      "description":"Diese Optionen kontrollieren, wie sich die Aufgabe verhält",
+      "label":"Behavioural settings",
+      "description":"These options will let you control how the task behaves.",
       "fields":[
         {
           "label":"Enable \"Retry\" button"
@@ -133,6 +133,7 @@
         {
           "label":"Question Type",
           "description":"Select the look and behaviour of the question.",
+          "default":"auto",
           "options":[
             {
               "label":"Automatic"
@@ -171,49 +172,49 @@
         },
         {
           "label":"Pass percentage",
-          "description":"Percentage of Total score required for passing the quiz."
+          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         }
       ]
     },
     {
-      "label":"Bestätigungsdialog beim Prüfen",
+      "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"Headertext",
-          "default":"Beenden?"
+          "label":"Header text",
+          "default":"Finish ?"
         },
         {
-          "label":"Bodytext",
-          "default":"Ganz sicher beenden?"
+          "label":"Body text",
+          "default":"Are you sure you wish to finish ?"
         },
         {
-          "label":"Beschriftung des \"Abbrechen\"-Buttons",
-          "default":"Abbrechen"
+          "label":"Cancel button label",
+          "default":"Cancel"
         },
         {
-          "label":"Beschriftung des \"Beenden\"-Buttons",
-          "default":"Beenden"
+          "label":"Confirm button label",
+          "default":"Finish"
         }
       ]
     },
     {
-      "label":"Bestätigungsdialog beim Wiederholen",
+      "label":"Retry confirmation dialog",
       "fields":[
         {
-          "label":"Header-Text",
-          "default":"Wiederholen?"
+          "label":"Header text",
+          "default":"Retry ?"
         },
         {
-          "label":"Body-Text",
-          "default":"Ganz sicher wiederholen?"
+          "label":"Body text",
+          "default":"Are you sure you wish to retry ?"
         },
         {
-          "label":"Beschriftung des \"Abbrechen\"-Buttons",
-          "default":"Abbrechen"
+          "label":"Cancel button label",
+          "default":"Cancel"
         },
         {
-          "label":"Beschriftung des \"Bestätigen\"-Buttons",
-          "default":"Bestätigen"
+          "label":"Confirm button label",
+          "default":"Confirm"
         }
       ]
     }
