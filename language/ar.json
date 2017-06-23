@@ -10,34 +10,34 @@
       ]
     },
     {
-      "label":"السؤال"
+      "label":"Question"
     },
     {
-      "label":"الخيارات المتوفرة",
-      "entity":"الخيار",
+      "label":"Available options",
+      "entity":"option",
       "field":{
-        "label":"الخيار",
+        "label":"Option",
         "fields":[
           {
-            "label":"النص"
+            "label":"Text"
           },
           {
-            "label":"صحيح"
+            "label":"Correct"
           },
           {
-            "label":"تلميح",
+            "label":"Tips and feedback",
             "fields":[
               {
-                "label":"نص التلميح",
+                "label":"Tip text",
                 "description":"Hint for the user. This will appear before user checks his answer/answers."
               },
               {
-                "label":"ملاحظات المختار",
-                "description":"سوف يتم عرضها للمستخدمين بعد التتحقق من جوابه"
+                "label":"Message displayed if answer is selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is selected."
               },
               {
-                "label":"ملاحظات لغير المختار",
-                "description":"سوف يتم عرضها للمستخدمين بعد التتحقق من جوابه"
+                "label":"Message displayed if answer is not selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
               }
             ]
           }
@@ -45,18 +45,18 @@
       }
     },
     {
-      "label":"ترجمة واجهة المستخدم للخيارات متعددة",
+      "label":"User interface translations for multichoice",
       "fields":[
         {
-          "label":"تسمية زر التحقق  من الجواب",
+          "label":"Check answer button label",
           "default":"Check"
         },
         {
-          "label":"مشاهدة تسمية زر الحل",
+          "label":"Show solution button label",
           "default":"Show solution"
         },
         {
-          "label":"تسمية زر إعادة المحاولة",
+          "label":"Retry button label",
           "default":"Retry"
         },
         {
@@ -64,46 +64,46 @@
           "default":"Show tip"
         },
         {
-          "label":"ملاحظات الجواب الصحيح"
+          "label":"Correct answer feedback"
         },
         {
-          "label":"ملاحظات الجواب الصحيح تقريبا"
+          "label":"Almost correct answer feedback"
         },
         {
-          "label":"ملاحظات الجواب غير الصحيح"
+          "label":"Not correct answer feedback"
         },
         {
           "label":"Score Bar Label",
           "default":"Score"
         },
         {
-          "label":"Tip Available",
+          "label":"Tip Available (not displayed)",
           "default":"Tip available",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Feedback Available",
+          "label":"Feedback Available (not displayed)",
           "default":"Feedback available",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Read Feedback",
+          "label":"Read Feedback (not displayed)",
           "default":"Read feedback",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Wrong Answer",
+          "label":"Wrong Answer (not displayed)",
           "default":"Wrong answer",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Correct Answer",
+          "label":"Correct Answer (not displayed)",
           "default":"Correct answer",
           "description":"Accessibility text used for readspeakers"
         },
         {
           "label":"Feedback text",
-          "default":"Feedback text",
+          "default":"You got @score of @total points",
           "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
         },
         {
@@ -121,8 +121,8 @@
       ]
     },
     {
-      "label":"إعدادت النشاط",
-      "description":"وهذه الخيارات تمكنك من التحكم في كيفية سلوك هذا النشاط",
+      "label":"Behavioural settings",
+      "description":"These options will let you control how the task behaves.",
       "fields":[
         {
           "label":"Enable \"Retry\" button"
@@ -133,6 +133,7 @@
         {
           "label":"Question Type",
           "description":"Select the look and behaviour of the question.",
+          "default":"auto",
           "options":[
             {
               "label":"Automatic"
@@ -171,7 +172,7 @@
         },
         {
           "label":"Pass percentage",
-          "description":"Percentage of Total score required for passing the quiz."
+          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         }
       ]
     },
