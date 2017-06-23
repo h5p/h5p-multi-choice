@@ -1,43 +1,43 @@
 {
   "semantics":[
     {
-      "label":"Recurs",
+      "label":"Media",
       "fields":[
         {
-          "label":"Tipus",
-          "description":"Recursos opcionals per mostrar al damunt de la pregunta."
+          "label":"Type",
+          "description":"Optional media to display above the question."
         }
       ]
     },
     {
-      "label":"Pregunta"
+      "label":"Question"
     },
     {
-      "label":"Opcions disponibles",
-      "entity":"opció",
+      "label":"Available options",
+      "entity":"option",
       "field":{
-        "label":"Opció",
+        "label":"Option",
         "fields":[
           {
             "label":"Text"
           },
           {
-            "label":"Correcte"
+            "label":"Correct"
           },
           {
-            "label":"Suggerències i informació de retorn",
+            "label":"Tips and feedback",
             "fields":[
               {
-                "label":"Consell",
-                "description":"Pista per a l'usuari. Això apareixerà abans que l'usuari confirmi la seva resposta/Respostes."
+                "label":"Tip text",
+                "description":"Hint for the user. This will appear before user checks his answer/answers."
               },
               {
-                "label":"Aquest missatge es mostra si la resposta està seleccionada",
-                "description":"Missatge que apareixerà sota la resposta seleccionada al validar."
+                "label":"Message displayed if answer is selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is selected."
               },
               {
-                "label":"Missatge que es mostra si no s'ha seleccionat cap resposta",
-                "description":"Missatge que apareixerà sota la resposta si aquesta resposta no està seleccionada al validar."
+                "label":"Message displayed if answer is not selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
               }
             ]
           }
@@ -45,108 +45,109 @@
       }
     },
     {
-      "label":"Traduccions de la interfície pel resposta múltiple",
+      "label":"User interface translations for multichoice",
       "fields":[
         {
-          "label":"Etiqueta pel botó 'Verificar resposta'",
-          "default":"Verificar"
+          "label":"Check answer button label",
+          "default":"Check"
         },
         {
-          "label":"Etiqueta pel botó \"Mostrar solució\"",
-          "default":"Mostrar solució"
+          "label":"Show solution button label",
+          "default":"Show solution"
         },
         {
-          "label":"Etiqueta del botó \"Tornar-ho a provar\"",
-          "default":"Tornar-ho a provar"
+          "label":"Retry button label",
+          "default":"Retry"
         },
         {
-          "label":"Etiqueta de consell",
-          "default":"Mostrar consell"
+          "label":"Tip label",
+          "default":"Show tip"
         },
         {
-          "label":"Retorn per resposta correcta"
+          "label":"Correct answer feedback"
         },
         {
-          "label":"Retorn per resposta quasi correcta"
+          "label":"Almost correct answer feedback"
         },
         {
-          "label":"Retorn per resposta errònia"
+          "label":"Not correct answer feedback"
         },
         {
-          "label":"Etiqueta pel marcador",
-          "default":"Puntuació"
+          "label":"Score Bar Label",
+          "default":"Score"
         },
         {
-          "label":"Pista disponible (no s'està mostrant)",
-          "default":"Pista disponible",
-          "description":"Text d'accessibilitat utilitzat pels lectors"
+          "label":"Tip Available (not displayed)",
+          "default":"Tip available",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Pista disponible (no es mostra)",
-          "default":"Retorn disponible",
-          "description":"Text d'accessibilitat utilitzat pels lectors"
+          "label":"Feedback Available (not displayed)",
+          "default":"Feedback available",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Llegir el retorn (no es mostra)",
-          "default":"Llegir retorn",
-          "description":"Text d'accessibilitat utilitzat pels lectors"
+          "label":"Read Feedback (not displayed)",
+          "default":"Read feedback",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Resposta incorrecta (no es mostra)",
-          "default":"La resposta no és correcta",
-          "description":"Text d'accessibilitat utilitzat pels lectors"
+          "label":"Wrong Answer (not displayed)",
+          "default":"Wrong answer",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Resposta Correcta (no es mostra)",
-          "default":"Resposta correcta",
-          "description":"Text d'accessibilitat utilitzat pels lectors"
+          "label":"Correct Answer (not displayed)",
+          "default":"Correct answer",
+          "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Text de retorn",
-          "default":"Has aconseguit @score de @total punts",
-          "description":"Text de retroacció, variables disponibles: @score i @total. Per exemple: 'Has aconseguit @score de @total punts'"
+          "label":"Feedback text",
+          "default":"You got @score of @total points",
+          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
         },
         {
-          "label":"S'hauria d'haver marcat l'opció",
-          "default":"S'hauria d'haver marcat"
+          "label":"Option should have been checked",
+          "default":"Should have been checked"
         },
         {
-          "label":"No s'hauria hagut de marcar l'opció",
-          "default":"No s'hauria hagut de marcar"
+          "label":"Option should not have been checked",
+          "default":"Should not have been checked"
         },
         {
-          "label":"Text pel missatge \"Resposta obligatòria\"",
-          "default":"Si us plau contesta abans de veure la solució"
+          "label":"Text for \"Requires answer\" message",
+          "default":"Please answer before viewing the solution"
         }
       ]
     },
     {
-      "label":"Opcions de comportament",
-      "description":"Aquestes opcions et permetran controlar com es comporta la tasca.",
+      "label":"Behavioural settings",
+      "description":"These options will let you control how the task behaves.",
       "fields":[
         {
-          "label":"Activa el botó \"Tornar-ho a provar\""
+          "label":"Enable \"Retry\" button"
         },
         {
-          "label":"Activa el botó \"Mostrar solució\""
+          "label":"Enable \"Show Solution\" button"
         },
         {
-          "label":"Tipus de pregunta",
-          "description":"Selecciona l'aspecte i el comportament de la pregunta.",
+          "label":"Question Type",
+          "description":"Select the look and behaviour of the question.",
+          "default":"auto",
           "options":[
             {
-              "label":"Automàtic"
+              "label":"Automatic"
             },
             {
-              "label":"Múltiple solució (Caselles)"
+              "label":"Multiple Choice (Checkboxes)"
             },
             {
-              "label":"Solució única(Botons circulars)"
+              "label":"Single Choice (Radio Buttons)"
             }
           ]
         },
         {
-          "label":"Donar un punt per la tasca sencera",
+          "label":"Give one point for the whole task",
           "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
@@ -171,7 +172,7 @@
         },
         {
           "label":"Pass percentage",
-          "description":"Percentage of Total score required for passing the quiz."
+          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         }
       ]
     },
