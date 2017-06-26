@@ -45,6 +45,32 @@
       }
     },
     {
+      "englishLabel": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "englishLabel": "Default",
+            }
+          ],
+          "englishLabel": "Define custom feedback for any score range",
+          "englishDescription": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "field": {
+            "fields": [
+              {
+                "englishLabel": "Score Range",
+              },
+              {},
+              {
+                "englishLabel": "Feedback for defined score range",
+                "englishPlaceholder": "Fill in the feedback",
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "label": "Prijevodi za višestruki izbor",
       "fields": [
         {
@@ -100,11 +126,6 @@
           "label": "Tačan odgovor (nije prikazan)",
           "default": "Tačan odgovor",
           "description": "Tekst za elektronski glas"
-        },
-        {
-          "label": "Tekst Feedbacka",
-          "default": "Osvojeno @score od @total bodova",
-          "description": "Tekst Feedbacka, dostupne varijable: @score i @total. Primjer: 'Osvojeno @score od @total bodova.'"
         },
         {
           "label": "Opcija treba biti odabrana",

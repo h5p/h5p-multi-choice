@@ -104,6 +104,31 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
         }
 
         finished(null, parameters);
+      },
+
+      /**
+       * Asynchronous content upgrade hook.
+       * Upgrades content parameters to support Multiple Choice 1.10.
+       *
+       * Move old feedback message to the new overall feedback system.
+       *
+       * @params {object} parameters
+       * @params {function} finished
+       */
+      10: function (parameters, finished) {
+
+        if (parameters && parameters.UI && parameters.UI.feedback) {
+          parameters.overallFeedback = [
+            {
+              'from': 0,
+              'to': 100,
+              'feedback': parameters.UI.feedback
+            }
+          ];
+          delete parameters.UI.feedback;
+        }
+
+        finished(null, parameters);
       }
 
     }

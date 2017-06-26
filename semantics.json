@@ -302,15 +302,6 @@
         "optional": true
       },
       {
-        "name": "feedback",
-        "type": "text",
-        "label": "Feedback text",
-        "importance": "low",
-        "default": "You got @score of @total points",
-        "description": "Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'",
-        "optional": true
-      },
-      {
         "name": "shouldCheck",
         "type": "text",
         "label": "Option should have been checked",

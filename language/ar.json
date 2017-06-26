@@ -44,6 +44,32 @@
       }
     },
     {
+      "englishLabel": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "englishLabel": "Default",
+            }
+          ],
+          "englishLabel": "Define custom feedback for any score range",
+          "englishDescription": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "field": {
+            "fields": [
+              {
+                "englishLabel": "Score Range",
+              },
+              {},
+              {
+                "englishLabel": "Feedback for defined score range",
+                "englishPlaceholder": "Fill in the feedback",
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "label": "ترجمة واجهة المستخدم للخيارات متعددة",
       "fields": [
         {
@@ -96,10 +122,6 @@
           "label": "Correct Answer",
           "default": "Correct answer",
           "description": "Accessibility text used for readspeakers"
-        },
-        {
-          "label": "Feedback text",
-          "default": "Feedback text"
         },
         {
           "label": "Option should have been checked",
