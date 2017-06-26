@@ -133,6 +133,7 @@
         {
           "label": "Question Type",
           "description": "Select the look and behaviour of the question.",
+          "default": "auto",
           "options": [
             {
               "label": "Automatic"
