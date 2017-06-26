@@ -139,11 +139,11 @@
         "type": "list",
         "widgets": [
           {
-            "name": "TableList",
+            "name": "RangeList",
             "label": "Default"
           }
         ],
-        "importance": "low",
+        "importance": "high",
         "label": "Define custom feedback for any score range",
         "description": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
         "entity": "range",
@@ -158,16 +158,19 @@
             {
               "name": "from",
               "type": "number",
+              "label": "Score Range",
               "min": 0,
               "max": 100,
-              "default": 0
+              "default": 0,
+              "unit": "%"
             },
             {
               "name": "to",
               "type": "number",
               "min": 0,
               "max": 100,
-              "default": 100
+              "default": 100,
+              "unit": "%"
             },
             {
               "name": "feedback",
