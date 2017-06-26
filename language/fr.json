@@ -90,15 +90,6 @@
           "default": "Montrer l'indice"
         },
         {
-          "label": "Commentaire pour une réponse correcte"
-        },
-        {
-          "label": "Commentaire pour une réponse presque correcte"
-        },
-        {
-          "label": "Commentaire pour une mauvaise réponse"
-        },
-        {
           "label": "Texte de la barre de score",
           "default": "Score"
         },

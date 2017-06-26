@@ -90,15 +90,6 @@
           "default": "Prikaži savjet"
         },
         {
-          "label": "Feedback za tačan odgovor"
-        },
-        {
-          "label": "Feedback za skoro tačan odgovor"
-        },
-        {
-          "label": "Feedback za netačan odgovor"
-        },
-        {
           "label": "Oznaka za traku sa rezultatom",
           "default": "Rezultat"
         },

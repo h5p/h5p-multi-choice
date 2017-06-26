@@ -117,14 +117,166 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
        */
       10: function (parameters, finished) {
 
-        if (parameters && parameters.UI && parameters.UI.feedback) {
-          parameters.overallFeedback = [
-            {
-              'from': 0,
-              'to': 100,
-              'feedback': parameters.UI.feedback
+        if (parameters && parameters.UI) {
+          if (parameters.UI.correctText) {
+            if (parameters.UI.almostText) {
+              if (parameters.UI.wrongText) {
+                // All specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.wrongText
+                  },
+                  {
+                    'from': 1,
+                    'to': 99,
+                    'feedback': parameters.UI.almostText
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.correctText
+                  }
+                ];
+              }
+              else {
+                // Only correct and almost specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.feedback || ''
+                  },
+                  {
+                    'from': 1,
+                    'to': 99,
+                    'feedback': parameters.UI.almostText
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.correctText
+                  }
+                ];
+              }
             }
-          ];
+            else {
+              if (parameters.UI.wrongText) {
+                // Only correct and wrong pecified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.wrongText
+                  },
+                  {
+                    'from': 1,
+                    'to': 99,
+                    'feedback': parameters.UI.feedback || ''
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.correctText
+                  }
+                ];
+              }
+              else {
+                // Only correct specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 99,
+                    'feedback': parameters.UI.feedback || ''
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.correctText
+                  }
+                ];
+              }
+            }
+          }
+          else {
+            if (parameters.UI.almostText) {
+              if (parameters.UI.wrongText) {
+                // Only almost and wrong specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.wrongText
+                  },
+                  {
+                    'from': 1,
+                    'to': 99,
+                    'feedback': parameters.UI.almostText
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.feedback || ''
+                  }
+                ];
+              }
+              else {
+                // Only almost specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.feedback || ''
+                  },
+                  {
+                    'from': 1,
+                    'to': 99,
+                    'feedback': parameters.UI.almostText
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.feedback || ''
+                  }
+                ];
+              }
+            }
+            else {
+              if (parameters.UI.wrongText) {
+                // Only wrong specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.wrongText
+                  },
+                  {
+                    'from': 1,
+                    'to': 100,
+                    'feedback': parameters.UI.feedback || ''
+                  }
+                ];
+              }
+              else {
+                // None specified
+                if (parameters.UI.feedback) {
+                  parameters.overallFeedback = [
+                    {
+                      'from': 0,
+                      'to': 100,
+                      'feedback': parameters.UI.feedback
+                    }
+                  ];
+                }
+              }
+            }
+          }
+
+          // Remove old feedback messages
+          delete parameters.UI.correctText;
+          delete parameters.UI.almostText;
+          delete parameters.UI.wrongText;
           delete parameters.UI.feedback;
         }
 

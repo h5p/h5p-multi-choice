@@ -86,15 +86,6 @@
           "default": "Show tip"
         },
         {
-          "label": "Feedback risposta corretta"
-        },
-        {
-          "label": "Feedback risposta quasi corretta"
-        },
-        {
-          "label": "Feedback risposta non corretta"
-        },
-        {
           "label": "Score Bar Label",
           "default": "Score"
         },

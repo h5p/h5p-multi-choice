@@ -725,23 +725,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @return {string}
    */
   var getFeedbackText = function (score, max) {
-    var feedback;
-
     var ratio = (score / max);
-    if (isFinite(ratio) && ratio > 0) {
-      if (ratio >= 1 && params.UI.correctText) {
-        feedback = params.UI.correctText;
-      }
-      else if (params.UI.almostText) {
-        feedback = params.UI.almostText;
-      }
-    }
-    else if (params.UI.wrongText) {
-      feedback = params.UI.wrongText;
-    }
-    if (!feedback) {
-      feedback = H5P.Question.determineOverallFeedback(params.overallFeedback, ratio);
-    }
+
+    var feedback = H5P.Question.determineOverallFeedback(params.overallFeedback, ratio);
 
     return feedback.replace('@score', score).replace('@total', max);
   };

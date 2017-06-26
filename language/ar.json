@@ -86,15 +86,6 @@
           "default": "Show tip"
         },
         {
-          "label": "ملاحظات الجواب الصحيح"
-        },
-        {
-          "label": "ملاحظات الجواب الصحيح تقريبا"
-        },
-        {
-          "label": "ملاحظات الجواب غير الصحيح"
-        },
-        {
           "label": "Score Bar Label",
           "default": "Score"
         },

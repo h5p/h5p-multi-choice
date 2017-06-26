@@ -90,15 +90,6 @@
           "default": "Tipp anzeigen"
         },
         {
-          "label": "Rückmeldung zur korrekten Antwort"
-        },
-        {
-          "label": "Rückmeldung zu einer fast korrekten Antwort"
-        },
-        {
-          "label": "Rückmeldung zu einer inkorrekten Antwort"
-        },
-        {
           "label": "Beschriftung für den Punktebalken",
           "default": "Punkte"
         },

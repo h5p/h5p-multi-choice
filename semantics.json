@@ -223,30 +223,6 @@
         "optional": true
       },
       {
-        "name": "correctText",
-        "type": "text",
-        "label": "Correct answer feedback",
-        "importance": "low",
-        "optional": true,
-        "deprecated": true
-      },
-      {
-        "name": "almostText",
-        "type": "text",
-        "label": "Almost correct answer feedback",
-        "importance": "low",
-        "optional": true,
-        "deprecated": true
-      },
-      {
-        "name": "wrongText",
-        "type": "text",
-        "label": "Not correct answer feedback",
-        "importance": "low",
-        "optional": true,
-        "deprecated": true
-      },
-      {
         "name": "scoreBarLabel",
         "type": "text",
         "label": "Score Bar Label",

@@ -97,15 +97,6 @@
           "default": "Vis tips"
         },
         {
-          "label": "Tilbakemelding ved riktig svar"
-        },
-        {
-          "label": "Tilbakemelding ved nesten riktig svar"
-        },
-        {
-          "label": "Tilbakemelding ved galt svar"
-        },
-        {
           "label": "Resultatsindikator",
           "default": "Resultat"
         },
