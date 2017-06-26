@@ -50,7 +50,7 @@
         {
           "widgets": [
             {
-              "englishLabel": "Default",
+              "englishLabel": "Default"
             }
           ],
           "englishLabel": "Define custom feedback for any score range",
@@ -58,12 +58,12 @@
           "field": {
             "fields": [
               {
-                "englishLabel": "Score Range",
+                "englishLabel": "Score Range"
               },
               {},
               {
                 "englishLabel": "Feedback for defined score range",
-                "englishPlaceholder": "Fill in the feedback",
+                "englishPlaceholder": "Fill in the feedback"
               }
             ]
           }
