@@ -156,7 +156,7 @@
   content: "\e602";
 }
 
-.feedback-text {
+.h5p-multichoice .feedback-text {
   height: 2em;
   top: 0;
   margin: 0;
@@ -167,13 +167,13 @@
   color: #599413;
 }
 
-.feedback-text.h5p-failed {
+.h5p-multichoice .feedback-text.h5p-failed {
   color: #b71c1c;
 }
-.feedback-text.h5p-almost {
+.h5p-multichoice .feedback-text.h5p-almost {
   color: #666;
 }
-.feedback-text.h5p-passed {
+.h5p-multichoice .feedback-text.h5p-passed {
   color: #255c41;
 }
 
