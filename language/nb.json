@@ -133,6 +133,7 @@
         {
           "label":"Spørsmålstype",
           "description":"Velg utseende og oppførsel for spørsmålet.",
+          "default":"auto",
           "options":[
             {
               "label":"Automatisk"
