@@ -64,7 +64,8 @@
               {},
               {
                 "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "placeholder": "Fill in the feedback",
+                "default": "You got @score of @total points"
               }
             ]
           }
