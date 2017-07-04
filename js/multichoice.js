@@ -85,13 +85,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         correct: true
       }
     ],
-    overallFeedback: [
-      {
-        'from': 0,
-        'to': 100,
-        'feedback': 'You got @score of @total points'
-      }
-    ],
+    overallFeedback: [],
     weight: 1,
     userAnswers: [],
     UI: {
