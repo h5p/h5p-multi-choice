@@ -178,8 +178,6 @@
               "label": "Feedback for defined score range",
               "importance": "low",
               "placeholder": "Fill in the feedback",
-              "default": "You got @score of @total points",
-              "showDefaultOnFirstRow": true,
               "optional": true
             }
           ]
