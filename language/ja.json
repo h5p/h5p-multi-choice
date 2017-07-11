@@ -29,7 +29,7 @@
             "fields":[
               {
                 "label":"ヒントのテキスト",
-                "description":"ユーザのためのヒント。これはユーザが答えをチェックする前に表示されます。"
+                "description":"ユーザーのためのヒント。これはユーザーが答えをチェックする前に表示されます。"
               },
               {
                 "label":"答えを選択した場合に表示されるメッセージ",
@@ -172,7 +172,7 @@
         },
         {
           "label":"合格パーセンテージ",
-          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "description":"この設定は、多くの場合効果はありません。これは、タスク全体の1ポイントが有効になっているときに1ポイントを取得し、xAPIステートメントでresult.successを取得するために必要な合計スコアの割合です。"
         }
       ]
     },
