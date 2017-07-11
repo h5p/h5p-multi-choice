@@ -1,0 +1,222 @@
+{
+  "semantics":[
+    {
+      "label":"Ortam",
+      "fields":[
+        {
+          "label":"Yazınız",
+          "description":"Soru üzerinde görüntülenecek isteğe bağlı ortam."
+        }
+      ]
+    },
+    {
+      "label":"Soru"
+    },
+    {
+      "label":"Kullanılabilir seçenekler",
+      "entity":"seçenek",
+      "field":{
+        "label":"Seçenek",
+        "fields":[
+          {
+            "label":"Metin"
+          },
+          {
+            "label":"Doğru"
+          },
+          {
+            "label":"İpuçları ve geri bildirim",
+            "fields":[
+              {
+                "label":"İpucu metni",
+                "description":"Kullanıcı için ipucu. Kullanıcı cevabını/cevaplarını kontrol etmeden önce bu görünecektir."
+              },
+              {
+                "label":"Cevap seçilirse görüntülenecek ileti",
+                "description":"Bu cevap seçilirse \"kontrol et\" üzerindeki cevabın altında ileti görünecek."
+              },
+              {
+                "label":"Cevap seçilmezse görüntülenecek ileti",
+                "description":"Bu cevap seçilmezse \"kontrol et\" üzerindeki cevabın altında ileti görünecek."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label":"Çoktan seçmeli sorular için kullanıcı arayüzü çevirisi",
+      "fields":[
+        {
+          "label":"Kontrol et cevap butonu etiketi",
+          "default":"Kontrol et"
+        },
+        {
+          "label":"Çözüm butonu etiketini göster",
+          "default":"Çözümü göster"
+        },
+        {
+          "label":"Yeniden dene buton etiketi",
+          "default":"Yeniden dene"
+        },
+        {
+          "label":"İpucu etiketi",
+          "default":"İpucu göster"
+        },
+        {
+          "label":"Doğru cevap geri bildirimi"
+        },
+        {
+          "label":"Hemen hemen doğru cevabı geri bildirimi"
+        },
+        {
+          "label":"Doğru olmayan cevap geri bildirimi"
+        },
+        {
+          "label":"Puan Çubuğu Etiketi",
+          "default":"Puan"
+        },
+        {
+          "label":"Mevcut İpucu (görüntülenmeyen)",
+          "default":"Mevcut ipucu",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
+        },
+        {
+          "label":"Mevcut Geri Bildirim (görüntülenmeyen)",
+          "default":"Mevcut Geri Bildirim",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
+        },
+        {
+          "label":"Okuma Geri Bildirimi (görüntülenmeyen)",
+          "default":"Okuma Geri Bildirimi",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
+        },
+        {
+          "label":"Yanlış cevap (görüntülenmeyen)",
+          "default":"Yanlış cevap",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
+        },
+        {
+          "label":"Doğru Cevap (görüntülenmeyen)",
+          "default":"Doğru cevap",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
+        },
+        {
+          "label":"Geri bildirim metni",
+          "default":"@Toplam puanlardan @puan aldınız",
+          "description":"Geri bildirim metni, mevcut değişkenler: @puan ve @toplam. Örneğin: '@Toplam puanlardan @puan aldınız'"
+        },
+        {
+          "label":"Seçenek işaretlenmeliydi",
+          "default":"İşaretlenmeliydi"
+        },
+        {
+          "label":"Seçenek işaretlenmemeliydi",
+          "default":"İşaretlenmemeliydi"
+        },
+        {
+          "label":"\"cevap gerektirir\" iletisi için metin",
+          "default":"Çözümü görmeden önce lütfen cevaplayın"
+        }
+      ]
+    },
+    {
+      "label":"Davranış ayarları",
+      "description":"Bu seçenekler aktivitenin çalışma şeklini denetlemenize izin verir.",
+      "fields":[
+        {
+          "label":"\"Yeniden dene\" butonunu aktifleştirin"
+        },
+        {
+          "label":"\"Çözümü göster\" butonunu aktifleştirin"
+        },
+        {
+          "label":"Soru Türü",
+          "description":"Sorunun görünüm ve davranışını değiştirin.",
+          "default":"auto",
+          "options":[
+            {
+              "label":"Otomatik"
+            },
+            {
+              "label":"Birden Çok Seçenek (onay kutuları)"
+            },
+            {
+              "label":"Tek Seçim (Seçenek butonları)"
+            }
+          ]
+        },
+        {
+          "label":"Bütün aktivite için bir puan verin",
+          "description":"Birden fazla doğru cevaba toplam bir puan vermeyi etkinleştirin. Bu \"Tek cevap\" modunda bir seçenek olmayacak."
+        },
+        {
+          "label":"Cevapları karıştır",
+          "description":"Soruları sırasını ekranda rasgele gelmesi için etkinleştirin."
+        },
+        {
+          "label":"Çözüm görülmeden önce yanıt gerektirin"
+        },
+        {
+          "label":"Soru resmi için resim yakınlaştırmasını devre dışı bırakın"
+        },
+        {
+          "label":"\"Kontrol et\"deki onay kutucuğunu göster"
+        },
+        {
+          "label":"\"Yeniden dene\"deki onay kutucuğunu göster"
+        },
+        {
+          "label":"Yanıtları otomatik olarak denetle",
+          "description":"Bu seçeneğin etkinleştirilmesi erişilebilirliği etkileyecektir, ne yaptığınızı bildiğinizden emin olun."
+        },
+        {
+          "label":"Geçiş yüzdesi",
+          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        }
+      ]
+    },
+    {
+      "label":"Onay kutucuğunu seçin",
+      "fields":[
+        {
+          "label":"Üstbaşlık Metni",
+          "default":"Bitir?"
+        },
+        {
+          "label":"Gövde Metni",
+          "default":"Tamamlamak istediğinizden emin misiniz?"
+        },
+        {
+          "label":"İptal et butonu etiketi",
+          "default":"İptal et"
+        },
+        {
+          "label":"Onay butonu etiketi",
+          "default":"Bitir"
+        }
+      ]
+    },
+    {
+      "label":"Yeniden dene onay kutucuğu",
+      "fields":[
+        {
+          "label":"Üstbaşlık Metni",
+          "default":"Yeniden dene?"
+        },
+        {
+          "label":"Gövde Metni",
+          "default":"Yeniden denemek istediğinizden emin misiniz?"
+        },
+        {
+          "label":"İptal et butonu etiketi",
+          "default":"İptal et"
+        },
+        {
+          "label":"Onay butonu etiketi",
+          "default":"Onayla"
+        }
+      ]
+    }
+  ]
+}

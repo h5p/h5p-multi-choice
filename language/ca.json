@@ -1,0 +1,222 @@
+{
+  "semantics":[
+    {
+      "label":"Recurs",
+      "fields":[
+        {
+          "label":"Tipus",
+          "description":"Recursos opcionals per mostrar al damunt de la pregunta."
+        }
+      ]
+    },
+    {
+      "label":"Pregunta"
+    },
+    {
+      "label":"Opcions disponibles",
+      "entity":"opció",
+      "field":{
+        "label":"Opció",
+        "fields":[
+          {
+            "label":"Text"
+          },
+          {
+            "label":"Correcte"
+          },
+          {
+            "label":"Suggerències i informació de retorn",
+            "fields":[
+              {
+                "label":"Text de la pista",
+                "description":"Pista per a l'usuari. Això apareixerà abans que l'usuari confirmi la seva resposta/Respostes."
+              },
+              {
+                "label":"Aquest missatge es mostra si la resposta està seleccionada",
+                "description":"Missatge que apareixerà sota la resposta seleccionada al validar."
+              },
+              {
+                "label":"Missatge que es mostra si no s'ha seleccionat cap resposta",
+                "description":"Missatge que apareixerà sota la resposta si aquesta resposta no està seleccionada al validar."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label":"Traduccions de la interfície pel resposta múltiple",
+      "fields":[
+        {
+          "label":"Etiqueta pel botó 'Verificar resposta'",
+          "default":"Verificar"
+        },
+        {
+          "label":"Etiqueta pel botó \"Mostrar solució\"",
+          "default":"Mostrar solució"
+        },
+        {
+          "label":"Etiqueta del botó \"Tornar-ho a provar\"",
+          "default":"Tornar-ho a provar"
+        },
+        {
+          "label":"Etiqueta de consell",
+          "default":"Mostrar consell"
+        },
+        {
+          "label":"Retorn per resposta correcta"
+        },
+        {
+          "label":"Retorn per resposta quasi correcta"
+        },
+        {
+          "label":"Retorn per resposta errònia"
+        },
+        {
+          "label":"Etiqueta pel marcador",
+          "default":"Puntuació"
+        },
+        {
+          "label":"Pista disponible (no s'està mostrant)",
+          "default":"Pista disponible",
+          "description":"Text d'accessibilitat utilitzat pels lectors"
+        },
+        {
+          "label":"Pista disponible (no es mostra)",
+          "default":"Retorn disponible",
+          "description":"Text d'accessibilitat utilitzat pels lectors"
+        },
+        {
+          "label":"Llegir el retorn (no es mostra)",
+          "default":"Llegir retorn",
+          "description":"Text d'accessibilitat utilitzat pels lectors"
+        },
+        {
+          "label":"Resposta incorrecta (no es mostra)",
+          "default":"La resposta no és correcta",
+          "description":"Text d'accessibilitat utilitzat pels lectors"
+        },
+        {
+          "label":"Resposta Correcta (no es mostra)",
+          "default":"Resposta correcta",
+          "description":"Text d'accessibilitat utilitzat pels lectors"
+        },
+        {
+          "label":"Text de retroacció",
+          "default":"Has aconseguit @score de @total punts",
+          "description":"Text de retroacció, variables disponibles: @score i @total. Per exemple: 'Has aconseguit @score de @total punts'"
+        },
+        {
+          "label":"S'hauria d'haver marcat l'opció",
+          "default":"S'hauria d'haver marcat"
+        },
+        {
+          "label":"No s'hauria hagut de marcar l'opció",
+          "default":"No s'hauria hagut de marcar"
+        },
+        {
+          "label":"Text pel missatge \"Resposta obligatòria\"",
+          "default":"Si us plau contesta abans de veure la solució"
+        }
+      ]
+    },
+    {
+      "label":"Opcions de comportament",
+      "description":"Aquestes opcions et permetran controlar com es comporta la tasca.",
+      "fields":[
+        {
+          "label":"Activa el botó \"Tornar-ho a provar\""
+        },
+        {
+          "label":"Activa el botó \"Mostrar solució\""
+        },
+        {
+          "label":"Tipus de pregunta",
+          "description":"Selecciona l'aspecte i el comportament de la pregunta.",
+          "default":"auto",
+          "options":[
+            {
+              "label":"Automàtic"
+            },
+            {
+              "label":"Múltiple solució (Caselles)"
+            },
+            {
+              "label":"Solució única(Botons circulars)"
+            }
+          ]
+        },
+        {
+          "label":"Donar un punt per la tasca sencera",
+          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+        },
+        {
+          "label":"Randomize answers",
+          "description":"Enable to randomize the order of questions on display."
+        },
+        {
+          "label":"Require answer before the solution can be viewed"
+        },
+        {
+          "label":"Desactivar el zoom per la imatge de la pregunta"
+        },
+        {
+          "label":"Mostra el diàleg de confirmació a \"Verificar\""
+        },
+        {
+          "label":"Mostra el diàleg de confirmació de \"Tornar-ho a provar\""
+        },
+        {
+          "label":"Automatically check answers",
+          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+        },
+        {
+          "label":"Percentatge per passar",
+          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        }
+      ]
+    },
+    {
+      "label":"Comprovar diàleg de confirmació",
+      "fields":[
+        {
+          "label":"Títol",
+          "default":"Ja has fet?"
+        },
+        {
+          "label":"Cos de text",
+          "default":"N'estàs segur de voler acabar?"
+        },
+        {
+          "label":"Etiqueta del botó \"Cancel•lar\"",
+          "default":"Cancel·lar"
+        },
+        {
+          "label":"Etiqueta del botó \"Confirmar\"",
+          "default":"Acabar"
+        }
+      ]
+    },
+    {
+      "label":"Diàleg de la confirmació \"Tornar-ho a provar\"",
+      "fields":[
+        {
+          "label":"Títol",
+          "default":"Vols tornar-ho a provar?"
+        },
+        {
+          "label":"Cos de text",
+          "default":"N'estàs segur de voler-ho tornar a provar?"
+        },
+        {
+          "label":"Etiqueta del botó \"Cancel•lar\"",
+          "default":"Cancel·lar"
+        },
+        {
+          "label":"Etiqueta del botó \"Confirmar\"",
+          "default":"Confirmar"
+        }
+      ]
+    }
+  ]
+}

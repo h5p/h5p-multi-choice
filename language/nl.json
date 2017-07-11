@@ -1,0 +1,222 @@
+{
+  "semantics":[
+    {
+      "label":"Media",
+      "fields":[
+        {
+          "label":"Type",
+          "description":"Optionele media, die boven de vragen worden getoond"
+        }
+      ]
+    },
+    {
+      "label":"Vraag"
+    },
+    {
+      "label":"Beschikbare opties",
+      "entity":"optie",
+      "field":{
+        "label":"Optie",
+        "fields":[
+          {
+            "label":"Tekst"
+          },
+          {
+            "label":"Juist"
+          },
+          {
+            "label":"Tips en feedback",
+            "fields":[
+              {
+                "label":"Tekst voor tip",
+                "description":"Hint voor de gebruiker. Deze zal verschijnen voordat de gebruiker zijn antwoord(en) controleert."
+              },
+              {
+                "label":"Weer te geven bericht als antwoord is geselecteerd",
+                "description":"Bericht zal onder antwoord verschijnen bij controleren als dit antwoord is geselecteerd."
+              },
+              {
+                "label":"Weer te geven bericht als antwoord niet is geselecteerd",
+                "description":"Bericht zal onder het antwoord verschijnen bij controleren als dit antwoord niet is geselecteerd."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label":"Gebruikersinterface vertalingen voor Multichoice",
+      "fields":[
+        {
+          "label":"Tekst van de Controleer antwoord knop",
+          "default":"Controleer"
+        },
+        {
+          "label":"Tekst van de Toon oplossing knop",
+          "default":"Toon oplossing"
+        },
+        {
+          "label":"Tekst van de Opnieuw proberen knop",
+          "default":"Opnieuw proberen"
+        },
+        {
+          "label":"Tekst van de tip knop",
+          "default":"Toon tip"
+        },
+        {
+          "label":"Juist antwoord feedback"
+        },
+        {
+          "label":"Bijna goed antwoord feedback"
+        },
+        {
+          "label":"Niet juist antwoord feedback"
+        },
+        {
+          "label":"Tekst van de scorebalk",
+          "default":"Score"
+        },
+        {
+          "label":"Tip beschikbaar (niet weergegeven)",
+          "default":"Tip beschikbaar",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
+        },
+        {
+          "label":"Feedback beschikbaar (niet weergegeven)",
+          "default":"Feedback beschikbaar",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
+        },
+        {
+          "label":"Voorlezen feedback (niet weergegeven)",
+          "default":"Voorlezen feedback",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
+        },
+        {
+          "label":"Onjuist antwoord (niet weergegeven)",
+          "default":"Onjuist antwoord",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
+        },
+        {
+          "label":"Juist antwoord (niet weergegeven)",
+          "default":"Juist antwoord",
+          "description":"Toegankelijkheidstekst gebruikt voor readspeakers"
+        },
+        {
+          "label":"Feedback tekst",
+          "default":"Je hebt @score van @total punten",
+          "description":"Feedback tekst, beschikbare variabelen: @score en @total. Bijvoorbeeld: 'Je hebt @score van @total punten.'"
+        },
+        {
+          "label":"Optie zou moeten worden aangevinkt",
+          "default":"Zou moeten worden aangevinkt"
+        },
+        {
+          "label":"Optie zou niet moeten worden aangevinkt",
+          "default":"Zou niet moeten worden aangevinkt"
+        },
+        {
+          "label":"Tekst voor \"Vereist antwoord\" bericht",
+          "default":"Alsjeblieft beantwoorden voor het bekijken van de oplossing"
+        }
+      ]
+    },
+    {
+      "label":"Gedragsinstellingen",
+      "description":"Deze opties bepalen hoe de taak op de input reageert.",
+      "fields":[
+        {
+          "label":"\"Opnieuw proberen\"-knop inschakelen"
+        },
+        {
+          "label":"\"Toon oplossing\"-knop inschakelen"
+        },
+        {
+          "label":"Vraagtype",
+          "description":"Selecteer uiterlijk en gedrag van de vraag.",
+          "default":"auto",
+          "options":[
+            {
+              "label":"Automatisch"
+            },
+            {
+              "label":"Meer-meerkeuze (aanvinkvakjes)"
+            },
+            {
+              "label":"Enkelvoudige keuze (radioknoppen)"
+            }
+          ]
+        },
+        {
+          "label":"Geef een punt voor de gehele taak",
+          "description":"Inschakelen dat één punt gegeven kan worden voor meerdere juiste antwoorden. Dit is geen optie in \"Enkelvoudige keuze\" modus."
+        },
+        {
+          "label":"Antwoorden in willekeurige volgorde",
+          "description":"Vragen in willekeurige volgorde inschakelen."
+        },
+        {
+          "label":"Vereist antwoord voordat oplossing kan worden bekeken"
+        },
+        {
+          "label":"Deactiveer zoomen bij afbeeldingsvraag"
+        },
+        {
+          "label":"Toon bevestigingsdialoog bij \"Controleer\""
+        },
+        {
+          "label":"Toon bevestigingsdialoog bij \"Opnieuw proberen\""
+        },
+        {
+          "label":"Automatisch antwoorden controleren",
+          "description":"Door deze optie in te schakelen, wordt de toegankelijkheid minder. Weet wat je doet!"
+        },
+        {
+          "label":"Slagingspercentage",
+          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        }
+      ]
+    },
+    {
+      "label":"Bevestigingsdialoog bij het afronden",
+      "fields":[
+        {
+          "label":"Koptekst",
+          "default":"Beëindigen?"
+        },
+        {
+          "label":"Bodytekst",
+          "default":"Ben je er zeker van dat je wilt stoppen?"
+        },
+        {
+          "label":"Tekst van de \"Annuleer\"-knop",
+          "default":"Annuleren"
+        },
+        {
+          "label":"Tekst van de \"Bevestig\"-knop",
+          "default":"Beëindigen"
+        }
+      ]
+    },
+    {
+      "label":"Bevestigingsdialoog bij Opnieuw proberen",
+      "fields":[
+        {
+          "label":"Koptekst",
+          "default":"Opnieuw proberen?"
+        },
+        {
+          "label":"Bodytekst",
+          "default":"Ben je er zeker van dat je opnieuw wilt proberen?"
+        },
+        {
+          "label":"Tekst van de \"Annuleer\"-knop",
+          "default":"Annuleren"
+        },
+        {
+          "label":"Tekst van de \"Bevestig\"-knop",
+          "default":"Bevestigen"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "semantics":[
+    {
+      "label":"Pilt või video",
+      "fields":[
+        {
+          "label":"Tüüp",
+          "description":"Pilt või video, mida kuvatakse küsimuse juures (mittekohustuslik element)."
+        }
+      ]
+    },
+    {
+      "label":"Küsimus"
+    },
+    {
+      "label":"Vastusevariandid",
+      "entity":"vastusevariant",
+      "field":{
+        "label":"Vastusevariant",
+        "fields":[
+          {
+            "label":"Tekst"
+          },
+          {
+            "label":"Õige"
+          },
+          {
+            "label":"Vihje ja tagasiside",
+            "fields":[
+              {
+                "label":"Vihje tekst",
+                "description":"Suunav vihje vastajale, ilmub enne vastuse sisestamist."
+              },
+              {
+                "label":"Tekst, mida kasutaja näeb pärast selle vastusevariandi sisestamist",
+                "description":"See tekst ilmub vastusevariandi alla kui kasutaja klõpsab \"Kontrolli\"."
+              },
+              {
+                "label":"Tekst, mida kasutaja näeb pärast selle vastusevariandi valimata jätmist",
+                "description":"See tekst ilmub vastusevariandi alla kui kasutaja klõpsab \"Kontrolli\"."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label":"Kasutajaliidese tõlked mitmikvalikuga küsimuse puhul",
+      "fields":[
+        {
+          "label":"Kontrolli nupu silt",
+          "default":"Kontrolli"
+        },
+        {
+          "label":"Näita õiget vastust nupu silt",
+          "default":"Õige vastus"
+        },
+        {
+          "label":"Proovi uuesti nupu silt",
+          "default":"Proovi uuesti"
+        },
+        {
+          "label":"Vihje silt",
+          "default":"Vihje"
+        },
+        {
+          "label":"Tagasiside õige vastuse puhul"
+        },
+        {
+          "label":"Tagasiside osaliselt õige vastuse puhul"
+        },
+        {
+          "label":"Tagasiside vale vastuse puhul"
+        },
+        {
+          "label":"Punktisumma nupu silt",
+          "default":"Punktisumma"
+        },
+        {
+          "label":"Küsi vihjet (peidetud)",
+          "default":"Küsi vihjet",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
+        },
+        {
+          "label":"Võimaldab küsida tagasisidet (peidetud)",
+          "default":"Tagasiside",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
+        },
+        {
+          "label":"Loe tagasisidet (peidus)",
+          "default":"Loe tagasisidet",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
+        },
+        {
+          "label":"Vale vastus (peidus)",
+          "default":"Vale vastus",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
+        },
+        {
+          "label":"Õge vastus (peidetud)",
+          "default":"Õige vastus",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
+        },
+        {
+          "label":"Tagasiside tekst",
+          "default":"Said @score punkti @total võimalikust",
+          "description":"Tagsiside tekst, sisaldab muutujaid: @score ja @total. Näide: 'Said @score punkti @total võimalikust.'"
+        },
+        {
+          "label":"Vastusevariant oleks pidanud olema valitud",
+          "default":"Vastusevariant pidanuks jääma valimata"
+        },
+        {
+          "label":"See vastusevariant oleks pidanud jääma valimata",
+          "default":"Should not have been checked"
+        },
+        {
+          "label":"Text for \"Requires answer\" message",
+          "default":"Please answer before viewing the solution"
+        }
+      ]
+    },
+    {
+      "label":"Behavioural settings",
+      "description":"These options will let you control how the task behaves.",
+      "fields":[
+        {
+          "label":"Enable \"Retry\" button"
+        },
+        {
+          "label":"Enable \"Show Solution\" button"
+        },
+        {
+          "label":"Question Type",
+          "description":"Select the look and behaviour of the question.",
+          "default":"auto",
+          "options":[
+            {
+              "label":"Automatic"
+            },
+            {
+              "label":"Multiple Choice (Checkboxes)"
+            },
+            {
+              "label":"Single Choice (Radio Buttons)"
+            }
+          ]
+        },
+        {
+          "label":"Give one point for the whole task",
+          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+        },
+        {
+          "label":"Randomize answers",
+          "description":"Enable to randomize the order of questions on display."
+        },
+        {
+          "label":"Require answer before the solution can be viewed"
+        },
+        {
+          "label":"Disable image zooming for question image"
+        },
+        {
+          "label":"Show confirmation dialog on \"Check\""
+        },
+        {
+          "label":"Show confirmation dialog on \"Retry\""
+        },
+        {
+          "label":"Automatically check answers",
+          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+        },
+        {
+          "label":"Pass percentage",
+          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        }
+      ]
+    },
+    {
+      "label":"Check confirmation dialog",
+      "fields":[
+        {
+          "label":"Header text",
+          "default":"Finish ?"
+        },
+        {
+          "label":"Body text",
+          "default":"Are you sure you wish to finish ?"
+        },
+        {
+          "label":"Cancel button label",
+          "default":"Cancel"
+        },
+        {
+          "label":"Confirm button label",
+          "default":"Finish"
+        }
+      ]
+    },
+    {
+      "label":"Retry confirmation dialog",
+      "fields":[
+        {
+          "label":"Header text",
+          "default":"Retry ?"
+        },
+        {
+          "label":"Body text",
+          "default":"Are you sure you wish to retry ?"
+        },
+        {
+          "label":"Cancel button label",
+          "default":"Cancel"
+        },
+        {
+          "label":"Confirm button label",
+          "default":"Confirm"
+        }
+      ]
+    }
+  ]
+}
