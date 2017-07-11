@@ -103,7 +103,7 @@
         },
         {
           "label":"フィードバックテキスト",
-          "default":"@total 点中 @score 点獲得",
+          "default":"@score / @total 獲得",
           "description":"フィードバック テキスト、利用可能な変数: @score と @total 。 例: ' @total 点中 @score 点獲得。 '"
         },
         {
