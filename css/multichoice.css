@@ -26,6 +26,10 @@
   cursor: pointer;
 }
 
+.h5p-multichoice .h5p-answer.h5p-has-tip .h5p-alternative-container{
+  padding-right: 2em;
+}
+
 .h5p-multichoice .h5p-alternative-container {
   position: relative;
   text-align: left;

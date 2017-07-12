@@ -247,6 +247,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       if (!tipContent.length) {
         return; // Empty tip
       }
+      else {
+        $(this).addClass('h5p-has-tip');
+      }
 
       // Add tip
       var $wrap = $('<div/>', {
