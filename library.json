@@ -2,8 +2,8 @@
   "title": "Multiple Choice",
   "contentType": "Question",
   "majorVersion": 1,
-  "minorVersion": 9,
-  "patchVersion": 3,
+  "minorVersion": 10,
+  "patchVersion": 0,
   "runnable": 1,
   "machineName": "H5P.MultiChoice",
   "author": "Joubel",
@@ -42,6 +42,13 @@
       "machineName": "H5P.Question",
       "majorVersion": 1,
       "minorVersion": 2
+    }
+  ],
+  "editorDependencies": [
+    {
+      "machineName": "H5PEditor.RangeList",
+      "majorVersion": 1,
+      "minorVersion": 0
     }
   ]
 }

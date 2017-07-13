@@ -45,6 +45,32 @@
       }
     },
     {
+      "englishLabel": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "englishLabel": "Default"
+            }
+          ],
+          "englishLabel": "Define custom feedback for any score range",
+          "englishDescription": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "field": {
+            "fields": [
+              {
+                "englishLabel": "Score Range"
+              },
+              {},
+              {
+                "englishLabel": "Feedback for defined score range",
+                "englishPlaceholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "label": "Traduction de l'interface utilisateur pour les questions à choix multiples",
       "fields": [
         {
@@ -62,15 +88,6 @@
         {
           "label": "Texte de l'indice",
           "default": "Montrer l'indice"
-        },
-        {
-          "label": "Commentaire pour une réponse correcte"
-        },
-        {
-          "label": "Commentaire pour une réponse presque correcte"
-        },
-        {
-          "label": "Commentaire pour une mauvaise réponse"
         },
         {
           "label": "Texte de la barre de score",
@@ -100,11 +117,6 @@
           "label": "Bonne réponse",
           "default": "Bonne réponse",
           "description": "Accessibility text used for readspeakers"
-        },
-        {
-          "label": "Feedback text",
-          "default": "Vous avez obtenu @score points sur un total de @total",
-          "description": "Le texte de feedback, variables disponibles: @score et @total. Exemple: 'Vous avez obtenu @score points sur un total de @total'"
         },
         {
           "label": "L'option aurait dû être cochée",

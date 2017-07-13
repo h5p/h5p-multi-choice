@@ -85,6 +85,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         correct: true
       }
     ],
+    overallFeedback: [],
     weight: 1,
     userAnswers: [],
     UI: {
@@ -95,7 +96,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       tipAvailable: "Tip available",
       feedbackAvailable: "Feedback available",
       readFeedback: 'Read feedback',
-      feedback: 'You got @score of @total points',
       shouldCheck: "Should have been checked",
       shouldNotCheck: "Should not have been checked",
       noInput: 'Input is required before viewing the solution'
@@ -114,7 +114,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
   var template = new EJS({text: texttemplate});
   var params = $.extend(true, {}, defaults, options);
-
   // Keep track of number of correct choices
   var numCorrect = 0;
 
@@ -720,23 +719,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @return {string}
    */
   var getFeedbackText = function (score, max) {
-    var feedback;
-
     var ratio = (score / max);
-    if (isFinite(ratio) && ratio > 0) {
-      if (ratio >= 1 && params.UI.correctText) {
-        feedback = params.UI.correctText;
-      }
-      else if (params.UI.almostText) {
-        feedback = params.UI.almostText;
-      }
-    }
-    else if (params.UI.wrongText) {
-      feedback = params.UI.wrongText;
-    }
-    if (!feedback) {
-      feedback = params.UI.feedback;
-    }
+
+    var feedback = H5P.Question.determineOverallFeedback(params.overallFeedback, ratio);
 
     return feedback.replace('@score', score).replace('@total', max);
   };
@@ -1071,7 +1056,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }
     return state;
   };
-
 
   /**
    * Check if user has given an answer.
