@@ -45,147 +45,166 @@
       }
     },
     {
-      "label":"Oversetting for leietekstar i fleirval",
+      "label":"Overall Feedback",
       "fields":[
         {
-          "label":"Tekst for \"Sjekk svar\" knapp",
-          "default":"Sjekk"
-        },
-        {
-          "label":"Tekst for \"Fasit\" knapp",
-          "default":"Fasit"
-        },
-        {
-          "label":"Tekst til \"Prøv igjen\" knapp",
-          "default":"Prøv igjen"
-        },
-        {
-          "label":"Tips tekst",
-          "default":"Vis tips"
-        },
-        {
-          "label":"Tilbakemelding ved riktig svar"
-        },
-        {
-          "label":"Tilbakemelding ved nesten riktig svar"
-        },
-        {
-          "label":"Tilbakemelding ved galt svar"
-        },
-        {
-          "label":"Resultatsindikator",
-          "default":"Resultat"
-        },
-        {
-          "label":"Tips tilgjengelig (ikke synlig)",
-          "default":"Tips tilgjengelig",
-          "description":"Tekst for hjelpemiddel-teknologi"
-        },
-        {
-          "label":"Tilbakemelding tilgjengelig (ikke synlig)",
-          "default":"Tilbakemelding tilgjengelig",
-          "description":"Tekst for hjelpemiddel-teknologi"
-        },
-        {
-          "label":"Les tilbakemelding (ikke synlig)",
-          "default":"Les tilbakemelding",
-          "description":"Tekst for hjelpemiddel-teknologi"
-        },
-        {
-          "label":"Galt svar (ikke synlig)",
-          "default":"Galt svar",
-          "description":"Tekst for hjelpemiddel-teknologi"
-        },
-        {
-          "label":"Riktig svar (ikke synlig)",
-          "default":"Riktig svar",
-          "description":"Tekst for hjelpemiddel-teknologi"
-        },
-        {
-          "label":"Tilbakemelding",
-          "default":"@score av @total poeng",
-          "description":"Tekstleg tilbakemelding, tilgjengelege variablar: @score og @total. Eksempel: 'Du fikk @score av @total poeng.'"
-        },
-        {
-          "label":"Skulle ha vært valgt",
-          "default":"Skulle ha vært valgt"
-        },
-        {
-          "label":"Skulle ikke ha vært valgt",
-          "default":"Skulle ikke ha vært valgt"
-        },
-        {
-          "label":"Tekst for \"krev svar\"-tilbakemelding",
-          "default":"Svar før du kan se fasit"
+          "widgets":[
+            {
+              "label":"Default"
+            }
+          ],
+          "label":"Define custom feedback for any score range",
+          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity":"range",
+          "field":{
+            "fields":[
+              {
+                "label":"Score Range"
+              },
+              {
+                
+              },
+              {
+                "label":"Feedback for defined score range",
+                "placeholder":"Fill in the feedback"
+              }
+            ]
+          }
         }
       ]
     },
     {
-      "label":"Innstillinger for oppgave-oppførsel",
-      "description":"Disse instillingene lar deg bestemme hvordan oppgavetypen skal oppføre seg.",
+      "label":"User interface translations for multichoice",
       "fields":[
         {
-          "label":"Aktiver \"Prøv igjen\""
+          "label":"Check answer button label",
+          "default":"Check"
         },
         {
-          "label":"Aktiver \"Fasit\" knapp"
+          "label":"Show solution button label",
+          "default":"Show solution"
         },
         {
-          "label":"Spørsmålstype",
-          "description":"Velg utseende og oppførsel for spørsmålet.",
+          "label":"Retry button label",
+          "default":"Retry"
+        },
+        {
+          "label":"Tip label",
+          "default":"Show tip"
+        },
+        {
+          "label":"Score Bar Label",
+          "default":"Score"
+        },
+        {
+          "label":"Tip Available (not displayed)",
+          "default":"Tip available",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Feedback Available (not displayed)",
+          "default":"Feedback available",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Read Feedback (not displayed)",
+          "default":"Read feedback",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Wrong Answer (not displayed)",
+          "default":"Wrong answer",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Correct Answer (not displayed)",
+          "default":"Correct answer",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Option should have been checked",
+          "default":"Should have been checked"
+        },
+        {
+          "label":"Option should not have been checked",
+          "default":"Should not have been checked"
+        },
+        {
+          "label":"Text for \"Requires answer\" message",
+          "default":"Please answer before viewing the solution"
+        }
+      ]
+    },
+    {
+      "label":"Behavioural settings",
+      "description":"These options will let you control how the task behaves.",
+      "fields":[
+        {
+          "label":"Enable \"Retry\" button"
+        },
+        {
+          "label":"Enable \"Show Solution\" button"
+        },
+        {
+          "label":"Question Type",
+          "description":"Select the look and behaviour of the question.",
           "default":"auto",
           "options":[
             {
-              "label":"Automatisk"
+              "label":"Automatic"
             },
             {
-              "label":"Fleirval (avkrysningsbokser)"
+              "label":"Multiple Choice (Checkboxes)"
             },
             {
-              "label":"Einvalg (radioknapper)"
+              "label":"Single Choice (Radio Buttons)"
             }
           ]
         },
         {
-          "label":"Gje eitt poeng for heile oppgåva",
-          "description":"Gir eitt poeng totalt for fleire rette alternativ. Kun valbar om \"Bare eitt svar\" er slått av."
+          "label":"Give one point for the whole task",
+          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
-          "label":"Tilfeldige svaralternativ",
-          "description":"Slå på for å vise de mulige svara i tilfeldig rekkefølge."
+          "label":"Randomize answers",
+          "description":"Enable to randomize the order of questions on display."
         },
         {
-          "label":"Krev svar fra brukeren før fasit gis."
+          "label":"Require answer before the solution can be viewed"
         },
         {
-          "label":"Slå av bilete zooming."
+          "label":"Disable image zooming for question image"
         },
         {
-          "label":"Slå på bruker-bekreftelse før \"Sjekk svar\""
+          "label":"Show confirmation dialog on \"Check\""
         },
         {
-          "label":"Slå på bruker-bekreftelse før \"Prøv igjen\""
+          "label":"Show confirmation dialog on \"Retry\""
         },
         {
-          "label":"Umiddelbar tilbakemelding på avgitt svar",
-          "description":"Vær oppmerksom på at hjelpemiddelteknologi kan svekkes ved å bruke dette alternativet."
+          "label":"Automatically check answers",
+          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
         },
         {
-          "label":"Krav for å bestå",
+          "label":"Pass percentage",
           "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        },
+        {
+          "label":"Show score points",
+          "description":"Show points earned for each answer."
         }
       ]
     },
     {
-      "label":"Fasit bruker-bekreftelse",
+      "label":"Check confirmation dialog",
       "fields":[
         {
           "label":"Tittel",
-          "default":"Ferdig ?"
+          "default":"Finish ?"
         },
         {
           "label":"Tekst",
-          "default":"Er du sikker på at du er ferdig ?"
+          "default":"Are you sure you wish to finish ?"
         },
         {
           "label":"Avbryt etikett",
@@ -193,28 +212,28 @@
         },
         {
           "label":"Bekreft etikett",
-          "default":"Bekreft"
+          "default":"Finish"
         }
       ]
     },
     {
-      "label":"Prøv igjen bruker-bekreftelse",
+      "label":"Retry confirmation dialog",
       "fields":[
         {
-          "label":"Tittel",
-          "default":"Prøv igjen ?"
+          "label":"Header text",
+          "default":"Retry ?"
         },
         {
-          "label":"Tekst",
-          "default":"Er du sikker på at du vil prøve igjen?"
+          "label":"Body text",
+          "default":"Are you sure you wish to retry ?"
         },
         {
-          "label":"Avbryt etikett",
-          "default":"Avbrytt"
+          "label":"Cancel button label",
+          "default":"Cancel"
         },
         {
-          "label":"Bekreft etikett",
-          "default":"Bekreft"
+          "label":"Confirm button label",
+          "default":"Confirm"
         }
       ]
     }
