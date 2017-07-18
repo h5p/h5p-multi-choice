@@ -45,6 +45,35 @@
       }
     },
     {
+      "label":"Overall Feedback",
+      "fields":[
+        {
+          "widgets":[
+            {
+              "label":"Default"
+            }
+          ],
+          "label":"Define custom feedback for any score range",
+          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity":"range",
+          "field":{
+            "fields":[
+              {
+                "label":"Score Range"
+              },
+              {
+                
+              },
+              {
+                "label":"Feedback for defined score range",
+                "placeholder":"Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "label":"User interface translations for multichoice",
       "fields":[
         {
@@ -57,20 +86,11 @@
         },
         {
           "label":"Retry button label",
-          "default":"Yritä uudelleen"
+          "default":"Retry"
         },
         {
           "label":"Tip label",
           "default":"Show tip"
-        },
-        {
-          "label":"Correct answer feedback"
-        },
-        {
-          "label":"Almost correct answer feedback"
-        },
-        {
-          "label":"Not correct answer feedback"
         },
         {
           "label":"Score Bar Label",
@@ -100,11 +120,6 @@
           "label":"Correct Answer (not displayed)",
           "default":"Correct answer",
           "description":"Accessibility text used for readspeakers"
-        },
-        {
-          "label":"Feedback text",
-          "default":"You got @score of @total points",
-          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
         },
         {
           "label":"Option should have been checked",
@@ -173,6 +188,10 @@
         {
           "label":"Pass percentage",
           "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        },
+        {
+          "label":"Show score points",
+          "description":"Show points earned for each answer."
         }
       ]
     },
@@ -205,7 +224,7 @@
           "default":"Retry ?"
         },
         {
-          "label":"Leipäteksti",
+          "label":"Body text",
           "default":"Are you sure you wish to retry ?"
         },
         {
