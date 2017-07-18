@@ -45,147 +45,166 @@
       }
     },
     {
-      "label":"Traduzioni dell'interfaccia utente per scelta multipla",
+      "label":"Overall Feedback",
       "fields":[
         {
-          "label":"Etichetta pulsante Verifica risposta",
-          "default":"Verifica"
-        },
-        {
-          "label":"Etichetta pulsante Mostra soluzione",
-          "default":"Mostra la soluzione"
-        },
-        {
-          "label":"Etichetta pulsante Riprova",
-          "default":"Riprova"
-        },
-        {
-          "label":"Etichetta del suggerimento",
-          "default":"Visualizza suggerimento"
-        },
-        {
-          "label":"Feedback risposta corretta"
-        },
-        {
-          "label":"Feedback risposta quasi corretta"
-        },
-        {
-          "label":"Feedback risposta non corretta"
-        },
-        {
-          "label":"Etichetta della barra del punteggio",
-          "default":"Punteggio"
-        },
-        {
-          "label":"Tip Available",
-          "default":"Suggerimento disponibile",
-          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
-        },
-        {
-          "label":"Feedback Available",
-          "default":"Feedback disponibile",
-          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
-        },
-        {
-          "label":"Read Feedback",
-          "default":"Leggi il feedback",
-          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
-        },
-        {
-          "label":"Wrong Answer",
-          "default":"Risposta sbagliata",
-          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
-        },
-        {
-          "label":"Correct Answer",
-          "default":"Risposta corretta",
-          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
-        },
-        {
-          "label":"Testo Feedback",
-          "default":"Feedback text",
-          "description":"Testo del Feedback (Riscontro), variabili consentite: @score e @total. Esempio: 'Hai ottenuto il punteggio @score su @total punti possibili.'"
-        },
-        {
-          "label":"L'opzione avrebbe dovuto essere verificata",
-          "default":"Avrebbe dovuto essere verificato"
-        },
-        {
-          "label":"L'opzione non avrebbe dovuto essere verificata",
-          "default":"Non avrebbe dovuto essere verificato"
-        },
-        {
-          "label":"Etichetta per il messaggio \"Richiede una risposta\"",
-          "default":"Per favore rispondi prima di visualizzare la soluzione"
+          "widgets":[
+            {
+              "label":"Default"
+            }
+          ],
+          "label":"Define custom feedback for any score range",
+          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity":"range",
+          "field":{
+            "fields":[
+              {
+                "label":"Score Range"
+              },
+              {
+                
+              },
+              {
+                "label":"Feedback for defined score range",
+                "placeholder":"Fill in the feedback"
+              }
+            ]
+          }
         }
       ]
     },
     {
-      "label":"Impostazioni esecuzione",
-      "description":"Queste opzioni consentono di controllare l'andamento del compito.",
+      "label":"User interface translations for multichoice",
       "fields":[
         {
-          "label":"Abilita pulsante \"Riprova\""
+          "label":"Check answer button label",
+          "default":"Check"
         },
         {
-          "label":"Abilita pulsante \"Mostra soluzione\""
+          "label":"Show solution button label",
+          "default":"Show solution"
         },
         {
-          "label":"Tipo di domanda",
-          "description":"Selezionare l'aspetto e il comportamento della domanda.",
+          "label":"Retry button label",
+          "default":"Retry"
+        },
+        {
+          "label":"Tip label",
+          "default":"Show tip"
+        },
+        {
+          "label":"Score Bar Label",
+          "default":"Score"
+        },
+        {
+          "label":"Tip Available (not displayed)",
+          "default":"Tip available",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Feedback Available (not displayed)",
+          "default":"Feedback available",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Read Feedback (not displayed)",
+          "default":"Read feedback",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Wrong Answer (not displayed)",
+          "default":"Wrong answer",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Correct Answer (not displayed)",
+          "default":"Correct answer",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Option should have been checked",
+          "default":"Should have been checked"
+        },
+        {
+          "label":"Option should not have been checked",
+          "default":"Should not have been checked"
+        },
+        {
+          "label":"Text for \"Requires answer\" message",
+          "default":"Please answer before viewing the solution"
+        }
+      ]
+    },
+    {
+      "label":"Behavioural settings",
+      "description":"These options will let you control how the task behaves.",
+      "fields":[
+        {
+          "label":"Enable \"Retry\" button"
+        },
+        {
+          "label":"Enable \"Show Solution\" button"
+        },
+        {
+          "label":"Question Type",
+          "description":"Select the look and behaviour of the question.",
           "default":"auto",
           "options":[
             {
-              "label":"Automatico"
+              "label":"Automatic"
             },
             {
-              "label":"Scelta multipla (caselle di controllo)"
+              "label":"Multiple Choice (Checkboxes)"
             },
             {
-              "label":"Scelta singola (pulsanti di opzione)"
+              "label":"Single Choice (Radio Buttons)"
             }
           ]
         },
         {
-          "label":"Assegna un punto per il completamento del compito",
-          "description":"Abilitare per assegnare un totale di un punto per risposte multiple corrette. Non è opzionabile in modalità \"Risposta singola\"."
+          "label":"Give one point for the whole task",
+          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
-          "label":"Risposte in ordine casuale",
-          "description":"Abilita per rendere casuale l'ordine delle domande visualizzate."
+          "label":"Randomize answers",
+          "description":"Enable to randomize the order of questions on display."
         },
         {
-          "label":"Richiedere l'immissione dei dati all'utente prima che la soluzione sia visualizzata"
+          "label":"Require answer before the solution can be viewed"
         },
         {
-          "label":"Disable image zooming for question image."
+          "label":"Disable image zooming for question image"
         },
         {
-          "label":"Mostra la finestra di dialogo di conferma su \"Verifica\""
+          "label":"Show confirmation dialog on \"Check\""
         },
         {
-          "label":"Mostra la finestra di dialogo di conferma su \"Riprova\""
+          "label":"Show confirmation dialog on \"Retry\""
         },
         {
-          "label":"Controllare automaticamente le risposte",
-          "description":"Abilitare questa opzione renderà difficoltosa l'accessibilità. Assicurati di sapere cosa stai facendo."
+          "label":"Automatically check answers",
+          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
         },
         {
-          "label":"Percentuale di superamento della prova",
+          "label":"Pass percentage",
           "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        },
+        {
+          "label":"Show score points",
+          "description":"Show points earned for each answer."
         }
       ]
     },
     {
-      "label":"Finestra di conferma per la verifica",
+      "label":"Check confirmation dialog",
       "fields":[
         {
           "label":"Etichetta di intestazione",
-          "default":"Finito?"
+          "default":"Finish ?"
         },
         {
           "label":"Etichetta del corpo",
-          "default":"Sei sicuro di voler finire?"
+          "default":"Are you sure you wish to finish ?"
         },
         {
           "label":"Etichetta del pulsante Annulla",
@@ -193,28 +212,28 @@
         },
         {
           "label":"Etichetta del pulsante di conferma",
-          "default":"Finito"
+          "default":"Finish"
         }
       ]
     },
     {
-      "label":"Finestra di conferma per \"Riprova\"",
+      "label":"Retry confirmation dialog",
       "fields":[
         {
-          "label":"Etichetta di intestazione",
-          "default":"Riprovare?"
+          "label":"Header text",
+          "default":"Retry ?"
         },
         {
-          "label":"Etichetta del corpo",
-          "default":"Sei sicuro di voler riprovare?"
+          "label":"Body text",
+          "default":"Are you sure you wish to retry ?"
         },
         {
-          "label":"Etichetta del pulsante Annulla",
-          "default":"Annulla"
+          "label":"Cancel button label",
+          "default":"Cancel"
         },
         {
-          "label":"Etichetta del pulsante di conferma",
-          "default":"Conferma"
+          "label":"Confirm button label",
+          "default":"Confirm"
         }
       ]
     }
