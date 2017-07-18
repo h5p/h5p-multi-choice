@@ -186,6 +186,10 @@
         {
           "label": "Pass percentage",
           "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        },
+        {
+          "label": "Show score points",
+          "description": "Show points earned for each answer."
         }
       ]
     },

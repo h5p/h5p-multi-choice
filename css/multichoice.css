@@ -188,7 +188,7 @@
 }
 
 .h5p-alternative-inner {
-  margin: 0 1.5em 0 2em;
+  margin: 0 0.75em 0 2em;
 }
 .h5p-alternative-inner div,
 .h5p-alternative-inner p {
@@ -355,4 +355,11 @@
 /* Remove tip icon on check */
 .h5p-multichoice [aria-disabled="true"] .h5p-multichoice-tipwrap {
   display: none;
+}
+
+.h5p-multichoice .h5p-question-plus-one,
+.h5p-multichoice .h5p-question-minus-one {
+  display: inline-block;
+  top: auto;
+  right: auto;
 }

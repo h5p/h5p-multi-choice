@@ -412,6 +412,14 @@
         "max": 100,
         "step": 1,
         "default": 100
+      },
+      {
+        "name": "showScorePoints",
+        "type": "boolean",
+        "label": "Show score points",
+        "description": "Show points earned for each answer.",
+        "importance": "low",
+        "default": true
       }
     ]
   },

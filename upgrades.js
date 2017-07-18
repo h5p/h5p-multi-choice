@@ -111,6 +111,7 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
        * Upgrades content parameters to support Multiple Choice 1.10.
        *
        * Move old feedback message to the new overall feedback system.
+       * Do not show the new score points for old content being upgraded.
        *
        * @params {object} parameters
        * @params {function} finished
@@ -279,6 +280,12 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
           delete parameters.UI.wrongText;
           delete parameters.UI.feedback;
         }
+
+        // Hide score points for old content
+        if (!parameters.behaviour) {
+          parameters.behaviour = {};
+        }
+        parameters.behaviour.showScorePoints = false;
 
         finished(null, parameters);
       }

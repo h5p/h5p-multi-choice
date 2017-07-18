@@ -109,11 +109,12 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       showSolutionsRequiresInput: true,
       disableImageZooming: false,
       autoCheck: false,
-      passPercentage: 100
+      passPercentage: 100,
+      showScorePoints: true
     }
   };
   var template = new EJS({text: texttemplate});
-  var params = $.extend(true, {}, defaults, options);
+  var params = $.extend(true, defaults, options);
   // Keep track of number of correct choices
   var numCorrect = 0;
 
@@ -511,7 +512,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       .removeClass('h5p-wrong')
       .removeClass('h5p-should')
       .removeClass('h5p-should-not')
-      .removeClass('h5p-has-feedback');
+      .removeClass('h5p-has-feedback')
+      .find('.h5p-question-plus-one, .h5p-question-minus-one').remove();
 
     $('.h5p-answer-icon, .h5p-solution-icon, .h5p-feedback-dialog', $myDom).remove();
 
@@ -735,6 +737,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @param {boolean} [skipFeedback] Skip showing feedback if true
    */
   this.showCheckSolution = function (skipFeedback) {
+    showScoreDelay = (params.behaviour.singleAnswer || !params.behaviour.showScorePoints ? false : 1);
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = $(e);
       var a = params.answers[i];
@@ -751,6 +754,11 @@ H5P.MultiChoice = function (options, contentId, contentData) {
             'class': 'h5p-answer-icon',
             html: params.UI.wrongAnswer + '.'
           }));
+        }
+
+        if (showScoreDelay) {
+          $e[0].querySelector('.h5p-alternative-container').appendChild(H5P.Question.createScorePointLabel(a.correct, showScoreDelay));
+          showScoreDelay += 150;
         }
       }
 
