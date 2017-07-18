@@ -737,7 +737,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @param {boolean} [skipFeedback] Skip showing feedback if true
    */
   this.showCheckSolution = function (skipFeedback) {
-    showScoreDelay = (params.behaviour.singleAnswer || !params.behaviour.showScorePoints ? false : 1);
+    var showScoreDelay = (params.behaviour.singleAnswer || !params.behaviour.showScorePoints ? false : 1);
+    var scoreDelayIncrement = (showScoreDelay ? H5P.Question.getShowScoreDelayIncrement($myDom.find('.h5p-answer[aria-checked="true"]').length) : 0);
+
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = $(e);
       var a = params.answers[i];
@@ -758,7 +760,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
         if (showScoreDelay) {
           $e[0].querySelector('.h5p-alternative-container').appendChild(H5P.Question.createScorePointLabel(a.correct, showScoreDelay));
-          showScoreDelay += 150;
+          showScoreDelay += scoreDelayIncrement;
         }
       }
 
