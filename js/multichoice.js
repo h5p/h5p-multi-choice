@@ -736,8 +736,10 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @param {boolean} [skipFeedback] Skip showing feedback if true
    */
   this.showCheckSolution = function (skipFeedback) {
-    var showScoreDelay = (params.behaviour.singleAnswer || !params.behaviour.showScorePoints ? false : 1);
-    var scoreDelayIncrement = (showScoreDelay ? H5P.Question.getShowScoreDelayIncrement($myDom.find('.h5p-answer[aria-checked="true"]').length) : 0);
+    var scorePoints;
+    if (!(params.behaviour.singleAnswer || !params.behaviour.showScorePoints)) {
+      scorePoints = new H5P.Question.ScorePoints($myDom.find('.h5p-answer[aria-checked="true"]').length);
+    }
 
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = $(e);
@@ -757,12 +759,11 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           }));
         }
 
-        if (showScoreDelay) {
+        if (scorePoints) {
           var alternativeContainer = $e[0].querySelector('.h5p-alternative-container');
 
           if (!params.behaviour.autoCheck || alternativeContainer.querySelector('.h5p-question-plus-one, .h5p-question-minus-one') === null) {
-            alternativeContainer.appendChild(H5P.Question.createScorePointLabel(a.correct, showScoreDelay));
-            showScoreDelay += scoreDelayIncrement;
+            alternativeContainer.appendChild(scorePoints.getElement(a.correct));
           }
         }
       }
