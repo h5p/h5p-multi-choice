@@ -319,6 +319,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       if ($ans.attr('aria-disabled') === 'true') {
         return;
       }
+      self.answered = true;
       var num = parseInt($ans.data('id'));
       if (params.behaviour.singleAnswer) {
         // Store answer
@@ -353,7 +354,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       }
 
       self.triggerXAPI('interacted');
-      self.hideSolutions();
 
       if (params.userAnswers.length) {
         self.showButton('check-answer');
@@ -379,7 +379,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     };
 
     $answers.click(function () {
-      self.answered = true;
       toggleCheck($(this));
     }).keydown(function (e) {
       if (e.keyCode === 32) { // Space bar
@@ -759,8 +758,12 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         }
 
         if (showScoreDelay) {
-          $e[0].querySelector('.h5p-alternative-container').appendChild(H5P.Question.createScorePointLabel(a.correct, showScoreDelay));
-          showScoreDelay += scoreDelayIncrement;
+          var alternativeContainer = $e[0].querySelector('.h5p-alternative-container');
+
+          if (!params.behaviour.autoCheck || alternativeContainer.querySelector('.h5p-question-plus-one, .h5p-question-minus-one') === null) {
+            alternativeContainer.appendChild(H5P.Question.createScorePointLabel(a.correct, showScoreDelay));
+            showScoreDelay += scoreDelayIncrement;
+          }
         }
       }
 

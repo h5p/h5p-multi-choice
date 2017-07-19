@@ -76,6 +76,11 @@
 .h5p-multichoice .h5p-answer[role="checkbox"][aria-checked="true"] .h5p-alternative-container:before {
   content: "\e601";
 }
+.h5p-multichoice .h5p-answers .h5p-answer[aria-disabled="true"] .h5p-alternative-container:before,
+.h5p-multichoice .h5p-answers .h5p-answer.h5p-correct .h5p-alternative-container:before,
+.h5p-multichoice .h5p-answers .h5p-answer.h5p-wrong .h5p-alternative-container:before {
+  content: initial;
+}
 
 .h5p-multichoice .h5p-answer[aria-disabled="true"] {
   cursor: default;
@@ -108,6 +113,18 @@
   border: 0.1em solid #cee0f4;
   background: #cee0f4;
 }
+.h5p-multichoice .h5p-answer.h5p-correct .h5p-alternative-container,
+.h5p-multichoice .h5p-answer.h5p-correct:hover .h5p-alternative-container {
+  background: #b6e4ce;
+  border-color: #b6e4ce;
+  color: #255c41;
+}
+.h5p-multichoice .h5p-answer.h5p-wrong .h5p-alternative-container,
+.h5p-multichoice .h5p-answer.h5p-wrong:hover .h5p-alternative-container {
+  background: #fbd7d8;
+  border-color: #fbd7d8;
+  color: #b71c1c;
+}
 
 .h5p-multichoice .h5p-answer:last-child {
   margin-bottom: 0;
@@ -125,8 +142,9 @@
   text-decoration: none;
   position: absolute;
   line-height: 1em;
-  top: 0.5em;
-  right: 0.75em;
+  top: 0.54em;
+  left: 0.75em;
+  letter-spacing: 1em;
   overflow: hidden;
 }
 .h5p-multichoice .h5p-correct .h5p-answer-icon:before {
@@ -362,4 +380,5 @@
   display: inline-block;
   top: auto;
   right: auto;
+  padding-top: 2px;
 }
