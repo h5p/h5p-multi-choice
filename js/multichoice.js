@@ -738,7 +738,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   this.showCheckSolution = function (skipFeedback) {
     var scorePoints;
     if (!(params.behaviour.singleAnswer || !params.behaviour.showScorePoints)) {
-      scorePoints = new H5P.Question.ScorePoints($myDom.find('.h5p-answer[aria-checked="true"]').length);
+      scorePoints = new H5P.Question.ScorePoints();
     }
 
     $myDom.find('.h5p-answer').each(function (i, e) {
