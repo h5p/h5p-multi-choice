@@ -417,7 +417,7 @@
         "name": "showScorePoints",
         "type": "boolean",
         "label": "Show score points",
-        "description": "Show points earned for each answer.",
+        "description": "Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled.",
         "importance": "low",
         "default": true
       }
