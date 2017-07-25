@@ -737,7 +737,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    */
   this.showCheckSolution = function (skipFeedback) {
     var scorePoints;
-    if (!(params.behaviour.singleAnswer || !params.behaviour.showScorePoints)) {
+    if (!(params.behaviour.singleAnswer || params.behaviour.singlePoint || !params.behaviour.showScorePoints)) {
       scorePoints = new H5P.Question.ScorePoints();
     }
 
