@@ -53,20 +53,20 @@
               "label":"デフォルト"
             }
           ],
-          "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
-          "entity":"range",
+          "label":"ある得点範囲に対して、カスタムフィードバックを定義します。",
+          "description":"例: 0-20% 低得点、 21-91% 平均点、 91-100% 高得点 !",
+          "entity":"範囲",
           "field":{
             "fields":[
               {
-                "label":"Score Range"
+                "label":"得点範囲"
               },
               {
                 
               },
               {
-                "label":"Feedback for defined score range",
-                "placeholder":"Fill in the feedback"
+                "label":"定義した得点範囲に対するフィードバック",
+                "placeholder":"フィードバックを記入"
               }
             ]
           }
@@ -74,27 +74,27 @@
       ]
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"多肢選択のユーザーインターフェイスの翻訳",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"答えをチェックするボタンのラベル",
+          "default":"チェック"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"解を表示ボタンのラベル",
+          "default":"解を表示"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"リトライボタンのラベル",
+          "default":"リトライ"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"ヒントラベル",
+          "default":"ヒントを表示"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"得点バーのラベル",
+          "default":"得点"
         },
         {
           "label":"Tip Available (not displayed)",
@@ -166,45 +166,45 @@
           "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"答えをランダム化",
+          "description":"表示される設問の順序をランダム化します。"
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"解を表示する前にユーザーの答えが必要"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"設問画像のズーム機能を無効化"
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"「チェック」の確認ダイアログを表示"
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"「リトライ」の確認ダイアログを表示"
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"自動的に答えをチェック",
+          "description":"このオプションを有効にすると、アクセシビリティが損なわれます、行っていることを確認してください。"
         },
         {
-          "label":"Pass percentage",
-          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label":"合格パーセンテージ",
+          "description":"この設定は、多くの場合効果はありません。これは、タスク全体の1ポイントが有効になっているときに1ポイントを取得し、xAPIステートメントでresult.successを取得するために必要な合計得点の割合です。"
         },
         {
-          "label":"Show score points",
-          "description":"Show points earned for each answer."
+          "label":"得点ポイントを表示",
+          "description":"それぞれの解答で得られたポイントを表示"
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"チェック確認ダイアログ",
       "fields":[
         {
           "label":"ヘッダーテキスト",
-          "default":"Finish ?"
+          "default":"完了 ?"
         },
         {
           "label":"本文テキスト",
-          "default":"Are you sure you wish to finish ?"
+          "default":"本当に終了しますか ?"
         },
         {
           "label":"キャンセルボタンのラベル",
@@ -212,28 +212,28 @@
         },
         {
           "label":"確認ボタンのラベル",
-          "default":"Finish"
+          "default":"完了"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"リトライ確認ダイアログ",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"ヘッダーテキスト",
+          "default":"リトライ ?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"本文テキスト",
+          "default":"本当にリトライしますか ?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"キャンセルボタンのラベル",
+          "default":"キャンセル"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"確認ボタンのラベル",
+          "default":"確認"
         }
       ]
     }
