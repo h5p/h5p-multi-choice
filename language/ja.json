@@ -45,12 +45,12 @@
       }
     },
     {
-      "label":"Overall Feedback",
+      "label":"全体のフィードバック",
       "fields":[
         {
           "widgets":[
             {
-              "label":"Default"
+              "label":"デフォルト"
             }
           ],
           "label":"Define custom feedback for any score range",
