@@ -99,71 +99,71 @@
         {
           "label":"ヒント利用可能 (表示されません)",
           "default":"ヒント利用可能",
-          "description":"Readspeakerに使用するアクセシビリティ テキスト"
+          "description":"Readspeakerに使用するアクセシビリティテキスト"
         },
         {
           "label":"フィードバック利用可能 (表示されません)",
           "default":"フィードバック利用可能",
-          "description":"Readspeakerに使用するアクセシビリティ テキスト"
+          "description":"Readspeakerに使用するアクセシビリティテキスト"
         },
         {
           "label":"読みフィードバック(表示されません)",
           "default":"読みフィードバック",
-          "description":"Readspeakerに使用するアクセシビリティ テキスト"
+          "description":"Readspeakerに使用するアクセシビリティテキスト"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"不正解(表示されません)",
+          "default":"不正解",
+          "description":"Readspeakerに使用するアクセシビリティテキスト"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"正解 (表示されません)",
+          "default":"正解",
+          "description":"readspeakerに使用するアクセシビリティテキスト"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"オプションがチェックされている必要があります",
+          "default":"チェックされている必要があります"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"オプションがチェックされていない必要があります",
+          "default":"チェックされていない必要があります"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"「答えが必要」メッセージのテキスト",
+          "default":"解を表示する前に答えてください"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"動作設定",
+      "description":"これらのオプションでタスクがどのように動作するかを制御できます。",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"「リトライ」ボタンを有効化"
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"「解を表示」ボタンを有効化"
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
-          "default":"auto",
+          "label":"問題タイプ",
+          "description":"外観と問題の動作を選択します。",
+          "default":"自動",
           "options":[
             {
-              "label":"Automatic"
+              "label":"自動"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"複数選択(チェックボックス)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"単一選択 (ラジオボタン)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"タスク全体に1点を与える",
+          "description":"複数の正解にトータルで1点与えることを有効化します。これは「択一解答」モードのオプションではありません。"
         },
         {
           "label":"答えをランダム化",
