@@ -97,19 +97,19 @@
           "default":"得点"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"ヒント利用可能 (表示されません)",
+          "default":"ヒント利用可能",
+          "description":"Readspeakerに使用するアクセシビリティ テキスト"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"フィードバック利用可能 (表示されません)",
+          "default":"フィードバック利用可能",
+          "description":"Readspeakerに使用するアクセシビリティ テキスト"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"読みフィードバック(表示されません)",
+          "default":"読みフィードバック",
+          "description":"Readspeakerに使用するアクセシビリティ テキスト"
         },
         {
           "label":"Wrong Answer (not displayed)",
