@@ -354,6 +354,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       }
 
       self.triggerXAPI('interacted');
+      hideSolution($ans);
 
       if (params.userAnswers.length) {
         self.showButton('check-answer');
@@ -501,20 +502,28 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   /**
+   * Hide solution for the given answer(s)
    *
+   * @private
+   * @param {H5P.jQuery} $answer
    */
-  this.hideSolutions = function () {
-    solutionsVisible = false;
-
-    $('.h5p-answer', $myDom)
+  var hideSolution = function ($answer) {
+    $answer
       .removeClass('h5p-correct')
       .removeClass('h5p-wrong')
       .removeClass('h5p-should')
       .removeClass('h5p-should-not')
       .removeClass('h5p-has-feedback')
-      .find('.h5p-question-plus-one, .h5p-question-minus-one').remove();
+      .find('.h5p-question-plus-one, .h5p-question-minus-one, .h5p-answer-icon, .h5p-solution-icon, .h5p-feedback-dialog').remove();
+  };
 
-    $('.h5p-answer-icon, .h5p-solution-icon, .h5p-feedback-dialog', $myDom).remove();
+  /**
+   *
+   */
+  this.hideSolutions = function () {
+    solutionsVisible = false;
+
+    hideSolution($('.h5p-answer', $myDom));
 
     this.removeFeedback(); // Reset feedback
 
