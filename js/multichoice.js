@@ -516,7 +516,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     $('.h5p-answer-icon, .h5p-solution-icon, .h5p-feedback-dialog', $myDom).remove();
 
-    this.setFeedback(); // Reset feedback
+    this.removeFeedback(); // Reset feedback
 
     self.trigger('resize');
   };
