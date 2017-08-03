@@ -45,6 +45,39 @@
       }
     },
     {
+      "englishLabel": "Overall Feedback",
+      "label": "Samlet tilbakemelding",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "englishLabel": "Default",
+              "label": "Standard"
+            }
+          ],
+          "englishLabel": "Define custom feedback for any score range",
+          "label": "Definer tilpasset tilbakemelding for et poengområde",
+          "englishDescription": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "description": "For eksempel: 0-20% Dårlig poengsum, 21-91% Gjennomsnittlig poengsum, 91-100% Stor poengsum!",
+          "field": {
+            "fields": [
+              {
+                "englishLabel": "Score Range",
+                "label": "Poengområde"
+              },
+              {},
+              {
+                "englishLabel": "Feedback for defined score range",
+                "label": "Tilbakemelding for definert poengområde",
+                "englishPlaceholder": "Fill in the feedback",
+                "placeholder": "Fyll inn tilbakemeldingen"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "label": "Oversetting for leietekstar i fleirval",
       "fields": [
         {
@@ -62,15 +95,6 @@
         {
           "label": "Tips tekst",
           "default": "Vis tips"
-        },
-        {
-          "label": "Tilbakemelding ved riktig svar"
-        },
-        {
-          "label": "Tilbakemelding ved nesten riktig svar"
-        },
-        {
-          "label": "Tilbakemelding ved galt svar"
         },
         {
           "label": "Resultatsindikator",
@@ -100,11 +124,6 @@
           "label": "Riktig svar (ikke synlig)",
           "default": "Riktig svar",
           "description": "Tekst for hjelpemiddel-teknologi"
-        },
-        {
-          "label": "Tilbakemelding",
-          "default": "@score av @total poeng",
-          "description": "Tekstlig tilbakemelding, tilgjengelige variabler: @score og @total. Eksempel: 'Du fikk @score av @total felt rett.'"
         },
         {
           "label": "Skulle ha vært valgt",

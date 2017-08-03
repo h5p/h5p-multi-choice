@@ -45,6 +45,32 @@
       }
     },
     {
+      "englishLabel": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "englishLabel": "Default"
+            }
+          ],
+          "englishLabel": "Define custom feedback for any score range",
+          "englishDescription": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "field": {
+            "fields": [
+              {
+                "englishLabel": "Score Range"
+              },
+              {},
+              {
+                "englishLabel": "Feedback for defined score range",
+                "englishPlaceholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "label": "Benutzerinterface Übersetzungen für Mehrfachauswahl",
       "fields": [
         {
@@ -62,15 +88,6 @@
         {
           "label": "Tippbeschriftung",
           "default": "Tipp anzeigen"
-        },
-        {
-          "label": "Rückmeldung zur korrekten Antwort"
-        },
-        {
-          "label": "Rückmeldung zu einer fast korrekten Antwort"
-        },
-        {
-          "label": "Rückmeldung zu einer inkorrekten Antwort"
         },
         {
           "label": "Beschriftung für den Punktebalken",
@@ -100,11 +117,6 @@
           "label": "Korrekte Antwort (nicht angezeigt)",
           "default": "Korrekte Antwort",
           "description": "Text für \"Readspeaker\""
-        },
-        {
-          "label": "Rückmeldungstext",
-          "default": "Du hast @score von @total Punkten",
-          "description": "Rückmeldungstext, verfügbare Variablen: @score und @total. Beispiel: 'Du hast @score von @total Punkten.'"
         },
         {
           "label": "Option hätte ausgewählt werden sollen",

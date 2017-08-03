@@ -1,0 +1,233 @@
+{
+  "semantics": [
+    {
+      "label": "Medij",
+      "fields": [
+        {
+          "label": "Vrsta",
+          "description": "Opcionalni medij za prikaz iznad pitanja."
+        }
+      ]
+    },
+    {
+      "label": "Pitanje"
+    },
+    {
+      "label": "Dostupne opcije",
+      "entity": "opcija",
+      "field": {
+        "label": "Opcija",
+        "fields": [
+          {
+            "label": "Tekst"
+          },
+          {
+            "label": "Tačno"
+          },
+          {
+            "label": "Savjeti ifeedback",
+            "fields": [
+              {
+                "label": "Tekst savjeta",
+                "description": "Savjet korisniku. Ovo će se prikazati korisniku prije nego provjeri svoje odgovore."
+              },
+              {
+                "label": "Poruka koja će biti prikazana ako je odgovor označen",
+                "description": "Poruka će se pojaviti ispod odgovora nakon \"check\" ako je odgovor označen."
+              },
+              {
+                "label": "Poruka koja će biti prikazana ako odgovor nije označen",
+                "description": "Poruka će se pojaviti ispod odgovora nakon \"check\" ako odgovor nije označen."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "englishLabel": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "englishLabel": "Default"
+            }
+          ],
+          "englishLabel": "Define custom feedback for any score range",
+          "englishDescription": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "field": {
+            "fields": [
+              {
+                "englishLabel": "Score Range"
+              },
+              {},
+              {
+                "englishLabel": "Feedback for defined score range",
+                "englishPlaceholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Prijevodi za višestruki izbor",
+      "fields": [
+        {
+          "label": "Provjeri oznaku na dugmetu za odgovor",
+          "default": "Provjeri"
+        },
+        {
+          "label": "Prikaži oznaku na dugmetu za rješenje",
+          "default": "Prikaži rješenje"
+        },
+        {
+          "label": "Oznaka na dugmetu za ponavljanje",
+          "default": "Ponovi"
+        },
+        {
+          "label": "Oznaka savjeta",
+          "default": "Prikaži savjet"
+        },
+        {
+          "label": "Oznaka za traku sa rezultatom",
+          "default": "Rezultat"
+        },
+        {
+          "label": "Savjet je dostupan (nije prikazan)",
+          "default": "Savjet je dostupan",
+          "description": "Tekst za elektronski glas"
+        },
+        {
+          "label": "Feedback je dostupan (nije prikazan)",
+          "default": "Feedback je dostupan",
+          "description": "Tekst za elektronski glas"
+        },
+        {
+          "label": "Čitaj Feedback (nije prikazan)",
+          "default": "Čitaj feedback",
+          "description": "Tekst za elektronski glas"
+        },
+        {
+          "label": "Netačan odgovor (nije prikazan)",
+          "default": "Netačan odgovor",
+          "description": "Tekst za elektronski glas"
+        },
+        {
+          "label": "Tačan odgovor (nije prikazan)",
+          "default": "Tačan odgovor",
+          "description": "Tekst za elektronski glas"
+        },
+        {
+          "label": "Opcija treba biti odabrana",
+          "default": "Treba biti odabrano"
+        },
+        {
+          "label": "Opcija ne mora biti odabrana",
+          "default": "Opcija ne mora biti odabrana"
+        },
+        {
+          "label": "Tekst za \"Obavezan odgovor\" poruku",
+          "default": "Molimo vas da odgovorite prije nego viditi rješenje"
+        }
+      ]
+    },
+    {
+      "label": "Porešavanje ponašanja",
+      "description": "Ove opcije će vam omogućiti da kontrolirate ponašanje zadatka.",
+      "fields": [
+        {
+          "label": "Omogući \"Ponovi\" dugme"
+        },
+        {
+          "label": "Omogući \"Vidi rješenje\" dugme"
+        },
+        {
+          "label": "Vrsta pitanja",
+          "description": "Odaberi izgled i način prikaza pitanja.",
+          "options": [
+            {
+              "label": "Automatsko"
+            },
+            {
+              "label": "Višestruki izbor (kvačice)"
+            },
+            {
+              "label": "Pojedinačni izbor (dugme)"
+            }
+          ]
+        },
+        {
+          "label": "Dodijeli jedan bod za cijeli zadatak",
+          "description": "Omogući kako bi za sve odgovore u zadatku bilo dodijeljen samo jedan bod. Ovo neće biti opcija u \"Pojedinačni odgovor\" modu."
+        },
+        {
+          "label": "Izmiješaj redoslijed pitanja",
+          "description": "Omogući kako bi prilikom prikaza redoslijed pitanja bio izmiješan."
+        },
+        {
+          "label": "zahtjeva odgovor prije nego rješenje može biti viđeno"
+        },
+        {
+          "label": "Onemogući zumiranje slike kod pitanja sa slikom"
+        },
+        {
+          "label": "Prikaži mogućnost potvrde kod \"Provjeri\""
+        },
+        {
+          "label": "Prikaži mogućnost potvrde kod \"Ponovi\""
+        },
+        {
+          "label": "Automatski provjeri odgovore",
+          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+        },
+        {
+          "label": "Postotak za prolaz",
+          "description": "Postotak tačnih odgovora da bi se kviz prošao."
+        }
+      ]
+    },
+    {
+      "label": "Provjeri potvrdu",
+      "fields": [
+        {
+          "label": "Tekst zaglavlja",
+          "default": "Završi ?"
+        },
+        {
+          "label": "Tekst tijela",
+          "default": "Jeste li sigurni da želite završiti ?"
+        },
+        {
+          "label": "Oznaka dugmeta za otkazivanje",
+          "default": "Otkaži"
+        },
+        {
+          "label": "Oznaka dugmeta za potvrdu",
+          "default": "Završi"
+        }
+      ]
+    },
+    {
+      "label": "Potvrda ponovnog pokušaja",
+      "fields": [
+        {
+          "label": "Tekst zaglavlja",
+          "default": "Ponovi ?"
+        },
+        {
+          "label": "Tekst tijela",
+          "default": "Jeste li sigurni da želite ponoviti ?"
+        },
+        {
+          "label": "Oznaka dugmeta za otkazivanje",
+          "default": "Otkaži"
+        },
+        {
+          "label": "Oznaka dugmeta za potvrdu",
+          "default": "Potvrdi"
+        }
+      ]
+    }
+  ]
+}

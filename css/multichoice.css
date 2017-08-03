@@ -26,6 +26,16 @@
   cursor: pointer;
 }
 
+.h5p-multichoice .h5p-answer.h5p-has-tip .h5p-alternative-container,
+.h5p-multichoice .h5p-answer.h5p-should-not .h5p-alternative-container {
+  padding-right: 2em;
+}
+
+.h5p-multichoice .h5p-answer.h5p-wrong .h5p-alternative-container,
+.h5p-multichoice .h5p-answer.h5p-correct .h5p-alternative-container {
+  padding-right: 3em;
+}
+
 .h5p-multichoice .h5p-alternative-container {
   position: relative;
   text-align: left;
@@ -66,6 +76,11 @@
 .h5p-multichoice .h5p-answer[role="checkbox"][aria-checked="true"] .h5p-alternative-container:before {
   content: "\e601";
 }
+.h5p-multichoice .h5p-answers .h5p-answer[aria-disabled="true"] .h5p-alternative-container:before,
+.h5p-multichoice .h5p-answers .h5p-answer.h5p-correct .h5p-alternative-container:before,
+.h5p-multichoice .h5p-answers .h5p-answer.h5p-wrong .h5p-alternative-container:before {
+  content: initial;
+}
 
 .h5p-multichoice .h5p-answer[aria-disabled="true"] {
   cursor: default;
@@ -98,6 +113,18 @@
   border: 0.1em solid #cee0f4;
   background: #cee0f4;
 }
+.h5p-multichoice .h5p-answer.h5p-correct .h5p-alternative-container,
+.h5p-multichoice .h5p-answer.h5p-correct:hover .h5p-alternative-container {
+  background: #b6e4ce;
+  border-color: #b6e4ce;
+  color: #255c41;
+}
+.h5p-multichoice .h5p-answer.h5p-wrong .h5p-alternative-container,
+.h5p-multichoice .h5p-answer.h5p-wrong:hover .h5p-alternative-container {
+  background: #fbd7d8;
+  border-color: #fbd7d8;
+  color: #b71c1c;
+}
 
 .h5p-multichoice .h5p-answer:last-child {
   margin-bottom: 0;
@@ -115,8 +142,9 @@
   text-decoration: none;
   position: absolute;
   line-height: 1em;
-  top: 0.5em;
-  right: 0.75em;
+  top: 0.54em;
+  left: 0.75em;
+  letter-spacing: 1em;
   overflow: hidden;
 }
 .h5p-multichoice .h5p-correct .h5p-answer-icon:before {
@@ -156,7 +184,7 @@
   content: "\e602";
 }
 
-.feedback-text {
+.h5p-multichoice .feedback-text {
   height: 2em;
   top: 0;
   margin: 0;
@@ -167,18 +195,18 @@
   color: #599413;
 }
 
-.feedback-text.h5p-failed {
+.h5p-multichoice .feedback-text.h5p-failed {
   color: #b71c1c;
 }
-.feedback-text.h5p-almost {
+.h5p-multichoice .feedback-text.h5p-almost {
   color: #666;
 }
-.feedback-text.h5p-passed {
+.h5p-multichoice .feedback-text.h5p-passed {
   color: #255c41;
 }
 
 .h5p-alternative-inner {
-  margin: 0 1.5em 0 2em;
+  margin: 0 0.75em 0 2em;
 }
 .h5p-alternative-inner div,
 .h5p-alternative-inner p {
@@ -303,8 +331,8 @@
 /* Tip icon*/
 .h5p-multichoice .multichoice-tip {
   position: absolute;
-  right: 0;
-  top: 0px;
+  right: 0.246153846em;
+  top: -0.123076923em;
   vertical-align: middle;
   text-align: center;
   font-size: 1.25em;
@@ -316,22 +344,17 @@
   font-weight: normal;
 }
 .h5p-multichoice .multichoice-tip:focus {
-  outline: auto;
+  outline: 0;
+  box-shadow: 0px 0px 1px 3px rgba(140,185,240,1);
+}
+
+.h5p-multichoice .multichoice-tip .joubel-icon-tip-normal {
+  line-height: initial;
+  float: right;
 }
 
 .h5p-multichoice .multichoice-tip:hover {
   color: #333;
-}
-
-.h5p-multichoice .multichoice-tip:before {
-  font-family: "H5PFontAwesome4";
-  content: "\f0e5";
-}
-
-.h5p-multichoice .h5p-correct .multichoice-tip,
-.h5p-multichoice .h5p-wrong .multichoice-tip {
-  right: 2.125em;
-  top: 0.0675em;
 }
 
 .h5p-multichoice .h5p-selected.h5p-should-not.h5p-correct .multichoice-tip,
@@ -344,4 +367,16 @@
 /* Remove tip icon on check */
 .h5p-multichoice [aria-disabled="true"] .h5p-multichoice-tipwrap {
   display: none;
+}
+
+.h5p-multichoice-tipwrap {
+  display: inline;
+}
+
+.h5p-multichoice .h5p-question-plus-one,
+.h5p-multichoice .h5p-question-minus-one {
+  display: inline-block;
+  top: auto;
+  right: auto;
+  padding-top: 2px;
 }
