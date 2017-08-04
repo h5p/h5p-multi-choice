@@ -3,7 +3,7 @@
   "contentType": "Question",
   "majorVersion": 1,
   "minorVersion": 10,
-  "patchVersion": 0,
+  "patchVersion": 1,
   "runnable": 1,
   "machineName": "H5P.MultiChoice",
   "author": "Joubel",
@@ -36,12 +36,12 @@
     {
       "machineName": "H5P.JoubelUI",
       "majorVersion": 1,
-      "minorVersion": 2
+      "minorVersion": 3
     },
     {
       "machineName": "H5P.Question",
       "majorVersion": 1,
-      "minorVersion": 2
+      "minorVersion": 3
     }
   ],
   "editorDependencies": [
