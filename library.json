@@ -5,6 +5,7 @@
   "minorVersion": 10,
   "patchVersion": 1,
   "runnable": 1,
+  "embedTypes": ["iframe"],
   "machineName": "H5P.MultiChoice",
   "author": "Joubel",
   "license": "MIT",
