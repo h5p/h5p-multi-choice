@@ -166,31 +166,31 @@
           "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"Risposte in ordine casuale",
+          "description":"Abilita per rendere casuale l'ordine delle domande visualizzate."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"Richiede una risposta prima che la soluzione possa essere vista"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"Disabilita lo zoom dell'immagine su immagini-domanda"
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"Mostra la finestra di dialogo di conferma su \"Verifica\""
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"Mostra la finestra di dialogo di conferma su \"Riprova\""
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"Controlla automaticamente le risposte",
+          "description":"Abilitare questa opzione renderà difficoltosa l'accessibilità. Assicurati di sapere cosa stai facendo."
         },
         {
-          "label":"Pass percentage",
-          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label":"Percentuale di superamento della prova",
+          "description":"Questa impostazione spesso non avrà alcun effetto. È la percentuale del punteggio totale necessario per ottenere un punto in caso di attività che valgano complessivamente un punto, e per ottenere result.success in dichiarazioni xAPI."
         },
         {
-          "label":"Show score points",
+          "label":"Visualizza punteggio",
           "description":"Show points earned for each answer."
         }
       ]
@@ -199,11 +199,11 @@
       "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"Etichetta di intestazione",
+          "label":"Testo dell'intestazione",
           "default":"Finish ?"
         },
         {
-          "label":"Etichetta del corpo",
+          "label":"Testo del corpo",
           "default":"Are you sure you wish to finish ?"
         },
         {
