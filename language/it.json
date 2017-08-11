@@ -25,19 +25,19 @@
             "label":"Corretto"
           },
           {
-            "label":"Suggerimento",
+            "label":"Suggerimenti e feedback",
             "fields":[
               {
                 "label":"Testo del suggerimento",
                 "description":"Suggerimento per l'utente. Apparirà prima l'utente verifichi la sua risposta / le sue risposte."
               },
               {
-                "label":"Feedback scelto",
-                "description":"Viene visualizzato quando l'utente verifica la sua risposta."
+                "label":"Messaggio visualizzato se la risposta è selezionata",
+                "description":"Su \"Verifica\", apparirà un messaggio sotto la risposta se questa è selezionata"
               },
               {
-                "label":"Feedback non scelto",
-                "description":"Viene visualizzato quando la soluzione viene mostrata."
+                "label":"Messaggio visualizzato se la risposta non è selezionata",
+                "description":"Su \"Verifica\", apparirà un messaggio sotto la risposta se questa non è selezionata"
               }
             ]
           }
@@ -45,12 +45,12 @@
       }
     },
     {
-      "label":"Overall Feedback",
+      "label":"Feedback generale",
       "fields":[
         {
           "widgets":[
             {
-              "label":"Default"
+              "label":"Predefinito"
             }
           ],
           "label":"Define custom feedback for any score range",
@@ -191,20 +191,20 @@
         },
         {
           "label":"Visualizza punteggio",
-          "description":"Show points earned for each answer."
+          "description":"Visualizza i punti guadagnati per ogni risposta"
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"Finestra di conferma per la verifica",
       "fields":[
         {
           "label":"Testo dell'intestazione",
-          "default":"Finish ?"
+          "default":"Finito?"
         },
         {
           "label":"Testo del corpo",
-          "default":"Are you sure you wish to finish ?"
+          "default":"Sei sicuro di voler finire?"
         },
         {
           "label":"Etichetta del pulsante di annullamento",
@@ -212,28 +212,28 @@
         },
         {
           "label":"Etichetta del pulsante di conferma",
-          "default":"Finish"
+          "default":"Finito"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"Finestra di conferma per \"Riprova\"",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"Testo dell'intestazione",
+          "default":"Riprovare?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"Testo del corpo",
+          "default":"Sei sicuro di voler riprovare?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Etichetta del pulsante di annullamento",
+          "default":"Annulla"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"Etichetta del pulsante di conferma",
+          "default":"Conferma"
         }
       ]
     }
