@@ -53,8 +53,8 @@
               "label":"Predefinito"
             }
           ],
-          "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "label":"Definisci un feedback personalizzato per ogni intervallo di punteggio",
+          "description":"Esempio: 0-20%, cattivo punteggio; 21-91% punteggio nella  media; 91-100% ottimo punteggio!",
           "entity":"range",
           "field":{
             "fields":[
