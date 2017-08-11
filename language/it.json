@@ -154,10 +154,10 @@
               "label":"Automatic"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"Scelta multipla (caselle di controllo)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"Scelta singola (pulsanti di opzione)"
             }
           ]
         },
@@ -207,7 +207,7 @@
           "default":"Are you sure you wish to finish ?"
         },
         {
-          "label":"Etichetta del pulsante Annulla",
+          "label":"Etichetta del pulsante di annullamento",
           "default":"Annulla"
         },
         {
