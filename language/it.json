@@ -55,18 +55,18 @@
           ],
           "label":"Definisci un feedback personalizzato per ogni intervallo di punteggio",
           "description":"Esempio: 0-20%, cattivo punteggio; 21-91% punteggio nella  media; 91-100% ottimo punteggio!",
-          "entity":"range",
+          "entity":"Intervallo",
           "field":{
             "fields":[
               {
-                "label":"Score Range"
+                "label":"Intervallo di punteggio"
               },
               {
                 
               },
               {
-                "label":"Feedback for defined score range",
-                "placeholder":"Fill in the feedback"
+                "label":"Feedback per un intervallo di punteggio definito",
+                "placeholder":"Compila il feedback"
               }
             ]
           }
@@ -74,31 +74,31 @@
       ]
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"Traduzioni dell'interfaccia utente per scelta multipla",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"Etichetta del pulsante Verifica risposta",
+          "default":"Verifica"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"Etichetta del pulsante Mostra soluzione",
+          "default":"Mostra la soluzione"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Etichetta del pulsante Riprova",
+          "default":"Riprova"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"Etichetta del suggerimento",
+          "default":"Mostra suggerimento"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"Etichetta della barra del punteggio",
+          "default":"Punteggio"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
+          "label":"Suggerimento disponibile (non visualizzato)",
+          "default":"Suggerimento disponibile",
           "description":"Accessibility text used for readspeakers"
         },
         {
