@@ -99,59 +99,59 @@
         {
           "label":"Suggerimento disponibile (non visualizzato)",
           "default":"Suggerimento disponibile",
-          "description":"Accessibility text used for readspeakers"
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Feedback disponibile (non visualizzato)",
+          "default":"Feedback disponibile",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Leggi il feedback (non visualizzato)",
+          "default":"Leggi il feedback",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Risposta sbagliata (non visualizzato)",
+          "default":"Risposta sbagliata",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Risposta corretta (non visualizzato)",
+          "default":"Risposta corretta",
+          "description":"Testo di accessibilità utilizzato per riproduttori vocali"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"L'opzione avrebbe dovuto essere verificata",
+          "default":"Avrebbe dovuto essere verificato"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"L'opzione non avrebbe dovuto essere verificata",
+          "default":"Non avrebbe dovuto essere verificato"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"Testo per il messaggio \"Richiede una risposta\"",
+          "default":"Per favore rispondi prima di vedere la soluzione"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"Impostazioni esecuzione",
+      "description":"Queste opzioni ti consentono di controllare l'esecuzione del compito.",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"Abilita il pulsante Riprova"
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"Abilita il pulsante Mostra soluzione"
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
-          "default":"auto",
+          "label":"Tipo di domanda",
+          "description":"Seleziona l'aspetto e il comportamento della domanda.",
+          "default":"automatico",
           "options":[
             {
-              "label":"Automatic"
+              "label":"Automatico"
             },
             {
               "label":"Scelta multipla (caselle di controllo)"
@@ -162,8 +162,8 @@
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"Assegna un punto per l'intero compito",
+          "description":"Abilita per assegnare un totale di un punto per risposte multiple corrette. Questa non è un'opzione in modalità \"Risposta singola\"."
         },
         {
           "label":"Risposte in ordine casuale",
