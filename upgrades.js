@@ -281,15 +281,8 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
           delete parameters.UI.feedback;
         }
 
-        // Hide score points for old content
-        if (!parameters.behaviour) {
-          parameters.behaviour = {};
-        }
-        parameters.behaviour.showScorePoints = false;
-
         finished(null, parameters);
       }
-
     }
   };
 })(H5P.jQuery);
