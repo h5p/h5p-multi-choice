@@ -1,43 +1,43 @@
 {
   "semantics":[
     {
-      "label":"Multimedia",
+      "label":"Ortam",
       "fields":[
         {
-          "label":"Type",
-          "description":"Eit valfritt multimediaelement som skal visast over spørsmålet."
+          "label":"Yazınız",
+          "description":"Soru üzerinde görüntülenecek isteğe bağlı ortam."
         }
       ]
     },
     {
-      "label":"Spørsmål"
+      "label":"Soru"
     },
     {
-      "label":"Svaralternativ",
-      "entity":"verdi",
+      "label":"Kullanılabilir seçenekler",
+      "entity":"seçenek",
       "field":{
-        "label":"Svaralternativ",
+        "label":"Seçenek",
         "fields":[
           {
-            "label":"Tekst"
+            "label":"Metin"
           },
           {
-            "label":"Riktig"
+            "label":"Doğru"
           },
           {
-            "label":"Tips",
+            "label":"İpuçları ve geri bildirim",
             "fields":[
               {
-                "label":"Tipstekst",
-                "description":"Hint for brukaren. Dette vil visast før brukaren sjekkar sine svar."
+                "label":"İpucu metni",
+                "description":"Kullanıcı için ipucu. Kullanıcı cevabını/cevaplarını kontrol etmeden önce bu görünecektir."
               },
               {
-                "label":"Melding som visast hvis svaret er valgt",
-                "description":"Melding som visast under svaret på \"check\" hvis svaret er valgt."
+                "label":"Cevap seçilirse görüntülenecek ileti",
+                "description":"Bu cevap seçilirse \"kontrol et\" üzerindeki cevabın altında ileti görünecek."
               },
               {
-                "label":"Melding som visast hvis svaret ikkje er valgt",
-                "description":"Melding som visast under svaret på \"check\" hvis andre svar er valgt."
+                "label":"Cevap seçilmezse görüntülenecek ileti",
+                "description":"Bu cevap seçilmezse \"kontrol et\" üzerindeki cevabın altında ileti görünecek."
               }
             ]
           }
@@ -199,19 +199,19 @@
       "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"Tittel",
+          "label":"Üstbaşlık Metni",
           "default":"Finish ?"
         },
         {
-          "label":"Tekst",
+          "label":"Gövde Metni",
           "default":"Are you sure you wish to finish ?"
         },
         {
-          "label":"Avbryt etikett",
-          "default":"Avbrytt"
+          "label":"İptal et butonu etiketi",
+          "default":"İptal et"
         },
         {
-          "label":"Bekreft etikett",
+          "label":"Onay butonu etiketi",
           "default":"Finish"
         }
       ]

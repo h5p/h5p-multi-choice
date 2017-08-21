@@ -1,77 +1,48 @@
 {
   "semantics":[
     {
-      "label":"Multimedia",
+      "label":"Media",
       "fields":[
         {
           "label":"Type",
-          "description":"Eit valfritt multimediaelement som skal visast over spørsmålet."
+          "description":"Optional media to display above the question."
         }
       ]
     },
     {
-      "label":"Spørsmål"
+      "label":"Question"
     },
     {
-      "label":"Svaralternativ",
-      "entity":"verdi",
+      "label":"Available options",
+      "entity":"option",
       "field":{
-        "label":"Svaralternativ",
+        "label":"Option",
         "fields":[
           {
-            "label":"Tekst"
+            "label":"Text"
           },
           {
-            "label":"Riktig"
+            "label":"Correct"
           },
           {
-            "label":"Tips",
+            "label":"Tips and feedback",
             "fields":[
               {
-                "label":"Tipstekst",
-                "description":"Hint for brukaren. Dette vil visast før brukaren sjekkar sine svar."
+                "label":"Tip text",
+                "description":"Hint for the user. This will appear before user checks his answer/answers."
               },
               {
-                "label":"Melding som visast hvis svaret er valgt",
-                "description":"Melding som visast under svaret på \"check\" hvis svaret er valgt."
+                "label":"Message displayed if answer is selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is selected."
               },
               {
-                "label":"Melding som visast hvis svaret ikkje er valgt",
-                "description":"Melding som visast under svaret på \"check\" hvis andre svar er valgt."
+                "label":"Message displayed if answer is not selected",
+                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
               }
             ]
           }
         ]
       }
-    },
-    {
-      "label":"Overall Feedback",
-      "fields":[
-        {
-          "widgets":[
-            {
-              "label":"Default"
-            }
-          ],
-          "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
-          "entity":"range",
-          "field":{
-            "fields":[
-              {
-                "label":"Score Range"
-              },
-              {
-                
-              },
-              {
-                "label":"Feedback for defined score range",
-                "placeholder":"Fill in the feedback"
-              }
-            ]
-          }
-        }
-      ]
     },
     {
       "label":"User interface translations for multichoice",
@@ -91,6 +62,15 @@
         {
           "label":"Tip label",
           "default":"Show tip"
+        },
+        {
+          "label":"Correct answer feedback"
+        },
+        {
+          "label":"Almost correct answer feedback"
+        },
+        {
+          "label":"Not correct answer feedback"
         },
         {
           "label":"Score Bar Label",
@@ -122,6 +102,11 @@
           "description":"Accessibility text used for readspeakers"
         },
         {
+          "label":"Feedback text",
+          "default":"You got @score of @total points",
+          "description":"Feedback text, variables available: @score and @total. Example: 'You got @score of @total points.'"
+        },
+        {
           "label":"Option should have been checked",
           "default":"Should have been checked"
         },
@@ -148,7 +133,6 @@
         {
           "label":"Question Type",
           "description":"Select the look and behaviour of the question.",
-          "default":"auto",
           "options":[
             {
               "label":"Automatic"
@@ -187,11 +171,7 @@
         },
         {
           "label":"Pass percentage",
-          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
-        },
-        {
-          "label":"Show score points",
-          "description":"Show points earned for each answer."
+          "description":"Percentage of Total score required for passing the quiz."
         }
       ]
     },
@@ -199,19 +179,19 @@
       "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"Tittel",
+          "label":"Header text",
           "default":"Finish ?"
         },
         {
-          "label":"Tekst",
+          "label":"Body text",
           "default":"Are you sure you wish to finish ?"
         },
         {
-          "label":"Avbryt etikett",
-          "default":"Avbrytt"
+          "label":"Cancel button label",
+          "default":"Cancel"
         },
         {
-          "label":"Bekreft etikett",
+          "label":"Confirm button label",
           "default":"Finish"
         }
       ]
