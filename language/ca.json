@@ -1,43 +1,43 @@
 {
   "semantics":[
     {
-      "label":"Multimedia",
+      "label":"Recurs",
       "fields":[
         {
-          "label":"Type",
-          "description":"Eit valfritt multimediaelement som skal visast over spørsmålet."
+          "label":"Tipus",
+          "description":"Recursos opcionals per mostrar al damunt de la pregunta."
         }
       ]
     },
     {
-      "label":"Spørsmål"
+      "label":"Pregunta"
     },
     {
-      "label":"Svaralternativ",
-      "entity":"verdi",
+      "label":"Opcions disponibles",
+      "entity":"opció",
       "field":{
-        "label":"Svaralternativ",
+        "label":"Opció",
         "fields":[
           {
-            "label":"Tekst"
+            "label":"Text"
           },
           {
-            "label":"Riktig"
+            "label":"Correcte"
           },
           {
-            "label":"Tips",
+            "label":"Suggerències i informació de retorn",
             "fields":[
               {
-                "label":"Tipstekst",
-                "description":"Hint for brukaren. Dette vil visast før brukaren sjekkar sine svar."
+                "label":"Text de la pista",
+                "description":"Pista per a l'usuari. Això apareixerà abans que l'usuari confirmi la seva resposta/Respostes."
               },
               {
-                "label":"Melding som visast hvis svaret er valgt",
-                "description":"Melding som visast under svaret på \"check\" hvis svaret er valgt."
+                "label":"Aquest missatge es mostra si la resposta està seleccionada",
+                "description":"Missatge que apareixerà sota la resposta seleccionada al validar."
               },
               {
-                "label":"Melding som visast hvis svaret ikkje er valgt",
-                "description":"Melding som visast under svaret på \"check\" hvis andre svar er valgt."
+                "label":"Missatge que es mostra si no s'ha seleccionat cap resposta",
+                "description":"Missatge que apareixerà sota la resposta si aquesta resposta no està seleccionada al validar."
               }
             ]
           }
@@ -199,19 +199,19 @@
       "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"Tittel",
+          "label":"Títol",
           "default":"Finish ?"
         },
         {
-          "label":"Tekst",
+          "label":"Cos de text",
           "default":"Are you sure you wish to finish ?"
         },
         {
-          "label":"Avbryt etikett",
-          "default":"Avbrytt"
+          "label":"Etiqueta del botó \"Cancel•lar\"",
+          "default":"Cancel·lar"
         },
         {
-          "label":"Bekreft etikett",
+          "label":"Etiqueta del botó \"Confirmar\"",
           "default":"Finish"
         }
       ]

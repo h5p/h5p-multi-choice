@@ -79,7 +79,7 @@
 .h5p-multichoice .h5p-answers .h5p-answer[aria-disabled="true"] .h5p-alternative-container:before,
 .h5p-multichoice .h5p-answers .h5p-answer.h5p-correct .h5p-alternative-container:before,
 .h5p-multichoice .h5p-answers .h5p-answer.h5p-wrong .h5p-alternative-container:before {
-  content: initial;
+  content: '';
 }
 
 .h5p-multichoice .h5p-answer[aria-disabled="true"] {
