@@ -45,16 +45,16 @@
       }
     },
     {
-      "label":"Overall Feedback",
+      "label":"شفافية خلفية العناصر",
       "fields":[
         {
           "widgets":[
             {
-              "label":"Default"
+              "label":"الافتراضي"
             }
           ],
           "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "description":"Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
           "entity":"range",
           "field":{
             "fields":[
@@ -74,19 +74,19 @@
       ]
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"ترجمة واجهة المستخدم للخيارات متعددة",
       "fields":[
         {
-          "label":"Check answer button label",
+          "label":"تسمية زر التحقق  من الجواب",
           "default":"Check"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"مشاهدة تسمية زر الحل",
+          "default":"مشاهدة الحل"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"تسمية زر إعادة المحاولة",
+          "default":"إعادة المحاولة"
         },
         {
           "label":"Tip label",
@@ -97,27 +97,27 @@
           "default":"Score"
         },
         {
-          "label":"Tip Available (not displayed)",
+          "label":"Tip Available",
           "default":"Tip available",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Feedback Available (not displayed)",
+          "label":"Feedback Available",
           "default":"Feedback available",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Read Feedback (not displayed)",
+          "label":"Read Feedback",
           "default":"Read feedback",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Wrong Answer (not displayed)",
+          "label":"Wrong Answer",
           "default":"Wrong answer",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Correct Answer (not displayed)",
+          "label":"Correct Answer",
           "default":"Correct answer",
           "description":"Accessibility text used for readspeakers"
         },
@@ -136,14 +136,14 @@
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"إعدادت النشاط",
+      "description":"وهذه الخيارات تمكنك من التحكم في كيفية سلوك هذا النشاط",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"تمكين \"إعادة المحاولة \""
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"تمكين \"مشاهدة الحل \" الزر"
         },
         {
           "label":"Question Type",
@@ -162,18 +162,18 @@
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"إعطاء نقطة واحدة للقيام بهذه المهمة بأكملها",
+          "description":"تمكين لإعطاء مجموع نقطة واحدة للإجابات الصحيحة متعددة. هذا لن يكون خيارا في وضع \"إجابة واحدة \"."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"الإجابات بطريقة عشوائية",
+          "description":"تمكين العرض بطريقة عشوائية وترتيب الأسئلة على الشاشة"
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"تطلب إدخال المستخدم اجابته قبل أن يتم عرضه الحل"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"Disable image zooming for question image."
         },
         {
           "label":"Show confirmation dialog on \"Check\""
@@ -186,12 +186,12 @@
           "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
         },
         {
-          "label":"Pass percentage",
+          "label":"نسبة النجاح",
           "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         },
         {
           "label":"Show score points",
-          "description":"Show points earned for each answer."
+          "description":"Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
         }
       ]
     },
@@ -224,7 +224,7 @@
           "default":"Retry ?"
         },
         {
-          "label":"Body text",
+          "label":"النص الأساسي",
           "default":"Are you sure you wish to retry ?"
         },
         {
