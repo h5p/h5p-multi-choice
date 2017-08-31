@@ -54,7 +54,7 @@
             }
           ],
           "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "description":"Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
           "entity":"range",
           "field":{
             "fields":[
@@ -74,59 +74,59 @@
       ]
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"Kasutajaliidese tõlked mitmikvalikuga küsimuse puhul",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"Kontrolli nupu silt",
+          "default":"Kontrolli"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"Näita õiget vastust nupu silt",
+          "default":"Õige vastus"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Proovi uuesti nupu silt",
+          "default":"Proovi uuesti"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"Vihje silt",
+          "default":"Vihje"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"Punktisumma nupu silt",
+          "default":"Punktisumma"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Küsi vihjet (peidetud)",
+          "default":"Küsi vihjet",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Võimaldab küsida tagasisidet (peidetud)",
+          "default":"Tagasiside",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Loe tagasisidet (peidus)",
+          "default":"Loe tagasisidet",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Vale vastus (peidus)",
+          "default":"Vale vastus",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Õge vastus (peidetud)",
+          "default":"Õige vastus",
+          "description":"Abitekst vaegnägijatele, kes kasutavad ekraanilugejat"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"Vastusevariant oleks pidanud olema valitud",
+          "default":"Vastusevariant pidanuks jääma valimata"
         },
         {
-          "label":"Option should not have been checked",
+          "label":"See vastusevariant oleks pidanud jääma valimata",
           "default":"Should not have been checked"
         },
         {
@@ -191,7 +191,7 @@
         },
         {
           "label":"Show score points",
-          "description":"Show points earned for each answer."
+          "description":"Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
         }
       ]
     },
