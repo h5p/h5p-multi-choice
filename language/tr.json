@@ -50,11 +50,11 @@
         {
           "widgets":[
             {
-              "label":"Default"
+              "label":"Varsayılan"
             }
           ],
           "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "description":"Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
           "entity":"range",
           "field":{
             "fields":[
@@ -74,137 +74,137 @@
       ]
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"Çoktan seçmeli sorular için kullanıcı arayüzü çevirisi",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"Kontrol et cevap butonu etiketi",
+          "default":"Kontrol et"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"Çözüm butonu etiketini göster",
+          "default":"Çözümü göster"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Yeniden dene buton etiketi",
+          "default":"Yeniden dene"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"İpucu etiketi",
+          "default":"İpucu göster"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"Puan Çubuğu Etiketi",
+          "default":"Puan"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Mevcut İpucu (görüntülenmeyen)",
+          "default":"Mevcut ipucu",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Mevcut Geri Bildirim (görüntülenmeyen)",
+          "default":"Mevcut Geri Bildirim",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Okuma Geri Bildirimi (görüntülenmeyen)",
+          "default":"Okuma Geri Bildirimi",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Yanlış cevap (görüntülenmeyen)",
+          "default":"Yanlış cevap",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Doğru Cevap (görüntülenmeyen)",
+          "default":"Doğru cevap",
+          "description":"Readspeaker için kullanılan erişebilirlik metni"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"Seçenek işaretlenmeliydi",
+          "default":"İşaretlenmeliydi"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"Seçenek işaretlenmemeliydi",
+          "default":"İşaretlenmemeliydi"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"\"cevap gerektirir\" iletisi için metin",
+          "default":"Çözümü görmeden önce lütfen cevaplayın"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"Davranış ayarları",
+      "description":"Bu seçenekler aktivitenin çalışma şeklini denetlemenize izin verir.",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"\"Yeniden dene\" butonunu aktifleştirin"
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"\"Çözümü göster\" butonunu aktifleştirin"
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
+          "label":"Soru Türü",
+          "description":"Sorunun görünüm ve davranışını değiştirin.",
           "default":"auto",
           "options":[
             {
-              "label":"Automatic"
+              "label":"Otomatik"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"Birden Çok Seçenek (onay kutuları)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"Tek Seçim (Seçenek butonları)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"Bütün aktivite için bir puan verin",
+          "description":"Birden fazla doğru cevaba toplam bir puan vermeyi etkinleştirin. Bu \"Tek cevap\" modunda bir seçenek olmayacak."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"Cevapları karıştır",
+          "description":"Soruları sırasını ekranda rasgele gelmesi için etkinleştirin."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"Çözüm görülmeden önce yanıt gerektirin"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"Soru resmi için resim yakınlaştırmasını devre dışı bırakın"
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"\"Kontrol et\"deki onay kutucuğunu göster"
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"\"Yeniden dene\"deki onay kutucuğunu göster"
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"Yanıtları otomatik olarak denetle",
+          "description":"Bu seçeneğin etkinleştirilmesi erişilebilirliği etkileyecektir, ne yaptığınızı bildiğinizden emin olun."
         },
         {
-          "label":"Pass percentage",
+          "label":"Geçiş yüzdesi",
           "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         },
         {
           "label":"Show score points",
-          "description":"Show points earned for each answer."
+          "description":"Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"Onay kutucuğunu seçin",
       "fields":[
         {
           "label":"Üstbaşlık Metni",
-          "default":"Finish ?"
+          "default":"Bitir?"
         },
         {
           "label":"Gövde Metni",
-          "default":"Are you sure you wish to finish ?"
+          "default":"Tamamlamak istediğinizden emin misiniz?"
         },
         {
           "label":"İptal et butonu etiketi",
@@ -212,28 +212,28 @@
         },
         {
           "label":"Onay butonu etiketi",
-          "default":"Finish"
+          "default":"Bitir"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"Yeniden dene onay kutucuğu",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"Üstbaşlık Metni",
+          "default":"Yeniden dene?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"Gövde Metni",
+          "default":"Yeniden denemek istediğinizden emin misiniz?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"İptal et butonu etiketi",
+          "default":"İptal et"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"Onay butonu etiketi",
+          "default":"Onayla"
         }
       ]
     }
