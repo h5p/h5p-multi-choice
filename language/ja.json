@@ -54,7 +54,7 @@
             }
           ],
           "label":"ある得点範囲に対して、カスタムフィードバックを定義します。",
-          "description":"例: 0-20% 低得点、 21-91% 平均点、 91-100% 高得点 !",
+          "description":"Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
           "entity":"範囲",
           "field":{
             "fields":[
@@ -191,7 +191,7 @@
         },
         {
           "label":"得点ポイントを表示",
-          "description":"それぞれの解答で得られたポイントを表示"
+          "description":"Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
         }
       ]
     },
