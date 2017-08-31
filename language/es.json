@@ -4,7 +4,7 @@
       "label":"Media",
       "fields":[
         {
-          "label":"Type",
+          "label":"Tipo",
           "description":"Optional media to display above the question."
         }
       ]
@@ -19,7 +19,7 @@
         "label":"Option",
         "fields":[
           {
-            "label":"Text"
+            "label":"Texto"
           },
           {
             "label":"Correct"
@@ -50,11 +50,11 @@
         {
           "widgets":[
             {
-              "label":"Default"
+              "label":"Predeterminado"
             }
           ],
           "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "description":"Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
           "entity":"range",
           "field":{
             "fields":[
@@ -82,11 +82,11 @@
         },
         {
           "label":"Show solution button label",
-          "default":"Show solution"
+          "default":"Mostrar solución"
         },
         {
           "label":"Retry button label",
-          "default":"Retry"
+          "default":"Reintentar"
         },
         {
           "label":"Tip label",
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "label":"Behavioural settings",
+      "label":"Ajustes de comportamiento",
       "description":"These options will let you control how the task behaves.",
       "fields":[
         {
@@ -191,7 +191,7 @@
         },
         {
           "label":"Show score points",
-          "description":"Show points earned for each answer."
+          "description":"Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
         }
       ]
     },
