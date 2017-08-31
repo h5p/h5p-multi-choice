@@ -45,21 +45,21 @@
       }
     },
     {
-      "label":"Overall Feedback",
+      "label":"Hintergrunddeckkraft für bewegliche Elemente",
       "fields":[
         {
           "widgets":[
             {
-              "label":"Default"
+              "label":"Vorgabe"
             }
           ],
-          "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
-          "entity":"range",
+          "label":"Benutzerdefinierte Rückmeldung für jeden Punkte-Bereich definieren",
+          "description":"Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity":"Bereich",
           "field":{
             "fields":[
               {
-                "label":"Score Range"
+                "label":"Punkte-Bereich"
               },
               {
                 
@@ -74,137 +74,137 @@
       ]
     },
     {
-      "label":"User interface translations for multichoice",
+      "label":"Benutzerinterface Übersetzungen für Mehrfachauswahl",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"Beschriftung für den \"Überprüfen\"-Button",
+          "default":"Überprüfen"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"Beschriftung für den \"Lösung anzeigen\"-Button",
+          "default":"Lösung anzeigen"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Beschriftung des \"Beenden\"-Buttons",
+          "default":"Wiederholen"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"Tippbeschriftung",
+          "default":"Tipp anzeigen"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"Beschriftung für den Punktebalken",
+          "default":"Punkte"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Tipp verfügbar (nicht angezeigt)",
+          "default":"Tipp verfügbar",
+          "description":"Text für \"Readspeaker\""
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Rückmeldung verfügbar (nicht angezeigt)",
+          "default":"Rückmeldung verfügbar",
+          "description":"Text für \"Readspeaker\""
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Rückmeldung lesen (nicht angezeigt)",
+          "default":"Rückmeldung lesen",
+          "description":"Text für \"Readspeaker\""
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Falsche Antwort (nicht angezeigt)",
+          "default":"Falsche Antwort",
+          "description":"Text für \"Readspeaker\""
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Korrekte Antwort (nicht angezeigt)",
+          "default":"Richtige Antwort",
+          "description":"Text für \"Readspeaker\""
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"Option hätte ausgewählt werden sollen",
+          "default":"Hätte ausgewählt werden müssen"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label":"Option hätte nicht ausgewählt werden sollen",
+          "default":"Hätte nicht ausgewählt werden sollen"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"Text für \"Benötigt Antwort\"-Hinweis",
+          "default":"Eine Antwort ist notwendig, bevor die Lösung angesehen werden kann."
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
+      "label":"Verhaltenseinstellungen",
+      "description":"Diese Optionen legen fest, wie die Aufgabe auf Eingaben reagiert.",
       "fields":[
         {
-          "label":"Enable \"Retry\" button"
+          "label":"\"Wiederholen\"-Button anzeigen"
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label":"\"Lösung zeigen\"-Button anzeigen"
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
+          "label":"Fragentyp",
+          "description":"Wählen des Aussehens und des Verhaltens der Frage",
           "default":"auto",
           "options":[
             {
-              "label":"Automatic"
+              "label":"Automatisch"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label":"Multiple Choice (Checkboxen)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label":"Einfachauswahl (Radiobuttons)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label":"Einen Punkt für die ganze Aufgabe vergeben",
+          "description":"Aktivieren, um insgesamt einen Punkt für Multiple-Choice-Antworten zu vergeben. Dies ist keine Option im \"Single Choice\"-Modus."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label":"Antworten zufällig anordnen",
+          "description":"Aktivieren, um die Fragen auf dem Bildschirm zufällig anzuordnen."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label":"Benutzereingabe erforderlich machen, bevor die Antwort angesehen werden kann"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label":"Bilderzoom für Bilder-Fragen deaktivieren"
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label":"Bestätigungsdialog beim Klicken auf \"Überprüfen\" anzeigen"
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label":"Bestätigungsdialog beim Klicken auf \"Wiederholen\" anzeigen"
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label":"Antworten automatisch überprüfen",
+          "description":"Wenn diese Option gewählt wird, leidet die Barrierefreiheit. Sei dir sicher, was du tust."
         },
         {
-          "label":"Pass percentage",
+          "label":"Prozentsatz zum Bestehen",
           "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         },
         {
           "label":"Show score points",
-          "description":"Show points earned for each answer."
+          "description":"Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"Bestätigungsdialog beim Prüfen",
       "fields":[
         {
           "label":"Titel-Text",
-          "default":"Finish ?"
+          "default":"Beenden?"
         },
         {
           "label":"Body-Text",
-          "default":"Are you sure you wish to finish ?"
+          "default":"Ganz sicher beenden?"
         },
         {
           "label":"Beschriftung des \"Abbrechen\"-Buttons",
@@ -212,28 +212,28 @@
         },
         {
           "label":"Beschriftung des \"Bestätigen\"-Buttons",
-          "default":"Finish"
+          "default":"Beenden"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"Bestätigungsdialog beim Wiederholen",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"Titel-Text",
+          "default":"Wiederholen?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"Body-Text",
+          "default":"Ganz sicher wiederholen?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Beschriftung des \"Abbrechen\"-Buttons",
+          "default":"Abbrechen"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"Beschriftung des \"Bestätigen\"-Buttons",
+          "default":"Bestätigen"
         }
       ]
     }
