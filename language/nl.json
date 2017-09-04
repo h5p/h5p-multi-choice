@@ -1,43 +1,43 @@
 {
   "semantics":[
     {
-      "label":"Multimedia",
+      "label":"Media",
       "fields":[
         {
           "label":"Type",
-          "description":"Eit valfritt multimediaelement som skal visast over spørsmålet."
+          "description":"Optionele media, die boven de vragen worden getoond"
         }
       ]
     },
     {
-      "label":"Spørsmål"
+      "label":"Vraag"
     },
     {
-      "label":"Svaralternativ",
-      "entity":"verdi",
+      "label":"Beschikbare opties",
+      "entity":"optie",
       "field":{
-        "label":"Svaralternativ",
+        "label":"Optie",
         "fields":[
           {
             "label":"Tekst"
           },
           {
-            "label":"Riktig"
+            "label":"Juist"
           },
           {
-            "label":"Tips",
+            "label":"Tips en feedback",
             "fields":[
               {
-                "label":"Tipstekst",
-                "description":"Hint for brukaren. Dette vil visast før brukaren sjekkar sine svar."
+                "label":"Tekst voor tip",
+                "description":"Hint voor de gebruiker. Deze zal verschijnen voordat de gebruiker zijn antwoord(en) controleert."
               },
               {
-                "label":"Melding som visast hvis svaret er valgt",
-                "description":"Melding som visast under svaret på \"check\" hvis svaret er valgt."
+                "label":"Weer te geven bericht als antwoord is geselecteerd",
+                "description":"Bericht zal onder antwoord verschijnen bij controleren als dit antwoord is geselecteerd."
               },
               {
-                "label":"Melding som visast hvis svaret ikkje er valgt",
-                "description":"Melding som visast under svaret på \"check\" hvis andre svar er valgt."
+                "label":"Weer te geven bericht als antwoord niet is geselecteerd",
+                "description":"Bericht zal onder het antwoord verschijnen bij controleren als dit antwoord niet is geselecteerd."
               }
             ]
           }
@@ -199,19 +199,19 @@
       "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"Tittel",
+          "label":"Koptekst",
           "default":"Finish ?"
         },
         {
-          "label":"Tekst",
+          "label":"Bodytekst",
           "default":"Are you sure you wish to finish ?"
         },
         {
-          "label":"Avbryt etikett",
-          "default":"Avbrytt"
+          "label":"Tekst van de \"Annuleer\"-knop",
+          "default":"Annuleren"
         },
         {
-          "label":"Bekreft etikett",
+          "label":"Tekst van de \"Bevestig\"-knop",
           "default":"Finish"
         }
       ]
