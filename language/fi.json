@@ -5,7 +5,7 @@
       "fields": [
         {
           "label": "Tyyppi",
-          "description": "Vapaavalintainen kuva tai video joka näkyy kysymyksen yläpuolella."
+          "description": "Valinnainen kuva tai video, joka näkyy kysymyksen yläpuolella."
         }
       ]
     },
@@ -14,7 +14,7 @@
     },
     {
       "label": "Vaihtoehdot",
-      "entity": "vaihtoehto",
+      "entity": "Vaihtoehto",
       "field": {
         "label": "Vaihtoehto",
         "fields": [
@@ -36,7 +36,7 @@
                 "description": "Palaute ilmestyy vastauksen alle, kun vastaus tarkistetaan ja vastaus on valittuna."
               },
               {
-                "label": "Palaute valitsemattomaan vastaukseen",
+                "label": "Palaute vastaukseen, joka ei ole valittuna",
                 "description": "Palaute ilmestyy vastauksen alle, kun vastaus tarkistetaan ja vastaus ei ole valittuna."
               }
             ]
@@ -45,18 +45,18 @@
       }
     },
     {
-      "label": "Monivalintatehtävän käyttöliittymän käännökset",
+      "label": "Muokkaa käännöksiä",
       "fields": [
         {
-          "label": "Nimike nappiin \"Tarkista\"",
+          "label": "Painikkeen \"Tarkista\" nimi",
           "default": "Tarkista"
         },
         {
-          "label": "Nimike nappiin \"Katso vastaus\"",
+          "label": "Painikkeen \"Katso vastaus\" nimi",
           "default": "Katso vastaus"
         },
         {
-          "label": "Nimike nappiin \"Yritä uudelleen\"",
+          "label": "Painikkeen \"Yritä uudelleen\" nimi",
           "default": "Yritä uudelleen"
         },
         {
@@ -73,7 +73,7 @@
           "label": "Palaute väärästä vastauksesta"
         },
         {
-          "label": "Tulospalkin nimike",
+          "label": "Tulospalkin nimi",
           "default": "Tulos"
         },
         {
@@ -104,31 +104,31 @@
         {
           "label": "Palauteteksti",
           "default": "Sait @score\/@total pistettä",
-          "description": "Palauteteksti, jossa käytettävissä muuttujat: @score ja @total. Esimerkki: 'Olet saanut @score pistettä. Maksimi: @total'"
+          "description": "Palauteteksti, käytettävissä on seuraavat muuttujat: @score ja @total. Esimerkki: 'Olet saanut @score pistettä. Maksimi: @total'"
         },
         {
-          "label": "Valinta olisi pitänyt olla valittuna",
-          "default": "Valinta olisi pitänyt olla valittuna"
+          "label": "Vaihtoehdon olisi pitänyt olla valittuna",
+          "default": "Vaihtoehdon olisi pitänyt olla valittuna"
         },
         {
-          "label": "Valinta ei olisi pitänyt olla valittuna",
-          "default": "Valinta ei olisi pitänyt olla valittuna"
+          "label": "Vaihtoehdon ei olisi pitänyt olla valittuna",
+          "default": "Vaihtoehdon ei olisi pitänyt olla valittuna"
         },
         {
-          "label": "Teksti viestiin \"Pakollinen vastaus\"",
-          "default": "Ole hyvä ja vastaa ennen kuin näet ratkaisun"
+          "label": "Viestin \"Pakollinen vastaus\" teksti",
+          "default": "Vastaa ennen kuin katsot ratkaisun"
         }
       ]
     },
     {
       "label": "Yleisasetukset",
-      "description": "Näillä valinnoilla voit hallita tehtävän käyttäytymistä.",
+      "description": "Näillä valinnoilla voit ohjailla tehtävän toimintoja.",
       "fields": [
         {
-          "label": "Salli nappi  \"Yritä uudelleen\""
+          "label": "Salli painike  \"Yritä uudelleen\""
         },
         {
-          "label": "Salli nappi \"Katso vastaus\""
+          "label": "Salli painike \"Katso vastaus\""
         },
         {
           "label": "Kysymystyyppi",
@@ -154,65 +154,65 @@
           "description": "Vastaukset sekoitetaan näkymään satunnaisessa järjestyksessä."
         },
         {
-          "label": "Vaadi vastaus ennen kuin ratkaisun saa nähdä"
+          "label": "Vaadi vastaus ennen kuin ratkaisun saa katsoa"
         },
         {
-          "label": "Älä salli kuvan suurentamista kysymykseen liitetylle kuvalle"
+          "label": "Älä salli kysymykseen liitetyn kuvan suurentamista"
         },
         {
-          "label": "Näytä varmistusdialogi kun klikataan \"Tarkista\""
+          "label": "Näytä varmistusdialogi, kun käyttäjä klikkaa \"Tarkista\""
         },
         {
-          "label": "Näytä varmistusdialogi kun klikataan \"Yritä uudelleen\""
+          "label": "Näytä varmistusdialogi, kun käyttäjä klikkaa \"Yritä uudelleen\""
         },
         {
-          "label": "Tarkista automaattisesti vastaukset",
+          "label": "Tarkista vastaukset automaattisesti",
           "description": "Tämä saattaa heikentää esteettömyyttä, varmista mitä olet tekemässä."
         },
         {
-          "label": "Läpipääsyprosentti",
+          "label": "Läpäisyprosentti",
           "description": "Kuinka monta prosenttia maksimipisteistä vaaditaan tehtävän läpäisyyn."
         }
       ]
     },
     {
-      "label": "Varmistusikkuna valinnalle \"Tarkista\"",
+      "label": "Painikkeen \"Tarkista\" varmistusdialogi",
       "fields": [
         {
           "label": "Otsikkoteksti",
-          "default": "Valmis ?"
+          "default": "Valmis?"
         },
         {
           "label": "Leipäteksti",
-          "default": "Oletko varma, että olet valmis ?"
+          "default": "Haluatko tarkistaa?"
         },
         {
-          "label": "Teksti napille Ei",
-          "default": "Ei"
+          "label": "Painikkeen Ei teksti",
+          "default": "En"
         },
         {
-          "label": "Teksti napille Kyllä",
+          "label": "Painikkeen Kyllä teksti",
           "default": "Kyllä"
         }
       ]
     },
     {
-      "label": "Varmistusdialogi valinnalle \"Yritä uudelleen\"",
+      "label": "Painikkeen \"Yritä uudelleen\" varmistusdialogi",
       "fields": [
         {
           "label": "Otsikkoteksti",
-          "default": "Yritä uudelleen ?"
+          "default": "Yritätkö uudelleen?"
         },
         {
           "label": "Leipäteksti",
-          "default": "Oletko varma, että haluat aloittaa uuden yrityksen ?"
+          "default": "Haluatko yrittää uudelleen?"
         },
         {
-          "label": "Teksti napille Ei",
-          "default": "Ei"
+          "label": "Painikkeen Ei teksti",
+          "default": "En"
         },
         {
-          "label": "Teksti napille Kyllä",
+          "label": "Painikkeen Kyllä teksti",
           "default": "Kyllä"
         }
       ]
