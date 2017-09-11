@@ -13,7 +13,7 @@
       "label":"Spørgsmål"
     },
     {
-      "label":"Available options",
+      "label":"Valgmuligheder",
       "entity":"option",
       "field":{
         "label":"Option",
