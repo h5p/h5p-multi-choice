@@ -1,16 +1,16 @@
 {
   "semantics":[
     {
-      "label":"Media",
+      "label":"Medie",
       "fields":[
         {
           "label":"Type",
-          "description":"Optional media to display above the question."
+          "description":"Vis valgfrit medie over spørgsmålet."
         }
       ]
     },
     {
-      "label":"Question"
+      "label":"Spørgsmål"
     },
     {
       "label":"Available options",
