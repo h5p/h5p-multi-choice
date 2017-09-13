@@ -32,11 +32,11 @@
                 "description":"Indication pour l'utilisateur. Ce texte s'affiche avant que l'utilisateur ne valide la/les réponse(s)."
               },
               {
-                "label":"Commentaire si cette réponse est sélectionnée",
+                "label":"Commentaire (si cette réponse a été sélectionnée)",
                 "description":"Cette indication s'affiche sous la réponse quand l'utilisateur clique sur Vérifier."
               },
               {
-                "label":"Commentaire si cette réponse n'est pas sélectionnée",
+                "label":"Commentaire (si cette réponse n'a pas été sélectionnée)",
                 "description":"Après vérification par l'utilisateur, s'affiche sous la réponse si celle-ci n'a pas été sélectionnée."
               }
             ]
@@ -86,7 +86,7 @@
         },
         {
           "label":"Le texte qui apparaît sur votre bouton dans le champ Réessayer", 
-          "default":"Réessayer"
+          "default":"Recommencer"
         },
         {
           "label":"Le texte qui apparaît sur votre bouton dans le champ Afficher les astuces",
