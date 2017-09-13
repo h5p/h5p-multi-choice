@@ -221,7 +221,7 @@
       "fields":[
         {
           "label":"Header text",
-          "default":"Réessayer?" 
+          "default":"Recommencer?" 
         },
         {
           "label":"Body text",
