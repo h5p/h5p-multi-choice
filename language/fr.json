@@ -5,7 +5,7 @@
       "fields":[
         {
           "label":"Type de média",
-          "description":"Média optionnel à afficher au-dessus de la question."
+          "description":"Média à afficher au-dessus de la question (facultatif)."
         }
       ]
     },
@@ -25,19 +25,19 @@
             "label":"Réponse correcte"
           },
           {
-            "label":"Aides et commentaires",
+            "label":"Aide et feedback",
             "fields":[
               {
-                "label":"Indice",
-                "description":"Indication pour l'utilisateur. Cela sera affiché avant que l'utilisateur ne valide ses réponses."
+                "label":"Astuces",
+                "description":"Indication pour l'utilisateur. Ce texte s'affiche avant que l'utilisateur ne valide la/les réponse(s)."
               },
               {
-                "label":"Commentaire",
-                "description":"Ce commentaire sera affiché quand l'utilisateur vérifiera sa réponse."
+                "label":"Commentaire si cette réponse est sélectionnée",
+                "description":"Cette indication s'affiche sous la réponse quand l'utilisateur clique sur Vérifier."
               },
               {
-                "label":"Commentaire de la solution",
-                "description":"Ce commentaire sera affiché quand la solution sera affichée."
+                "label":"Commentaire si cette réponse n'est pas sélectionnée",
+                "description":"Après vérification par l'utilisateur, s'affiche sous la réponse si celle-ci n'a pas été sélectionnée."
               }
             ]
           }
@@ -45,28 +45,28 @@
       }
     },
     {
-      "label":"Overall Feedback",
+      "label":"Feedback général",
       "fields":[
         {
           "widgets":[
             {
-              "label":"Default"
+              "label":"Valeur par défaut"
             }
           ],
-          "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "label":"Ajouter des commentaires personnalisés selon le barème de votre choix",
+          "description":"Par exemple: 0-20% Peux faire mieux, 21-91% Dans la moyenne, 91-100% Bravo!",
           "entity":"range",
           "field":{
             "fields":[
               {
-                "label":"Score Range"
+                "label":"Barème"
               },
               {
                 
               },
               {
-                "label":"Feedback for defined score range",
-                "placeholder":"Fill in the feedback"
+                "label":"Feedback selon le barème", 
+                "placeholder":"Compléter"
               }
             ]
           }
@@ -77,61 +77,61 @@
       "label":"User interface translations for multichoice",
       "fields":[
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label":"Le texte qui apparaît sur votre bouton dans le champ Afficher la réponse",
+          "default":"Afficher la réponse"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label":"Le texte qui apparaît sur votre bouton dans le champ Afficher la solution",
+          "default":"Afficher la solution"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Le texte qui apparaît sur votre bouton dans le champ Réessayer", 
+          "default":"Réessayer"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label":"Le texte qui apparaît sur votre bouton dans le champ Afficher les astuces",
+          "default":"Afficher les astuces"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label":"Le texte qui apparaît sur votre bouton dans le champ Résultats",
+          "default":"Résultats" 
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
+          "label":"Astuce disponible (ne s'affiche pas)",
+          "default":"Astuce disponible",
+          "description":"Accessibilité: le texte de vocalisation du contenu utilisé par ReadSpeaker"
+        },
+        {
+          "label":"Feedback disponible (ne s'affiche pas)",
+          "default":"Feedback disponible",
           "description":"Accessibility text used for readspeakers"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Lire le commentaire (ne s'affiche pas)",
+          "default":"Lire le commentaire",
+          "description":"Accessibilité: le texte de vocalisation du contenu utilisé par ReadSpeaker"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Mauvaise réponse (ne s'affiche pas)",
+          "default":"Mauvaise réponse",
+          "description":"Accessibilité: le texte de vocalisation du contenu utilisé par ReadSpeaker"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"Bonne réponse (ne s'affiche pas)",
+          "default":"Bonne réponse",
+          "description":"Accessibilité: le texte de vocalisation du contenu utilisé par ReadSpeaker"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label":"L'option aurait dû être cochée",
+          "default":"Il fallait cocher ici"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label":"Cette option n'aurait pas dû être cochée",
+          "default":"Il ne fallait pas cocher ici!"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
-        },
-        {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label":"L texte pour le message \"Réponse requise\" ",
+          "default":"Répondez s'il vous plait avant de visionner la solution."
         }
       ]
     },
@@ -221,7 +221,7 @@
       "fields":[
         {
           "label":"Header text",
-          "default":"Retry ?"
+          "default":"Réessayer?" 
         },
         {
           "label":"Body text",
@@ -229,11 +229,11 @@
         },
         {
           "label":"Cancel button label",
-          "default":"Cancel"
+          "default":"Annuler"
         },
         {
           "label":"Confirm button label",
-          "default":"Confirm"
+          "default":"Confirmer"
         }
       ]
     }
