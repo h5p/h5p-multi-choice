@@ -74,7 +74,7 @@
       ]
     },
     {
-      "label":"Brugerflade oversættelse for multichoice",
+      "label":"Brugerflade oversættelse for multichoice", 
       "fields":[
         {
           "label":"Tekst på knap til kontrol af svar",
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "label":"Indstillinger",
+      "label":"Indstillinger for Prøv igen dialog",
       "description":"Disse valg vil bestemme hvordan opgaven vises.",
       "fields":[
         {
@@ -187,53 +187,53 @@
         },
         {
           "label":"Niveau for gennemført",
-          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "description":"Denne indstilling har sjældent en betydning. Dette gælder den nødvendige procentvise totale score der kræves for at få et toint, når indstillingen 'Giv et point for hele opgaven' er valgt og for at opnå result.success in xAPI bedømmelser."
         },
         {
-          "label":"Show score points",
-          "description":"Show points earned for each answer."
+          "label":"Vis opnåede antal point",
+          "description":"Vis opnåede antal points for hver enkelt opgave."
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
+      "label":"Indstillinger for tjek svar dialog",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Finish ?"
+          "label":"Tekst overskrift",
+          "default":"Færdig ?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to finish ?"
+          "label":"Tekst afsnit",
+          "default":"Er du sikker på at du er færdig ?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Tekst knap fortryd",
+          "default":"Fortryd"
         },
         {
-          "label":"Confirm button label",
-          "default":"Finish"
+          "label":"Tekst knap bekræft",
+          "default":"Færdig"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
+      "label":"Prøv igen dialog",
       "fields":[
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label":"Tekst overskrift",
+          "default":"Prøv igen ?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label":"Tekst afsnit",
+          "default":"Er sikker på at du vil prøve igen ?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Tekst knap fortryd",
+          "default":"Fortryd"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label":"Tekst knap bekræft",
+          "default":"Bekræft"
         }
       ]
     }
