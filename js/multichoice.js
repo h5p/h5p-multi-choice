@@ -85,6 +85,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         correct: true
       }
     ],
+    overallFeedback: [],
     weight: 1,
     userAnswers: [],
     UI: {
@@ -95,7 +96,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       tipAvailable: "Tip available",
       feedbackAvailable: "Feedback available",
       readFeedback: 'Read feedback',
-      feedback: 'You got @score of @total points',
       shouldCheck: "Should have been checked",
       shouldNotCheck: "Should not have been checked",
       noInput: 'Input is required before viewing the solution'
@@ -109,13 +109,12 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       showSolutionsRequiresInput: true,
       disableImageZooming: false,
       autoCheck: false,
-      passPercentage: 100
-    },
-    overrideSettings: {}
+      passPercentage: 100,
+      showScorePoints: true
+    }
   };
   var template = new EJS({text: texttemplate});
-  var params = $.extend(true, {}, defaults, options);
-
+  var params = $.extend(true, defaults, options);
   // Keep track of number of correct choices
   var numCorrect = 0;
 
@@ -233,7 +232,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     // Create tips:
     var $answers = $('.h5p-answer', $myDom).each(function (i) {
-      var $tipContainer = $(this);
 
       var tip = params.answers[i].tipsAndFeedback.tip;
       if (tip === undefined) {
@@ -249,12 +247,16 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       if (!tipContent.length) {
         return; // Empty tip
       }
+      else {
+        $(this).addClass('h5p-has-tip');
+      }
 
       // Add tip
       var $wrap = $('<div/>', {
         'class': 'h5p-multichoice-tipwrap',
         'aria-label': params.UI.tipAvailable + '.'
       });
+
       var $multichoiceTip = $('<div>', {
         'role': 'button',
         'tabindex': 0,
@@ -263,7 +265,18 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         'aria-expanded': false,
         'class': 'multichoice-tip',
         appendTo: $wrap
-      }).click(function () {
+      });
+
+      var tipIconHtml = '<span class="joubel-icon-tip-normal">' +
+                          '<span class="h5p-icon-shadow"></span>' +
+                          '<span class="h5p-icon-speech-bubble"></span>' +
+                          '<span class="h5p-icon-info"></span>' +
+                        '</span>';
+
+      $multichoiceTip.append(tipIconHtml);
+
+      $multichoiceTip.click(function () {
+        var $tipContainer = $multichoiceTip.parents('.h5p-answer');
         var openFeedback = !$tipContainer.children('.h5p-feedback-dialog').is($feedbackDialog);
         removeFeedbackDialog();
 
@@ -306,6 +319,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       if ($ans.attr('aria-disabled') === 'true') {
         return;
       }
+      self.answered = true;
       var num = parseInt($ans.data('id'));
       if (params.behaviour.singleAnswer) {
         // Store answer
@@ -340,7 +354,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       }
 
       self.triggerXAPI('interacted');
-      self.hideSolutions();
+      hideSolution($ans);
 
       if (params.userAnswers.length) {
         self.showButton('check-answer');
@@ -366,7 +380,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     };
 
     $answers.click(function () {
-      self.answered = true;
       toggleCheck($(this));
     }).keydown(function (e) {
       if (e.keyCode === 32) { // Space bar
@@ -462,7 +475,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           html: params.UI.shouldNotCheck + '.'
         }));
       }
-    });
+    }).find('.h5p-question-plus-one, .h5p-question-minus-one').remove();
 
     // Make sure input is disabled in solution mode
     disableInput();
@@ -489,21 +502,30 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   /**
+   * Hide solution for the given answer(s)
+   *
+   * @private
+   * @param {H5P.jQuery} $answer
+   */
+  var hideSolution = function ($answer) {
+    $answer
+      .removeClass('h5p-correct')
+      .removeClass('h5p-wrong')
+      .removeClass('h5p-should')
+      .removeClass('h5p-should-not')
+      .removeClass('h5p-has-feedback')
+      .find('.h5p-question-plus-one, .h5p-question-minus-one, .h5p-answer-icon, .h5p-solution-icon, .h5p-feedback-dialog').remove();
+  };
+
+  /**
    *
    */
   this.hideSolutions = function () {
     solutionsVisible = false;
 
-    $('.h5p-answer', $myDom)
-      .removeClass('h5p-correct')
-      .removeClass('h5p-wrong')
-      .removeClass('h5p-should')
-      .removeClass('h5p-should-not')
-      .removeClass('h5p-has-feedback');
+    hideSolution($('.h5p-answer', $myDom));
 
-    $('.h5p-answer-icon, .h5p-solution-icon, .h5p-feedback-dialog', $myDom).remove();
-
-    this.setFeedback(); // Reset feedback
+    this.removeFeedback(); // Reset feedback
 
     self.trigger('resize');
   };
@@ -585,6 +607,22 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @private
    */
   var addButtons = function () {
+    var $content = $('[data-content-id="' + self.contentId + '"].h5p-content');
+    var $containerParents = $content.parents('.h5p-container');
+
+    // select find container to attach dialogs to
+    var $container;
+    if($containerParents.length !== 0) {
+      // use parent highest up if any
+      $container = $containerParents.last();
+    }
+    else if($content.length !== 0){
+      $container = $content;
+    }
+    else  {
+      $container = $(document.body);
+    }
+
     // Show solution button
     self.addButton('show-solution', params.UI.showSolutionButton, function () {
 
@@ -597,7 +635,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         calcScore();
         self.showAllSolutions();
       }
-      
+
     }, false);
 
     // Check solution button
@@ -613,8 +651,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           confirmationDialog: {
             enable: params.behaviour.confirmCheckDialog,
             l10n: params.confirmCheck,
-            instance: params.overrideSettings.instance,
-            $parentElement: params.overrideSettings.$confirmationDialogParent
+            instance: self,
+            $parentElement: $container
           }
         }
       );
@@ -630,12 +668,29 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       enableInput();
       $myDom.find('.h5p-feedback-available').remove();
       self.answered = false;
+      if (params.behaviour.randomAnswers) {
+        // reshuffle answers
+       oldIdMap = idMap;
+       idMap = getShuffleMap();
+       var answersDisplayed = $myDom.find('.h5p-answer');
+       // remember tips
+       var tip = [];
+       for (i = 0; i < answersDisplayed.length; i++) {
+         tip[i] = $(answersDisplayed[i]).find('.h5p-multichoice-tipwrap');
+       }
+       // Those two loops cannot be merged or you'll screw up your tips
+       for (i = 0; i < answersDisplayed.length; i++) {
+         // move tips and answers on display
+         $(answersDisplayed[i]).find('.h5p-alternative-inner').html(params.answers[i].text);
+         $(tip[i]).detach().appendTo($(answersDisplayed[idMap.indexOf(oldIdMap[i])]).find('.h5p-alternative-container'));
+       }
+     }
     }, false, {}, {
       confirmationDialog: {
         enable: params.behaviour.confirmRetryDialog,
         l10n: params.confirmRetry,
-        instance: params.overrideSettings.instance,
-        $parentElement: params.overrideSettings.$confirmationDialogParent
+        instance: self,
+        $parentElement: $container
       }
     });
   };
@@ -664,7 +719,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
             return false;
           }
         }
-      },
+      }
     });
     $wrap.appendTo($e);
   };
@@ -677,23 +732,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @return {string}
    */
   var getFeedbackText = function (score, max) {
-    var feedback;
-
     var ratio = (score / max);
-    if (isFinite(ratio) && ratio > 0) {
-      if (ratio >= 1 && params.UI.correctText) {
-        feedback = params.UI.correctText;
-      }
-      else if (params.UI.almostText) {
-        feedback = params.UI.almostText;
-      }
-    }
-    else if (params.UI.wrongText) {
-      feedback = params.UI.wrongText;
-    }
-    if (!feedback) {
-      feedback = params.UI.feedback;
-    }
+
+    var feedback = H5P.Question.determineOverallFeedback(params.overallFeedback, ratio);
 
     return feedback.replace('@score', score).replace('@total', max);
   };
@@ -704,6 +745,11 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @param {boolean} [skipFeedback] Skip showing feedback if true
    */
   this.showCheckSolution = function (skipFeedback) {
+    var scorePoints;
+    if (!(params.behaviour.singleAnswer || params.behaviour.singlePoint || !params.behaviour.showScorePoints)) {
+      scorePoints = new H5P.Question.ScorePoints();
+    }
+
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = $(e);
       var a = params.answers[i];
@@ -720,6 +766,14 @@ H5P.MultiChoice = function (options, contentId, contentData) {
             'class': 'h5p-answer-icon',
             html: params.UI.wrongAnswer + '.'
           }));
+        }
+
+        if (scorePoints) {
+          var alternativeContainer = $e[0].querySelector('.h5p-alternative-container');
+
+          if (!params.behaviour.autoCheck || alternativeContainer.querySelector('.h5p-question-plus-one, .h5p-question-minus-one') === null) {
+            alternativeContainer.appendChild(scorePoints.getElement(a.correct));
+          }
         }
       }
 
@@ -908,6 +962,23 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     xAPIEvent.data.statement.result.response = response;
   };
 
+  /**
+   * Create a map pointing from original answers to shuffled answers
+   *
+   * @return {number[]} map pointing from original answers to shuffled answers
+   */
+  var getShuffleMap = function() {
+    var origOrder = $.extend([], params.answers);
+    params.answers = H5P.shuffleArray(params.answers);
+
+    // Create a map from the new id to the old one
+    var idMap = [];
+    for (i = 0; i < params.answers.length; i++) {
+      idMap[i] = params.answers[i].originalOrder;
+    }
+    return idMap;
+  }
+
   // Initialization code
   // Randomize order, if requested
   var idMap;
@@ -916,14 +987,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     params.answers[i].originalOrder = i;
   }
   if (params.behaviour.randomAnswers) {
-    var origOrder = $.extend([], params.answers);
-    params.answers = H5P.shuffleArray(params.answers);
-
-    // Create a map from the new id to the old one
-    idMap = [];
-    for (i = 0; i < params.answers.length; i++) {
-      idMap[i] = params.answers[i].originalOrder;
-    }
+    idMap = getShuffleMap();
   }
 
   // Start with an empty set of user answers.
@@ -1018,7 +1082,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }
     return state;
   };
-
 
   /**
    * Check if user has given an answer.
