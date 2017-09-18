@@ -1,43 +1,43 @@
 {
   "semantics":[
     {
-      "label":"Media",
+      "label":"Recurs",
       "fields":[
         {
-          "label":"Type",
-          "description":"Optional media to display above the question."
+          "label":"Tipus",
+          "description":"Recursos opcionals per mostrar al damunt de la pregunta."
         }
       ]
     },
     {
-      "label":"Question"
+      "label":"Pregunta"
     },
     {
-      "label":"Available options",
-      "entity":"option",
+      "label":"Opcions disponibles",
+      "entity":"opció",
       "field":{
-        "label":"Option",
+        "label":"Opció",
         "fields":[
           {
-            "label":"Teksti"
+            "label":"Text"
           },
           {
-            "label":"Correct"
+            "label":"Correcte"
           },
           {
-            "label":"Tips and feedback",
+            "label":"Suggerències i informació de retorn",
             "fields":[
               {
-                "label":"Tip text",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "label":"Text de la pista",
+                "description":"Pista per a l'usuari. Això apareixerà abans que l'usuari confirmi la seva resposta/Respostes."
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label":"Aquest missatge es mostra si la resposta està seleccionada",
+                "description":"Missatge que apareixerà sota la resposta seleccionada al validar."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "label":"Missatge que es mostra si no s'ha seleccionat cap resposta",
+                "description":"Missatge que apareixerà sota la resposta si aquesta resposta no està seleccionada al validar."
               }
             ]
           }
@@ -199,19 +199,19 @@
       "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"Header text",
+          "label":"Títol",
           "default":"Finish ?"
         },
         {
-          "label":"Leipäteksti",
+          "label":"Cos de text",
           "default":"Are you sure you wish to finish ?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"Etiqueta del botó \"Cancel•lar\"",
+          "default":"Cancel·lar"
         },
         {
-          "label":"Confirm button label",
+          "label":"Etiqueta del botó \"Confirmar\"",
           "default":"Finish"
         }
       ]

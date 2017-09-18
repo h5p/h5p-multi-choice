@@ -1,43 +1,43 @@
 {
   "semantics":[
     {
-      "label":"Media",
+      "label":"Ortam",
       "fields":[
         {
-          "label":"Type",
-          "description":"Optional media to display above the question."
+          "label":"Yazınız",
+          "description":"Soru üzerinde görüntülenecek isteğe bağlı ortam."
         }
       ]
     },
     {
-      "label":"Question"
+      "label":"Soru"
     },
     {
-      "label":"Available options",
-      "entity":"option",
+      "label":"Kullanılabilir seçenekler",
+      "entity":"seçenek",
       "field":{
-        "label":"Option",
+        "label":"Seçenek",
         "fields":[
           {
-            "label":"Teksti"
+            "label":"Metin"
           },
           {
-            "label":"Correct"
+            "label":"Doğru"
           },
           {
-            "label":"Tips and feedback",
+            "label":"İpuçları ve geri bildirim",
             "fields":[
               {
-                "label":"Tip text",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "label":"İpucu metni",
+                "description":"Kullanıcı için ipucu. Kullanıcı cevabını/cevaplarını kontrol etmeden önce bu görünecektir."
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label":"Cevap seçilirse görüntülenecek ileti",
+                "description":"Bu cevap seçilirse \"kontrol et\" üzerindeki cevabın altında ileti görünecek."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "label":"Cevap seçilmezse görüntülenecek ileti",
+                "description":"Bu cevap seçilmezse \"kontrol et\" üzerindeki cevabın altında ileti görünecek."
               }
             ]
           }
@@ -199,19 +199,19 @@
       "label":"Check confirmation dialog",
       "fields":[
         {
-          "label":"Header text",
+          "label":"Üstbaşlık Metni",
           "default":"Finish ?"
         },
         {
-          "label":"Leipäteksti",
+          "label":"Gövde Metni",
           "default":"Are you sure you wish to finish ?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label":"İptal et butonu etiketi",
+          "default":"İptal et"
         },
         {
-          "label":"Confirm button label",
+          "label":"Onay butonu etiketi",
           "default":"Finish"
         }
       ]

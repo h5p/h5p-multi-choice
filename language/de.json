@@ -1,43 +1,43 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Medien",
-      "fields": [
+      "label":"Inhalte",
+      "fields":[
         {
-          "label": "Typ",
-          "description": "Optionale Medien, die über der Frage angezeigt werden können."
+          "label":"Typ",
+          "description":"Optionale Inhalte, die über der Frage dargestellt werden"
         }
       ]
     },
     {
-      "label": "Frage"
+      "label":"Frage"
     },
     {
-      "label": "Verfügbare Optionen",
-      "entity": "option",
-      "field": {
-        "label": "Option",
-        "fields": [
+      "label":"Verfügbare Optionen",
+      "entity":"Option",
+      "field":{
+        "label":"Option",
+        "fields":[
           {
-            "label": "Text"
+            "label":"Text"
           },
           {
-            "label": "Korrekt"
+            "label":"Korrekt!"
           },
           {
-            "label": "Tipps und Rückmeldung",
-            "fields": [
+            "label":"Tipps und Rückmeldung",
+            "fields":[
               {
-                "label": "Tipptext",
-                "description": "Hinweis für den Anwender. Wird angezeigt, bevor der Anwender seine Antwort/en prüft."
+                "label":"Tipp-Text",
+                "description":"Hinweis für den Anwender. Wird angezeigt, bevor der Anwender seine Antwort/en prüft."
               },
               {
-                "label": "Nachricht, wenn Antwort gewählt wurde",
-                "description": "Nachricht wird unter der Antwort nach Klick auf \"Überprüfen\" angezeigt, wenn die Antwort gewählt wurde."
+                "label":"Nachricht, wenn Antwort gewählt wurde",
+                "description":"Nachricht wird unter der Antwort nach Klick auf \"Überprüfen\" angezeigt, wenn die Antwort gewählt wurde."
               },
               {
-                "label": "Nachricht, wenn Antwort nicht gewählt wurde",
-                "description": "Nachricht wird unter der Antwort nach Klick auf \"Überprüfen\" angezeigt, wenn die Antwort nicht gewählt wurde."
+                "label":"Nachricht, wenn Antwort nicht gewählt wurde",
+                "description":"Nachricht wird unter der Antwort nach Klick auf \"Überprüfen\" angezeigt, wenn die Antwort nicht gewählt wurde."
               }
             ]
           }
@@ -45,175 +45,195 @@
       }
     },
     {
-      "label": "Benutzerinterface Übersetzungen für Mehrfachauswahl",
-      "fields": [
+      "label":"Gesamt-Feedback",
+      "fields":[
         {
-          "label": "Beschriftung für den \"Überprüfen\"-Button",
-          "default": "Überprüfen"
-        },
-        {
-          "label": "Beschriftung für den \"Lösung anzeigen\"-Button",
-          "default": "Lösung anzeigen"
-        },
-        {
-          "label": "Beschriftung für den \"Wiederholen\"-Button",
-          "default": "Wiederholen"
-        },
-        {
-          "label": "Tippbeschriftung",
-          "default": "Tipp anzeigen"
-        },
-        {
-          "label": "Rückmeldung zur korrekten Antwort"
-        },
-        {
-          "label": "Rückmeldung zu einer fast korrekten Antwort"
-        },
-        {
-          "label": "Rückmeldung zu einer inkorrekten Antwort"
-        },
-        {
-          "label": "Beschriftung für den Punktebalken",
-          "default": "Punkte"
-        },
-        {
-          "label": "Tipp verfügbar (nicht angezeigt)",
-          "default": "Tipp verfügbar",
-          "description": "Text für \"Readspeaker\""
-        },
-        {
-          "label": "Rückmeldung verfügbar (nicht angezeigt)",
-          "default": "Rückmeldung verfügbar",
-          "description": "Text für \"Readspeaker\""
-        },
-        {
-          "label": "Rückmeldung lesen (nicht angezeigt)",
-          "default": "Rückmeldung lesen",
-          "description": "Text für \"Readspeaker\""
-        },
-        {
-          "label": "Falsche Antwort (nicht angezeigt)",
-          "default": "Falsche Antwort",
-          "description": "Text für \"Readspeaker\""
-        },
-        {
-          "label": "Korrekte Antwort (nicht angezeigt)",
-          "default": "Korrekte Antwort",
-          "description": "Text für \"Readspeaker\""
-        },
-        {
-          "label": "Rückmeldungstext",
-          "default": "Du hast @score von @total Punkten",
-          "description": "Rückmeldungstext, verfügbare Variablen: @score und @total. Beispiel: 'Du hast @score von @total Punkten.'"
-        },
-        {
-          "label": "Option hätte ausgewählt werden sollen",
-          "default": "Hätte ausgewählt werden müssen"
-        },
-        {
-          "label": "Option hätte nicht ausgewählt werden sollen",
-          "default": "Hätte nicht ausgewählt werden sollen"
-        },
-        {
-          "label": "Text für \"Benötigt Antwort\"-Hinweis",
-          "default": "Eine Antwort ist notwendig, bevor die Lösung angesehen werden kann."
+          "widgets":[
+            {
+              "label":"Default"
+            }
+          ],
+          "label":"Spezifikation des Feedbacks für die einzelnen Bewertungsbereiche",
+          "description":"Beispiel: 0-20% schlechte Leistung, 21-91% durchschnittliche Leistung, 91-100% super Leistung!",
+          "entity":"range",
+          "field":{
+            "fields":[
+              {
+                "label":"Wertungsbereich"
+              },
+              {
+                
+              },
+              {
+                "label":"Feedback für den Wertebereich",
+                "placeholder":"Gebe das Feedback ein"
+              }
+            ]
+          }
         }
       ]
     },
     {
-      "label": "Verhaltenseinstellungen.",
-      "description": "Diese Optionen kontrollieren, wie sich die Aufgabe verhält",
-      "fields": [
+      "label":"User interface translations for multichoice",
+      "fields":[
         {
-          "label": "Aktivieren des \"Wiederholen\"-Buttons"
+          "label":"Check answer button label",
+          "default":"Check"
         },
         {
-          "label": "Aktivieren des \"Lösung anzeigen\"-Buttons"
+          "label":"Show solution button label",
+          "default":"Show solution"
         },
         {
-          "label": "Fragentyp",
-          "description": "Wählen des Aussehens und des Verhaltens der Frage",
-          "options": [
+          "label":"Retry button label",
+          "default":"Retry"
+        },
+        {
+          "label":"Tip label",
+          "default":"Show tip"
+        },
+        {
+          "label":"Score Bar Label",
+          "default":"Score"
+        },
+        {
+          "label":"Tip Available (not displayed)",
+          "default":"Tip available",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Feedback Available (not displayed)",
+          "default":"Feedback available",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Read Feedback (not displayed)",
+          "default":"Read feedback",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Wrong Answer (not displayed)",
+          "default":"Wrong answer",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Correct Answer (not displayed)",
+          "default":"Correct answer",
+          "description":"Accessibility text used for readspeakers"
+        },
+        {
+          "label":"Option should have been checked",
+          "default":"Should have been checked"
+        },
+        {
+          "label":"Option should not have been checked",
+          "default":"Should not have been checked"
+        },
+        {
+          "label":"Text for \"Requires answer\" message",
+          "default":"Please answer before viewing the solution"
+        }
+      ]
+    },
+    {
+      "label":"Einstellungen",
+      "description":"Hier kannst Du einstellen, wie sich die Aufgabe verhält",
+      "fields":[
+        {
+          "label":"Aktiviere \"Wiederholen\" Button"
+        },
+        {
+          "label":"Aktiviere \"Zeige Lösung\" Button"
+        },
+        {
+          "label":"Frageart",
+          "description":"Wähle Aussehen und Verhalten der Frage.",
+          "default":"auto",
+          "options":[
             {
-              "label": "Automatisch"
+              "label":"Automatisch"
             },
             {
-              "label": "Multiple Choice (Checkboxen)"
+              "label":"Multiple Choice (Checkboxen)"
             },
             {
-              "label": "Single Choice (Radio Buttons)"
+              "label":"Single Choice (Radio Buttons)"
             }
           ]
         },
         {
-          "label": "Einen Punkt für die ganze Aufgabe vergeben",
-          "description": "Aktivieren, um insgesamt einen Punkt für Multiple-Choice-Antworten zu vergeben. Dies ist keine Option im \"Single Choice\"-Modus."
+          "label":"Gebe einen Punkt für die Gesamtaufgabe",
+          "description":"Aktiviere die Vergabe eines einzigen Punktes für mehrere korrekte Antworten zusammen. Nur aktiv in Multiple Choice-Fragen"
         },
         {
-          "label": "Antworten zufällig anordnen",
-          "description": "Aktivieren, um die Fragen auf dem Bildschirm zufällig anzuordnen."
+          "label":"Zufällige der Antworten",
+          "description":"Aktiviere, um die Fragen in zufälliger Reihenfolge anzuzeigen."
         },
         {
-          "label": "Benutzereingabe erforderlich machen, bevor die Antwort angesehen werden kann"
+          "label":"Lösung wird erst angezeigt, wenn eine Antwort eingegeben wurde."
         },
         {
-          "label": "Bilderzoom für Bilder zu Fragen deaktivieren."
+          "label":"Deaktiviere das Zoomen des Fragebildes."
         },
         {
-          "label": "Bestätigungsdialog bei \"Überprüfen\" anzeigen"
+          "label":"Zeige Bestätigungsdialog bei \"Check\""
         },
         {
-          "label": "Bestätigungsdialog bei \"Wiederholen\" anzeigen"
+          "label":"Zeige Bestätigungsdialog bei \"Wiederholen\""
         },
         {
-          "label": "Antworten automatisch überprüfen",
-          "description": "Wenn diese Option gewählt wird, leidet die Barrierefreiheit. Sei dir sicher, was du tust."
+          "label":"Automatische Überprüfung der Antworten",
+          "description":"Unter dieser Option wird ggf. die Barrierefreiheit beeinträchtigt."
         },
         {
-          "label": "Prozentsatz zum Bestehen",
-          "description": "Prozentsatz der Gesamtpunktzahl, der nötig ist, um das Quiz zu bestehen"
+          "label":"Mindestanforderung in Prozent",
+          "description":"Diese Einstellung hat oft keinen Effekt. Es ist die Prozentanzahl der Gesamtwertung, um einen Punkt zu erreichen, wenn ein Punkt für die ganze Aufgabe benötigt wird."
+        },
+        {
+          "label":"Zeige erreichte Punkte",
+          "description":"Zeige die erreichten Punkte für jede Antwort."
         }
       ]
     },
     {
-      "label": "Bestätigungsdialog beim Prüfen",
-      "fields": [
+      "label":"Dialog für Bestätigungen",
+      "fields":[
         {
-          "label": "Headertext",
-          "default": "Beenden?"
+          "label":"Titel-Text",
+          "default":"Beenden?"
         },
         {
-          "label": "Bodytext",
-          "default": "Ganz sicher beenden?"
+          "label":"Body-Text",
+          "default":"Bist Du sicher, dass Du beenden möchtest?"
         },
         {
-          "label": "Beschriftung des \"Abbrechen\"-Buttons",
-          "default": "Abbrechen"
+          "label":"Beschriftung des \"Abbrechen\"-Buttons",
+          "default":"Abbrechen"
         },
         {
-          "label": "Beschriftung des \"Beenden\"-Buttons",
-          "default": "Beenden"
+          "label":"Beschriftung des \"Bestätigen\"-Buttons",
+          "default":"Beenden"
         }
       ]
     },
     {
-      "label": "Bestätigungsdialog beim Wiederholen",
-      "fields": [
+      "label":"Dialog für Wiederholungen",
+      "fields":[
         {
-          "label": "Header-Text",
-          "default": "Wiederholen?"
+          "label":"Titel-Text",
+          "default":"Wiederholen?"
         },
         {
-          "label": "Body-Text",
-          "default": "Ganz sicher wiederholen?"
+          "label":"Body-Text",
+          "default":"Bist Du sicher, dass Du die Aufgabe wiederholen möchtest?"
         },
         {
-          "label": "Beschriftung des \"Abbrechen\"-Buttons",
-          "default": "Abbrechen"
+          "label":"Beschriftung des Abbrechen-Buttons",
+          "default":"Abbrechen"
         },
         {
-          "label": "Beschriftung des \"Bestätigen\"-Buttons",
-          "default": "Bestätigen"
+          "label":"Beschriftung des Bestätigungs-Buttons",
+          "default":"Bestätigen"
         }
       ]
     }

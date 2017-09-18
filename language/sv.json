@@ -19,7 +19,7 @@
         "label":"Option",
         "fields":[
           {
-            "label":"Teksti"
+            "label":"Text"
           },
           {
             "label":"Correct"
@@ -203,12 +203,12 @@
           "default":"Finish ?"
         },
         {
-          "label":"Leipäteksti",
+          "label":"Body text",
           "default":"Are you sure you wish to finish ?"
         },
         {
           "label":"Cancel button label",
-          "default":"Cancel"
+          "default":"Avbryt"
         },
         {
           "label":"Confirm button label",

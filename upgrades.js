@@ -104,8 +104,185 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
         }
 
         finished(null, parameters);
-      }
+      },
 
+      /**
+       * Asynchronous content upgrade hook.
+       * Upgrades content parameters to support Multiple Choice 1.10.
+       *
+       * Move old feedback message to the new overall feedback system.
+       * Do not show the new score points for old content being upgraded.
+       *
+       * @params {object} parameters
+       * @params {function} finished
+       */
+      10: function (parameters, finished) {
+
+        if (parameters && parameters.UI) {
+          if (parameters.UI.correctText) {
+            if (parameters.UI.almostText) {
+              if (parameters.UI.wrongText) {
+                // All specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.wrongText
+                  },
+                  {
+                    'from': 1,
+                    'to': 99,
+                    'feedback': parameters.UI.almostText
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.correctText
+                  }
+                ];
+              }
+              else {
+                // Only correct and almost specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.feedback || ''
+                  },
+                  {
+                    'from': 1,
+                    'to': 99,
+                    'feedback': parameters.UI.almostText
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.correctText
+                  }
+                ];
+              }
+            }
+            else {
+              if (parameters.UI.wrongText) {
+                // Only correct and wrong pecified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.wrongText
+                  },
+                  {
+                    'from': 1,
+                    'to': 99,
+                    'feedback': parameters.UI.feedback || ''
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.correctText
+                  }
+                ];
+              }
+              else {
+                // Only correct specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 99,
+                    'feedback': parameters.UI.feedback || ''
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.correctText
+                  }
+                ];
+              }
+            }
+          }
+          else {
+            if (parameters.UI.almostText) {
+              if (parameters.UI.wrongText) {
+                // Only almost and wrong specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.wrongText
+                  },
+                  {
+                    'from': 1,
+                    'to': 99,
+                    'feedback': parameters.UI.almostText
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.feedback || ''
+                  }
+                ];
+              }
+              else {
+                // Only almost specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.feedback || ''
+                  },
+                  {
+                    'from': 1,
+                    'to': 99,
+                    'feedback': parameters.UI.almostText
+                  },
+                  {
+                    'from': 100,
+                    'to': 100,
+                    'feedback': parameters.UI.feedback || ''
+                  }
+                ];
+              }
+            }
+            else {
+              if (parameters.UI.wrongText) {
+                // Only wrong specified
+                parameters.overallFeedback = [
+                  {
+                    'from': 0,
+                    'to': 0,
+                    'feedback': parameters.UI.wrongText
+                  },
+                  {
+                    'from': 1,
+                    'to': 100,
+                    'feedback': parameters.UI.feedback || ''
+                  }
+                ];
+              }
+              else {
+                // None specified
+                if (parameters.UI.feedback) {
+                  parameters.overallFeedback = [
+                    {
+                      'from': 0,
+                      'to': 100,
+                      'feedback': parameters.UI.feedback
+                    }
+                  ];
+                }
+              }
+            }
+          }
+
+          // Remove old feedback messages
+          delete parameters.UI.correctText;
+          delete parameters.UI.almostText;
+          delete parameters.UI.wrongText;
+          delete parameters.UI.feedback;
+        }
+
+        finished(null, parameters);
+      }
     }
   };
 })(H5P.jQuery);
