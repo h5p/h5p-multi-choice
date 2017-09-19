@@ -228,7 +228,7 @@
         "type": "text",
         "label": "Score Bar Label",
         "importance": "low",
-        "default": "Score",
+        "default": "You got :num out of :total points",
         "optional": true
       },
       {
