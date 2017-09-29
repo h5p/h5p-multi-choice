@@ -92,7 +92,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       checkAnswerButton: 'Check',
       showSolutionButton: 'Show solution',
       tryAgainButton: 'Try again',
-      scoreBarLabel: 'Score',
+      scoreBarLabel: 'You got :num out of :total points',
       tipAvailable: "Tip available",
       feedbackAvailable: "Feedback available",
       readFeedback: 'Read feedback',

@@ -1,43 +1,43 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Media",
-      "fields":[
+      "label": "Medie",
+      "fields": [
         {
-          "label":"Type",
-          "description":"Optional media to display above the question."
+          "label": "Type",
+          "description": "Vis valgfrit medie over spørgsmålet."
         }
       ]
     },
     {
-      "label":"Question"
+      "label": "Spørgsmål"
     },
     {
-      "label":"Available options",
-      "entity":"option",
-      "field":{
-        "label":"Option",
-        "fields":[
+      "label": "Valgmuligheder",
+      "entity": "option",
+      "field": {
+        "label": "Option",
+        "fields": [
           {
-            "label":"Text"
+            "label": "Tekst"
           },
           {
-            "label":"Correct"
+            "label": "Rigtigt svar"
           },
           {
-            "label":"Tips and feedback",
-            "fields":[
+            "label": "Tips og feedback",
+            "fields": [
               {
-                "label":"Tip text",
-                "description":"Hint for the user. This will appear before user checks his answer/answers."
+                "label": "Tip ",
+                "description": "Hint til bruger. Denne tekst er synlig inden der svares."
               },
               {
-                "label":"Message displayed if answer is selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is selected."
+                "label": "Besked vises når svarmulighed vælges",
+                "description": "Beskeden vises under svaret på \"tjek\" hvis svaret er valgt."
               },
               {
-                "label":"Message displayed if answer is not selected",
-                "description":"Message will appear below the answer on \"check\" if this answer is not selected."
+                "label": "Besked vises når svarmulighed ikke vælges",
+                "description": "Beskeden vises under svaret på \"tjek\" hvis svaret er valgt."
               }
             ]
           }
@@ -45,28 +45,26 @@
       }
     },
     {
-      "label":"Overall Feedback",
-      "fields":[
+      "label": "Samlede Feedback",
+      "fields": [
         {
-          "widgets":[
+          "widgets": [
             {
-              "label":"Default"
+              "label": "Standard"
             }
           ],
-          "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
-          "entity":"range",
-          "field":{
-            "fields":[
+          "label": "Indstil feedback for ethvert resultat",
+          "description": "Eksempel: 0-20% Mindre godt resultat, 21-91% Gennemsnitligt resultat, 91-100% Flot resultat!",
+          "entity": "range",
+          "field": {
+            "fields": [
               {
-                "label":"Score Range"
+                "label": "Resultat"
               },
+              {},
               {
-                
-              },
-              {
-                "label":"Feedback for defined score range",
-                "placeholder":"Fill in the feedback"
+                "label": "Feedback for diffineret resultat",
+                "placeholder": "Udfyld feedback"
               }
             ]
           }
@@ -74,166 +72,165 @@
       ]
     },
     {
-      "label":"User interface translations for multichoice",
-      "fields":[
+      "label": "Brugerflade oversættelse for multichoice",
+      "fields": [
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label": "Tekst på knap til kontrol af svar",
+          "default": "Tjek"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label": "Tekst på knap til via af svar",
+          "default": "Vis svar"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label": "Tekst på knap til gentagelse af svar",
+          "default": "Prøv igen"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label": "Tekst på knap til tip",
+          "default": "Vis tip"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label": "Tekst på knap til resultat",
+          "default": "Resultat"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label": "Tip tilgængelig (ikke vist)",
+          "default": "Tip tilgængelig",
+          "description": "Hjælpetekst for readspeakers"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label": "Feedback tilgængelig (ikke vist)",
+          "default": "Feedback tilgængelig",
+          "description": "AHjælpetekst for readspeakers"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label": "Læs Feedback (ikke vist)",
+          "default": "Læs feedback",
+          "description": "Hjælpetekst for readspeakers"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label": "Forkert svar (ikke vist)",
+          "default": "Forkert svar",
+          "description": "Hjælpetekst for readspeakers"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label": "Rigtigt Answer (ikke vist)",
+          "default": "Rigtigt answer",
+          "description": "Hjælpetekst for readspeakers"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label": "Mulighed skulle have været tjekket",
+          "default": "Mulighed skulle have været tjekket"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label": "Mulighed skulle have været tjekket",
+          "default": "Mulighed skulle have været tjekket"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label": "Tekst for \"Svar nødvendigt\" besked",
+          "default": "Besvar venligst før 'vis svar' vælges."
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
-      "fields":[
+      "label": "Indstillinger for Prøv igen dialog",
+      "description": "Disse valg vil bestemme hvordan opgaven vises.",
+      "fields": [
         {
-          "label":"Enable \"Retry\" button"
+          "label": "Aktiver \"Prøv igen\" knap"
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label": "Aktiver \"Vis løsning\" knap"
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
-          "default":"auto",
-          "options":[
+          "label": "Spørgsmålstype",
+          "description": "Bestem udseende og indstillinger for visning af spørgsmål.",
+          "options": [
             {
-              "label":"Automatic"
+              "label": "Automatisk"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label": "Multiple Choice (tjekbokse)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label": "Et svar (Radioknapper)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label": "Giv et point for hele opgaven",
+          "description": "Vælg for at give et point for flere rigtige svar.Dette vil ikke være en mulighed ved valg af \"Et svar\" indstilling."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label": "Tilfældig rækkefølge af svar",
+          "description": "aktiver for at anvende tilfældig rækkefølge af spørgsmål."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label": "Anmod om svar før 'Vis svar' kan vælges"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label": "Aktiver zoom af billede vist ved spørgsmål"
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label": "Vis bekræft ved valg af \"tjek\""
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label": "Vis bekræft ved valg af \"Prøv igen\""
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label": "Automatitisk kontrol af svar",
+          "description": "Aktivering af denne mulighed vil være det vanskeligt for brugere der har behov for hjælp til oplæsning. Vær opmærksom på at du ved hvad du gør."
         },
         {
-          "label":"Pass percentage",
-          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label": "Niveau for gennemført",
+          "description": "Denne indstilling har sjældent en betydning. Dette gælder den nødvendige procentvise totale score der kræves for at få et toint, når indstillingen 'Giv et point for hele opgaven' er valgt og for at opnå result.success in xAPI bedømmelser."
         },
         {
-          "label":"Show score points",
-          "description":"Show points earned for each answer."
+          "label": "Vis opnåede antal point",
+          "description": "Vis opnåede antal points for hver enkelt opgave."
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
-      "fields":[
+      "label": "Indstillinger for tjek svar dialog",
+      "fields": [
         {
-          "label":"Header text",
-          "default":"Finish ?"
+          "label": "Tekst overskrift",
+          "default": "Færdig ?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to finish ?"
+          "label": "Tekst afsnit",
+          "default": "Er du sikker på at du er færdig ?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label": "Tekst knap fortryd",
+          "default": "Fortryd"
         },
         {
-          "label":"Confirm button label",
-          "default":"Finish"
+          "label": "Tekst knap bekræft",
+          "default": "Færdig"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
-      "fields":[
+      "label": "Prøv igen dialog",
+      "fields": [
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label": "Tekst overskrift",
+          "default": "Prøv igen ?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label": "Tekst afsnit",
+          "default": "Er sikker på at du vil prøve igen ?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label": "Tekst knap fortryd",
+          "default": "Fortryd"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label": "Tekst knap bekræft",
+          "default": "Bekræft"
         }
       ]
     }
