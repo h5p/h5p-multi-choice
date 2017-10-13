@@ -144,6 +144,9 @@
           "label": "Schakel \"Toon Oplossing\" knop in"
         },
         {
+          "label": "Enable \"Check\" button"
+        },
+        {
           "label": "VraagType",
           "description": "Selecteer het uiterlijk en het gedrag van de vraag.",
           "options": [

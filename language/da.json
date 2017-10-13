@@ -144,6 +144,9 @@
           "label": "Aktiver \"Vis løsning\" knap"
         },
         {
+          "label": "Enable \"Check\" button"
+        },
+        {
           "label": "Spørgsmålstype",
           "description": "Bestem udseende og indstillinger for visning af spørgsmål.",
           "options": [

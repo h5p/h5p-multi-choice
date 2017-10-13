@@ -331,8 +331,8 @@
       {
         "name": "enableCheckButton",
         "type": "boolean",
-        "widget": "none",
         "label": "Enable \"Check\" button",
+        "widget": "none",
         "importance": "low",
         "default": true,
         "optional": true

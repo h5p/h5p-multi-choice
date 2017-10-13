@@ -144,6 +144,9 @@
           "label": "Salli painike \"Katso vastaus\""
         },
         {
+          "label": "Enable \"Check\" button"
+        },
+        {
           "label": "Kysymystyyppi",
           "description": "Valitse kysymystyyppi ja ominaisuudet.",
           "options": [
