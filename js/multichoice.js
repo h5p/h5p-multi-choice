@@ -358,9 +358,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       hideSolution($ans);
 
       if (params.userAnswers.length) {
-        if (params.behaviour.enableCheckButton) {
-          self.showButton('check-answer');
-        }
+        self.showButton('check-answer');
         self.hideButton('try-again');
         self.hideButton('show-solution');
 
@@ -543,9 +541,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     self.hideSolutions();
     params.userAnswers = [];
     removeSelections();
-    if (params.behaviour.enableCheckButton) {
-      self.showButton('check-answer');
-    }
+    self.showButton('check-answer');
     self.hideButton('try-again');
     self.hideButton('show-solution');
     enableInput();
@@ -644,7 +640,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }, false);
 
     // Check solution button
-    if (!params.behaviour.autoCheck || !params.behaviour.singleAnswer) {
+    if (params.behaviour.enableCheckButton && (!params.behaviour.autoCheck || !params.behaviour.singleAnswer)) {
       self.addButton('check-answer', params.UI.checkAnswerButton,
         function () {
           self.answered = true;
@@ -667,9 +663,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     // Try Again button
     self.addButton('try-again', params.UI.tryAgainButton, function () {
-      if (params.behaviour.enableCheckButton) {
-        self.showButton('check-answer');
-      }
+      self.showButton('check-answer');
       self.hideButton('try-again');
       self.hideButton('show-solution');
       self.hideSolutions();
