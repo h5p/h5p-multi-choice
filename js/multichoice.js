@@ -1,3 +1,4 @@
+/*global EJS*/
 // Will render a Question with multiple choices for answers.
 
 // Options format:
@@ -506,7 +507,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * Hide solution for the given answer(s)
    *
    * @private
-   * @param {H5P.jQuery} $answer
+   * @param {H5P.jQuery} $answer
    */
   var hideSolution = function ($answer) {
     $answer
@@ -673,7 +674,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       self.answered = false;
       if (params.behaviour.randomAnswers) {
         // reshuffle answers
-       oldIdMap = idMap;
+       var oldIdMap = idMap;
        idMap = getShuffleMap();
        var answersDisplayed = $myDom.find('.h5p-answer');
        // remember tips
@@ -971,7 +972,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @return {number[]} map pointing from original answers to shuffled answers
    */
   var getShuffleMap = function() {
-    var origOrder = $.extend([], params.answers);
     params.answers = H5P.shuffleArray(params.answers);
 
     // Create a map from the new id to the old one
@@ -980,7 +980,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       idMap[i] = params.answers[i].originalOrder;
     }
     return idMap;
-  }
+  };
 
   // Initialization code
   // Randomize order, if requested
