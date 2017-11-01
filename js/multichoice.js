@@ -658,8 +658,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           }
         }
       );
-
-      self.hideButton('check-answer');
     }
 
     // Try Again button
