@@ -104,6 +104,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     behaviour: {
       enableRetry: true,
       enableSolutionsButton: true,
+      enableCheckButton: true,
       type: 'auto',
       singlePoint: true,
       randomAnswers: false,
@@ -640,7 +641,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }, false);
 
     // Check solution button
-    if (!params.behaviour.autoCheck || !params.behaviour.singleAnswer) {
+    if (params.behaviour.enableCheckButton && (!params.behaviour.autoCheck || !params.behaviour.singleAnswer)) {
       self.addButton('check-answer', params.UI.checkAnswerButton,
         function () {
           self.answered = true;

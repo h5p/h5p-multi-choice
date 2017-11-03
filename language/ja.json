@@ -144,6 +144,9 @@
           "label": "「解を表示」ボタンを有効化"
         },
         {
+          "label": "Enable \"Check\" button"
+        },
+        {
           "label": "問題タイプ",
           "description": "外観と問題の動作を選択します。",
           "options": [
