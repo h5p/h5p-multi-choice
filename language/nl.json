@@ -59,11 +59,11 @@
           "field": {
             "fields": [
               {
-                "label": "Score Range"
+                "label": "Scorebereik"
               },
               {},
               {
-                "label": "Feedback bij gedefinieerde score range",
+                "label": "Feedback bij gedefinieerd scorebereik",
                 "placeholder": "Formuleer de feedback"
               }
             ]
