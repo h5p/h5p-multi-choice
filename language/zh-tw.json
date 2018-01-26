@@ -45,6 +45,33 @@
       }
     },
     {
+      "label": "Overall Feedback",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Default"
+            }
+          ],
+          "label": "Define custom feedback for any score range",
+          "description": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
+              {
+                "label": "Score Range"
+              },
+              {},
+              {
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "label": "複選題的使用者界面翻譯",
       "fields": [
         {
@@ -117,6 +144,9 @@
           "label": "啟用 \"顯示解決方案\" 按鈕"
         },
         {
+          "label": "Enable \"Check\" button"
+        },
+        {
           "label": "問題類型",
           "description": "選擇問題的外觀和行為.",
           "options": [
@@ -158,6 +188,10 @@
         {
           "label": "通過率",
           "description": "這個設定通常不會有任何影響. 當啟用整個任務的一個點，在xAPI語句中獲得result.success時，得到1分佔總分的百分比."
+        },
+        {
+          "label": "Show score points",
+          "description": "Show points earned for each answer."
         }
       ]
     },
@@ -165,16 +199,20 @@
       "label": "檢查確認對話框",
       "fields": [
         {
-          "label": "標題文字"
+          "label": "標題文字",
+          "default": "Finished?"
         },
         {
-          "label": "內容文字"
+          "label": "內容文字",
+          "default": "Are you sure you wish to finish ?"
         },
         {
-          "label": "取消按鈕標籤"
+          "label": "取消按鈕標籤",
+          "default": "Cancel"
         },
         {
-          "label": "確認按鈕標籤"
+          "label": "確認按鈕標籤",
+          "default": "Finish"
         }
       ]
     },
@@ -182,16 +220,20 @@
       "label": "重試確認對話框",
       "fields": [
         {
-          "label": "標題文字"
+          "label": "標題文字",
+          "default": "Retry ?"
         },
         {
-          "label": "內容文字"
+          "label": "內容文字",
+          "default": "Are you sure you want to retry?"
         },
         {
-          "label": "取消按鈕標籤"
+          "label": "取消按鈕標籤",
+          "default": "Cancel"
         },
         {
-          "label": "確認按鈕標籤"
+          "label": "確認按鈕標籤",
+          "default": "Confirm"
         }
       ]
     }
