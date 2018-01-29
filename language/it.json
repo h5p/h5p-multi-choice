@@ -144,6 +144,9 @@
           "label": "Abilita il pulsante Mostra soluzione"
         },
         {
+          "label": "Enable \"Check\" button"
+        },
+        {
           "label": "Tipo di domanda",
           "description": "Seleziona l'aspetto e il comportamento della domanda.",
           "options": [

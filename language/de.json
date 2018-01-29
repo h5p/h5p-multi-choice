@@ -144,6 +144,9 @@
           "label": "Aktiviere \"Zeige Lösung\" Button"
         },
         {
+          "label": "Enable \"Check\" button"
+        },
+        {
           "label": "Frageart",
           "description": "Wähle Aussehen und Verhalten der Frage.",
           "options": [

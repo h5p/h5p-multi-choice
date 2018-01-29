@@ -144,6 +144,9 @@
           "label": "Enable \"Show Solution\" button"
         },
         {
+          "label": "Enable \"Check\" button"
+        },
+        {
           "label": "Question Type",
           "description": "Select the look and behaviour of the question.",
           "options": [
