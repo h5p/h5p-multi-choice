@@ -5,7 +5,7 @@
       "fields": [
         {
           "label": "Typ",
-          "description": "Opcjonalne zdjęcie lub video ponad treścią pytania."
+          "description": "Opcjonalne zdjęcie lub wideo ponad treścią pytania."
         }
       ]
     },
