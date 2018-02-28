@@ -5,7 +5,7 @@
       "fields": [
         {
           "label": "Typ",
-          "description": "Opcjonalne zdjęcie lub video ponad treścią pytania."
+          "description": "Opcjonalne zdjęcie lub wideo ponad treścią pytania."
         }
       ]
     },
@@ -96,12 +96,12 @@
         },
         {
           "label": "Dodatkowe wskazówki (niewyświetlane)",
-          "default": "Dostęþne są dodatkowe wskazówki",
+          "default": "Dostępne są dodatkowe wskazówki",
           "description": "Tekst na potrzeby systemów czytających tekst (readspeakers)"
         },
         {
           "label": "Podsumowanie odpowiedzi (niewyświetlane)",
-          "default": "Dostęþne jest podsumowanie odpowiedzi",
+          "default": "Dostępne jest podsumowanie odpowiedzi",
           "description": "Tekst na potrzeby systemów czytających tekst (readspeakers)"
         },
         {
@@ -233,7 +233,7 @@
         },
         {
           "label": "Etykieta przycisku Potwierdź",
-          "default": "Potwierdź"
+          "default": "Zatwierdź"
         }
       ]
     }
