@@ -4,40 +4,40 @@
       "label": "Media",
       "fields": [
         {
-          "label": "Type",
-          "description": "Optional media to display above the question."
+          "label": "Typ",
+          "description": "Opcjonalne zdjęcie lub wideo ponad treścią pytania."
         }
       ]
     },
     {
-      "label": "Question"
+      "label": "Pytanie"
     },
     {
-      "label": "Available options",
-      "entity": "option",
+      "label": "Dostępne odpowiedzi",
+      "entity": "Odpowiedź",
       "field": {
-        "label": "Option",
+        "label": "Odpowiedź",
         "fields": [
           {
-            "label": "Text"
+            "label": "Tekst"
           },
           {
-            "label": "Correct"
+            "label": "Odpowiedź poprawna"
           },
           {
-            "label": "Tips and feedback",
+            "label": "Wskazówki",
             "fields": [
               {
-                "label": "Tip text",
-                "description": "Hint for the user. This will appear before user checks his answer/answers."
+                "label": "Treść wskazówki",
+                "description": "Wskazówki dla użytkownika. Wskazówki pojawią się przed sprawdzeniem odpowiedzi przez użytkownika."
               },
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"check\" if this answer is selected."
+                "label": "Komunikat wyświetlany, gdy użytkownik zaznaczy tę odpowiedź",
+                "description": "Komunikat pojawi się pod odpowiedzią, po wybraniu akcji \"Sprawdź\", jeżeli dana odpowiedź była zaznaczona."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"check\" if this answer is not selected."
+                "label": "Komunikat wyświetlany, gdy użytkownik nie zaznaczy tej odpowiedzi",
+                "description": "Komunikat pojawi się pod odpowiedzią po wybraniu akcji \"Sprawdź\", jeżeli dana odpowiedź nie była zaznaczona."
               }
             ]
           }
@@ -45,26 +45,26 @@
       }
     },
     {
-      "label": "Overall Feedback",
+      "label": "Podsumowanie odpowiedzi",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Default"
+              "label": "Domyślne"
             }
           ],
-          "label": "Define custom feedback for any score range",
-          "description": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
-          "entity": "range",
+          "label": "Określ własne kryteria oceny dla wybranych zakresów poprawnych odpowiedzi",
+          "description": "Przykład: 0-20% Słaby wynik, 21-91% Przeciętny wynik, 91-100% Bardzo dobry wynik!",
+          "entity": "Zakres",
           "field": {
             "fields": [
               {
-                "label": "Score Range"
+                "label": "Zakres"
               },
               {},
               {
-                "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "label": "Komunikat dla danego zakresu",
+                "placeholder": "Wprowadź komunikat"
               }
             ]
           }
@@ -72,168 +72,168 @@
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "Tłumaczenie interfejsu użytkownika dla obiektu typu multichoice",
       "fields": [
         {
-          "label": "Check answer button label",
-          "default": "Check"
+          "label": "Etykieta przycisku Sprawdź",
+          "default": "Sprawdź"
         },
         {
-          "label": "Show solution button label",
-          "default": "Show solution"
+          "label": "Etykieta przycisku Pokaż odpowiedź",
+          "default": "Pokaż odpowiedź"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Etykieta przycisku Powtórz",
+          "default": "Powtórz"
         },
         {
-          "label": "Tip label",
-          "default": "Show tip"
+          "label": "Podpowiedź",
+          "default": "Pokaż podpowiedź"
         },
         {
-          "label": "Score Bar Label",
-          "default": "Score"
+          "label": "Etykieta wyniku",
+          "default": "Wynik"
         },
         {
-          "label": "Tip Available (not displayed)",
-          "default": "Tip available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Dodatkowe wskazówki (niewyświetlane)",
+          "default": "Dostępne są dodatkowe wskazówki",
+          "description": "Tekst na potrzeby systemów czytających tekst (readspeakers)"
         },
         {
-          "label": "Feedback Available (not displayed)",
-          "default": "Feedback available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Podsumowanie odpowiedzi (niewyświetlane)",
+          "default": "Dostępne jest podsumowanie odpowiedzi",
+          "description": "Tekst na potrzeby systemów czytających tekst (readspeakers)"
         },
         {
-          "label": "Read Feedback (not displayed)",
-          "default": "Read feedback",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Przeczytaj podsumowanie odpowiedzi (niewyświetlane)",
+          "default": "Przeczytaj podsumowanie odpowiedzi",
+          "description": "Tekst na potrzeby systemów czytających tekst (readspeakers)"
         },
         {
-          "label": "Wrong Answer (not displayed)",
-          "default": "Wrong answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Odpowiedź niepoprawna (niewyświetlane)",
+          "default": "Odpowiedź niepoprawna",
+          "description": "Tekst na potrzeby systemów czytających tekst (readspeakers)"
         },
         {
-          "label": "Correct Answer (not displayed)",
-          "default": "Correct answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Odpowiedź poprawna (niewyświetlane)",
+          "default": "Odpowiedź poprawna",
+          "description": "Tekst na potrzeby systemów czytających tekst (readspeakers)"
         },
         {
-          "label": "Option should have been checked",
-          "default": "Should have been checked"
+          "label": "Odpowiedź powinna być wybrana",
+          "default": "Odpowiedź powinna być wybrana"
         },
         {
-          "label": "Option should not have been checked",
-          "default": "Should not have been checked"
+          "label": "Odpowiedź nie powinna być wybrana",
+          "default": "Odpowiedź nie powinna być wybrana"
         },
         {
-          "label": "Text for \"Requires answer\" message",
-          "default": "Please answer before viewing the solution"
+          "label": "Komunikat w przypadku \"Odpowiedź wymagana\"",
+          "default": "Podaj odpowiedź przed sprawdzeniem rozwiązania"
         }
       ]
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "Ustawienia zachowania",
+      "description": "Poniższe opcje pozwalają określić zachowanie się obiektu.",
       "fields": [
         {
-          "label": "Enable \"Retry\" button"
+          "label": "Pokaż przycisk \"Powtórz\""
         },
         {
-          "label": "Enable \"Show Solution\" button"
+          "label": "Pokaż przycisk \"Pokaż rozwiązanie\""
         },
         {
-          "label": "Enable \"Check\" button"
+          "label": "Pokaż przycisk \"Sprawdź\""
         },
         {
-          "label": "Question Type",
-          "description": "Select the look and behaviour of the question.",
+          "label": "Typ pytania",
+          "description": "Wybierz wygląd i sposób działania dla pytania.",
           "options": [
             {
-              "label": "Automatic"
+              "label": "Automatyczny"
             },
             {
-              "label": "Multiple Choice (Checkboxes)"
+              "label": "Wielokrotnego wyboru (Checkboxes)"
             },
             {
-              "label": "Single Choice (Radio Buttons)"
+              "label": "Jedna poprawna odpowiedź (Radio Buttons)"
             }
           ]
         },
         {
-          "label": "Give one point for the whole task",
-          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label": "Przyznaj jeden punkt za całe zadanie",
+          "description": "Przyznaj jeden punkt za wiele poprawnych odpowiedzi. Ta opcja nie będzie miała zostosowania w przypadku pytań typu \"Jedna poprawna odpowiedź\"."
         },
         {
-          "label": "Randomize answers",
-          "description": "Enable to randomize the order of questions on display."
+          "label": "Losowa kolejność odpowiedzi",
+          "description": "Pokazuj dostępne odpowiedzi w losowej kolejności."
         },
         {
-          "label": "Require answer before the solution can be viewed"
+          "label": "Wymagaj podania odpowiedzi przed pokazaniem poprawnego rozwiązania"
         },
         {
-          "label": "Disable image zooming for question image"
+          "label": "Zablokuj możliwość powiększania zdjęcia związanego z pytaniem"
         },
         {
-          "label": "Show confirmation dialog on \"Check\""
+          "label": "Pokazuj prośbę o potwierdzenie akcji \"Sprawdź\""
         },
         {
-          "label": "Show confirmation dialog on \"Retry\""
+          "label": "Pokazuj prośbę o potwierdzenie akcji \"Powtórz\""
         },
         {
-          "label": "Automatically check answers",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label": "Sprawdzaj odpowiedzi automatycznie",
+          "description": "Użycie tej opcji zakłóci działanie mechanizmów dostępności dla osób z ograniczeniami. Upewnij się, że na pewno znasz konsekwencje użycia tej opcji."
         },
         {
-          "label": "Pass percentage",
-          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label": "Procent wymagany do zaliczenia",
+          "description": "Ta opcja bardzo często nie będzie miała żadnego efektu. Jest to minimalny procent poprawnych odpowiedzi wymagany, aby przyznać jeden punkt, w przypadku gdy dla danego pytania wybrana jest opcja Przyznaj jeden punkt za całe zadanie oraz w celu przekazania danych  result.success poprzez xAPI."
         },
         {
-          "label": "Show score points",
-          "description": "Show points earned for each answer."
+          "label": "Pokaż przyznane punkty",
+          "description": "Pokaż punkty przyznane za każdą z odpowiedzi."
         }
       ]
     },
     {
-      "label": "Check confirmation dialog",
+      "label": "Tekst potwierdzenia zakończenia",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Finish ?"
+          "label": "Tekst nagłówka",
+          "default": "Zakończyć?"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to finish ?"
+          "label": "Tekst komunikatu",
+          "default": "Czy na pewno chcesz zakończyć?"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Etykieta przycisku Anuluj",
+          "default": "Anuluj"
         },
         {
-          "label": "Confirm button label",
-          "default": "Finish"
+          "label": "Etykieta przycisku Zakończ",
+          "default": "Zakończ"
         }
       ]
     },
     {
-      "label": "Retry confirmation dialog",
+      "label": "Tekst potwierdzenia powtórzenia",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Retry ?"
+          "label": "Tekst nagłówka",
+          "default": "Powtórzyć?"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to retry ?"
+          "label": "Tekst komunikatu",
+          "default": "Czy na pewno chcesz powtórzyć?"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Etykieta przycisku Anuluj",
+          "default": "Anuluj"
         },
         {
-          "label": "Confirm button label",
-          "default": "Confirm"
+          "label": "Etykieta przycisku Potwierdź",
+          "default": "Zatwierdź"
         }
       ]
     }
