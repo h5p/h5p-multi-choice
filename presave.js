@@ -1,5 +1,12 @@
 var H5PPresave = H5PPresave || {};
 
+/**
+ * Resolve the presave logic for the content type Multi Choice
+ *
+ * @param {object} content
+ * @param finished
+ * @constructor
+ */
 H5PPresave['H5P.MultiChoice'] = function (content, finished) {
   var presave = H5PEditor.Presave;
   var score = 0;
@@ -24,10 +31,18 @@ H5PPresave['H5P.MultiChoice'] = function (content, finished) {
     finished({maxScore: score});
   }
 
+  /**
+   * Check if required parameters is present
+   * @return {boolean}
+   */
   function isContentInValid() {
     return !presave.checkNestedRequirements(content, 'content.answers') || !Array.isArray(content.answers);
   }
 
+  /**
+   * Check if content gives one point for all
+   * @return {boolean}
+   */
   function isSinglePoint() {
     return presave.checkNestedRequirements(content, 'content.behaviour.singlePoint') && content.behaviour.singlePoint === true;
   }
