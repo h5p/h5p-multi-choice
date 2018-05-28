@@ -206,7 +206,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           // Register task image
           self.setImage(params.media.params.file.path, {
             disableImageZooming: params.behaviour.disableImageZooming,
-            alt: params.media.params.alt
+            alt: params.media.params.alt,
+            title: params.media.params.title
           });
         }
       }
