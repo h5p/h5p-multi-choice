@@ -578,13 +578,13 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Remove all tip dialogs
     removeFeedbackDialog();
 
-    self.hideButton('check-answer');
     if (params.behaviour.enableSolutionsButton) {
       self.showButton('show-solution');
     }
     if (params.behaviour.enableRetry) {
       self.showButton('try-again');
     }
+    self.hideButton('check-answer');
 
     self.showCheckSolution();
     disableInput();
@@ -593,7 +593,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     addQuestionToXAPI(xAPIEvent);
     addResponseToXAPI(xAPIEvent);
     self.trigger(xAPIEvent);
-    self.trigger('resize');
   };
 
   /**
@@ -793,27 +792,20 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Determine feedback
     var max = self.getMaxScore();
 
+    // Disable task if maxscore is achieved
+    var fullScore = (score === max);
+
+    if (fullScore) {
+      self.hideButton('check-answer');
+      self.hideButton('try-again');
+      self.hideButton('show-solution');
+    }
+
     // Show feedback
     if (!skipFeedback) {
       this.setFeedback(getFeedbackText(score, max), score, max, params.UI.scoreBarLabel);
     }
 
-    // Disable task if maxscore is achieved
-    var fullScore = (score === max);
-    if (fullScore) {
-      finishedTask();
-    }
-
-    self.trigger('resize');
-  };
-
-  /**
-   * Method to use when the task is correctly answered, removes all buttons and disables input.
-   */
-  var finishedTask = function () {
-    self.hideButton('check-answer');
-    self.hideButton('try-again');
-    self.hideButton('show-solution');
     self.trigger('resize');
   };
 
