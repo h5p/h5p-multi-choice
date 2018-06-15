@@ -45,26 +45,26 @@
       }
     },
     {
-      "label": "Gesamt-Feedback",
+      "label": "Gesamt-Rückmeldung",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Default"
+              "label": "Voreinstellung"
             }
           ],
-          "label": "Spezifikation des Feedbacks für die einzelnen Bewertungsbereiche",
+          "label": "Rückmeldungen für die einzelnen Wertebereiche",
           "description": "Beispiel: 0-20% schlechte Leistung, 21-91% durchschnittliche Leistung, 91-100% super Leistung!",
           "entity": "range",
           "field": {
             "fields": [
               {
-                "label": "Wertungsbereich"
+                "label": "Wertebereich"
               },
               {},
               {
-                "label": "Feedback für den Wertebereich",
-                "placeholder": "Gebe das Feedback ein"
+                "label": "Rückmeldung für den Wertebereich",
+                "placeholder": "Gib die Rückmeldung ein"
               }
             ]
           }
@@ -72,64 +72,64 @@
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "Übersetzungen für multichoice",
       "fields": [
         {
-          "label": "Check answer button label",
-          "default": "Check"
+          "label": "Beschriftung für den \"Überprüfen\"-Knopf",
+          "default": "Überprüfen"
         },
         {
-          "label": "Show solution button label",
-          "default": "Show solution"
+          "label": "Beschriftung für den \"Lösung zeigen\"-Knopf",
+          "default": "Lösung zeigen"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Beschriftung für den \"Wiederholen\"-Knopf",
+          "default": "Wiederholen"
         },
         {
-          "label": "Tip label",
-          "default": "Show tip"
+          "label": "Beschriftung für den \"Hinweis zeigen\"-Knopf",
+          "default": "Hinweis zeigen"
         },
         {
-          "label": "Score Bar Label",
-          "default": "Score"
+          "label": "Beschriftung für die Punkte-Leiste",
+          "default": "Punkte"
         },
         {
-          "label": "Tip Available (not displayed)",
-          "default": "Tip available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Hinweis verfügbar (nicht dargestellt)",
+          "default": "Hinweis verfügbar",
+          "description": "Text für Readspeaker zwecks Barrierefreiheit"
         },
         {
-          "label": "Feedback Available (not displayed)",
-          "default": "Feedback available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Rückmeldung verfügbar (nicht dargestellt)",
+          "default": "Rückmeldung verfügbar",
+          "description": "Text für Readspeaker zwecks Barrierefreiheit"
         },
         {
-          "label": "Read Feedback (not displayed)",
-          "default": "Read feedback",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Rückmeldung lesen (nicht dargestellt)",
+          "default": "Rückmeldung lesen",
+          "description": "Text für Readspeaker zwecks Barrierefreiheit"
         },
         {
-          "label": "Wrong Answer (not displayed)",
-          "default": "Wrong answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Falsche Antwort (nicht dargestellt)",
+          "default": "Falsche Antwort",
+          "description": "Text für Readspeaker zwecks Barrierefreiheit"
         },
         {
-          "label": "Correct Answer (not displayed)",
-          "default": "Correct answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Richtige Antwort (nicht dargestellt)",
+          "default": "Richtige Antwort",
+          "description": "Text für Readspeaker zwecks Barrierefreiheit"
         },
         {
-          "label": "Option should have been checked",
-          "default": "Should have been checked"
+          "label": "Option hätte gewählt werden müssen",
+          "default": "Hätte gewählt werden müssen"
         },
         {
-          "label": "Option should not have been checked",
-          "default": "Should not have been checked"
+          "label": "Option hätte nicht gewählt werden sollen",
+          "default": "Hätte nicht gewählt werden sollen"
         },
         {
-          "label": "Text for \"Requires answer\" message",
-          "default": "Please answer before viewing the solution"
+          "label": "Text für \"Erfordert Antwort\"-Hinweis",
+          "default": "Bitte antworte, bevor du die Lösung ansiehst"
         }
       ]
     },
@@ -138,13 +138,13 @@
       "description": "Hier kannst Du einstellen, wie sich die Aufgabe verhält",
       "fields": [
         {
-          "label": "Aktiviere \"Wiederholen\" Button"
+          "label": "Aktiviere \"Wiederholen\"-Knopf"
         },
         {
-          "label": "Aktiviere \"Zeige Lösung\" Button"
+          "label": "Aktiviere \"Zeige Lösung\"-Knopf"
         },
         {
-          "label": "Enable \"Check\" button"
+          "label": "Aktiviere \"Überprüfen\"-Knopf"
         },
         {
           "label": "Frageart",
@@ -162,11 +162,11 @@
           ]
         },
         {
-          "label": "Gebe einen Punkt für die Gesamtaufgabe",
+          "label": "Gib einen Punkt für die Gesamtaufgabe",
           "description": "Aktiviere die Vergabe eines einzigen Punktes für mehrere korrekte Antworten zusammen. Nur aktiv in Multiple Choice-Fragen"
         },
         {
-          "label": "Zufällige der Antworten",
+          "label": "Zufällige Reigenfolge der Antworten",
           "description": "Aktiviere, um die Fragen in zufälliger Reihenfolge anzuzeigen."
         },
         {
@@ -176,7 +176,7 @@
           "label": "Deaktiviere das Zoomen des Fragebildes."
         },
         {
-          "label": "Zeige Bestätigungsdialog bei \"Check\""
+          "label": "Zeige Bestätigungsdialog bei \"Überprüfen\""
         },
         {
           "label": "Zeige Bestätigungsdialog bei \"Wiederholen\""
@@ -207,11 +207,11 @@
           "default": "Bist Du sicher, dass Du beenden möchtest?"
         },
         {
-          "label": "Beschriftung des \"Abbrechen\"-Buttons",
+          "label": "Beschriftung für den \"Abbrechen\"-Knopf",
           "default": "Abbrechen"
         },
         {
-          "label": "Beschriftung des \"Bestätigen\"-Buttons",
+          "label": "Beschriftung für den \"Bestätigen\"-Knopf",
           "default": "Beenden"
         }
       ]
@@ -228,11 +228,11 @@
           "default": "Bist Du sicher, dass Du die Aufgabe wiederholen möchtest?"
         },
         {
-          "label": "Beschriftung des Abbrechen-Buttons",
+          "label": "Beschriftung für den \"Abbrechen\"-Knopf",
           "default": "Abbrechen"
         },
         {
-          "label": "Beschriftung des Bestätigungs-Buttons",
+          "label": "Beschriftung für den \"Bestätigen\"-Knopf",
           "default": "Bestätigen"
         }
       ]
