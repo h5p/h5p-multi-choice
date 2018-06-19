@@ -167,7 +167,7 @@
         },
         {
           "label": "Randomize answers",
-          "description": "Enable to randomize the order of questions on display."
+          "description": "Enable to randomize the order of the answers on display."
         },
         {
           "label": "Require answer before the solution can be viewed"
