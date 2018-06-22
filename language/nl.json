@@ -32,11 +32,11 @@
                 "description": "Hint voor de gebruiker. Deze zal verschijnen voordat de gebruiker zijn antwoord(en) controleert."
               },
               {
-                "label": "Weer te geven bericht als antwoord is geselecteerd",
-                "description": "Bericht zal onder antwoord verschijnen bij controleren als dit antwoord is geselecteerd."
+                "label": "Weer te geven bericht als het antwoord is geselecteerd",
+                "description": "Bericht zal onder het antwoord verschijnen bij controleren als dit antwoord is geselecteerd."
               },
               {
-                "label": "Weer te geven bericht als antwoord niet is geselecteerd",
+                "label": "Weer te geven bericht als het antwoord niet is geselecteerd",
                 "description": "Bericht zal onder het antwoord verschijnen bij controleren als dit antwoord niet is geselecteerd."
               }
             ]
@@ -45,17 +45,17 @@
       }
     },
     {
-      "label": "Overall Feedback",
+      "label": "Algehele Feedback",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Default"
+              "label": "Standaard"
             }
           ],
           "label": "Defineer aangepaste feedback voor elke score",
           "description": "Voorbeeld: 0-20% Slechte score, 21-91% Gemiddelde Score, 91-100% Schitterende Score!",
-          "entity": "range",
+          "entity": "reeks",
           "field": {
             "fields": [
               {
@@ -72,7 +72,7 @@
       ]
     },
     {
-      "label": "User interface vertalingen voor multichoice",
+      "label": "Vertalingen van de gebruikerinterface voor multiple choice",
       "fields": [
         {
           "label": "Controleer antwoord knop label",
@@ -91,11 +91,11 @@
           "default": "Toon tip"
         },
         {
-          "label": "Score Balk Label",
+          "label": "Scorebalk label",
           "default": "Score"
         },
         {
-          "label": "Tip Aanwezig (niet getoond)",
+          "label": "Tip aanwezig (niet getoond)",
           "default": "Tip aanwezig",
           "description": "Aanwezige tekst voor readspeakers"
         },
@@ -105,17 +105,17 @@
           "description": "Toegankelijkheidstekst voor readspeakers"
         },
         {
-          "label": "Lees Feedback (niet getoond)",
+          "label": "Lees feedback (niet getoond)",
           "default": "Lees feedback",
           "description": "Toegankelijkheidstekst voor readspeakers"
         },
         {
-          "label": "Verkeerd Antwoord (niet getoond)",
+          "label": "Verkeerd antwoord (niet getoond)",
           "default": "Verkeerd antwoord",
           "description": "Toegankelijkheidstekst voor readspeakers"
         },
         {
-          "label": "Correct Antwoord (niet weergegeven)",
+          "label": "Correct antwoord (niet weergegeven)",
           "default": "Correct antwoord",
           "description": "Toegankelijkheidstekst voor readspeakers"
         },
@@ -134,20 +134,20 @@
       ]
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "Gedragsinstellingen",
+      "description": "Met deze instellingen bepaal je hoe de taak zich gedraagt.",
       "fields": [
         {
-          "label": "Schakel \"Opnieuw Proberen\" knop in"
+          "label": "Schakel \"Opnieuw Proberen\" -knop in"
         },
         {
-          "label": "Schakel \"Toon Oplossing\" knop in"
+          "label": "Schakel \"Toon Oplossing\" -knop in"
         },
         {
-          "label": "Enable \"Check\" button"
+          "label": "Schakel \"Controleer\" -knop in"
         },
         {
-          "label": "VraagType",
+          "label": "Vraagtype",
           "description": "Selecteer het uiterlijk en het gedrag van de vraag.",
           "options": [
             {
@@ -157,7 +157,7 @@
               "label": "Multiple Choice (Checkboxes)"
             },
             {
-              "label": "Single Choice (Radio Buttons)"
+              "label": "Enkele keuze (Radio knoppen)"
             }
           ]
         },
@@ -166,14 +166,14 @@
           "description": "Schakel in om een totaal van een punt te geven voor meerdere juiste antwoorden. Dit is geen optie bij \"Single answer\" modus."
         },
         {
-          "label": "Randomiseer antwoorden",
-          "description": "Schakel in om de volgorde van de vragen te randomiseren."
+          "label": "Randomiseer de antwoorden",
+          "description": "Schakel in om de volgorde van de antwoorden te randomiseren."
         },
         {
-          "label": "Eis een antwoord voordat de oplossing getoond kan worden"
+          "label": "Eis een antwoord voordat de oplossing kan worden getoond"
         },
         {
-          "label": "Deactiveer zoomen op een afbeelding bij een vraag afbeelding"
+          "label": "Deactiveer zoomen van een afbeelding bij een vraag afbeelding"
         },
         {
           "label": "Toon bevestigingsvenster bij \"Controleer\""
@@ -186,8 +186,8 @@
           "description": "Deze optie inschakelen zorgt voor moeilijke toegankelijkheid. Zorg ervoor dat je zeker bent van je keuze."
         },
         {
-          "label": "Slaagpercentage",
-          "description": "Deze instelling heeft vaak geen effect. Dit is het percentage van de totale scole die vereist is om 1 punt te krijgen voor een hele taak wanneer dit ingeschakeld is alsook om een result.success te krijgen in de xAPI statements."
+          "label": "Slagingspercentage",
+          "description": "Deze instelling heeft vaak geen effect. Dit is het percentage van de totale score die vereist is om 1 punt te krijgen voor een hele taak wanneer dit is ingeschakeld alsook om een result.success te krijgen in de xAPI statements."
         },
         {
           "label": "Toon scorepunten",
@@ -212,7 +212,7 @@
         },
         {
           "label": "Tekst van de \"Bevestig\"-knop",
-          "default": "Beëndigen"
+          "default": "Beëindigen"
         }
       ]
     },
@@ -225,7 +225,7 @@
         },
         {
           "label": "Body text",
-          "default": "Ben je zeker dat je opnieuw wil proberen?"
+          "default": "Ben je er zeker van dat je het opnieuw wilt proberen?"
         },
         {
           "label": "Annuleer knop label",

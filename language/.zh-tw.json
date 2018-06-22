@@ -75,48 +75,61 @@
       "label": "複選題的使用者界面翻譯",
       "fields": [
         {
-          "label": "檢查答案按鈕標籤"
+          "label": "檢查答案按鈕標籤",
+          "default": "Check"
         },
         {
-          "label": "顯示解決方案按鈕標籤"
+          "label": "顯示解決方案按鈕標籤",
+          "default": "Show solution"
         },
         {
-          "label": "重試按鈕標籤"
+          "label": "重試按鈕標籤",
+          "default": "Retry"
         },
         {
-          "label": "提示標籤"
+          "label": "提示標籤",
+          "default": "Show tip"
         },
         {
-          "label": "正確答案回饋"
+          "label": "正確答案回饋",
+          "default": "You got :num out of :total points"
         },
         {
-          "label": "接近正確答案回饋"
+          "label": "接近正確答案回饋",
+          "default": "Tip available",
+          "description": "Accessibility text used for readspeakers"
         },
         {
-          "label": "不正確的答案回饋"
+          "label": "不正確的答案回饋",
+          "default": "Feedback available",
+          "description": "Accessibility text used for readspeakers"
         },
         {
-          "label": "分數欄標籤"
+          "label": "分數欄標籤",
+          "default": "Read feedback",
+          "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "可用的提示 (不顯示)",
+          "default": "Wrong answer",
           "description": "用於閱讀器的輔助功能文字"
         },
         {
           "label": "可用的回饋 (不顯示)",
+          "default": "Correct answer",
           "description": "用於閱讀器的輔助功能文字"
         },
         {
           "label": "閱讀回饋 (不顯示)",
-          "description": "用於閱讀器的輔助功能文字"
+          "default": "Should have been checked"
         },
         {
           "label": "錯誤答案 (不顯示)",
-          "description": "用於閱讀器的輔助功能文字"
+          "default": "Should not have been checked"
         },
         {
           "label": "正確答案 (不顯示)",
-          "description": "用於閱讀器的輔助功能文字"
+          "default": "Please answer before viewing the solution"
         },
         {
           "label": "回饋文字",

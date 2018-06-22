@@ -2,7 +2,7 @@
   "title": "Multiple Choice",
   "contentType": "Question",
   "majorVersion": 1,
-  "minorVersion": 11,
+  "minorVersion": 12,
   "patchVersion": 0,
   "runnable": 1,
   "embedTypes": [
@@ -44,7 +44,7 @@
     {
       "machineName": "H5P.Question",
       "majorVersion": 1,
-      "minorVersion": 3
+      "minorVersion": 4
     }
   ],
   "editorDependencies": [
