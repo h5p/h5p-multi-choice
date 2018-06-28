@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "اعلام",
+      "label": "وسائط",
       "fields": [
         {
-          "label": "Type",
-          "description": "Optional media to display above the question."
+          "label": "النوع",
+          "description": "وسائط اختيارية لعرضها فوق السؤال."
         }
       ]
     },
@@ -13,31 +13,31 @@
       "label": "السؤال"
     },
     {
-      "label": "الخيارات المتوفرة",
-      "entity": "الخيار",
+      "label": "الخيارات المتاحة",
+      "entity": "option",
       "field": {
-        "label": "الخيار",
+        "label": "خيار",
         "fields": [
           {
             "label": "نص"
           },
           {
-            "label": "صحيح"
+            "label": "صح"
           },
           {
-            "label": "تلميح",
+            "label": "تلميحات وملاحظات",
             "fields": [
               {
                 "label": "نص التلميح",
-                "description": "Hint for the user. This will appear before user checks his answer/answers."
+                "description": "تلميح للمستخدم. سيظهر هذا قبل أن يتحقق المستخدم من إجابته / إجاباته."
               },
               {
-                "label": "ملاحظات المختار",
-                "description": "سوف يتم عرضها للمستخدمين بعد التتحقق من جوابه"
+                "label": "الرسالة المعروضة في حال تم تحديد إجابة",
+                "description": "ستظهر الرسالة أسفل الإجابة  إذا تم تحديد هذه الإجابة."
               },
               {
-                "label": "ملاحظات لغير المختار",
-                "description": "سوف يتم عرضها للمستخدمين بعد التتحقق من جوابه"
+                "label": "الرسالة المعروضة في حال عدم تحديد اجابة",
+                "description": "ستظهر الرسالة أسفل الإجابة إذا لم يتم تحديد هذه الإجابة."
               }
             ]
           }
@@ -45,25 +45,25 @@
       }
     },
     {
-      "label": "Overall Feedback",
+      "label": "رد الفعل الاجمالي",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Default"
+              "label": "افتراضي"
             }
           ],
-          "label": "Define custom feedback for any score range",
-          "description": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "label": "تحديد الملاحظات المخصصة لأي مجال درجات",
+          "description": "انقر فوق الزر \" اضافةمجال \" لإضافة أكبر عدد ممكن من النطاقات.وكمثال: 0-20٪ درجة سيئة ، 21-91٪ درجة متوسطة ، 91-100٪ درجة رائعة!",
           "entity": "range",
           "field": {
             "fields": [
               {
-                "label": "Score Range"
+                "label": "مجال الدرجات"
               },
               {},
               {
-                "label": "Feedback for defined score range",
+                "label": "ملاحظات لنطاق درجات محدد",
                 "placeholder": "Fill in the feedback"
               }
             ]
@@ -72,167 +72,167 @@
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "ترجمة واجهة المستخدم للخيارات المتعددة ",
       "fields": [
         {
-          "label": "Check answer button label",
+          "label": "تسمية زر تحقق من الاجابة",
           "default": "Check"
         },
         {
-          "label": "Show solution button label",
+          "label": "تسمية زر اظهار الحل",
           "default": "Show solution"
         },
         {
-          "label": "Retry button label",
+          "label": "تسمية زر اعادة المحاولة",
           "default": "Retry"
         },
         {
-          "label": "Tip label",
+          "label": "تسمية التلميح",
           "default": "Show tip"
         },
         {
-          "label": "Score Bar Label",
-          "default": "Score"
+          "label": "تمثيل نصي لشريط النتيجة لأولئك الذين يستخدمون تقننية تحويل النص الى كلام",
+          "default": "You got :num out of :total points"
         },
         {
-          "label": "Tip Available (not displayed)",
+          "label": "تلميح متاح ( غير معروض).",
           "default": "Tip available",
-          "description": "Accessibility text used for readspeakers"
+          "description": "نص امكانية الوصول المستخدم في تقنية تحويل النص الى كلام"
         },
         {
-          "label": "Feedback Available (not displayed)",
+          "label": "ملاحظة متاحة ( غير معروضة).",
           "default": "Feedback available",
-          "description": "Accessibility text used for readspeakers"
+          "description": "نص امكانية الوصول المستخدم في تقنية تحويل النص الى كلام"
         },
         {
-          "label": "Read Feedback (not displayed)",
+          "label":  "قراءة الملاحظات ( غير معروضة).",
           "default": "Read feedback",
-          "description": "Accessibility text used for readspeakers"
+          "description": "نص امكانية الوصول المستخدم في تقنية تحويل النص الى كلام"
         },
         {
-          "label": "Wrong Answer (not displayed)",
+          "label": "إجابة خاطئة (غير معروضة).",
           "default": "Wrong answer",
-          "description": "Accessibility text used for readspeakers"
+          "description": "نص امكانية الوصول المستخدم في تقنية تحويل النص الى كلام"
         },
         {
-          "label": "Correct Answer (not displayed)",
+          "label": "إجابة صحيحة (غير معروضة).",
           "default": "Correct answer",
-          "description": "Accessibility text used for readspeakers"
+          "description": "نص امكانية الوصول المستخدم في تقنية تحويل النص الى كلام"
         },
         {
-          "label": "Option should have been checked",
+          "label": "خيار يجب ان يتم التحقق منه",
           "default": "Should have been checked"
         },
         {
-          "label": "Option should not have been checked",
+          "label": "خيار لا يجب ان يتم التحقق منه",
           "default": "Should not have been checked"
         },
         {
-          "label": "Text for \"Requires answer\" message",
+          "label": "نص لرسالة \"تتطلب الاجابة \"",
           "default": "Please answer before viewing the solution"
         }
       ]
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "الإعدادات السلوكية",
+      "description": "ستتيح لك هذه الخيارات التحكم في كيفية تصرف المهمة.",
       "fields": [
         {
-          "label": "Enable \"Retry\" button"
+          "label": "تمكين زر \" اعادة المحاولة \""
         },
         {
-          "label": "Enable \"Show Solution\" button"
+          "label": "تمكين زر \" اظهار الحل\""
         },
         {
-          "label": "Enable \"Check\" button"
+          "label": "تمكين زر  \" التحقق\"."
         },
         {
-          "label": "Question Type",
-          "description": "Select the look and behaviour of the question.",
+          "label": "نوع السؤال",
+          "description": "حدد مظهر وسلوك السؤال.",
           "options": [
             {
-              "label": "Automatic"
+              "label": "اتوماتيكي"
             },
             {
-              "label": "Multiple Choice (Checkboxes)"
+              "label": "اختيار متعدد (خانات اختيار)"
             },
             {
-              "label": "Single Choice (Radio Buttons)"
+              "label": "خيار واحد (Radio Buttons)"
             }
           ]
         },
         {
-          "label": "Give one point for the whole task",
-          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label": "أعط نقطة واحدة للمهمة بأكملها",
+          "description": "امكانية اعطاء ما مجموعه نقطة واحدة لعدة اجابات صحيحة، هذا لن يكون متاحا في وضع \" اجابة واحدة \"."
         },
         {
-          "label": "Randomize answers",
-          "description": "Enable to randomize the order of the answers on display."
+          "label": "اجوبة عشوائية",
+          "description": "ترتيب الاجابات على الشاشة بطريقة عشوائية."
         },
         {
-          "label": "Require answer before the solution can be viewed"
+          "label": "تتطلب الإجابة قبل أن يتم عرض الحل"
         },
         {
-          "label": "Disable image zooming for question image"
+          "label": "تعطيل تكبير الصورة من اجل صورة السؤال"
         },
         {
-          "label": "Show confirmation dialog on \"Check\""
+          "label": "إظهار مربع حوار التأكيد على \" تحقق\""
         },
         {
-          "label": "Show confirmation dialog on \"Retry\""
+          "label": "إظهار مربع حوار التأكيد على \" اعادة المحاولة\""
         },
         {
-          "label": "Automatically check answers",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label": "التحقق تلقائيا من الإجابات",
+          "description": "يؤدي تمكين هذا الخيار إلى معاناة إمكانية الوصول ، و يجب التأكد من معرفة ما الذي يقوم بفعله."
         },
         {
-          "label": "Pass percentage",
-          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label": "نسبة النجاح",
+          "description": "غالبًا لن يكون لهذا الإعداد أي تأثير. هي النسبة المئوية من مجموع النقاط المطلوبة للحصول على نقطة واحدة عند تمكين نقطة واحدة للمهمة بأكملها ، وللحصول على النتيجة.الوصول في عبارات xAPI."
         },
         {
-          "label": "Show score points",
-          "description": "Show points earned for each answer."
+          "label": "اظهار نقاط النتيجة",
+          "description": "عرض النقاط المكتسبة لكل إجابة. لن يكون هذا خيارًا في وضع (إجابة واحدة) أو إذا تم تمكين خيار (إعطاء نقطة واحدة للمهمة بالكامل)."
         }
       ]
     },
     {
-      "label": "Check confirmation dialog",
+      "label": "مربع حوار تحقق من التأكيد",
       "fields": [
         {
-          "label": "Header text",
+          "label": "نص الترويسة",
           "default": "Finish ?"
         },
         {
-          "label": "النص الأساسي",
+          "label": "النص الاساسي",
           "default": "Are you sure you wish to finish ?"
         },
         {
-          "label": "Cancel button label",
+          "label": "تسمية زر الالغاء",
           "default": "Cancel"
         },
         {
-          "label": "Confirm button label",
+          "label": "تسمية زر التأكيد",
           "default": "Finish"
         }
       ]
     },
     {
-      "label": "Retry confirmation dialog",
+      "label": "مربع حوار تأكيد اعادة المحاولة",
       "fields": [
         {
-          "label": "Header text",
+          "label": "نص الترويسة",
           "default": "Retry ?"
         },
         {
-          "label": "Body text",
+          "label": "النص الاساسي",
           "default": "Are you sure you wish to retry ?"
         },
         {
-          "label": "Cancel button label",
+          "label": "تسمية زر الالغاء",
           "default": "Cancel"
         },
         {
-          "label": "Confirm button label",
+          "label": "تسمية زر التأكيد",
           "default": "Confirm"
         }
       ]
