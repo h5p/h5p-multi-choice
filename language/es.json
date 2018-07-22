@@ -130,7 +130,7 @@
           "default": "No debería haber sido verificado"
         },
         {
-          "label": "Texto para el mensaje \"Requiere respuesta\",
+          "label": "Texto para el mensaje \"Requiere respuesta\"",
           "default": "Por favor responde antes de ver la solución"
         }
       ]
