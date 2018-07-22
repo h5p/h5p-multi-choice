@@ -92,6 +92,7 @@
         },
         {
           "label": "تمثيل نصي لشريط النتيجة لأولئك الذين يستخدمون تقننية تحويل النص الى كلام",
+          "description": "Available variables are :num and :total",
           "default": "You got :num out of :total points"
         },
         {

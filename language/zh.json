@@ -92,6 +92,7 @@
         },
         {
           "label": "報讀器得分條文本",
+          "description": "Available variables are :num and :total",
           "default": "你得到 :num 分，共 :total 分。"
         },
         {
