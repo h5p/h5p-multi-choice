@@ -56,6 +56,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     return new H5P.MultiChoice(options, contentId, contentData);
   var self = this;
   this.contentId = contentId;
+  this.contentData = contentData;
   H5P.Question.call(self, 'multichoice');
   var $ = H5P.jQuery;
 
@@ -1093,7 +1094,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   this.getTitle = function () {
-    return H5P.createTitle(params.question);
+    return H5P.createTitle((this.contentData && this.contentData.metadata && this.contentData.metadata.title) ? this.contentData.metadata.title : 'Multiple Choice');
   };
 };
 

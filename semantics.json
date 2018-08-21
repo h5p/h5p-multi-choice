@@ -11,7 +11,7 @@
         "label": "Type",
         "importance": "medium",
         "options": [
-          "H5P.Image 1.0",
+          "H5P.Image 1.1",
           "H5P.Video 1.4"
         ],
         "optional": true,
