@@ -1,6 +1,6 @@
 var H5PUpgrades = H5PUpgrades || {};
 
-H5PUpgrades['H5P.MultiChoice'] = (function ($) {
+H5PUpgrades['H5P.MultiChoice'] = (function () {
   return {
     1: {
       1: {
@@ -283,7 +283,8 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
 
         finished(null, parameters);
       },
-      11: function (parameters, finished, extras) {
+
+      13: function (parameters, finished, extras) {
         var title;
 
         if (parameters && parameters.question) {
@@ -298,4 +299,4 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
       }
     }
   };
-})(H5P.jQuery);
+})();
