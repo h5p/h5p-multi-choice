@@ -12,7 +12,7 @@ H5PPresave['H5P.MultiChoice'] = function (content, finished) {
   var score = 0;
   var correctAnswers = 0;
 
-  if (isContentInValid()) {
+  if (isContentInvalid()) {
     throw new presave.exceptions.InvalidContentSemanticsException('Invalid Multi Choice Error');
   }
 
@@ -35,7 +35,7 @@ H5PPresave['H5P.MultiChoice'] = function (content, finished) {
    * Check if required parameters is present
    * @return {boolean}
    */
-  function isContentInValid() {
+  function isContentInvalid() {
     return !presave.checkNestedRequirements(content, 'content.answers') || !Array.isArray(content.answers);
   }
 
