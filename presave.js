@@ -18,7 +18,8 @@ H5PPresave['H5P.MultiChoice'] = function (content, finished) {
 
   if (isSinglePoint()) {
     score = 1;
-  } else {
+  }
+  else {
     correctAnswers = content.answers.filter(function (answer) {
       return answer.correct === true;
     });
@@ -27,9 +28,7 @@ H5PPresave['H5P.MultiChoice'] = function (content, finished) {
 
   presave.validateScore(score);
 
-  if (finished) {
-    finished({maxScore: score});
-  }
+  finished({maxScore: score});
 
   /**
    * Check if required parameters is present
