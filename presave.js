@@ -43,6 +43,7 @@ H5PPresave['H5P.MultiChoice'] = function (content, finished) {
    * @return {boolean}
    */
   function isSinglePoint() {
-    return presave.checkNestedRequirements(content, 'content.behaviour.singlePoint') && content.behaviour.singlePoint === true;
+    return (presave.checkNestedRequirements(content, 'content.behaviour.singlePoint') && content.behaviour.singlePoint === true) ||
+      (presave.checkNestedRequirements(content, 'content.behaviour.type') && content.behaviour.type === 'single');
   }
 };
