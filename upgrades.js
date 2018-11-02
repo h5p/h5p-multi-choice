@@ -1,6 +1,6 @@
 var H5PUpgrades = H5PUpgrades || {};
 
-H5PUpgrades['H5P.MultiChoice'] = (function ($) {
+H5PUpgrades['H5P.MultiChoice'] = (function () {
   return {
     1: {
       1: {
@@ -282,7 +282,21 @@ H5PUpgrades['H5P.MultiChoice'] = (function ($) {
         }
 
         finished(null, parameters);
+      },
+
+      13: function (parameters, finished, extras) {
+        var title;
+
+        if (parameters && parameters.question) {
+          title = parameters.question;
+        }
+
+        extras = extras || {};
+        extras.metadata = extras.metadata || {};
+        extras.metadata.title = (title) ? title.replace(/<[^>]*>?/g, '') : ((extras.metadata.title) ? extras.metadata.title : 'Multiple Choice');
+
+        finished(null, parameters, extras);
       }
     }
   };
-})(H5P.jQuery);
+})();

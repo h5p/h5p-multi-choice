@@ -92,7 +92,8 @@
         },
         {
           "label": "תצוגה מילולית של סרגל הניקוד עבור אלה המשתמשים ב\"קורא מסך\"",
-          "default": "קיבלתם _ נקודות מסה\"כ הניקוד הכללי"
+          "description": "Available variables are :num and :total",
+          "default": "You got :num out of :total points"
         },
         {
           "label": "עצה זמינה (לא מוצגת)",
