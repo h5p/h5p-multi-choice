@@ -6,6 +6,9 @@
         {
           "label": "Tüüp",
           "description": "Pilt või video, mida kuvatakse küsimuse juures (mittekohustuslik element)."
+        },
+        {
+          "label": "Disable image zooming"
         }
       ]
     },
@@ -172,9 +175,6 @@
         },
         {
           "label": "Require answer before the solution can be viewed"
-        },
-        {
-          "label": "Disable image zooming for question image"
         },
         {
           "label": "Show confirmation dialog on \"Check\""

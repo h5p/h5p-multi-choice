@@ -6,6 +6,9 @@
         {
           "label": "Type de média",
           "description": "Média à afficher au-dessus de la question (facultatif)."
+        },
+        {
+          "label": "Désactiver le zoom sur image pour l'image de la question"
         }
       ]
     },
@@ -172,9 +175,6 @@
         },
         {
           "label": "Réponse requise avant que la solution puisse être affichée"
-        },
-        {
-          "label": "Désactiver le zoom sur image pour l'image de la question"
         },
         {
           "label": "Afficher le message de confirmation sur \"Vérifier\""

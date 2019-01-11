@@ -6,6 +6,9 @@
         {
           "label": "Tipo",
           "description": "Media opzionale da mostrare sopra la domanda."
+        },
+        {
+          "label": "Disabilita lo zoom dell'immagine"
         }
       ]
     },
@@ -172,9 +175,6 @@
         },
         {
           "label": "Richiede una risposta prima che la soluzione possa essere vista"
-        },
-        {
-          "label": "Disabilita lo zoom dell'immagine su immagini-domanda"
         },
         {
           "label": "Mostra la finestra di dialogo di conferma su \"Verifica\""

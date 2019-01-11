@@ -6,6 +6,9 @@
         {
           "label": "Type",
           "description": "Eit valfritt multimediaelement som skal visast over spørsmålet."
+        },
+        {
+          "label": "Disable image zooming"
         }
       ]
     },
@@ -172,9 +175,6 @@
         },
         {
           "label": "Require answer before the solution can be viewed"
-        },
-        {
-          "label": "Disable image zooming for question image"
         },
         {
           "label": "Show confirmation dialog on \"Check\""

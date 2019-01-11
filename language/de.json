@@ -6,6 +6,9 @@
         {
           "label": "Typ",
           "description": "Optionale Inhalte, die über der Frage dargestellt werden"
+        },
+        {
+          "label": "Bildzoom deaktivieren"
         }
       ]
     },
@@ -172,9 +175,6 @@
         },
         {
           "label": "Lösung wird erst angezeigt, wenn eine Antwort eingegeben wurde."
-        },
-        {
-          "label": "Deaktiviere das Zoomen des Fragebildes."
         },
         {
           "label": "Zeige Bestätigungsdialog bei \"Überprüfen\""
