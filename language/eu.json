@@ -6,6 +6,9 @@
         {
           "label": "Mota",
           "description": "Galderaren gaineko aukerako multimedia."
+        },
+        {
+          "label": "Desgaitu irudiaren zooma"
         }
       ]
     },
@@ -172,9 +175,6 @@
         },
         {
           "label": "Erantzun behar da soluzioa ikusi ahal izateko"
-        },
-        {
-          "label": "Desgaitu irudiaren zooma galderaren irudirako"
         },
         {
           "label": "Erakutsi egiaztatze elkarrizketa \"Egiaztatu\" botoian"
