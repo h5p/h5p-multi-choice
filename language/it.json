@@ -32,7 +32,7 @@
             "fields": [
               {
                 "label": "Testo del suggerimento",
-                "description": "Suggerimento per l'utente. Apparirà prima l'utente verifichi la sua risposta / le sue risposte."
+                "description": "Suggerimento per l'utente. Apparirà prima l'utente verifichi le sue risposte."
               },
               {
                 "label": "Messaggio visualizzato se la risposta è selezionata",
@@ -57,7 +57,7 @@
             }
           ],
           "label": "Definisci un feedback personalizzato per ogni intervallo di punteggio",
-          "description": "Esempio: 0-20%, cattivo punteggio; 21-91% punteggio nella  media; 91-100% ottimo punteggio!",
+          "description": "Esempio: 0-20%, cattivo punteggio; 21-91% punteggio media; 91-100% ottimo punteggio!",
           "entity": "Intervallo",
           "field": {
             "fields": [
@@ -78,15 +78,15 @@
       "label": "Traduzioni dell'interfaccia utente per scelta multipla",
       "fields": [
         {
-          "label": "Etichetta del pulsante Verifica risposta",
+          "label": "Etichetta del pulsante \"Verifica risposta\"",
           "default": "Verifica"
         },
         {
-          "label": "Etichetta del pulsante Mostra soluzione",
+          "label": "Etichetta del pulsante \"Mostra soluzione\"",
           "default": "Mostra la soluzione"
         },
         {
-          "label": "Etichetta del pulsante Riprova",
+          "label": "Etichetta del pulsante \"Riprova\"",
           "default": "Riprova"
         },
         {
@@ -94,14 +94,14 @@
           "default": "Mostra suggerimento"
         },
         {
-          "label": "Textual representation of the score bar for those using a readspeaker",
-          "description": "Available variables are :num and :total",
-          "default": "You got :num out of :total points"
+          "label": "Rappresentazione testuale sulla barra del punteggio per chi usa un lettore vocale",
+          "description": "Le variabili disponibili sono :num e :total",
+          "default": "Il tuo punteggio è :num su :total"
         },
         {
           "label": "Suggerimento disponibile (non visualizzato)",
           "default": "Suggerimento disponibile",
-          "description": "Testo di accessibilità utilizzato per riproduttori vocali"
+          "description": "Testo di accessibilità per riproduttori vocali"
         },
         {
           "label": "Feedback disponibile (non visualizzato)",
@@ -142,13 +142,13 @@
       "description": "Queste opzioni ti consentono di controllare l'esecuzione del compito.",
       "fields": [
         {
-          "label": "Abilita il pulsante Riprova"
+          "label": "Attiva il pulsante Riprova"
         },
         {
-          "label": "Abilita il pulsante Mostra soluzione"
+          "label": "Attiva il pulsante Mostra soluzione"
         },
         {
-          "label": "Enable \"Check\" button"
+          "label": "Attiva il pulsante \"Verifica\""
         },
         {
           "label": "Tipo di domanda",
@@ -167,11 +167,11 @@
         },
         {
           "label": "Assegna un punto per l'intero compito",
-          "description": "Abilita per assegnare un totale di un punto per risposte multiple corrette. Questa non è un'opzione in modalità \"Risposta singola\"."
+          "description": "Attiva per assegnare un punto a risposte multiple corrette. Questa non è un'opzione in modalità \"Risposta singola\"."
         },
         {
           "label": "Risposte in ordine casuale",
-          "description": "Abilita per rendere casuale l'ordine delle domande visualizzate."
+          "description": "Attiva per rendere casuale l'ordine delle domande visualizzate."
         },
         {
           "label": "Richiede una risposta prima che la soluzione possa essere vista"
@@ -184,7 +184,7 @@
         },
         {
           "label": "Controlla automaticamente le risposte",
-          "description": "Abilitare questa opzione renderà difficoltosa l'accessibilità. Assicurati di sapere cosa stai facendo."
+          "description": "Attivare questa opzione renderà difficoltosa l'accessibilità. Assicurati di cosa stai facendo."
         },
         {
           "label": "Percentuale di superamento della prova",
@@ -205,7 +205,7 @@
         },
         {
           "label": "Testo del corpo",
-          "default": "Sei sicuro di voler finire?"
+          "default": "Sei sicuro di voler concludere?"
         },
         {
           "label": "Etichetta del pulsante di annullamento",
@@ -222,7 +222,7 @@
       "fields": [
         {
           "label": "Testo dell'intestazione",
-          "default": "Riprovare?"
+          "default": "Vuoi riprovare?"
         },
         {
           "label": "Testo del corpo",
