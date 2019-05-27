@@ -193,10 +193,18 @@
             {
               "name": "feedback",
               "type": "text",
+              "widget": "html",
               "label": "Feedback for defined score range",
               "importance": "low",
               "placeholder": "Fill in the feedback",
-              "optional": true
+              "optional": true,
+              "tags": [
+                "strong",
+                "em",
+                "sub",
+                "sup",
+                "a"
+              ]
             }
           ]
         }
