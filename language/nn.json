@@ -32,15 +32,15 @@
             "fields": [
               {
                 "label": "Tipstekst",
-                "description": "Hint for brukaren. Dette vil visast før brukaren sjekkar sine svar."
+                "description": "Hint for brukaren. Dette vil visast før brukaren sjekkar svara sine."
               },
               {
                 "label": "Melding som visast hvis svaret er valgt",
-                "description": "Melding som visast under svaret på \"check\" hvis svaret er valgt."
+                "description": "Melding som visast under svaret på \"check\" om svaret er valt."
               },
               {
                 "label": "Melding som visast hvis svaret ikkje er valgt",
-                "description": "Melding som visast under svaret på \"check\" hvis andre svar er valgt."
+                "description": "Melding som visast under svaret på \"check\" om andre svar er valt."
               }
             ]
           }
@@ -79,33 +79,33 @@
       "fields": [
         {
           "label": "Check answer button label",
-          "default": "Check"
+          "default": "Sjekk"
         },
         {
           "label": "Show solution button label",
-          "default": "Show solution"
+          "default": "Vis svar"
         },
         {
           "label": "Retry button label",
-          "default": "Retry"
+          "default": "Prøv igjen"
         },
         {
           "label": "Tip label",
-          "default": "Show tip"
+          "default": "Vis tips"
         },
         {
           "label": "Textual representation of the score bar for those using a readspeaker",
           "description": "Available variables are :num and :total",
-          "default": "You got :num out of :total points"
+          "default": "Du fikk :num av :total points"
         },
         {
           "label": "Tip Available (not displayed)",
-          "default": "Tip available",
+          "default": "Tips tilgjengeleg",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Feedback Available (not displayed)",
-          "default": "Feedback available",
+          "default": "Tilbakemelding tilgjengeleg",
           "description": "Accessibility text used for readspeakers"
         },
         {
@@ -125,15 +125,15 @@
         },
         {
           "label": "Option should have been checked",
-          "default": "Should have been checked"
+          "default": "Skulle ha vore haka av"
         },
         {
           "label": "Option should not have been checked",
-          "default": "Should not have been checked"
+          "default": "Skulle ikkje ha vore haka av"
         },
         {
           "label": "Text for \"Requires answer\" message",
-          "default": "Please answer before viewing the solution"
+          "default": "Du må svare på denne før du ser løysinga"
         }
       ]
     },
@@ -201,19 +201,19 @@
       "fields": [
         {
           "label": "Tittel",
-          "default": "Finish ?"
+          "default": "Ferdig?"
         },
         {
           "label": "Tekst",
-          "default": "Are you sure you wish to finish ?"
+          "default": "Er du sikker på at du vil avslutte?"
         },
         {
           "label": "Avbryt etikett",
-          "default": "Avbrytt"
+          "default": "Avbryt"
         },
         {
           "label": "Bekreft etikett",
-          "default": "Finish"
+          "default": "Ferdig"
         }
       ]
     },
@@ -222,19 +222,19 @@
       "fields": [
         {
           "label": "Header text",
-          "default": "Retry ?"
+          "default": "Prøv igjen?"
         },
         {
           "label": "Body text",
-          "default": "Are you sure you wish to retry ?"
+          "default": "Er du sikker på at du vil prøve igjen?"
         },
         {
           "label": "Cancel button label",
-          "default": "Cancel"
+          "default": "Avbryt"
         },
         {
           "label": "Confirm button label",
-          "default": "Confirm"
+          "default": "Stadfest"
         }
       ]
     }
