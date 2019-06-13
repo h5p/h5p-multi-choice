@@ -79,33 +79,33 @@
       "fields": [
         {
           "label": "Check answer button label",
-          "default": "Check"
+          "default": "Sjekk"
         },
         {
           "label": "Show solution button label",
-          "default": "Show solution"
+          "default": "Vis svar"
         },
         {
           "label": "Retry button label",
-          "default": "Retry"
+          "default": "Prøv igjen"
         },
         {
           "label": "Tip label",
-          "default": "Show tip"
+          "default": "Vis tips"
         },
         {
           "label": "Textual representation of the score bar for those using a readspeaker",
           "description": "Available variables are :num and :total",
-          "default": "You got :num out of :total points"
+          "default": "Du fikk :num av :total points"
         },
         {
           "label": "Tip Available (not displayed)",
-          "default": "Tip available",
+          "default": "Tips tilgjengelig",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Feedback Available (not displayed)",
-          "default": "Feedback available",
+          "default": "Tilbakemelding tilgjengelig",
           "description": "Accessibility text used for readspeakers"
         },
         {
@@ -115,7 +115,7 @@
         },
         {
           "label": "Wrong Answer (not displayed)",
-          "default": "Wrong answer",
+          "default": "Feil svar",
           "description": "Accessibility text used for readspeakers"
         },
         {
@@ -125,15 +125,15 @@
         },
         {
           "label": "Option should have been checked",
-          "default": "Should have been checked"
+          "default": "Skulle ha vært krysset av"
         },
         {
           "label": "Option should not have been checked",
-          "default": "Should not have been checked"
+          "default": "Skulle ikke ha vært krysset av"
         },
         {
           "label": "Text for \"Requires answer\" message",
-          "default": "Please answer before viewing the solution"
+          "default": "Du må svare på denne før du kan se løsningen"
         }
       ]
     },
@@ -205,7 +205,7 @@
         },
         {
           "label": "Tekst",
-          "default": "Are you sure you wish to finish ?"
+          "default": "Er du sikker på at du er ferdig?"
         },
         {
           "label": "Etikett for \"Avbryt\"-knapp",
@@ -213,7 +213,7 @@
         },
         {
           "label": "Etikett for \"Bekreft\"-knapp",
-          "default": "Finish"
+          "default": "Bekreft"
         }
       ]
     },
@@ -222,19 +222,19 @@
       "fields": [
         {
           "label": "Header text",
-          "default": "Retry ?"
+          "default": "Prøv igjen?"
         },
         {
           "label": "Body text",
-          "default": "Are you sure you wish to retry ?"
+          "default": "Er du sikker på at du vil prøve igjen?"
         },
         {
           "label": "Cancel button label",
-          "default": "Cancel"
+          "default": "Avbryt"
         },
         {
           "label": "Confirm button label",
-          "default": "Confirm"
+          "default": "Bekreft"
         }
       ]
     }
