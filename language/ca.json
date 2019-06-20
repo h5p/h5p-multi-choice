@@ -1,43 +1,46 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Recurs",
-      "fields":[
+      "label": "Recurs",
+      "fields": [
         {
-          "label":"Tipus",
-          "description":"Recursos opcionals per mostrar al damunt de la pregunta."
+          "label": "Tipus",
+          "description": "Recursos opcionals per mostrar al damunt de la pregunta."
+        },
+        {
+          "label": "Disable image zooming"
         }
       ]
     },
     {
-      "label":"Pregunta"
+      "label": "Pregunta"
     },
     {
-      "label":"Opcions disponibles",
-      "entity":"opció",
-      "field":{
-        "label":"Opció",
-        "fields":[
+      "label": "Opcions disponibles",
+      "entity": "opció",
+      "field": {
+        "label": "Opció",
+        "fields": [
           {
-            "label":"Text"
+            "label": "Text"
           },
           {
-            "label":"Correcte"
+            "label": "Correcte"
           },
           {
-            "label":"Suggerències i informació de retorn",
-            "fields":[
+            "label": "Suggerències i informació de retorn",
+            "fields": [
               {
-                "label":"Text de la pista",
-                "description":"Pista per a l'usuari. Això apareixerà abans que l'usuari confirmi la seva resposta/Respostes."
+                "label": "Text de la pista",
+                "description": "Pista per a l'usuari. Això apareixerà abans que l'usuari confirmi la seva resposta/Respostes."
               },
               {
-                "label":"Aquest missatge es mostra si la resposta està seleccionada",
-                "description":"Missatge que apareixerà sota la resposta seleccionada al validar."
+                "label": "Aquest missatge es mostra si la resposta està seleccionada",
+                "description": "Missatge que apareixerà sota la resposta seleccionada al validar."
               },
               {
-                "label":"Missatge que es mostra si no s'ha seleccionat cap resposta",
-                "description":"Missatge que apareixerà sota la resposta si aquesta resposta no està seleccionada al validar."
+                "label": "Missatge que es mostra si no s'ha seleccionat cap resposta",
+                "description": "Missatge que apareixerà sota la resposta si aquesta resposta no està seleccionada al validar."
               }
             ]
           }
@@ -45,28 +48,26 @@
       }
     },
     {
-      "label":"Overall Feedback",
-      "fields":[
+      "label": "Overall Feedback",
+      "fields": [
         {
-          "widgets":[
+          "widgets": [
             {
-              "label":"Default"
+              "label": "Default"
             }
           ],
-          "label":"Define custom feedback for any score range",
-          "description":"Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
-          "entity":"range",
-          "field":{
-            "fields":[
+          "label": "Define custom feedback for any score range",
+          "description": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "entity": "range",
+          "field": {
+            "fields": [
               {
-                "label":"Score Range"
+                "label": "Score Range"
               },
+              {},
               {
-                
-              },
-              {
-                "label":"Feedback for defined score range",
-                "placeholder":"Fill in the feedback"
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
               }
             ]
           }
@@ -74,166 +75,166 @@
       ]
     },
     {
-      "label":"User interface translations for multichoice",
-      "fields":[
+      "label": "User interface translations for multichoice",
+      "fields": [
         {
-          "label":"Check answer button label",
-          "default":"Check"
+          "label": "Check answer button label",
+          "default": "Check"
         },
         {
-          "label":"Show solution button label",
-          "default":"Show solution"
+          "label": "Show solution button label",
+          "default": "Show solution"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label": "Retry button label",
+          "default": "Retry"
         },
         {
-          "label":"Tip label",
-          "default":"Show tip"
+          "label": "Tip label",
+          "default": "Show tip"
         },
         {
-          "label":"Score Bar Label",
-          "default":"Score"
+          "label": "Textual representation of the score bar for those using a readspeaker",
+          "description": "Available variables are :num and :total",
+          "default": "You got :num out of :total points"
         },
         {
-          "label":"Tip Available (not displayed)",
-          "default":"Tip available",
-          "description":"Accessibility text used for readspeakers"
+          "label": "Tip Available (not displayed)",
+          "default": "Tip available",
+          "description": "Accessibility text used for readspeakers"
         },
         {
-          "label":"Feedback Available (not displayed)",
-          "default":"Feedback available",
-          "description":"Accessibility text used for readspeakers"
+          "label": "Feedback Available (not displayed)",
+          "default": "Feedback available",
+          "description": "Accessibility text used for readspeakers"
         },
         {
-          "label":"Read Feedback (not displayed)",
-          "default":"Read feedback",
-          "description":"Accessibility text used for readspeakers"
+          "label": "Read Feedback (not displayed)",
+          "default": "Read feedback",
+          "description": "Accessibility text used for readspeakers"
         },
         {
-          "label":"Wrong Answer (not displayed)",
-          "default":"Wrong answer",
-          "description":"Accessibility text used for readspeakers"
+          "label": "Wrong Answer (not displayed)",
+          "default": "Wrong answer",
+          "description": "Accessibility text used for readspeakers"
         },
         {
-          "label":"Correct Answer (not displayed)",
-          "default":"Correct answer",
-          "description":"Accessibility text used for readspeakers"
+          "label": "Correct Answer (not displayed)",
+          "default": "Correct answer",
+          "description": "Accessibility text used for readspeakers"
         },
         {
-          "label":"Option should have been checked",
-          "default":"Should have been checked"
+          "label": "Option should have been checked",
+          "default": "Should have been checked"
         },
         {
-          "label":"Option should not have been checked",
-          "default":"Should not have been checked"
+          "label": "Option should not have been checked",
+          "default": "Should not have been checked"
         },
         {
-          "label":"Text for \"Requires answer\" message",
-          "default":"Please answer before viewing the solution"
+          "label": "Text for \"Requires answer\" message",
+          "default": "Please answer before viewing the solution"
         }
       ]
     },
     {
-      "label":"Behavioural settings",
-      "description":"These options will let you control how the task behaves.",
-      "fields":[
+      "label": "Behavioural settings",
+      "description": "These options will let you control how the task behaves.",
+      "fields": [
         {
-          "label":"Enable \"Retry\" button"
+          "label": "Enable \"Retry\" button"
         },
         {
-          "label":"Enable \"Show Solution\" button"
+          "label": "Enable \"Show Solution\" button"
         },
         {
-          "label":"Question Type",
-          "description":"Select the look and behaviour of the question.",
-          "default":"auto",
-          "options":[
+          "label": "Enable \"Check\" button"
+        },
+        {
+          "label": "Question Type",
+          "description": "Select the look and behaviour of the question.",
+          "options": [
             {
-              "label":"Automatic"
+              "label": "Automatic"
             },
             {
-              "label":"Multiple Choice (Checkboxes)"
+              "label": "Multiple Choice (Checkboxes)"
             },
             {
-              "label":"Single Choice (Radio Buttons)"
+              "label": "Single Choice (Radio Buttons)"
             }
           ]
         },
         {
-          "label":"Give one point for the whole task",
-          "description":"Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label": "Give one point for the whole task",
+          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
         },
         {
-          "label":"Randomize answers",
-          "description":"Enable to randomize the order of questions on display."
+          "label": "Randomize answers",
+          "description": "Enable to randomize the order of the answers on display."
         },
         {
-          "label":"Require answer before the solution can be viewed"
+          "label": "Require answer before the solution can be viewed"
         },
         {
-          "label":"Disable image zooming for question image"
+          "label": "Show confirmation dialog on \"Check\""
         },
         {
-          "label":"Show confirmation dialog on \"Check\""
+          "label": "Show confirmation dialog on \"Retry\""
         },
         {
-          "label":"Show confirmation dialog on \"Retry\""
+          "label": "Automatically check answers",
+          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
         },
         {
-          "label":"Automatically check answers",
-          "description":"Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label": "Pass percentage",
+          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
         },
         {
-          "label":"Pass percentage",
-          "description":"This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
-        },
-        {
-          "label":"Show score points",
-          "description":"Show points earned for each answer."
+          "label": "Show score points",
+          "description": "Show points earned for each answer."
         }
       ]
     },
     {
-      "label":"Check confirmation dialog",
-      "fields":[
+      "label": "Check confirmation dialog",
+      "fields": [
         {
-          "label":"Títol",
-          "default":"Finish ?"
+          "label": "Títol",
+          "default": "Finish ?"
         },
         {
-          "label":"Cos de text",
-          "default":"Are you sure you wish to finish ?"
+          "label": "Cos de text",
+          "default": "Are you sure you wish to finish ?"
         },
         {
-          "label":"Etiqueta del botó \"Cancel•lar\"",
-          "default":"Cancel·lar"
+          "label": "Etiqueta del botó \"Cancel•lar\"",
+          "default": "Cancel·lar"
         },
         {
-          "label":"Etiqueta del botó \"Confirmar\"",
-          "default":"Finish"
+          "label": "Etiqueta del botó \"Confirmar\"",
+          "default": "Finish"
         }
       ]
     },
     {
-      "label":"Retry confirmation dialog",
-      "fields":[
+      "label": "Retry confirmation dialog",
+      "fields": [
         {
-          "label":"Header text",
-          "default":"Retry ?"
+          "label": "Header text",
+          "default": "Retry ?"
         },
         {
-          "label":"Body text",
-          "default":"Are you sure you wish to retry ?"
+          "label": "Body text",
+          "default": "Are you sure you wish to retry ?"
         },
         {
-          "label":"Cancel button label",
-          "default":"Cancel"
+          "label": "Cancel button label",
+          "default": "Cancel"
         },
         {
-          "label":"Confirm button label",
-          "default":"Confirm"
+          "label": "Confirm button label",
+          "default": "Confirm"
         }
       ]
     }

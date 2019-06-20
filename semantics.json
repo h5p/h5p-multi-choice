@@ -11,11 +11,28 @@
         "label": "Type",
         "importance": "medium",
         "options": [
-          "H5P.Image 1.0",
-          "H5P.Video 1.3"
+          "H5P.Image 1.1",
+          "H5P.Video 1.5"
         ],
         "optional": true,
         "description": "Optional media to display above the question."
+      },
+      {
+        "name": "disableImageZooming",
+        "type": "boolean",
+        "label": "Disable image zooming",
+        "importance": "low",
+        "default": false,
+        "optional": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "type",
+              "equals": "H5P.Image 1.0"
+            }
+          ]
+        }
       }
     ]
   },
@@ -226,9 +243,10 @@
       {
         "name": "scoreBarLabel",
         "type": "text",
-        "label": "Score Bar Label",
+        "label": "Textual representation of the score bar for those using a readspeaker",
+        "description": "Available variables are :num and :total",
         "importance": "low",
-        "default": "Score",
+        "default": "You got :num out of :total points",
         "optional": true
       },
       {
@@ -329,6 +347,15 @@
         "optional": true
       },
       {
+        "name": "enableCheckButton",
+        "type": "boolean",
+        "label": "Enable \"Check\" button",
+        "widget": "none",
+        "importance": "low",
+        "default": true,
+        "optional": true
+      },
+      {
         "name": "type",
         "type": "select",
         "label": "Question Type",
@@ -363,7 +390,7 @@
         "type": "boolean",
         "label": "Randomize answers",
         "importance": "low",
-        "description": "Enable to randomize the order of questions on display.",
+        "description": "Enable to randomize the order of the answers on display.",
         "default": true
       },
       {
@@ -372,14 +399,6 @@
         "name": "showSolutionsRequiresInput",
         "type": "boolean",
         "default": true,
-        "optional": true
-      },
-      {
-        "label": "Disable image zooming for question image",
-        "importance": "low",
-        "name": "disableImageZooming",
-        "type": "boolean",
-        "default": false,
         "optional": true
       },
       {

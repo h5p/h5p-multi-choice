@@ -1,3 +1,4 @@
+/*global EJS*/
 // Will render a Question with multiple choices for answers.
 
 // Options format:
@@ -55,6 +56,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     return new H5P.MultiChoice(options, contentId, contentData);
   var self = this;
   this.contentId = contentId;
+  this.contentData = contentData;
   H5P.Question.call(self, 'multichoice');
   var $ = H5P.jQuery;
 
@@ -92,7 +94,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       checkAnswerButton: 'Check',
       showSolutionButton: 'Show solution',
       tryAgainButton: 'Try again',
-      scoreBarLabel: 'Score',
+      scoreBarLabel: 'You got :num out of :total points',
       tipAvailable: "Tip available",
       feedbackAvailable: "Feedback available",
       readFeedback: 'Read feedback',
@@ -103,11 +105,11 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     behaviour: {
       enableRetry: true,
       enableSolutionsButton: true,
+      enableCheckButton: true,
       type: 'auto',
       singlePoint: true,
       randomAnswers: false,
       showSolutionsRequiresInput: true,
-      disableImageZooming: false,
       autoCheck: false,
       passPercentage: 100,
       showScorePoints: true
@@ -197,21 +199,23 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * Register the different parts of the task with the H5P.Question structure.
    */
   self.registerDomElements = function () {
-    if (params.media && params.media.library) {
-      var type = params.media.library.split(' ')[0];
+    var media = params.media.type;
+    if (media && media.library) {
+      var type = media.library.split(' ')[0];
       if (type === 'H5P.Image') {
-        if (params.media.params.file) {
+        if (media.params.file) {
           // Register task image
-          self.setImage(params.media.params.file.path, {
-            disableImageZooming: params.behaviour.disableImageZooming,
-            alt: params.media.params.alt
+          self.setImage(media.params.file.path, {
+            disableImageZooming: params.media.disableImageZooming || false,
+            alt: media.params.alt,
+            title: media.params.title
           });
         }
       }
       else if (type === 'H5P.Video') {
-        if (params.media.params.sources) {
+        if (media.params.sources) {
           // Register task video
-          self.setVideo(params.media);
+          self.setVideo(media);
         }
       }
     }
@@ -505,7 +509,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * Hide solution for the given answer(s)
    *
    * @private
-   * @param {H5P.jQuery} $answer
+   * @param {H5P.jQuery} $answer
    */
   var hideSolution = function ($answer) {
     $answer
@@ -575,13 +579,13 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Remove all tip dialogs
     removeFeedbackDialog();
 
-    self.hideButton('check-answer');
     if (params.behaviour.enableSolutionsButton) {
       self.showButton('show-solution');
     }
     if (params.behaviour.enableRetry) {
       self.showButton('try-again');
     }
+    self.hideButton('check-answer');
 
     self.showCheckSolution();
     disableInput();
@@ -590,7 +594,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     addQuestionToXAPI(xAPIEvent);
     addResponseToXAPI(xAPIEvent);
     self.trigger(xAPIEvent);
-    self.trigger('resize');
   };
 
   /**
@@ -639,7 +642,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }, false);
 
     // Check solution button
-    if (!params.behaviour.autoCheck || !params.behaviour.singleAnswer) {
+    if (params.behaviour.enableCheckButton && (!params.behaviour.autoCheck || !params.behaviour.singleAnswer)) {
       self.addButton('check-answer', params.UI.checkAnswerButton,
         function () {
           self.answered = true;
@@ -670,7 +673,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       self.answered = false;
       if (params.behaviour.randomAnswers) {
         // reshuffle answers
-       oldIdMap = idMap;
+       var oldIdMap = idMap;
        idMap = getShuffleMap();
        var answersDisplayed = $myDom.find('.h5p-answer');
        // remember tips
@@ -790,27 +793,20 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Determine feedback
     var max = self.getMaxScore();
 
+    // Disable task if maxscore is achieved
+    var fullScore = (score === max);
+
+    if (fullScore) {
+      self.hideButton('check-answer');
+      self.hideButton('try-again');
+      self.hideButton('show-solution');
+    }
+
     // Show feedback
     if (!skipFeedback) {
       this.setFeedback(getFeedbackText(score, max), score, max, params.UI.scoreBarLabel);
     }
 
-    // Disable task if maxscore is achieved
-    var fullScore = (score === max);
-    if (fullScore) {
-      finishedTask();
-    }
-
-    self.trigger('resize');
-  };
-
-  /**
-   * Method to use when the task is correctly answered, removes all buttons and disables input.
-   */
-  var finishedTask = function () {
-    self.hideButton('check-answer');
-    self.hideButton('try-again');
-    self.hideButton('show-solution');
     self.trigger('resize');
   };
 
@@ -968,7 +964,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @return {number[]} map pointing from original answers to shuffled answers
    */
   var getShuffleMap = function() {
-    var origOrder = $.extend([], params.answers);
     params.answers = H5P.shuffleArray(params.answers);
 
     // Create a map from the new id to the old one
@@ -977,7 +972,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       idMap[i] = params.answers[i].originalOrder;
     }
     return idMap;
-  }
+  };
 
   // Initialization code
   // Randomize order, if requested
@@ -1099,7 +1094,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   this.getTitle = function () {
-    return H5P.createTitle(params.question);
+    return H5P.createTitle((this.contentData && this.contentData.metadata && this.contentData.metadata.title) ? this.contentData.metadata.title : 'Multiple Choice');
   };
 };
 

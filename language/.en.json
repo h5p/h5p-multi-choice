@@ -6,6 +6,9 @@
         {
           "label": "Type",
           "description": "Optional media to display above the question."
+        },
+        {
+          "label": "Disable image zooming"
         }
       ]
     },
@@ -91,8 +94,9 @@
           "default": "Show tip"
         },
         {
-          "label": "Score Bar Label",
-          "default": "Score"
+          "label": "Textual representation of the score bar for those using a readspeaker",
+          "description": "Available variables are :num and :total",
+          "default": "You got :num out of :total points"
         },
         {
           "label": "Tip Available (not displayed)",
@@ -144,9 +148,11 @@
           "label": "Enable \"Show Solution\" button"
         },
         {
+          "label": "Enable \"Check\" button"
+        },
+        {
           "label": "Question Type",
           "description": "Select the look and behaviour of the question.",
-          "default": "auto",
           "options": [
             {
               "label": "Automatic"
@@ -165,13 +171,10 @@
         },
         {
           "label": "Randomize answers",
-          "description": "Enable to randomize the order of questions on display."
+          "description": "Enable to randomize the order of the answers on display."
         },
         {
           "label": "Require answer before the solution can be viewed"
-        },
-        {
-          "label": "Disable image zooming for question image"
         },
         {
           "label": "Show confirmation dialog on \"Check\""
