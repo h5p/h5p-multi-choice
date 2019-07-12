@@ -29,7 +29,7 @@
           "rules": [
             {
               "field": "type",
-              "equals": "H5P.Image 1.0"
+              "equals": "H5P.Image 1.1"
             }
           ]
         }
