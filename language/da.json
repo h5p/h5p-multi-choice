@@ -6,6 +6,9 @@
         {
           "label": "Type",
           "description": "Vis valgfrit medie over spørgsmålet."
+        },
+        {
+          "label": "Deaktiver zoom af billede"
         }
       ]
     },
@@ -172,9 +175,6 @@
         },
         {
           "label": "Anmod om svar før 'Vis svar' kan vælges"
-        },
-        {
-          "label": "Aktiver zoom af billede vist ved spørgsmål"
         },
         {
           "label": "Vis bekræft ved valg af \"tjek\""

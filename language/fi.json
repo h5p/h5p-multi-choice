@@ -6,6 +6,9 @@
         {
           "label": "Tyyppi",
           "description": "Valinnainen kuva tai video, joka näkyy kysymyksen yläpuolella."
+        },
+        {
+          "label": "Älä salli kuvan suurentamista"
         }
       ]
     },
@@ -91,9 +94,9 @@
           "default": "Näytä vihje"
         },
         {
-          "label": "Textual representation of the score bar for those using a readspeaker",
-          "description": "Available variables are :num and :total",
-          "default": "You got :num out of :total points"
+          "label": "Tekstimuotoinen esitys pistepalkista niille jotka käyttävät ruudunlukijasovellusta",
+          "description": "Käytettävissä olevat muuttujat ovat :num ja :total",
+          "default": "Sait :num pistettä :total pisteestä"
         },
         {
           "label": "Vihje saatavilla",
@@ -172,9 +175,6 @@
         },
         {
           "label": "Vaadi vastaus ennen kuin ratkaisun saa katsoa"
-        },
-        {
-          "label": "Älä salli kysymykseen liitetyn kuvan suurentamista"
         },
         {
           "label": "Näytä varmistusdialogi, kun käyttäjä klikkaa \"Tarkista\""

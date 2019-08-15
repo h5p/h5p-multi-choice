@@ -110,7 +110,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       singlePoint: true,
       randomAnswers: false,
       showSolutionsRequiresInput: true,
-      disableImageZooming: false,
       autoCheck: false,
       passPercentage: 100,
       showScorePoints: true
@@ -200,22 +199,24 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * Register the different parts of the task with the H5P.Question structure.
    */
   self.registerDomElements = function () {
-    if (params.media && params.media.library) {
-      var type = params.media.library.split(' ')[0];
+    var media = params.media;
+    if (media && media.type && media.type.library) {
+      media = media.type;
+      var type = media.library.split(' ')[0];
       if (type === 'H5P.Image') {
-        if (params.media.params.file) {
+        if (media.params.file) {
           // Register task image
-          self.setImage(params.media.params.file.path, {
-            disableImageZooming: params.behaviour.disableImageZooming,
-            alt: params.media.params.alt,
-            title: params.media.params.title
+          self.setImage(media.params.file.path, {
+            disableImageZooming: params.media.disableImageZooming || false,
+            alt: media.params.alt,
+            title: media.params.title
           });
         }
       }
       else if (type === 'H5P.Video') {
-        if (params.media.params.sources) {
+        if (media.params.sources) {
           // Register task video
-          self.setVideo(params.media);
+          self.setVideo(media);
         }
       }
     }

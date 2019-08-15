@@ -6,6 +6,9 @@
         {
           "label": "Typ",
           "description": "Opcjonalne zdjęcie lub wideo ponad treścią pytania."
+        },
+        {
+          "label": "Zablokuj możliwość powiększania zdjęcia"
         }
       ]
     },
@@ -172,9 +175,6 @@
         },
         {
           "label": "Wymagaj podania odpowiedzi przed pokazaniem poprawnego rozwiązania"
-        },
-        {
-          "label": "Zablokuj możliwość powiększania zdjęcia związanego z pytaniem"
         },
         {
           "label": "Pokazuj prośbę o potwierdzenie akcji \"Sprawdź\""

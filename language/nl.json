@@ -6,6 +6,9 @@
         {
           "label": "Type",
           "description": "Optionele media, die boven de vragen worden getoond"
+        },
+        {
+          "label": "Deactiveer zoomen van een afbeelding bij een vraag afbeelding"
         }
       ]
     },
@@ -172,9 +175,6 @@
         },
         {
           "label": "Eis een antwoord voordat de oplossing kan worden getoond"
-        },
-        {
-          "label": "Deactiveer zoomen van een afbeelding bij een vraag afbeelding"
         },
         {
           "label": "Toon bevestigingsvenster bij \"Controleer\""

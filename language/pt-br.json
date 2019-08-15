@@ -6,6 +6,9 @@
         {
           "label": "Tipo",
           "description": "Mídia opcional mostrada acima da questão."
+        },
+        {
+          "label": "Desabilita zoom de imagem para questões com imagens"
         }
       ]
     },
@@ -172,9 +175,6 @@
         },
         {
           "label": "Requer resposta antes da visualização da solução"
-        },
-        {
-          "label": "Desabilita zoom de imagem para questões com imagens"
         },
         {
           "label": "Mostrar diálogo de confirmação em \"Verificar resposta\""
