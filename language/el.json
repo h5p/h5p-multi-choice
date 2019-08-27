@@ -1,46 +1,46 @@
 {
   "semantics": [
     {
-      "label": "Media",
+      "label": "Μέσο",
       "fields": [
         {
-          "label": "Type",
-          "description": "Optional media to display above the question."
+          "label": "Τύπος",
+          "description": "Προσθήκη μέσου προς εμφάνιση πάνω από την ερώτηση (προαιρετικά)."
         },
         {
-          "label": "Disable image zooming"
+          "label": "Απενεργοποίηση της επιλογής zoom για την εικόνα της ερώτησης"
         }
       ]
     },
     {
-      "label": "Question"
+      "label": "Ερώτηση"
     },
     {
-      "label": "Available options",
-      "entity": "option",
+      "label": "Διαθέσιμες επιλογές",
+      "entity": "επιλογης",
       "field": {
-        "label": "Option",
+        "label": "Επιλογή",
         "fields": [
           {
-            "label": "Text"
+            "label": "Κείμενο"
           },
           {
-            "label": "Correct"
+            "label": "Σωστή επιλογή"
           },
           {
-            "label": "Tips and feedback",
+            "label": "Επεξήγηση και ανατροφοδότηση",
             "fields": [
               {
-                "label": "Tip text",
-                "description": "Hint for the user. This will appear before user checks his answer/answers."
+                "label": "Επεξηγηματικό κείμενο",
+                "description": "Επεξήγηση για τον χρήστη. Εμφανίζεται προτού ο χρήστης επιλέξει την απάντηση/ τις απαντήσεις του."
               },
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"check\" if this answer is selected."
+                "label": "Μήνυμα σε επιλεγμένη απάντηση",
+                "description": "Μήνυμα που εμφανίζεται κάτω από την επιλεγμένη απάντηση κατά τον \"Έλεγχο απάντησης\"."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"check\" if this answer is not selected."
+                "label": "Μήνυμα σε μη επιλεγμένη απάντηση",
+                "description": "Μήνυμα που εμφανίζεται κάτω από τη μη επιλεγμένη απάντηση κατά τον \"Ελεγχο απάντησης\"."
               }
             ]
           }
@@ -48,26 +48,26 @@
       }
     },
     {
-      "label": "Overall Feedback",
+      "label": "Συνολική ανατροφοδότηση",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Default"
+              "label": "Βασικό"
             }
           ],
-          "label": "Define custom feedback for any score range",
-          "description": "Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
-          "entity": "range",
+          "label": "Χαρακτηρισμός κάθε κλίμακας βαθμολογίας",
+          "description": "Παράδειγμα: 0-20% Χαμηλή βαθμολογία, 21-91% Μέτρια βαθμολογία, 91-100% Εξαιρετική βαθμολογία!",
+          "entity": "κλιμακας",
           "field": {
             "fields": [
               {
-                "label": "Score Range"
+                "label": "Βαθμολογία"
               },
               {},
               {
-                "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "label": "Χαρακτηρισμός",
+                "placeholder": "Συμπληρώστε τον χαρακτηρισμό"
               }
             ]
           }
@@ -75,166 +75,166 @@
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "Μεταφράσεις διεπαφής χρήστη για πολλαπλή επιλογή",
       "fields": [
         {
-          "label": "Check answer button label",
-          "default": "Check"
+          "label": "Ετικέτα κουμπιού ελέγχου απάντησης",
+          "default": "Έλεγχος"
         },
         {
-          "label": "Show solution button label",
-          "default": "Show solution"
+          "label": "Ετικέτα κουμπιού εμφάνισης λύσης",
+          "default": "Λύση"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Ετικέτα κουμπιού νέας προσπάθειας",
+          "default": "Επανάληψη"
         },
         {
-          "label": "Tip label",
-          "default": "Show tip"
+          "label": "Ετικέτα επεξήγησης",
+          "default": "Εμφάνιση επεξήγησης"
         },
         {
-          "label": "Textual representation of the score bar for those using a readspeaker",
-          "description": "Available variables are :num and :total",
-          "default": "You got :num out of :total points"
+          "label": "Κειμενική απόδοση της μπάρας βαθμολογίας για όσους χρησιμοποιούν ακουστική υποβοήθηση",
+          "description": "Διαθέσιμες μεταβλητές :num και :total",
+          "default": "Έχεις :num από :total πόντους"
         },
         {
-          "label": "Tip Available (not displayed)",
-          "default": "Tip available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Επεξήγηση διαθέσιμη (μη ορατή)",
+          "default": "Επεξήγηση διαθέσιμη",
+          "description": "Κείμενο ακουστικής υποβοήθησης"
         },
         {
-          "label": "Feedback Available (not displayed)",
-          "default": "Feedback available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Ανατροφοδότηση διαθέσιμη (μη ορατή)",
+          "default": "Ανατροφοδότηση διαθέσιμη",
+          "description": "Κείμενο ακουστικής υποβοήθησης"
         },
         {
-          "label": "Read Feedback (not displayed)",
-          "default": "Read feedback",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Ανάγνωση ανατροφοδότησης (μη ορατή)",
+          "default": "Ανάγνωση ανατροφοδότησης",
+          "description": "Κείμενο ακουστικής υποβοήθησης"
         },
         {
-          "label": "Wrong Answer (not displayed)",
-          "default": "Wrong answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Λάθος απάντηση (μη ορατή)",
+          "default": "Λάθος απάντηση",
+          "description": "Κείμενο ακουστικής υποβοήθησης"
         },
         {
-          "label": "Correct Answer (not displayed)",
-          "default": "Correct answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Σωστή απάντηση (μη ορατή)",
+          "default": "Σωστή απάντηση",
+          "description": "Κείμενο ακουστικής υποβοήθησης"
         },
         {
-          "label": "Option should have been checked",
-          "default": "Should have been checked"
+          "label": "Η απάντηση θα πρέπει να έχει επιλεγεί",
+          "default": "Θα πρέπει να έχει επιλεγεί"
         },
         {
-          "label": "Option should not have been checked",
-          "default": "Should not have been checked"
+          "label": "Η απάντηση δεν θα πρέπει να έχει επιλεγεί",
+          "default": "Δεν θα πρέπει να έχει επιλεγεί"
         },
         {
-          "label": "Text for \"Requires answer\" message",
-          "default": "Please answer before viewing the solution"
+          "label": "Κείμενο μηνύματος \"Απαιτείται απάντηση\"",
+          "default": "Παρακαλώ απάντησε προτού δεις τη λύση"
         }
       ]
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "Ρυθμίσεις άσκησης",
+      "description": "Αυτές οι ρυθμίσεις σας επιτρέπουν να καθορίσετε τον τρόπο λειτουργίας της άσκησης.",
       "fields": [
         {
-          "label": "Enable \"Retry\" button"
+          "label": "Ενεργοποίηση κουμπιού \"Επανάληψη\""
         },
         {
-          "label": "Enable \"Show Solution\" button"
+          "label": "Ενεργοποίηση κουμπιού \"Λύση\""
         },
         {
-          "label": "Enable \"Check\" button"
+          "label": "Ενεργοποίηση κουμπιού \"Έλεγχος\""
         },
         {
-          "label": "Question Type",
-          "description": "Select the look and behaviour of the question.",
+          "label": "Τύπος ερώτησης",
+          "description": "Επιλογή της εμφάνισης και της λειτουργίας της ερώτησης.",
           "options": [
             {
-              "label": "Automatic"
+              "label": "Αυτόματη"
             },
             {
-              "label": "Multiple Choice (Checkboxes)"
+              "label": "Πολλαπλή επιλογή (Πλαίσιο Επιλογής)"
             },
             {
-              "label": "Single Choice (Radio Buttons)"
+              "label": "Μοναδική επιλογή (Κουμπί Επιλογής)"
             }
           ]
         },
         {
-          "label": "Give one point for the whole task",
-          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label": "Ένας (1) βαθμός για ολόκληρη την άσκηση",
+          "description": "Ενεργοποίηση της ανάθεσης ενός (1) βαθμού συνολικά για ασκήσεις πολλαπλής επιλογής. Αυτή η επιλογή δεν διατίθεται για ασκήσεις \"Μοναδικής επιλογής\"."
         },
         {
-          "label": "Randomize answers",
-          "description": "Enable to randomize the order of the answers on display."
+          "label": "Τυχαιοποίηση ερωτήσεων",
+          "description": "Ενεργοποίηση της τυχαίας σειράς εμφάνισης των ερωτήσεων."
         },
         {
-          "label": "Require answer before the solution can be viewed"
+          "label": "Απαιτείται καταχώριση απάντησης πριν την εμφάνιση της λύσης"
         },
         {
-          "label": "Show confirmation dialog on \"Check\""
+          "label": "Εμφάνιση παραθύρου διαλόγου κατά τον \"Έλεγχο\""
         },
         {
-          "label": "Show confirmation dialog on \"Retry\""
+          "label": "Εμφάνιση παραθύρου διαλόγου κατά την \"Επανάληψη\""
         },
         {
-          "label": "Automatically check answers",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label": "Αυτόματος έλεγχος απαντήσεων",
+          "description": "Η ενεργοποίηση της επιλογής θα δυσχεράνει την προσβασιμότητα. Βεβαιωθείτε για την επιλογή σας"
         },
         {
-          "label": "Pass percentage",
-          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label": "Ποσοστό επιτυχίας",
+          "description": "Αυτή η ρύθμιση συνήθως δεν επιφέρει καμία αλλαγή. Αφορά το ποσοστό της συνολικής βαθμολογίας που απαιτείται προκειμένου ο χρήστης να λάβει έναν (1) βαθμό συνολικά (εφόσον έχει ενεργοποιηθεί η σχετική επιλογή) και result.success στο πεδίο των xAPI προτάσεων."
         },
         {
-          "label": "Show score points",
-          "description": "Show points earned for each answer."
+          "label": "Εμφάνιση βαθμολογίας",
+          "description": "Εμφάνιση βαθμών για κάθε απάντηση."
         }
       ]
     },
     {
-      "label": "Check confirmation dialog",
+      "label": "Παράθυρο επιβεβαίωσης",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Finish ?"
+          "label": "Κείμενο επικεφαλίδας",
+          "default": "Ολοκλήρωση άσκησης"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to finish ?"
+          "label": "Κυρίως κείμενο",
+          "default": "Είσαι σίγουρος ότι θέλεις να ολοκληρώσεις την άσκηση;"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Ετικέτα κουμπιού ακύρωσης",
+          "default": "Όχι"
         },
         {
-          "label": "Confirm button label",
-          "default": "Finish"
+          "label": "Ετικέτα κουμπιού επιβεβαίωσης",
+          "default": "Ναι"
         }
       ]
     },
     {
-      "label": "Retry confirmation dialog",
+      "label": "Παράθυρο επανάληψης",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Retry ?"
+          "label": "Κείμενο επικεφαλίδας",
+          "default": "Επανάληψη"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to retry ?"
+          "label": "Κυρίως κείμενο",
+          "default": "Είσαι σίγουρος ότι θέλεις να προσπαθήσεις ξανά;"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Ετικέτα κουμπιού ακύρωσης",
+          "default": "Όχι"
         },
         {
-          "label": "Confirm button label",
-          "default": "Confirm"
+          "label": "Ετικέτα κουμπιού επιβεβαίωσης",
+          "default": "Ναι"
         }
       ]
     }
