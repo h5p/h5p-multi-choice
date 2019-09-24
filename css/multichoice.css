@@ -42,7 +42,7 @@
   display: block;
   padding: 0.25em 0.75em 0.25em 2.1em;
   border-radius: 0.3em;
-  border: 0.1em solid #ddd;
+  border: 0.1em solid transparent;
   font-weight: normal;
   background: #ddd;
   -webkit-box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.3);
@@ -90,16 +90,13 @@
 }
 
 .h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container {
-  border: 0.1em solid #b1c5e0;
   color: #1a4473;
   background: #cee0f4;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+  box-shadow: 0 0.1em 0 #b1c5e0;
 }
 .h5p-multichoice .h5p-answer[aria-checked="true"]:not([aria-disabled="true"]):hover .h5p-alternative-container {
-  border-color: #b1c5e0;
   background-color: #e6effc;
+  box-shadow: 0 0.1em 0 #b1c5e0;
 }
 
 .h5p-multichoice .h5p-answer.h5p-correct .h5p-alternative-container,
