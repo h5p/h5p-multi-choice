@@ -104,12 +104,14 @@
   background: #b6e4ce;
   border-color: #b6e4ce;
   color: #255c41;
+  box-shadow: 0 0.1em 0 #a2bdb0;
 }
 .h5p-multichoice .h5p-answer.h5p-wrong .h5p-alternative-container,
 .h5p-multichoice .h5p-answer.h5p-wrong:hover .h5p-alternative-container {
   background: #fbd7d8;
   border-color: #fbd7d8;
   color: #b71c1c;
+  box-shadow: 0 0.1em 0 #deb8b8;
 }
 
 .h5p-multichoice .h5p-answer:last-child {
