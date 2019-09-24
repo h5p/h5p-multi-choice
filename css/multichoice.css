@@ -85,34 +85,23 @@
 .h5p-multichoice .h5p-answer[aria-disabled="true"] {
   cursor: default;
 }
-.h5p-multichoice .h5p-answer:hover .h5p-alternative-container,
-.h5p-multichoice .h5p-answer:focus .h5p-alternative-container {
-  border: 0.1em solid #edd6e9;
-  background: #edd6e9;
-}
-.h5p-multichoice .h5p-answer[aria-disabled="true"]:hover .h5p-alternative-container,
-.h5p-multichoice .h5p-answer[aria-disabled="true"]:focus .h5p-alternative-container {
-  border: 0.1em solid #ddd;
-  background: #ddd;
+.h5p-multichoice .h5p-answer:not([aria-disabled="true"]):hover .h5p-alternative-container {
+  background-color: #ececec;
 }
 
-.h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container,
-.h5p-multichoice .h5p-answer[aria-checked="true"]:hover .h5p-alternative-container {
-  border: 0.1em solid #cee0f4;
+.h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container {
+  border: 0.1em solid #b1c5e0;
   color: #1a4473;
   background: #cee0f4;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.h5p-multichoice .h5p-answer[aria-checked="true"]:focus .h5p-alternative-container {
-  border: 0.1em solid #e6eef8;
-  background: #e6eef8;
+.h5p-multichoice .h5p-answer[aria-checked="true"]:not([aria-disabled="true"]):hover .h5p-alternative-container {
+  border-color: #b1c5e0;
+  background-color: #e6effc;
 }
-.h5p-multichoice .h5p-answer[aria-checked="true"][aria-disabled="true"]:focus .h5p-alternative-container {
-  border: 0.1em solid #cee0f4;
-  background: #cee0f4;
-}
+
 .h5p-multichoice .h5p-answer.h5p-correct .h5p-alternative-container,
 .h5p-multichoice .h5p-answer.h5p-correct:hover .h5p-alternative-container {
   background: #b6e4ce;
