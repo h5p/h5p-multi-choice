@@ -764,16 +764,21 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       var chosen = ($e.attr('aria-checked') === 'true');
       if (chosen) {
         if (a.correct) {
-          $e.addClass('h5p-correct').append($('<span/>', {
-            'class': 'h5p-answer-icon',
-            html: params.UI.correctAnswer + '.'
-          }));
+          // May already have been applied by instant feedback
+          if (!$e.hasClass('h5p-correct')) {
+            $e.addClass('h5p-correct').append($('<span/>', {
+              'class': 'h5p-answer-icon',
+              html: params.UI.correctAnswer + '.'
+            }));
+          }
         }
         else {
-          $e.addClass('h5p-wrong').append($('<span/>', {
-            'class': 'h5p-answer-icon',
-            html: params.UI.wrongAnswer + '.'
-          }));
+          if (!$e.hasClass('h5p-wrong')) {
+            $e.addClass('h5p-wrong').append($('<span/>', {
+              'class': 'h5p-answer-icon',
+              html: params.UI.wrongAnswer + '.'
+            }));
+          }
         }
 
         if (scorePoints) {
