@@ -66,7 +66,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     '  <% for (var i=0; i < answers.length; i++) { %>' +
     '    <li class="h5p-answer" role="<%= answers[i].role %>" tabindex="<%= answers[i].tabindex %>" aria-checked="<%= answers[i].checked %>" data-id="<%= i %>">' +
     '      <div class="h5p-alternative-container">' +
-    '        <span class="h5p-alternative-inner"><%= answers[i].text %></span><span class="h5p-hidden-read">.</span>' +
+    '        <span class="h5p-alternative-inner"><%= answers[i].text %></span>' +
     '      </div>' +
     '      <div class="h5p-clearfix"></div>' +
     '    </li>' +
