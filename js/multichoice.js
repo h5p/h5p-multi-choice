@@ -66,7 +66,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     '  <% for (var i=0; i < answers.length; i++) { %>' +
     '    <li class="h5p-answer" role="<%= answers[i].role %>" tabindex="<%= answers[i].tabindex %>" aria-checked="<%= answers[i].checked %>" data-id="<%= i %>">' +
     '      <div class="h5p-alternative-container">' +
-    '        <span class="h5p-alternative-inner"><%= answers[i].text %></span><span class="h5p-hidden-read">.</span>' +
+    '        <span class="h5p-alternative-inner"><%= answers[i].text %></span>' +
     '      </div>' +
     '      <div class="h5p-clearfix"></div>' +
     '    </li>' +
@@ -485,6 +485,10 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Make sure input is disabled in solution mode
     disableInput();
 
+    // Move focus back to the first correct alternative so that the user becomes
+    // aware that the solution is being shown.
+    $myDom.find('.h5p-answer.h5p-should').first().focus();
+
     //Hide buttons and retry depending on settings.
     self.hideButton('check-answer');
     self.hideButton('show-solution');
@@ -760,16 +764,21 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       var chosen = ($e.attr('aria-checked') === 'true');
       if (chosen) {
         if (a.correct) {
-          $e.addClass('h5p-correct').append($('<span/>', {
-            'class': 'h5p-answer-icon',
-            html: params.UI.correctAnswer + '.'
-          }));
+          // May already have been applied by instant feedback
+          if (!$e.hasClass('h5p-correct')) {
+            $e.addClass('h5p-correct').append($('<span/>', {
+              'class': 'h5p-answer-icon',
+              html: params.UI.correctAnswer + '.'
+            }));
+          }
         }
         else {
-          $e.addClass('h5p-wrong').append($('<span/>', {
-            'class': 'h5p-answer-icon',
-            html: params.UI.wrongAnswer + '.'
-          }));
+          if (!$e.hasClass('h5p-wrong')) {
+            $e.addClass('h5p-wrong').append($('<span/>', {
+              'class': 'h5p-answer-icon',
+              html: params.UI.wrongAnswer + '.'
+            }));
+          }
         }
 
         if (scorePoints) {
