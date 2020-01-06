@@ -5,7 +5,7 @@
       "fields": [
         {
           "label": "Tipo",
-          "description": "Media opzionale da mostrare sopra la domanda."
+          "description": "Media facoltativo da mostrare sopra la domanda."
         },
         {
           "label": "Disabilita lo zoom dell'immagine"
@@ -57,7 +57,7 @@
             }
           ],
           "label": "Definisci un feedback personalizzato per ogni intervallo di punteggio",
-          "description": "Esempio: 0-20%, cattivo punteggio; 21-91% punteggio media; 91-100% ottimo punteggio!",
+          "description": "Clicca sul pulsante \"Aggiungi intervallo\" per aggiungere gli intervalli che ti servono. Per esempio: 0-20%, Punteggio scarso; 21-90%, Punteggio medio; 91-100% Punteggio ottimo!",
           "entity": "Intervallo",
           "field": {
             "fields": [
@@ -138,8 +138,8 @@
       ]
     },
     {
-      "label": "Impostazioni esecuzione",
-      "description": "Queste opzioni ti consentono di controllare l'esecuzione del compito.",
+      "label": "Impostazioni di esecuzione",
+      "description": "Queste opzioni permettono di controllare l'andamento del compito",
       "fields": [
         {
           "label": "Attiva il pulsante Riprova"
