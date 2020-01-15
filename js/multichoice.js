@@ -459,7 +459,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }
   };
 
-  this.showAllSolutions = function () {
+  this.showAllSolutions = function (solution) {
     if (solutionsVisible) {
       return;
     }
@@ -467,8 +467,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = $(e);
-      var a = params.answers[i];
-      if (a.correct) {
+      if (solution.choices.indexOf(idMap[i]) !== -1 || solution.choices.indexOf(idMap[i] + '') !== -1) {
         $e.addClass('h5p-should').append($('<span/>', {
           'class': 'h5p-solution-icon',
           html: params.UI.shouldCheck + '.'
@@ -584,15 +583,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Remove all tip dialogs
     removeFeedbackDialog();
 
-    if (params.behaviour.enableSolutionsButton) {
-      self.showButton('show-solution');
-    }
-    if (params.behaviour.enableRetry) {
-      self.showButton('try-again');
-    }
     self.hideButton('check-answer');
-
-    self.showCheckSolution();
     disableInput();
 
     var xAPIEvent = self.createXAPIEventTemplate('answered');
@@ -640,8 +631,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         self.read(params.UI.noInput);
       }
       else {
-        calcScore();
-        self.showAllSolutions();
+        var xAPIEvent = self.createXAPIEventTemplate('showed-solution');
+        addQuestionToXAPI(xAPIEvent);
+        self.trigger(xAPIEvent);
       }
 
     }, false);
@@ -733,26 +725,45 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   /**
-   * Determine which feedback text to display
    *
-   * @param {number} score
-   * @param {number} max
-   * @return {string}
    */
-  var getFeedbackText = function (score, max) {
-    var ratio = (score / max);
+  this.setXAPIData = function (data) {
+    if (!data.subContentId || data.subContentId === this.subContentId) {
+      // This is our data
 
-    var feedback = H5P.Question.determineOverallFeedback(params.overallFeedback, ratio);
+      if (data.success === false) {
+        // Unable to determine data
+        console.error('Error error error 1 2 3');
+        return;
+      }
 
-    return feedback.replace('@score', score).replace('@total', max);
-  };
+      console.log(data.type, data[data.type]);
+      if (data.type === 'feedback') {
+        // Update UI
+
+        if (params.behaviour.enableSolutionsButton) {
+          self.showButton('show-solution');
+        }
+        if (params.behaviour.enableRetry) {
+          self.showButton('try-again');
+        }
+        self.showCheckSolution(data.feedback);
+      }
+      else if (data.type === 'solution') {
+        // Show solution mode
+        self.showAllSolutions(data.solution);
+      }
+
+      return true; // Let parent know this was our data
+    }
+  }
 
   /**
    * Shows feedback on the selected fields.
    * @public
-   * @param {boolean} [skipFeedback] Skip showing feedback if true
+   * @param {Array} [feedback]
    */
-  this.showCheckSolution = function (skipFeedback) {
+  this.showCheckSolution = function (feedback) {
     var scorePoints;
     if (!(params.behaviour.singleAnswer || params.behaviour.singlePoint || !params.behaviour.showScorePoints)) {
       scorePoints = new H5P.Question.ScorePoints();
@@ -761,9 +772,11 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = $(e);
       var a = params.answers[i];
+      const answerFeedback = feedback.answers[idMap[i]];
+      const isCorrect = (answerFeedback.points > 0);
       var chosen = ($e.attr('aria-checked') === 'true');
       if (chosen) {
-        if (a.correct) {
+        if (isCorrect) {
           // May already have been applied by instant feedback
           if (!$e.hasClass('h5p-correct')) {
             $e.addClass('h5p-correct').append($('<span/>', {
@@ -785,37 +798,25 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           var alternativeContainer = $e[0].querySelector('.h5p-alternative-container');
 
           if (!params.behaviour.autoCheck || alternativeContainer.querySelector('.h5p-question-plus-one, .h5p-question-minus-one') === null) {
-            alternativeContainer.appendChild(scorePoints.getElement(a.correct));
+            alternativeContainer.appendChild(scorePoints.getElement(isCorrect));
           }
         }
       }
 
-      if (!skipFeedback) {
-        if (chosen && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
-          insertFeedback($e, a.tipsAndFeedback.chosenFeedback);
-        }
-        else if (!chosen && a.tipsAndFeedback.notChosenFeedback !== undefined && a.tipsAndFeedback.notChosenFeedback !== '') {
-          insertFeedback($e, a.tipsAndFeedback.notChosenFeedback);
-        }
+      if (answerFeedback.feedback) {
+        insertFeedback($e, answerFeedback.feedback);
       }
     });
 
-    // Determine feedback
-    var max = self.getMaxScore();
-
-    // Disable task if maxscore is achieved
-    var fullScore = (score === max);
-
-    if (fullScore) {
+    if (feedback.points === feedback.max) {
       self.hideButton('check-answer');
       self.hideButton('try-again');
       self.hideButton('show-solution');
     }
 
     // Show feedback
-    if (!skipFeedback) {
-      this.setFeedback(getFeedbackText(score, max), score, max, params.UI.scoreBarLabel);
-    }
+    const text = feedback.overall ? feedback.overall.replace('@score', feedback.points).replace('@total', feedback.max) : '';
+    this.setFeedback(text, feedback.points, feedback.max, params.UI.scoreBarLabel);
 
     self.trigger('resize');
   };
@@ -939,6 +940,21 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           definition.correctResponsesPattern.push('' + params.answers[i].originalOrder);
         }
       }
+    }
+    definition.extensions['http://h5p.org/x-api/choice-type'] = params.behaviour.type;
+    definition.extensions['http://h5p.org/x-api/single-point'] = params.behaviour.singlePoint;
+    definition.extensions['http://h5p.org/x-api/pass-percentage'] = params.behaviour.passPercentage;
+    definition.extensions['http://h5p.org/x-api/weight'] = params.weight;
+    definition.extensions['http://h5p.org/x-api/overall-feedback'] = params.overallFeedback;
+    definition.extensions['http://h5p.org/x-api/choice-feedback'] = [];
+    definition.extensions['http://h5p.org/x-api/response-weight'] = [];
+    for (var i = 0; i < params.answers.length; i++) {
+      const answer = params.answers[i];
+      definition.extensions['http://h5p.org/x-api/response-weight'][i] = answer.weight;
+      definition.extensions['http://h5p.org/x-api/choice-feedback'][i] = {
+        chosen: answer.tipsAndFeedback.chosenFeedback,
+        notChosen: answer.tipsAndFeedback.notChosenFeedback
+      };
     }
   };
 
