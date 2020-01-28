@@ -5,42 +5,42 @@
       "fields": [
         {
           "label": "Type",
-          "description": "Optional media to display above the question."
+          "description": "Volitelná média zobrazená nad otázkou."
         },
         {
-          "label": "Disable image zooming"
+          "label": "Zakázat zvětšování obrazu"
         }
       ]
     },
     {
-      "label": "Question"
+      "label": "Otázka"
     },
     {
-      "label": "Available options",
-      "entity": "option",
+      "label": "Dostupné volby",
+      "entity": "volba",
       "field": {
-        "label": "Option",
+        "label": "Volba",
         "fields": [
           {
             "label": "Text"
           },
           {
-            "label": "Correct"
+            "label": "Správně"
           },
           {
-            "label": "Tips and feedback",
+            "label": "Nápověda a zpětná vazba",
             "fields": [
               {
-                "label": "Tip text",
-                "description": "Hint for the user. This will appear before user checks his answer/answers."
+                "label": "Text nápovědy",
+                "description": "Nápověda pro uživatele. Ta se objeví před tím, než uživatel zkontroluje svou odpověď / odpovědi."
               },
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"check\" if this answer is selected."
+                "label": "Zobrazí se, pokud je vybrána odpověď",
+                "description": "Zpráva se objeví pod odpovědí na \"zkontroluj\" když je vybrána odpověď."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"check\" if this answer is not selected."
+                "label": "Pokud není vybrána odpověď, zobrazí se",
+                "description": "Zpráva se objeví pod odpovědí na \"zkontroluj\" když odpověď není vybrána."
               }
             ]
           }
@@ -48,26 +48,26 @@
       }
     },
     {
-      "label": "Overall Feedback",
+      "label": "Celková zpětná vazba",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Default"
+              "label": "Výchozí"
             }
           ],
-          "label": "Define custom feedback for any score range",
-          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
-          "entity": "range",
+          "label": "Definujte vlastní zpětnou vazbu pro jakýkoli rozsah skóre",
+          "description": "Klikněte na tlačítko \"Přidat rozsah\" pro přidání tolika rozsahů, kolik potřebujete. Například: 0-20% špatný výsledek, 21-91% průměrný výsledek, 91-100% výborný výsledek!",
+          "entity": "rozdah",
           "field": {
             "fields": [
               {
-                "label": "Score Range"
+                "label": "Rozsah skóre"
               },
               {},
               {
-                "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "label": "Zpětná vazba pro definovaný rozsah skóre",
+                "placeholder": "Vyplňte ve zpětné vazbě"
               }
             ]
           }
@@ -75,166 +75,166 @@
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "Překlady uživatelského rozhraní pro výběr z možností",
       "fields": [
         {
-          "label": "Check answer button label",
-          "default": "Check"
+          "label": "Popis tlačítka kontroly",
+          "default": "Zkontroluj"
         },
         {
-          "label": "Show solution button label",
-          "default": "Show solution"
+          "label": "Popis tlačítka zobraz řešení",
+          "default": "Zobrazit řešení"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Popis opakovacího tlačítka",
+          "default": "Opakuj"
         },
         {
-          "label": "Tip label",
-          "default": "Show tip"
+          "label": "Popis nápovědy",
+          "default": "Zobrazit nápovědu"
         },
         {
-          "label": "Textual representation of the score bar for those using a readspeaker",
-          "description": "Available variables are :num and :total",
-          "default": "You got :num out of :total points"
+          "label": "Textové znázornění výsledkové lišty pro ty, kteří používají čtecí zařízení",
+          "description": "Dostupné proměnné jsou :num a :total",
+          "default": "Získal jste :num z :total bodů"
         },
         {
-          "label": "Tip Available (not displayed)",
-          "default": "Tip available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Dostupná nápověda (není zobrazena)",
+          "default": "Dostupná nápověda",
+          "description": "Text usnadnění přístupu používaný pro čtecí zařízení"
         },
         {
-          "label": "Feedback Available (not displayed)",
-          "default": "Feedback available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Zpětná vazba (není zobrazena)",
+          "default": "Zpětná vazba",
+          "description": "Text usnadnění přístupu používaný pro čtecí zařízení"
         },
         {
-          "label": "Read Feedback (not displayed)",
-          "default": "Read feedback",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Přečíst zpětnou vazbu (není zobrazena)",
+          "default": "Přečíst zpětnou vazbu",
+          "description": "Text usnadnění přístupu používaný pro čtecí zařízení"
         },
         {
-          "label": "Wrong Answer (not displayed)",
-          "default": "Wrong answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Chybná odpověď (není zobrazena)",
+          "default": "Chybná odpověď ",
+          "description": "Text usnadnění přístupu používaný pro čtecí zařízení"
         },
         {
-          "label": "Correct Answer (not displayed)",
-          "default": "Correct answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Správná odpověď (není zobrazena)",
+          "default": "Správná odpověď",
+          "description": "Text usnadnění přístupu používaný pro čtecí zařízení"
         },
         {
-          "label": "Option should have been checked",
-          "default": "Should have been checked"
+          "label": "Volba měla být zaškrtnuta",
+          "default": "Měla být zaškrtnuta"
         },
         {
-          "label": "Option should not have been checked",
-          "default": "Should not have been checked"
+          "label": "Volba by neměla být zaškrtnuta",
+          "default": "Neměla být zaškrtnuta"
         },
         {
-          "label": "Text for \"Requires answer\" message",
-          "default": "Please answer before viewing the solution"
+          "label": "Text zprávy \"Vyžadovaná odpověď\" ",
+          "default": "Před zobrazením řešení odpovězte"
         }
       ]
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "Nastavení chování",
+      "description": "Tyto možnosti vám umožní řídit, jak se bude úloha chovat.",
       "fields": [
         {
-          "label": "Enable \"Retry\" button"
+          "label": "Povolit tlačítko \"Opakovat\" "
         },
         {
-          "label": "Enable \"Show Solution\" button"
+          "label": "Povolit tlačítko \"Zobrazit řešení\" "
         },
         {
-          "label": "Enable \"Check\" button"
+          "label": "Povolit tlačítko \"Zkontrolovat\" "
         },
         {
-          "label": "Question Type",
-          "description": "Select the look and behaviour of the question.",
+          "label": "Typ otázky",
+          "description": "Vyberte vzhled a chování otázky.",
           "options": [
             {
-              "label": "Automatic"
+              "label": "Automaticky"
             },
             {
-              "label": "Multiple Choice (Checkboxes)"
+              "label": "Více voleb (Zašrktávací políčka)"
             },
             {
-              "label": "Single Choice (Radio Buttons)"
+              "label": "Jedna volba (Přepínací tlačítka)"
             }
           ]
         },
         {
-          "label": "Give one point for the whole task",
-          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label": "Jeden bod za celý úkol",
+          "description": "Umožní dát celkem jeden bod za více správných odpovědí. Nebude to možnost v \"Jedna volba\" módu."
         },
         {
-          "label": "Randomize answers",
-          "description": "Enable to randomize the order of the answers on display."
+          "label": "Náhodné odpovědi",
+          "description": "Umožní randomizovat pořadí odpovědí na displeji."
         },
         {
-          "label": "Require answer before the solution can be viewed"
+          "label": "Před zobrazením řešení je třeba odpovědět"
         },
         {
-          "label": "Show confirmation dialog on \"Check\""
+          "label": "Zobrazit potvrzovací dialog \"Zkontrolovat\""
         },
         {
-          "label": "Show confirmation dialog on \"Retry\""
+          "label": "Zobrazit potvrzovací dialog \"Opakovat\""
         },
         {
-          "label": "Automatically check answers",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label": "Automatická kontrola odpovědi",
+          "description": "Pokud tuto možnost povolíte, sníží se dostupnost pro osoby s omezením. Ujistěte se, že víte, co děláte."
         },
         {
-          "label": "Pass percentage",
-          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label": "Procento úspěšnosti",
+          "description": "Toto nastavení často nebude mít žádný účinek. Je to procento z celkového skóre požadovaného pro získání 1 bodu, když je povolen jeden bod pro celý úkol, a pro získání result.success v příkazech xAPI."
         },
         {
-          "label": "Show score points",
-          "description": "Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
+          "label": "Zobrazit body",
+          "description": "Zobrazit body získané za každou odpověď. Nebude to možnost v režimu „Jediná odpověď“ nebo pokud je povolena možnost „Připsat jeden bod za celý úkol“."
         }
       ]
     },
     {
-      "label": "Check confirmation dialog",
+      "label": "Potvrzovací dialog kontroly",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Finish ?"
+          "label": "Text záhlaví",
+          "default": "Ukončit ?"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to finish ?"
+          "label": "Tělo textu",
+          "default": "Opravdu chcete ukončit ?"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Popis tlačítka zrušení",
+          "default": "Zrušit"
         },
         {
-          "label": "Confirm button label",
-          "default": "Finish"
+          "label": "Popis potvrzovacího tlačítka",
+          "default": "Skončit"
         }
       ]
     },
     {
-      "label": "Retry confirmation dialog",
+      "label": "Dialog pro potvrzení opakování",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Retry ?"
+          "label": "Text záhlaví",
+          "default": "Opakovat ?"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to retry ?"
+          "label": "Tělo textu",
+          "default": "Opravdu chcete akci opakovat ?"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Popis tlačítka zrušení",
+          "default": "Zrušit"
         },
         {
-          "label": "Confirm button label",
-          "default": "Confirm"
+          "label": "Popis potvrzovacího tlačítka",
+          "default": "Potvrdit"
         }
       ]
     }
