@@ -4,8 +4,8 @@
       "label": "Medien",
       "fields": [
         {
-          "label": "Art",
-          "description": "Medien, die wahlweise oberhalb der Aufgabe angezeigt werden."
+          "label": "Typ",
+          "description": "Medium, das wahlweise oberhalb der Aufgabe angezeigt wird."
         },
         {
           "label": "Bildzoom deaktivieren"
@@ -53,7 +53,7 @@
         {
           "widgets": [
             {
-              "label": "Voreinstellung"
+              "label": "Eingabemaske"
             }
           ],
           "label": "Lege Rückmeldungen für einzelne Punktebereiche fest",
@@ -212,7 +212,7 @@
           "default": "Abbrechen"
         },
         {
-          "label": "Beschriftung des \"Beenden\"-Buttons",
+          "label": "Beschriftung des \"Bestätigen\"-Buttons",
           "default": "Beenden"
         }
       ]
