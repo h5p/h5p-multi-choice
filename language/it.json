@@ -5,7 +5,7 @@
       "fields": [
         {
           "label": "Tipo",
-          "description": "Media facoltativo da mostrare sopra la domanda."
+          "description": "Media facoltativo da mostrare sopra la domanda"
         },
         {
           "label": "Disabilita lo zoom dell'immagine"
@@ -204,7 +204,7 @@
           "default": "Finito?"
         },
         {
-          "label": "Testo del corpo",
+          "label": "Corpo del testo",
           "default": "Sei sicuro di voler concludere?"
         },
         {

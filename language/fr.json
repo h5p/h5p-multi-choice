@@ -78,8 +78,8 @@
       "label": "Apparence",
       "fields": [
         {
-          "label": "Le texte qui apparaît sur votre bouton dans le champ Afficher la réponse",
-          "default": "Afficher la réponse"
+          "label": "Le texte qui apparaît sur votre bouton dans le champ Vérifier",
+          "default": "Vérifier"
         },
         {
           "label": "Le texte qui apparaît sur votre bouton dans le champ Afficher la solution",
