@@ -56,18 +56,18 @@
               "label": "Alapértelmezett"
             }
           ],
-          "label": "Define custom feedback for any score range",
-          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "label": "Határozza meg a visszajelzést bármelyik pontszámhoz",
+          "description": "Klikkeljen az \"tartomány hozzáadása\" gombra a tartományok megadásához. Például: 0-20% Rossz eredmény, 21-91% Átlagos eredmény, 91-100% Nagyszerű eredmény!",
           "entity": "range",
           "field": {
             "fields": [
               {
-                "label": "Score Range"
+                "label": "Pontszámok"
               },
               {},
               {
-                "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "label": "Visszajelzés a pontszámokhoz",
+                "placeholder": "Töltes ki a visszajelzést"
               }
             ]
           }
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "Felhasználói interface fordítások",
       "fields": [
         {
           "label": "Ellenőrzés gomb címkéje",
@@ -184,15 +184,15 @@
         },
         {
           "label": "Automatikus válasz ellenőrzés",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "description": "Ennek az opciónak az engedélyezése veszélyekkel járhat! Legyen biztos benne, hogy mit csinál."
         },
         {
-          "label": "Pass percentage",
-          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label": "Szükséges százalék",
+          "description": "Ennek a beállításnak gyakran nincs hatása. Ez a százalék a 'teljes feladtért kapható 1 pont' egnedélyezésénél lehetséges, és a result.success eléréséhez az xAPI statement-eknél."
         },
         {
-          "label": "Show score points",
-          "description": "Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
+          "label": "Elért eredmény pontok mutatása",
+          "description": "Megmutatja az egyes válaszokért kapott pontokat. Nem választható opció '1 válasz' módban vagy ha 'Az egész feladatra 1 pont' opció engedélyezett."
         }
       ]
     },
