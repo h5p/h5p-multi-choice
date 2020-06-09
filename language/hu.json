@@ -57,7 +57,7 @@
             }
           ],
           "label": "Határozza meg a visszajelzést bármelyik pontszámhoz",
-          "description": "Klikkeljen az \"tartomány hozzáadása\" gombra a tartományok megadásához. Például: 0-20% Rossz eredmény, 21-91% Átlagos eredmény, 91-100% Nagyszerű eredmény!",
+          "description": "Klikkeljen az \"Tartomány hozzáadása\" gombra a tartományok megadásához. Például: 0-20% Rossz eredmény, 21-91% Átlagos eredmény, 91-100% Nagyszerű eredmény!",
           "entity": "range",
           "field": {
             "fields": [
@@ -200,7 +200,7 @@
       "label": "Ellenőrző dialógus",
       "fields": [
         {
-          "label": "Fejléc szövege,
+          "label": "Fejléc szövege",
           "default": "Végzett ?"
         },
         {
