@@ -96,7 +96,7 @@
         {
           "label": "Textual representation of the score bar for those using a readspeaker",
           "description": "Available variables are :num and :total",
-          "default": "Du fikk :num av :total points"
+          "default": "Du fekk :num av :total poeng"
         },
         {
           "label": "Tip Available (not displayed)",
@@ -110,17 +110,17 @@
         },
         {
           "label": "Read Feedback (not displayed)",
-          "default": "Read feedback",
+          "default": "Les tilbakemelding",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Wrong Answer (not displayed)",
-          "default": "Wrong answer",
+          "default": "Feil svar",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Correct Answer (not displayed)",
-          "default": "Correct answer",
+          "default": "Riktig svar",
           "description": "Accessibility text used for readspeakers"
         },
         {
