@@ -134,6 +134,18 @@
         {
           "label": "Text for \"Requires answer\" message",
           "default": "Du må svare på denne før du kan se løsningen"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check"
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show Solution"
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry"
         }
       ]
     },

@@ -134,6 +134,18 @@
         {
           "label": "Text for \"Requires answer\" message",
           "default": "សូមឆ្លើយសិនមិននឹងមើលចម្លើយត្រឹមត្រូវ"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check"
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show Solution"
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry"
         }
       ]
     },

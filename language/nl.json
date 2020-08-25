@@ -134,6 +134,18 @@
         {
           "label": "Tekst voor \"Antwoord vereist\" bericht",
           "default": "Gelieve te antwoorden voor je de oplossing bekijkt"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check"
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show Solution"
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry"
         }
       ]
     },

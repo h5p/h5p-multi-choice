@@ -134,6 +134,18 @@
         {
           "label": "Le texte pour le message \"Réponse requise\" ",
           "default": "Répondez s'il vous plait avant de visionner la solution."
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check"
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show Solution"
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry"
         }
       ]
     },

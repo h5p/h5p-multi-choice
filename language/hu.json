@@ -134,6 +134,18 @@
         {
           "label": "Kérjük válaszoljon üzenet szövege",
           "default": "Kérjük válaszoljon, mielőtt a megoldás megjelenne!"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check"
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show Solution"
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry"
         }
       ]
     },
