@@ -330,7 +330,7 @@
         "name": "a11yCheck",
         "type": "text",
         "label": "Assistive technology description for \"Check\" button",
-        "default": "Check",
+        "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
         "importance": "low",
         "common": true
       },
@@ -338,7 +338,7 @@
         "name": "a11yShowSolution",
         "type": "text",
         "label": "Assistive technology description for \"Show Solution\" button",
-        "default": "Show Solution",
+        "default": "Show the solution. The task will be marked with its correct solution.",
         "importance": "low",
         "common": true
       },
@@ -346,7 +346,7 @@
         "name": "a11yRetry",
         "type": "text",
         "label": "Assistive technology description for \"Retry\" button",
-        "default": "Retry",
+        "default": "Retry the task. Reset all responses and start the task over again.",
         "importance": "low",
         "common": true
       }
