@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Multimedia",
+      "label": "Media",
       "fields": [
         {
           "label": "Type",
-          "description": "En valgfri mediakilde som vises over spørsmålet."
+          "description": "Optional media to display above the question."
         },
         {
           "label": "Disable image zooming"
@@ -13,34 +13,34 @@
       ]
     },
     {
-      "label": "Spørsmål"
+      "label": "Question"
     },
     {
-      "label": "Svaralternativer",
-      "entity": "verdi",
+      "label": "Available options",
+      "entity": "option",
       "field": {
-        "label": "Svaralternativ",
+        "label": "Option",
         "fields": [
           {
-            "label": "Tekst"
+            "label": "Text"
           },
           {
-            "label": "Riktig"
+            "label": "Correct"
           },
           {
-            "label": "Tips",
+            "label": "Tips and feedback",
             "fields": [
               {
-                "label": "Tipstekst",
-                "description": "Hint for brukeren. Dette vil vises før brukeren sjekker sine svar."
+                "label": "Tip text",
+                "description": "Hint for the user. This will appear before user checks his answer/answers."
               },
               {
-                "label": "Melding som vises hvis alternativet er valgt",
-                "description": "Melding som vises under svaret på \"check\" hvis svaret er valgt."
+                "label": "Message displayed if answer is selected",
+                "description": "Message will appear below the answer on \"check\" if this answer is selected."
               },
               {
-                "label": "Melding som vises hvis alternativet ikke er valgt",
-                "description": "Melding som vises under svaret på \"check\" hvis andre svar er valgt."
+                "label": "Message displayed if answer is not selected",
+                "description": "Message will appear below the answer on \"check\" if this answer is not selected."
               }
             ]
           }
@@ -79,61 +79,61 @@
       "fields": [
         {
           "label": "Check answer button label",
-          "default": "Sjekk"
+          "default": "ពិនិត្យចម្លើយ"
         },
         {
           "label": "Show solution button label",
-          "default": "Vis svar"
+          "default": "បង្ហាញចម្លើយត្រឹមត្រូវ"
         },
         {
           "label": "Retry button label",
-          "default": "Prøv igjen"
+          "default": "សាកម្តងទៀត"
         },
         {
           "label": "Tip label",
-          "default": "Vis tips"
+          "default": "បង្ហាញគន្លឹះ"
         },
         {
           "label": "Textual representation of the score bar for those using a readspeaker",
           "description": "Available variables are :num and :total",
-          "default": "Du fikk :num av :total points"
+          "default": "អ្នកទទួលបានពិន្ទុ :num លើ :total"
         },
         {
           "label": "Tip Available (not displayed)",
-          "default": "Tips tilgjengelig",
+          "default": "មានគន្លឹះ",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Feedback Available (not displayed)",
-          "default": "Tilbakemelding tilgjengelig",
+          "default": "មូលវិចារណ៍ដែលមាន",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Read Feedback (not displayed)",
-          "default": "Read feedback",
+          "default": "អានមូលវិចារណ៍",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Wrong Answer (not displayed)",
-          "default": "Feil svar",
+          "default": "ចម្លើយខុស",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Correct Answer (not displayed)",
-          "default": "Correct answer",
+          "default": "ចម្លើយត្រូវ",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Option should have been checked",
-          "default": "Skulle ha vært krysset av"
+          "default": "គួរតែត្រូវបានជ្រើសរើស"
         },
         {
           "label": "Option should not have been checked",
-          "default": "Skulle ikke ha vært krysset av"
+          "default": "មិនគួរត្រូវបានជ្រើសរើស"
         },
         {
           "label": "Text for \"Requires answer\" message",
-          "default": "Du må svare på denne før du kan se løsningen"
+          "default": "សូមឆ្លើយសិនមិននឹងមើលចម្លើយត្រឹមត្រូវ"
         },
         {
           "label": "Assistive technology description for \"Check\" button",
@@ -212,20 +212,20 @@
       "label": "Check confirmation dialog",
       "fields": [
         {
-          "label": "Tittel",
-          "default": "Finish ?"
+          "label": "Header text",
+          "default": "បញ្ចប់ ?"
         },
         {
-          "label": "Tekst",
-          "default": "Er du sikker på at du er ferdig?"
+          "label": "Body text",
+          "default": "តើអ្នកប្រាកដជាចង់បញ្ចប់មែនទេ ?"
         },
         {
-          "label": "Etikett for \"Avbryt\"-knapp",
-          "default": "Avbryt"
+          "label": "Cancel button label",
+          "default": "បោះបង់"
         },
         {
-          "label": "Etikett for \"Bekreft\"-knapp",
-          "default": "Bekreft"
+          "label": "Confirm button label",
+          "default": "បញ្ចប់"
         }
       ]
     },
@@ -234,19 +234,19 @@
       "fields": [
         {
           "label": "Header text",
-          "default": "Prøv igjen?"
+          "default": "សាកល្បង ?"
         },
         {
           "label": "Body text",
-          "default": "Er du sikker på at du vil prøve igjen?"
+          "default": "តើអ្នកពិតជាចង់សាកម្តងទៀតមែនទេ ?"
         },
         {
           "label": "Cancel button label",
-          "default": "Avbryt"
+          "default": "បោះបង់"
         },
         {
           "label": "Confirm button label",
-          "default": "Bekreft"
+          "default": "អះអាង"
         }
       ]
     }

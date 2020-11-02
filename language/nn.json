@@ -96,7 +96,7 @@
         {
           "label": "Textual representation of the score bar for those using a readspeaker",
           "description": "Available variables are :num and :total",
-          "default": "Du fikk :num av :total points"
+          "default": "Du fekk :num av :total poeng"
         },
         {
           "label": "Tip Available (not displayed)",
@@ -110,17 +110,17 @@
         },
         {
           "label": "Read Feedback (not displayed)",
-          "default": "Read feedback",
+          "default": "Les tilbakemelding",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Wrong Answer (not displayed)",
-          "default": "Wrong answer",
+          "default": "Feil svar",
           "description": "Accessibility text used for readspeakers"
         },
         {
           "label": "Correct Answer (not displayed)",
-          "default": "Correct answer",
+          "default": "Riktig svar",
           "description": "Accessibility text used for readspeakers"
         },
         {
@@ -134,6 +134,18 @@
         {
           "label": "Text for \"Requires answer\" message",
           "default": "Du må svare på denne før du ser løysinga"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show the solution. The task will be marked with its correct solution."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
         }
       ]
     },

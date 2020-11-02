@@ -53,20 +53,20 @@
         {
           "widgets": [
             {
-              "label": "ברירת מחדל"
+              "label": "בררת מחדל"
             }
           ],
-          "label": "הגדירו משוב מותאם אישית לכל טווח ציונים",
-          "description": "לחצו על הכפתור \"הוסף טווח\", כדי להוסיף טווחים רבים ככל שתידרשו. לדוגמה: 0-20% ציון רע, 21-91% ציון ממוצע, 91-100% ציון נהדר!",
-          "entity": "טווח",
+          "label": "הגדרת משוב מותאם אישית לכל טווח נקודות שהוא",
+          "description": "לחצו על כפתור \"הוספת טווח\" להוספת טווחים לפי הצורך. לדוגמה: 0-20% ניקוד גרוע, 21-91% ניקוד ממוצע, 91-100% ניקוד מצוין!",
+          "entity": "תחום",
           "field": {
             "fields": [
               {
-                "label": "טווח ציונים"
+                "label": "תחום ציונים"
               },
               {},
               {
-                "label": "משוב עבור טווח ציונים שהוגדר מראש",
+                "label": "משוב לטווח ניקוד מוגדר",
                 "placeholder": "מלאו את המשוב"
               }
             ]
@@ -134,12 +134,24 @@
         {
           "label": "נוסח עבור הודעת \"נדרשת תשובה\"",
           "default": "אנא השיבו לפני הצגת הפתרון"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show the solution. The task will be marked with its correct solution."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
         }
       ]
     },
     {
       "label": "הגדרות התנהגות",
-      "description": "אפשרויות אלה יאפשרו לך לשלוט באופן הפעולה של המשימה.",
+      "description": "אפשרויות אלה יתנו לך לשלוט בהתנהגות המשימה.",
       "fields": [
         {
           "label": "הפעלת כפתור \"נסה שוב\""

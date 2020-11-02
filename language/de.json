@@ -134,6 +134,18 @@
         {
           "label": "Text für \"Erfordert Antwort\"-Hinweis",
           "default": "Bitte antworte, bevor du die Lösung ansiehst"
+        },
+        {
+          "label": "Beschreibung des \"Überprüfen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+          "default": "Die Antworten überprüfen. Die Auswahlen werden als richtig, falsch oder fehlend markiert."
+        },
+        {
+          "label": "Beschreibung des \"Lösung anzeigen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+          "default": "Die Lösung anzeigen. Die richtigen Lösungen werden in der Aufgabe angezeigt."
+        },
+        {
+          "label": "Beschreibung des \"Wiederholen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+          "default": "Die Aufgabe wiederholen. Alle Versuche werden zurückgesetzt und die Aufgabe wird erneut gestartet."
         }
       ]
     },
@@ -167,7 +179,7 @@
         },
         {
           "label": "Einen Punkt für die ganze Aufgabe vergeben",
-          "description": "Aktivieren, um bei mehreren korrekten Antworten insgesamt nur einen Punkt zu vergeben. Nur aktiv in Multiple Choice-Fragen"
+          "description": "Aktivieren, um bei mehreren korrekten Antworten insgesamt nur einen Punkt zu vergeben. Nur aktiv in Multiple Choice-Fragen."
         },
         {
           "label": "Zufällige Reihenfolge der Antworten",

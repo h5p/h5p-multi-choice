@@ -1,46 +1,46 @@
 {
   "semantics": [
     {
-      "label": "Media",
+      "label": "Média",
       "fields": [
         {
-          "label": "Type",
-          "description": "Optional media to display above the question."
+          "label": "Típus",
+          "description": "Lehetséges Média ami a kérdés felett jelenik meg."
         },
         {
-          "label": "Disable image zooming"
+          "label": "Kép ráközelítés tiltása"
         }
       ]
     },
     {
-      "label": "Question"
+      "label": "Kérdés"
     },
     {
-      "label": "Available options",
+      "label": "Elérehtő lehetőségek",
       "entity": "option",
       "field": {
-        "label": "Option",
+        "label": "Lehetőség",
         "fields": [
           {
-            "label": "Text"
+            "label": "Szöveg"
           },
           {
-            "label": "Correct"
+            "label": "Helyes"
           },
           {
-            "label": "Tips and feedback",
+            "label": "Tippek és visszajelzések",
             "fields": [
               {
-                "label": "Tip text",
-                "description": "Hint for the user. This will appear before user checks his answer/answers."
+                "label": "Tipp szövege",
+                "description": "Célzás a felhasználó számára. Megjelnik mielőtt választ/válaszokat bejelölné."
               },
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"check\" if this answer is selected."
+                "label": "Megjelenített szöveg, ha megjelölte a választ",
+                "description": "Ez az üzenet jelenik meg a válasz alatt az \"Ellenőrzés\"-nél ha megjelölte a választ."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"check\" if this answer is not selected."
+                "label": "Megjelenített szöveg, ha nem megjelölte meg a választ",
+                "description": "Ez az üzenet jelenik meg a válasz alatt az \"Ellenőrzés\"-nél ha nem jelölte meg a választ."
               }
             ]
           }
@@ -48,26 +48,26 @@
       }
     },
     {
-      "label": "Overall Feedback",
+      "label": "Átfogó visszajelzés",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Default"
+              "label": "Alapértelmezett"
             }
           ],
-          "label": "Define custom feedback for any score range",
-          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "label": "Határozza meg a visszajelzést bármelyik pontszámhoz",
+          "description": "Klikkeljen az \"Tartomány hozzáadása\" gombra a tartományok megadásához. Például: 0-20% Rossz eredmény, 21-91% Átlagos eredmény, 91-100% Nagyszerű eredmény!",
           "entity": "range",
           "field": {
             "fields": [
               {
-                "label": "Score Range"
+                "label": "Pontszámok"
               },
               {},
               {
-                "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "label": "Visszajelzés a pontszámokhoz",
+                "placeholder": "Töltes ki a visszajelzést"
               }
             ]
           }
@@ -75,166 +75,178 @@
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "Felhasználói interface fordítások",
       "fields": [
         {
-          "label": "Check answer button label",
-          "default": "Check"
+          "label": "Ellenőrzés gomb címkéje",
+          "default": "Ellenőrzés"
         },
         {
-          "label": "Show solution button label",
-          "default": "Show solution"
+          "label": "Mutasd a megoldást gomb címkéje",
+          "default": "Mutasd a megoldást"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Újra gomb címkéje",
+          "default": "Újra"
         },
         {
-          "label": "Tip label",
-          "default": "Show tip"
+          "label": "Tipp megmutatása címkéje",
+          "default": "Tipp megmutatása"
         },
         {
-          "label": "Textual representation of the score bar for those using a readspeaker",
-          "description": "Available variables are :num and :total",
-          "default": "You got :num out of :total points"
+          "label": "Elért pontok száma azoknak, akik readspeaker-t használnak",
+          "description": "Elérhető változók :num és összesen :total",
+          "default": "Ön :num pontot szerzett a elérhető maximális :total pontból"
         },
         {
-          "label": "Tip Available (not displayed)",
-          "default": "Tip available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Elérhető tipp (nincs megjelenítve)",
+          "default": "Elérhető tipp",
+          "description": "Hozzáférhető szöveg readspeaker-ek számára"
         },
         {
-          "label": "Feedback Available (not displayed)",
-          "default": "Feedback available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Visszajelzés elérhető (nincs megjelenítve)",
+          "default": "Visszajelzés elérhető",
+          "description": "Hozzáférhető szöveg readspeaker-ek számára"
         },
         {
-          "label": "Read Feedback (not displayed)",
-          "default": "Read feedback",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Visszajelzés olvasása (nincs megjelenítve)",
+          "default": "Visszajelzés olvasása",
+          "description": "Hozzáférhető szöveg readspeaker-ek számára"
         },
         {
-          "label": "Wrong Answer (not displayed)",
-          "default": "Wrong answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Helytelen válasz (nincs megjelenítve)",
+          "default": "Helytelen válasz",
+          "description": "Hozzáférhető szöveg readspeaker-ek számára"
         },
         {
-          "label": "Correct Answer (not displayed)",
-          "default": "Correct answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Helyes válasz (nincs megjelenítve)",
+          "default": "Helyes válasz",
+          "description": "Hozzáférhető szöveg readspeaker-ek számára"
         },
         {
-          "label": "Option should have been checked",
-          "default": "Should have been checked"
+          "label": "Be kellett volna jelölni",
+          "default": "Be kellett volna jelölni"
         },
         {
-          "label": "Option should not have been checked",
-          "default": "Should not have been checked"
+          "label": "Nem kellett volna bejelölni",
+          "default": "Nem kellett volna bejelölni"
         },
         {
-          "label": "Text for \"Requires answer\" message",
-          "default": "Please answer before viewing the solution"
+          "label": "Kérjük válaszoljon üzenet szövege",
+          "default": "Kérjük válaszoljon, mielőtt a megoldás megjelenne!"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show the solution. The task will be marked with its correct solution."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
         }
       ]
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "Viselkedéssel kapcsolatos beállítások",
+      "description": "Ezek a lehetőségek megengedik az Ön számára, hogy a feladatok hogyan viselkedjenek.",
       "fields": [
         {
-          "label": "Enable \"Retry\" button"
+          "label": "Újra gomb engedélyezése"
         },
         {
-          "label": "Enable \"Show Solution\" button"
+          "label": "Mutasd a megoldást gomb engedélyezése"
         },
         {
-          "label": "Enable \"Check\" button"
+          "label": "Ellenőrzés gomb engedélyezése"
         },
         {
-          "label": "Question Type",
-          "description": "Select the look and behaviour of the question.",
+          "label": "Kérdés típusok",
+          "description": "Válassza ki a kérdés kinézetét és viselkedését.",
           "options": [
             {
-              "label": "Automatic"
+              "label": "Automatikus"
             },
             {
-              "label": "Multiple Choice (Checkboxes)"
+              "label": "Több válasz lehetséges (Checkbox-ok)"
             },
             {
-              "label": "Single Choice (Radio Buttons)"
+              "label": "Csak 1 válasz lehetséges (Radio Button-ök)"
             }
           ]
         },
         {
-          "label": "Give one point for the whole task",
-          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label": "A teljes feladatra egy pontot ad",
+          "description": "Több helyes válasz estén 1 pontot ad összesen. Ez a lehetőség nem működik ha a Csak 1 válasz lhetőséget választotta."
         },
         {
-          "label": "Randomize answers",
-          "description": "Enable to randomize the order of the answers on display."
+          "label": "Véletlen válaszok",
+          "description": "Ezzel engedélyezi, hogy a lehetséges válaszok véletlen sorrendben jelenjenek meg."
         },
         {
-          "label": "Require answer before the solution can be viewed"
+          "label": "Válasz adása a megoldás megmutatása előtt"
         },
         {
-          "label": "Show confirmation dialog on \"Check\""
+          "label": "Megerősítést kérő dialógus megjelenítése \"Ellenőrzés\" esetén"
         },
         {
-          "label": "Show confirmation dialog on \"Retry\""
+          "label": "Megerősítést kérő dialógus megjelenítése  \"Újra\" estén"
         },
         {
-          "label": "Automatically check answers",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label": "Automatikus válasz ellenőrzés",
+          "description": "Ennek az opciónak az engedélyezése veszélyekkel járhat! Legyen biztos benne, hogy mit csinál."
         },
         {
-          "label": "Pass percentage",
-          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label": "Szükséges százalék",
+          "description": "Ennek a beállításnak gyakran nincs hatása. Ez a százalék a 'teljes feladtért kapható 1 pont' egnedélyezésénél lehetséges, és a result.success eléréséhez az xAPI statement-eknél."
         },
         {
-          "label": "Show score points",
-          "description": "Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
+          "label": "Elért eredmény pontok mutatása",
+          "description": "Megmutatja az egyes válaszokért kapott pontokat. Nem választható opció '1 válasz' módban vagy ha 'Az egész feladatra 1 pont' opció engedélyezett."
         }
       ]
     },
     {
-      "label": "Check confirmation dialog",
+      "label": "Ellenőrző dialógus",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Finish ?"
+          "label": "Fejléc szövege",
+          "default": "Végzett ?"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to finish ?"
+          "label": "Szöveg törzs",
+          "default": "Biztos benne, hogy befejezi ?"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Mégsem gomb felirat",
+          "default": "Mégsem"
         },
         {
-          "label": "Confirm button label",
-          "default": "Finish"
+          "label": "Vége gomb felirat",
+          "default": "Vége"
         }
       ]
     },
     {
-      "label": "Retry confirmation dialog",
+      "label": "Újra dialógus",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Retry ?"
+          "label": "Fejléc szövege",
+          "default": "Újra ?"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to retry ?"
+          "label": "Szöveg törzs",
+          "default": "Biztos benne, hogy újra megpróbálja ?"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Mégsem gomb felirata",
+          "default": "Mégsem"
         },
         {
-          "label": "Confirm button label",
-          "default": "Confirm"
+          "label": "Elküld gomb felirata",
+          "default": "Elküld"
         }
       ]
     }

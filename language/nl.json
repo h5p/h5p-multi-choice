@@ -94,9 +94,9 @@
           "default": "Toon tip"
         },
         {
-          "label": "Textual representation of the score bar for those using a readspeaker",
-          "description": "Available variables are :num and :total",
-          "default": "You got :num out of :total points"
+          "label": "Tekstuele weergave van de scorebalk voor wie een readspeaker gebruikt",
+          "description": "Beschikbare variabelen zijn :num en :total",
+          "default": "Je hebt :num van de :total punten"
         },
         {
           "label": "Tip aanwezig (niet getoond)",
@@ -134,6 +134,18 @@
         {
           "label": "Tekst voor \"Antwoord vereist\" bericht",
           "default": "Gelieve te antwoorden voor je de oplossing bekijkt"
+        },
+        {
+          "label": "Assistive technology description for \"Check\" button",
+          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+        },
+        {
+          "label": "Assistive technology description for \"Show Solution\" button",
+          "default": "Show the solution. The task will be marked with its correct solution."
+        },
+        {
+          "label": "Assistive technology description for \"Retry\" button",
+          "default": "Retry the task. Reset all responses and start the task over again."
         }
       ]
     },
@@ -142,10 +154,10 @@
       "description": "Met deze instellingen bepaal je hoe de taak zich gedraagt.",
       "fields": [
         {
-          "label": "Schakel \"Opnieuw Proberen\" -knop in"
+          "label": "Schakel \"Opnieuw proberen\" -knop in"
         },
         {
-          "label": "Schakel \"Toon Oplossing\" -knop in"
+          "label": "Schakel \"Toon oplossing\" -knop in"
         },
         {
           "label": "Schakel \"Controleer\" -knop in"
@@ -158,16 +170,16 @@
               "label": "Automatisch"
             },
             {
-              "label": "Multiple Choice (Checkboxes)"
+              "label": "Meermeerkeuze (Checkboxes)"
             },
             {
-              "label": "Enkele keuze (Radio knoppen)"
+              "label": "Enkele keuze (Radio-knoppen)"
             }
           ]
         },
         {
-          "label": "Geef een punt voor de hele taak",
-          "description": "Schakel in om een totaal van een punt te geven voor meerdere juiste antwoorden. Dit is geen optie bij \"Single answer\" modus."
+          "label": "Geef één punt voor de hele taak",
+          "description": "Schakel in om een totaal van één punt te geven voor meerdere juiste antwoorden. Dit is geen optie bij \"Enkele keuze\" modus."
         },
         {
           "label": "Randomiseer de antwoorden",
@@ -180,7 +192,7 @@
           "label": "Toon bevestigingsvenster bij \"Controleer\""
         },
         {
-          "label": "Toon bevestigingsvenster on \"Probeer opnieuw\""
+          "label": "Toon bevestigingsvenster bij \"Opnieuw proberen\""
         },
         {
           "label": "Controleer antwoorden automatisch",
@@ -197,18 +209,18 @@
       ]
     },
     {
-      "label": "Controleer bevestigingsvenster",
+      "label": "Controleren bevestigingsvenster",
       "fields": [
         {
           "label": "Koptekst",
           "default": "Klaar?"
         },
         {
-          "label": "Bodytekst",
-          "default": "Ben je zeker dat je deze sessie wil beëindigen?"
+          "label": "Tekstinhoud",
+          "default": "Weet je zeker dat je deze sessie wilt beëindigen?"
         },
         {
-          "label": "Tekst van de \"Annuleer\"-knop",
+          "label": "Tekst van de \"Annuleren\"-knop",
           "default": "Annuleren"
         },
         {
@@ -221,20 +233,20 @@
       "label": "Opnieuw proberen bevestigingsvenster",
       "fields": [
         {
-          "label": "Hoofding tekst",
+          "label": "Koptekst",
           "default": "Opnieuw proberen?"
         },
         {
-          "label": "Body text",
-          "default": "Ben je er zeker van dat je het opnieuw wilt proberen?"
+          "label": "Tekstinhoud",
+          "default": "Weet je zeker dat je het opnieuw wilt proberen?"
         },
         {
-          "label": "Annuleer knop label",
-          "default": "Annuleer"
+          "label": "Annuleren knop label",
+          "default": "Annuleren"
         },
         {
           "label": "Bevestig knop label",
-          "default": "Bevestig"
+          "default": "Bevestigen"
         }
       ]
     }
