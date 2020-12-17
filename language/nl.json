@@ -32,7 +32,7 @@
             "fields": [
               {
                 "label": "Tekst voor tip",
-                "description": "Hint voor de gebruiker. Deze zal verschijnen voordat de gebruiker zijn antwoord(en) controleert."
+                "description": "Tip voor de gebruiker. Deze zal verschijnen voordat de gebruiker zijn antwoord(en) controleert."
               },
               {
                 "label": "Weer te geven bericht als het antwoord is geselecteerd",
@@ -136,16 +136,16 @@
           "default": "Gelieve te antwoorden voor je de oplossing bekijkt"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Ondersteunende technologie beschrijving voor \"Controleer\" knop",
+          "default": "Controleer de antwoorden. De antwoorden worden gemarkeerd als correct, incorrect, of niet-beantwoord."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "Ondersteunende technologie beschrijving voor \"Toon oplossing\" knop",
+          "default": "Toon de oplossing. De taak wordt gemarkeerd met de juiste oplossing."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Ondersteunende technologie beschrijving voor \"Opnieuw proberen\" knop",
+          "default": "Probeer de taak opnieuw. Reset alle antwoorden en start de taak opnieuw."
         }
       ]
     },
