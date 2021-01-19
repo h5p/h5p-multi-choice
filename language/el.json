@@ -136,16 +136,16 @@
           "default": "Παρακαλώ απάντησε προτού δεις τη λύση"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Περιγραφή υποστηρικτικών τεχνολογιών για το πλήκτρο \"Έλεγχος\"",
+          "default": "Έλεγχος απαντήσεων. Οι απαντήσεις θα μαρκαριστούν ως σωστές, λάθος και μη απαντημένες."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "Περιγραφή υποστηρικτικών τεχνολογιών για το πλήκτρο \"Λύση\"",
+          "default": "Προβολή της λύσης. Η άσκηση θα επισημανθεί με την σωστή απάντση."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Περιγραφή υποστηρικτικών τεχνολογιών για το πλήκτρο \"Επανάληψη\"",
+          "default": "Επανάληψη της εργασίας. Επαναφορά όλων των απαντήσεων και έναρξη από την αρχή."
         }
       ]
     },
