@@ -1,14 +1,14 @@
 {
   "semantics": [
     {
-      "label": "Multimédia",
+      "label": "Média",
       "fields": [
         {
           "label": "Tipo",
-          "description": "Multimédia opcional a ser exibida acima da pergunta."
+          "description": "Conteúdo multimédia opcional para mostrar acima da questão."
         },
         {
-          "label": "Desativar o zoom da imagem"
+          "label": "Desativar ampliação de imagem para a imagem associada à questão"
         }
       ]
     },
@@ -48,25 +48,25 @@
       }
     },
     {
-      "label": "Feedback geral",
+      "label": "Feedback Geral",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Predefinição"
+              "label": "Por defeito"
             }
           ],
-          "label": "Definir feedback personalizado para qualquer intervalo de pontuação",
-          "description": "Clique no botão \"Adicionar intervalo\" para adicionar quantos intervalos precisar. Exemplo: 0-20% Mau, 21-91% Suficiente, 91-100% Excelente",
+          "label": "Defina feedback personalizado para cada intervalo de pontuação",
+          "description": "Clique em \"Adicionar intervalo\" e adicione quantos intervalos forem necessários. Exemplo: 0-20% Mau, 21-91% Mediano, 91-100% Excelente!",
           "entity": "intervalo",
           "field": {
             "fields": [
               {
-                "label": "Intervalo da pontuação"
+                "label": "Intervalo de Pontuação"
               },
               {},
               {
-                "label": "Feedback para um intervalo específico da pontuação",
+                "label": "Feedback para o intervalo de pontuação definido",
                 "placeholder": "Preencha o feedback"
               }
             ]
