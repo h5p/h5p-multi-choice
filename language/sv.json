@@ -136,16 +136,16 @@
           "default": "Svara innan du visar lösningen"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Beskrivning av knappen \"Rätta\" för tillgänglighetshjälpmedel",
+          "default": "Rätta svaren. Svaren kommer att markeras som korrekta, felaktiga eller obesvarade."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "Beskrivning av knappen \"Visa lösning\" för tillgänglighetshjälpmedel",
+          "default": "Visa lösningen. Uppgiften kommer att markeras med dess korrekta lösning."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Beskrivning av knappen \"Försök igen\" för tillgänglighetshjälpmedel",
+          "default": "Försök igen med uppgiften. Nollställer alla svar och startar om uppgiften igen."
         }
       ]
     },
@@ -224,7 +224,7 @@
           "default": "Avbryt"
         },
         {
-          "label": "Etikett på avsluta-knapp",
+          "label": "Etikett på knappen Bekräfta",
           "default": "Avsluta"
         }
       ]
