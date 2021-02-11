@@ -183,7 +183,7 @@
         },
         {
           "label": "Zufällige Reihenfolge der Antworten",
-          "description": "Aktivieren, um die Fragen in zufälliger Reihenfolge anzuzeigen."
+          "description": "Aktivieren, um die Antworten in zufälliger Reihenfolge anzuzeigen."
         },
         {
           "label": "Lösung wird erst angezeigt, wenn eine Antwort eingegeben wurde."
