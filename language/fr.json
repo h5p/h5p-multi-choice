@@ -22,7 +22,7 @@
         "label": "Option",
         "fields": [
           {
-            "label": "Question"
+            "label": "Réponse"
           },
           {
             "label": "Réponse correcte"
