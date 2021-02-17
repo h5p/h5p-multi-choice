@@ -8,7 +8,7 @@
           "description": "Medios opcionales para mostrar sobre la pregunta."
         },
         {
-          "label": "Desactivar zoom de imagen para imagen de pregunta"
+          "label": "Desactivar zoom de imagen"
         }
       ]
     },
