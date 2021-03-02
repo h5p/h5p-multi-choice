@@ -39,8 +39,8 @@
                 "description": "Meddelande kommer visas under svaret när användaren väljer \"rätta\" om detta svar är valt."
               },
               {
-                "label": "Meddelande visas om svar inte är valt displayed if answer is not selected",
-                "description": "Meddelande kommer visas under svaret när användaren väljer \"check\" om detta svar inte är valt."
+                "label": "Meddelande visas om svar inte är valt",
+                "description": "Meddelande kommer visas under svaret när användaren väljer \"rätta\" om detta svar inte är valt."
               }
             ]
           }
