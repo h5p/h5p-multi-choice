@@ -136,16 +136,16 @@
           "default": "Před zobrazením řešení odpovězte"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Popisek podpůrné technologie pro tlačítko \"Zkontrolovat\"",
+          "default": "Zkontrolovat odpovědi. Odpovědi budou označeny jako správné, nesprávné nebo nezodpovězené."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "Popisek podpůrné technologie pro tlačítko \"Zobrazit řešení\"",
+          "default": "Zobrazit řešení. Úkol bude zobrazen se správným řešením."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Popisek podpůrné technologie pro tlačítko \"Opakovat\"",
+          "default": "Zopakovat úkol. Resetovat všechny odpovědi a spustit úlohu znovu."
         }
       ]
     },
