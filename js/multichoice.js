@@ -462,6 +462,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }
   };
 
+  //Create question DOM on instantiation to calculate score accurately
+  this.registerDomElements();
+
   this.showAllSolutions = function () {
     if (solutionsVisible) {
       return;
