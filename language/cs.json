@@ -1,14 +1,14 @@
 {
   "semantics": [
     {
-      "label": "Media",
+      "label": "Média",
       "fields": [
         {
-          "label": "Type",
+          "label": "Typ",
           "description": "Volitelná média zobrazená nad otázkou."
         },
         {
-          "label": "Zakázat zvětšování obrazu"
+          "label": "Zakázat zvětšení obrazu"
         }
       ]
     },
@@ -58,7 +58,7 @@
           ],
           "label": "Definujte vlastní zpětnou vazbu pro jakýkoli rozsah skóre",
           "description": "Klikněte na tlačítko \"Přidat rozsah\" pro přidání tolika rozsahů, kolik potřebujete. Například: 0-20% špatný výsledek, 21-91% průměrný výsledek, 91-100% výborný výsledek!",
-          "entity": "rozdah",
+          "entity": "rozsah",
           "field": {
             "fields": [
               {
@@ -115,7 +115,7 @@
         },
         {
           "label": "Chybná odpověď (není zobrazena)",
-          "default": "Chybná odpověď ",
+          "default": "Chybná odpověď",
           "description": "Text usnadnění přístupu používaný pro čtecí zařízení"
         },
         {
@@ -132,20 +132,20 @@
           "default": "Neměla být zaškrtnuta"
         },
         {
-          "label": "Text zprávy \"Vyžadovaná odpověď\" ",
+          "label": "Text zprávy \"Vyžadovaná odpověď\"",
           "default": "Před zobrazením řešení odpovězte"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Popisek podpůrné technologie pro tlačítko „Zkontrolovat“",
+          "default": "Zkontrolovat odpovědi. Odpovědi budou označeny jako správné, nesprávné nebo nezodpovězené."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "Popisek podpůrné technologie pro tlačítko „Zobrazit řešení“",
+          "default": "Zobrazit řešení. Úkol bude zobrazen se správným řešením."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Popisek podpůrné technologie pro tlačítko „Opakovat“",
+          "default": "Zopakovat úkol. Resetovat všechny odpovědi a spustit úlohu znovu."
         }
       ]
     },
@@ -154,13 +154,13 @@
       "description": "Tyto možnosti vám umožní řídit, jak se bude úloha chovat.",
       "fields": [
         {
-          "label": "Povolit tlačítko \"Opakovat\" "
+          "label": "Povolit tlačítko \"Opakovat\""
         },
         {
-          "label": "Povolit tlačítko \"Zobrazit řešení\" "
+          "label": "Povolit tlačítko \"Zobrazit řešení\""
         },
         {
-          "label": "Povolit tlačítko \"Zkontrolovat\" "
+          "label": "Povolit tlačítko \"Zkontrolovat\""
         },
         {
           "label": "Typ otázky",
@@ -220,11 +220,11 @@
           "default": "Opravdu chcete ukončit ?"
         },
         {
-          "label": "Popis tlačítka zrušení",
+          "label": "Popisek tlačítka zrušení",
           "default": "Zrušit"
         },
         {
-          "label": "Popis potvrzovacího tlačítka",
+          "label": "Popisek potvrzovacího tlačítka",
           "default": "Skončit"
         }
       ]
