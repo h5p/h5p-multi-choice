@@ -159,7 +159,7 @@ H5P.MultiChoice = function(options, contentId, contentData) {
     $feedbackDialog = $('' +
     '<div class="h5p-feedback-dialog">' +
       '<div class="h5p-feedback-inner">' +
-        '<div class="h5p-feedback-text" aria-hidden="true">' + feedback + '</div>' +
+        '<div class="h5p-feedback-text">' + feedback + '</div>' +
       '</div>' +
     '</div>');
 
