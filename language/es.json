@@ -5,7 +5,7 @@
       "fields": [
         {
           "label": "Tipo",
-          "description": "Medio opcional a mostrar arriba de la pregunta."
+          "description": "Medio opcional para mostrar arriba de la pregunta."
         },
         {
           "label": "Deshabilitar zoom de imagen"
@@ -57,7 +57,7 @@
             }
           ],
           "label": "Definir retroalimentación personalizada para cualquier rango de puntaje",
-          "description": "Hacer clic en el botón \"Añadir rango\" para añadir cuantos rangos necesite. Ejemplo: 0-20% Mal puntaje, 21-91% Puntaje Promedio, 91-100% ¡Magnífico Puntaje!",
+          "description": "Hagar clic en el botón \"Añadir rango\" para añadir cuantos rangos necesite. Ejemplo: 0-20% Mal puntaje, 21-91% Puntaje Promedio, 91-100% ¡Magnífico Puntaje!",
           "entity": "rango",
           "field": {
             "fields": [
@@ -96,7 +96,7 @@
         {
           "label": "Representación textual de la barra de puntaje para aquellos que usan un lector de texto en voz alta",
           "description": "Las variables disponibles son :num y :total",
-          "default": "Obtuvo :num de un total de :total"
+          "default": "Obtuvo :num de un total de :total puntos"
         },
         {
           "label": "Pista Disponible (no se muestra)",
