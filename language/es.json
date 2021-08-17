@@ -124,12 +124,12 @@
           "description": "Texto de accesibilidad utilizado para los lectores en voz alta"
         },
         {
-          "label": "La opción debería haber sido activada",
-          "default": "Debería haber sido activado"
+          "label": "La opción debería haber sido seleccionada",
+          "default": "Debería haber sido seleccionada"
         },
         {
-          "label": "La opción no debería haber sido activada",
-          "default": "No debería haber sido activada"
+          "label": "La opción no debería haber sido seleccionada",
+          "default": "No debería haber sido seleccionada"
         },
         {
           "label": "Texto para mensaje \"Requiere respuesta\"",
@@ -178,7 +178,7 @@
           ]
         },
         {
-          "label": "Da un punto para todo el trabajo",
+          "label": "Dar un punto para todo el trabajo",
           "description": "Habilite para dar un total de un punto para múltiples respuestas correctas. Esta no será una opción en el modo \"Respuesta única\"."
         },
         {
