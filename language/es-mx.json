@@ -8,7 +8,7 @@
           "description": "Medio opcional para mostrar arriba de la pregunta."
         },
         {
-          "label": "Deshabilitar zoom de imagen"
+          "label": "Deshabilitar agrandado de imagen"
         }
       ]
     },
@@ -124,12 +124,12 @@
           "description": "Texto de accesibilidad utilizado para los lectores en voz alta"
         },
         {
-          "label": "La opción debería haber sido activada",
-          "default": "Debería haber sido activado"
+          "label": "La opción debería haber sido seleccionada",
+          "default": "Debería haber sido seleccionada"
         },
         {
-          "label": "La opción no debería haber sido activada",
-          "default": "No debería haber sido activada"
+          "label": "La opción no debería haber sido seleccionada",
+          "default": "No debería haber sido seleccionada"
         },
         {
           "label": "Texto para mensaje \"Requiere respuesta\"",
@@ -163,7 +163,7 @@
           "label": "Habilitar botón \"Comprobar\""
         },
         {
-          "label": "Tipo de pregunta",
+          "label": "Tipo de Pregunta",
           "description": "Seleccione el aspecto y comportamiento de la pregunta.",
           "options": [
             {
@@ -195,8 +195,8 @@
           "label": "Mostrar el diálogo de confirmación en \"Reintentar\""
         },
         {
-          "label": "Verificar automáticamente las respuestas",
-          "description": "Al activar esta opción, se verá afectada la accesibilidad, asegúrese de saber lo que está haciendo."
+          "label": "Comprobar automáticamente las respuestas",
+          "description": "Al activar esta opción, sufrirá la accesibilidad; asegúrese de saber lo que está haciendo."
         },
         {
           "label": "Porcentaje aprobatorio",
@@ -212,7 +212,7 @@
       "label": "Diálogo de confirmación para Comprobar",
       "fields": [
         {
-          "label": "Texto de cabecera",
+          "label": "Texto del encabezado",
           "default": "¿Terminar?"
         },
         {
@@ -220,11 +220,11 @@
           "default": "¿Está seguro que desea terminar ?"
         },
         {
-          "label": "Texto del botón Cancelar",
+          "label": "Etiqueta botón Cancelar",
           "default": "Cancelar"
         },
         {
-          "label": "Texto del botón Confirmar",
+          "label": "Etiqueta del botón Confirmar",
           "default": "Terminar"
         }
       ]
@@ -233,7 +233,7 @@
       "label": "Diálogo de confirmación de Reintentar",
       "fields": [
         {
-          "label": "Texto de cabecera",
+          "label": "Texto del encabezado",
           "default": "¿Reintentar?"
         },
         {
@@ -241,11 +241,11 @@
           "default": "¿Está seguro de que desea volver a intentarlo?"
         },
         {
-          "label": "Texto del botón Cancelar",
+          "label": "Etiqueta botón Cancelar",
           "default": "Cancelar"
         },
         {
-          "label": "Texto del botón Confirmar",
+          "label": "Etiqueta del botón Confirmar",
           "default": "Confirmar"
         }
       ]

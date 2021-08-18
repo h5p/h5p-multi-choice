@@ -48,12 +48,12 @@
       }
     },
     {
-      "label": "Övergripande feedback",
+      "label": "Allmän feedback",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Förvalt"
+              "label": "Standard"
             }
           ],
           "label": "Ange specifik feedback för valfritt poängintervall",
@@ -99,7 +99,7 @@
           "default": "Du fick :num av :total poäng"
         },
         {
-          "label": "Tips tillgängligt  (visas inte)",
+          "label": "Tips tillgängligt (visas inte)",
           "default": "Tips tillgängligt",
           "description": "Text för tillgänglighet, används av skärmläsare"
         },
@@ -189,7 +189,7 @@
           "label": "Kräv svar innan lösningen kan visas"
         },
         {
-          "label": "Visa bekräftelse-dialog vid  \"Rätta\""
+          "label": "Visa bekräftelse-dialog vid \"Rätta\""
         },
         {
           "label": "Visa bekräftelse-dialog vid \"Försök igen\""
