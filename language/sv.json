@@ -48,12 +48,12 @@
       }
     },
     {
-      "label": "Övergripande feedback",
+      "label": "Allmän feedback",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Förvalt"
+              "label": "Standard"
             }
           ],
           "label": "Ange specifik feedback för valfritt poängintervall",
@@ -99,7 +99,7 @@
           "default": "Du fick :num av :total poäng"
         },
         {
-          "label": "Tips tillgängligt  (visas inte)",
+          "label": "Tips tillgängligt (visas inte)",
           "default": "Tips tillgängligt",
           "description": "Text för tillgänglighet, används av skärmläsare"
         },
@@ -136,16 +136,16 @@
           "default": "Svara innan du visar lösningen"
         },
         {
-          "label": "Beskrivning av knappen \"Rätta\" för tillgänglighetshjälpmedel",
+          "label": "Text för knappen \"Rätta\" i tillgänglighetshjälpmedel",
           "default": "Rätta svaren. Svaren kommer att markeras som korrekta, felaktiga eller obesvarade."
         },
         {
-          "label": "Beskrivning av knappen \"Visa lösning\" för tillgänglighetshjälpmedel",
-          "default": "Visa lösningen. Uppgiften kommer att markeras med dess korrekta lösning."
+          "label": "Beskrivning för knappen \"Visa lösning\" i tillgänglighetshjälpmedel",
+          "default": "Visa lösningen. Uppgiften kommer att markeras med dess rätta lösning."
         },
         {
-          "label": "Beskrivning av knappen \"Försök igen\" för tillgänglighetshjälpmedel",
-          "default": "Försök igen med uppgiften. Nollställer alla svar och startar om uppgiften igen."
+          "label": "Beskrivning för knappen \"Försök igen\" i tillgänglighetshjälpmedel",
+          "default": "Försök igen med uppgiften. Nollställer alla svar och startar om uppgiften."
         }
       ]
     },
@@ -189,7 +189,7 @@
           "label": "Kräv svar innan lösningen kan visas"
         },
         {
-          "label": "Visa bekräftelse-dialog vid  \"Rätta\""
+          "label": "Visa bekräftelse-dialog vid \"Rätta\""
         },
         {
           "label": "Visa bekräftelse-dialog vid \"Försök igen\""
