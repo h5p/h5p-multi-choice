@@ -56,9 +56,9 @@
               "label": "Varsayılan"
             }
           ],
-          "label": "Herhangi bir puan aralığı için özelleştirilmiş geribildirim tanımlayın",
-          "description": "Örnek: 0-%20 Kötü puan, 21-%91 Ortalama puan, 91-%100 Çok iyi puan!",
-          "entity": "range",
+          "label": "Herhangi bir puan aralığı için özel geri bildirim tanımlayın",
+          "description": "İstediğiniz kadar aralık eklemek için \"Aralık ekle\" düğmesini tıklayın. Örnek: %0-20 Kötü puan, %21-91 Ortalama Puan, %91-100 Büyük Puan!",
+          "entity": "Aralık",
           "field": {
             "fields": [
               {
@@ -66,8 +66,8 @@
               },
               {},
               {
-                "label": "Tanımlı puan aralığı için geribildirim",
-                "placeholder": "Geribildirimi doldurun"
+                "label": "Tanımlanmış puan aralığı için geri bildirim",
+                "placeholder": "Geri bildirimi doldurun"
               }
             ]
           }
