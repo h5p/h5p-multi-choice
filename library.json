@@ -2,8 +2,8 @@
   "title": "Multiple Choice",
   "contentType": "Question",
   "majorVersion": 1,
-  "minorVersion": 14,
-  "patchVersion": 7,
+  "minorVersion": 15,
+  "patchVersion": 0,
   "runnable": 1,
   "embedTypes": [
     "iframe"
@@ -44,7 +44,7 @@
     {
       "machineName": "H5P.Question",
       "majorVersion": 1,
-      "minorVersion": 4
+      "minorVersion": 5
     }
   ],
   "editorDependencies": [
