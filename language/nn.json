@@ -82,6 +82,10 @@
           "default": "Sjekk"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Show solution button label",
           "default": "Vis svar"
         },

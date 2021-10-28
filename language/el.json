@@ -82,6 +82,10 @@
           "default": "Έλεγχος"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Ετικέτα κουμπιού εμφάνισης λύσης",
           "default": "Λύση"
         },

@@ -82,6 +82,10 @@
           "default": "סמנו"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "הציגו את תווית כפתור הפתרונות",
           "default": "הציגו פתרונות"
         },

@@ -82,6 +82,10 @@
           "default": "Preveri"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Besedilo za gumb \"Prikaži rešitev\"",
           "default": "Prikaži rešitev"
         },

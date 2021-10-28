@@ -82,6 +82,10 @@
           "default": "ពិនិត្យចម្លើយ"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Show solution button label",
           "default": "បង្ហាញចម្លើយត្រឹមត្រូវ"
         },

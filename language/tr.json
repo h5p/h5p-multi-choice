@@ -82,6 +82,10 @@
           "default": "Kontrol et"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Çözümü göster düğmesi etiketi",
           "default": "Çözümü göster"
         },

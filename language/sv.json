@@ -82,6 +82,10 @@
           "default": "Rätta"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Etikett för knapp för visa lösning",
           "default": "Visa lösning"
         },

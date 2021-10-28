@@ -82,6 +82,10 @@
           "default": "जांचें"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "समाधान दिखाने के बटन का नाम-पत्र",
           "default": "समाधान दिखाएं"
         },

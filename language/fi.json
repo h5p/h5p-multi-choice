@@ -82,6 +82,10 @@
           "default": "Tarkista"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Painikkeen \"Katso vastaus\" nimi",
           "default": "Katso vastaus"
         },
