@@ -82,6 +82,10 @@
           "default": "Ellenőrzés"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Mutasd a megoldást gomb címkéje",
           "default": "Mutasd a megoldást"
         },

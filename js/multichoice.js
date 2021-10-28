@@ -92,6 +92,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     userAnswers: [],
     UI: {
       checkAnswerButton: 'Check',
+      submitAnswerButton: 'Submit',
       showSolutionButton: 'Show solution',
       tryAgainButton: 'Try again',
       scoreBarLabel: 'You got :num out of :total points',
@@ -668,7 +669,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
             l10n: params.confirmCheck,
             instance: self,
             $parentElement: $container
-          }
+          },
+          contentData: self.contentData,
+          textIfSubmitting: params.UI.submitAnswerButton,
         }
       );
     }

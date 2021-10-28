@@ -82,6 +82,10 @@
           "default": "Verifica"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Etichetta del pulsante \"Mostra soluzione\"",
           "default": "Mostra la soluzione"
         },

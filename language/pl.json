@@ -82,6 +82,10 @@
           "default": "Sprawdź"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Etykieta przycisku Pokaż odpowiedź",
           "default": "Pokaż odpowiedź"
         },

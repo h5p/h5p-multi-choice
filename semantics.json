@@ -224,6 +224,13 @@
         "default": "Check"
       },
       {
+        "name": "submitAnswerButton",
+        "type": "text",
+        "label": "Submit answer button label",
+        "importance": "low",
+        "default": "Submit"
+      },
+      {
         "name": "showSolutionButton",
         "type": "text",
         "label": "Show solution button label",

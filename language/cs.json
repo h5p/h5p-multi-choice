@@ -82,6 +82,10 @@
           "default": "Zkontroluj"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Popis tlačítka zobraz řešení",
           "default": "Zobrazit řešení"
         },

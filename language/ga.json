@@ -82,6 +82,10 @@
           "default": "Seiceáil"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Show solution button label",
           "default": "Taispeáin an freagra"
         },

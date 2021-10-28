@@ -82,6 +82,10 @@
           "default": "Tjek"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Tekst på knap til via af svar",
           "default": "Vis svar"
         },
