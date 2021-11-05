@@ -332,7 +332,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       var num = parseInt($ans.data('id'));
       if (params.behaviour.singleAnswer) {
         // Store answer
-        params.userAnswers[0] = num;
+        params.userAnswers = [num];
 
         // Calculate score
         score = (params.answers[num].correct ? 1 : 0);
@@ -345,6 +345,10 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       }
       else {
         if ($ans.attr('aria-checked') === 'true') {
+          const pos = params.userAnswers.indexOf(num);
+          if (pos !== -1) {
+            params.userAnswers.splice(pos, 1);
+          }
 
           // Do not allow un-checking when retry disabled and auto check
           if (params.behaviour.autoCheck && !params.behaviour.enableRetry) {
@@ -355,6 +359,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           $ans.removeClass('h5p-selected').attr('aria-checked', 'false');
         }
         else {
+          params.userAnswers.push(num);
           $ans.addClass('h5p-selected').attr('aria-checked', 'true');
         }
 
@@ -851,22 +856,16 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
   var calcScore = function () {
     score = 0;
-    params.userAnswers = [];
-    $('.h5p-answer', $myDom).each(function (idx, el) {
-      var $el = $(el);
-      if ($el.attr('aria-checked') === 'true') {
-        var choice = params.answers[idx];
-        var weight = (choice.weight !== undefined ? choice.weight : 1);
-        if (choice.correct) {
-          score += weight;
-        }
-        else {
-          score -= weight;
-        }
-        var num = parseInt($(el).data('id'));
-        params.userAnswers.push(num);
+    for (const answer of params.userAnswers) {
+      const choice = params.answers[answer];
+      const weight = (choice.weight !== undefined ? choice.weight : 1);
+      if (choice.correct) {
+        score += weight;
       }
-    });
+      else {
+        score -= weight;
+      }
+    }
     if (score < 0) {
       score = 0;
     }
@@ -1028,6 +1027,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           }
         }
       }
+      calcScore();
     }
   }
 
