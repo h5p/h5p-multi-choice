@@ -5,10 +5,10 @@
       "fields": [
         {
           "label": "Mota",
-          "description": "Galderaren gaineko aukerako multimedia."
+          "description": "Aukerazko multimedia galderaren aurretik erakusteko."
         },
         {
-          "label": "Desgaitu irudiaren zooma"
+          "label": "Desgaitu irudien zooma"
         }
       ]
     },
@@ -16,8 +16,8 @@
       "label": "Galdera"
     },
     {
-      "label": "Aukera erabilgarriak",
-      "entity": "Aukera",
+      "label": "Eskuragarri dauden aukerak",
+      "entity": "aukera",
       "field": {
         "label": "Aukera",
         "fields": [
@@ -48,16 +48,16 @@
       }
     },
     {
-      "label": "Feedback orokorra",
+      "label": "Feedback Orokorra",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Lehenetsia"
+              "label": "Lehenetsitakoa"
             }
           ],
-          "label": "Definitu feedback pertsonalizatua edozein puntuazio tarterako",
-          "description": "Klikatu \"Gehitu tartea\" botoia behar dituzun tarteak. Adibidez: 0-%20 Puntuazio txarra, %21-%91 Tarteko puntuazioa, %91-%100 Puntuazio bikaina!",
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
           "entity": "tartea",
           "field": {
             "fields": [
@@ -66,8 +66,8 @@
               },
               {},
               {
-                "label": "Definitutako puntuazio tarterako feedbacka",
-                "placeholder": "Bete feedbacka"
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
               }
             ]
           }
@@ -96,7 +96,7 @@
         {
           "label": "Puntuazio-barraren testu adierazpena irakurgailua erabiltzen dutenentzat",
           "description": "Erabiltzen diren aldagaiak :num eta :total",
-          "default": ":total puntutik :num lortu dituzu"
+          "default": ":total puntutik :num puntu lortu duzu"
         },
         {
           "label": "Argibidea erabilgarri (ez da bistaratzen)",
@@ -114,7 +114,7 @@
           "description": "Irakurgailuetarako erabilerraztasun testua"
         },
         {
-          "label": "Erantzun okerra (ez da bistaratzen)",
+          "label": "Erantzun Okerra (ez da erakusten)",
           "default": "Erantzun okerra",
           "description": "Irakurgailuetarako erabilerraztasun testua"
         },
@@ -140,7 +140,7 @@
           "default": "Egiaztatu erantzunak. Erantzunak zuzen, oker edo erantzun gabe gisa markatuko dira."
         },
         {
-          "label": "\"Erakutsi erantzun zuzena\" botoiaren laguntza-teknologientzako etiketa",
+          "label": "\"Erakutsi erantzuna\" botoiaren laguntza-teknologientzako etiketa",
           "default": "Erakutsi erantzun zuzena. Zereginaren erantzun zuzena markatuko da."
         },
         {
@@ -150,14 +150,14 @@
       ]
     },
     {
-      "label": "Portaera ezarpenak",
-      "description": "Aukera hauen bidez kontrolatu ahal izango duzu zereginaren portaera.",
+      "label": "Portaeraren ezarpenak",
+      "description": "Aukera hauek lanaren portaera kontrolatzea ahalbidetzen dizute.",
       "fields": [
         {
-          "label": "Aktibatu \"Saiatu berriro\" botoia"
+          "label": "Gaitu \"Berriz saiatu\" botoia"
         },
         {
-          "label": "Aktibatu \"Erakutsi soluzioa\" botoia"
+          "label": "Aktibatu \"Erakutsi Erantzuna\" botoia"
         },
         {
           "label": "Aktibatu \"Egiaztatu\" botoia"
@@ -189,14 +189,14 @@
           "label": "Erantzun behar da soluzioa ikusi ahal izateko"
         },
         {
-          "label": "Erakutsi egiaztatze elkarrizketa \"Egiaztatu\" botoian"
+          "label": "Erakutsi \"Egiaztatu\" botoirako baieztapen-mezua"
         },
         {
-          "label": "Erakutsi egiaztatze elkarrizketa \"Saiatu berriro\" botoian"
+          "label": "Erakutsi \"Berriz saiatu\" botoirako baieztapen-mezua"
         },
         {
           "label": "Egiaztatu erantzunak automatikoki",
-          "description": "Aukera hau aktibatuta erabilerraztasuna kaltetuko da,  ziurtatu badakizula zer egiten ari zaren."
+          "description": "Aukera hau aktibatuta erabilerraztasuna kaltetuko da, ziurtatu badakizula zer egiten ari zaren."
         },
         {
           "label": "Asmatutakoen ehunekoa",
