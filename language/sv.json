@@ -32,15 +32,15 @@
             "fields": [
               {
                 "label": "Tipstext",
-                "description": "Ledtråd för användaren. Detta kommer visas innan användaren rättar sitt/sina svar."
+                "description": "Ledtråd för användaren. Detta kommer visas innan användaren klickar på \"Svara\"."
               },
               {
                 "label": "Meddelande visas om svar är valt",
-                "description": "Meddelande kommer visas under svaret när användaren väljer \"rätta\" om detta svar är valt."
+                "description": "Meddelande som visas under svaret när användaren väljer \"svara\", om detta svarsalternativ är valt."
               },
               {
                 "label": "Meddelande visas om svar inte är valt",
-                "description": "Meddelande kommer visas under svaret när användaren väljer \"rätta\" om detta svar inte är valt."
+                "description": "Meddelande som visas under svaret när användaren väljer \"svara\", om detta svarsalternativ inte är valt."
               }
             ]
           }
@@ -78,8 +78,8 @@
       "label": "Översättningar i gränssnitt för flervalsfråga",
       "fields": [
         {
-          "label": "Etikett för rätta-knapp",
-          "default": "Rätta"
+          "label": "Etikett för knappen \"Svara\"",
+          "default": "Svara"
         },
         {
           "label": "Etikett för knapp för visa lösning",
@@ -136,8 +136,8 @@
           "default": "Svara innan du visar lösningen"
         },
         {
-          "label": "Text för knappen \"Rätta\" i tillgänglighetshjälpmedel",
-          "default": "Rätta svaren. Svaren kommer att markeras som korrekta, felaktiga eller obesvarade."
+          "label": "Text för knappen \"Svara\" i tillgänglighetshjälpmedel",
+          "default": "Granska svaren. Svaren kommer att markeras som korrekta, felaktiga eller obesvarade."
         },
         {
           "label": "Beskrivning för knappen \"Visa lösning\" i tillgänglighetshjälpmedel",
@@ -160,7 +160,7 @@
           "label": "Aktivera knappen \"Visa lösning\""
         },
         {
-          "label": "Aktivera knappen \"Rätta\""
+          "label": "Aktivera knappen \"Svara\""
         },
         {
           "label": "Frågetyp",
@@ -179,7 +179,7 @@
         },
         {
           "label": "Ge ett poäng för hela uppgiften",
-          "description": "Aktivera gör att ge totalt ett poäng för flera rätta svar. Detta är inte möjigt i läget \"Ett svar\" ."
+          "description": "Aktivera för att ge totalt ett poäng för flera rätta svar. Detta är inte möjligt i läget \"Ett svar\" ."
         },
         {
           "label": "Slumpmässiga svarsalternativ",
@@ -189,7 +189,7 @@
           "label": "Kräv svar innan lösningen kan visas"
         },
         {
-          "label": "Visa bekräftelse-dialog vid \"Rätta\""
+          "label": "Visa bekräftelse-dialog vid \"Svara\""
         },
         {
           "label": "Visa bekräftelse-dialog vid \"Försök igen\""
