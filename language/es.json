@@ -5,10 +5,10 @@
       "fields": [
         {
           "label": "Tipo",
-          "description": "Medio opcional para mostrar arriba de la pregunta."
+          "description": "Medio opcional a mostrar arriba de la pregunta."
         },
         {
-          "label": "Deshabilitar zoom de imagen"
+          "label": "Deshabilitar acercamiento de imagen"
         }
       ]
     },
@@ -48,7 +48,7 @@
       }
     },
     {
-      "label": "Retroalimentación Global",
+      "label": "Retroalimentación global",
       "fields": [
         {
           "widgets": [
