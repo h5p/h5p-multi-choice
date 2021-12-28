@@ -82,6 +82,10 @@
           "default": "Check"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "顯示解決方案按鈕標籤",
           "default": "Show solution"
         },

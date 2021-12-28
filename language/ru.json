@@ -82,6 +82,10 @@
           "default": "Проверить"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Надпись кнопки показа решения",
           "default": "Показать решение"
         },
