@@ -82,6 +82,10 @@
           "default": "Vérifier"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Le texte qui apparaît sur votre bouton dans le champ Afficher la solution",
           "default": "Afficher la solution"
         },

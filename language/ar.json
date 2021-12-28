@@ -82,6 +82,10 @@
           "default": "Check"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "تسمية زر اظهار الحل",
           "default": "Show solution"
         },

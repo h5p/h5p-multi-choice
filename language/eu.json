@@ -82,6 +82,10 @@
           "default": "Egiaztatu"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Erakutsi soluzioa botoiaren etiketa",
           "default": "Erakutsi soluzioa"
         },

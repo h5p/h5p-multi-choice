@@ -82,6 +82,10 @@
           "default": "Kontrolli"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Näita lahendust nupu silt",
           "default": "Näita lahendust"
         },

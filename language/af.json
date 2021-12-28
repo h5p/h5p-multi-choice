@@ -82,6 +82,10 @@
           "default": "Toets"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Wys die antwoord etiketknoppie",
           "default": "Wys antwoord"
         },

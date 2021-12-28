@@ -82,6 +82,10 @@
           "default": "Überprüfen"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Beschriftung des \"Lösung anzeigen\"-Buttons",
           "default": "Lösung anzeigen"
         },

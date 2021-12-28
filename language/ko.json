@@ -82,6 +82,10 @@
           "default": "정답 확인"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "해답 보기 버튼 라벨",
           "default": "해답보이기"
         },
@@ -96,7 +100,8 @@
         {
           "label": "자동 읽어주기를 위한 점수 막대의 텍스트 표현",
           "description": "이용가능한 변수, :num 과 :total",
-          "default": "총 :total 에서 :num 획득"        },
+          "default": "총 :total 에서 :num 획득"
+        },
         {
           "label": "이용가능한 팁 (표시 안됨)",
           "default": "팁 이용가능",
@@ -135,16 +140,15 @@
           "default": "해답 보기에 앞서 답을 해야 합니다"
         },
         {
-         "label": "\"Check\" 버튼에 대한 보조 기술 설명",
+          "label": "\"Check\" 버튼에 대한 보조 기술 설명",
           "default": "정답을 체크하세요. 답변은 정답, 오답 혹은 미답변으로 표기될 것입니다."
-
         },
         {
-           "label": "\"Show Solution\" 버튼에 대한 보조 기술 설명",
+          "label": "\"Show Solution\" 버튼에 대한 보조 기술 설명",
           "default": "해답 보이기. 올바른 해답과 함께 표기될 것입니다."
         },
         {
-            "label": "\"Show Solution\" 버튼에 대한 보조 기술 설명",
+          "label": "\"Show Solution\" 버튼에 대한 보조 기술 설명",
           "default": "해답 보이기. 올바른 해답과 함께 표기될 것입니다."
         }
       ]
@@ -154,11 +158,10 @@
       "description": "이 옵션은 과제가 어떻게 수행될 지 환경을 설정합니다.",
       "fields": [
         {
-                    "label": "\"Retry\"(재시도) 버튼 활성화"
+          "label": "\"Retry\"(재시도) 버튼 활성화"
         },
         {
-                   "label": "\"Show Solution\" (해답 보기) 버튼 활성화"
-
+          "label": "\"Show Solution\" (해답 보기) 버튼 활성화"
         },
         {
           "label": "\"Check\" (확인) 버튼 활성화"

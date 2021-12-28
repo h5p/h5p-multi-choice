@@ -82,6 +82,10 @@
           "default": "بررسی"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "برچسب دکمه نمایش پاسخ صحیح",
           "default": "نمایش پاسخ صحیح"
         },

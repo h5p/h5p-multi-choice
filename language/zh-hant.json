@@ -82,6 +82,10 @@
           "default": "核對答案"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "顯示正解按鈕文字",
           "default": "顯示正解"
         },

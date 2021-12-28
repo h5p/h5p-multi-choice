@@ -82,6 +82,10 @@
           "default": "Провери"
         },
         {
+          "label": "Submit answer button label",
+          "default": "Submit"
+        },
+        {
           "label": "Ознака за дугме Прикажи решења",
           "default": "Прикажи решења"
         },
