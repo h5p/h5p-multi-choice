@@ -48,7 +48,7 @@
       }
     },
     {
-      "label": "Retroalimentación global",
+      "label": "Retroalimentación Global",
       "fields": [
         {
           "widgets": [
@@ -62,7 +62,7 @@
           "field": {
             "fields": [
               {
-                "label": "Rango de Puntaje"
+                "label": "Rango del Puntaje"
               },
               {},
               {
@@ -82,7 +82,7 @@
           "default": "Comprobar"
         },
         {
-          "label": "Submit answer button label",
+          "label": "Etiqueta para botón enviar respuesta",
           "default": "Submit"
         },
         {
