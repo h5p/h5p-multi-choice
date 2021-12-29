@@ -5,7 +5,7 @@
       "fields": [
         {
           "label": "Typ",
-          "description": "Volitelná média k zobrazení nad otázkou."
+          "description": "Volitelná média zobrazená nad otázkou."
         },
         {
           "label": "Zakázat zvětšení obrazu"
