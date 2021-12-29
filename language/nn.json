@@ -57,7 +57,7 @@
             }
           ],
           "label": "Define custom feedback for any score range",
-          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "description": "Klikk på \"Legg til poengområde\"-knappen for å leggje til dei områda du behøver. Døme: 0–49 % Låg poengsum, 50–79 % Middels poengsum, 80–100 % Høg poengsum!",
           "entity": "range",
           "field": {
             "fields": [
