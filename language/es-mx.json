@@ -48,7 +48,7 @@
       }
     },
     {
-      "label": "Retroalimentación global",
+      "label": "Retroalimentación Global",
       "fields": [
         {
           "widgets": [
@@ -82,7 +82,7 @@
           "default": "Comprobar"
         },
         {
-          "label": "Submit answer button label",
+          "label": "Etiqueta para botón enviar respuesta",
           "default": "Submit"
         },
         {

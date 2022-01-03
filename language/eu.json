@@ -86,8 +86,8 @@
           "default": "Submit"
         },
         {
-          "label": "Erakutsi soluzioa botoiaren etiketa",
-          "default": "Erakutsi soluzioa"
+          "label": "Erakutsi emaitza botoiaren etiketa",
+          "default": "Erakutsi emaitza"
         },
         {
           "label": "Saiatu berriro botoiaren etiketa",
@@ -148,7 +148,7 @@
           "default": "Erakutsi erantzun zuzena. Zereginaren erantzun zuzena markatuko da."
         },
         {
-          "label": "\"Berriz saiatu\" botoiaren laguntza-teknologientzako etiketa",
+          "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako etiketa",
           "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
         }
       ]
