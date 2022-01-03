@@ -82,8 +82,8 @@
           "default": "Έλεγχος"
         },
         {
-          "label": "Submit answer button label",
-          "default": "Submit"
+          "label": "Ετικέτα κουμπιού υποβολής απάντησης",
+          "default": "Υποβολή"
         },
         {
           "label": "Ετικέτα κουμπιού εμφάνισης λύσης",
