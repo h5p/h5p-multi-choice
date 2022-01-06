@@ -683,14 +683,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     // Try Again button
     self.addButton('try-again', params.UI.tryAgainButton, function () {
-      self.showButton('check-answer');
-      self.hideButton('try-again');
-      self.hideButton('show-solution');
-      self.hideSolutions();
-      removeSelections();
-      enableInput();
-      $myDom.find('.h5p-feedback-available').remove();
-      self.answered = false;
+      self.resetTask();
+
       if (params.behaviour.randomAnswers) {
         // reshuffle answers
        var oldIdMap = idMap;
