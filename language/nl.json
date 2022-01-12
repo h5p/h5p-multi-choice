@@ -82,7 +82,7 @@
           "default": "Controleer"
         },
         {
-          "label": "Submit answer button label",
+          "label": "Label van \"Antwoord verzenden\"-knop",
           "default": "Submit"
         },
         {
