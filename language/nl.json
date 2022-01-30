@@ -83,7 +83,7 @@
         },
         {
           "label": "Submit answer button label",
-          "default": "Controleer"
+          "default": "Submit"
         },
         {
           "label": "Label voor \"Toon oplossing\"-knop",
