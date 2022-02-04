@@ -17,15 +17,15 @@
     },
     {
       "label": "Tilgjengelige valg",
-      "entity": "verdi",
+      "entity": "option",
       "field": {
-        "label": "Svaralternativ",
+        "label": "Option",
         "fields": [
           {
             "label": "Tekst"
           },
           {
-            "label": "Riktig"
+            "label": "Correct"
           },
           {
             "label": "Tips",
