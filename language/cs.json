@@ -66,8 +66,8 @@
               },
               {},
               {
-                "label": "Zpětná vazba pro definovaný rozsah skóre",
-                "placeholder": "Vyplňte ve zpětné vazbě"
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
               }
             ]
           }
