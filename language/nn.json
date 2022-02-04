@@ -13,19 +13,19 @@
       ]
     },
     {
-      "label": "Spørsmål"
+      "label": "Question"
     },
     {
-      "label": "Svaralternativ",
-      "entity": "verdi",
+      "label": "Available options",
+      "entity": "option",
       "field": {
-        "label": "Svaralternativ",
+        "label": "Option",
         "fields": [
           {
             "label": "Tekst"
           },
           {
-            "label": "Riktig"
+            "label": "Correct"
           },
           {
             "label": "Tips",
