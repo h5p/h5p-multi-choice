@@ -82,8 +82,8 @@
           "default": "정답 확인"
         },
         {
-          "label": "Submit answer button label",
-          "default": "Submit"
+          "label": "답 제출하기 버튼 라벨",
+          "default": "답 제출하기"
         },
         {
           "label": "해답 보기 버튼 라벨",
