@@ -89,14 +89,19 @@
   background-color: #ececec;
 }
 
+.h5p-multichoice .h5p-answer:not([aria-disabled="true"]):focus .h5p-alternative-container {
+  outline-style: inset;
+  outline-width: 2px;
+}
 .h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container {
   color: #1a4473;
   background: #cee0f4;
-  box-shadow: 0 0.1em 0 #b1c5e0;
+  border: 2px solid #388EFF;
+  box-shadow: none;
 }
 .h5p-multichoice .h5p-answer[aria-checked="true"]:not(.h5p-wrong):not(.h5p-correct):not([aria-disabled="true"]):hover .h5p-alternative-container {
   background-color: #e6effc;
-  box-shadow: 0 0.1em 0 #b1c5e0;
+  box-shadow: none;
 }
 
 .h5p-multichoice .h5p-answer.h5p-correct .h5p-alternative-container,
