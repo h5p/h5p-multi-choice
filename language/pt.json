@@ -1,14 +1,14 @@
 {
   "semantics": [
     {
-      "label": "Média",
+      "label": "Multimédia",
       "fields": [
         {
           "label": "Tipo",
-          "description": "Conteúdo multimédia opcional para mostrar acima da questão."
+          "description": "Conteúdo multimédia opcional para mostrar acima da pergunta."
         },
         {
-          "label": "Desativar ampliação de imagem para a imagem associada à questão"
+          "label": "Desativar zoom da imagem"
         }
       ]
     },
@@ -48,25 +48,25 @@
       }
     },
     {
-      "label": "Feedback Geral",
+      "label": "Feedback global",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Por defeito"
+              "label": "Padrão"
             }
           ],
-          "label": "Defina feedback personalizado para cada intervalo de pontuação",
-          "description": "Clique em \"Adicionar intervalo\" e adicione quantos intervalos forem necessários. Exemplo: 0-20% Mau, 21-91% Mediano, 91-100% Excelente!",
-          "entity": "intervalo",
+          "label": "Defina o feedback personalizado para qualquer faixa de pontuação",
+          "description": "Clique em \"Adicionar faixa\" e adicione quantas faixas forem necessárias. Exemplo: 0-20% Insuficiente, 21-91% Suficiente, 91-100% Excelente!",
+          "entity": "faixa",
           "field": {
             "fields": [
               {
-                "label": "Intervalo de Pontuação"
+                "label": "Faixa de pontuação"
               },
               {},
               {
-                "label": "Feedback para o intervalo de pontuação definido",
+                "label": "Feedback para determinada faixa de pontuação",
                 "placeholder": "Preencha o feedback"
               }
             ]
@@ -91,7 +91,7 @@
         },
         {
           "label": "Etiqueta do botão de tentar de novo",
-          "default": "Tentar de novo"
+          "default": "Repetir"
         },
         {
           "label": "Etiqueta da dica",
@@ -100,7 +100,7 @@
         {
           "label": "Representação textual da barra de pontuação para aqueles que usam um leitor de ecrã",
           "description": "As variáveis disponíveis são :num e :total",
-          "default": "Obteve :num num máximo de :total pontos"
+          "default": "Obteve :num de :total pontos"
         },
         {
           "label": "Dica disponível (não mostrado)",
@@ -149,12 +149,12 @@
         },
         {
           "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "default": "Repetir a atividade. Apagar todas as respostas e reiniciar a atividade."
         }
       ]
     },
     {
-      "label": "Configurações do comportamento",
+      "label": "Configurações gerais",
       "description": "Estas opções permitem controlar o comportamento da tarefa.",
       "fields": [
         {
@@ -216,19 +216,19 @@
       "label": "Caixa de diálogo da confirmação de verificar",
       "fields": [
         {
-          "label": "Texto de cabeçalho",
+          "label": "Texto do cabeçalho",
           "default": "Terminar ?"
         },
         {
-          "label": "Texto de corpo",
-          "default": "Tem a certeza de que pretende terminar ?"
+          "label": "Texto do corpo",
+          "default": "Tem a certeza de que pretende terminar?"
         },
         {
-          "label": "Etiqueta do botão de cancelar",
+          "label": "Etiqueta do botão Cancelar",
           "default": "Cancelar"
         },
         {
-          "label": "Etiqueta do botão de confirmar",
+          "label": "Etiqueta do botão Confirmar",
           "default": "Terminar"
         }
       ]
@@ -238,7 +238,7 @@
       "fields": [
         {
           "label": "Texto de cabeçalho",
-          "default": "Tentar de novo ?"
+          "default": "Tentar novamente?"
         },
         {
           "label": "Texto de corpo",

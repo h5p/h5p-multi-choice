@@ -5,7 +5,7 @@
       "fields": [
         {
           "label": "Mota",
-          "description": "Aukerazko multimedia galderaren aurretik erakusteko."
+          "description": "Galderaren gainean bistaratzeko aukerako multimedia."
         },
         {
           "label": "Desgaitu irudien zooma"
@@ -82,7 +82,7 @@
           "default": "Egiaztatu"
         },
         {
-          "label": "Submit answer button label",
+          "label": "Bidali erantzuna botoiarentzako etiketa",
           "default": "Submit"
         },
         {
@@ -99,7 +99,7 @@
         },
         {
           "label": "Puntuazio-barraren testu adierazpena irakurgailua erabiltzen dutenentzat",
-          "description": "Erabiltzen diren aldagaiak :num eta :total",
+          "description": "Eskuragarri dauden aldagaiak :num eta :total",
           "default": ":total puntutik :num puntu lortu duzu"
         },
         {
