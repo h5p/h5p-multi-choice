@@ -189,7 +189,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     $feedbackDialog = $('' +
     '<div class="h5p-feedback-dialog">' +
       '<div class="h5p-feedback-inner">' +
-        '<div class="h5p-feedback-text" aria-hidden="true">' + feedback + '</div>' +
+        '<div class="h5p-feedback-text" tabindex="0">' + feedback + '</div>' +
       '</div>' +
     '</div>');
 
@@ -726,27 +726,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   var insertFeedback = function ($e, feedback) {
     // Add visuals
     addFeedback($e, feedback);
-
-    // Add button for readspeakers
-    var $wrap = $('<div/>', {
-      'class': 'h5p-hidden-read h5p-feedback-available',
-      'aria-label': params.UI.feedbackAvailable + '.'
-    });
-    $('<div/>', {
-      'role': 'button',
-      'tabindex': 0,
-      'aria-label': params.UI.readFeedback + '.',
-      appendTo: $wrap,
-      on: {
-        keydown: function (e) {
-          if (e.which === 32) { // Space
-            self.read(feedback);
-            return false;
-          }
-        }
-      }
-    });
-    $wrap.appendTo($e);
   };
 
   /**
