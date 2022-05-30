@@ -174,7 +174,7 @@
               "label": "Otomatik"
             },
             {
-              "label": "Çoklu Seçim (Onay kutucukları)"
+              "label": "Çoktan Seçmeli (Onay kutuları)"
             },
             {
               "label": "Tekli Seçim (Radyo Düğmeleri)"
@@ -183,7 +183,7 @@
         },
         {
           "label": "Bütün görev için bir puan verin",
-          "description": "Birden çok doğru cevap için toplam bir puan vermek için etkinleştirin. \"Tek cevap\" kipinde böyle bir seçenek olmayacak."
+          "description": "Birden çok doğru cevap için toplam bir puan vermek iüzere etkinleştirin. \"Tek cevap\" kipinde böyle bir seçenek olmayacak."
         },
         {
           "label": "Cevapları rastgele dizin",
