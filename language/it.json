@@ -66,8 +66,8 @@
               },
               {},
               {
-                "label": "Feedback per un intervallo di punteggio definito",
-                "placeholder": "Compila il feedback"
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
               }
             ]
           }
