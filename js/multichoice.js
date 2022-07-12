@@ -495,7 +495,11 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           html: params.UI.shouldNotCheck + '.'
         }));
       }
-    }).find('.h5p-question-plus-one, .h5p-question-minus-one').remove();
+      // Remove score points +1 and -1 depending on settings (needed for use in question sets)
+      if (params.behaviour.showScorePoints === false) {
+        this.find(".h5p-question-plus-one, .h5p-question-minus-one").remove();
+      }
+    });
 
     // Make sure input is disabled in solution mode
     disableInput();
