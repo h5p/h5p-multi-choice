@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Medio",
+      "label": "Medios",
       "fields": [
         {
           "label": "Tipo",
-          "description": "Medio opcional a mostrar arriba de la pregunta."
+          "description": "Medios opcionales mostrados encima de la pregunta."
         },
         {
           "label": "Deshabilitar acercamiento de imagen"

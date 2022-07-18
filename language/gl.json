@@ -5,10 +5,10 @@
       "fields": [
         {
           "label": "Tipo",
-          "description": "Medios opcionais amosados enriba da pregunta."
+          "description": "Medios adicionais amosados enriba da pregunta."
         },
         {
-          "label": "Desactivar zoom de imaxes"
+          "label": "Desactivar zoom da imaxe"
         }
       ]
     },
@@ -48,7 +48,7 @@
       }
     },
     {
-      "label": "Retroalimentación Xeral",
+      "label": "Retroalimentación xeral",
       "fields": [
         {
           "widgets": [
@@ -56,18 +56,18 @@
               "label": "Por defecto"
             }
           ],
-          "label": "Definir retroalimentación personalizada para calquera rango de puntuación",
+          "label": "Define a retroalimentación por defecto para calquera rango de puntuación",
           "description": "Preme o botón \"Engadir rango\" para engadir tantos rangos como precises. Exemplo: 0-20% Mala Puntuación, 21-91% Puntuación Media, 91-100% Puntuación Xenial!",
           "entity": "rango",
           "field": {
             "fields": [
               {
-                "label": "Rango de puntuación"
+                "label": "Rango de Puntuación"
               },
               {},
               {
-                "label": "Retroalimentación para o rango de puntuación definido",
-                "placeholder": "Escribe a túa retroalimentación"
+                "label": "Retroalimentación para rango de puntuación definido",
+                "placeholder": "Escribe a retroalimentación"
               }
             ]
           }
@@ -193,10 +193,10 @@
           "label": "Requirir unha resposta antes de poder ver a solución"
         },
         {
-          "label": "Amosar diálogo de confirmación ao permer en \"Comprobar\""
+          "label": "Amosar diálogo de confirmación ao premer en \"Comprobar\""
         },
         {
-          "label": "Amosar diálogo de confirmación ao permer en \"Reintentar\""
+          "label": "Amosar diálogo de confirmación ao premer en \"Reintentar\""
         },
         {
           "label": "Comprobar respostas automaticamente",

@@ -57,7 +57,7 @@
             }
           ],
           "label": "Definujte vlastní zpětnou vazbu pro jakýkoli rozsah skóre",
-          "description": "Klikněte na tlačítko \"Přidat rozsah\" pro přidání tolika rozsahů, kolik potřebujete. Například: 0-20% špatný výsledek, 21-91% průměrný výsledek, 91-100% výborný výsledek!",
+          "description": "Klepnutím na tlačítko \"Přidat rozsah\" přidáte libovolný počet rozsahů. Příklad: 0-20% špatné skóre, 21-91% průměrné skóre, 91-100% výborné skóre!",
           "entity": "rozsah",
           "field": {
             "fields": [
@@ -66,8 +66,8 @@
               },
               {},
               {
-                "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "label": "Zpětná vazba pro definovaný rozsah skóre",
+                "placeholder": "Vyplňte zpětnou vazbu"
               }
             ]
           }
@@ -82,7 +82,7 @@
           "default": "Zkontroluj"
         },
         {
-          "label": "Submit answer button label",
+          "label": "Popisek tlačítka Odeslat odpověď",
           "default": "Submit"
         },
         {
@@ -149,7 +149,7 @@
         },
         {
           "label": "Popisek podpůrné technologie pro tlačítko „Opakovat“",
-          "default": "Zopakovat úkol. Resetovat všechny odpovědi a spustit úlohu znovu."
+          "default": "Opakovat úkol. Resetovat všechny odpovědi a spustit úlohu znovu."
         }
       ]
     },
@@ -187,7 +187,7 @@
         },
         {
           "label": "Náhodné odpovědi",
-          "description": "Umožní randomizovat pořadí odpovědí na displeji."
+          "description": "Povolit náhodný výběr pořadí zobrazovaných otázek."
         },
         {
           "label": "Před zobrazením řešení je třeba odpovědět"
