@@ -66,8 +66,8 @@
               },
               {},
               {
-                "label": "定義した得点範囲に対するフィードバック",
-                "placeholder": "フィードバックを記入"
+                "label": "Feedback for defined score range",
+                "placeholder": "Fill in the feedback"
               }
             ]
           }

@@ -8,7 +8,7 @@
           "description": "Medios opcionais amosados enriba da pregunta."
         },
         {
-          "label": "Desactivar zoom da imaxe"
+          "label": "Desactivar zoom de imaxes"
         }
       ]
     },
@@ -56,18 +56,18 @@
               "label": "Por defecto"
             }
           ],
-          "label": "Define a retroalimentación personalizada para calquera rango de puntuación",
-          "description": "Preme o botón \"Engadir rango\" para engadir os rangos que precises. Por exemplo: 0-20% Puntuación Mala, 21-91% Puntuación Media, 91-100% Puntuación Xenial!",
+          "label": "Definir retroalimentación personalizada para calquera rango de puntuación",
+          "description": "Preme o botón \"Engadir rango\" para engadir tantos rangos como precises. Exemplo: 0-20% Mala Puntuación, 21-91% Puntuación Media, 91-100% Puntuación Xenial!",
           "entity": "rango",
           "field": {
             "fields": [
               {
-                "label": "Rango de Puntuación"
+                "label": "Rango de puntuación"
               },
               {},
               {
                 "label": "Retroalimentación para o rango de puntuación definido",
-                "placeholder": "Escribe a retroalimentación"
+                "placeholder": "Escribe a túa retroalimentación"
               }
             ]
           }
@@ -82,7 +82,7 @@
           "default": "Comprobar"
         },
         {
-          "label": "Submit answer button label",
+          "label": "Etiqueta para o botón enviar resposta",
           "default": "Submit"
         },
         {
@@ -154,11 +154,11 @@
       ]
     },
     {
-      "label": "Configuración do comportamento",
+      "label": "Configuración de comportamento",
       "description": "Estas opcións permiten controlar o comportamento da tarefa.",
       "fields": [
         {
-          "label": "Activar o botón \"Reintentar\""
+          "label": "Activar botón \"Reintentar\""
         },
         {
           "label": "Activar o botón \"Amosar Solución\""

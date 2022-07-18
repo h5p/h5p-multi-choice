@@ -83,11 +83,11 @@
         },
         {
           "label": "Submit answer button label",
-          "default": "Submit"
+          "default": "Send besvarelse"
         },
         {
           "label": "Tekst på knap til via af svar",
-          "default": "Vis svar"
+          "default": "Vis løsning"
         },
         {
           "label": "Tekst på knap til gentagelse af svar",
@@ -95,16 +95,16 @@
         },
         {
           "label": "Tekst på knap til tip",
-          "default": "Vis tip"
+          "default": "Vis ledetråd"
         },
         {
           "label": "Textual representation of the score bar for those using a readspeaker",
-          "description": "Available variables are :num and :total",
+          "description": "Du fik :num ud af :total point",
           "default": "You got :num out of :total points"
         },
         {
           "label": "Tip tilgængelig (ikke vist)",
-          "default": "Tip tilgængelig",
+          "default": "Ledetråd tilgængelig",
           "description": "Hjælpetekst for readspeakers"
         },
         {
@@ -124,32 +124,32 @@
         },
         {
           "label": "Rigtigt Answer (ikke vist)",
-          "default": "Rigtigt answer",
+          "default": "Rigtigt svar",
           "description": "Hjælpetekst for readspeakers"
         },
         {
           "label": "Mulighed skulle have været tjekket",
-          "default": "Mulighed skulle have været tjekket"
+          "default": "Skulle have været tjekket"
         },
         {
           "label": "Mulighed skulle have været tjekket",
-          "default": "Mulighed skulle have været tjekket"
+          "default": "Skulle ikke have været tjekket"
         },
         {
           "label": "Tekst for \"Svar nødvendigt\" besked",
-          "default": "Besvar venligst før 'vis svar' vælges."
+          "default": "Svar inden du kigger på løsningen"
         },
         {
           "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "default": "Tjek. Dine svar vil blive markeret som rigtigt, forkert eller ubesvaret."
         },
         {
           "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "default": "Vis løsningen. Opgaven vil blive markeret med de rigtige svar."
         },
         {
           "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "default": "Prøv igen. Fjerner alle svar og starter opgaven forfra."
         }
       ]
     },
@@ -217,19 +217,19 @@
       "fields": [
         {
           "label": "Tekst overskrift",
-          "default": "Færdig ?"
+          "default": "Afslut"
         },
         {
           "label": "Tekst afsnit",
-          "default": "Er du sikker på at du er færdig ?"
+          "default": "Er du sikker på at du vil afslutte?"
         },
         {
           "label": "Tekst knap fortryd",
-          "default": "Fortryd"
+          "default": "Annuller"
         },
         {
           "label": "Tekst knap bekræft",
-          "default": "Færdig"
+          "default": "Afslut"
         }
       ]
     },
@@ -238,19 +238,19 @@
       "fields": [
         {
           "label": "Tekst overskrift",
-          "default": "Prøv igen ?"
+          "default": "Prøv igen"
         },
         {
           "label": "Tekst afsnit",
-          "default": "Er sikker på at du vil prøve igen ?"
+          "default": "Er sikker på at du vil starte forfra?"
         },
         {
           "label": "Tekst knap fortryd",
-          "default": "Fortryd"
+          "default": "Annuller"
         },
         {
           "label": "Tekst knap bekræft",
-          "default": "Bekræft"
+          "default": "Prøv igen"
         }
       ]
     }
