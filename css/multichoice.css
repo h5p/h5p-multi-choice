@@ -154,7 +154,8 @@
   right: 2.125em;
 }
 
-.h5p-multichoice .h5p-solution-icon {
+.h5p-multichoice .h5p-solution-icon-radio,
+.h5p-multichoice .h5p-solution-icon-checkbox {
   font-family: icomoon-multichoice;
   position: absolute;
   right: 0.75em;
@@ -164,16 +165,16 @@
   height: 1em;
   overflow: hidden;
 }
-.h5p-multichoice .h5p-should[role="radio"] .h5p-solution-icon:before {
+.h5p-multichoice .h5p-should .h5p-solution-icon-radio:before {
   content: "\e603";
 }
-.h5p-multichoice .h5p-should-not[role="radio"] .h5p-solution-icon:before {
+.h5p-multichoice .h5p-should-not .h5p-solution-icon-radio:before {
   content: "\e600";
 }
-.h5p-multichoice .h5p-should[role="checkbox"] .h5p-solution-icon:before {
+.h5p-multichoice .h5p-should .h5p-solution-icon-checkbox:before {
   content: "\e601";
 }
-.h5p-multichoice .h5p-should-not[role="checkbox"] .h5p-solution-icon:before {
+.h5p-multichoice .h5p-should-not .h5p-solution-icon-checkbox:before {
   content: "\e602";
 }
 
