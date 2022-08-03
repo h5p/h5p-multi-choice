@@ -189,7 +189,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     $feedbackDialog = $('' +
     '<div class="h5p-feedback-dialog">' +
       '<div class="h5p-feedback-inner">' +
-        '<div class="h5p-feedback-text" tabindex="0">' + feedback + '</div>' +
+        '<div class="h5p-feedback-text">' + feedback + '</div>' +
       '</div>' +
     '</div>');
 
@@ -483,15 +483,17 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     $myDom.find('.h5p-answer').each(function (i, e) {
       var $e = $(e);
       var a = params.answers[i];
+      const className = 'h5p-solution-icon-' + (params.behaviour.singleAnswer ? 'radio' : 'checkbox');
+
       if (a.correct) {
         $e.addClass('h5p-should').append($('<span/>', {
-          'class': 'h5p-solution-icon',
+          'class': className,
           html: params.UI.shouldCheck + '.'
         }));
       }
       else {
         $e.addClass('h5p-should-not').append($('<span/>', {
-          'class': 'h5p-solution-icon',
+          'class': className,
           html: params.UI.shouldNotCheck + '.'
         }));
       }
@@ -538,7 +540,13 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       .removeClass('h5p-should')
       .removeClass('h5p-should-not')
       .removeClass('h5p-has-feedback')
-      .find('.h5p-question-plus-one, .h5p-question-minus-one, .h5p-answer-icon, .h5p-solution-icon, .h5p-feedback-dialog').remove();
+      .find('.h5p-question-plus-one, ' + 
+        '.h5p-question-minus-one, ' + 
+        '.h5p-answer-icon, ' +
+        '.h5p-solution-icon-radio, ' +
+        '.h5p-solution-icon-checkbox, ' +
+        '.h5p-feedback-dialog')
+        .remove();
   };
 
   /**
@@ -617,15 +625,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   /**
-   * Determine if any of the radios or checkboxes have been checked.
-   *
-   * @return {boolean}
-   */
-  var isAnswerSelected = function () {
-    return !!$('.h5p-answer[aria-checked="true"]', $myDom).length;
-  };
-
-  /**
    * Adds the ui buttons.
    * @private
    */
@@ -648,8 +647,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     // Show solution button
     self.addButton('show-solution', params.UI.showSolutionButton, function () {
-
-      if (params.behaviour.showSolutionsRequiresInput && !isAnswerSelected()) {
+      if (params.behaviour.showSolutionsRequiresInput && !self.getAnswerGiven(true)) {
         // Require answer before solution can be viewed
         self.updateFeedbackContent(params.UI.noInput);
         self.read(params.UI.noInput);
@@ -721,14 +719,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   };
 
   /**
-   * @private
-   */
-  var insertFeedback = function ($e, feedback) {
-    // Add visuals
-    addFeedback($e, feedback);
-  };
-
-  /**
    * Determine which feedback text to display
    *
    * @param {number} score
@@ -788,10 +778,10 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
       if (!skipFeedback) {
         if (chosen && a.tipsAndFeedback.chosenFeedback !== undefined && a.tipsAndFeedback.chosenFeedback !== '') {
-          insertFeedback($e, a.tipsAndFeedback.chosenFeedback);
+          addFeedback($e, a.tipsAndFeedback.chosenFeedback);
         }
         else if (!chosen && a.tipsAndFeedback.notChosenFeedback !== undefined && a.tipsAndFeedback.notChosenFeedback !== '') {
-          insertFeedback($e, a.tipsAndFeedback.notChosenFeedback);
+          addFeedback($e, a.tipsAndFeedback.notChosenFeedback);
         }
       }
     });
@@ -823,14 +813,23 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     $('.h5p-answer', $myDom).attr({
       'aria-disabled': 'true',
       'tabindex': '-1'
-    });
+    }).removeAttr('role')
+      .removeAttr('aria-checked');
+    
+    $('.h5p-answers').removeAttr('role');
   };
 
   /**
    * Enables new input.
    */
   var enableInput = function () {
-    $('.h5p-answer', $myDom).attr('aria-disabled', 'false');
+    $('.h5p-answer', $myDom)
+      .attr({
+        'aria-disabled': 'false',
+        'role': params.behaviour.singleAnswer ? 'radio' : 'checkbox',
+      });
+
+    $('.h5p-answers').attr('role', params.role);
   };
 
   var calcScore = function () {
