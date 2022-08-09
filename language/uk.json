@@ -1,46 +1,46 @@
 {
   "semantics": [
     {
-      "label": "Media",
+      "label": "Медіа",
       "fields": [
         {
-          "label": "Type",
-          "description": "Optional media to display above the question."
+          "label": "Тип",
+          "description": "Необов'язкове медіа для відображення над запитанням."
         },
         {
-          "label": "Disable image zooming"
+          "label": "Вимкнути масштабування зображення"
         }
       ]
     },
     {
-      "label": "Question"
+      "label": "Питання"
     },
     {
-      "label": "Available options",
-      "entity": "option",
+      "label": "Доступні параметри",
+      "entity": "параметр",
       "field": {
-        "label": "Option",
+        "label": "параметр",
         "fields": [
           {
-            "label": "Text"
+            "label": "Текст"
           },
           {
-            "label": "Correct"
+            "label": "Правильно"
           },
           {
-            "label": "Tips and feedback",
+            "label": "Поради та відгуки",
             "fields": [
               {
-                "label": "Tip text",
-                "description": "Hint for the user. This will appear before user checks his answer/answers."
+                "label": "Текст підказки",
+                "description": "Підказка для користувача. Вона з'явиться перед тим, як користувач перевірить свою відповідь/відповіді."
               },
               {
-                "label": "Message displayed if answer is selected",
-                "description": "Message will appear below the answer on \"check\" if this answer is selected."
+                "label": "Повідомлення відображається, якщо вибрано відповідь",
+                "description": "Повідомлення з'явиться під відповіддю при перевірці, якщо ця відповідь вибрана."
               },
               {
-                "label": "Message displayed if answer is not selected",
-                "description": "Message will appear below the answer on \"check\" if this answer is not selected."
+                "label": "Повідомлення відображається, якщо відповідь не вибрано",
+                "description": "Повідомлення з'явиться під відповіддю при перевірці, якщо ця відповідь не вибрана."
               }
             ]
           }
@@ -48,26 +48,26 @@
       }
     },
     {
-      "label": "Overall Feedback",
+      "label": "Загальний відгук",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Default"
+              "label": "За замовчуванням"
             }
           ],
-          "label": "Define custom feedback for any score range",
-          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
-          "entity": "range",
+          "label": "Визначте спеціальний відгук для будь-якого діапазону балів",
+          "description": "Натисніть кнопку \"Додати діапазон\", щоб додати стільки діапазонів, скільки вам потрібно. Приклад: 0-20% поганий бал, 21-91% середній бал, 91-100% чудовий бал!",
+          "entity": "діапазон",
           "field": {
             "fields": [
               {
-                "label": "Score Range"
+                "label": "Діапазон результатів"
               },
               {},
               {
-                "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "label": "Відгук для визначеного діапазону балів",
+                "placeholder": "Заповнити відгук"
               }
             ]
           }
@@ -75,182 +75,182 @@
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "Переклад інтерфейсу користувача для кількох варіантів",
       "fields": [
         {
-          "label": "Check answer button label",
-          "default": "Check"
+          "label": "Перевірити мітку кнопки відповіді",
+          "default": "Перевірка"
         },
         {
-          "label": "Submit answer button label",
-          "default": "Submit"
+          "label": "Надіслати мітку кнопки відповіді",
+          "default": "Надіслати"
         },
         {
-          "label": "Show solution button label",
-          "default": "Show solution"
+          "label": "Показати мітку кнопки рішщення",
+          "default": "Показати рішення"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Мітка кнопки повтору",
+          "default": "Повторити"
         },
         {
-          "label": "Tip label",
-          "default": "Show tip"
+          "label": "Мітка підказки",
+          "default": "Показати підказку"
         },
         {
-          "label": "Textual representation of the score bar for those using a readspeaker",
-          "description": "Available variables are :num and :total",
-          "default": "You got :num out of :total points"
+          "label": "Текстове представлення панелі результатів для тих, хто користується динаміком",
+          "description": "Доступні змінні :num і :total",
+          "default": "Ви отримали :num із :total балів"
         },
         {
-          "label": "Tip Available (not displayed)",
-          "default": "Tip available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Порада доступна (не відображається)",
+          "default": "Доступна підказка",
+          "description": "Текст доступності, який використовується для читачів"
         },
         {
-          "label": "Feedback Available (not displayed)",
-          "default": "Feedback available",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Відгук доступний (не відображається)",
+          "default": "Зворотній зв'язок доступний",
+          "description": "Текст доступності, який використовується для читачів"
         },
         {
-          "label": "Read Feedback (not displayed)",
-          "default": "Read feedback",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Прочитати відгук (не відображається)",
+          "default": "Прочитати відгук",
+          "description": "Текст доступності, який використовується для читачів"
         },
         {
-          "label": "Wrong Answer (not displayed)",
-          "default": "Wrong answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Неправильна відповідь (не відображається)",
+          "default": "Неправильна відповідь",
+          "description": "Текст доступності, який використовується для читачів"
         },
         {
-          "label": "Correct Answer (not displayed)",
-          "default": "Correct answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Правильна відповідь (не відображається)",
+          "default": "Правильна відповідь",
+          "description": "Текст доступності, який використовується для читачів"
         },
         {
-          "label": "Option should have been checked",
-          "default": "Should have been checked"
+          "label": "Опція повинна бути позначена",
+          "default": "Треба було перевірити"
         },
         {
-          "label": "Option should not have been checked",
-          "default": "Should not have been checked"
+          "label": "Опція не повинна бути позначена",
+          "default": "Не слід було перевіряти"
         },
         {
-          "label": "Text for \"Requires answer\" message",
-          "default": "Please answer before viewing the solution"
+          "label": "Текст для повідомлення \"Потрібна відповідь\"",
+          "default": "Будь ласка, дайте відповідь перед переглядом рішення"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Опис допоміжної технології для кнопки \"Перевірити\"",
+          "default": "Перевірте відповіді. Відповіді будуть позначені як правильні, неправильні або без відповіді."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "Опис допоміжної технології для кнопки \"Показати рішення\"",
+          "default": "Показати рішення. Завдання буде позначено правильним рішенням."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Опис допоміжної технології для кнопки \"Повторити\"",
+          "default": "Повторити завдання. Скинути всі відповіді та почати завдання знову."
         }
       ]
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "Параметри поведінки",
+      "description": "Ці параметри дозволять вам контролювати, як поводиться завдання.",
       "fields": [
         {
-          "label": "Enable \"Retry\" button"
+          "label": "Увімкнути кнопку \"Повторити\""
         },
         {
-          "label": "Enable \"Show Solution\" button"
+          "label": "Увімкнути кнопку \"Показати рішення\""
         },
         {
-          "label": "Enable \"Check\" button"
+          "label": "Увімкнути кнопку \"Перевірити\""
         },
         {
-          "label": "Question Type",
-          "description": "Select the look and behaviour of the question.",
+          "label": "Тип запитання",
+          "description": "Виберіть вигляд і поведінку запитання.",
           "options": [
             {
-              "label": "Automatic"
+              "label": "Автоматично"
             },
             {
-              "label": "Multiple Choice (Checkboxes)"
+              "label": "Багато варіантів (чекбокси)"
             },
             {
-              "label": "Single Choice (Radio Buttons)"
+              "label": "Єдиний вибір (радіокнопки)"
             }
           ]
         },
         {
-          "label": "Give one point for the whole task",
-          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label": "Дайте один бал за все завдання",
+          "description": "Увімкніть нарахування одного бала за кілька правильних відповідей. Ця опція недоступна в режимі \"Одна відповідь\"."
         },
         {
-          "label": "Randomize answers",
-          "description": "Enable to randomize the order of the answers on display."
+          "label": "Рандомізуйте відповіді",
+          "description": "Увімкнути випадковий порядок відповідей на екрані."
         },
         {
-          "label": "Require answer before the solution can be viewed"
+          "label": "Вимагати відповіді, перш ніж можна буде переглянути рішення"
         },
         {
-          "label": "Show confirmation dialog on \"Check\""
+          "label": "Показати діалогове вікно підтвердження \"Перевірити\""
         },
         {
-          "label": "Show confirmation dialog on \"Retry\""
+          "label": "Показати діалогове вікно підтвердження \"Повторити\""
         },
         {
-          "label": "Automatically check answers",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label": "Автоматично перевіряти відповіді",
+          "description": "Увімкнення цієї опції погіршить доступність. Переконайтеся, що ви знаєте, що робите."
         },
         {
-          "label": "Pass percentage",
-          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label": "Відсоток проходження",
+          "description": "Цей параметр часто не матиме жодного ефекту. Це відсоток від загальної кількості балів, необхідний для отримання 1 бала, коли ввімкнено один бал для всього завдання, і для отримання result.success в операторах xAPI."
         },
         {
-          "label": "Show score points",
-          "description": "Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
+          "label": "Показати бали",
+          "description": "Показати бали, отримані за кожну відповідь. Ця опція не буде доступна в режимі \"Одна відповідь\" або якщо ввімкнено опцію \"Надати один бал за все завдання\"."
         }
       ]
     },
     {
-      "label": "Check confirmation dialog",
+      "label": "Діалогове вікно підтвердження перевірки",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Finish ?"
+          "label": "Текст заголовка",
+          "default": "Завершити?"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to finish ?"
+          "label": "Основний текст",
+          "default": "Ви впевнені, що бажаєте завершити?"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Скасувати мітку кнопки",
+          "default": "Скасувати"
         },
         {
-          "label": "Confirm button label",
-          "default": "Finish"
+          "label": "Підтвердити мітку кнопки",
+          "default": "Готово"
         }
       ]
     },
     {
-      "label": "Retry confirmation dialog",
+      "label": "Повторне діалогове вікно підтвердження",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Retry ?"
+          "label": "Текст заголовка",
+          "default": "Повторити?"
         },
         {
-          "label": "Body text",
-          "default": "Are you sure you wish to retry ?"
+          "label": "Основний текст",
+          "default": "Ви впевнені, що бажаєте повторити спробу?"
         },
         {
-          "label": "Cancel button label",
-          "default": "Cancel"
+          "label": "Скасувати мітку кнопки",
+          "default": "Скасувати"
         },
         {
-          "label": "Confirm button label",
-          "default": "Confirm"
+          "label": "Підтвердити мітку кнопки",
+          "default": "Підтвердити"
         }
       ]
     }
