@@ -837,7 +837,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
   var calcScore = function () {
     score = 0;
-    for (const answer of params.userAnswers) {
+    for (let answer of params.userAnswers) {
       const choice = params.answers[answer];
       const weight = (choice.weight !== undefined ? choice.weight : 1);
       if (choice.correct) {
