@@ -83,7 +83,7 @@
         },
         {
           "label": "Beschriftung des \"Absenden\"-Buttons",
-          "default": "Submit"
+          "default": "Absenden"
         },
         {
           "label": "Beschriftung des \"Lösung anzeigen\"-Buttons",
