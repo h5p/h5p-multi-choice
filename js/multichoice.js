@@ -502,9 +502,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Make sure input is disabled in solution mode
     disableInput();
 
-    // Move focus back to the first correct alternative so that the user becomes
+    // Move focus back to the first alternative so that the user becomes
     // aware that the solution is being shown.
-    $myDom.find('.h5p-answer.h5p-should').first().focus();
+    $myDom.find('.h5p-answer:first-child').focus();
 
     //Hide buttons and retry depending on settings.
     self.hideButton('check-answer');
@@ -540,8 +540,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       .removeClass('h5p-should')
       .removeClass('h5p-should-not')
       .removeClass('h5p-has-feedback')
-      .find('.h5p-question-plus-one, ' + 
-        '.h5p-question-minus-one, ' + 
+      .find('.h5p-question-plus-one, ' +
+        '.h5p-question-minus-one, ' +
         '.h5p-answer-icon, ' +
         '.h5p-solution-icon-radio, ' +
         '.h5p-solution-icon-checkbox, ' +
@@ -661,12 +661,13 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       'aria-label': params.UI.a11yShowSolution,
     });
 
-    // Check solution button
+    // Check button
     if (params.behaviour.enableCheckButton && (!params.behaviour.autoCheck || !params.behaviour.singleAnswer)) {
       self.addButton('check-answer', params.UI.checkAnswerButton,
         function () {
           self.answered = true;
           checkAnswer();
+          $myDom.find('.h5p-answer:first-child').focus();
         },
         true,
         {
