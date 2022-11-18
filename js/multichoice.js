@@ -1,4 +1,3 @@
-/*global EJS*/
 // Will render a Question with multiple choices for answers.
 
 // Options format:
@@ -60,19 +59,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   H5P.Question.call(self, 'multichoice');
   var $ = H5P.jQuery;
 
-  // checkbox or radiobutton
-  var texttemplate =
-    '<ul class="h5p-answers" role="<%= role %>" aria-labelledby="<%= label %>">' +
-    '  <% for (var i=0; i < answers.length; i++) { %>' +
-    '    <li class="h5p-answer" role="<%= answers[i].role %>" tabindex="<%= answers[i].tabindex %>" aria-checked="<%= answers[i].checked %>" data-id="<%= i %>">' +
-    '      <div class="h5p-alternative-container">' +
-    '        <span class="h5p-alternative-inner"><%= answers[i].text %></span>' +
-    '      </div>' +
-    '      <div class="h5p-clearfix"></div>' +
-    '    </li>' +
-    '  <% } %>' +
-    '</ul>';
-
   var defaults = {
     image: null,
     question: "No question text provided",
@@ -119,7 +105,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       showScorePoints: true
     }
   };
-  var template = new EJS({text: texttemplate});
   var params = $.extend(true, defaults, options);
   // Keep track of number of correct choices
   var numCorrect = 0;
@@ -237,10 +222,28 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }
 
     // Register Introduction
-    self.setIntroduction('<div id="' + params.label + '">' + params.question + '</div>');
+    self.setIntroduction('<div id="' + params.labelId + '">' + params.question + '</div>');
 
     // Register task content area
-    $myDom = $(template.render(params));
+    $myDom = $('<ul>', {
+      'class': 'h5p-answers',
+      role: params.role,
+      'aria-labelledby': params.labelId
+    });
+
+    for (let i = 0; i < params.answers.length; i++) {
+      const answer = params.answers[i];
+      $('<li>', {
+        'class': 'h5p-answer',
+        role: answer.role,
+        tabindex: answer.tabindex,
+        'aria-checked': answer.checked,
+        'data-id': i,
+        html: '<div class="h5p-alternative-container"><span class="h5p-alternative-inner">' + answer.text + '</span></div>',
+        appendTo: $myDom
+      });
+    }  
+    
     self.setContent($myDom, {
       'class': params.behaviour.singleAnswer ? 'h5p-radio' : 'h5p-check'
     });
@@ -502,9 +505,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Make sure input is disabled in solution mode
     disableInput();
 
-    // Move focus back to the first correct alternative so that the user becomes
+    // Move focus back to the first alternative so that the user becomes
     // aware that the solution is being shown.
-    $myDom.find('.h5p-answer.h5p-should').first().focus();
+    $myDom.find('.h5p-answer:first-child').focus();
 
     //Hide buttons and retry depending on settings.
     self.hideButton('check-answer');
@@ -540,8 +543,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       .removeClass('h5p-should')
       .removeClass('h5p-should-not')
       .removeClass('h5p-has-feedback')
-      .find('.h5p-question-plus-one, ' + 
-        '.h5p-question-minus-one, ' + 
+      .find('.h5p-question-plus-one, ' +
+        '.h5p-question-minus-one, ' +
         '.h5p-answer-icon, ' +
         '.h5p-solution-icon-radio, ' +
         '.h5p-solution-icon-checkbox, ' +
@@ -661,12 +664,13 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       'aria-label': params.UI.a11yShowSolution,
     });
 
-    // Check solution button
+    // Check button
     if (params.behaviour.enableCheckButton && (!params.behaviour.autoCheck || !params.behaviour.singleAnswer)) {
       self.addButton('check-answer', params.UI.checkAnswerButton,
         function () {
           self.answered = true;
           checkAnswer();
+          $myDom.find('.h5p-answer:first-child').focus();
         },
         true,
         {
@@ -1054,7 +1058,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
   H5P.MultiChoice.counter = (H5P.MultiChoice.counter === undefined ? 0 : H5P.MultiChoice.counter + 1);
   params.role = (params.behaviour.singleAnswer ? 'radiogroup' : 'group');
-  params.label = 'h5p-mcq' + H5P.MultiChoice.counter;
+  params.labelId = 'h5p-mcq' + H5P.MultiChoice.counter;
 
   /**
    * Pack the current state of the interactivity into a object that can be
