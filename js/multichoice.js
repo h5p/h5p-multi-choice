@@ -477,6 +477,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }
   };
 
+
   this.showAllSolutions = function () {
     if (solutionsVisible) {
       return;
@@ -1100,6 +1101,10 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   this.getTitle = function () {
     return H5P.createTitle((this.contentData && this.contentData.metadata && this.contentData.metadata.title) ? this.contentData.metadata.title : 'Multiple Choice');
   };
+
+  this.registerDomElements();
+  
+
 };
 
 H5P.MultiChoice.prototype = Object.create(H5P.Question.prototype);
