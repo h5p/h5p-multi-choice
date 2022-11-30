@@ -233,6 +233,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     for (let i = 0; i < params.answers.length; i++) {
       const answer = params.answers[i];
+      answer.text = answer.text ?? '<div></div>';
       $('<li>', {
         'class': 'h5p-answer',
         role: answer.role,
