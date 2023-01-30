@@ -86,7 +86,7 @@
           "default": "Enviar"
         },
         {
-          "label": "Texto del botón mostrar solución",
+          "label": "Etiqueta del botón de solución",
           "default": "Mostrar solución"
         },
         {
@@ -154,7 +154,7 @@
       ]
     },
     {
-      "label": "Configuración del comportamiento",
+      "label": "Configuraciones del comportamiento",
       "description": "Estas opciones te permitirán controlar cómo se comporta la tarea.",
       "fields": [
         {
