@@ -524,6 +524,10 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * Shows the solution for the task and hides all buttons.
    */
   this.showSolutions = function () {
+    if (!$myDom) {
+      return; // Exercise was not yet attached
+    }
+
     removeFeedbackDialog();
     self.showCheckSolution();
     self.showAllSolutions();
@@ -572,6 +576,10 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @private
    */
   this.resetTask = function () {
+    if (!$myDom) {
+      return; // Exercise was not yet attached
+    }
+
     self.answered = false;
     self.hideSolutions();
     params.userAnswers = [];
