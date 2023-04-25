@@ -57,12 +57,12 @@
             }
           ],
           "label": "Określ własne kryteria oceny dla wybranych zakresów poprawnych odpowiedzi",
-          "description": "Przykład: 0-20% Słaby wynik, 21-91% Przeciętny wynik, 91-100% Bardzo dobry wynik!",
+          "description": "Kliknij przycisk \"Dodaj zakres\", aby dodać tyle zakresów, ile potrzebujesz. Przykład: 0-20% Słaby wynik, 21-91% Przeciętny wynik, 91-100% Bardzo dobry wynik!",
           "entity": "Zakres",
           "field": {
             "fields": [
               {
-                "label": "Zakres"
+                "label": "Zakres wyników"
               },
               {},
               {
@@ -82,8 +82,8 @@
           "default": "Sprawdź"
         },
         {
-          "label": "Submit answer button label",
-          "default": "Submit"
+          "label": "Etykieta przycisku Prześlij odpowiedź",
+          "default": "Prześlij"
         },
         {
           "label": "Etykieta przycisku Pokaż odpowiedź",
@@ -98,9 +98,9 @@
           "default": "Pokaż podpowiedź"
         },
         {
-          "label": "Textual representation of the score bar for those using a readspeaker",
-          "description": "Available variables are :num and :total",
-          "default": "You got :num out of :total points"
+          "label": "Tekstowe przedstawienie punktacji dla osób korzystających z czytnika tekstu",
+          "description": "Dostępne zmienne to :num i :total",
+          "default": "Dostajesz :num punktów z :total points"
         },
         {
           "label": "Dodatkowe wskazówki (niewyświetlane)",
@@ -140,16 +140,16 @@
           "default": "Podaj odpowiedź przed sprawdzeniem rozwiązania"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Opis technologii wspomagającej dla przycisku \"Sprawdź\"",
+          "default": "Sprawdź odpowiedzi. Odpowiedzi zostaną oznaczone jako poprawne, niepoprawne lub bez odpowiedzi."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "Opis technologii wspomagającej dla przycisku \"Pokaż rozwiązanie\"",
+          "default": "Pokaż rozwiązanie. Zadanie zostanie oznaczone poprawnym rozwiązaniem."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Opis technologii wspomagającej dla przycisku \"Ponów\"",
+          "default": "Ponów zadanie. Zresetuj wszystkie odpowiedzi i rozpocznij zadanie od nowa."
         }
       ]
     },
@@ -183,7 +183,7 @@
         },
         {
           "label": "Przyznaj jeden punkt za całe zadanie",
-          "description": "Przyznaj jeden punkt za wiele poprawnych odpowiedzi. Ta opcja nie będzie miała zostosowania w przypadku pytań typu \"Jedna poprawna odpowiedź\"."
+          "description": "Przyznaj jeden punkt za wiele poprawnych odpowiedzi. Ta opcja nie będzie miała zastosowania w przypadku pytań typu \"Jedna poprawna odpowiedź\"."
         },
         {
           "label": "Losowa kolejność odpowiedzi",
@@ -204,11 +204,11 @@
         },
         {
           "label": "Procent wymagany do zaliczenia",
-          "description": "Ta opcja bardzo często nie będzie miała żadnego efektu. Jest to minimalny procent poprawnych odpowiedzi wymagany, aby przyznać jeden punkt, w przypadku gdy dla danego pytania wybrana jest opcja Przyznaj jeden punkt za całe zadanie oraz w celu przekazania danych  result.success poprzez xAPI."
+          "description": "Ta opcja bardzo często nie będzie miała żadnego efektu. Jest to minimalny procent poprawnych odpowiedzi wymagany, aby przyznać jeden punkt, w przypadku gdy dla danego pytania wybrana jest opcja Przyznaj jeden punkt za całe zadanie oraz w celu przekazania danych result.success poprzez xAPI."
         },
         {
           "label": "Pokaż przyznane punkty",
-          "description": "Pokaż punkty przyznane za każdą z odpowiedzi."
+          "description": "Pokaż punkty przyznane za każdą z odpowiedzi. Nie będzie to opcja w trybie 'Pojedynczej odpowiedzi' lub gdy włączona jest opcja 'Daj jeden punkt za całe zadanie'."
         }
       ]
     },
@@ -250,7 +250,7 @@
         },
         {
           "label": "Etykieta przycisku Potwierdź",
-          "default": "Zatwierdź"
+          "default": "Potwierdź"
         }
       ]
     }

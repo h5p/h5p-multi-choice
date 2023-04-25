@@ -28,7 +28,7 @@
             "label": "Réponse correcte"
           },
           {
-            "label": "Aide et feedback",
+            "label": "Aide et retour",
             "fields": [
               {
                 "label": "Indice",
@@ -36,7 +36,7 @@
               },
               {
                 "label": "Commentaire (si cette réponse a été sélectionnée)",
-                "description": "Cette indication s'affiche sous la réponse quand l'utilisateur clique sur Vérifier."
+                "description": "Cette indication s'affiche sous la réponse quand l'utilisateur clique sur \"Vérifier\"."
               },
               {
                 "label": "Commentaire (si cette réponse n'a pas été sélectionnée)",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "label": "Feedback général",
+      "label": "Retour général",
       "fields": [
         {
           "widgets": [
@@ -56,8 +56,8 @@
               "label": "Par défaut"
             }
           ],
-          "label": "Définissez des feedbacks pour différents intervalles de scores",
-          "description": "Cliquez sur le bouton \"Ajouter Intervalle\" pour ajouter autant d'intervalles de score que vous souhaitez. Exemple: 0-20% Mauvais score, 21-91% Score moyen, 91-100% Score excellent !",
+          "label": "Définir un retour personnalisé pour chaque tranche de score",
+          "description": "Cliquez sur le bouton \"Ajouter Intervalle\" pour ajouter autant d'intervalles de score que vous souhaitez. Exemple : 0-20% Mauvais score, 21-91% Score moyen, 91-100% Score excellent !",
           "entity": "intervalle",
           "field": {
             "fields": [
@@ -66,8 +66,8 @@
               },
               {},
               {
-                "label": "Feedback pour cet intervalle de scores",
-                "placeholder": "Remplissez le feedback"
+                "label": "Retour pour cet intervalle de score",
+                "placeholder": "Entrez le texte de retour"
               }
             ]
           }
@@ -78,23 +78,23 @@
       "label": "Apparence",
       "fields": [
         {
-          "label": "Le texte qui apparaît sur le bouton Vérifier",
+          "label": "Text du bouton \"Vérifier\"",
           "default": "Vérifier"
         },
         {
-          "label": "Submit answer button label",
-          "default": "Soumettre"
+          "label": "Texte du bouton \"Envoyer\"",
+          "default": "Envoyer"
         },
         {
-          "label": "Le texte qui apparaît sur votre bouton dans le champ Afficher la solution",
+          "label": "Texte du bouton \"Afficher la solution\"",
           "default": "Afficher la solution"
         },
         {
-          "label": "Le texte qui apparaît sur votre bouton dans le champ Réessayer",
+          "label": "Texte du bouton \"Recommencer\"",
           "default": "Recommencer"
         },
         {
-          "label": "Le texte qui apparaît sur le bouton Afficher les indices",
+          "label": "Texte du bouton \"Afficher les indices\"",
           "default": "Afficher les indices"
         },
         {
@@ -105,27 +105,27 @@
         {
           "label": "Indice disponible (ne s'affiche pas)",
           "default": "Indice disponible",
-          "description": "Le texte de vocalisation du contenu utilisé par la synthèse vocale"
+          "description": "Texte d'accessibilité utilisé pour la synthèse vocale"
         },
         {
-          "label": "Feedback disponible (ne s'affiche pas)",
-          "default": "Feedback disponible",
-          "description": "Le texte de vocalisation du contenu utilisé par la synthèse vocale"
+          "label": "Retour disponible (ne s'affiche pas)",
+          "default": "Retour disponible",
+          "description": "Texte d'accessibilité utilisé pour la synthèse vocale"
         },
         {
           "label": "Lire le commentaire (ne s'affiche pas)",
           "default": "Lire le commentaire",
-          "description": "Le texte de vocalisation du contenu utilisé par la synthèse vocale"
+          "description": "Texte d'accessibilité utilisé pour la synthèse vocale"
         },
         {
           "label": "Mauvaise réponse (ne s'affiche pas)",
           "default": "Mauvaise réponse",
-          "description": "Le texte de vocalisation du contenu utilisé par la synthèse vocale"
+          "description": "Texte d'accessibilité utilisé pour la synthèse vocale"
         },
         {
           "label": "Bonne réponse (ne s'affiche pas)",
           "default": "Bonne réponse",
-          "description": "Le texte de vocalisation du contenu utilisé par la synthèse vocale"
+          "description": "Texte d'accessibilité utilisé pour la synthèse vocale"
         },
         {
           "label": "L'option aurait dû être cochée",
@@ -136,20 +136,20 @@
           "default": "Il ne fallait pas cocher ici !"
         },
         {
-          "label": "Le texte pour le message \"Réponse requise\" ",
-          "default": "Répondez s'il vous plait avant de visionner la solution."
+          "label": "Le texte pour le message \"Réponse requise\"",
+          "default": "Veuillez répondre avant de consulter la solution"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Description de la technologie d’assistance pour le bouton \"Vérifier\"",
+          "default": "Vérifiez les réponses. Les réponses seront marquées comme correctes, incorrectes ou sans réponse."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "Description de la technologie d’assistance pour le bouton \"Afficher la solution\"",
+          "default": "Montrez la solution. La tâche sera marquée avec sa solution correcte."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Description de la technologie fonctionnelle pour la touche « Réessayer »",
+          "default": "Réessayer la tâche. Réinitialiser toutes les réponses et recommencer la tâche."
         }
       ]
     },
@@ -167,17 +167,17 @@
           "label": "Activer le bouton \"Vérifier\""
         },
         {
-          "label": "Type de Question",
-          "description": "Selectionner l'apparence et le comportement de la question.",
+          "label": "Type de question",
+          "description": "Sélectionner l'apparence et le comportement de la question.",
           "options": [
             {
               "label": "Automatique"
             },
             {
-              "label": "Choix multiples (Cases à cocher)"
+              "label": "Choix multiples (cases à cocher)"
             },
             {
-              "label": "Choix unique (Bouton radio)"
+              "label": "Choix unique (bouton radio)"
             }
           ]
         },
@@ -221,7 +221,7 @@
         },
         {
           "label": "Texte du contenu",
-          "default": "Etes vous sûr de vouloir terminer ?"
+          "default": "Êtes-vous certain de vouloir terminer ?"
         },
         {
           "label": "Texte du bouton d'annulation",
@@ -234,22 +234,22 @@
       ]
     },
     {
-      "label": "Fenêtre de confirmation de recommencer",
+      "label": "Fenêtre de confirmation de nouvelle tentative",
       "fields": [
         {
           "label": "Titre",
-          "default": "Recommencer?"
+          "default": "Recommencer ?"
         },
         {
           "label": "Texte du contenu",
-          "default": "Etes vous sûr de vouloir recommencer ?"
+          "default": "Êtes-vous certain de vouloir recommencer ?"
         },
         {
-          "label": "Texte du bouton Annuler",
+          "label": "Texte du bouton d'annulation",
           "default": "Annuler"
         },
         {
-          "label": "Texte du bouton Confirmer",
+          "label": "Texte du bouton de confirmation",
           "default": "Confirmer"
         }
       ]

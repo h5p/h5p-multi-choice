@@ -83,7 +83,7 @@
         },
         {
           "label": "Etiqueta para botón enviar respuesta",
-          "default": "Submit"
+          "default": "Enviar"
         },
         {
           "label": "Texto del botón de solución",
