@@ -34,6 +34,20 @@
             }
           ]
         }
+      },
+      {
+        "label": "Expand button label",
+        "importance": "low",
+        "name": "expandImage",
+        "type": "text",
+        "default": "Epand Image"
+      },
+      {
+        "label": "Minimize button label",
+        "importance": "low",
+        "name": "minimizeImage",
+        "type": "text",
+        "default": "Minimize Image"
       }
     ]
   },
