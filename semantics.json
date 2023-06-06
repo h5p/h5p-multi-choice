@@ -40,7 +40,7 @@
         "importance": "low",
         "name": "expandImage",
         "type": "text",
-        "default": "Epand Image"
+        "default": "Expand Image",
       },
       {
         "label": "Minimize button label",
