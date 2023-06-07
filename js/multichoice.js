@@ -188,7 +188,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * Register the different parts of the task with the H5P.Question structure.
    */
   self.registerDomElements = function () {
-    console.log(params.media)
     var media = params.media;
     if (media && media.type && media.type.library) {
       media = media.type;
