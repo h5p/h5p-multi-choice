@@ -200,8 +200,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
             disableImageZooming: params.media.disableImageZooming || false,
             alt: media.params.alt,
             title: media.params.title,
-            expandImage: params.media.expandImage,
-            minimizeImage: params.media.minimizeImage
+            expandImage: media.params.expandImage,
+            minimizeImage: media.params.minimizeImage
           });
         }
       }
