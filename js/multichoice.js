@@ -198,7 +198,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           self.setImage(media.params.file.path, {
             disableImageZooming: params.media.disableImageZooming || false,
             alt: media.params.alt,
-            title: media.params.title
+            title: media.params.title,
+            expandImage: media.params.expandImage,
+            minimizeImage: media.params.minimizeImage
           });
         }
       }
