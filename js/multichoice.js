@@ -510,7 +510,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     // Move focus back to the first alternative so that the user becomes
     // aware that the solution is being shown.
-    $myDom.find('.h5p-answer:first-child').focus();
+    // $myDom.find('.h5p-answer:first-child').focus();
 
     //Hide buttons and retry depending on settings.
     self.hideButton('check-answer');
@@ -673,7 +673,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         function () {
           self.answered = true;
           checkAnswer();
-          $myDom.find('.h5p-answer:first-child').focus();
         },
         true,
         {
@@ -876,9 +875,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     else {
       $answers.first().attr('tabindex', '0');
     }
-
-    // Set focus to first option
-    $answers.first().focus();
 
     calcScore();
   };
