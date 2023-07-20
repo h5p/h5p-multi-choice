@@ -508,10 +508,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     // Make sure input is disabled in solution mode
     disableInput();
 
-    // Move focus back to the first alternative so that the user becomes
-    // aware that the solution is being shown.
-    // $myDom.find('.h5p-answer:first-child').focus();
-
     //Hide buttons and retry depending on settings.
     self.hideButton('check-answer');
     self.hideButton('show-solution');
