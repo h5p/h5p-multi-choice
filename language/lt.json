@@ -52,7 +52,7 @@
       "fields": [
         {
           "label": "Nustatykite tinkintus atsiliepimus bet kokiam balų diapazonui",
-          "entity": "intervalas",
+          "entity": "diapazonas",
           "field": {
             "fields": [
               {
@@ -60,8 +60,8 @@
               },
               {},
               {
-                "label": "Atsiliepimai apie apibrėžtą balų intervalą",
-                "placeholder": "Fill in the feedback"
+                "label": "Atsiliepimai apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
               }
             ]
           },
@@ -70,12 +70,12 @@
               "label": "Numatytasis"
             }
           ],
-          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!"
+          "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!"
         }
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "Naudotojo sąsajos vertimai kelių pasirinkimų klausimui",
       "fields": [
         {
           "default": "Tikrinti",
@@ -83,7 +83,7 @@
         },
         {
           "default": "Pateikti",
-          "label": "Submit answer button label"
+          "label": "„Pateikti atsakymą“ mygtuko pavadinimas"
         },
         {
           "default": "Rodyti sprendimą",
@@ -252,7 +252,7 @@
           "default": "Patvirtinti"
         }
       ],
-      "label": "Retry confirmation dialog"
+      "label": "„Bandyti dar kartą“ patvirtinimo langas"
     }
   ]
 }
