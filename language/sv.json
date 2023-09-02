@@ -82,7 +82,7 @@
           "default": "Svara"
         },
         {
-          "label": "Submit answer button label",
+          "label": "Text för knappen Skicka in svar",
           "default": "Submit"
         },
         {
