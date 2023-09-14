@@ -167,10 +167,48 @@
           "label": "เปิดใช้งานปุ่ม \"แสดงเคล็ดลับ\""
         },
         {
-          "label": "เปิดใช้งานปุ่ม \"ตรวจสอบคำตอบ\""
+          "label": "เปิดใช้งานปุ่ม \"ตรวจสอบคำตอบ\"",
+          "description": "Select the look and behaviour of the question.",
+          "options": [
+            {
+              "label": "Automatic"
+            },
+            {
+              "label": "Multiple Choice (Checkboxes)"
+            },
+            {
+              "label": "Single Choice (Radio Buttons)"
+            }
+          ]
         },
         {
-          "label": "เปิดใช้งานปุ่ม \"ส่งคำตอบ\""
+          "label": "เปิดใช้งานปุ่ม \"ส่งคำตอบ\"",
+          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+        },
+        {
+          "label": "Randomize answers",
+          "description": "Enable to randomize the order of the answers on display."
+        },
+        {
+          "label": "Require answer before the solution can be viewed"
+        },
+        {
+          "label": "Show confirmation dialog on \"Check\""
+        },
+        {
+          "label": "Show confirmation dialog on \"Retry\""
+        },
+        {
+          "label": "Automatically check answers",
+          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+        },
+        {
+          "label": "Pass percentage",
+          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+        },
+        {
+          "label": "Show score points",
+          "description": "Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
         }
       ]
     },
@@ -178,21 +216,46 @@
       "label": "การตั้งค่าสำหรับผู้ใช้ด้วยเอง",
       "fields": [
         {
-          "label": "สามารถกดปุ่ม \"ลองใหม่\" ได้"
+          "label": "สามารถกดปุ่ม \"ลองใหม่\" ได้",
+          "default": "Finish ?"
         },
         {
-          "label": "สามารถกดปุ่ม \"แสดงคำตอบ\" ได้"
+          "label": "สามารถกดปุ่ม \"แสดงคำตอบ\" ได้",
+          "default": "Are you sure you wish to finish ?"
         },
         {
-          "label": "สามารถกดปุ่ม \"แสดงเคล็ดลับ\" ได้"
+          "label": "สามารถกดปุ่ม \"แสดงเคล็ดลับ\" ได้",
+          "default": "Cancel"
         },
         {
-          "label": "สามารถกดปุ่ม \"ตรวจสอบคำตอบ\" ได้"
+          "label": "สามารถกดปุ่ม \"ตรวจสอบคำตอบ\" ได้",
+          "default": "Finish"
         },
         {
           "label": "สามารถกดปุ่ม \"ส่งคำตอบ\" ได้"
         }
       ]
+    },
+    {
+      "fields": [
+        {
+          "label": "Header text",
+          "default": "Retry ?"
+        },
+        {
+          "default": "Are you sure you wish to retry ?",
+          "label": "Body text"
+        },
+        {
+          "label": "Cancel button label",
+          "default": "Cancel"
+        },
+        {
+          "default": "Confirm",
+          "label": "Confirm button label"
+        }
+      ],
+      "label": "Retry confirmation dialog"
     }
   ]
 }

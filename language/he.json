@@ -99,7 +99,7 @@
         },
         {
           "label": "תצוגה מילולית של סרגל הניקוד עבור אלה המשתמשים ב\"קורא מסך\"",
-          "description": "Available variables are :num and :total",
+          "description": "משתנים זמינים הם :num וגם :total",
           "default": "התקבלו :num מתוך :total נקודות"
         },
         {
