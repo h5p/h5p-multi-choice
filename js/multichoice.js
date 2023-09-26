@@ -245,8 +245,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         html: '<div class="h5p-alternative-container"><span class="h5p-alternative-inner">' + answer.text + '</span></div>',
         appendTo: $myDom
       });
-    }  
-    
+    }
+
     self.setContent($myDom, {
       'class': params.behaviour.singleAnswer ? 'h5p-radio' : 'h5p-check'
     });
@@ -574,6 +574,11 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * @private
    */
   this.resetTask = function () {
+    for (let i = 0; i < params.answers.length; i++) {
+      if (params.answers[i].checked) {
+        delete params.answers[i].checked;
+      }
+    }
     self.answered = false;
     self.hideSolutions();
     params.userAnswers = [];
@@ -822,7 +827,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       'tabindex': '-1'
     }).removeAttr('role')
       .removeAttr('aria-checked');
-    
+
     $('.h5p-answers').removeAttr('role');
   };
 
