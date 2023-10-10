@@ -883,7 +883,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }
 
     // Set focus to first option
-    if (this.isRoot()) {
+    if (self.isRoot()) {
       $answers.first().focus();
     }
 
