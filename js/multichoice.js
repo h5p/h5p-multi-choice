@@ -572,8 +572,10 @@ H5P.MultiChoice = function (options, contentId, contentData) {
    * Resets the whole task.
    * Used in contracts with integrated content.
    * @private
+   * @param {boolean} moveFocus True to move the focus to first option
+   * This prevents loss of focus if reset from within content
    */
-  this.resetTask = function () {
+  this.resetTask = function (moveFocus = false) {
     for (let i = 0; i < params.answers.length; i++) {
       if (params.answers[i].checked) {
         delete params.answers[i].checked;
@@ -582,7 +584,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     self.answered = false;
     self.hideSolutions();
     params.userAnswers = [];
-    removeSelections();
+    removeSelections(moveFocus);
     self.showButton('check-answer');
     self.hideButton('try-again');
     self.hideButton('show-solution');
@@ -699,7 +701,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
 
     // Try Again button
     self.addButton('try-again', params.UI.tryAgainButton, function () {
-      self.resetTask();
+      self.resetTask(true);
 
       if (params.behaviour.randomAnswers) {
         // reshuffle answers
@@ -870,7 +872,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   /**
    * Removes selections from task.
    */
-  var removeSelections = function () {
+  var removeSelections = function (moveFocus) {
     var $answers = $('.h5p-answer', $myDom)
       .removeClass('h5p-selected')
       .attr('aria-checked', 'false');
@@ -883,7 +885,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }
 
     // Set focus to first option
-    if (self.isRoot()) {
+    if (moveFocus || self.isRoot()) {
       $answers.first().focus();
     }
 
