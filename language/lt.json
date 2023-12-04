@@ -52,7 +52,7 @@
       "fields": [
         {
           "label": "Nustatykite tinkintus atsiliepimus bet kokiam balų diapazonui",
-          "entity": "intervalas",
+          "entity": "diapazonas",
           "field": {
             "fields": [
               {
@@ -60,8 +60,8 @@
               },
               {},
               {
-                "label": "Atsiliepimai apie apibrėžtą balų intervalą",
-                "placeholder": "Fill in the feedback"
+                "label": "Atsiliepimai apibrėžtam balų diapazonui",
+                "placeholder": "Užpildykite atsiliepimą"
               }
             ]
           },
@@ -70,12 +70,12 @@
               "label": "Numatytasis"
             }
           ],
-          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!"
+          "description": "Spustelėkite mygtuką „Pridėti diapazoną“, kad pridėtumėte tiek diapazonų, kiek jums reikia. Pavyzdys: 0–20 % blogas balas, 21–91 % vidutinis balas, 91–100 % puikus rezultatas!"
         }
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "Naudotojo sąsajos vertimai kelių pasirinkimų klausimui",
       "fields": [
         {
           "default": "Tikrinti",
@@ -83,7 +83,7 @@
         },
         {
           "default": "Pateikti",
-          "label": "Submit answer button label"
+          "label": "„Pateikti atsakymą“ mygtuko pavadinimas"
         },
         {
           "default": "Rodyti sprendimą",
@@ -99,7 +99,7 @@
         },
         {
           "description": "Galimi kintamieji yra :num ir :total",
-          "label": "Textual representation of the score bar for those using a readspeaker",
+          "label": "Rezultatų juostos tekstinis atvaizdavimas tiems, kurie naudoja skaitytuvą",
           "default": "Gavote :num iš :total taškų"
         },
         {
@@ -120,11 +120,11 @@
         {
           "default": "Neteisingas atsakymas",
           "label": "Neteisingas atsakymas (nerodomas)",
-          "description": "Accessibility text used for readspeakers"
+          "description": "Pritaikomumo tekstas, naudojamas skaitytuvams"
         },
         {
           "label": "Teisingas atsakymas (nerodomas)",
-          "description": "Accessibility text used for readspeakers",
+          "description": "Pritaikomumo tekstas, naudojamas skaitytuvams",
           "default": "Teisingas atsakymas"
         },
         {
@@ -137,19 +137,19 @@
         },
         {
           "default": "Prieš peržiūrėdami sprendimą, atsakykite",
-          "label": "Tekstas pranešimui „Reikalingas atsakymas“."
+          "label": "Tekstas pranešimui „Reikalingas atsakymas“"
         },
         {
           "default": "Tikrinti atsakymus. Atsakymai bus pažymėti kaip teisingi, neteisingi arba neatsakyti.",
-          "label": "Assistive technology description for \"Check\" button"
+          "label": "Mygtuko „Tikrinti\" pagalbinės technologijos aprašymas"
         },
         {
           "default": "Rodyti sprendimą. Užduotis bus pažymėta teisingu jos sprendimu.",
-          "label": "Assistive technology description for \"Show Solution\" button"
+          "label": "Mygtuko „Rodyti sprendimą\" pagalbinės technologijos aprašymas"
         },
         {
           "default": "Pabandyti atlikti užduotį dar kartą. Iš naujo nustatyti visus atsakymus ir pradėti užduotį iš naujo.",
-          "label": "Assistive technology description for \"Retry\" button"
+          "label": "Mygtuko „Bandyti dar kartą“ pagalbinės technologijos aprašymas"
         }
       ]
     },
@@ -181,11 +181,11 @@
           "description": "Pasirinkite klausimo išvaizdą ir veikimą."
         },
         {
-          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode.",
+          "description": "Už kelis teisingus atsakymus galima skirti iš viso vieną tašką. Šios galimybės nebus naudojant \"vieno atsakymo\" režimą.",
           "label": "Duoti vieną balą už visą užduotį"
         },
         {
-          "description": "Enable to randomize the order of the answers on display.",
+          "description": "Įgalinti atsitiktinę rodomų atsakymų tvarką.",
           "label": "Atsitiktinai sudėlioti atsakymus"
         },
         {
@@ -199,11 +199,11 @@
         },
         {
           "label": "Automatiškai patikrinti atsakymus",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "description": "Įjungus šią parinktį nukentės pritaikomumas, todėl įsitikinkite, kad žinote, ką darote."
         },
         {
           "label": "Išlaikymo procentas",
-          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "description": "Šis nustatymas dažnai neturi jokio poveikio. Tai procentinė viso rezultato dalis, reikalinga 1 taškui gauti, kai įjungtas vienas taškas už visą užduotį, ir result.success gavimas xAPI ataskaitose."
         },
         {
           "label": "Rodyti surinktus balus",
@@ -252,7 +252,7 @@
           "default": "Patvirtinti"
         }
       ],
-      "label": "Retry confirmation dialog"
+      "label": "„Bandyti dar kartą“ patvirtinimo langas"
     }
   ]
 }
