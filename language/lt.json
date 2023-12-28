@@ -95,7 +95,7 @@
         },
         {
           "default": "Rodyti patarimą",
-          "label": "Tip label"
+          "label": "Patarimo pavadinimas"
         },
         {
           "description": "Galimi kintamieji yra :num ir :total",
@@ -207,7 +207,7 @@
         },
         {
           "label": "Rodyti surinktus balus",
-          "description": "Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
+          "description": "Rodyti už kiekvieną atsakymą gautus balus. Šios galimybės nebus \"Vieno atsakymo\" režime arba jei įjungta parinktis \"Suteikti vieną balą už visą užduotį\"."
         }
       ],
       "label": "Veikimo nustatymai"
