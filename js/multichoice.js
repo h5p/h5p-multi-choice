@@ -913,8 +913,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   var addQuestionToXAPI = function (xAPIEvent) {
     var definition = xAPIEvent.getVerifiedStatementValue(['object', 'definition']);
     definition.description = {
-      // Remove tags, must wrap in div tag because jQuery 1.9 will crash if the string isn't wrapped in a tag.
-      'en-US': $('<div>' + params.question + '</div>').text()
+      'en-US': params.question,
     };
     definition.type = 'http://adlnet.gov/expapi/activities/cmi.interaction';
     definition.interactionType = 'choice';
