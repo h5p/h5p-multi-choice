@@ -1,14 +1,14 @@
 {
   "semantics": [
     {
-      "label": "Medieelement",
+      "label": "Medium",
       "fields": [
         {
           "label": "Type",
           "description": "Valgfritt medieelement. Elementet vil bli plassert over spørsmålet."
         },
         {
-          "label": "Deaktiver zoomingfunksjon."
+          "label": "Deaktiver zoomfunksjon."
         }
       ]
     },
@@ -17,30 +17,30 @@
     },
     {
       "label": "Tilgjengelige valg",
-      "entity": "option",
+      "entity": "alternativ",
       "field": {
-        "label": "Option",
+        "label": "Alternativ",
         "fields": [
           {
             "label": "Tekst"
           },
           {
-            "label": "Correct"
+            "label": "Riktig"
           },
           {
-            "label": "Tips",
+            "label": "Tips og tilbakemelding",
             "fields": [
               {
                 "label": "Tipstekst",
-                "description": "Hint for brukeren. Dette vil vises før brukeren sjekker sine svar."
+                "description": "Hint til bruker. Hintet vises før bruker sjekker svarene sine."
               },
               {
                 "label": "Melding som vises hvis alternativet er valgt",
-                "description": "Melding som vises under svaret på \"check\" hvis svaret er valgt."
+                "description": "Meldinga vises under svaret hvis bruker velger \"Sjekk\"."
               },
               {
                 "label": "Melding som vises hvis alternativet ikke er valgt",
-                "description": "Melding som vises under svaret på \"check\" hvis andre svar er valgt."
+                "description": "Melding som vises under svaret hvis bruker har svart feil og valgt \"Sjekk\"."
               }
             ]
           }
@@ -48,17 +48,17 @@
       }
     },
     {
-      "label": "Tilbakemelding på hele oppgava",
+      "label": "Tilbakemelding på hele oppgaven",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Forhandsinnstilling"
+              "label": "Forhåndsinnstilling"
             }
           ],
-          "label": "Opprett poengområder og legg inn tilbakemeldinger.",
+          "label": "Opprett poengområder og legg inn tilbakemeldinger",
           "description": "Klikk på knappen \"Legg til poengområde\" og legg til så mange poengområder du trenger. Eksempel: 0–40 % Svakt resultat, 41–80 % Gjennomsnittlig resultat, 81–100 % Flott resultat!",
-          "entity": "Område",
+          "entity": "poengområde",
           "field": {
             "fields": [
               {
@@ -75,109 +75,109 @@
       ]
     },
     {
-      "label": "User interface translations for multichoice",
+      "label": "Oversettelser av tekst i brukergrensesnittet",
       "fields": [
         {
-          "label": "Check answer button label",
+          "label": "Navn på \"Sjekk svar\"-knapp",
           "default": "Sjekk"
         },
         {
-          "label": "Submit answer button label",
-          "default": "Submit"
+          "label": "Navn på \"Send inn\"-knapp",
+          "default": "Send inn"
         },
         {
-          "label": "Show solution button label",
+          "label": "Navn på \"Vis svar\"-knapp",
           "default": "Vis svar"
         },
         {
-          "label": "Retry button label",
+          "label": "Navn på \"Prøv igjen\"-knapp",
           "default": "Prøv igjen"
         },
         {
-          "label": "Tip label",
+          "label": "Navn på \"Tips\"-knapp",
           "default": "Vis tips"
         },
         {
-          "label": "Textual representation of the score bar for those using a readspeaker",
-          "description": "Available variables are :num and :total",
-          "default": "Du fikk :num av :total points"
+          "label": "Tekstalternativ til resultatlinja for skjermleserbrukere",
+          "description": "Tilgjengelige variabler er :num og :total.",
+          "default": "Du fikk :num av :total poeng."
         },
         {
-          "label": "Tip Available (not displayed)",
+          "label": "Tips tilgjengelig (vises ikke)",
           "default": "Tips tilgjengelig",
-          "description": "Accessibility text used for readspeakers"
+          "description": "Tekst som brukes av skjermleser"
         },
         {
-          "label": "Feedback Available (not displayed)",
+          "label": "Tilbakemelding tilgjengelig (ikke vist)",
           "default": "Tilbakemelding tilgjengelig",
-          "description": "Accessibility text used for readspeakers"
+          "description": "Tekst som brukes av skjermleser"
         },
         {
-          "label": "Read Feedback (not displayed)",
-          "default": "Read feedback",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Les tilbakemelding (ikke vist)",
+          "default": "Les tilbakemelding",
+          "description": "Tekst som brukes av skjermleser"
         },
         {
-          "label": "Wrong Answer (not displayed)",
+          "label": "Feil svar (ikke vist)",
           "default": "Feil svar",
-          "description": "Accessibility text used for readspeakers"
+          "description": "Tekst brukt av skjermleser"
         },
         {
-          "label": "Correct Answer (not displayed)",
-          "default": "Correct answer",
-          "description": "Accessibility text used for readspeakers"
+          "label": "Riktig svar (ikke vist)",
+          "default": "Riktig svar",
+          "description": "Tekst som brukes av skjermleser"
         },
         {
-          "label": "Option should have been checked",
-          "default": "Skulle ha vært krysset av"
+          "label": "Skulle vært valgt",
+          "default": "Skulle vært valgt"
         },
         {
-          "label": "Option should not have been checked",
-          "default": "Skulle ikke ha vært krysset av"
+          "label": "Skulle ikke vært valgt",
+          "default": "Skulle ikke vært valgt"
         },
         {
-          "label": "Text for \"Requires answer\" message",
-          "default": "Du må svare på denne før du kan se løsningen"
+          "label": "Tekst om at bruker må svare",
+          "default": "Du må svare før du får se løsningen"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Beskrivelse av \"Sjekk\"-knapp for assisterende teknologi",
+          "default": "Sjekk svar. Svarene blir merket som riktig, feil eller ubesvart."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "Beskrivelse av \"Vis svar\"-knapp for assisterende teknologi",
+          "default": "Vis svar. Oppgaven blir merket med riktige svar."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Beskrivelse av \"Prøv igjen\"-knapp for assisterende teknologi",
+          "default": "Prøv igjen. Alle svar blir nullstilt, og oppgaven starter på nytt."
         }
       ]
     },
     {
-      "label": "Behavioural settings",
-      "description": "These options will let you control how the task behaves.",
+      "label": "Oppgaveinnstillinger",
+      "description": "Disse valgene lar deg styre ulike funksjoner i oppgaven.",
       "fields": [
         {
-          "label": "Enable \"Retry\" button"
+          "label": "Aktiver \"Prøv igjen\"-knapp"
         },
         {
-          "label": "Enable \"Show Solution\" button"
+          "label": "Aktiver \"Vis svar\"-knapp"
         },
         {
-          "label": "Enable \"Check\" button"
+          "label": "Aktiver \"Sjekk\"-knapp"
         },
         {
-          "label": "Question Type",
-          "description": "Select the look and behaviour of the question.",
+          "label": "Oppgavetype",
+          "description": "Velg utseende og innstillinger for oppgaven",
           "options": [
             {
-              "label": "Automatic"
+              "label": "Automatisk"
             },
             {
-              "label": "Multiple Choice (Checkboxes)"
+              "label": "Multiple Choice (flere svar mulig; firkanta knapper)"
             },
             {
-              "label": "Single Choice (Radio Buttons)"
+              "label": "Single Choice (ett svar mulig; runde knapper)"
             }
           ]
         },
