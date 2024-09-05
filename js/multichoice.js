@@ -659,20 +659,26 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }
 
     // Show solution button
-    self.addButton('show-solution', params.UI.showSolutionButton, function () {
-      if (params.behaviour.showSolutionsRequiresInput && !self.getAnswerGiven(true)) {
-        // Require answer before solution can be viewed
-        self.updateFeedbackContent(params.UI.noInput);
-        self.read(params.UI.noInput);
+    self.addButton('show-solution', params.UI.showSolutionButton,
+      function () {
+        if (params.behaviour.showSolutionsRequiresInput && !self.getAnswerGiven(true)) {
+          // Require answer before solution can be viewed
+          self.updateFeedbackContent(params.UI.noInput);
+          self.read(params.UI.noInput);
+        }
+        else {
+          calcScore();
+          self.showAllSolutions();
+        }
+      },
+      false,
+      {
+        'aria-label': params.UI.a11yShowSolution,
+      },
+      {
+        classes: 'h5p-theme-primary-cta h5p-theme-show-results',
       }
-      else {
-        calcScore();
-        self.showAllSolutions();
-      }
-
-    }, false, {
-      'aria-label': params.UI.a11yShowSolution,
-    });
+    );
 
     // Check button
     if (params.behaviour.enableCheckButton && (!params.behaviour.autoCheck || !params.behaviour.singleAnswer)) {
@@ -695,6 +701,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           },
           contentData: self.contentData,
           textIfSubmitting: params.UI.submitAnswerButton,
+          classes: 'h5p-theme-primary-cta h5p-theme-check',
         }
       );
     }
@@ -728,7 +735,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         l10n: params.confirmRetry,
         instance: self,
         $parentElement: $container
-      }
+      },
+      classes: 'h5p-theme-primary-cta h5p-theme-retry',
     });
   };
 
