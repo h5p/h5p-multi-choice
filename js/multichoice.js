@@ -676,7 +676,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         'aria-label': params.UI.a11yShowSolution,
       },
       {
-        classes: 'h5p-theme-primary-cta h5p-theme-show-results',
+        classes: 'h5p-theme-secondary-cta h5p-theme-show-results',
       }
     );
 
@@ -736,7 +736,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         instance: self,
         $parentElement: $container
       },
-      classes: 'h5p-theme-primary-cta h5p-theme-retry',
+      classes: 'h5p-theme-secondary-cta h5p-theme-retry',
     });
   };
 
