@@ -56,7 +56,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   var self = this;
   this.contentId = contentId;
   this.contentData = contentData;
-  H5P.Question.call(self, 'multichoice', ' h5p-theme');
+  H5P.Question.call(self, 'multichoice', true);
   var $ = H5P.jQuery;
 
   var defaults = {
@@ -492,16 +492,18 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       const className = 'h5p-solution-icon-' + (params.behaviour.singleAnswer ? 'radio' : 'checkbox');
 
       if (a.correct) {
-        $e.addClass('h5p-should').append($('<span/>', {
-          'class': className,
-          html: params.UI.shouldCheck + '.'
-        }));
+        $e.addClass('h5p-should').find('.h5p-alternative-container')
+          .append($('<div/>', {
+            class: className,
+            ariaLabel: params.UI.shouldCheck + '.'
+          }));
       }
       else {
-        $e.addClass('h5p-should-not').append($('<span/>', {
-          'class': className,
-          html: params.UI.shouldNotCheck + '.'
-        }));
+        $e.addClass('h5p-should-not').find('.h5p-alternative-container')
+          .append($('<div/>', {
+            class: className,
+            ariaLabel: params.UI.shouldNotCheck + '.'
+          }));
       }
     }).find('.h5p-question-plus-one, .h5p-question-minus-one').remove();
 
@@ -774,17 +776,19 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         if (a.correct) {
           // May already have been applied by instant feedback
           if (!$e.hasClass('h5p-correct')) {
-            $e.addClass('h5p-correct').append($('<span/>', {
-              'class': 'h5p-answer-icon',
-              html: params.UI.correctAnswer + '.'
-            }));
+            $e.addClass('h5p-correct').find('.h5p-alternative-container')
+              .prepend($('<div/>', {
+                class: 'h5p-answer-icon',
+                ariaLabel: params.UI.correctAnswer + '.'
+              }));
           }
         }
         else {
           if (!$e.hasClass('h5p-wrong')) {
-            $e.addClass('h5p-wrong').append($('<span/>', {
-              'class': 'h5p-answer-icon',
-              html: params.UI.wrongAnswer + '.'
+            $e.addClass('h5p-wrong').find('.h5p-alternative-container')
+            .prepend($('<div/>', {
+              class: 'h5p-answer-icon',
+              ariaLabel: params.UI.wrongAnswer + '.'
             }));
           }
         }

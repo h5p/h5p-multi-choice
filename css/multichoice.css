@@ -32,32 +32,19 @@
   cursor: pointer;
 }
 
-.h5p-multichoice .h5p-answer.h5p-has-tip .h5p-alternative-container,
-.h5p-multichoice .h5p-answer.h5p-should-not .h5p-alternative-container {
-  padding-right: 2em;
-}
-
-.h5p-multichoice .h5p-answer.h5p-wrong .h5p-alternative-container,
-.h5p-multichoice .h5p-answer.h5p-correct .h5p-alternative-container {
-  padding-right: 3em;
-}
-
 .h5p-multichoice .h5p-alternative-container {
- background: var(--alternative-base); 
- padding: var(--spacing-s); 
- border-radius: var(--border-radius-medium); 
- border: 1px solid var(--alternative-base);
- border-bottom: 3px solid var(--alternative-base);
- -webkit-box-shadow: none;
- -moz-box-shadow: none;
- box-shadow: none;
- line-height: normal;
- text-indent: -2rem;
- font-weight: 600;
- position: relative;
- text-align: left;
- display: block;
- text-indent: -2em;
+  display: flex;
+  padding: var(--spacing-s); 
+  background: var(--alternative-base); 
+  border-radius: var(--border-radius-medium); 
+  border: 1px solid var(--alternative-base);
+  border-bottom: 3px solid var(--alternative-base);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-align: left;
+  line-height: normal;
+  font-weight: 600;
 }
 
 .h5p-multichoice .h5p-alternative-container:hover{
@@ -68,7 +55,6 @@
   font-family: h5p-theme;
   border: medium none;
   display: inline;
-  margin-left: var(--spacing-l);
   text-decoration: none;
   color: #494949;
 }
@@ -88,6 +74,7 @@
 .h5p-multichoice .h5p-answers .h5p-answer.h5p-correct .h5p-alternative-container:before,
 .h5p-multichoice .h5p-answers .h5p-answer.h5p-wrong .h5p-alternative-container:before {
   content: '';
+  margin-left: 0;
 }
 
 .h5p-multichoice .h5p-answer[aria-disabled="true"] {
@@ -97,10 +84,6 @@
   background-color: #ececec;
 }
 
-.h5p-multichoice .h5p-answer:not([aria-disabled="true"]):focus .h5p-alternative-container {
-  outline-style: inset;
-  outline-width: 2px;
-}
 .h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container {
   color: #1a4473;
   background: var(--alternative-dark) !important;
@@ -137,34 +120,28 @@
 
 
 .h5p-multichoice .h5p-answer-icon {
-    font-family: 'h5p-theme' !important;
-    font-size: var(--font-size-l) !important;
-    font-weight: 600 !important;
-    padding: var(--spacing-xs) var(--spacing-xs);
+  font-family: 'h5p-theme' !important;
+  font-size: var(--font-size-l) !important;
+  font-weight: 600 !important;
   text-decoration: none;
   overflow: hidden;
   display: inline-block;
 }
 .h5p-multichoice .h5p-correct .h5p-answer-icon:before {
- content: "\e903";
+  content: "\e903";
   color: var(--feedback-correct-main);
 }
 .h5p-multichoice .h5p-wrong .h5p-answer-icon:before {
   content: "\e902";
   color: var(--feedback-incorrect-main);
 }
-.h5p-multichoice .h5p-should .h5p-answer-icon,
-.h5p-multichoice .h5p-should-not .h5p-answer-icon {
-  right: 2.125em;
-}
 
 .h5p-multichoice .h5p-solution-icon-radio,
 .h5p-multichoice .h5p-solution-icon-checkbox {
+  margin-left: auto;
+  align-self: center;
   font-family: icomoon-multichoice;
-  position: absolute;
-  right: 0.75em;
   line-height: 1em;
-  top: 0.585em;
   width: 1em;
   height: 1em;
   overflow: hidden;
@@ -379,8 +356,7 @@
 .h5p-multichoice .h5p-question-plus-one,
 .h5p-multichoice .h5p-question-minus-one {
   display: inline-block;
-  top: auto;
-  right: auto;
+  position: unset;
   padding-top: 2px;
 }
 
