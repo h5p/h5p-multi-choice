@@ -237,7 +237,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       const answer = params.answers[i];
       answer.text = answer.text ?? '<div></div>';
       $('<li>', {
-        'class': 'h5p-answer',
+        'class': 'h5p-answer' + (answer.checked === "true" ? ' h5p-selected' : ''),
         role: answer.role,
         tabindex: answer.tabindex,
         'aria-checked': answer.checked,
