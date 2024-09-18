@@ -20,12 +20,12 @@
   list-style: none;
   padding: 0;
   overflow: visible;
-  margin: 1em 0;
+  margin: 0;
 }
 
 .h5p-multichoice .h5p-answer {
   list-style: none;
-  margin: 0.5em 0;
+  margin: var(--spacing-xxs) 0;
   padding: 0;
   background: none;
   position: relative;
@@ -55,7 +55,7 @@
   border: medium none;
   display: inline;
   text-decoration: none;
-  color: #494949;
+  color: var(--text-primary);
 }
 .h5p-multichoice .h5p-answer[role="radio"] .h5p-alternative-container:before {
   content: "\e90e";
@@ -107,7 +107,7 @@
 }
 
 .h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container {
-  color: #1a4473;
+  color: var(--text-primary);
   background: var(--alternative-dark) !important;
   box-shadow: none;
 }
@@ -121,14 +121,12 @@
   background: #b6e4ce;
   border-color: #b6e4ce;
   color: #255c41;
-  box-shadow: 0 0.1em 0 #a2bdb0;
 }
 .h5p-multichoice .h5p-answer.h5p-wrong .h5p-alternative-container,
 .h5p-multichoice .h5p-answer.h5p-wrong:hover .h5p-alternative-container {
   background: #fbd7d8;
   border-color: #fbd7d8;
   color: #b71c1c;
-  box-shadow: 0 0.1em 0 #deb8b8;
 }
 
 .h5p-multichoice .h5p-answer:last-child {
@@ -162,11 +160,12 @@
 .h5p-multichoice .h5p-solution-icon-checkbox {
   margin-left: auto;
   align-self: center;
-  font-family: icomoon-multichoice;
-  line-height: 1em;
-  width: 1em;
-  height: 1em;
+  font-family: h5p-theme;
+
+
   overflow: hidden;
+  border: dashed 1px var(--text-primary);
+  padding: calc(var(--spacing-xs)/4);
 }
 .h5p-multichoice .h5p-should .h5p-solution-icon-radio:before {
   content: "\e603";
@@ -175,7 +174,7 @@
   content: "\e600";
 }
 .h5p-multichoice .h5p-should .h5p-solution-icon-checkbox:before {
-  content: "\e601";
+  content: "\e903";
 }
 .h5p-multichoice .h5p-should-not .h5p-solution-icon-checkbox:before {
   content: "\e602";
@@ -244,7 +243,7 @@
   right: 2.125em;
   top: 0.4375em;
   line-height: 1em;
-  background: #fff;
+  background: var(--ui-base);
 }
 .h5p-multichoice .h5p-selected.h5p-should.h5p-correct .h5p-feedback-button,
 .h5p-multichoice .h5p-selected.h5p-should-not.h5p-correct .h5p-feedback-button,
@@ -383,10 +382,6 @@
 }
 
 
-
-
-
-
 .h5p-theme .h5p-selected .h5p-alternative-container {
   background-color: var(--alternative-darker) !important;
 }
@@ -404,4 +399,7 @@
   border: 1px solid var(--feedback-correct-third) !important;
 }
 
+.h5p-theme .h5p-question-main-content{
+
+}
 
