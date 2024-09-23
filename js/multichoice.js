@@ -505,7 +505,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
             ariaLabel: params.UI.shouldNotCheck + '.'
           }));
       }
-    }).find('.h5p-question-plus-one, .h5p-question-minus-one').remove();
+    }).find('.h5p-question-plus-one-container, .h5p-question-minus-one-container').remove();
 
     // Make sure input is disabled in solution mode
     disableInput();
@@ -548,8 +548,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       .removeClass('h5p-should')
       .removeClass('h5p-should-not')
       .removeClass('h5p-has-feedback')
-      .find('.h5p-question-plus-one, ' +
-        '.h5p-question-minus-one, ' +
+      .find('.h5p-question-plus-one-container, ' +
+        '.h5p-question-minus-one-container, ' +
         '.h5p-answer-icon, ' +
         '.h5p-solution-icon-radio, ' +
         '.h5p-solution-icon-checkbox, ' +
@@ -796,7 +796,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         if (scorePoints) {
           var alternativeContainer = $e[0].querySelector('.h5p-alternative-container');
 
-          if (!params.behaviour.autoCheck || alternativeContainer.querySelector('.h5p-question-plus-one, .h5p-question-minus-one') === null) {
+          if (!params.behaviour.autoCheck || alternativeContainer.querySelector('.h5p-question-plus-one-container, .h5p-question-minus-one-container') === null) {
             alternativeContainer.appendChild(scorePoints.getElement(a.correct));
           }
         }
