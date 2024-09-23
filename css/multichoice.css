@@ -299,7 +299,7 @@
 }
 
 .h5p-multichoice .h5p-answer[aria-disabled="true"] .h5p-feedback-dialog {
-  background-color: var(--alternative-light);
+  background-color: var(--alternative-base);
   border-color: var(--alternative-base);
 }
 
