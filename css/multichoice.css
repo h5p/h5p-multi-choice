@@ -64,8 +64,8 @@
 }
 
 .h5p-multichoice .h5p-answer:hover:not([aria-disabled="true"]) .h5p-alternative-container {
-  background: var(--alternative-darker);
-  border-color: var(--alternative-darker);
+  background: var(--alternative-dark);
+  border-color: var(--alternative-dark);
 }
 .h5p-multichoice .h5p-answer .h5p-alternative-container:before {
   font-family: h5p-theme;
@@ -212,7 +212,6 @@
 .h5p-alternative-inner {
   margin-right: var(--spacing-l);
   margin-left: var(--spacing-xxs);
-  color: var(--text-primary);
 }
 .h5p-alternative-inner div,
 .h5p-alternative-inner p {
@@ -278,8 +277,8 @@
 /* Feedback dialog*/
 .h5p-multichoice .h5p-feedback-dialog {
   position: relative;
-  width: calc(100% - 0.5em);
-  padding: calc(0.25em - 1px);
+  width: calc(100% - var(--spacing-xxs) - var(--spacing-xxs) - 1px);
+  padding: calc(var(--spacing-xxs)/2) var(--spacing-xxs) var(--spacing-xxs) var(--spacing-xxs) ;
   background-color: var(--alternative-base);
   border: 1px solid var(--alternative-base);
   border-top: none;
@@ -289,8 +288,8 @@
 }
 
 .h5p-multichoice .h5p-answer:hover:not([aria-disabled="true"]) .h5p-feedback-dialog {
-  background: var(--alternative-darker);
-  border-color: var(--alternative-darker);
+  background: var(--alternative-dark);
+  border-color: var(--alternative-dark);
 }
 
 .h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-feedback-dialog {
@@ -322,7 +321,7 @@
   margin: calc(-1* var(--spacing-xs)) 0 0 0;
   background: var(--ui-base);
   color: var(--text-primary);
-  border: solid 3px var(--alternative-darker);
+  border: solid 1px var(--alternative-dark);
   border-radius: var(--border-radius-small);
   text-align: left;
   font-family: var(--font-name);
@@ -330,7 +329,7 @@
 }
 
 .h5p-multichoice .h5p-answer.h5p-selected .h5p-feedback-inner {
-  border: 1px solid #cee0f4;
+  border: 1px solid var(--alternative-dark);
 }
 
 .h5p-multichoice .h5p-feedback-inner:before {
