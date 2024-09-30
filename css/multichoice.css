@@ -126,7 +126,7 @@
 
 .h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container {
   color: var(--text-primary);
-  background: var(--alternative-dark) !important;
+  background: var(--alternative-dark);
   box-shadow: none;
 }
 .h5p-multichoice .h5p-answer[aria-checked="true"]:not(.h5p-wrong):not(.h5p-correct):not([aria-disabled="true"]):hover .h5p-alternative-container {
@@ -277,7 +277,6 @@
 /* Feedback dialog*/
 .h5p-multichoice .h5p-feedback-dialog {
   position: relative;
-  width: calc(100% - var(--spacing-xxs) - var(--spacing-xxs) - 1px);
   padding: calc(var(--spacing-xxs)/2) var(--spacing-xxs) var(--spacing-xxs) var(--spacing-xxs) ;
   background-color: var(--alternative-base);
   border: 1px solid var(--alternative-base);
