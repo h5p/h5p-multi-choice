@@ -172,7 +172,6 @@
   align-self: center;
   font-family: h5p-theme;
   overflow: hidden;
-  border: dashed 1px gray;
 }
 
 .h5p-multichoice .h5p-should .h5p-solution-icon-radio:before {
