@@ -133,7 +133,7 @@
   box-shadow: none;
 }
 .h5p-multichoice .h5p-answer[aria-checked="true"]:not(.h5p-wrong):not(.h5p-correct):not([aria-disabled="true"]):hover .h5p-alternative-container {
-  background-color: #e6effc;
+  background-color: var(--alternative-dark);
   box-shadow: none;
 }
 
