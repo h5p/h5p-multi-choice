@@ -35,7 +35,7 @@
 .h5p-multichoice .h5p-alternative-container {
   display: flex;
   align-items: center;
-  padding: var(--spacing-s); 
+  padding: var(--spacing-xs); 
   background: var(--alternative-base); 
   border-radius: var(--border-radius-medium); 
   border: 1px solid var(--alternative-base);
@@ -76,7 +76,7 @@
   display: inline;
   text-decoration: none;
   color: var(--text-primary);
-  font-size: var(--font-size-xl-large);
+  font-size: var(--font-size-xl);
 }
 .h5p-multichoice .h5p-answer[role="radio"] .h5p-alternative-container:before {
   content: "\e90e";
@@ -454,7 +454,7 @@
 }
 
 .h5p-theme  .h5p-question-main-content .h5p-question-introduction {
-  margin: var(--spacing-m) var(--spacing-l) var(--spacing-s) var(--spacing-l) !important;
+  margin: var(--spacing-m) var(--spacing-m) var(--spacing-s) var(--spacing-m) !important;
 }
 
 .h5p-theme .h5p-answer-icon {
