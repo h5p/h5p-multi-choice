@@ -45,7 +45,7 @@
   text-align: left;
   line-height: normal;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 
@@ -142,7 +142,7 @@
 }
 
 .h5p-multichoice h2 {
-  font-size: 1.5em;
+  font-size: calc(var(--font-size-xl)*1.2)
   font-weight: normal;
 }
 
@@ -193,14 +193,14 @@
 }
 
 .h5p-multichoice .feedback-text {
-  height: 2em;
+  height: var(--spacing-l);
   top: 0;
   margin: 0;
   padding: 0;
   font-weight: bold;
-  font-size: 1.25em;
-  line-height: 2em;
-  color: #599413;
+  font-size: var(--font-size-xl);
+  line-height: var(--spacing-l);
+  color: var(--feedback-correct-main);
 }
 
 .h5p-multichoice .feedback-text.h5p-failed {
@@ -229,12 +229,12 @@
 .h5p-multichoice .h5p-radio-or-checkbox {
   border: medium none;
   display: block;
-  height: 1em;
+  height: var(--spacing-s);
   margin: auto;
-  width: 1em;
+  width: var(--spacing-s);
   text-decoration: none;
   font-family: icomoon-multichoice;
-  color: #494949;
+  color: var(--text-secondary);
   pointer-events: none;
 }
 
@@ -253,16 +253,16 @@
 .h5p-multichoice .h5p-feedback-button {
   position: absolute;
   cursor: pointer;
-  right: 2.125em;
-  top: 0.4375em;
-  line-height: 1em;
+  right: 2.125rem;
+  top: 0.4375rem;
+  line-height: 1rem;
   background: var(--ui-base);
 }
 .h5p-multichoice .h5p-selected.h5p-should.h5p-correct .h5p-feedback-button,
 .h5p-multichoice .h5p-selected.h5p-should-not.h5p-correct .h5p-feedback-button,
 .h5p-multichoice .h5p-selected.h5p-should.h5p-wrong .h5p-feedback-button,
 .h5p-multichoice .h5p-selected.h5p-should-not.h5p-wrong .h5p-feedback-button {
-  right: 3.5em;
+  right: calc(--spacing-l)*1.75;
 }
 
 .h5p-multichoice .h5p-feedback-button:focus {
@@ -271,11 +271,11 @@
 .h5p-multichoice .h5p-feedback-button:before {
   font-family: 'H5PFontAwesome4';
   content: "\f075";
-  color: #fbfbfb;
-  text-shadow: 0 0 0.25em #2c2c2c;
+  color: var(--ui-base);
+  text-shadow: 0 0 calc(var(--spacing-xxs)/2) var(--text-primary);
 }
 .h5p-multichoice .h5p-feedback-button:hover:before {
-  color: #e1e1e1;
+  color: var(--ui-base);
 }
 
 /* Feedback dialog*/
@@ -320,7 +320,7 @@
 }
 
 .h5p-multichoice .h5p-answer .h5p-feedback-inner {
-  padding: 0.5em 1.25em;
+  padding: var(--spacing-xxs) calc(var(--spacing-m)/1.2);
   margin: calc(-1* var(--spacing-xs)) 0 0 0;
   background: var(--ui-base);
   color: var(--text-primary);
@@ -338,10 +338,10 @@
 .h5p-multichoice .h5p-feedback-inner:before {
   content: "";
   position: absolute;
-  left: 0.625em;
-  top: -0.3em;
-  width: 0.5em;
-  height: 0.5em;
+  left: var(--spacing-xs);
+  top: -0.3rem;
+  width: var(--spacing-xxs);
+  height: var(--spacing-xxs);
   background: var(--ui-base);
   border-color: var(--alternative-darker);
   border-width: 1px 0 0 1px;
@@ -355,7 +355,7 @@
 
 .h5p-multichoice .h5p-feedback-dialog.h5p-has-tip .h5p-feedback-inner:before {
   left: auto;
-  right: 0.85em;
+  right: var(--spacing-s);
 }
 
 .h5p-multichoice .h5p-feedback-text {
@@ -367,21 +367,21 @@
 }
 
 .h5p-multichoice .h5p-feedback-text::-webkit-scrollbar {
-  width: 0.4em;
+  width: 0.4rem;
 }
 .h5p-multichoice .h5p-feedback-text::-webkit-scrollbar-thumb {
-  border-radius: 0.2em;
+  border-radius: 0.2rem;
   background: #aaa;
 }
 
 /* Tip icon*/
 .h5p-multichoice .multichoice-tip {
   text-align: center;
-  font-size: 1.25em;
+  font-size: var(--font-size-xl);
   line-height: 1.5;
-  width: 2.15em;
+  width: var(--spacing-l);
   height: 100%;
-  color: #777;
+  color: var(--text-third);
   cursor: pointer;
   font-weight: normal;
 }
@@ -401,14 +401,14 @@
 }
 
 .h5p-multichoice .multichoice-tip:hover {
-  color: #333;
+  color: var(--text-secondary);
 }
 
 .h5p-multichoice .h5p-selected.h5p-should-not.h5p-correct .multichoice-tip,
 .h5p-multichoice .h5p-selected.h5p-should.h5p-correct .multichoice-tip,
 .h5p-multichoice .h5p-selected.h5p-should.h5p-wrong .multichoice-tip,
 .h5p-multichoice .h5p-selected.h5p-should-not.h5p-wrong .multichoice-tip {
-  right: 3.125em;
+  right: calc(var(--spacing-xl)* 0.96);
 }
 
 /* Remove tip icon on check */
@@ -419,7 +419,7 @@
 .h5p-multichoice-tipwrap {
   display: inline;
   margin-left: auto;
-  margin-top: -0.5em;
+  margin-top: calc(var(--spacing-xxs)* -1);
 }
 
 .h5p-multichoice .h5p-question-plus-one,
