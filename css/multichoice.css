@@ -176,7 +176,7 @@
 
 .h5p-multichoice .h5p-should .h5p-solution-icon-radio:before {
   font-family: 'h5p-theme' !important;
-  content: "\e903";
+  content: "\e90d";
   color: var(--text-primary);
 }
 .h5p-multichoice .h5p-should-not .h5p-solution-icon-radio:before {
@@ -184,7 +184,7 @@
   color: var(--text-primary);
 }
 .h5p-multichoice .h5p-should .h5p-solution-icon-checkbox:before {
-  content: "\e903";
+  content: "\e90c";
   color: var(--text-primary);
 }
 .h5p-multichoice .h5p-should-not .h5p-solution-icon-checkbox:before {
