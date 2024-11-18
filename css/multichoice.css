@@ -321,9 +321,9 @@
 .h5p-multichoice .h5p-answer .h5p-feedback-inner {
   padding: var(--spacing-xxs) calc(var(--spacing-m)/1.2);
   margin: calc(-1* var(--spacing-xs)) 0 0 0;
-  background: var(--ui-base);
-  color: var(--text-primary);
-  border: solid 1px var(--alternative-darker);
+  background: var(--text-secondary);
+  color: var(--ui-base);
+  border: solid 1px var(--text-secondary);
   border-radius: var(--border-radius-small);
   text-align: left;
   font-family: var(--font-name);
@@ -341,8 +341,8 @@
   top: -0.3rem;
   width: var(--spacing-xxs);
   height: var(--spacing-xxs);
-  background: var(--ui-base);
-  border-color: var(--alternative-darker);
+  background: var(--text-secondary);
+  border-color: var(--text-secondary);
   border-width: 1px 0 0 1px;
   border-style: solid;
   -webkit-transform: rotate(45deg);
