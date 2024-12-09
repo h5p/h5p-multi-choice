@@ -321,13 +321,15 @@
 .h5p-multichoice .h5p-answer .h5p-feedback-inner {
   padding: var(--h5p-theme-spacing-xxs) calc(var(--h5p-theme-spacing-m)/1.2);
   margin: calc(-1* var(--h5p-theme-spacing-xs)) 0 0 0;
-  background: var(--h5p-theme-alternative-dark);
+  background: var(--h5p-theme-alternative-light); 
   color: var(--h5p-theme-text-primary);
   border: solid 1px var(--h5p-theme-alternative-darker);
   border-radius: var(--h5p-theme-border-radius-small);
   text-align: left;
   font-family: var(--h5p-theme-font-name);
+  font-size: 14px;
   position: relative;
+  box-shadow: 1px 2px 0px 0px rgba(0, 0, 0, 0.05);
 }
 
 .h5p-multichoice .h5p-answer.h5p-selected .h5p-feedback-inner {
@@ -341,10 +343,11 @@
   top: -0.3rem;
   width: var(--h5p-theme-spacing-xxs);
   height: var(--h5p-theme-spacing-xxs);
-  background: var(--h5p-theme-alternative-dark);
+  background: var(--h5p-theme-alternative-light); 
   border-color: var(--h5p-theme-alternative-darker);
   border-width: 1px 0 0 1px;
   border-style: solid;
+  
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
