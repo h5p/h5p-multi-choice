@@ -453,7 +453,7 @@
 }
 
 .h5p-theme  .h5p-question-main-content .h5p-question-introduction {
-  margin: var(--h5p-theme-spacing-m) var(--h5p-theme-spacing-m) var(--h5p-theme-spacing-s) var(--h5p-theme-spacing-m) !important;
+  margin: var(--h5p-theme-spacing-m) var(--h5p-theme-spacing-m) var(--h5p-theme-spacing-s) var(--h5p-theme-spacing-m);
 }
 
 .h5p-theme .h5p-answer-icon {
