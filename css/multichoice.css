@@ -267,6 +267,11 @@
 .h5p-multichoice .h5p-feedback-button:focus {
   outline: none;
 }
+.h5p-multichoice .h5p-answer:focus{
+  z-index: 3000;
+  outline: 4px ridge var(--h5p-theme-main-cta-base);
+  border-radius: 4px;
+}
 .h5p-multichoice .h5p-feedback-button:before {
   font-family: 'H5PFontAwesome4';
   content: "\f075";
@@ -388,17 +393,17 @@
   font-weight: normal;
 }
 .h5p-multichoice .multichoice-tip:focus {
-  outline: 0;
-  box-shadow: 0px 0px 1px 3px rgba(140,185,240,1);
+  z-index: 3000;
+  outline: 4px ridge var(--h5p-theme-main-cta-base);
+  border-radius: 4px;
 }
-
 
 .using-mouse .h5p-multichoice .multichoice-tip:focus {
   box-shadow: none;
 }
 
 .h5p-multichoice .multichoice-tip .joubel-icon-tip-normal {
-  line-height: initial;
+  
   float: right;
 }
 
