@@ -268,7 +268,6 @@
   outline: none;
 }
 .h5p-multichoice .h5p-answer:focus{
-  z-index: 3000;
   outline: 4px ridge var(--h5p-theme-main-cta-base);
   border-radius: 4px;
 }
@@ -393,7 +392,6 @@
   font-weight: normal;
 }
 .h5p-multichoice .multichoice-tip:focus {
-  z-index: 3000;
   outline: 4px ridge var(--h5p-theme-main-cta-base);
   border-radius: 4px;
 }
