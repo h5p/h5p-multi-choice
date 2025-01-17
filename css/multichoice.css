@@ -381,9 +381,7 @@
   font-size: var(--h5p-theme-font-size-xl);
   line-height: 1.5;
   width: var(--h5p-theme-font-size-xxl);
-  /* Account for tip icon not being centered */
-  height: calc(var(--h5p-theme-font-size-xxl)-2px);
-  margin-top: 2px;
+  height: var(--h5p-theme-font-size-xxl);
 
   color: var(--h5p-theme-text-third);
   cursor: pointer;
@@ -423,6 +421,7 @@
 .h5p-multichoice-tipwrap {
   display: inline;
   margin-left: auto;
+  margin-bottom: -3px;
 }
 
 .h5p-multichoice .h5p-question-plus-one,
