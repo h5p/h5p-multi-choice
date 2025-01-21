@@ -45,11 +45,6 @@
   color: var(--h5p-theme-text-secondary);
 }
 
-.h5p-multichoice .h5p-question-minus-one-container,
-.h5p-multichoice .h5p-question-plus-one-container {
-  align-self: flex-start;
-}
-
 .h5p-multichoice .h5p-answer[aria-disabled="true"] .h5p-alternative-container {
   background: var(--h5p-theme-ui-base);
   border-color: var(--h5p-theme-alternative-darker);
