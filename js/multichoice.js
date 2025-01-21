@@ -797,7 +797,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           var alternativeContainer = $e[0].querySelector('.h5p-alternative-container');
 
           if (!params.behaviour.autoCheck || alternativeContainer.querySelector('.h5p-question-plus-one-container, .h5p-question-minus-one-container') === null) {
-            alternativeContainer.appendChild(scorePoints.getElement(a.correct));
+            alternativeContainer.querySelector('.h5p-alternative-inner').appendChild(scorePoints.getElement(a.correct));
           }
         }
       }
