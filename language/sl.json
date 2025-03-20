@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Mediji",
+      "label": "Medijska vsebina",
       "fields": [
         {
           "label": "Tip",
-          "description": "Neobvezna nastavitev dodatnega medija za prikaz nad vprašanjem."
+          "description": "Neobvezna nastavitev dodatne medijske vsebine za prikaz nad vprašanjem."
         },
         {
           "label": "Onemogoči povečavo slike"
@@ -82,8 +82,8 @@
           "default": "Preveri"
         },
         {
-          "label": "Submit answer button label",
-          "default": "Submit"
+          "label": "Besedilo za gumb \"Oddaj\"",
+          "default": "Oddaj"
         },
         {
           "label": "Besedilo za gumb \"Prikaži rešitev\"",
@@ -140,16 +140,16 @@
           "default": "Pred ogledom rešitve je potrebno odgovoriti na vprašanje"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Opis gumba \"Preveri\" za bralnike zaslona",
+          "default": "Preveri pravilnost. Odgovori bodo označeni kot pravilni, napačni ali brez odgovora."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "Opis gumba \"Prikaži rešitev\" za bralnike zaslona",
+          "default": "Prikaži rešitev. Pravilni odgovori bodo označeni."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Opis gumba \"Poskusi ponovno\" za bralnike zaslona",
+          "default": "Omogoči ponoven poskus. Ponastavi vse odzive in znova zažene nalogo."
         }
       ]
     },
