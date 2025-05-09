@@ -5,7 +5,7 @@
       "fields": [
         {
           "label": "Type",
-          "description": "Valgfritt medieelement. Elementet vil bli plassert over spørsmålet."
+          "description": "Valgfritt medieelement som vises over spørsmålet."
         },
         {
           "label": "Deaktiver zoomfunksjon."
@@ -32,15 +32,15 @@
             "fields": [
               {
                 "label": "Tipstekst",
-                "description": "Hint til bruker. Hintet vises før bruker sjekker svarene sine."
+                "description": "Hint til bruker. Vises før bruker sjekker svar."
               },
               {
-                "label": "Melding som vises hvis alternativet er valgt",
+                "label": "Melding dersom svaret er valgt",
                 "description": "Meldinga vises under svaret hvis bruker velger \"Sjekk\"."
               },
               {
-                "label": "Melding som vises hvis alternativet ikke er valgt",
-                "description": "Melding som vises under svaret hvis bruker har svart feil og valgt \"Sjekk\"."
+                "label": "Melding hvis alternativet ikke er valgt",
+                "description": "Ved svarsjekk vises denne meldinga under svaret om svaret ikke er valgt."
               }
             ]
           }
@@ -53,7 +53,7 @@
         {
           "widgets": [
             {
-              "label": "Forhåndsinnstilling"
+              "label": "Standard"
             }
           ],
           "label": "Opprett poengområder og legg inn tilbakemeldinger",
@@ -75,30 +75,30 @@
       ]
     },
     {
-      "label": "Oversettelser av tekst i brukergrensesnittet",
+      "label": "Oversettelse av tekst i brukergrensesnittet",
       "fields": [
         {
-          "label": "Navn på \"Sjekk svar\"-knapp",
+          "label": "Tekst på \"Sjekk svar\"-knapp",
           "default": "Sjekk"
         },
         {
-          "label": "Navn på \"Send inn\"-knapp",
+          "label": "Tekst på \"Send inn\"-knapp",
           "default": "Send inn"
         },
         {
-          "label": "Navn på \"Vis svar\"-knapp",
+          "label": "Tekst på \"Vis svar\"-knapp",
           "default": "Vis svar"
         },
         {
-          "label": "Navn på \"Prøv igjen\"-knapp",
+          "label": "Tekst på \"Prøv igjen\"-knapp",
           "default": "Prøv igjen"
         },
         {
-          "label": "Navn på \"Tips\"-knapp",
+          "label": "Tekst på \"Tips\"-knapp",
           "default": "Vis tips"
         },
         {
-          "label": "Tekstalternativ til resultatlinja for skjermleserbrukere",
+          "label": "Tekstalternativ til resultatlinja (for skjermleserbrukere)",
           "description": "Tilgjengelige variabler er :num og :total.",
           "default": "Du fikk :num av :total poeng."
         },
@@ -136,26 +136,26 @@
           "default": "Skulle ikke vært valgt"
         },
         {
-          "label": "Tekst om at bruker må svare",
-          "default": "Du må svare før du får se løsningen"
+          "label": "Beskjed om at bruker må svare",
+          "default": "Du må svare før du får se løsningen."
         },
         {
-          "label": "Beskrivelse av \"Sjekk\"-knapp for assisterende teknologi",
-          "default": "Sjekk svar. Svarene blir merket som riktig, feil eller ubesvart."
+          "label": "Beskrivelse av \"Sjekk\"-knapp (for assisterende teknologi)",
+          "default": "Sjekk svar. Svara blir merka som riktig, feil eller ubesvart."
         },
         {
-          "label": "Beskrivelse av \"Vis svar\"-knapp for assisterende teknologi",
-          "default": "Vis svar. Oppgaven blir merket med riktige svar."
+          "label": "Beskrivelse av \"Vis svar\"-knapp (for assisterende teknologi)",
+          "default": "Vis svar. Oppgaven blir merka med riktige svar."
         },
         {
-          "label": "Beskrivelse av \"Prøv igjen\"-knapp for assisterende teknologi",
-          "default": "Prøv igjen. Alle svar blir nullstilt, og oppgaven starter på nytt."
+          "label": "Beskrivelse av \"Prøv igjen\"-knapp (for assisterende teknologi)",
+          "default": "Prøv igjen. Alle svara blir nullstilt, og oppgaven starter på nytt."
         }
       ]
     },
     {
       "label": "Oppgaveinnstillinger",
-      "description": "Disse valgene lar deg styre ulike funksjoner i oppgaven.",
+      "description": "Disse valga lar deg styre ulike funksjoner i oppgaven.",
       "fields": [
         {
           "label": "Aktiver \"Prøv igjen\"-knapp"
@@ -168,88 +168,88 @@
         },
         {
           "label": "Oppgavetype",
-          "description": "Velg utseende og innstillinger for oppgaven",
+          "description": "Velg utseende og innstillinger.",
           "options": [
             {
               "label": "Automatisk"
             },
             {
-              "label": "Multiple Choice (flere svar mulig; firkanta knapper)"
+              "label": "Multiple Choice (flere svar kan være riktige; firkanta knapper)"
             },
             {
-              "label": "Single Choice (ett svar mulig; runde knapper)"
+              "label": "Single Choice (ett svar er riktig; runde knapper)"
             }
           ]
         },
         {
-          "label": "Give one point for the whole task",
-          "description": "Enable to give a total of one point for multiple correct answers. This will not be an option in \"Single answer\" mode."
+          "label": "Gi ett poeng for hele oppgaven",
+          "description": "Aktiver for å gi ett poeng totalt for flere riktige svar. Ikke mulig i Single Choice-oppgaver."
         },
         {
-          "label": "Randomize answers",
-          "description": "Enable to randomize the order of the answers on display."
+          "label": "Tilfeldig rekkefølge",
+          "description": "Aktiver for å vise svara i tilfeldig rekkefølge."
         },
         {
-          "label": "Require answer before the solution can be viewed"
+          "label": "Krev svar før bruker får se fasit."
         },
         {
-          "label": "Show confirmation dialog on \"Check\""
+          "label": "Vis bekreftelsesdialog når \"Sjekk\" er valgt."
         },
         {
-          "label": "Show confirmation dialog on \"Retry\""
+          "label": "Vis bekreftelsesdialog når \"Prøv igjen\" er valgt."
         },
         {
-          "label": "Automatically check answers",
-          "description": "Enabling this option will make accessibility suffer, make sure you know what you're doing."
+          "label": "Sjekk svar automatisk.",
+          "description": "Obs! Dette valget gir dårligere tilgjengelighet."
         },
         {
-          "label": "Pass percentage",
-          "description": "This setting often won't have any effect. It is the percentage of the total score required for getting 1 point when one point for the entire task is enabled, and for getting result.success in xAPI statements."
+          "label": "Prosentandel riktige svar som kreves for å bestå",
+          "description": "Dersom bruker bare kan få ett poeng for hele oppgaven, må hen oppnå denne prosentandelen rette svar for å få poenget."
         },
         {
-          "label": "Show score points",
-          "description": "Show points earned for each answer. This will not be an option in 'Single answer' mode or if 'Give one point for the whole task' option is enabled."
+          "label": "Vis poengsum",
+          "description": "Vis poengsum for hvert svar. Kan ikke velges ved Single Choice-oppgaver eller dersom \"Gi ett poeng for hele oppgaven\" er aktivert."
         }
       ]
     },
     {
-      "label": "Check confirmation dialog",
+      "label": "Bekreftelsesdialog for \"Sjekk svar\"",
       "fields": [
         {
-          "label": "Tittel",
-          "default": "Finish ?"
+          "label": "Tittel på bekreftelsesdialog",
+          "default": "Avslutte?"
         },
         {
           "label": "Tekst",
           "default": "Er du sikker på at du er ferdig?"
         },
         {
-          "label": "Etikett for \"Avbryt\"-knapp",
+          "label": "Tekst på \"Avbryt\"-knapp",
           "default": "Avbryt"
         },
         {
-          "label": "Etikett for \"Bekreft\"-knapp",
+          "label": "Tekst på \"Bekreft\"-knapp",
           "default": "Bekreft"
         }
       ]
     },
     {
-      "label": "Retry confirmation dialog",
+      "label": "Bekreftelsesdialog for \"Prøv igjen\"",
       "fields": [
         {
-          "label": "Header text",
-          "default": "Prøv igjen?"
+          "label": "Tittel på bekreftelsesdialog",
+          "default": "Prøve igjen?"
         },
         {
-          "label": "Body text",
+          "label": "Tekst",
           "default": "Er du sikker på at du vil prøve igjen?"
         },
         {
-          "label": "Cancel button label",
+          "label": "Tekst på \"Avbryt\"-knapp",
           "default": "Avbryt"
         },
         {
-          "label": "Confirm button label",
+          "label": "Tekst på \"Bekreft\"-knapp",
           "default": "Bekreft"
         }
       ]
