@@ -56,7 +56,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   var self = this;
   this.contentId = contentId;
   this.contentData = contentData;
-  H5P.Question.call(self, 'multichoice', true);
+  H5P.Question.call(self, 'multichoice', { theme: true });
   var $ = H5P.jQuery;
 
   var defaults = {
