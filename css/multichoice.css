@@ -43,6 +43,7 @@
   line-height: var(--h5p-theme-font-size-xxl);
   font-weight: 600;
   color: var(--h5p-theme-text-secondary);
+  font-size: var(--h5p-theme-font-size-m);
 }
 
 .h5p-multichoice .h5p-answer[aria-disabled="true"] .h5p-alternative-container {
