@@ -678,7 +678,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         'aria-label': params.UI.a11yShowSolution,
       },
       {
-        classes: 'h5p-theme-secondary-cta h5p-theme-show-results',
+        styleType: 'secondary',
+        icon: 'show-results'
       }
     );
 
@@ -703,7 +704,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           },
           contentData: self.contentData,
           textIfSubmitting: params.UI.submitAnswerButton,
-          classes: 'h5p-theme-primary-cta h5p-theme-check',
+          icon: 'check'
         }
       );
     }
@@ -738,7 +739,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         instance: self,
         $parentElement: $container
       },
-      classes: 'h5p-theme-secondary-cta h5p-theme-retry',
+      styleType: 'secondary',
+      icon: 'retry'
     });
   };
 
