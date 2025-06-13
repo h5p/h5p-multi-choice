@@ -56,7 +56,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   var self = this;
   this.contentId = contentId;
   this.contentData = contentData;
-  H5P.Question.call(self, 'multichoice');
+  H5P.Question.call(self, 'multichoice', { theme: true });
   var $ = H5P.jQuery;
 
   var defaults = {
@@ -237,7 +237,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       const answer = params.answers[i];
       answer.text = answer.text ?? '<div></div>';
       $('<li>', {
-        'class': 'h5p-answer',
+        'class': 'h5p-answer' + (answer.checked === "true" ? ' h5p-selected' : ''),
         role: answer.role,
         tabindex: answer.tabindex,
         'aria-checked': answer.checked,
@@ -492,18 +492,20 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       const className = 'h5p-solution-icon-' + (params.behaviour.singleAnswer ? 'radio' : 'checkbox');
 
       if (a.correct) {
-        $e.addClass('h5p-should').append($('<span/>', {
-          'class': className,
-          html: params.UI.shouldCheck + '.'
-        }));
+        $e.addClass('h5p-should').find('.h5p-alternative-container')
+          .append($('<div/>', {
+            class: className,
+            ariaLabel: params.UI.shouldCheck + '.'
+          }));
       }
       else {
-        $e.addClass('h5p-should-not').append($('<span/>', {
-          'class': className,
-          html: params.UI.shouldNotCheck + '.'
-        }));
+        $e.addClass('h5p-should-not').find('.h5p-alternative-container')
+          .append($('<div/>', {
+            class: className,
+            ariaLabel: params.UI.shouldNotCheck + '.'
+          }));
       }
-    }).find('.h5p-question-plus-one, .h5p-question-minus-one').remove();
+    }).find('.h5p-question-plus-one-container, .h5p-question-minus-one-container').remove();
 
     // Make sure input is disabled in solution mode
     disableInput();
@@ -546,8 +548,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       .removeClass('h5p-should')
       .removeClass('h5p-should-not')
       .removeClass('h5p-has-feedback')
-      .find('.h5p-question-plus-one, ' +
-        '.h5p-question-minus-one, ' +
+      .find('.h5p-question-plus-one-container, ' +
+        '.h5p-question-minus-one-container, ' +
         '.h5p-answer-icon, ' +
         '.h5p-solution-icon-radio, ' +
         '.h5p-solution-icon-checkbox, ' +
@@ -659,20 +661,27 @@ H5P.MultiChoice = function (options, contentId, contentData) {
     }
 
     // Show solution button
-    self.addButton('show-solution', params.UI.showSolutionButton, function () {
-      if (params.behaviour.showSolutionsRequiresInput && !self.getAnswerGiven(true)) {
-        // Require answer before solution can be viewed
-        self.updateFeedbackContent(params.UI.noInput);
-        self.read(params.UI.noInput);
+    self.addButton('show-solution', params.UI.showSolutionButton,
+      function () {
+        if (params.behaviour.showSolutionsRequiresInput && !self.getAnswerGiven(true)) {
+          // Require answer before solution can be viewed
+          self.updateFeedbackContent(params.UI.noInput);
+          self.read(params.UI.noInput);
+        }
+        else {
+          calcScore();
+          self.showAllSolutions();
+        }
+      },
+      false,
+      {
+        'aria-label': params.UI.a11yShowSolution,
+      },
+      {
+        styleType: 'secondary',
+        icon: 'show-results'
       }
-      else {
-        calcScore();
-        self.showAllSolutions();
-      }
-
-    }, false, {
-      'aria-label': params.UI.a11yShowSolution,
-    });
+    );
 
     // Check button
     if (params.behaviour.enableCheckButton && (!params.behaviour.autoCheck || !params.behaviour.singleAnswer)) {
@@ -695,6 +704,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           },
           contentData: self.contentData,
           textIfSubmitting: params.UI.submitAnswerButton,
+          icon: 'check'
         }
       );
     }
@@ -728,7 +738,9 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         l10n: params.confirmRetry,
         instance: self,
         $parentElement: $container
-      }
+      },
+      styleType: 'secondary',
+      icon: 'retry'
     });
   };
 
@@ -766,17 +778,19 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         if (a.correct) {
           // May already have been applied by instant feedback
           if (!$e.hasClass('h5p-correct')) {
-            $e.addClass('h5p-correct').append($('<span/>', {
-              'class': 'h5p-answer-icon',
-              html: params.UI.correctAnswer + '.'
-            }));
+            $e.addClass('h5p-correct').find('.h5p-alternative-container')
+              .prepend($('<div/>', {
+                class: 'h5p-answer-icon',
+                ariaLabel: params.UI.correctAnswer + '.'
+              }));
           }
         }
         else {
           if (!$e.hasClass('h5p-wrong')) {
-            $e.addClass('h5p-wrong').append($('<span/>', {
-              'class': 'h5p-answer-icon',
-              html: params.UI.wrongAnswer + '.'
+            $e.addClass('h5p-wrong').find('.h5p-alternative-container')
+            .prepend($('<div/>', {
+              class: 'h5p-answer-icon',
+              ariaLabel: params.UI.wrongAnswer + '.'
             }));
           }
         }
@@ -784,8 +798,8 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         if (scorePoints) {
           var alternativeContainer = $e[0].querySelector('.h5p-alternative-container');
 
-          if (!params.behaviour.autoCheck || alternativeContainer.querySelector('.h5p-question-plus-one, .h5p-question-minus-one') === null) {
-            alternativeContainer.appendChild(scorePoints.getElement(a.correct));
+          if (!params.behaviour.autoCheck || alternativeContainer.querySelector('.h5p-question-plus-one-container, .h5p-question-minus-one-container') === null) {
+            alternativeContainer.querySelector('.h5p-alternative-inner').after(scorePoints.getElement(a.correct));
           }
         }
       }
