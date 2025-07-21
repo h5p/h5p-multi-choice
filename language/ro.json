@@ -1,0 +1,258 @@
+{
+  "semantics": [
+    {
+      "label": "Media",
+      "fields": [
+        {
+          "label": "Tip",
+          "description": "Conținut media opțional de afișat deasupra întrebării."
+        },
+        {
+          "label": "Dezactivați mărirea imaginii"
+        }
+      ]
+    },
+    {
+      "label": "Întrebare"
+    },
+    {
+      "label": "Opțiuni disponibile",
+      "entity": "opțiune",
+      "field": {
+        "label": "Opțiune",
+        "fields": [
+          {
+            "label": "Text"
+          },
+          {
+            "label": "Corect"
+          },
+          {
+            "label": "Indicii și feedback",
+            "fields": [
+              {
+                "label": "Text indiciu",
+                "description": "Indiciu pentru utilizator. Acesta va apărea înainte ca utilizatorul să își verifice răspunsul/răspunsurile."
+              },
+              {
+                "label": "Mesaj afișat dacă răspunsul este selectat",
+                "description": "Mesajul va apărea sub răspuns la \"verificare\" dacă acest răspuns este selectat."
+              },
+              {
+                "label": "Mesaj afișat dacă răspunsul nu este selectat",
+                "description": "Mesajul va apărea sub răspuns la \"verificare\" dacă acest răspuns nu este selectat."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Feedback general",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Implicit"
+            }
+          ],
+          "label": "Definiți feedback personalizat pentru orice interval de scor",
+          "description": "Apăsați butonul \"Adaugă interval\" pentru a adăuga oricâte intervale aveți nevoie. Exemplu: 0-20% Scor slab, 21-91% Scor mediu, 91-100% Scor excelent!",
+          "entity": "interval",
+          "field": {
+            "fields": [
+              {
+                "label": "Interval scor"
+              },
+              {},
+              {
+                "label": "Feedback pentru intervalul de scor definit",
+                "placeholder": "Completați feedback-ul"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Traduceri pentru interfața de utilizator pentru alegere multiplă",
+      "fields": [
+        {
+          "label": "Etichetă buton Verifică răspunsul",
+          "default": "Verifică"
+        },
+        {
+          "label": "Etichetă buton Trimite răspunsul",
+          "default": "Trimite"
+        },
+        {
+          "label": "Etichetă buton Arată soluția",
+          "default": "Arată soluția"
+        },
+        {
+          "label": "Etichetă buton Încearcă din nou",
+          "default": "Încearcă din nou"
+        },
+        {
+          "label": "Etichetă indiciu",
+          "default": "Arată indiciu"
+        },
+        {
+          "label": "Reprezentare textuală a barei de scor pentru cei care folosesc un cititor de ecran",
+          "description": "Variabilele disponibile sunt :num și :total",
+          "default": "Ați obținut :num din :total puncte"
+        },
+        {
+          "label": "Indiciu disponibil (nu se afișează)",
+          "default": "Indiciu disponibil",
+          "description": "Text pentru accesibilitate folosit de cititoarele de ecran"
+        },
+        {
+          "label": "Feedback disponibil (nu se afișează)",
+          "default": "Feedback disponibil",
+          "description": "Text pentru accesibilitate folosit de cititoarele de ecran"
+        },
+        {
+          "label": "Citește feedback (nu se afișează)",
+          "default": "Citește feedback",
+          "description": "Text pentru accesibilitate folosit de cititoarele de ecran"
+        },
+        {
+          "label": "Răspuns greșit (nu se afișează)",
+          "default": "Răspuns greșit",
+          "description": "Text pentru accesibilitate folosit de cititoarele de ecran"
+        },
+        {
+          "label": "Răspuns corect (nu se afișează)",
+          "default": "Răspuns corect",
+          "description": "Text pentru accesibilitate folosit de cititoarele de ecran"
+        },
+        {
+          "label": "Opțiunea ar fi trebuit bifată",
+          "default": "Ar fi trebuit bifat"
+        },
+        {
+          "label": "Opțiunea nu ar fi trebuit bifată",
+          "default": "Nu ar fi trebuit bifat"
+        },
+        {
+          "label": "Text pentru mesajul \"Necesită răspuns\"",
+          "default": "Vă rugăm să răspundeți înainte de a vizualiza soluția"
+        },
+        {
+          "label": "Descriere pentru tehnologia asistivă a butonului \"Verifică\"",
+          "default": "Verifică răspunsurile. Răspunsurile vor fi marcate ca fiind corecte, incorecte sau fără răspuns."
+        },
+        {
+          "label": "Descriere pentru tehnologia asistivă a butonului \"Arată soluția\"",
+          "default": "Arată soluția. Sarcina va fi marcată cu soluția sa corectă."
+        },
+        {
+          "label": "Descriere pentru tehnologia asistivă a butonului \"Încearcă din nou\"",
+          "default": "Reîncercați sarcina. Resetați toate răspunsurile și începeți sarcina din nou."
+        }
+      ]
+    },
+    {
+      "label": "Setări de comportament",
+      "description": "Aceste opțiuni vă vor permite să controlați cum se comportă sarcina.",
+      "fields": [
+        {
+          "label": "Activați butonul \"Încearcă din nou\""
+        },
+        {
+          "label": "Activați butonul \"Arată soluția\""
+        },
+        {
+          "label": "Activați butonul \"Verifică\""
+        },
+        {
+          "label": "Tipul întrebării",
+          "description": "Selectați aspectul și comportamentul întrebării.",
+          "options": [
+            {
+              "label": "Automat"
+            },
+            {
+              "label": "Alegere multiplă (Căsuțe de bifat)"
+            },
+            {
+              "label": "Alegere unică (Butoane radio)"
+            }
+          ]
+        },
+        {
+          "label": "Acordați un punct pentru întreaga sarcină",
+          "description": "Activați pentru a acorda un total de un punct pentru mai multe răspunsuri corecte. Aceasta nu va fi o opțiune în modul \"Răspuns unic\"."
+        },
+        {
+          "label": "Amestecați răspunsurile",
+          "description": "Activați pentru a amesteca ordinea răspunsurilor la afișare."
+        },
+        {
+          "label": "Solicitați un răspuns înainte ca soluția să poată fi vizualizată"
+        },
+        {
+          "label": "Afișați dialogul de confirmare la \"Verifică\""
+        },
+        {
+          "label": "Afișați dialogul de confirmare la \"Încearcă din nou\""
+        },
+        {
+          "label": "Verificați automat răspunsurile",
+          "description": "Activarea acestei opțiuni va afecta accesibilitatea, asigurați-vă că știți ce faceți."
+        },
+        {
+          "label": "Procentaj de trecere",
+          "description": "Această setare adesea nu va avea niciun efect. Este procentajul din scorul total necesar pentru a obține 1 punct atunci când este activat un punct pentru întreaga sarcină și pentru a obține result.success în declarațiile xAPI."
+        },
+        {
+          "label": "Arată punctele de scor",
+          "description": "Arată punctele câștigate pentru fiecare răspuns. Aceasta nu va fi o opțiune în modul 'Răspuns unic' sau dacă opțiunea 'Acordați un punct pentru întreaga sarcină' este activată."
+        }
+      ]
+    },
+    {
+      "label": "Dialog de confirmare la verificare",
+      "fields": [
+        {
+          "label": "Text antet",
+          "default": "Finalizați?"
+        },
+        {
+          "label": "Text corp",
+          "default": "Sunteți sigur că doriți să finalizați?"
+        },
+        {
+          "label": "Etichetă buton Anulare",
+          "default": "Anulează"
+        },
+        {
+          "label": "Etichetă buton Confirmare",
+          "default": "Finalizează"
+        }
+      ]
+    },
+    {
+      "label": "Dialog de confirmare la reîncercare",
+      "fields": [
+        {
+          "label": "Text antet",
+          "default": "Reîncercați?"
+        },
+        {
+          "label": "Text corp",
+          "default": "Sunteți sigur că doriți să reîncercați?"
+        },
+        {
+          "label": "Etichetă buton Anulare",
+          "default": "Anulează"
+        },
+        {
+          "label": "Etichetă buton Confirmare",
+          "default": "Confirmă"
+        }
+      ]
+    }
+  ]
+}
