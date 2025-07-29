@@ -98,7 +98,7 @@
   height: calc(var(--h5p-theme-spacing-xxs)/2);
   bottom: 0;
   left: 0;
-  background-color: var(--h5p-theme-main-cta-base);
+  background-color: var(--h5p-theme-contrast-cta-white);
   z-index: 1;
 
   transition: transform 0.25s ease-out;
