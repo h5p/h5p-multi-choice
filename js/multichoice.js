@@ -679,7 +679,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       },
       {
         styleType: 'secondary',
-        icon: 'show-results'
+        icon: 'show-solutions'
       }
     );
 
