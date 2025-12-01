@@ -9,7 +9,8 @@
   font-weight: normal;
   font-style: normal;
 }
-*{
+
+.h5p-multichoice * {
   outline: none;
 }
 
