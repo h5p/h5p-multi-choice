@@ -495,14 +495,14 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         $e.addClass('h5p-should').find('.h5p-alternative-container')
           .append($('<div/>', {
             class: className,
-            ariaLabel: params.UI.shouldCheck + '.'
+            'aria-label': params.UI.shouldCheck + '.'
           }));
       }
       else {
         $e.addClass('h5p-should-not').find('.h5p-alternative-container')
           .append($('<div/>', {
             class: className,
-            ariaLabel: params.UI.shouldNotCheck + '.'
+            'aria-label': params.UI.shouldNotCheck + '.'
           }));
       }
     }).find('.h5p-question-plus-one-container, .h5p-question-minus-one-container').remove();
@@ -781,7 +781,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
             $e.addClass('h5p-correct').find('.h5p-alternative-container')
               .prepend($('<div/>', {
                 class: 'h5p-answer-icon',
-                ariaLabel: params.UI.correctAnswer + '.'
+                'aria-label': params.UI.correctAnswer + '.'
               }));
           }
         }
@@ -790,7 +790,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
             $e.addClass('h5p-wrong').find('.h5p-alternative-container')
             .prepend($('<div/>', {
               class: 'h5p-answer-icon',
-              ariaLabel: params.UI.wrongAnswer + '.'
+              'aria-label': params.UI.wrongAnswer + '.'
             }));
           }
         }
