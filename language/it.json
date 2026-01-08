@@ -36,11 +36,11 @@
               },
               {
                 "label": "Messaggio visualizzato se la risposta è selezionata",
-                "description": "Su \"Verifica\", apparirà un messaggio sotto la risposta se questa è selezionata"
+                "description": "Su \"Verifica\", apparirà un messaggio sotto la risposta se questa è selezionata."
               },
               {
                 "label": "Messaggio visualizzato se la risposta non è selezionata",
-                "description": "Su \"Verifica\", apparirà un messaggio sotto la risposta se questa non è selezionata"
+                "description": "Su \"Verifica\", apparirà un messaggio sotto la risposta se questa non è selezionata."
               }
             ]
           }
@@ -66,8 +66,8 @@
               },
               {},
               {
-                "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "label": "Feedback per un intervallo di punteggio definito",
+                "placeholder": "Compila il feedback"
               }
             ]
           }
@@ -82,8 +82,8 @@
           "default": "Verifica"
         },
         {
-          "label": "Submit answer button label",
-          "default": "Submit"
+          "label": "Etichetta del pulsante \"Invia risposta\"",
+          "default": "Invia"
         },
         {
           "label": "Etichetta del pulsante \"Mostra soluzione\"",

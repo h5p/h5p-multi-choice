@@ -5,10 +5,10 @@
       "fields": [
         {
           "label": "Típus",
-          "description": "Lehetséges Média ami a kérdés felett jelenik meg."
+          "description": "A kérdés felett megjelenítendő opcionális médiatartalom."
         },
         {
-          "label": "Kép ráközelítés tiltása"
+          "label": "Kép nagyíthatóságának tiltása"
         }
       ]
     },
@@ -16,8 +16,8 @@
       "label": "Kérdés"
     },
     {
-      "label": "Elérehtő lehetőségek",
-      "entity": "option",
+      "label": "Választási lehetőségek",
+      "entity": "Lehetőség",
       "field": {
         "label": "Lehetőség",
         "fields": [
@@ -32,15 +32,15 @@
             "fields": [
               {
                 "label": "Tipp szövege",
-                "description": "Célzás a felhasználó számára. Megjelnik mielőtt választ/válaszokat bejelölné."
+                "description": "Tipp a felhasználó számára. A válasz/válaszok ellenőrzése előtt jelenik meg."
               },
               {
-                "label": "Megjelenített szöveg, ha megjelölte a választ",
-                "description": "Ez az üzenet jelenik meg a válasz alatt az \"Ellenőrzés\"-nél ha megjelölte a választ."
+                "label": "Megjelenített szöveg, ha ezt a választ megjelölte",
+                "description": "Ez az üzenet jelenik meg a válasz alatt az \"Ellenőrzés\"-kor, ha a felhasználó megjelölte ezt a választ."
               },
               {
-                "label": "Megjelenített szöveg, ha nem megjelölte meg a választ",
-                "description": "Ez az üzenet jelenik meg a válasz alatt az \"Ellenőrzés\"-nél ha nem jelölte meg a választ."
+                "label": "Megjelenített szöveg, ha ezt a választ nem jelölte meg",
+                "description": "Ez az üzenet jelenik meg a válasz alatt az \"Ellenőrzés\"-kor, ha nem jelölte meg ezt a választ."
               }
             ]
           }
@@ -56,18 +56,18 @@
               "label": "Alapértelmezett"
             }
           ],
-          "label": "Határozza meg a visszajelzést bármelyik pontszámhoz",
-          "description": "Klikkeljen az \"Tartomány hozzáadása\" gombra a tartományok megadásához. Például: 0-20% Rossz eredmény, 21-91% Átlagos eredmény, 91-100% Nagyszerű eredmény!",
-          "entity": "range",
+          "label": "Állítson be ponthatárokhoz kötött visszajelzést",
+          "description": "Kattintson a \"Tartomány hozzáadása\" gombra ponthatárok megadásához. Például: 0-20% Gyenge eredmény, 21-91% Átlagos eredmény, 91-100% Nagyszerű eredmény!",
+          "entity": "tartomány",
           "field": {
             "fields": [
               {
-                "label": "Pontszámok"
+                "label": "Ponthatárok"
               },
               {},
               {
-                "label": "Visszajelzés a pontszámokhoz",
-                "placeholder": "Töltes ki a visszajelzést"
+                "label": "Visszajelző szöveg a megadott ponthatárokhoz",
+                "placeholder": "Írja ide a visszajelző szöveget"
               }
             ]
           }
@@ -75,96 +75,96 @@
       ]
     },
     {
-      "label": "Felhasználói interface fordítások",
+      "label": "Felhasználói felület fordításai",
       "fields": [
         {
           "label": "Ellenőrzés gomb címkéje",
           "default": "Ellenőrzés"
         },
         {
-          "label": "Submit answer button label",
-          "default": "Submit"
+          "label": "Beküldés gomb felirata",
+          "default": "Beküldés"
         },
         {
-          "label": "Mutasd a megoldást gomb címkéje",
-          "default": "Mutasd a megoldást"
+          "label": "A Megoldás mutatása gomb címkéje",
+          "default": "Megoldás mutatása"
         },
         {
           "label": "Újra gomb címkéje",
-          "default": "Újra"
+          "default": "Újra próbálkozás"
         },
         {
           "label": "Tipp megmutatása címkéje",
           "default": "Tipp megmutatása"
         },
         {
-          "label": "Elért pontok száma azoknak, akik readspeaker-t használnak",
-          "description": "Elérhető változók :num és összesen :total",
-          "default": "Ön :num pontot szerzett a elérhető maximális :total pontból"
+          "label": "Elért pontok számának megadása azoknak, akik szövegfelolvasót használnak",
+          "description": "Elérhető változók :num (pontszám) és :total (összesen)",
+          "default": "Ön :num pontot szerzett az elérhető :total pontból"
         },
         {
           "label": "Elérhető tipp (nincs megjelenítve)",
           "default": "Elérhető tipp",
-          "description": "Hozzáférhető szöveg readspeaker-ek számára"
+          "description": "Akadálymentesítő szöveg szövegfelolvasók számára"
         },
         {
           "label": "Visszajelzés elérhető (nincs megjelenítve)",
           "default": "Visszajelzés elérhető",
-          "description": "Hozzáférhető szöveg readspeaker-ek számára"
+          "description": "Akadálymentesítő szöveg szövegfelolasók számára"
         },
         {
           "label": "Visszajelzés olvasása (nincs megjelenítve)",
           "default": "Visszajelzés olvasása",
-          "description": "Hozzáférhető szöveg readspeaker-ek számára"
+          "description": "Akadálymentesítő szöveg szövegfelolvasók számára"
         },
         {
           "label": "Helytelen válasz (nincs megjelenítve)",
           "default": "Helytelen válasz",
-          "description": "Hozzáférhető szöveg readspeaker-ek számára"
+          "description": "Akadálymentesítő szöveg szövegfelolvasók számára"
         },
         {
           "label": "Helyes válasz (nincs megjelenítve)",
           "default": "Helyes válasz",
-          "description": "Hozzáférhető szöveg readspeaker-ek számára"
+          "description": "Akadálymentesítő szöveg szövegfelolvasók számára"
         },
         {
-          "label": "Be kellett volna jelölni",
+          "label": "Ezt a lehetőséget meg kellett volna jelölni",
           "default": "Be kellett volna jelölni"
         },
         {
-          "label": "Nem kellett volna bejelölni",
+          "label": "Ezt a lehetőséget nem kellett volna bejelölni",
           "default": "Nem kellett volna bejelölni"
         },
         {
-          "label": "Kérjük válaszoljon üzenet szövege",
+          "label": "„Válaszadás szükséges” üzenet szövege",
           "default": "Kérjük válaszoljon, mielőtt a megoldás megjelenne!"
         },
         {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
+          "label": "Az \"Ellenőrzés\" gomb megértést segítő magyarázatának leírása",
+          "default": "A válaszok ellenőrzése. A beküldött válaszok helyesnek, helytelennek vagy megválaszolatlannak lesznek megjelölve."
         },
         {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
+          "label": "A \"Megoldás megmutatása\" gomb megértést segítő magyarázatának leírása",
+          "default": "Megmutatja a helyes megoldást. A beküldött feladat a helyes megoldásával együtt jelenik meg."
         },
         {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
+          "label": "Akadálymentesítő leírás az \"Újra próbálkozás\" gombhoz",
+          "default": "Próbálja újra a feladatot. Állítsa vissza az összes választ, és kezdje újra a feladatot."
         }
       ]
     },
     {
-      "label": "Viselkedéssel kapcsolatos beállítások",
-      "description": "Ezek a lehetőségek megengedik az Ön számára, hogy a feladatok hogyan viselkedjenek.",
+      "label": "Viselkedési beállítások",
+      "description": "Ezekkel a beállításokkal szabályozható a feladat viselkedése.",
       "fields": [
         {
-          "label": "Újra gomb engedélyezése"
+          "label": "\"Újra próbálkozás\" gomb engedélyezése"
         },
         {
-          "label": "Mutasd a megoldást gomb engedélyezése"
+          "label": "\"Megoldás megmutatása\" gomb engedélyezése"
         },
         {
-          "label": "Ellenőrzés gomb engedélyezése"
+          "label": "\"Ellenőrzés\" gomb engedélyezése"
         },
         {
           "label": "Kérdés típusok",
@@ -174,83 +174,83 @@
               "label": "Automatikus"
             },
             {
-              "label": "Több válasz lehetséges (Checkbox-ok)"
+              "label": "Több válasz lehetséges (jelölőnégyzetek)"
             },
             {
-              "label": "Csak 1 válasz lehetséges (Radio Button-ök)"
+              "label": "Csak egy válasz lehetséges (rádiógombok)"
             }
           ]
         },
         {
-          "label": "A teljes feladatra egy pontot ad",
-          "description": "Több helyes válasz estén 1 pontot ad összesen. Ez a lehetőség nem működik ha a Csak 1 válasz lhetőséget választotta."
+          "label": "A teljes feladatra összesen egy pontot ad",
+          "description": "Több helyes válasz estén is egy pontot ad összesen. Ez a lehetőség nem működik ha a \"Csak egy válasz\"-t választotta."
         },
         {
-          "label": "Véletlen válaszok",
-          "description": "Ezzel engedélyezi, hogy a lehetséges válaszok véletlen sorrendben jelenjenek meg."
+          "label": "A lehetőségek véletlenszerű sorrendben",
+          "description": "Ezzel engedélyezi, hogy a lehetséges válaszok véletlenszerű sorrendben jelenjenek meg."
         },
         {
-          "label": "Válasz adása a megoldás megmutatása előtt"
+          "label": "Válaszolni kell a megoldás megmutatása előtt"
         },
         {
-          "label": "Megerősítést kérő dialógus megjelenítése \"Ellenőrzés\" esetén"
+          "label": "Megerősítő párbeszédpanel megjelenítése az \"Ellenőrzés\" gombra kattintáskor"
         },
         {
-          "label": "Megerősítést kérő dialógus megjelenítése  \"Újra\" estén"
+          "label": "Megerősítő párbeszédpanel megjelenítése az \"Újra próbálkozás\" gombra kattintáskor"
         },
         {
-          "label": "Automatikus válasz ellenőrzés",
-          "description": "Ennek az opciónak az engedélyezése veszélyekkel járhat! Legyen biztos benne, hogy mit csinál."
+          "label": "Azonnali válasz ellenőrzés",
+          "description": "Ennek az opciónak az engedélyezése akadálymentességi problémákat okozhat."
         },
         {
-          "label": "Szükséges százalék",
-          "description": "Ennek a beállításnak gyakran nincs hatása. Ez a százalék a 'teljes feladtért kapható 1 pont' egnedélyezésénél lehetséges, és a result.success eléréséhez az xAPI statement-eknél."
+          "label": "Elérendő százalék",
+          "description": "Ennek a beállításnak gyakran nincs hatása. Ez a százalék a 'Teljes feladatért egy pont kapható' engedélyezésénél érdekes, valamint a result.success eléréséhez az xAPI kapcsolatoknál."
         },
         {
-          "label": "Elért eredmény pontok mutatása",
-          "description": "Megmutatja az egyes válaszokért kapott pontokat. Nem választható opció '1 válasz' módban vagy ha 'Az egész feladatra 1 pont' opció engedélyezett."
+          "label": "Elért pontszámok megmutatása",
+          "description": "Megmutatja az egyes válaszokért kapott pontokat. Nem választható lehetőség 'Csak egy válasz' módban, illetve ha 'Az egész feladatra egy pont adható' opció engedélyezett."
         }
       ]
     },
     {
-      "label": "Ellenőrző dialógus",
+      "label": "Ellenőrzés párbeszédpanel",
       "fields": [
         {
-          "label": "Fejléc szövege",
-          "default": "Végzett ?"
+          "label": "Fejléc szöveg",
+          "default": "Befejezés?"
         },
         {
-          "label": "Szöveg törzs",
-          "default": "Biztos benne, hogy befejezi ?"
+          "label": "Szöveges tartalom",
+          "default": "Biztosan be akarod fejezni?"
         },
         {
-          "label": "Mégsem gomb felirat",
+          "label": "\"Mégsem\" gomb felirata",
           "default": "Mégsem"
         },
         {
-          "label": "Vége gomb felirat",
-          "default": "Vége"
+          "label": "Megerősítő gomb felirata",
+          "default": "Befejezés"
         }
       ]
     },
     {
-      "label": "Újra dialógus",
+      "label": "Újra próbálkozás párbeszédpanel",
       "fields": [
         {
-          "label": "Fejléc szövege",
-          "default": "Újra ?"
+          "label": "Fejléc szöveg",
+          "default": "Újra?"
         },
         {
-          "label": "Szöveg törzs",
-          "default": "Biztos benne, hogy újra megpróbálja ?"
+          "label": "Szöveges tartalom",
+          "default": "Biztosan újra szeretnéd kezdeni?"
         },
         {
-          "label": "Mégsem gomb felirata",
+          "label": "\"Mégsem\" gomb felriata",
           "default": "Mégsem"
         },
         {
-          "label": "Elküld gomb felirata",
-          "default": "Elküld"
+          "label": "Megerősítő gomb felirata",
+          "default": "Megerősít"
         }
       ]
     }
