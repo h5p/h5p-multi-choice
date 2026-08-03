@@ -1,0 +1,7 @@
+{
+  "spec": "tests/integration/**/*.spec.js",
+  "require": "tests/setup/h5p-globals.js",
+  "reporter": "spec",
+  "timeout": 5000
+}
+

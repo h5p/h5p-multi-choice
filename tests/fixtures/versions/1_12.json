@@ -1,0 +1,14 @@
+{
+  "question": "<p>Sample pending metadata title extraction.</p>",
+  "answers": [
+    { "text": "A", "correct": true, "tipsAndFeedback": {} },
+    { "text": "B", "correct": false, "tipsAndFeedback": {} }
+  ],
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "type": "multi",
+    "randomAnswers": false
+  }
+}
+

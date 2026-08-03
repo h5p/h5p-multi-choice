@@ -1,0 +1,35 @@
+{
+  "name": "h5p-multi-choice",
+  "version": "1.0.0",
+  "description": "H5P Multiple Choice",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h5p/h5p-multi-choice.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/h5p/h5p-multi-choice/issues"
+  },
+  "homepage": "https://github.com/h5p/h5p-multi-choice#readme",
+  "scripts": {
+    "test": "npm run test:unit",
+    "test:unit": "mocha",
+    "test:unit:watch": "mocha --watch",
+    "test:integration": "mocha --config .mocharc.integration.json",
+    "test:coverage": "c8 mocha"
+  },
+  "devDependencies": {
+    "c8": "^10.1.2",
+    "chai": "^4.4.1",
+    "global-jsdom": "^24.0.0",
+    "h5p-editor-php-library": "github:h5p/h5p-editor-php-library#unit_test_spike",
+    "h5p-js-testing-shared": "^0.1.0",
+    "jquery": "^3.7.1",
+    "jsdom": "^24.1.0",
+    "mocha": "^10.4.0",
+    "sinon": "^18.0.0"
+  }
+}
+

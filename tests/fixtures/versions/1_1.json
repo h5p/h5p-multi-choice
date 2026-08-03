@@ -1,0 +1,15 @@
+{
+  "question": "<p>Pick the even numbers.</p>",
+  "answers": [
+    { "text": "2", "correct": true },
+    { "text": "3", "correct": false },
+    { "text": "4", "correct": true }
+  ],
+  "tryAgain": false,
+  "enableSolutionsButton": false,
+  "singleAnswer": false,
+  "singlePoint": false,
+  "randomAnswers": false,
+  "showSolutionsRequiresInput": false
+}
+

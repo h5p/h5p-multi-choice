@@ -1,0 +1,16 @@
+{
+  "question": "<p>Single-correct sample.</p>",
+  "answers": [
+    { "text": "One", "correct": true, "tipsAndFeedback": {} },
+    { "text": "Two", "correct": false, "tipsAndFeedback": {} },
+    { "text": "Three", "correct": false, "tipsAndFeedback": {} }
+  ],
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "singleAnswer": true,
+    "randomAnswers": false,
+    "showSolutionsRequiresInput": true
+  }
+}
+

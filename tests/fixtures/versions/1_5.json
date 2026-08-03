@@ -1,0 +1,21 @@
+{
+  "question": "<p>Sample with a legacy task image.</p>",
+  "answers": [
+    { "text": "A", "correct": true, "tipsAndFeedback": {} },
+    { "text": "B", "correct": false, "tipsAndFeedback": {} }
+  ],
+  "image": {
+    "path": "images/legacy-image.jpg",
+    "mime": "image/jpeg",
+    "width": 300,
+    "height": 200
+  },
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "type": "single",
+    "randomAnswers": false,
+    "showSolutionsRequiresInput": true
+  }
+}
+

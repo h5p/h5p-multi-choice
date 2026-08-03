@@ -1,0 +1,26 @@
+{
+  "question": "<p>Pick the fruit.</p>",
+  "answers": [
+    {
+      "text": "Apple",
+      "correct": true,
+      "tip": "Think produce aisle.",
+      "chosenFeedback": "Correct!",
+      "notChosenFeedback": "You missed the apple."
+    },
+    {
+      "text": "Carrot",
+      "correct": false
+    }
+  ],
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "singleAnswer": false,
+    "singlePoint": false,
+    "randomAnswers": true,
+    "showSolutionsRequiresInput": true
+  },
+  "UI": { "checkAnswerButton": "Check" }
+}
+

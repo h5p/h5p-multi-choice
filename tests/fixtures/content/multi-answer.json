@@ -1,0 +1,72 @@
+{
+  "media": { "type": "H5P.Image 1.1", "disableImageZooming": false },
+  "question": "<p>Which of these are primary colours?</p>",
+  "answers": [
+    {
+      "text": "Red",
+      "correct": true,
+      "tipsAndFeedback": { "tip": "", "chosenFeedback": "Correct, red is primary.", "notChosenFeedback": "" }
+    },
+    {
+      "text": "Green",
+      "correct": false,
+      "tipsAndFeedback": { "tip": "", "chosenFeedback": "", "notChosenFeedback": "Green is a secondary mix." }
+    },
+    {
+      "text": "Blue",
+      "correct": true,
+      "tipsAndFeedback": { "tip": "", "chosenFeedback": "Correct, blue is primary.", "notChosenFeedback": "" }
+    }
+  ],
+  "overallFeedback": [
+    { "from": 0, "to": 49, "feedback": "Try again." },
+    { "from": 50, "to": 99, "feedback": "Almost there." },
+    { "from": 100, "to": 100, "feedback": "Well done!" }
+  ],
+  "weight": 1,
+  "UI": {
+    "checkAnswerButton": "Check",
+    "submitAnswerButton": "Submit",
+    "showSolutionButton": "Show solution",
+    "tryAgainButton": "Retry",
+    "scoreBarLabel": "You got :num out of :total points",
+    "tipsLabel": "Show tip",
+    "tipAvailable": "Tip available",
+    "feedbackAvailable": "Feedback available",
+    "shouldCheck": "Should have been checked",
+    "shouldNotCheck": "Should not have been checked",
+    "noInput": "Please answer before viewing the solution",
+    "correctAnswer": "Correct answer",
+    "wrongAnswer": "Wrong answer",
+    "a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+    "a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+    "a11yRetry": "Retry the task. Reset all responses and start the task over again."
+  },
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "enableCheckButton": true,
+    "type": "multi",
+    "singlePoint": false,
+    "randomAnswers": false,
+    "showSolutionsRequiresInput": true,
+    "confirmCheckDialog": false,
+    "confirmRetryDialog": false,
+    "autoCheck": false,
+    "passPercentage": 100,
+    "showScorePoints": true
+  },
+  "confirmCheck": {
+    "header": "Finish ?",
+    "body": "Are you sure you wish to finish ?",
+    "cancelLabel": "Cancel",
+    "confirmLabel": "Finish"
+  },
+  "confirmRetry": {
+    "header": "Retry ?",
+    "body": "Are you sure you wish to retry ?",
+    "cancelLabel": "Cancel",
+    "confirmLabel": "Confirm"
+  }
+}
+

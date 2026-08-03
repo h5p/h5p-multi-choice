@@ -18,6 +18,9 @@
   "preloadedJs": [
     {
       "path": "js/multichoice.js"
+    },
+    {
+      "path": "js/multichoice-scoring.js"
     }
   ],
   "preloadedCss": [

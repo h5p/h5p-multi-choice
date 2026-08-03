@@ -1,0 +1,21 @@
+{
+  "question": "<p>Sample needing overall feedback migration.</p>",
+  "answers": [
+    { "text": "A", "correct": true, "tipsAndFeedback": {} },
+    { "text": "B", "correct": false, "tipsAndFeedback": {} }
+  ],
+  "behaviour": {
+    "enableRetry": true,
+    "enableSolutionsButton": true,
+    "type": "multi",
+    "randomAnswers": false,
+    "showSolutionsRequiresInput": true
+  },
+  "UI": {
+    "checkAnswerButton": "Check",
+    "correctText": "Great job!",
+    "almostText": "So close!",
+    "wrongText": "Not quite."
+  }
+}
+
