@@ -15,7 +15,7 @@
 // Events provided:
 // - h5pQuestionAnswered: Triggered when a question has been answered.
 
-var H5P = H5P || {};
+var H5P = window.H5P = window.H5P || {};
 
 /**
  * @typedef {Object} Options
