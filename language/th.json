@@ -138,18 +138,6 @@
         {
           "label": "ข้อความสำหรับข้อความ \"ต้องตอบคำถามก่อนที่จะดูคำตอบ\"",
           "default": "กรุณาตอบคำถามก่อนที่จะดูคำตอบ"
-        },
-        {
-          "label": "คำอธิบายเทคโนโลยีช่วยในปุ่ม \"ตรวจสอบ\"",
-          "default": "ตรวจสอบคำตอบ ระบบจะทำเครื่องหมายว่าถูกต้อง ไม่ถูกต้อง หรือไม่ได้ตอบ"
-        },
-        {
-          "label": "คำอธิบายเทคโนโลยีช่วยในปุ่ม \"แสดงคำตอบ\"",
-          "default": "แสดงคำตอบ งานจะถูกทำเครื่องหมายด้วยคำตอบที่ถูกต้อง"
-        },
-        {
-          "label": "คำอธิบายเทคโนโลยีช่วยในปุ่ม \"ลองใหม่\"",
-          "default": "ลองทำงานใหม่ รีเซ็ตคำตอบทั้งหมดและเริ่มงานใหม่อีกครั้ง"
         }
       ]
     },
@@ -234,25 +222,25 @@
       ]
     },
     {
+      "label": "Retry confirmation dialog",
       "fields": [
         {
           "label": "Header text",
           "default": "Retry ?"
         },
         {
-          "default": "Are you sure you wish to retry ?",
-          "label": "Body text"
+          "label": "Body text",
+          "default": "Are you sure you wish to retry ?"
         },
         {
           "label": "Cancel button label",
           "default": "Cancel"
         },
         {
-          "default": "Confirm",
-          "label": "Confirm button label"
+          "label": "Confirm button label",
+          "default": "Confirm"
         }
-      ],
-      "label": "Retry confirmation dialog"
+      ]
     }
   ]
 }

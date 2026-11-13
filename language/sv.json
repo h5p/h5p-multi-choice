@@ -138,18 +138,6 @@
         {
           "label": "Text för \"Svar krävs \" meddelande",
           "default": "Svara innan du visar lösningen"
-        },
-        {
-          "label": "Text för knappen \"Svara\" i tillgänglighetshjälpmedel",
-          "default": "Granska svaren. Svaren kommer att markeras som korrekta, felaktiga eller obesvarade."
-        },
-        {
-          "label": "Beskrivning för knappen \"Visa lösning\" i tillgänglighetshjälpmedel",
-          "default": "Visa lösningen. Uppgiften kommer att markeras med dess rätta lösning."
-        },
-        {
-          "label": "Beskrivning för knappen \"Försök igen\" i tillgänglighetshjälpmedel",
-          "default": "Försök igen med uppgiften. Nollställer alla svar och startar om uppgiften."
         }
       ]
     },

@@ -138,18 +138,6 @@
         {
           "label": "نص لرسالة \"تتطلب الاجابة \"",
           "default": "Please answer before viewing the solution"
-        },
-        {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered."
-        },
-        {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
-        },
-        {
-          "label": "وصف التقنية المساعدة لزر إعادة المحاولة",
-          "default": "إعادة المحاولة للمهمة. إعادة ضبط جميع الردود والبدء بالمهمة مرة أخرى."
         }
       ]
     },

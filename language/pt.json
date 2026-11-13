@@ -138,18 +138,6 @@
         {
           "label": "Texto para a mensagem \"Resposta obrigatória\"",
           "default": "Por favor, responda antes de visualizar a solução"
-        },
-        {
-          "label": "Descrição de tecnologia assistiva para o botão \"Verificar\"",
-          "default": "Verifique as respostas. Estas serão marcadas como corretas, incorretas, ou não respondidas."
-        },
-        {
-          "label": "Descrição de tecnologia assistida para o botão \"Mostrar Solução\"",
-          "default": "Mostrar a solução. A atividade será marcada com a respetiva solução correta."
-        },
-        {
-          "label": "Descrição de tecnologia assistida para o botão \"Tentar novamente\"",
-          "default": "Repetir a atividade. Apagar todas as respostas e reiniciar a atividade."
         }
       ]
     },
