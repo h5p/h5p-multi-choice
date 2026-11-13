@@ -138,18 +138,6 @@
         {
           "label": "Besedilo za manjkajoč odgovor",
           "default": "Pred ogledom rešitve je potrebno odgovoriti na vprašanje"
-        },
-        {
-          "label": "Opis gumba \"Preveri\" za bralnike zaslona",
-          "default": "Preveri pravilnost. Odgovori bodo označeni kot pravilni, napačni ali brez odgovora."
-        },
-        {
-          "label": "Opis gumba \"Prikaži rešitev\" za bralnike zaslona",
-          "default": "Prikaži rešitev. Pravilni odgovori bodo označeni."
-        },
-        {
-          "label": "Opis gumba \"Poskusi ponovno\" za bralnike zaslona",
-          "default": "Omogoči ponoven poskus. Ponastavi vse odzive in znova zažene nalogo."
         }
       ]
     },

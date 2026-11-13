@@ -138,18 +138,6 @@
         {
           "label": "Texto para a mensaxe \"Resposta requirida\"",
           "default": "Por favor, responde antes de ver a solución"
-        },
-        {
-          "label": "Descrición asistida para o botón \"Comprobar\"",
-          "default": "Comproba as túas respostas. As respostas marcaranse como correctas, incorrectas ou non contestadas."
-        },
-        {
-          "label": "Descrición asistida para o botón \"Amosar solución\"",
-          "default": "Amosar a solución. A tarefa marcarase coa súa resposta correcta."
-        },
-        {
-          "label": "Descrición asistida para o botón \"Reintentar\"",
-          "default": "Reintentar a tarefa. Borrar todas as respostas e empezar a tarefa de novo."
         }
       ]
     },

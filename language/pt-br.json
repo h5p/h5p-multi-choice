@@ -138,18 +138,6 @@
         {
           "label": "Texto para a mensagem \"Requer resposta\"",
           "default": "Por favor, responda antes de visualizar a solução"
-        },
-        {
-          "label": "Descrição da tecnologia de assistência para o botão \"Verificar\"",
-          "default": "Confira as respostas. As respostas serão marcadas como corretas, incorretas ou não respondidas."
-        },
-        {
-          "label": "Descrição da tecnologia de assistência para o botão \"Mostrar solução\"",
-          "default": "Mostrar a solução. A tarefa será marcada com sua solução correta."
-        },
-        {
-          "label": "Descrição da tecnologia de assistência para o botão \"Tentar Novamente\"",
-          "default": "Repita a tarefa. Redefina todas as respostas e inicie a tarefa novamente."
         }
       ]
     },

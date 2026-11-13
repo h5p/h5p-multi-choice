@@ -138,18 +138,6 @@
         {
           "label": "Testo per il messaggio \"Richiede una risposta\"",
           "default": "Per favore rispondi prima di vedere la soluzione"
-        },
-        {
-          "label": "Descrizione delle tecnologie assistive per il pulsante \"Verifica\"",
-          "default": "Verifica"
-        },
-        {
-          "label": "Descrizione delle tecnologie assistive per il pulsante \"Mostra soluzione\"",
-          "default": "Mostra soluzione"
-        },
-        {
-          "label": "Descrizione delle tecnologie assistive per il pulsante \"Riprova\"",
-          "default": "Riprova"
         }
       ]
     },

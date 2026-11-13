@@ -87,10 +87,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       readFeedback: 'Read feedback',
       shouldCheck: "Should have been checked",
       shouldNotCheck: "Should not have been checked",
-      noInput: 'Input is required before viewing the solution',
-      a11yCheck: 'Check the answers. The responses will be marked as correct, incorrect, or unanswered.',
-      a11yShowSolution: 'Show the solution. The task will be marked with its correct solution.',
-      a11yRetry: 'Retry the task. Reset all responses and start the task over again.',
+      noInput: 'Input is required before viewing the solution'
     },
     behaviour: {
       enableRetry: true,
@@ -674,9 +671,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         }
       },
       false,
-      {
-        'aria-label': params.UI.a11yShowSolution,
-      },
+      undefined,
       {
         styleType: 'secondary',
         icon: 'show-solutions'
@@ -692,9 +687,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
           $myDom.find('.h5p-answer:first-child').focus();
         },
         true,
-        {
-          'aria-label': params.UI.a11yCheck,
-        },
+        undefined,
         {
           confirmationDialog: {
             enable: params.behaviour.confirmCheckDialog,
@@ -730,9 +723,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
          $(tip[i]).detach().appendTo($(answersDisplayed[idMap.indexOf(oldIdMap[i])]).find('.h5p-alternative-container'));
        }
      }
-    }, false, {
-      'aria-label': params.UI.a11yRetry,
-    }, {
+    }, false, undefined, {
       confirmationDialog: {
         enable: params.behaviour.confirmRetryDialog,
         l10n: params.confirmRetry,
@@ -927,7 +918,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
   var addQuestionToXAPI = function (xAPIEvent) {
     var definition = xAPIEvent.getVerifiedStatementValue(['object', 'definition']);
     definition.description = {
-      'en-US': params.question,
+       'en-US': params.question,
     };
     definition.type = 'http://adlnet.gov/expapi/activities/cmi.interaction';
     definition.interactionType = 'choice';

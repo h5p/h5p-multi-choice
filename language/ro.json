@@ -138,18 +138,6 @@
         {
           "label": "Text pentru mesajul \"Necesită răspuns\"",
           "default": "Vă rugăm să răspundeți înainte de a vizualiza soluția"
-        },
-        {
-          "label": "Descriere pentru tehnologia asistivă a butonului \"Verifică\"",
-          "default": "Verifică răspunsurile. Răspunsurile vor fi marcate ca fiind corecte, incorecte sau fără răspuns."
-        },
-        {
-          "label": "Descriere pentru tehnologia asistivă a butonului \"Arată soluția\"",
-          "default": "Arată soluția. Sarcina va fi marcată cu soluția sa corectă."
-        },
-        {
-          "label": "Descriere pentru tehnologia asistivă a butonului \"Încearcă din nou\"",
-          "default": "Reîncercați sarcina. Resetați toate răspunsurile și începeți sarcina din nou."
         }
       ]
     },

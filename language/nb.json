@@ -138,18 +138,6 @@
         {
           "label": "Beskjed om at bruker må svare",
           "default": "Du må svare før du får se løsningen."
-        },
-        {
-          "label": "Beskrivelse av \"Sjekk\"-knapp (for assisterende teknologi)",
-          "default": "Sjekk svar. Svara blir merka som riktig, feil eller ubesvart."
-        },
-        {
-          "label": "Beskrivelse av \"Vis svar\"-knapp (for assisterende teknologi)",
-          "default": "Vis svar. Oppgaven blir merka med riktige svar."
-        },
-        {
-          "label": "Beskrivelse av \"Prøv igjen\"-knapp (for assisterende teknologi)",
-          "default": "Prøv igjen. Alle svara blir nullstilt, og oppgaven starter på nytt."
         }
       ]
     },

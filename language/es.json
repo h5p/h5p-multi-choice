@@ -138,18 +138,6 @@
         {
           "label": "Texto para mensaje \"Respuesta obligatoria\"",
           "default": "Por favor responde antes de ver la solución"
-        },
-        {
-          "label": "Descripción para las tecnologías de asistencia del botón \"Comprobar\"",
-          "default": "Revisa tus respuestas. Las respuestas se marcarán como correcta, incorrecta o sin contestar."
-        },
-        {
-          "label": "Descripción para las tecnologías de asistencia del botón \"Mostrar solución\"",
-          "default": "Mostrar la solución. La tarea se calificará con su solución correcta."
-        },
-        {
-          "label": "Descripción para las tecnologías de asistencia del botón \"Intentar de nuevo\"",
-          "default": "Vuelve a intentar la tarea. Borra todas tus respuestas y empieza de nuevo."
         }
       ]
     },

@@ -138,18 +138,6 @@
         {
           "label": "Tekst van \"Antwoord vereist\"-bericht",
           "default": "Beantwoord voor je de oplossing bekijkt"
-        },
-        {
-          "label": "Ondersteunende technologie beschrijving voor \"Controleer\"-knop",
-          "default": "Controleer de antwoorden. De antwoorden worden gemarkeerd als correct, incorrect, of niet-beantwoord."
-        },
-        {
-          "label": "Ondersteunende technologie beschrijving voor \"Toon oplossing\"-knop",
-          "default": "Toon de oplossing. De taak wordt gemarkeerd met de juiste oplossing."
-        },
-        {
-          "label": "Ondersteunende technologie beschrijving voor \"Opnieuw\"-knop",
-          "default": "Probeer de taak opnieuw. Reset alle antwoorden en start de taak opnieuw."
         }
       ]
     },

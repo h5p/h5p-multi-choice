@@ -138,18 +138,6 @@
         {
           "label": "Text del missatge \"Requereix una resposta\"",
           "default": "Responeu abans de veure la solució"
-        },
-        {
-          "label": "Descripció de la tecnologia d’assistència per al botó \"Comprova\"",
-          "default": "Comprova les respostes. Les respostes es marcaran com a correctes, incorrectes o sense resposta."
-        },
-        {
-          "label": "Descripció de la tecnologia d’assistència per al botó \"Mostra la solució\"",
-          "default": "Mostra la solució. La tasca es marcarà amb la seva solució correcta."
-        },
-        {
-          "label": "Descripció de la tecnologia d’assistència per al botó \"Torna-ho a provar\"",
-          "default": "Intenta de nou la tasca. Esborra totes les respostes i comença la tasca de nou."
         }
       ]
     },

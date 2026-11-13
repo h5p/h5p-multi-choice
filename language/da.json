@@ -138,18 +138,6 @@
         {
           "label": "Tekst for \"Svar nødvendigt\" besked",
           "default": "Svar inden du kigger på løsningen"
-        },
-        {
-          "label": "Assistive technology description for \"Check\" button",
-          "default": "Tjek. Dine svar vil blive markeret som rigtigt, forkert eller ubesvaret."
-        },
-        {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Vis løsningen. Opgaven vil blive markeret med de rigtige svar."
-        },
-        {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Prøv igen. Fjerner alle svar og starter opgaven forfra."
         }
       ]
     },
