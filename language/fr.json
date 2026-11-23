@@ -138,18 +138,6 @@
         {
           "label": "Le texte pour le message \"Réponse requise\"",
           "default": "Veuillez répondre avant de consulter la solution"
-        },
-        {
-          "label": "Description de la technologie d’assistance pour le bouton \"Vérifier\"",
-          "default": "Vérifiez les réponses. Les réponses seront marquées comme correctes, incorrectes ou sans réponse."
-        },
-        {
-          "label": "Description de la technologie d’assistance pour le bouton \"Afficher la solution\"",
-          "default": "Montrez la solution. La tâche sera marquée avec sa solution correcte."
-        },
-        {
-          "label": "Description de la technologie fonctionnelle pour la touche « Réessayer »",
-          "default": "Réessayer la tâche. Réinitialiser toutes les réponses et recommencer la tâche."
         }
       ]
     },

@@ -88,9 +88,6 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       shouldCheck: "Should have been checked",
       shouldNotCheck: "Should not have been checked",
       noInput: 'Input is required before viewing the solution',
-      a11yCheck: 'Check the answers. The responses will be marked as correct, incorrect, or unanswered.',
-      a11yShowSolution: 'Show the solution. The task will be marked with its correct solution.',
-      a11yRetry: 'Retry the task. Reset all responses and start the task over again.',
     },
     behaviour: {
       enableRetry: true,
@@ -671,7 +668,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
       }
 
     }, false, {
-      'aria-label': params.UI.a11yShowSolution,
+      'aria-label': params.UI.showSolutionButton,
     });
 
     // Check button
@@ -684,7 +681,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
         },
         true,
         {
-          'aria-label': params.UI.a11yCheck,
+          'aria-label': params.UI.checkAnswerButton,
         },
         {
           confirmationDialog: {
@@ -721,7 +718,7 @@ H5P.MultiChoice = function (options, contentId, contentData) {
        }
      }
     }, false, {
-      'aria-label': params.UI.a11yRetry,
+      'aria-label': params.UI.tryAgainButton,
     }, {
       confirmationDialog: {
         enable: params.behaviour.confirmRetryDialog,

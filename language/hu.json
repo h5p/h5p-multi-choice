@@ -138,18 +138,6 @@
         {
           "label": "„Válaszadás szükséges” üzenet szövege",
           "default": "Kérjük válaszoljon, mielőtt a megoldás megjelenne!"
-        },
-        {
-          "label": "Az \"Ellenőrzés\" gomb megértést segítő magyarázatának leírása",
-          "default": "A válaszok ellenőrzése. A beküldött válaszok helyesnek, helytelennek vagy megválaszolatlannak lesznek megjelölve."
-        },
-        {
-          "label": "A \"Megoldás megmutatása\" gomb megértést segítő magyarázatának leírása",
-          "default": "Megmutatja a helyes megoldást. A beküldött feladat a helyes megoldásával együtt jelenik meg."
-        },
-        {
-          "label": "Akadálymentesítő leírás az \"Újra próbálkozás\" gombhoz",
-          "default": "Próbálja újra a feladatot. Állítsa vissza az összes választ, és kezdje újra a feladatot."
         }
       ]
     },

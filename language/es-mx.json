@@ -138,18 +138,6 @@
         {
           "label": "Texto para mensaje \"Requiere respuesta\"",
           "default": "Por favor responda antes de ver la solución"
-        },
-        {
-          "label": "Descripción de tecnología asistiva para botón \"Comprobar\"",
-          "default": "Comprobar las respuestas. Las respuestas serán marcadas como correcta, incorrecta o sin contestar."
-        },
-        {
-          "label": "Descripción de tecnología asistiva para botón \"Mostrar Solución\"",
-          "default": "Mostrar la solución. El trabajo será calificado con su solución correcta."
-        },
-        {
-          "label": "Descripción de tecnología asistiva para botón \"Reintentar\"",
-          "default": "Reintentar el trabajo. Reiniciar todas las respuestas e iniciar el trabajo de nuevo."
         }
       ]
     },
