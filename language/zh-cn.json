@@ -16,7 +16,10 @@
       "label": "Question"
     },
     {
+      "label": "Available options",
+      "entity": "option",
       "field": {
+        "label": "Option",
         "fields": [
           {
             "label": "Text"
@@ -25,6 +28,7 @@
             "label": "Correct"
           },
           {
+            "label": "Tips and feedback",
             "fields": [
               {
                 "label": "Tip text",
@@ -38,14 +42,10 @@
                 "label": "Message displayed if answer is not selected",
                 "description": "Message will appear below the answer on \"check\" if this answer is not selected."
               }
-            ],
-            "label": "Tips and feedback"
+            ]
           }
-        ],
-        "label": "Option"
-      },
-      "label": "Available options",
-      "entity": "option"
+        ]
+      }
     },
     {
       "label": "Overall Feedback",
@@ -75,6 +75,7 @@
       ]
     },
     {
+      "label": "User interface translations for multichoice",
       "fields": [
         {
           "label": "Check answer button label",
@@ -137,21 +138,8 @@
         {
           "label": "Text for \"Requires answer\" message",
           "default": "Please answer before viewing the solution"
-        },
-        {
-          "default": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
-          "label": "Assistive technology description for \"Check\" button"
-        },
-        {
-          "label": "Assistive technology description for \"Show Solution\" button",
-          "default": "Show the solution. The task will be marked with its correct solution."
-        },
-        {
-          "label": "Assistive technology description for \"Retry\" button",
-          "default": "Retry the task. Reset all responses and start the task over again."
         }
-      ],
-      "label": "User interface translations for multichoice"
+      ]
     },
     {
       "label": "Behavioural settings",
@@ -213,6 +201,7 @@
       ]
     },
     {
+      "label": "Check confirmation dialog",
       "fields": [
         {
           "label": "Header text",
@@ -227,11 +216,10 @@
           "default": "Cancel"
         },
         {
-          "default": "Finish",
-          "label": "Confirm button label"
+          "label": "Confirm button label",
+          "default": "Finish"
         }
-      ],
-      "label": "Check confirmation dialog"
+      ]
     },
     {
       "label": "Retry confirmation dialog",
